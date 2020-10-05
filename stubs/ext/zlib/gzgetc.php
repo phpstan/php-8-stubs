@@ -1,9 +1,9 @@
 <?php 
 
 /**
- * @param resource $fp
+ * @param resource $stream
  * @alias fgetc
  */
-function gzgetc($fp) : string|false
+function gzgetc($stream) : string|false
 {
 }

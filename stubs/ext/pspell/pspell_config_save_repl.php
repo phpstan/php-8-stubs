@@ -1,5 +1,5 @@
 <?php 
 
-function pspell_config_save_repl(int $conf, bool $save) : bool
+function pspell_config_save_repl(int $dictionary, bool $save) : bool
 {
 }

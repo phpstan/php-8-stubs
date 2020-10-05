@@ -1,5 +1,5 @@
 <?php 
 
-function pspell_check(int $pspell, string $word) : bool
+function pspell_check(int $dictionary, string $word) : bool
 {
 }

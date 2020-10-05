@@ -1,9 +1,9 @@
 <?php 
 
 /**
- * @param resource $fp
+ * @param resource $stream
  * @alias fread
  */
-function gzread($fp, int $length) : string|false
+function gzread($stream, int $length) : string|false
 {
 }

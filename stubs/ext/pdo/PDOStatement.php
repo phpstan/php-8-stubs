@@ -4,11 +4,11 @@
 class PDOStatement implements \IteratorAggregate
 {
     /** @return bool */
-    public function bindColumn(string|int $column, mixed &$param, int $type = 0, int $max_length = 0, mixed $driver_options = null)
+    public function bindColumn(string|int $column, mixed &$var, int $type = 0, int $maxLength = 0, mixed $driverOptions = null)
     {
     }
     /** @return bool */
-    public function bindParam(string|int $param, mixed &$bind_var, int $type = PDO::PARAM_STR, int $max_length = 0, mixed $driver_options = null)
+    public function bindParam(string|int $param, mixed &$var, int $type = PDO::PARAM_STR, int $maxLength = 0, mixed $driverOptions = null)
     {
     }
     /** @return bool */
@@ -36,11 +36,11 @@ class PDOStatement implements \IteratorAggregate
     {
     }
     /** @return bool */
-    public function execute(?array $input_parameters = null)
+    public function execute(?array $params = null)
     {
     }
     /** @return mixed */
-    public function fetch(int $mode = PDO::FETCH_BOTH, int $cursor_orientation = PDO::FETCH_ORI_NEXT, int $cursor_offset = 0)
+    public function fetch(int $mode = PDO::FETCH_BOTH, int $cursorOrientation = PDO::FETCH_ORI_NEXT, int $cursorOffset = 0)
     {
     }
     /** @return array */
@@ -48,11 +48,11 @@ class PDOStatement implements \IteratorAggregate
     {
     }
     /** @return mixed */
-    public function fetchColumn(int $index = 0)
+    public function fetchColumn(int $column = 0)
     {
     }
     /** @return mixed */
-    public function fetchObject(?string $class = "stdClass", ?array $constructor_args = null)
+    public function fetchObject(?string $class = "stdClass", ?array $ctorArgs = null)
     {
     }
     /** @return mixed */
@@ -60,7 +60,7 @@ class PDOStatement implements \IteratorAggregate
     {
     }
     /** @return array|false */
-    public function getColumnMeta(int $index)
+    public function getColumnMeta(int $column)
     {
     }
     /** @return bool */
@@ -76,7 +76,7 @@ class PDOStatement implements \IteratorAggregate
     {
     }
     /** @return bool */
-    public function setFetchMode(int $mode, mixed ...$fetch_mode_args)
+    public function setFetchMode(int $mode, mixed ...$args)
     {
     }
     public function getIterator() : Iterator

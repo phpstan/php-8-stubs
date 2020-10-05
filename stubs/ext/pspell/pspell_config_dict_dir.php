@@ -1,5 +1,5 @@
 <?php 
 
-function pspell_config_dict_dir(int $conf, string $directory) : bool
+function pspell_config_dict_dir(int $config, string $directory) : bool
 {
 }

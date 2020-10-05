@@ -1,9 +1,9 @@
 <?php 
 
 /**
- * @param resource $fp
+ * @param resource $stream
  * @alias fclose
  */
-function gzclose($fp) : bool
+function gzclose($stream) : bool
 {
 }

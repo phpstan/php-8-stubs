@@ -1,5 +1,5 @@
 <?php 
 
-function deflate_add(\DeflateContext $context, string $add, int $flush_behavior = ZLIB_SYNC_FLUSH) : string|false
+function deflate_add(\DeflateContext $context, string $data, int $flush_mode = ZLIB_SYNC_FLUSH) : string|false
 {
 }

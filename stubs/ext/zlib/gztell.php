@@ -1,9 +1,9 @@
 <?php 
 
 /**
- * @param resource $fp
+ * @param resource $stream
  * @alias ftell
  */
-function gztell($fp) : int|false
+function gztell($stream) : int|false
 {
 }

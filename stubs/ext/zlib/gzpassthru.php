@@ -1,9 +1,9 @@
 <?php 
 
 /**
- * @param resource $fp
+ * @param resource $stream
  * @alias fpassthru
  */
-function gzpassthru($fp) : int
+function gzpassthru($stream) : int
 {
 }

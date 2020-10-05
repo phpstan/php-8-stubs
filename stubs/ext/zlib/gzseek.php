@@ -1,9 +1,9 @@
 <?php 
 
 /**
- * @param resource $fp
+ * @param resource $stream
  * @alias fseek
  */
-function gzseek($fp, int $offset, int $whence = SEEK_SET) : int
+function gzseek($stream, int $offset, int $whence = SEEK_SET) : int
 {
 }

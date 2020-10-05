@@ -1,9 +1,9 @@
 <?php 
 
 /**
- * @param resource $fp
+ * @param resource $stream
  * @alias fgets
  */
-function gzgets($fp, int $length = 1024) : string|false
+function gzgets($stream, int $length = 1024) : string|false
 {
 }

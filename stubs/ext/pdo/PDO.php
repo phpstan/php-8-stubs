@@ -43,11 +43,11 @@ class PDO
     {
     }
     /** @return PDOStatement|false */
-    public function prepare(string $query, array $driver_options = [])
+    public function prepare(string $query, array $options = [])
     {
     }
     /** @return PDOStatement|false */
-    public function query(string $query, ?int $fetch_mode = null, mixed ...$fetch_mode_args)
+    public function query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs)
     {
     }
     /** @return string|false */

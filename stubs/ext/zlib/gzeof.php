@@ -1,9 +1,9 @@
 <?php 
 
 /**
- * @param resource $fp
+ * @param resource $stream
  * @alias feof
  */
-function gzeof($fp) : bool
+function gzeof($stream) : bool
 {
 }

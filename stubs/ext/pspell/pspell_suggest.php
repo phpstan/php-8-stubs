@@ -1,5 +1,5 @@
 <?php 
 
-function pspell_suggest(int $pspell, string $word) : array|false
+function pspell_suggest(int $dictionary, string $word) : array|false
 {
 }

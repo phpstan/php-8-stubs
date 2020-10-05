@@ -1,9 +1,9 @@
 <?php 
 
 /**
- * @param resource $fp
+ * @param resource $stream
  * @alias rewind
  */
-function gzrewind($fp) : bool
+function gzrewind($stream) : bool
 {
 }

@@ -1,6 +1,6 @@
 <?php 
 
 /** @param resource $stream */
-function fwrite($stream, string $string, ?int $max_length = null) : int|false
+function fwrite($stream, string $data, ?int $max_length = null) : int|false
 {
 }

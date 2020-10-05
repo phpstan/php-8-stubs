@@ -1,5 +1,5 @@
 <?php 
 
-function pspell_config_runtogether(int $conf, bool $runtogether) : bool
+function pspell_config_runtogether(int $config, bool $allow) : bool
 {
 }
