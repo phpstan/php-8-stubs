@@ -154,9 +154,9 @@ $command = new class(
 			$targetStubPath = __DIR__ . '/../' . $pathPart;
 
 			if ($stmt instanceof Node\Stmt\Class_ || $stmt instanceof Node\Stmt\Interface_ || $stmt instanceof Node\Stmt\Trait_) {
-				$classes[$namespacedName] = $pathPart;
+				$classes[strtolower($namespacedName)] = $pathPart;
 			} elseif ($stmt instanceof Node\Stmt\Function_) {
-				$functions[$namespacedName] = $pathPart;
+				$functions[strtolower($namespacedName)] = $pathPart;
 			} else {
 				throw new \Exception(sprintf('Unhandled node type %s in %s on line %s.', get_class($stmt), $stubPath, $stmt->getLine()));
 			}
