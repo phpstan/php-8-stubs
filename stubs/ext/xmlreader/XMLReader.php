@@ -99,7 +99,7 @@ class XMLReader
     public static function XML(string $source, ?string $encoding = null, int $options = 0)
     {
     }
-    /** @return DOMNode|false|null */
+    /** @return DOMNode|false */
     public function expand(?DOMNode $basenode = null)
     {
     }
