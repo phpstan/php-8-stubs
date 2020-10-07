@@ -2,6 +2,6 @@
 
 #endif
 #ifdef HAVE_GETSID
-function posix_getsid(int $pid) : int|false
+function posix_getsid(int $process_id) : int|false
 {
 }

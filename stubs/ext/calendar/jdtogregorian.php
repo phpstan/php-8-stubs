@@ -1,5 +1,5 @@
 <?php 
 
-function jdtogregorian(int $juliandaycount) : string
+function jdtogregorian(int $julian_day) : string
 {
 }

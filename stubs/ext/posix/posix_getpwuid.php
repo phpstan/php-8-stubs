@@ -1,5 +1,5 @@
 <?php 
 
-function posix_getpwuid(int $uid) : array|false
+function posix_getpwuid(int $user_id) : array|false
 {
 }

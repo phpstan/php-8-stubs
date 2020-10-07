@@ -1,9 +1,9 @@
 <?php 
 
 /**
- * @param string $addr
+ * @param string $address
  * @param int $port
  */
-function socket_getsockname(\Socket $socket, &$addr, &$port = null) : bool
+function socket_getsockname(\Socket $socket, &$address, &$port = null) : bool
 {
 }

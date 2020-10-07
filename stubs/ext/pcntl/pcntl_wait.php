@@ -2,8 +2,8 @@
 
 /**
  * @param int $status
- * @param array $rusage
+ * @param array $resource_usage
  */
-function pcntl_wait(&$status, int $options = 0, &$rusage = []) : int
+function pcntl_wait(&$status, int $flags = 0, &$resource_usage = []) : int
 {
 }

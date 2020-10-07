@@ -10,11 +10,11 @@ class SQLite3Result
     {
     }
     /** @return string|false */
-    public function columnName(int $column_number)
+    public function columnName(int $column)
     {
     }
     /** @return int|false */
-    public function columnType(int $column_number)
+    public function columnType(int $column)
     {
     }
     /** @return array|false */

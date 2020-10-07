@@ -1,5 +1,5 @@
 <?php 
 
-function socket_addrinfo_bind(\AddressInfo $addr) : \Socket|false
+function socket_addrinfo_bind(\AddressInfo $address) : \Socket|false
 {
 }

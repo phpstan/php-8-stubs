@@ -1,5 +1,5 @@
 <?php 
 
-function posix_strerror(int $errno) : string
+function posix_strerror(int $error_code) : string
 {
 }

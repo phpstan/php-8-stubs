@@ -1,5 +1,5 @@
 <?php 
 
-function socket_strerror(int $errno) : string
+function socket_strerror(int $error_code) : string
 {
 }

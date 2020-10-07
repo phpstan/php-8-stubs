@@ -1,5 +1,5 @@
 <?php 
 
-function jdtofrench(int $juliandaycount) : string
+function jdtofrench(int $julian_day) : string
 {
 }

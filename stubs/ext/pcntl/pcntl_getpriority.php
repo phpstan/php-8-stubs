@@ -1,6 +1,6 @@
 <?php 
 
 #ifdef HAVE_GETPRIORITY
-function pcntl_getpriority(?int $pid = null, int $process_identifier = PRIO_PROCESS) : int|false
+function pcntl_getpriority(?int $process_id = null, int $mode = PRIO_PROCESS) : int|false
 {
 }

@@ -1,5 +1,5 @@
 <?php 
 
-function easter_date(?int $year = null, int $method = CAL_EASTER_DEFAULT) : int
+function easter_date(?int $year = null, int $mode = CAL_EASTER_DEFAULT) : int
 {
 }

@@ -1,6 +1,6 @@
 <?php 
 
 #ifdef HAVE_SETEUID
-function posix_seteuid(int $uid) : bool
+function posix_seteuid(int $user_id) : bool
 {
 }

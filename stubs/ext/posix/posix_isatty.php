@@ -1,6 +1,6 @@
 <?php 
 
-/** @param resource|int $fd */
-function posix_isatty($fd) : bool
+/** @param resource|int $file_descriptor */
+function posix_isatty($file_descriptor) : bool
 {
 }

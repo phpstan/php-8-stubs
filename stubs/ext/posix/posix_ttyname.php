@@ -1,7 +1,7 @@
 <?php 
 
 #endif
-/** @param resource|int $fd */
-function posix_ttyname($fd) : string|false
+/** @param resource|int $file_descriptor */
+function posix_ttyname($file_descriptor) : string|false
 {
 }

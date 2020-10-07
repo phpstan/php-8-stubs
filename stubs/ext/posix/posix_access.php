@@ -1,6 +1,6 @@
 <?php 
 
 #endif
-function posix_access(string $file, int $mode = 0) : bool
+function posix_access(string $filename, int $flags = 0) : bool
 {
 }

@@ -1,5 +1,5 @@
 <?php 
 
-function socket_write(\Socket $socket, string $buf, ?int $length = null) : int|false
+function socket_write(\Socket $socket, string $data, ?int $length = null) : int|false
 {
 }

@@ -1,6 +1,6 @@
 <?php 
 
-/** @param string|null $buf */
-function socket_recv(\Socket $socket, &$buf, int $len, int $flags) : int|false
+/** @param string|null $data */
+function socket_recv(\Socket $socket, &$data, int $length, int $flags) : int|false
 {
 }

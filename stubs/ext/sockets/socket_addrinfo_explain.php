@@ -1,5 +1,5 @@
 <?php 
 
-function socket_addrinfo_explain(\AddressInfo $addr) : array
+function socket_addrinfo_explain(\AddressInfo $address) : array
 {
 }

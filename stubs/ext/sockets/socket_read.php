@@ -1,5 +1,5 @@
 <?php 
 
-function socket_read(\Socket $socket, int $length, int $type = PHP_BINARY_READ) : string|false
+function socket_read(\Socket $socket, int $length, int $mode = PHP_BINARY_READ) : string|false
 {
 }

@@ -2,6 +2,6 @@
 
 #endif
 #ifdef HAVE_SHUTDOWN
-function socket_shutdown(\Socket $socket, int $how = 2) : bool
+function socket_shutdown(\Socket $socket, int $mode = 2) : bool
 {
 }

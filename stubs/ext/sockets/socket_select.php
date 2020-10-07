@@ -1,5 +1,5 @@
 <?php 
 
-function socket_select(?array &$read_fds, ?array &$write_fds, ?array &$except_fds, ?int $tv_sec, int $tv_usec = 0) : int|false
+function socket_select(?array &$read, ?array &$write, ?array &$except, ?int $seconds, int $microseconds = 0) : int|false
 {
 }

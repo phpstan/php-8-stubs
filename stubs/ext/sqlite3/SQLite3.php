@@ -4,11 +4,11 @@
 class SQLite3
 {
     /** @implementation-alias SQLite3::open */
-    public function __construct(string $filename, int $flags = SQLITE3_OPEN_READWRITE | SQLITE3_OPEN_CREATE, string $encryption_key = "")
+    public function __construct(string $filename, int $flags = SQLITE3_OPEN_READWRITE | SQLITE3_OPEN_CREATE, string $encryptionKey = "")
     {
     }
     /** @return void */
-    public function open(string $filename, int $flags = SQLITE3_OPEN_READWRITE | SQLITE3_OPEN_CREATE, string $encryption_key = "")
+    public function open(string $filename, int $flags = SQLITE3_OPEN_READWRITE | SQLITE3_OPEN_CREATE, string $encryptionKey = "")
     {
     }
     /** @return bool */
@@ -40,23 +40,23 @@ class SQLite3
     {
     }
     /** @return bool */
-    public function busyTimeout(int $ms)
+    public function busyTimeout(int $milliseconds)
     {
     }
     #ifndef SQLITE_OMIT_LOAD_EXTENSION
     /** @return bool */
-    public function loadExtension(string $shared_library)
+    public function loadExtension(string $name)
     {
     }
     #endif
     #if SQLITE_VERSION_NUMBER >= 3006011
     /** @return bool */
-    public function backup(SQLite3 $destination_db, string $source_dbname = "main", string $destination_dbname = "main")
+    public function backup(SQLite3 $destination, string $sourceDatabase = "main", string $destinationDatabase = "main")
     {
     }
     #endif
     /** @return string */
-    public static function escapeString(string $value)
+    public static function escapeString(string $string)
     {
     }
     /** @return SQLite3Stmt|false */
@@ -72,15 +72,15 @@ class SQLite3
     {
     }
     /** @return mixed */
-    public function querySingle(string $query, bool $entire_row = false)
+    public function querySingle(string $query, bool $entireRow = false)
     {
     }
     /** @return bool */
-    public function createFunction(string $name, callable $callback, int $argument_count = -1, int $flags = 0)
+    public function createFunction(string $name, callable $callback, int $argCount = -1, int $flags = 0)
     {
     }
     /** @return bool */
-    public function createAggregate(string $name, callable $step_callback, callable $final_callback, int $argument_count = -1)
+    public function createAggregate(string $name, callable $stepCallback, callable $finalCallback, int $argCount = -1)
     {
     }
     /** @return bool */
@@ -88,11 +88,11 @@ class SQLite3
     {
     }
     /** @return resource|false */
-    public function openBlob(string $table, string $column, int $rowid, string $dbname = "main", int $flags = SQLITE3_OPEN_READONLY)
+    public function openBlob(string $table, string $column, int $rowid, string $database = "main", int $flags = SQLITE3_OPEN_READONLY)
     {
     }
     /** @return bool */
-    public function enableExceptions(bool $enableExceptions = false)
+    public function enableExceptions(bool $enable = false)
     {
     }
     /** @return bool */

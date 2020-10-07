@@ -1,5 +1,5 @@
 <?php 
 
-function jdmonthname(int $juliandaycount, int $mode) : string
+function jdmonthname(int $julian_day, int $mode) : string
 {
 }

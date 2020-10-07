@@ -1,5 +1,5 @@
 <?php 
 
-function socket_send(\Socket $socket, string $buf, int $len, int $flags) : int|false
+function socket_send(\Socket $socket, string $data, int $length, int $flags) : int|false
 {
 }

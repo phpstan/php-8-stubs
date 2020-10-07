@@ -1,5 +1,5 @@
 <?php 
 
-function posix_getgrgid(int $gid) : array|false
+function posix_getgrgid(int $group_id) : array|false
 {
 }

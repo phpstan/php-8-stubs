@@ -1,5 +1,5 @@
 <?php 
 
-function pcntl_async_signals(?bool $on = null) : bool
+function pcntl_async_signals(?bool $enable = null) : bool
 {
 }

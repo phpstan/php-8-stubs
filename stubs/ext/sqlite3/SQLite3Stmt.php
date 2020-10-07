@@ -2,15 +2,15 @@
 
 class SQLite3Stmt
 {
-    private function __construct(SQLite3 $sqlite3, string $sql)
+    private function __construct(SQLite3 $sqlite3, string $query)
     {
     }
     /** @return bool */
-    public function bindParam(string|int $param_number, mixed &$param, int $type = SQLITE3_TEXT)
+    public function bindParam(string|int $param, mixed &$var, int $type = SQLITE3_TEXT)
     {
     }
     /** @return bool */
-    public function bindValue(string|int $param_number, mixed $param, int $type = SQLITE3_TEXT)
+    public function bindValue(string|int $param, mixed $value, int $type = SQLITE3_TEXT)
     {
     }
     /** @return bool */
@@ -26,7 +26,7 @@ class SQLite3Stmt
     {
     }
     /** @return string|false */
-    public function getSQL(bool $expanded = false)
+    public function getSQL(bool $expand = false)
     {
     }
     /** @return int */

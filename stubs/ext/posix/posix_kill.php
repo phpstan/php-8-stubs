@@ -1,6 +1,6 @@
 <?php 
 
 /** @generate-function-entries */
-function posix_kill(int $pid, int $sig) : bool
+function posix_kill(int $process_id, int $signal) : bool
 {
 }
