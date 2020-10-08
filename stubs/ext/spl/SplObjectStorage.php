@@ -59,7 +59,7 @@ class SplObjectStorage implements \Countable, \Iterator, \Serializable, \ArrayAc
     {
     }
     /** @return void */
-    public function unserialize(string $serialized)
+    public function unserialize(string $data)
     {
     }
     /** @return string */

@@ -1,5 +1,5 @@
 <?php 
 
-function tidy_get_root(\tidy $object) : ?\tidyNode
+function tidy_get_root(\tidy $tidy) : ?\tidyNode
 {
 }

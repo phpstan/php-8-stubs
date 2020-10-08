@@ -3,5 +3,5 @@
 interface SeekableIterator extends \Iterator
 {
     /** @return void */
-    public function seek(int $position);
+    public function seek(int $offset);
 }

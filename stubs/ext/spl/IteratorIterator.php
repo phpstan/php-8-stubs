@@ -2,7 +2,7 @@
 
 class IteratorIterator implements \OuterIterator
 {
-    public function __construct(Traversable $iterator, ?string $class_name = null)
+    public function __construct(Traversable $iterator, ?string $class = null)
     {
     }
     /** @return Iterator|null */

@@ -33,31 +33,31 @@ class CachingIterator extends \IteratorIterator implements \ArrayAccess, \Counta
     {
     }
     /**
-     * @param string $index
+     * @param string $key
      * @return mixed
      */
-    public function offsetGet($index)
+    public function offsetGet($key)
     {
     }
     /**
-     * @param string $index
+     * @param string $key
      * @return void
      */
-    public function offsetSet($index, mixed $value)
+    public function offsetSet($key, mixed $value)
     {
     }
     /**
-     * @param string $index
+     * @param string $key
      * @return void
      */
-    public function offsetUnset($index)
+    public function offsetUnset($key)
     {
     }
     /**
-     * @param string $index
+     * @param string $key
      * @return bool
      */
-    public function offsetExists($index)
+    public function offsetExists($key)
     {
     }
     /** @return array */

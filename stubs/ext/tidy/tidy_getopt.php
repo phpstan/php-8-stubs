@@ -1,5 +1,5 @@
 <?php 
 
-function tidy_getopt(\tidy $object, string $option) : string|int|bool
+function tidy_getopt(\tidy $tidy, string $option) : string|int|bool
 {
 }

@@ -6,35 +6,35 @@ class ArrayIterator implements \SeekableIterator, \ArrayAccess, \Serializable, \
     {
     }
     /**
-     * @param string|int $index
+     * @param string|int $key
      * @return bool
      * @implementation-alias ArrayObject::offsetExists
      */
-    public function offsetExists($index)
+    public function offsetExists($key)
     {
     }
     /**
-     * @param string|int $index
+     * @param string|int $key
      * @return mixed
      * @implementation-alias ArrayObject::offsetGet
      */
-    public function offsetGet($index)
+    public function offsetGet($key)
     {
     }
     /**
-     * @param string|int $index
+     * @param string|int $key
      * @return void
      * @implementation-alias ArrayObject::offsetSet
      */
-    public function offsetSet($index, mixed $value)
+    public function offsetSet($key, mixed $value)
     {
     }
     /**
-     * @param string|int $index
+     * @param string|int $key
      * @return void
      * @implementation-alias ArrayObject::offsetUnset
      */
-    public function offsetUnset($index)
+    public function offsetUnset($key)
     {
     }
     /**
@@ -76,28 +76,28 @@ class ArrayIterator implements \SeekableIterator, \ArrayAccess, \Serializable, \
      * @return bool
      * @implementation-alias ArrayObject::asort
      */
-    public function asort(int $sort_flags = SORT_REGULAR)
+    public function asort(int $flags = SORT_REGULAR)
     {
     }
     /**
      * @return bool
      * @implementation-alias ArrayObject::ksort
      */
-    public function ksort(int $sort_flags = SORT_REGULAR)
+    public function ksort(int $flags = SORT_REGULAR)
     {
     }
     /**
      * @return bool
      * @implementation-alias ArrayObject::uasort
      */
-    public function uasort(callable $cmp_function)
+    public function uasort(callable $callback)
     {
     }
     /**
      * @return bool
      * @implementation-alias ArrayObject::uksort
      */
-    public function uksort(callable $cmp_function)
+    public function uksort(callable $callback)
     {
     }
     /**
@@ -118,7 +118,7 @@ class ArrayIterator implements \SeekableIterator, \ArrayAccess, \Serializable, \
      * @return void
      * @implementation-alias ArrayObject::unserialize
      */
-    public function unserialize(string $serialized)
+    public function unserialize(string $data)
     {
     }
     /**
@@ -163,7 +163,7 @@ class ArrayIterator implements \SeekableIterator, \ArrayAccess, \Serializable, \
     {
     }
     /** @return void */
-    public function seek(int $position)
+    public function seek(int $offset)
     {
     }
     /**

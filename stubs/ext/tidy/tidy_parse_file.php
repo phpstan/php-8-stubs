@@ -1,5 +1,5 @@
 <?php 
 
-function tidy_parse_file(string $file, array|string|null $config_options = null, ?string $encoding = null, bool $use_include_path = false) : \tidy|false
+function tidy_parse_file(string $filename, array|string|null $config = null, ?string $encoding = null, bool $useIncludePath = false) : \tidy|false
 {
 }

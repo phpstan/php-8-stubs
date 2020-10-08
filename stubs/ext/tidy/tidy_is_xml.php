@@ -1,5 +1,5 @@
 <?php 
 
-function tidy_is_xml(\tidy $object) : bool
+function tidy_is_xml(\tidy $tidy) : bool
 {
 }

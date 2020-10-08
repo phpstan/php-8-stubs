@@ -1,6 +1,5 @@
 <?php 
 
-/** @generate-function-entries static */
 class _ZendTestClass
 {
     public static function is_object() : int
@@ -8,6 +7,9 @@ class _ZendTestClass
     }
     /** @deprecated */
     public function __toString() : string
+    {
+    }
+    public function returnsStatic() : static
     {
     }
 }

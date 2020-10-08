@@ -1,5 +1,5 @@
 <?php 
 
-function tidy_warning_count(\tidy $object) : int
+function tidy_warning_count(\tidy $tidy) : int
 {
 }

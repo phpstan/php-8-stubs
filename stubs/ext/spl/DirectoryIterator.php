@@ -2,7 +2,7 @@
 
 class DirectoryIterator extends \SplFileInfo implements \SeekableIterator
 {
-    public function __construct(string $path)
+    public function __construct(string $directory)
     {
     }
     /** @return string */
@@ -42,7 +42,7 @@ class DirectoryIterator extends \SplFileInfo implements \SeekableIterator
     {
     }
     /** @return void */
-    public function seek(int $position)
+    public function seek(int $offset)
     {
     }
     /** @implementation-alias DirectoryIterator::getFilename */

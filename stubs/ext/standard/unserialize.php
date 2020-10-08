@@ -1,5 +1,5 @@
 <?php 
 
-function unserialize(string $value, array $options = []) : mixed
+function unserialize(string $data, array $options = []) : mixed
 {
 }

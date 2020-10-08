@@ -66,7 +66,7 @@ class RecursiveIteratorIterator implements \OuterIterator
     {
     }
     /** @return void */
-    public function setMaxDepth(int $max_depth = -1)
+    public function setMaxDepth(int $maxDepth = -1)
     {
     }
     /** @return int|false */

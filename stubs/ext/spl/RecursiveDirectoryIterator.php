@@ -2,11 +2,11 @@
 
 class RecursiveDirectoryIterator extends \FilesystemIterator implements \RecursiveIterator
 {
-    public function __construct(string $path, int $flags = FilesystemIterator::KEY_AS_PATHNAME | FilesystemIterator::CURRENT_AS_FILEINFO)
+    public function __construct(string $directory, int $flags = FilesystemIterator::KEY_AS_PATHNAME | FilesystemIterator::CURRENT_AS_FILEINFO)
     {
     }
     /** @return bool */
-    public function hasChildren(bool $allow_links = false)
+    public function hasChildren(bool $allowLinks = false)
     {
     }
     /** @return RecursiveDirectoryIterator */

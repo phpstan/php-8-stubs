@@ -3,35 +3,35 @@
 /** @generate-function-entries */
 class ArrayObject implements \IteratorAggregate, \ArrayAccess, \Serializable, \Countable
 {
-    public function __construct(array|object $input = [], int $flags = 0, string $iterator_class = ArrayIterator::class)
+    public function __construct(array|object $array = [], int $flags = 0, string $iteratorClass = ArrayIterator::class)
     {
     }
     /**
-     * @param string|int $index
+     * @param string|int $key
      * @return bool
      */
-    public function offsetExists($index)
+    public function offsetExists($key)
     {
     }
     /**
-     * @param string|int $index
+     * @param string|int $key
      * @return mixed
      */
-    public function offsetGet($index)
+    public function offsetGet($key)
     {
     }
     /**
-     * @param string|int $index
+     * @param string|int $key
      * @return void
      */
-    public function offsetSet($index, mixed $value)
+    public function offsetSet($key, mixed $value)
     {
     }
     /**
-     * @param string|int $index
+     * @param string|int $key
      * @return void
      */
-    public function offsetUnset($index)
+    public function offsetUnset($key)
     {
     }
     /** @return void */
@@ -55,19 +55,19 @@ class ArrayObject implements \IteratorAggregate, \ArrayAccess, \Serializable, \C
     {
     }
     /** @return bool */
-    public function asort(int $sort_flags = SORT_REGULAR)
+    public function asort(int $flags = SORT_REGULAR)
     {
     }
     /** @return bool */
-    public function ksort(int $sort_flags = SORT_REGULAR)
+    public function ksort(int $flags = SORT_REGULAR)
     {
     }
     /** @return bool */
-    public function uasort(callable $cmp_function)
+    public function uasort(callable $callback)
     {
     }
     /** @return bool */
-    public function uksort(callable $cmp_function)
+    public function uksort(callable $callback)
     {
     }
     /** @return bool */
@@ -79,7 +79,7 @@ class ArrayObject implements \IteratorAggregate, \ArrayAccess, \Serializable, \C
     {
     }
     /** @return void */
-    public function unserialize(string $serialized)
+    public function unserialize(string $data)
     {
     }
     /** @return string */
@@ -99,7 +99,7 @@ class ArrayObject implements \IteratorAggregate, \ArrayAccess, \Serializable, \C
     {
     }
     /** @return array|null */
-    public function exchangeArray(array|object $input)
+    public function exchangeArray(array|object $array)
     {
     }
     /** @return void */

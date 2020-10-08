@@ -1,6 +1,6 @@
 <?php 
 
 #endif
-function tidy_get_config(\tidy $object) : array
+function tidy_get_config(\tidy $tidy) : array
 {
 }

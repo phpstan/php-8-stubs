@@ -2,7 +2,7 @@
 
 class LimitIterator extends \IteratorIterator
 {
-    public function __construct(Iterator $iterator, int $offset = 0, int $count = -1)
+    public function __construct(Iterator $iterator, int $offset = 0, int $limit = -1)
     {
     }
     /** @return void */
@@ -18,7 +18,7 @@ class LimitIterator extends \IteratorIterator
     {
     }
     /** @return int */
-    public function seek(int $position)
+    public function seek(int $offset)
     {
     }
     /** @return int */

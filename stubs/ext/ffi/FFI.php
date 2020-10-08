@@ -8,7 +8,7 @@ final class FFI
     public static function load(string $filename) : ?FFI
     {
     }
-    public static function scope(string $scope_name) : ?FFI
+    public static function scope(string $name) : ?FFI
     {
     }
     public static function new(FFI\CType|string $type, bool $owned = true, bool $persistent = false) : ?FFI\CData
@@ -32,7 +32,7 @@ final class FFI
     public static function typeof(FFI\CData $ptr) : ?FFI\CType
     {
     }
-    public static function arrayType(FFI\CType $type, array $dims) : ?FFI\CType
+    public static function arrayType(FFI\CType $type, array $dimensions) : ?FFI\CType
     {
     }
     /** @prefer-ref $ptr */
@@ -48,11 +48,11 @@ final class FFI
     {
     }
     /**
-     * @param FFI\CData|string $src
-     * @prefer-ref $dst
-     * @prefer-ref $src
+     * @param FFI\CData|string $from
+     * @prefer-ref $to
+     * @prefer-ref $from
      */
-    public static function memcpy(FFI\CData $dst, $src, int $size) : void
+    public static function memcpy(FFI\CData $to, $from, int $size) : void
     {
     }
     /**
@@ -65,7 +65,7 @@ final class FFI
     {
     }
     /** @prefer-ref $ptr */
-    public static function memset(FFI\CData $ptr, int $ch, int $size) : void
+    public static function memset(FFI\CData $ptr, int $value, int $size) : void
     {
     }
     /** @prefer-ref $ptr */

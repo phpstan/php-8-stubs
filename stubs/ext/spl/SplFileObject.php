@@ -4,7 +4,7 @@
 class SplFileObject extends \SplFileInfo implements \RecursiveIterator, \SeekableIterator
 {
     /** @param resource|null $context */
-    public function __construct(string $file_name, string $open_mode = "r", bool $use_include_path = false, $context = null)
+    public function __construct(string $filename, string $mode = "r", bool $useIncludePath = false, $context = null)
     {
     }
     /** @return void */
@@ -28,15 +28,15 @@ class SplFileObject extends \SplFileInfo implements \RecursiveIterator, \Seekabl
     {
     }
     /** @return array|false */
-    public function fgetcsv(string $delimiter = ",", string $enclosure = "\"", string $escape = "\\")
+    public function fgetcsv(string $separator = ",", string $enclosure = "\"", string $escape = "\\")
     {
     }
     /** @return int|false */
-    public function fputcsv(array $fields, string $delimiter = ",", string $enclosure = "\"", string $escape = "\\")
+    public function fputcsv(array $fields, string $separator = ",", string $enclosure = "\"", string $escape = "\\")
     {
     }
     /** @return bool|null */
-    public function setCsvControl(string $delimiter = ",", string $enclosure = "\"", string $escape = "\\")
+    public function setCsvControl(string $separator = ",", string $enclosure = "\"", string $escape = "\\")
     {
     }
     /** @return array */
@@ -44,10 +44,10 @@ class SplFileObject extends \SplFileInfo implements \RecursiveIterator, \Seekabl
     {
     }
     /**
-     * @param int $wouldblock
+     * @param int $wouldBlock
      * @return bool
      */
-    public function flock(int $operation, &$wouldblock = null)
+    public function flock(int $operation, &$wouldBlock = null)
     {
     }
     /** @return bool */
@@ -71,11 +71,11 @@ class SplFileObject extends \SplFileInfo implements \RecursiveIterator, \Seekabl
     {
     }
     /** @return array|int|false|null */
-    public function fscanf(string $format, mixed &...$params)
+    public function fscanf(string $format, mixed &...$vars)
     {
     }
     /** @return int|false */
-    public function fwrite(string $str, int $length = 0)
+    public function fwrite(string $data, int $length = 0)
     {
     }
     /** @return array */
@@ -107,7 +107,7 @@ class SplFileObject extends \SplFileInfo implements \RecursiveIterator, \Seekabl
     {
     }
     /** @return void */
-    public function setMaxLineLen(int $max_len)
+    public function setMaxLineLen(int $maxLength)
     {
     }
     /** @return int */
@@ -123,7 +123,7 @@ class SplFileObject extends \SplFileInfo implements \RecursiveIterator, \Seekabl
     {
     }
     /** @return void */
-    public function seek(int $line_pos)
+    public function seek(int $line)
     {
     }
     /**

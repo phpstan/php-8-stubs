@@ -1,5 +1,5 @@
 <?php 
 
-function tidy_is_xhtml(\tidy $object) : bool
+function tidy_is_xhtml(\tidy $tidy) : bool
 {
 }

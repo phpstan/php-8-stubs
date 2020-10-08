@@ -3,7 +3,7 @@
 /** @generate-function-entries */
 class SplFileInfo
 {
-    public function __construct(string $file_name)
+    public function __construct(string $filename)
     {
     }
     /** @return string */
@@ -95,26 +95,26 @@ class SplFileInfo
     {
     }
     /** @return SplFileInfo */
-    public function getFileInfo(?string $class_name = null)
+    public function getFileInfo(?string $class = null)
     {
     }
     /** @return SplFileInfo|null */
-    public function getPathInfo(?string $class_name = null)
+    public function getPathInfo(?string $class = null)
     {
     }
     /**
      * @param resource|null $context
      * @return SplFileObject
      */
-    public function openFile(string $open_mode = "r", bool $use_include_path = false, $context = null)
+    public function openFile(string $mode = "r", bool $useIncludePath = false, $context = null)
     {
     }
     /** @return void */
-    public function setFileClass(string $class_name = SplFileObject::class)
+    public function setFileClass(string $class = SplFileObject::class)
     {
     }
     /** @return void */
-    public function setInfoClass(string $class_name = SplFileInfo::class)
+    public function setInfoClass(string $class = SplFileInfo::class)
     {
     }
     /** @implementation-alias SplFileInfo::getPathname */

@@ -5,5 +5,5 @@ interface Serializable
     /** @return string */
     public function serialize();
     /** @return void */
-    public function unserialize(string $serialized);
+    public function unserialize(string $data);
 }
