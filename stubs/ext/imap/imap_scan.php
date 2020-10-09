@@ -1,9 +1,9 @@
 <?php 
 
 /**
- * @param resource $stream_id
+ * @param resource $imap
  * @alias imap_listscan
  */
-function imap_scan($stream_id, string $ref, string $pattern, string $content) : array|false
+function imap_scan($imap, string $reference, string $pattern, string $content) : array|false
 {
 }

@@ -1,6 +1,6 @@
 <?php 
 
-/** @param resource $stream_id */
-function imap_get_quotaroot($stream_id, string $mbox) : array|false
+/** @param resource $imap */
+function imap_get_quotaroot($imap, string $mailbox) : array|false
 {
 }

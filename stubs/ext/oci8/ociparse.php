@@ -1,11 +1,11 @@
 <?php 
 
 /**
- * @param resource $connection_resource
+ * @param resource $connection
  * @return resource|false
  * @alias oci_parse
  * @deprecated
  */
-function ociparse($connection_resource, string $sql_text)
+function ociparse($connection, string $sql)
 {
 }

@@ -1,5 +1,5 @@
 <?php 
 
-function oci_lob_tell(\OCILob $lob_descriptor) : int|false
+function oci_lob_tell(\OCILob $lob) : int|false
 {
 }

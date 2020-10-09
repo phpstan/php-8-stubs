@@ -16,7 +16,7 @@ class XMLReader
     {
     }
     /** @return string|null */
-    public function getAttributeNs(string $name, string $uri)
+    public function getAttributeNs(string $name, string $namespace)
     {
     }
     /** @return bool */
@@ -40,7 +40,7 @@ class XMLReader
     {
     }
     /** @return bool */
-    public function moveToAttributeNs(string $name, string $uri)
+    public function moveToAttributeNs(string $name, string $namespace)
     {
     }
     /** @return bool */

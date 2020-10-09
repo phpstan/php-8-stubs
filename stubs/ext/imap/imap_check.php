@@ -1,6 +1,6 @@
 <?php 
 
-/** @param resource $stream_id */
-function imap_check($stream_id) : \stdClass|false
+/** @param resource $imap */
+function imap_check($imap) : \stdClass|false
 {
 }

@@ -4,10 +4,10 @@
 /**
  * @param string $path
  * @param string $mode
- * @param string $handlername
- * @param string $handler_parameters
+ * @param string $handler
+ * @param string $handler_params
  * @return resource|false
  */
-function dba_popen($path, $mode, $handlername = UNKNOWN, ...$handler_parameters)
+function dba_popen($path, $mode, $handler = UNKNOWN, ...$handler_params)
 {
 }

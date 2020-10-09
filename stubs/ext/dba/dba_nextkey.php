@@ -1,6 +1,6 @@
 <?php 
 
-/** @param resource $handle */
-function dba_nextkey($handle) : string|false
+/** @param resource $dba */
+function dba_nextkey($dba) : string|false
 {
 }

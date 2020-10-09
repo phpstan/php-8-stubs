@@ -2,8 +2,8 @@
 
 /**
  * @param string|array $key
- * @param resource $handle
+ * @param resource $dba
  */
-function dba_replace($key, string $value, $handle) : bool
+function dba_replace($key, string $value, $dba) : bool
 {
 }

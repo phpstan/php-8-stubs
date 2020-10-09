@@ -1,6 +1,6 @@
 <?php 
 
-/** @param resource $stream_id */
-function imap_setacl($stream_id, string $mailbox, string $id, string $rights) : bool
+/** @param resource $imap */
+function imap_setacl($imap, string $mailbox, string $user_id, string $rights) : bool
 {
 }

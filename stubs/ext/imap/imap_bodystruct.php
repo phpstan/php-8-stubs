@@ -1,9 +1,9 @@
 <?php 
 
 /**
- * @param resource $stream_id
+ * @param resource $imap
  * @return stdClass|false
  */
-function imap_bodystruct($stream_id, int $msg_no, string $section)
+function imap_bodystruct($imap, int $message_num, string $section)
 {
 }

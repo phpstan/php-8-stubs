@@ -3,7 +3,10 @@
 /** @generate-function-entries */
 class XSLTProcessor
 {
-    /** @return bool */
+    /**
+     * @param DOMDocument|SimpleXMLElement $stylesheet
+     * @return bool
+     */
     public function importStylesheet(object $stylesheet)
     {
     }
@@ -11,7 +14,7 @@ class XSLTProcessor
      * @param DOMDocument|SimpleXMLElement $document
      * @return DOMDocument|false
      */
-    public function transformToDoc(object $document, ?string $return_class = null)
+    public function transformToDoc(object $document, ?string $returnClass = null)
     {
     }
     /**
@@ -45,7 +48,7 @@ class XSLTProcessor
     {
     }
     /** @return void */
-    public function registerPHPFunctions(array|string|null $restrict = null)
+    public function registerPHPFunctions(array|string|null $functions = null)
     {
     }
     /** @return bool */
@@ -53,7 +56,7 @@ class XSLTProcessor
     {
     }
     /** @return int */
-    public function setSecurityPrefs(int $securityPrefs)
+    public function setSecurityPrefs(int $preferences)
     {
     }
     /** @return int */

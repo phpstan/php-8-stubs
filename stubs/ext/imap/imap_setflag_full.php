@@ -1,6 +1,6 @@
 <?php 
 
-/** @param resource $stream_id */
-function imap_setflag_full($stream_id, string $sequence, string $flag, int $options = 0) : bool
+/** @param resource $imap */
+function imap_setflag_full($imap, string $sequence, string $flag, int $options = 0) : bool
 {
 }

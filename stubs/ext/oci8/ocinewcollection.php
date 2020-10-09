@@ -1,10 +1,10 @@
 <?php 
 
 /**
- * @param resource $connection_resource
+ * @param resource $connection
  * @alias oci_new_collection
  * @deprecated
  */
-function ocinewcollection($connection_resource, string $type_name, ?string $schema_name = null) : \OCICollection|false
+function ocinewcollection($connection, string $type_name, ?string $schema = null) : \OCICollection|false
 {
 }

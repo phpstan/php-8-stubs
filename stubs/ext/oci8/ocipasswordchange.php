@@ -1,11 +1,11 @@
 <?php 
 
 /**
- * @param resource|string $connection_resource_or_connection_string
+ * @param resource|string $connection
  * @return resource|bool
  * @alias oci_password_change
  * @deprecated
  */
-function ocipasswordchange($connection_resource_or_connection_string, string $username, string $old_password, string $new_password)
+function ocipasswordchange($connection, string $username, string $old_password, string $new_password)
 {
 }

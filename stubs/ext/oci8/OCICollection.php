@@ -27,7 +27,7 @@ class OCICollection
      * @alias oci_collection_assign
      * @return bool
      */
-    public function assign(OCICollection $collection_from)
+    public function assign(OCICollection $from)
     {
     }
     /**
@@ -55,7 +55,7 @@ class OCICollection
      * @alias oci_collection_trim
      * @return bool
      */
-    public function trim(int $number)
+    public function trim(int $num)
     {
     }
 }

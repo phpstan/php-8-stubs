@@ -1,6 +1,6 @@
 <?php 
 
-/** @param resource $stream_id */
-function imap_unsubscribe($stream_id, string $mailbox) : bool
+/** @param resource $imap */
+function imap_unsubscribe($imap, string $mailbox) : bool
 {
 }

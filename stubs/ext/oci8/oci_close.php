@@ -1,8 +1,6 @@
 <?php 
 
-/**
- * @param resource $connection_resource
- */
-function oci_close($connection_resource) : ?bool
+/** @param resource $connection */
+function oci_close($connection) : ?bool
 {
 }

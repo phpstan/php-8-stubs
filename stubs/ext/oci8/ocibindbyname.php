@@ -1,10 +1,10 @@
 <?php 
 
 /**
- * @param resource $statement_resource
+ * @param resource $statement
  * @alias oci_bind_by_name
  * @deprecated
  */
-function ocibindbyname($statement_resource, string $column_name, mixed &$variable, int $maximum_length = -1, int $type = 0) : bool
+function ocibindbyname($statement, string $param, mixed &$var, int $max_length = -1, int $type = 0) : bool
 {
 }

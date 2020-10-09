@@ -1,9 +1,9 @@
 <?php 
 
 /**
- * @param resource $statement_resource
+ * @param resource $statement
  * @return resource|false
  */
-function oci_get_implicit_resultset($statement_resource)
+function oci_get_implicit_resultset($statement)
 {
 }

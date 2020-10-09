@@ -1,8 +1,6 @@
 <?php 
 
-/**
- * @param resource $statement_resource
- */
-function oci_field_type($statement_resource, string|int $column_number_or_name) : string|int|false
+/** @param resource $statement */
+function oci_field_type($statement, string|int $column) : string|int|false
 {
 }

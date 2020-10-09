@@ -1,10 +1,10 @@
 <?php 
 
 /**
- * @param resource $connection_resource
+ * @param resource $connection
  * @alias oci_server_version
  * @deprecated
  */
-function ociserverversion($connection_resource) : string|false
+function ociserverversion($connection) : string|false
 {
 }

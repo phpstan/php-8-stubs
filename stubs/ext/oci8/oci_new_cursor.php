@@ -1,9 +1,9 @@
 <?php 
 
 /**
- * @param resource $connection_resource
+ * @param resource $connection
  * @return resource|false
  */
-function oci_new_cursor($connection_resource)
+function oci_new_cursor($connection)
 {
 }

@@ -6,15 +6,15 @@ class SoapClient
     {
     }
     /** @return mixed */
-    public function __call(string $function_name, array $arguments)
+    public function __call(string $name, array $args)
     {
     }
     /**
-     * @param SoapHeader|array|null $input_headers
-     * @param array $output_headers
+     * @param SoapHeader|array|null $inputHeaders
+     * @param array $outputHeaders
      * @return mixed
      */
-    public function __soapCall(string $function_name, array $arguments, ?array $options = null, $input_headers = null, &$output_headers = null)
+    public function __soapCall(string $name, array $args, ?array $options = null, $inputHeaders = null, &$outputHeaders = null)
     {
     }
     /** @return array|null */
@@ -42,7 +42,7 @@ class SoapClient
     {
     }
     /** @return string|null */
-    public function __doRequest(string $request, string $location, string $action, int $version, int $one_way = 0)
+    public function __doRequest(string $request, string $location, string $action, int $version, bool $oneWay = false)
     {
     }
     /** @return void */
@@ -54,14 +54,14 @@ class SoapClient
     {
     }
     /**
-     * @param SoapHeader|array|null $soapheaders
+     * @param SoapHeader|array|null $headers
      * @return bool
      */
-    public function __setSoapHeaders($soapheaders = null)
+    public function __setSoapHeaders($headers = null)
     {
     }
     /** @return string|null */
-    public function __setLocation(string $new_location = "")
+    public function __setLocation(string $location = "")
     {
     }
 }

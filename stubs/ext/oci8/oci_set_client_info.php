@@ -1,8 +1,8 @@
 <?php 
 
 /**
- * @param resource $connection_resource
+ * @param resource $connection
  */
-function oci_set_client_info($connection_resource, string $client_information) : bool
+function oci_set_client_info($connection, string $client_info) : bool
 {
 }

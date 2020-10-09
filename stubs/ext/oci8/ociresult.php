@@ -1,10 +1,10 @@
 <?php 
 
 /**
- * @param resource $statement_resource
+ * @param resource $statement
  * @alias oci_result
  * @deprecated
  */
-function ociresult($statement_resource, string|int $column_number_or_name) : mixed
+function ociresult($statement, string|int $column) : mixed
 {
 }

@@ -10,7 +10,7 @@ class SoapServer
     {
     }
     /** @return void */
-    public function addSoapHeader(SoapHeader $object)
+    public function addSoapHeader(SoapHeader $header)
     {
     }
     /** @return void */
@@ -18,7 +18,7 @@ class SoapServer
     {
     }
     /** @return void */
-    public function setClass(string $class_name, mixed ...$argv)
+    public function setClass(string $class, mixed ...$args)
     {
     }
     /** @return void */
@@ -37,7 +37,7 @@ class SoapServer
     {
     }
     /** @return void */
-    public function handle(?string $soap_request = null)
+    public function handle(?string $request = null)
     {
     }
 }

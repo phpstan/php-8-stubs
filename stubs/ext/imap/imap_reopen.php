@@ -1,8 +1,8 @@
 <?php 
 
 /**
- * @param resource $stream_id
+ * @param resource $imap
  */
-function imap_reopen($stream_id, string $mailbox, int $options = 0, int $n_retries = 0) : bool
+function imap_reopen($imap, string $mailbox, int $flags = 0, int $retries = 0) : bool
 {
 }

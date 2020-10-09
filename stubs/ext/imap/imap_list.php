@@ -1,6 +1,6 @@
 <?php 
 
-/** @param resource $stream_id */
-function imap_list($stream_id, string $ref, string $pattern) : array|false
+/** @param resource $imap */
+function imap_list($imap, string $reference, string $pattern) : array|false
 {
 }

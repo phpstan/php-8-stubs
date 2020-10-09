@@ -1,10 +1,10 @@
 <?php 
 
 /**
- * @param resource $connection_resource
+ * @param resource $connection
  * @alias oci_commit
  * @deprecated
  */
-function ocicommit($connection_resource) : bool
+function ocicommit($connection) : bool
 {
 }

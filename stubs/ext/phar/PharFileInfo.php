@@ -49,7 +49,7 @@ class PharFileInfo extends \SplFileInfo
     {
     }
     /** @return bool */
-    public function isCompressed(int $compression_type = 9021976)
+    public function isCompressed(?int $compression_type = null)
     {
     }
     /** @return bool */

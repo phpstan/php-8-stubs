@@ -1,8 +1,8 @@
 <?php 
 
 /**
- * @param resource $stream_id
+ * @param resource $imap
  */
-function imap_expunge($stream_id) : bool
+function imap_expunge($imap) : bool
 {
 }

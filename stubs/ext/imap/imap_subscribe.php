@@ -1,6 +1,6 @@
 <?php 
 
-/** @param resource $stream_id */
-function imap_subscribe($stream_id, string $mailbox) : bool
+/** @param resource $imap */
+function imap_subscribe($imap, string $mailbox) : bool
 {
 }

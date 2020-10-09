@@ -1,6 +1,6 @@
 <?php 
 
-/** @param resource $statement_resource */
-function oci_bind_by_name($statement_resource, string $column_name, mixed &$variable, int $maximum_length = -1, int $type = 0) : bool
+/** @param resource $statement */
+function oci_bind_by_name($statement, string $param, mixed &$var, int $max_length = -1, int $type = 0) : bool
 {
 }

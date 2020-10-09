@@ -1,6 +1,6 @@
 <?php 
 
-/** @param resource $stream_id */
-function imap_thread($stream_id, int $options = SE_FREE) : array|false
+/** @param resource $imap */
+function imap_thread($imap, int $flags = SE_FREE) : array|false
 {
 }

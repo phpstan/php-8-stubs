@@ -1,10 +1,10 @@
 <?php 
 
 /**
- * @param resource $statement_resource
+ * @param resource $statement
  * @alias oci_set_prefetch
  * @deprecated
  */
-function ocisetprefetch($statement_resource, int $number_of_rows) : bool
+function ocisetprefetch($statement, int $rows) : bool
 {
 }

@@ -1,10 +1,10 @@
 <?php 
 
 /**
- * @param resource $statement_resource
+ * @param resource $statement
  * @alias oci_execute
  * @deprecated
  */
-function ociexecute($statement_resource, int $mode = OCI_COMMIT_ON_SUCCESS) : bool
+function ociexecute($statement, int $mode = OCI_COMMIT_ON_SUCCESS) : bool
 {
 }

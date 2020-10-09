@@ -1,10 +1,10 @@
 <?php 
 
 /**
- * @param resource $connection_resource
+ * @param resource $connection
  * @alias oci_rollback
  * @deprecated
  */
-function ocirollback($connection_resource) : bool
+function ocirollback($connection) : bool
 {
 }

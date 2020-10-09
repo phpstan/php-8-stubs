@@ -1,10 +1,10 @@
 <?php 
 
 /**
- * @param resource $statement_resource
+ * @param resource $statement
  * @alias oci_num_fields
  * @deprecated
  */
-function ocinumcols($statement_resource) : int
+function ocinumcols($statement) : int
 {
 }

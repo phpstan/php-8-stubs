@@ -1,5 +1,5 @@
 <?php 
 
-function imap_binary(string $text) : string|false
+function imap_binary(string $string) : string|false
 {
 }

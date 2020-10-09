@@ -1,6 +1,6 @@
 <?php 
 
-/** @param resource $stream_id */
-function imap_sort($stream_id, int $criteria, int $reverse, int $options = 0, ?string $search_criteria = null, ?string $charset = null) : array|false
+/** @param resource $imap */
+function imap_sort($imap, int $criteria, int $reverse, int $flags = 0, ?string $search_criteria = null, ?string $charset = null) : array|false
 {
 }

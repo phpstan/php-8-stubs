@@ -1,5 +1,5 @@
 <?php 
 
-function imap_utf7_encode(string $buf) : string
+function imap_utf7_encode(string $string) : string
 {
 }

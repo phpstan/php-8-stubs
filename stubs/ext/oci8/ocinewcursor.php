@@ -1,11 +1,11 @@
 <?php 
 
 /**
- * @param resource $connection_resource
+ * @param resource $connection
  * @return resource|false
  * @alias oci_new_cursor
  * @deprecated
  */
-function ocinewcursor($connection_resource)
+function ocinewcursor($connection)
 {
 }

@@ -1,8 +1,6 @@
 <?php 
 
-/**
- * @param resource $statement_resource
- */
-function oci_set_prefetch($statement_resource, int $number_of_rows) : bool
+/** @param resource $statement */
+function oci_set_prefetch($statement, int $rows) : bool
 {
 }

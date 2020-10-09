@@ -1,5 +1,5 @@
 <?php 
 
-function com_message_pump(int $timeoutms = 0) : bool
+function com_message_pump(int $timeout_milliseconds = 0) : bool
 {
 }

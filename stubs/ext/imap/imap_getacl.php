@@ -1,6 +1,6 @@
 <?php 
 
-/** @param resource $stream_id */
-function imap_getacl($stream_id, string $mailbox) : array|false
+/** @param resource $imap */
+function imap_getacl($imap, string $mailbox) : array|false
 {
 }

@@ -1,5 +1,5 @@
 <?php 
 
-function variant_round(mixed $left, int $decimals) : ?\variant
+function variant_round(mixed $value, int $decimals) : ?\variant
 {
 }

@@ -2,8 +2,8 @@
 
 /**
  * @param string|array $key
- * @param resource $handle
+ * @param resource $dba
  */
-function dba_delete($key, $handle) : bool
+function dba_delete($key, $dba) : bool
 {
 }

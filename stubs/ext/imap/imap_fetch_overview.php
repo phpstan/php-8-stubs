@@ -1,6 +1,6 @@
 <?php 
 
-/** @param resource $stream_id */
-function imap_fetch_overview($stream_id, string $sequence, int $options = 0) : array|false
+/** @param resource $imap */
+function imap_fetch_overview($imap, string $sequence, int $flags = 0) : array|false
 {
 }

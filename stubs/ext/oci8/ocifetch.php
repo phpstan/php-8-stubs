@@ -1,10 +1,10 @@
 <?php 
 
 /**
- * @param resource $statement_resource
+ * @param resource $statement
  * @alias oci_fetch
  * @deprecated
  */
-function ocifetch($statement_resource) : bool
+function ocifetch($statement) : bool
 {
 }

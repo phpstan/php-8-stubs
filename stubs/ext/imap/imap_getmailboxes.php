@@ -1,6 +1,6 @@
 <?php 
 
-/** @param resource $stream_id */
-function imap_getmailboxes($stream_id, string $ref, string $pattern) : array|false
+/** @param resource $imap */
+function imap_getmailboxes($imap, string $reference, string $pattern) : array|false
 {
 }

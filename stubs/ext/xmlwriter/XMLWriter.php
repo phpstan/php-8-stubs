@@ -39,11 +39,11 @@ class XMLWriter
     {
     }
     /** @alias xmlwriter_start_attribute_ns */
-    public function startAttributeNs(?string $prefix, string $name, ?string $uri) : bool
+    public function startAttributeNs(?string $prefix, string $name, ?string $namespace) : bool
     {
     }
     /** @alias xmlwriter_write_attribute_ns */
-    public function writeAttributeNs(?string $prefix, string $name, ?string $uri, string $value) : bool
+    public function writeAttributeNs(?string $prefix, string $name, ?string $namespace, string $value) : bool
     {
     }
     /** @alias xmlwriter_start_element */
@@ -59,7 +59,7 @@ class XMLWriter
     {
     }
     /** @alias xmlwriter_start_element_ns */
-    public function startElementNs(?string $prefix, string $name, ?string $uri) : bool
+    public function startElementNs(?string $prefix, string $name, ?string $namespace) : bool
     {
     }
     /** @alias xmlwriter_write_element */
@@ -67,7 +67,7 @@ class XMLWriter
     {
     }
     /** @alias xmlwriter_write_element_ns */
-    public function writeElementNs(?string $prefix, string $name, ?string $uri, ?string $content = null) : bool
+    public function writeElementNs(?string $prefix, string $name, ?string $namespace, ?string $content = null) : bool
     {
     }
     /** @alias xmlwriter_start_pi */

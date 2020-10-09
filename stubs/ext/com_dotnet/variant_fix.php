@@ -1,5 +1,5 @@
 <?php 
 
-function variant_fix(mixed $left) : \variant
+function variant_fix(mixed $value) : \variant
 {
 }

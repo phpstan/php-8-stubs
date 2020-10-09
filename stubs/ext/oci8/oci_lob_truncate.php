@@ -1,5 +1,5 @@
 <?php 
 
-function oci_lob_truncate(\OCILob $lob_descriptor, int $length = 0) : bool
+function oci_lob_truncate(\OCILob $lob, int $length = 0) : bool
 {
 }

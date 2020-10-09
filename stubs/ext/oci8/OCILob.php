@@ -83,7 +83,7 @@ class OCILob
      * @alias oci_lob_append
      * @return bool
      */
-    public function append(OCILob $lob_descriptor_from)
+    public function append(OCILob $from)
     {
     }
     /**
@@ -125,14 +125,14 @@ class OCILob
      * @alias oci_lob_export
      * @return bool
      */
-    public function writetofile(string $filename, ?int $start = null, ?int $length = null)
+    public function writetofile(string $filename, ?int $offset = null, ?int $length = null)
     {
     }
     /**
      * @alias oci_lob_export
      * @return bool
      */
-    public function export(string $filename, ?int $start = null, ?int $length = null)
+    public function export(string $filename, ?int $offset = null, ?int $length = null)
     {
     }
     /**

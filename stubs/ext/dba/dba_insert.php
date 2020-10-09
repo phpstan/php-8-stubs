@@ -2,8 +2,8 @@
 
 /**
  * @param string|array $key
- * @param resource $handle
+ * @param resource $dba
  */
-function dba_insert($key, string $value, $handle) : bool
+function dba_insert($key, string $value, $dba) : bool
 {
 }

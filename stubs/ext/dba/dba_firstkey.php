@@ -1,6 +1,6 @@
 <?php 
 
-/** @param resource $handle */
-function dba_firstkey($handle) : string|false
+/** @param resource $dba */
+function dba_firstkey($dba) : string|false
 {
 }

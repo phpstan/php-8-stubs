@@ -1,5 +1,5 @@
 <?php 
 
-function ocigetbufferinglob(\OCILob $lob_descriptor) : bool
+function ocigetbufferinglob(\OCILob $lob) : bool
 {
 }

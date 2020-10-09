@@ -1,6 +1,6 @@
 <?php 
 
-/** @param resource $handle */
-function dba_optimize($handle) : bool
+/** @param resource $dba */
+function dba_optimize($dba) : bool
 {
 }

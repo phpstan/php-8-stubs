@@ -1,6 +1,6 @@
 <?php 
 
-/** @param resource $stream_id */
-function imap_mailboxmsginfo($stream_id) : \stdClass
+/** @param resource $imap */
+function imap_mailboxmsginfo($imap) : \stdClass
 {
 }

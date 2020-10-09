@@ -1,5 +1,5 @@
 <?php 
 
-function xml_set_object(\XmlParser $parser, object $obj) : bool
+function xml_set_object(\XmlParser $parser, object $object) : bool
 {
 }

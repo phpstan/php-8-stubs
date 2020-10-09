@@ -2,8 +2,8 @@
 
 /**
  * @param string|array $key
- * @param resource $handle
+ * @param resource $dba
  */
-function dba_exists($key, $handle) : bool
+function dba_exists($key, $dba) : bool
 {
 }

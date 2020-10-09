@@ -1,10 +1,10 @@
 <?php 
 
 /**
- * @param resource $statement_resource
+ * @param resource $statement
  * @alias oci_field_size
  * @deprecated
  */
-function ocicolumnsize($statement_resource, string|int $column_number_or_name) : int|false
+function ocicolumnsize($statement, string|int $column) : int|false
 {
 }

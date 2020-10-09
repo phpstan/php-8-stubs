@@ -1,6 +1,6 @@
 <?php 
 
-/** @param resource $handle */
-function dba_close($handle) : void
+/** @param resource $dba */
+function dba_close($dba) : void
 {
 }

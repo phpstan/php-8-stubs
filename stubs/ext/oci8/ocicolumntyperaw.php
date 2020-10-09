@@ -1,10 +1,10 @@
 <?php 
 
 /**
- * @param resource $statement_resource
+ * @param resource $statement
  * @alias oci_field_type_raw
  * @deprecated
  */
-function ocicolumntyperaw($statement_resource, string|int $column_number_or_name) : int|false
+function ocicolumntyperaw($statement, string|int $column) : int|false
 {
 }

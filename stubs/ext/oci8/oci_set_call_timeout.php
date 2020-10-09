@@ -1,8 +1,6 @@
 <?php 
 
-/**
- * @param resource $connection_resource
- */
-function oci_set_call_timeout($connection_resource, int $call_timeout) : bool
+/** @param resource $connection */
+function oci_set_call_timeout($connection, int $timeout) : bool
 {
 }

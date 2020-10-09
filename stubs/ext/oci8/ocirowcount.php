@@ -1,10 +1,10 @@
 <?php 
 
 /**
- * @param resource $statement_resource
+ * @param resource $statement
  * @alias oci_num_rows
  * @deprecated
  */
-function ocirowcount($statement_resource) : int|false
+function ocirowcount($statement) : int|false
 {
 }

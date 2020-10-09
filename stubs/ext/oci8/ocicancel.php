@@ -1,10 +1,10 @@
 <?php 
 
 /**
- * @param resource $statement_resource
+ * @param resource $statement
  * @alias oci_cancel
  * @deprecated
  */
-function ocicancel($statement_resource) : bool
+function ocicancel($statement) : bool
 {
 }

@@ -1,5 +1,5 @@
 <?php 
 
-function variant_abs(mixed $left) : \variant
+function variant_abs(mixed $value) : \variant
 {
 }

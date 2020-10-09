@@ -1,5 +1,5 @@
 <?php 
 
-function snmp_set_enum_print(int $enum_print) : bool
+function snmp_set_enum_print(bool $enable) : bool
 {
 }

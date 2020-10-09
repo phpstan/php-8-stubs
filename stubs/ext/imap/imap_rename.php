@@ -1,9 +1,9 @@
 <?php 
 
 /**
- * @param resource $stream_id
+ * @param resource $imap
  * @alias imap_renamemailbox
  */
-function imap_rename($stream_id, string $old_name, string $new_name) : bool
+function imap_rename($imap, string $from, string $to) : bool
 {
 }

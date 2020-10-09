@@ -1,6 +1,6 @@
 <?php 
 
-/** @param resource $stream_id */
-function imap_lsub($stream_id, string $ref, string $pattern) : array|false
+/** @param resource $imap */
+function imap_lsub($imap, string $reference, string $pattern) : array|false
 {
 }

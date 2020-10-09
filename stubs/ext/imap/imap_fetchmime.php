@@ -1,6 +1,6 @@
 <?php 
 
-/** @param resource $stream_id */
-function imap_fetchmime($stream_id, int $msg_no, string $section, int $options = 0) : string|false
+/** @param resource $imap */
+function imap_fetchmime($imap, int $message_num, string $section, int $flags = 0) : string|false
 {
 }

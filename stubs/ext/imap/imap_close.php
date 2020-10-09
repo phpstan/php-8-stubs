@@ -1,8 +1,8 @@
 <?php 
 
 /**
- * @param resource $stream_id
+ * @param resource $imap
  */
-function imap_close($stream_id, int $options = 0) : bool
+function imap_close($imap, int $flags = 0) : bool
 {
 }

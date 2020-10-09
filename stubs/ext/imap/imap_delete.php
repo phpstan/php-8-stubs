@@ -1,8 +1,8 @@
 <?php 
 
 /**
- * @param resource $stream_id
+ * @param resource $imap
  */
-function imap_delete($stream_id, string $msg_no, int $options = 0) : bool
+function imap_delete($imap, string $message_num, int $flags = 0) : bool
 {
 }

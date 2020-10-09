@@ -1,6 +1,6 @@
 <?php 
 
-/** @param resource $stream_id */
-function imap_set_quota($stream_id, string $qroot, int $mailbox_size) : bool
+/** @param resource $imap */
+function imap_set_quota($imap, string $quota_root, int $mailbox_size) : bool
 {
 }

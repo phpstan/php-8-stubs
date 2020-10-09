@@ -1,6 +1,6 @@
 <?php 
 
-/** @param resource $stream_id */
-function imap_uid($stream_id, int $msg_no) : int|false
+/** @param resource $imap */
+function imap_uid($imap, int $message_num) : int|false
 {
 }

@@ -1,9 +1,9 @@
 <?php 
 
 /**
- * @param resource|string $connection_resource_or_connection_string
+ * @param resource|string $connection
  * @return resource|bool
  */
-function oci_password_change($connection_resource_or_connection_string, string $username, string $old_password, string $new_password)
+function oci_password_change($connection, string $username, string $old_password, string $new_password)
 {
 }

@@ -1,6 +1,6 @@
 <?php 
 
-/** @param resource $stream_id */
-function imap_mail_copy($stream_id, string $msglist, string $mailbox, int $options = 0) : bool
+/** @param resource $imap */
+function imap_mail_copy($imap, string $message_nums, string $mailbox, int $flags = 0) : bool
 {
 }

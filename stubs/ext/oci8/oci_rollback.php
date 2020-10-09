@@ -1,8 +1,6 @@
 <?php 
 
-/**
- * @param resource $connection_resource
- */
-function oci_rollback($connection_resource) : bool
+/** @param resource $connection */
+function oci_rollback($connection) : bool
 {
 }

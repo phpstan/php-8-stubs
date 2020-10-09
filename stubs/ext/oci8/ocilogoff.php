@@ -1,10 +1,10 @@
 <?php 
 
 /**
- * @param resource $connection_resource
+ * @param resource $connection
  * @alias oci_close
  * @deprecated
  */
-function ocilogoff($connection_resource) : ?bool
+function ocilogoff($connection) : ?bool
 {
 }

@@ -1,6 +1,6 @@
 <?php 
 
-/** @param resource $handle */
-function dba_sync($handle) : bool
+/** @param resource $dba */
+function dba_sync($dba) : bool
 {
 }

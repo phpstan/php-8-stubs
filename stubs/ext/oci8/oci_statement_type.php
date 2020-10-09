@@ -1,8 +1,6 @@
 <?php 
 
-/**
- * @param resource $statement_resource
- */
-function oci_statement_type($statement_resource) : string|false
+/** @param resource $statement */
+function oci_statement_type($statement) : string|false
 {
 }

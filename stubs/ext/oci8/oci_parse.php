@@ -1,9 +1,9 @@
 <?php 
 
 /**
- * @param resource $connection_resource
+ * @param resource $connection
  * @return resource|false
  */
-function oci_parse($connection_resource, string $sql_text)
+function oci_parse($connection, string $sql)
 {
 }

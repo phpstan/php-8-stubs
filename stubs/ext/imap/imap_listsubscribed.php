@@ -1,9 +1,9 @@
 <?php 
 
 /**
- * @param resource $stream_id
+ * @param resource $imap
  * @alias imap_lsub
  */
-function imap_listsubscribed($stream_id, string $ref, string $pattern) : array|false
+function imap_listsubscribed($imap, string $reference, string $pattern) : array|false
 {
 }

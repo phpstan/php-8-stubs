@@ -1,6 +1,6 @@
 <?php 
 
-/** @param resource $stream_id */
-function imap_mail_move($stream_id, string $sequence, string $mailbox, int $options = 0) : bool
+/** @param resource $imap */
+function imap_mail_move($imap, string $message_nums, string $mailbox, int $flags = 0) : bool
 {
 }

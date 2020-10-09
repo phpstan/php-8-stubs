@@ -1,10 +1,10 @@
 <?php 
 
 /**
- * @param resource $statement_resource
+ * @param resource $statement
  * @alias oci_free_statement
  * @deprecated
  */
-function ocifreestatement($statement_resource) : bool
+function ocifreestatement($statement) : bool
 {
 }

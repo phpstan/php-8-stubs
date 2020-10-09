@@ -4,6 +4,6 @@
 /**
  * @return resource|false
  */
-function imap_open(string $mailbox, string $user, string $password, int $options = 0, int $n_retries = 0, array $params = [])
+function imap_open(string $mailbox, string $user, string $password, int $flags = 0, int $retries = 0, array $options = [])
 {
 }

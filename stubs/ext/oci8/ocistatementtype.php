@@ -1,10 +1,10 @@
 <?php 
 
 /**
- * @param resource $statement_resource
+ * @param resource $statement
  * @alias oci_statement_type
  * @deprecated
  */
-function ocistatementtype($statement_resource) : string|false
+function ocistatementtype($statement) : string|false
 {
 }

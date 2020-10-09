@@ -4,6 +4,6 @@
  * @alias oci_lob_load
  * @deprecated
  */
-function ociloadlob(\OCILob $lob_descriptor) : string|false
+function ociloadlob(\OCILob $lob) : string|false
 {
 }

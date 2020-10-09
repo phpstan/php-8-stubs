@@ -1,10 +1,10 @@
 <?php 
 
 /**
- * @param resource $statement_resource
+ * @param resource $statement
  * @alias oci_field_is_null
  * @deprecated
  */
-function ocicolumnisnull($statement_resource, string|int $column_number_or_name) : bool
+function ocicolumnisnull($statement, string|int $column) : bool
 {
 }
