@@ -1,5 +1,5 @@
 <?php 
 
-function imagegd(\GdImage $im, string $to = UNKNOWN) : bool
+function imagegd(\GdImage $image, string $file = UNKNOWN) : bool
 {
 }

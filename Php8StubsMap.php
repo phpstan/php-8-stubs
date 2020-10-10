@@ -111,7 +111,7 @@ class Php8StubsMap
   'variant' => 'stubs/ext/com_dotnet/variant.php',
   'com' => 'stubs/ext/com_dotnet/com.php',
   'dotnet' => 'stubs/ext/com_dotnet/dotnet.php',
-  'xmlparser' => 'stubs/ext/xml/XMLParser.php',
+  'xmlparser' => 'stubs/ext/xml/XmlParser.php',
   '_zendtestclass' => 'stubs/ext/zend_test/_ZendTestClass.php',
   '_zendtesttrait' => 'stubs/ext/zend_test/_ZendTestTrait.php',
   'zendtestns\\foo' => 'stubs/ext/zend_test/ZendTestNS/Foo.php',

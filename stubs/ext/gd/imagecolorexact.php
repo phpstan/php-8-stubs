@@ -1,5 +1,5 @@
 <?php 
 
-function imagecolorexact(\GdImage $im, int $red, int $green, int $blue) : int|false
+function imagecolorexact(\GdImage $image, int $red, int $green, int $blue) : int|false
 {
 }

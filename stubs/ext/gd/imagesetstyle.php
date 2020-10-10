@@ -1,5 +1,5 @@
 <?php 
 
-function imagesetstyle(\GdImage $im, array $styles) : bool
+function imagesetstyle(\GdImage $image, array $style) : bool
 {
 }

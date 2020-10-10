@@ -1,5 +1,5 @@
 <?php 
 
-function imageaffinematrixconcat(array $m1, array $m2) : array|false
+function imageaffinematrixconcat(array $matrix1, array $matrix2) : array|false
 {
 }

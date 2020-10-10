@@ -1,5 +1,5 @@
 <?php 
 
-function imagefilledellipse(\GdImage $im, int $cx, int $cy, int $w, int $h, int $color) : bool
+function imagefilledellipse(\GdImage $image, int $center_x, int $center_y, int $width, int $height, int $color) : bool
 {
 }

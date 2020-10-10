@@ -1,5 +1,5 @@
 <?php 
 
-function imageantialias(\GdImage $im, bool $on) : bool
+function imageantialias(\GdImage $image, bool $enable) : bool
 {
 }

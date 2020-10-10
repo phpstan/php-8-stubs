@@ -1,5 +1,5 @@
 <?php 
 
-function imagecolorstotal(\GdImage $im) : int
+function imagecolorstotal(\GdImage $image) : int
 {
 }

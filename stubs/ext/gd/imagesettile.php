@@ -1,5 +1,5 @@
 <?php 
 
-function imagesettile(\GdImage $im, \GdImage $tile) : bool
+function imagesettile(\GdImage $image, \GdImage $tile) : bool
 {
 }

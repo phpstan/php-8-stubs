@@ -1,6 +1,7 @@
 <?php 
 
 #endif
-function imagerotate(\GdImage $im, float $angle, int $bgdcolor, int $ignoretransparent = 0) : \GdImage|false
+// TODO: $ignore_transparent is ignored???
+function imagerotate(\GdImage $image, float $angle, int $background_color, bool $ignore_transparent = false) : \GdImage|false
 {
 }

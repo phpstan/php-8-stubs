@@ -1,5 +1,5 @@
 <?php 
 
-function imagecolorclosest(\GdImage $im, int $red, int $green, int $blue) : int|false
+function imagecolorclosest(\GdImage $image, int $red, int $green, int $blue) : int|false
 {
 }

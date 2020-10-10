@@ -1,5 +1,5 @@
 <?php 
 
-function imageistruecolor(\GdImage $im) : bool
+function imageistruecolor(\GdImage $image) : bool
 {
 }

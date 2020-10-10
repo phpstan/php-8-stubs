@@ -1,5 +1,5 @@
 <?php 
 
-function imageellipse(\GdImage $im, int $cx, int $cy, int $w, int $h, int $color) : bool
+function imageellipse(\GdImage $image, int $center_x, int $center_y, int $width, int $height, int $color) : bool
 {
 }

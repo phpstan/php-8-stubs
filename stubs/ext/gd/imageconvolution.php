@@ -1,5 +1,5 @@
 <?php 
 
-function imageconvolution(\GdImage $im, array $matrix3x3, float $div, float $offset) : bool
+function imageconvolution(\GdImage $image, array $matrix, float $divisor, float $offset) : bool
 {
 }

@@ -1,7 +1,7 @@
 <?php 
 
 #endif
-/** @param resource|string|null $to */
-function imagewbmp(\GdImage $im, $to = null, ?int $foreground = null) : bool
+/** @param resource|string|null $file */
+function imagewbmp(\GdImage $image, $file = null, ?int $foreground_color = null) : bool
 {
 }

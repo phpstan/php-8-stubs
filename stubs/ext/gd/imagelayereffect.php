@@ -1,5 +1,5 @@
 <?php 
 
-function imagelayereffect(\GdImage $im, int $effect) : bool
+function imagelayereffect(\GdImage $image, int $effect) : bool
 {
 }

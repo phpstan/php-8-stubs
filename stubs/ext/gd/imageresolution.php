@@ -1,5 +1,5 @@
 <?php 
 
-function imageresolution(\GdImage $im, ?int $res_x = null, ?int $res_y = null) : array|bool
+function imageresolution(\GdImage $image, ?int $resolution_x = null, ?int $resolution_y = null) : array|bool
 {
 }

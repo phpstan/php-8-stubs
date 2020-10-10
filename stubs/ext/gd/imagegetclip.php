@@ -1,5 +1,5 @@
 <?php 
 
-function imagegetclip(\GdImage $im) : array
+function imagegetclip(\GdImage $image) : array
 {
 }

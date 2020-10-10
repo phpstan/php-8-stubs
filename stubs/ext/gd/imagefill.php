@@ -1,5 +1,5 @@
 <?php 
 
-function imagefill(\GdImage $im, int $x, int $y, int $col) : bool
+function imagefill(\GdImage $image, int $x, int $y, int $color) : bool
 {
 }

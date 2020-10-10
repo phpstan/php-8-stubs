@@ -1,5 +1,5 @@
 <?php 
 
-function imagerectangle(\GdImage $im, int $x1, int $y1, int $x2, int $y2, int $col) : bool
+function imagerectangle(\GdImage $image, int $x1, int $y1, int $x2, int $y2, int $color) : bool
 {
 }

@@ -1,6 +1,6 @@
 <?php 
 
 #endif
-function imagedestroy(\GdImage $im) : bool
+function imagedestroy(\GdImage $image) : bool
 {
 }

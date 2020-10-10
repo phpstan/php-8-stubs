@@ -1,5 +1,5 @@
 <?php 
 
-function imagecolorallocate(\GdImage $im, int $red, int $green, int $blue) : int|false
+function imagecolorallocate(\GdImage $image, int $red, int $green, int $blue) : int|false
 {
 }

@@ -1,5 +1,5 @@
 <?php 
 
-function imagefilledpolygon(\GdImage $im, array $points, int $num_points_or_col, ?int $col = null) : bool
+function imagefilledpolygon(\GdImage $image, array $points, int $num_points_or_color, ?int $color = null) : bool
 {
 }

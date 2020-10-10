@@ -1,5 +1,5 @@
 <?php 
 
-function imagesavealpha(\GdImage $im, bool $save) : bool
+function imagesavealpha(\GdImage $image, bool $enable) : bool
 {
 }

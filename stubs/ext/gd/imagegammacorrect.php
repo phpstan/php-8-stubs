@@ -1,5 +1,5 @@
 <?php 
 
-function imagegammacorrect(\GdImage $im, float $inputgamma, float $outputgamma) : bool
+function imagegammacorrect(\GdImage $image, float $input_gamma, float $output_gamma) : bool
 {
 }

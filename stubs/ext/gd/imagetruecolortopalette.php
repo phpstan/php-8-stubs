@@ -1,5 +1,5 @@
 <?php 
 
-function imagetruecolortopalette(\GdImage $im, bool $ditherFlag, int $colorWanted) : bool
+function imagetruecolortopalette(\GdImage $image, bool $dither, int $num_colors) : bool
 {
 }

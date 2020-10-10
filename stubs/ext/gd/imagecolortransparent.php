@@ -1,5 +1,5 @@
 <?php 
 
-function imagecolortransparent(\GdImage $im, ?int $col = null) : ?int
+function imagecolortransparent(\GdImage $image, ?int $color = null) : ?int
 {
 }

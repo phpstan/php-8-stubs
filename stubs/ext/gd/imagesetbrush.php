@@ -1,5 +1,5 @@
 <?php 
 
-function imagesetbrush(\GdImage $im, \GdImage $brush) : bool
+function imagesetbrush(\GdImage $image, \GdImage $brush) : bool
 {
 }

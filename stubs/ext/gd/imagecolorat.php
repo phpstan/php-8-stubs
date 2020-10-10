@@ -1,5 +1,5 @@
 <?php 
 
-function imagecolorat(\GdImage $im, int $x, int $y) : int|false
+function imagecolorat(\GdImage $image, int $x, int $y) : int|false
 {
 }

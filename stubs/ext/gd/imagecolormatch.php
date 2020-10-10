@@ -1,5 +1,5 @@
 <?php 
 
-function imagecolormatch(\GdImage $im1, \GdImage $im2) : bool
+function imagecolormatch(\GdImage $image1, \GdImage $image2) : bool
 {
 }

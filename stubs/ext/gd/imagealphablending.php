@@ -1,5 +1,5 @@
 <?php 
 
-function imagealphablending(\GdImage $im, bool $blend) : bool
+function imagealphablending(\GdImage $image, bool $enable) : bool
 {
 }
