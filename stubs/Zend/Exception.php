@@ -14,7 +14,6 @@ class Exception implements \Throwable
     public final function getMessage() : string
     {
     }
-    /** @return int */
     public final function getCode()
     {
     }

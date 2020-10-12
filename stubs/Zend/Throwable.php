@@ -4,7 +4,6 @@
 interface Throwable extends \Stringable
 {
     public function getMessage() : string;
-    /** @return int */
     public function getCode();
     public function getFile() : string;
     public function getLine() : int;

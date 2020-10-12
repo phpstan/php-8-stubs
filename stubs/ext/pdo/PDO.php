@@ -58,10 +58,6 @@ class PDO
     public function rollBack()
     {
     }
-    /**
-     * @param array|int $value
-     * @return bool
-     */
     public function setAttribute(int $attribute, $value)
     {
     }

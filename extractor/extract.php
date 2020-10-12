@@ -155,6 +155,7 @@ $command = new class(
 
 			if ($stmt instanceof Node\Stmt\Class_ || $stmt instanceof Node\Stmt\Interface_ || $stmt instanceof Node\Stmt\Trait_) {
 				$classes[strtolower($namespacedName)] = $pathPart;
+				$stmt = $this->filterClassPhpDocs($stmt);
 			} elseif ($stmt instanceof Node\Stmt\Function_) {
 				$functions[strtolower($namespacedName)] = $pathPart;
 			} else {
@@ -173,6 +174,37 @@ $command = new class(
 		}
 
 		return [$classes, $functions];
+	}
+
+	private function filterClassPhpDocs(Node\Stmt\ClassLike $class): Node\Stmt\ClassLike
+	{
+		$namespacedName = $class->namespacedName->toString();
+		$removePhpDocFromMethod = null;
+		if (in_array($namespacedName, ['Throwable', 'Exception'], true)) {
+			$removePhpDocFromMethod = 'getCode';
+		}
+		if ($namespacedName === 'PDO') {
+			$removePhpDocFromMethod = 'setAttribute';
+		}
+
+		if ($removePhpDocFromMethod === null) {
+			return $class;
+		}
+
+		$stmts = $class->stmts;
+		foreach ($stmts as $stmt) {
+			if (!$stmt instanceof Node\Stmt\ClassMethod) {
+				continue;
+			}
+
+			if ($stmt->name->toLowerString() !== strtolower($removePhpDocFromMethod)) {
+				continue;
+			}
+
+			$stmt->setAttribute('comments', []);
+		}
+
+		return $class;
 	}
 
 	/**
