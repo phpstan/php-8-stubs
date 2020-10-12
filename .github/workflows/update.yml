@@ -33,6 +33,7 @@ jobs:
         with:
           repository: "php/php-src"
           path: "php-src"
+          ref: "PHP-8.0"
       - name: "Extract stubs"
         run: "./extractor/extract.php"
       - name: "Commit changes"
