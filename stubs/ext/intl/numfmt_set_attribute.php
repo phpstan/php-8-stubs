@@ -1,5 +1,5 @@
 <?php 
 
-function numfmt_set_attribute(\NumberFormatter $fmt, int $attr, int|float $value) : bool
+function numfmt_set_attribute(\NumberFormatter $formatter, int $attribute, int|float $value) : bool
 {
 }

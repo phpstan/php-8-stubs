@@ -1,6 +1,6 @@
 <?php 
 
 /* grapheme */
-function grapheme_strlen(string $input) : int|false|null
+function grapheme_strlen(string $string) : int|false|null
 {
 }

@@ -2,8 +2,8 @@
 
 /**
  * @param string $currency
- * @param int $position
+ * @param int $offset
  */
-function numfmt_parse_currency(\NumberFormatter $fmt, string $value, &$currency, &$position = null) : float|false
+function numfmt_parse_currency(\NumberFormatter $formatter, string $string, &$currency, &$offset = null) : float|false
 {
 }

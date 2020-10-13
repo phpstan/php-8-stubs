@@ -3,21 +3,21 @@
 class IntlGregorianCalendar extends \IntlCalendar
 {
     /**
-     * @param DateTimeZone|IntlTimeZone|string|int|null $timeZoneOrYear
+     * @param DateTimeZone|IntlTimeZone|string|int|null $timezoneOrYear
      * @param string|int|null $localeOrMonth
-     * @param int $dayOfMonth
+     * @param int $day
      * @param int $hour
      * @param int $minute
      * @param int $second
      */
-    public function __construct($timeZoneOrYear = UNKNOWN, $localeOrMonth = UNKNOWN, $dayOfMonth = UNKNOWN, $hour = UNKNOWN, $minute = UNKNOWN, $second = UNKNOWN)
+    public function __construct($timezoneOrYear = UNKNOWN, $localeOrMonth = UNKNOWN, $day = UNKNOWN, $hour = UNKNOWN, $minute = UNKNOWN, $second = UNKNOWN)
     {
     }
     /**
      * @return bool
      * @alias intlgregcal_set_gregorian_change
      */
-    public function setGregorianChange(float $change)
+    public function setGregorianChange(float $timestamp)
     {
     }
     /**

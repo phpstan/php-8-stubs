@@ -1,5 +1,5 @@
 <?php 
 
-function intlcal_equals(\IntlCalendar $calendarObject, \IntlCalendar $calendar) : bool
+function intlcal_equals(\IntlCalendar $calendar, \IntlCalendar $other) : bool
 {
 }

@@ -1,6 +1,6 @@
 <?php 
 
-/** @param IntlCalendar|DateTimeInterface|array|string|int|float $value */
-function datefmt_format(\IntlDateFormatter $df, $value) : string|false
+/** @param IntlCalendar|DateTimeInterface|array|string|int|float $datetime */
+function datefmt_format(\IntlDateFormatter $formatter, $datetime) : string|false
 {
 }

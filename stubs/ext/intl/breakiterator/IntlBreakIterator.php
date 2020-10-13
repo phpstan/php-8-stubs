@@ -51,11 +51,11 @@ class IntlBreakIterator implements \IteratorAggregate
     {
     }
     /** @return string */
-    public function getLocale(int $locale_type)
+    public function getLocale(int $type)
     {
     }
     /** @return IntlPartsIterator */
-    public function getPartsIterator(string $key_type = IntlPartsIterator::KEY_SEQUENTIAL)
+    public function getPartsIterator(string $type = IntlPartsIterator::KEY_SEQUENTIAL)
     {
     }
     /** @return string|null */

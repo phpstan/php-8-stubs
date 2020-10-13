@@ -1,6 +1,6 @@
 <?php 
 
-/** @param bool $isSystemID */
-function intltz_get_canonical_id(string $zoneId, &$isSystemID = null) : string|false
+/** @param bool $isSystemId */
+function intltz_get_canonical_id(string $timezoneId, &$isSystemId = null) : string|false
 {
 }

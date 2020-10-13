@@ -1,5 +1,5 @@
 <?php 
 
-function intltz_use_daylight_time(\IntlTimeZone $tz) : bool
+function intltz_use_daylight_time(\IntlTimeZone $timezone) : bool
 {
 }

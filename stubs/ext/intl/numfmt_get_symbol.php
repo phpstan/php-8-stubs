@@ -1,5 +1,5 @@
 <?php 
 
-function numfmt_get_symbol(\NumberFormatter $fmt, int $attr) : string|false
+function numfmt_get_symbol(\NumberFormatter $formatter, int $symbol) : string|false
 {
 }

@@ -1,5 +1,5 @@
 <?php 
 
-function datefmt_get_timezone_id(\IntlDateFormatter $df) : string|false
+function datefmt_get_timezone_id(\IntlDateFormatter $formatter) : string|false
 {
 }

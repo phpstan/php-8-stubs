@@ -1,5 +1,5 @@
 <?php 
 
-function datefmt_set_calendar(\IntlDateFormatter $df, \IntlCalendar|int|null $which) : bool
+function datefmt_set_calendar(\IntlDateFormatter $formatter, \IntlCalendar|int|null $calendar) : bool
 {
 }

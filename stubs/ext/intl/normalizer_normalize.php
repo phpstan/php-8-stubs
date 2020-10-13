@@ -1,6 +1,6 @@
 <?php 
 
 /* normalizer */
-function normalizer_normalize(string $input, int $form = Normalizer::FORM_C) : string|false
+function normalizer_normalize(string $string, int $form = Normalizer::FORM_C) : string|false
 {
 }

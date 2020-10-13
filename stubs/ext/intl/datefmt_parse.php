@@ -1,6 +1,6 @@
 <?php 
 
-/** @param int $position */
-function datefmt_parse(\IntlDateFormatter $df, string $value, &$position = null) : int|float|false
+/** @param int $offset */
+function datefmt_parse(\IntlDateFormatter $formatter, string $string, &$offset = null) : int|float|false
 {
 }

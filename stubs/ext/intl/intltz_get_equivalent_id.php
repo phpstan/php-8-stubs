@@ -1,5 +1,5 @@
 <?php 
 
-function intltz_get_equivalent_id(string $zoneId, int $index) : string|false
+function intltz_get_equivalent_id(string $timezoneId, int $offset) : string|false
 {
 }

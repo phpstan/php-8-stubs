@@ -1,5 +1,5 @@
 <?php 
 
-function intltz_get_region(string $zoneId) : string|false
+function intltz_get_region(string $timezoneId) : string|false
 {
 }

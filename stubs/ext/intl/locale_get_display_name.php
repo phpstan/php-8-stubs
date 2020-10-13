@@ -1,5 +1,5 @@
 <?php 
 
-function locale_get_display_name(string $locale, ?string $in_locale = null) : string|false
+function locale_get_display_name(string $locale, ?string $displayLocale = null) : string|false
 {
 }

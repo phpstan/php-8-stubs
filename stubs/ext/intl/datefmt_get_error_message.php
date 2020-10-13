@@ -1,5 +1,5 @@
 <?php 
 
-function datefmt_get_error_message(\IntlDateFormatter $df) : string
+function datefmt_get_error_message(\IntlDateFormatter $formatter) : string
 {
 }

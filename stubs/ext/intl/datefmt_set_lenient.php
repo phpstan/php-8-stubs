@@ -1,5 +1,5 @@
 <?php 
 
-function datefmt_set_lenient(\IntlDateFormatter $df, bool $lenient) : void
+function datefmt_set_lenient(\IntlDateFormatter $formatter, bool $lenient) : void
 {
 }

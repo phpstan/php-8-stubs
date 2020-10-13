@@ -2,7 +2,7 @@
 
 class IntlRuleBasedBreakIterator extends \IntlBreakIterator
 {
-    public function __construct(string $rules, bool $areCompiled = false)
+    public function __construct(string $rules, bool $compiled = false)
     {
     }
     /** @return string|false */

@@ -1,5 +1,5 @@
 <?php 
 
-function datefmt_get_calendar_object(\IntlDateFormatter $df) : \IntlCalendar|false|null
+function datefmt_get_calendar_object(\IntlDateFormatter $formatter) : \IntlCalendar|false|null
 {
 }

@@ -1,5 +1,5 @@
 <?php 
 
-function date_default_timezone_set(string $timezoneID) : bool
+function date_default_timezone_set(string $timezoneId) : bool
 {
 }

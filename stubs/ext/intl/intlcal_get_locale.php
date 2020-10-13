@@ -1,5 +1,5 @@
 <?php 
 
-function intlcal_get_locale(\IntlCalendar $calendar, int $localeType) : string
+function intlcal_get_locale(\IntlCalendar $calendar, int $type) : string
 {
 }

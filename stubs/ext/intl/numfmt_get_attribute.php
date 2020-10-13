@@ -1,5 +1,5 @@
 <?php 
 
-function numfmt_get_attribute(\NumberFormatter $fmt, int $attr) : int|float|false
+function numfmt_get_attribute(\NumberFormatter $formatter, int $attribute) : int|float|false
 {
 }

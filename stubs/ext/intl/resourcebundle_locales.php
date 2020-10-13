@@ -1,5 +1,5 @@
 <?php 
 
-function resourcebundle_locales(string $bundlename) : array|false
+function resourcebundle_locales(string $bundle) : array|false
 {
 }

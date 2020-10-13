@@ -1,5 +1,5 @@
 <?php 
 
-function msgfmt_get_error_code(\MessageFormatter $fmt) : int
+function msgfmt_get_error_code(\MessageFormatter $formatter) : int
 {
 }

@@ -1,5 +1,5 @@
 <?php 
 
-function intlcal_field_difference(\IntlCalendar $calendar, float $when, int $field) : int
+function intlcal_field_difference(\IntlCalendar $calendar, float $timestamp, int $field) : int
 {
 }

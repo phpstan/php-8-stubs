@@ -21,7 +21,7 @@ class IntlChar
     {
     }
     /** @return int|null */
-    public static function charFromName(string $characterName, int $nameChoice = IntlChar::UNICODE_CHAR_NAME)
+    public static function charFromName(string $name, int $type = IntlChar::UNICODE_CHAR_NAME)
     {
     }
     /** @return int|string|null */
@@ -29,7 +29,7 @@ class IntlChar
     {
     }
     /** @return string|null */
-    public static function charName(int|string $codepoint, int $nameChoice = IntlChar::UNICODE_CHAR_NAME)
+    public static function charName(int|string $codepoint, int $type = IntlChar::UNICODE_CHAR_NAME)
     {
     }
     /** @return int|null */
@@ -41,11 +41,11 @@ class IntlChar
     {
     }
     /** @return int|false|null */
-    public static function digit(int|string $codepoint, int $radix = 10)
+    public static function digit(int|string $codepoint, int $base = 10)
     {
     }
     /** @return bool|null */
-    public static function enumCharNames(int|string $start, int|string $limit, callable $callback, int $nameChoice = IntlChar::UNICODE_CHAR_NAME)
+    public static function enumCharNames(int|string $start, int|string $end, callable $callback, int $type = IntlChar::UNICODE_CHAR_NAME)
     {
     }
     /** @return void */
@@ -59,7 +59,7 @@ class IntlChar
     {
     }
     /** @return int */
-    public static function forDigit(int $digit, int $radix = 10)
+    public static function forDigit(int $digit, int $base = 10)
     {
     }
     #if U_ICU_VERSION_MAJOR_NUM >= 52
@@ -101,7 +101,7 @@ class IntlChar
     {
     }
     /** @return string|false */
-    public static function getPropertyName(int $property, int $nameChoice = IntlChar::LONG_PROPERTY_NAME)
+    public static function getPropertyName(int $property, int $type = IntlChar::LONG_PROPERTY_NAME)
     {
     }
     /** @return int */
@@ -109,7 +109,7 @@ class IntlChar
     {
     }
     /** @return string|false */
-    public static function getPropertyValueName(int $property, int $value, int $nameChoice = IntlChar::LONG_PROPERTY_NAME)
+    public static function getPropertyValueName(int $property, int $value, int $type = IntlChar::LONG_PROPERTY_NAME)
     {
     }
     /** @return array */

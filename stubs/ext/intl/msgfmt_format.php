@@ -1,5 +1,5 @@
 <?php 
 
-function msgfmt_format(\MessageFormatter $fmt, array $args) : string|false
+function msgfmt_format(\MessageFormatter $formatter, array $values) : string|false
 {
 }

@@ -1,5 +1,5 @@
 <?php 
 
-function grapheme_substr(string $string, int $start, ?int $length = null) : string|false
+function grapheme_substr(string $string, int $offset, ?int $length = null) : string|false
 {
 }
