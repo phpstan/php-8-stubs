@@ -1,6 +1,6 @@
 <?php 
 
-/** @param resource $large_object */
-function pg_lo_write($large_object, string $buf, ?int $len = null) : int|false
+/** @param resource $lob */
+function pg_lo_write($lob, string $data, ?int $length = null) : int|false
 {
 }

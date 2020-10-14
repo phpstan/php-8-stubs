@@ -1,5 +1,5 @@
 <?php 
 
-function mysqli_stmt_result_metadata(\mysqli_stmt $stmt) : \mysqli_result|false
+function mysqli_stmt_result_metadata(\mysqli_stmt $statement) : \mysqli_result|false
 {
 }

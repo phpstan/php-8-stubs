@@ -1,9 +1,9 @@
 <?php 
 
 /**
- * @param resource $connection_id
+ * @param resource $odbc
  * @return resource|false
  */
-function odbc_prepare($connection_id, string $query)
+function odbc_prepare($odbc, string $query)
 {
 }

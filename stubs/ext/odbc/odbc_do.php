@@ -1,10 +1,10 @@
 <?php 
 
 /**
- * @param resource $connection_id
+ * @param resource $odbc
  * @return resource|false
  * @alias odbc_exec
  */
-function odbc_do($connection_id, string $query)
+function odbc_do($odbc, string $query)
 {
 }

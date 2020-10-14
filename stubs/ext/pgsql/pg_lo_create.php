@@ -2,8 +2,8 @@
 
 /**
  * @param resource $connection
- * @param string|int $large_object_id
+ * @param string|int $oid
  */
-function pg_lo_create($connection = UNKNOWN, $large_object_id = UNKNOWN) : string|int|false
+function pg_lo_create($connection = UNKNOWN, $oid = UNKNOWN) : string|int|false
 {
 }

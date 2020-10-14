@@ -1,5 +1,5 @@
 <?php 
 
-function mysqli_stmt_data_seek(\mysqli_stmt $stmt, int $offset) : void
+function mysqli_stmt_data_seek(\mysqli_stmt $statement, int $offset) : void
 {
 }

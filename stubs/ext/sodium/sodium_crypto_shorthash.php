@@ -1,6 +1,6 @@
 <?php 
 
 #endif
-function sodium_crypto_shorthash(string $string, string $key) : string
+function sodium_crypto_shorthash(string $message, string $key) : string
 {
 }

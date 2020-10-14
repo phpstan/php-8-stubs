@@ -1,5 +1,5 @@
 <?php 
 
-function sodium_memzero(string &$reference) : void
+function sodium_memzero(string &$string) : void
 {
 }

@@ -1,6 +1,6 @@
 <?php 
 
-/** @param resource $large_object */
-function pg_lo_truncate($large_object, int $size) : bool
+/** @param resource $lob */
+function pg_lo_truncate($lob, int $size) : bool
 {
 }

@@ -5,6 +5,6 @@
  * @alias pg_field_name
  * @deprecated
  */
-function pg_fieldname($result, int $field_number) : string
+function pg_fieldname($result, int $field) : string
 {
 }

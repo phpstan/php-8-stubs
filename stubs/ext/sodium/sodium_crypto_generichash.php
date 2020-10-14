@@ -1,5 +1,5 @@
 <?php 
 
-function sodium_crypto_generichash(string $string, string $key = "", int $length = SODIUM_CRYPTO_GENERICHASH_BYTES) : string
+function sodium_crypto_generichash(string $message, string $key = "", int $length = SODIUM_CRYPTO_GENERICHASH_BYTES) : string
 {
 }

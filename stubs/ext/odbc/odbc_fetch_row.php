@@ -1,6 +1,6 @@
 <?php 
 
-/** @param resource $result_id */
-function odbc_fetch_row($result_id, ?int $row_number = null) : bool
+/** @param resource $statement */
+function odbc_fetch_row($statement, ?int $row = null) : bool
 {
 }

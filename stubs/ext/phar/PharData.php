@@ -3,7 +3,7 @@
 class PharData extends \RecursiveDirectoryIterator implements \Countable, \ArrayAccess
 {
     /** @implementation-alias Phar::__construct */
-    public function __construct(string $filename, int $flags = FilesystemIterator::SKIP_DOTS | FilesystemIterator::UNIX_PATHS, ?string $alias = null, int $fileformat = 0)
+    public function __construct(string $filename, int $flags = FilesystemIterator::SKIP_DOTS | FilesystemIterator::UNIX_PATHS, ?string $alias = null, int $format = 0)
     {
     }
     /** @implementation-alias Phar::__destruct */
@@ -14,42 +14,42 @@ class PharData extends \RecursiveDirectoryIterator implements \Countable, \Array
      * @return void
      * @implementation-alias Phar::addEmptyDir
      */
-    public function addEmptyDir(string $dirname)
+    public function addEmptyDir(string $directory)
     {
     }
     /**
      * @return void
      * @implementation-alias Phar::addFile
      */
-    public function addFile(string $filename, ?string $localname = null)
+    public function addFile(string $filename, ?string $localName = null)
     {
     }
     /**
      * @return void
      * @implementation-alias Phar::addFromString
      */
-    public function addFromString(string $localname, string $contents)
+    public function addFromString(string $localName, string $contents)
     {
     }
     /**
      * @return array|false
      * @implementation-alias Phar::buildFromDirectory
      */
-    public function buildFromDirectory(string $base_dir, string $regex = "")
+    public function buildFromDirectory(string $directory, string $pattern = "")
     {
     }
     /**
      * @return array|false
      * @implementation-alias Phar::buildFromIterator
      */
-    public function buildFromIterator(Traversable $iterator, ?string $base_directory = null)
+    public function buildFromIterator(Traversable $iterator, ?string $baseDirectory = null)
     {
     }
     /**
      * @return void
      * @implementation-alias Phar::compressFiles
      */
-    public function compressFiles(int $compression_type)
+    public function compressFiles(int $compression)
     {
     }
     /**
@@ -63,35 +63,35 @@ class PharData extends \RecursiveDirectoryIterator implements \Countable, \Array
      * @return Phar|null
      * @implementation-alias Phar::compress
      */
-    public function compress(int $compression_type, ?string $file_ext = null)
+    public function compress(int $compression, ?string $extension = null)
     {
     }
     /**
      * @return Phar|null
      * @implementation-alias Phar::decompress
      */
-    public function decompress(?string $file_ext = null)
+    public function decompress(?string $extension = null)
     {
     }
     /**
      * @return Phar|null
      * @implementation-alias Phar::convertToExecutable
      */
-    public function convertToExecutable(?int $format = null, ?int $compression_type = null, ?string $file_ext = null)
+    public function convertToExecutable(?int $format = null, ?int $compression = null, ?string $extension = null)
     {
     }
     /**
      * @return Phar|null
      * @implementation-alias Phar::convertToData
      */
-    public function convertToData(?int $format = null, ?int $compression_type = null, ?string $file_ext = null)
+    public function convertToData(?int $format = null, ?int $compression = null, ?string $extension = null)
     {
     }
     /**
      * @return bool
      * @implementation-alias Phar::copy
      */
-    public function copy(string $newfile, string $oldfile)
+    public function copy(string $to, string $from)
     {
     }
     /**
@@ -105,7 +105,7 @@ class PharData extends \RecursiveDirectoryIterator implements \Countable, \Array
      * @return bool
      * @implementation-alias Phar::delete
      */
-    public function delete(string $entry)
+    public function delete(string $localName)
     {
     }
     /**
@@ -119,7 +119,7 @@ class PharData extends \RecursiveDirectoryIterator implements \Countable, \Array
      * @return bool
      * @implementation-alias Phar::extractTo
      */
-    public function extractTo(string $pathto, array|string|null $files = null, bool $overwrite = false)
+    public function extractTo(string $directory, array|string|null $files = null, bool $overwrite = false)
     {
     }
     /**
@@ -196,7 +196,7 @@ class PharData extends \RecursiveDirectoryIterator implements \Countable, \Array
      * @return bool
      * @implementation-alias Phar::isFileFormat
      */
-    public function isFileFormat(int $fileformat)
+    public function isFileFormat(int $format)
     {
     }
     /**
@@ -207,36 +207,36 @@ class PharData extends \RecursiveDirectoryIterator implements \Countable, \Array
     {
     }
     /**
-     * @param string $entry
+     * @param string $localName
      * @return bool
      * @implementation-alias Phar::offsetExists
      */
-    public function offsetExists($entry)
+    public function offsetExists($localName)
     {
     }
     /**
-     * @param string $entry
+     * @param string $localName
      * @return PharFileInfo
      * @implementation-alias Phar::offsetGet
      */
-    public function offsetGet($entry)
+    public function offsetGet($localName)
     {
     }
     /**
-     * @param string $entry
+     * @param string $localName
      * @param resource|string $value
      * @return void
      * @implementation-alias Phar::offsetSet
      */
-    public function offsetSet($entry, $value)
+    public function offsetSet($localName, $value)
     {
     }
     /**
-     * @param string $entry
+     * @param string $localName
      * @return bool
      * @implementation-alias Phar::offsetUnset
      */
-    public function offsetUnset($entry)
+    public function offsetUnset($localName)
     {
     }
     /**
@@ -250,7 +250,7 @@ class PharData extends \RecursiveDirectoryIterator implements \Countable, \Array
      * @return bool
      * @implementation-alias Phar::setDefaultStub
      */
-    public function setDefaultStub(?string $index = null, ?string $webindex = null)
+    public function setDefaultStub(?string $index = null, ?string $webIndex = null)
     {
     }
     /**
@@ -264,7 +264,7 @@ class PharData extends \RecursiveDirectoryIterator implements \Countable, \Array
      * @return void
      * @implementation-alias Phar::setSignatureAlgorithm
      */
-    public function setSignatureAlgorithm(int $algorithm, ?string $privatekey = null)
+    public function setSignatureAlgorithm(int $algo, ?string $privateKey = null)
     {
     }
     /**
@@ -294,7 +294,7 @@ class PharData extends \RecursiveDirectoryIterator implements \Countable, \Array
     {
     }
     /** @implementation-alias Phar::canCompress */
-    public static final function canCompress(int $method = 0) : bool
+    public static final function canCompress(int $compression = 0) : bool
     {
     }
     /** @implementation-alias Phar::canWrite */
@@ -302,7 +302,7 @@ class PharData extends \RecursiveDirectoryIterator implements \Countable, \Array
     {
     }
     /** @implementation-alias Phar::createDefaultStub */
-    public static final function createDefaultStub(?string $index = null, ?string $webindex = null) : string
+    public static final function createDefaultStub(?string $index = null, ?string $webIndex = null) : string
     {
     }
     /** @implementation-alias Phar::getSupportedCompression */
@@ -330,23 +330,23 @@ class PharData extends \RecursiveDirectoryIterator implements \Countable, \Array
     {
     }
     /** @implementation-alias Phar::running */
-    public static final function running(bool $retphar = true) : string
+    public static final function running(bool $returnPhar = true) : string
     {
     }
     /** @implementation-alias Phar::mount */
-    public static final function mount(string $inphar, string $externalfile) : void
+    public static final function mount(string $pharPath, string $externalPath) : void
     {
     }
     /** @implementation-alias Phar::mungServer */
-    public static final function mungServer(array $munglist) : void
+    public static final function mungServer(array $variables) : void
     {
     }
     /** @implementation-alias Phar::unlinkArchive */
-    public static final function unlinkArchive(string $archive) : bool
+    public static final function unlinkArchive(string $filename) : bool
     {
     }
     /** @implementation-alias Phar::webPhar */
-    public static final function webPhar(?string $alias = null, ?string $index = null, string $f404 = "", array $mimetypes = [], ?callable $rewrites = null) : void
+    public static final function webPhar(?string $alias = null, ?string $index = null, string $fileNotFoundScript = "", array $mimeTypes = [], ?callable $rewrite = null) : void
     {
     }
 }

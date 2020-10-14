@@ -1,6 +1,6 @@
 <?php 
 
-/** @param resource $result */
-function odbc_fetch_array($result, int $rownumber = -1) : array|false
+/** @param resource $statement */
+function odbc_fetch_array($statement, int $row = -1) : array|false
 {
 }

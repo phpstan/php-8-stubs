@@ -1,9 +1,9 @@
 <?php 
 
 /**
- * @param resource $connection_id
+ * @param resource $odbc
  * @return resource|false
  */
-function odbc_tables($connection_id, ?string $catalog = null, ?string $schema = null, ?string $name = null, ?string $table_types = null)
+function odbc_tables($odbc, ?string $catalog = null, ?string $schema = null, ?string $table = null, ?string $types = null)
 {
 }

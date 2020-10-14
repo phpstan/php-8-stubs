@@ -2,9 +2,9 @@
 
 #endif
 /**
- * @param resource $result_id
- * @param array $result_array
+ * @param resource $statement
+ * @param array $array
  */
-function odbc_fetch_into($result_id, &$result_array, int $rownumber = 0) : int|false
+function odbc_fetch_into($statement, &$array, int $row = 0) : int|false
 {
 }

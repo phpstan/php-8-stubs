@@ -1,6 +1,6 @@
 <?php 
 
-/** @param resource $connection_id */
-function odbc_close($connection_id) : void
+/** @param resource $odbc */
+function odbc_close($odbc) : void
 {
 }

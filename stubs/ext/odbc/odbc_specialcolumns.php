@@ -2,9 +2,9 @@
 
 #endif
 /**
- * @param resource $connection_id
+ * @param resource $odbc
  * @return resource|false
  */
-function odbc_specialcolumns($connection_id, int $type, ?string $catalog, string $schema, string $table, int $scope, int $nullable)
+function odbc_specialcolumns($odbc, int $type, ?string $catalog, string $schema, string $table, int $scope, int $nullable)
 {
 }

@@ -1,10 +1,10 @@
 <?php 
 
 /**
- * @param resource $large_object
+ * @param resource $lob
  * @alias pg_lo_close
  * @deprecated
  */
-function pg_loclose($large_object) : bool
+function pg_loclose($lob) : bool
 {
 }

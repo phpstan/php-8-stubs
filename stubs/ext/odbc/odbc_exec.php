@@ -2,9 +2,9 @@
 
 #endif
 /**
- * @param resource $connection_id
+ * @param resource $odbc
  * @return resource|false
  */
-function odbc_exec($connection_id, string $query)
+function odbc_exec($odbc, string $query)
 {
 }

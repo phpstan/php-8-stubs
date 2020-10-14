@@ -1,6 +1,6 @@
 <?php 
 
-/** @param resource $result_id */
-function odbc_result($result_id, string|int $field) : string|bool|null
+/** @param resource $statement */
+function odbc_result($statement, string|int $field) : string|bool|null
 {
 }

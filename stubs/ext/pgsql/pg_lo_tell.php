@@ -1,6 +1,6 @@
 <?php 
 
-/** @param resource $large_object */
-function pg_lo_tell($large_object) : int
+/** @param resource $lob */
+function pg_lo_tell($lob) : int
 {
 }

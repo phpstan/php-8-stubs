@@ -1,9 +1,9 @@
 <?php 
 
 /**
- * @param resource $connection_id
+ * @param resource $odbc
  * @return resource|false
  */
-function odbc_primarykeys($connection_id, ?string $catalog, string $schema, string $table)
+function odbc_primarykeys($odbc, ?string $catalog, string $schema, string $table)
 {
 }

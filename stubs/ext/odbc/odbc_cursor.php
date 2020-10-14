@@ -1,6 +1,6 @@
 <?php 
 
-/** @param resource $result_id */
-function odbc_cursor($result_id) : string|false
+/** @param resource $statement */
+function odbc_cursor($statement) : string|false
 {
 }

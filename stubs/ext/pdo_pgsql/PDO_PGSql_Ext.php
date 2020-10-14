@@ -5,19 +5,19 @@
 class PDO_PGSql_Ext
 {
     /** @return bool */
-    public function pgsqlCopyFromArray(string $table_name, array $rows, string $delimiter = "\t", string $null_as = "\\\\N", ?string $fields = null)
+    public function pgsqlCopyFromArray(string $tableName, array $rows, string $separator = "\t", string $nullAs = "\\\\N", ?string $fields = null)
     {
     }
     /** @return bool */
-    public function pgsqlCopyFromFile(string $table_name, string $filename, string $delimiter = "\t", string $null_as = "\\\\N", ?string $fields = null)
+    public function pgsqlCopyFromFile(string $tableName, string $filename, string $separator = "\t", string $nullAs = "\\\\N", ?string $fields = null)
     {
     }
     /** @return array|false */
-    public function pgsqlCopyToArray(string $table_name, string $delimiter = "\t", string $null_as = "\\\\N", ?string $fields = null)
+    public function pgsqlCopyToArray(string $tableName, string $separator = "\t", string $nullAs = "\\\\N", ?string $fields = null)
     {
     }
     /** @return bool */
-    public function pgsqlCopyToFile(string $table_name, string $filename, string $delimiter = "\t", string $null_as = "\\\\N", ?string $fields = null)
+    public function pgsqlCopyToFile(string $tableName, string $filename, string $separator = "\t", string $nullAs = "\\\\N", ?string $fields = null)
     {
     }
     /** @return string|false */
@@ -33,7 +33,7 @@ class PDO_PGSql_Ext
     {
     }
     /** @return array|false */
-    public function pgsqlGetNotify(int $result_type = PDO::FETCH_USE_DEFAULT, int $ms_timeout = 0)
+    public function pgsqlGetNotify(int $fetchMode = PDO::FETCH_USE_DEFAULT, int $timeoutMilliseconds = 0)
     {
     }
     /** @return int */

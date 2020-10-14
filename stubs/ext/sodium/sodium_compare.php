@@ -1,5 +1,5 @@
 <?php 
 
-function sodium_compare(string $string_1, string $string_2) : int
+function sodium_compare(string $string1, string $string2) : int
 {
 }

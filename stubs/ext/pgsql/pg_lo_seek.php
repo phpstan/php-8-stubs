@@ -1,6 +1,6 @@
 <?php 
 
-/** @param resource $large_object */
-function pg_lo_seek($large_object, int $offset, int $whence = SEEK_CUR) : bool
+/** @param resource $lob */
+function pg_lo_seek($lob, int $offset, int $whence = SEEK_CUR) : bool
 {
 }

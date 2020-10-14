@@ -5,6 +5,6 @@
  * @alias pg_field_size
  * @deprecated
  */
-function pg_fieldsize($result, int $field_number) : int
+function pg_fieldsize($result, int $field) : int
 {
 }

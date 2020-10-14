@@ -1,6 +1,6 @@
 <?php 
 
-/** @param resource $result_id */
-function odbc_longreadlen($result_id, int $length) : bool
+/** @param resource $statement */
+function odbc_longreadlen($statement, int $length) : bool
 {
 }

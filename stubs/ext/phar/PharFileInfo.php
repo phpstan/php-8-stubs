@@ -13,7 +13,7 @@ class PharFileInfo extends \SplFileInfo
     {
     }
     /** @return bool */
-    public function compress(int $compression_type)
+    public function compress(int $compression)
     {
     }
     /** @return bool */
@@ -37,7 +37,7 @@ class PharFileInfo extends \SplFileInfo
     {
     }
     /** @return mixed */
-    public function getMetadata(array $unserialize_options = [])
+    public function getMetadata(array $unserializeOptions = [])
     {
     }
     /** @return int */
@@ -49,7 +49,7 @@ class PharFileInfo extends \SplFileInfo
     {
     }
     /** @return bool */
-    public function isCompressed(?int $compression_type = null)
+    public function isCompressed(?int $compression = null)
     {
     }
     /** @return bool */

@@ -1,6 +1,6 @@
 <?php 
 
-/** @param resource|null $connection_id */
-function odbc_errormsg($connection_id = null) : string
+/** @param resource|null $odbc */
+function odbc_errormsg($odbc = null) : string
 {
 }

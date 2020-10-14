@@ -2,10 +2,10 @@
 
 /**
  * @param resource $result
- * @param string|int $row_number
+ * @param string|int $row
  * @alias pg_fetch_result
  * @deprecated
  */
-function pg_result($result, $row_number, string|int $field = UNKNOWN) : string|false|null
+function pg_result($result, $row, string|int $field = UNKNOWN) : string|false|null
 {
 }

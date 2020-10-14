@@ -1,9 +1,9 @@
 <?php 
 
 /**
- * @param resource $connection_id
+ * @param resource $odbc
  * @return resource|false
  */
-function odbc_columnprivileges($connection_id, ?string $catalog, string $schema, string $table, string $column)
+function odbc_columnprivileges($odbc, ?string $catalog, string $schema, string $table, string $column)
 {
 }

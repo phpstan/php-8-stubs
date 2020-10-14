@@ -1,5 +1,5 @@
 <?php 
 
-function mysqli_stmt_fetch(\mysqli_stmt $stmt) : ?bool
+function mysqli_stmt_fetch(\mysqli_stmt $statement) : ?bool
 {
 }

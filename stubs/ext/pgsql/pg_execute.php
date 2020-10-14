@@ -2,9 +2,9 @@
 
 /**
  * @param resource|string $connection
- * @param string|array $stmt_name
+ * @param string|array $statement_name
  * @return resource|false
  */
-function pg_execute($connection, $stmt_name, array $params = UNKNOWN)
+function pg_execute($connection, $statement_name, array $params = UNKNOWN)
 {
 }

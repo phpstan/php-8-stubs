@@ -1,10 +1,10 @@
 <?php 
 
 /**
- * @param resource $large_object
+ * @param resource $lob
  * @alias pg_lo_read_all
  * @deprecated
  */
-function pg_loreadall($large_object) : int
+function pg_loreadall($lob) : int
 {
 }

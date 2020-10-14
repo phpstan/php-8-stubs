@@ -1,5 +1,5 @@
 <?php 
 
-function sodium_crypto_sign_detached(string $string, string $keypair) : string
+function sodium_crypto_sign_detached(string $message, string $secret_key) : string
 {
 }

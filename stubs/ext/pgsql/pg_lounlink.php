@@ -2,10 +2,10 @@
 
 /**
  * @param resource $connection
- * @param string|int $large_object_id
+ * @param string|int $oid
  * @alias pg_lo_unlink
  * @deprecated
  */
-function pg_lounlink($connection, $large_object_id = UNKNOWN) : bool
+function pg_lounlink($connection, $oid = UNKNOWN) : bool
 {
 }

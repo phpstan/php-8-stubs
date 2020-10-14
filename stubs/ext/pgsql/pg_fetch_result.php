@@ -2,8 +2,8 @@
 
 /**
  * @param resource $result
- * @param string|int $row_number
+ * @param string|int $row
  */
-function pg_fetch_result($result, $row_number, string|int $field = UNKNOWN) : string|false|null
+function pg_fetch_result($result, $row, string|int $field = UNKNOWN) : string|false|null
 {
 }

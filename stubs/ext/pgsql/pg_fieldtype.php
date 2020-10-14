@@ -5,6 +5,6 @@
  * @alias pg_field_type
  * @deprecated
  */
-function pg_fieldtype($result, int $field_number) : string
+function pg_fieldtype($result, int $field) : string
 {
 }

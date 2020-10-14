@@ -1,6 +1,6 @@
 <?php 
 
-/** @param resource $conn_id */
-function odbc_setoption($conn_id, int $which, int $option, int $value) : bool
+/** @param resource $odbc */
+function odbc_setoption($odbc, int $which, int $option, int $value) : bool
 {
 }

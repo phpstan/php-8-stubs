@@ -2,8 +2,8 @@
 
 /**
  * @param resource $result
- * @param string|int $row_number
+ * @param string|int $row
  */
-function pg_field_is_null($result, $row_number, string|int $field = UNKNOWN) : int|false
+function pg_field_is_null($result, $row, string|int $field = UNKNOWN) : int|false
 {
 }

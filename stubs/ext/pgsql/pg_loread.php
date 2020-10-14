@@ -1,10 +1,10 @@
 <?php 
 
 /**
- * @param resource $large_object
+ * @param resource $lob
  * @alias pg_lo_read
  * @deprecated
  */
-function pg_loread($large_object, int $len = 8192) : string|false
+function pg_loread($lob, int $length = 8192) : string|false
 {
 }

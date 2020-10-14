@@ -1,9 +1,9 @@
 <?php 
 
 /**
- * @param resource $connection_id
+ * @param resource $odbc
  * @return resource|false
  */
-function odbc_gettypeinfo($connection_id, int $data_type = 0)
+function odbc_gettypeinfo($odbc, int $data_type = 0)
 {
 }

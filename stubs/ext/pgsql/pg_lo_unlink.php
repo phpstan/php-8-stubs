@@ -2,8 +2,8 @@
 
 /**
  * @param resource $connection
- * @param string|int $large_object_id
+ * @param string|int $oid
  */
-function pg_lo_unlink($connection, $large_object_id = UNKNOWN) : bool
+function pg_lo_unlink($connection, $oid = UNKNOWN) : bool
 {
 }

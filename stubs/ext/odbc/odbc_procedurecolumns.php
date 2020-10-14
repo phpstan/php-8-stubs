@@ -2,9 +2,9 @@
 
 #if !defined(HAVE_SOLID) && !defined(HAVE_SOLID_30) && !defined(HAVE_SOLID_35)
 /**
- * @param resource $connection_id
+ * @param resource $odbc
  * @return resource|false
  */
-function odbc_procedurecolumns($connection_id, ?string $catalog = null, ?string $schema = null, ?string $proc = null, ?string $column = null)
+function odbc_procedurecolumns($odbc, ?string $catalog = null, ?string $schema = null, ?string $procedure = null, ?string $column = null)
 {
 }
