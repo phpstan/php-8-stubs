@@ -67,7 +67,6 @@ class SimpleXMLElement implements \Stringable, \Countable, \RecursiveIterator
     public function valid()
     {
     }
-    /** @return SimpleXMLElement|null */
     public function current()
     {
     }
