@@ -186,6 +186,9 @@ $command = new class(
 		if ($namespacedName === 'PDO') {
 			$removePhpDocFromMethod = 'setAttribute';
 		}
+		if ($namespacedName === 'SimpleXMLElement') {
+			$removePhpDocFromMethod = 'current';
+		}
 
 		if ($removePhpDocFromMethod === null) {
 			return $class;
