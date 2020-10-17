@@ -75,7 +75,7 @@ class IntlTimeZone
      * @return string|false
      * @alias intltz_get_equivalent_id
      */
-    public static function getEquivalentID(string $timezoneId, int $index)
+    public static function getEquivalentID(string $timezoneId, int $offset)
     {
     }
     /**

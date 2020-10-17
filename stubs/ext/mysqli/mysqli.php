@@ -2,7 +2,7 @@
 
 class mysqli
 {
-    public function __construct(?string $host = null, ?string $username = null, ?string $password = null, ?string $database = null, ?int $port = null, ?string $socket = null)
+    public function __construct(?string $hostname = null, ?string $username = null, ?string $password = null, ?string $database = null, ?int $port = null, ?string $socket = null)
     {
     }
     /**
@@ -50,8 +50,9 @@ class mysqli
     /**
      * @return mysqli|null|false
      * @alias mysqli_connect
+     * @no-verify
      */
-    public function connect(?string $host = null, ?string $username = null, ?string $password = null, ?string $database = null, ?int $port = null, ?string $socket = null)
+    public function connect(?string $hostname = null, ?string $username = null, ?string $password = null, ?string $database = null, ?int $port = null, ?string $socket = null)
     {
     }
     /**
@@ -64,6 +65,7 @@ class mysqli
     /**
      * @return bool
      * @alias mysqli_debug
+     * @no-verify Should really be a static method
      */
     public function debug(string $options)
     {
@@ -107,7 +109,6 @@ class mysqli
     }
     /**
      * @return mysqli|false
-     * @alias mysqli_init_method
      */
     public function init()
     {
@@ -174,7 +175,7 @@ class mysqli
      * @return bool
      * @alias mysqli_real_connect
      */
-    public function real_connect(?string $host = null, ?string $username = null, ?string $password = null, ?string $database = null, ?int $port = null, ?string $socket = null, int $flags = 0)
+    public function real_connect(?string $hostname = null, ?string $username = null, ?string $password = null, ?string $database = null, ?int $port = null, ?string $socket = null, int $flags = 0)
     {
     }
     /**

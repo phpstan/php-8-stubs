@@ -1,5 +1,5 @@
 <?php 
 
-function mysqli_debug(string $debug) : bool
+function mysqli_debug(string $options) : bool
 {
 }

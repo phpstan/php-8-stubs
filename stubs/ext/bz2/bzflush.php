@@ -2,7 +2,7 @@
 
 /**
  * @param resource $bz
- * @alias fflush
+ * @implementation-alias fflush
  */
 function bzflush($bz) : bool
 {

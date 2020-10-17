@@ -1,6 +1,6 @@
 <?php 
 
-/** @param resource $large_object */
-function pg_lo_close($large_object) : bool
+/** @param resource $lob */
+function pg_lo_close($lob) : bool
 {
 }

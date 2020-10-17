@@ -1,5 +1,5 @@
 <?php 
 
-function collator_asort(\Collator $object, array &$arr, int $flags = Collator::SORT_REGULAR) : bool
+function collator_asort(\Collator $object, array &$array, int $flags = Collator::SORT_REGULAR) : bool
 {
 }

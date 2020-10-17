@@ -2,7 +2,7 @@
 
 /**
  * @param resource $bz
- * @alias fclose
+ * @implementation-alias fclose
  */
 function bzclose($bz) : bool
 {

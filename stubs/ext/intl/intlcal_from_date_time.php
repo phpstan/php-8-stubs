@@ -1,5 +1,5 @@
 <?php 
 
-function intlcal_from_date_time(\DateTime|string $dateTime, ?string $locale = null) : ?\IntlCalendar
+function intlcal_from_date_time(\DateTime|string $datetime, ?string $locale = null) : ?\IntlCalendar
 {
 }

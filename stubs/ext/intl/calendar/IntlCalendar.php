@@ -253,11 +253,11 @@ class IntlCalendar
     {
     }
     /**
-     * @param int|bool $amountOrUpOrDown
+     * @param int|bool $value
      * @return bool
      * @alias intlcal_roll
      */
-    public function roll(int $field, $amountOrUpOrDown)
+    public function roll(int $field, $value)
     {
     }
     /**
