@@ -74,7 +74,7 @@ class mysqli_result implements \IteratorAggregate
      * @return object|null
      * @alias mysqli_fetch_object
      */
-    public function fetch_object(string $class = "stdClass", array $params = [])
+    public function fetch_object(string $class = "stdClass", array $constructor_args = [])
     {
     }
     /**
