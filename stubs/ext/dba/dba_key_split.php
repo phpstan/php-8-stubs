@@ -1,5 +1,5 @@
 <?php 
 
-function dba_key_split(string $key) : array|false
+function dba_key_split(string|false|null $key) : array|false
 {
 }
