@@ -19,6 +19,7 @@ class DateInterval
     public function format(string $format)
     {
     }
+    /** @return void */
     public function __wakeup()
     {
     }

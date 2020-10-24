@@ -9,7 +9,7 @@ final class ReflectionReference
     {
     }
     /** @implementation-alias ReflectionClass::__clone */
-    private function __clone()
+    private function __clone() : void
     {
     }
     private function __construct()

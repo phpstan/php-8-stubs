@@ -3,14 +3,17 @@
 class Error implements \Throwable
 {
     /** @implementation-alias Exception::__clone */
-    private final function __clone()
+    private final function __clone() : void
     {
     }
     /** @implementation-alias Exception::__construct */
     public function __construct(string $message = "", int $code = 0, ?Throwable $previous = null)
     {
     }
-    /** @implementation-alias Exception::__wakeup */
+    /**
+     * @return void
+     * @implementation-alias Exception::__wakeup
+     */
     public function __wakeup()
     {
     }

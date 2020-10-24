@@ -17,7 +17,7 @@ final class ReflectionAttribute
     public function newInstance() : object
     {
     }
-    private function __clone()
+    private function __clone() : void
     {
     }
     private function __construct()

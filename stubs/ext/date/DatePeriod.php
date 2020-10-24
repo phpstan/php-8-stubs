@@ -27,6 +27,7 @@ class DatePeriod implements \IteratorAggregate
     public function getRecurrences()
     {
     }
+    /** @return void */
     public function __wakeup()
     {
     }

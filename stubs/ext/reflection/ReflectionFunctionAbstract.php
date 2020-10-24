@@ -3,7 +3,7 @@
 abstract class ReflectionFunctionAbstract implements \Reflector
 {
     /** @implementation-alias ReflectionClass::__clone */
-    private final function __clone()
+    private final function __clone() : void
     {
     }
     /** @return bool */

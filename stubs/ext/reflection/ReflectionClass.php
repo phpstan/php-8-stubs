@@ -2,7 +2,7 @@
 
 class ReflectionClass implements \Reflector
 {
-    private final function __clone()
+    private final function __clone() : void
     {
     }
     public function __construct(object|string $objectOrClass)

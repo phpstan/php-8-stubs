@@ -14,5 +14,6 @@ interface DateTimeInterface
     public function getTimestamp();
     /** @return DateInterval|false */
     public function diff(DateTimeInterface $targetObject, bool $absolute = false);
+    /** @return void */
     public function __wakeup();
 }

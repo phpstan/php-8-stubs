@@ -2,12 +2,13 @@
 
 class Exception implements \Throwable
 {
-    private final function __clone()
+    private final function __clone() : void
     {
     }
     public function __construct(string $message = "", int $code = 0, ?Throwable $previous = null)
     {
     }
+    /** @return void */
     public function __wakeup()
     {
     }

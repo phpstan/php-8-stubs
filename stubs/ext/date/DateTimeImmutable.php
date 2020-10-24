@@ -5,6 +5,7 @@ class DateTimeImmutable implements \DateTimeInterface
     public function __construct(string $datetime = "now", ?DateTimeZone $timezone = null)
     {
     }
+    /** @return void */
     public function __wakeup()
     {
     }
