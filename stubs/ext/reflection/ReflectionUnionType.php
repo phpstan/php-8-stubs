@@ -1,6 +1,6 @@
 <?php 
 
-final class ReflectionUnionType extends \ReflectionType
+class ReflectionUnionType extends \ReflectionType
 {
     public function getTypes() : array
     {
