@@ -1,5 +1,5 @@
 <?php 
 
-function ini_get(string $name) : string|false
+function ini_get(string $option) : string|false
 {
 }

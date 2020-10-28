@@ -1,5 +1,5 @@
 <?php 
 
-function ini_restore(string $name) : void
+function ini_restore(string $option) : void
 {
 }

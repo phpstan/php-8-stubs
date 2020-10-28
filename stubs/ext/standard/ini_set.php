@@ -1,5 +1,5 @@
 <?php 
 
-function ini_set(string $name, string $value) : string|false
+function ini_set(string $option, string $value) : string|false
 {
 }
