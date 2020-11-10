@@ -3,7 +3,7 @@
 class PhpToken implements \Stringable
 {
     /** @return static[] */
-    public static function getAll(string $code, int $flags = 0) : array
+    public static function tokenize(string $code, int $flags = 0) : array
     {
     }
     public final function __construct(int $id, string $text, int $line = -1, int $pos = -1)
