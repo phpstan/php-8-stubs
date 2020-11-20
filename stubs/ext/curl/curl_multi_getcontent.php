@@ -1,5 +1,5 @@
 <?php 
 
-function curl_multi_getcontent(\CurlHandle $multi_handle) : ?string
+function curl_multi_getcontent(\CurlHandle $handle) : ?string
 {
 }
