@@ -3,7 +3,7 @@
 /** @generate-function-entries */
 final class COMPersistHelper
 {
-    public function __construct(?variant $variant)
+    public function __construct(?variant $variant = null)
     {
     }
     public function GetCurFileName() : string|false
