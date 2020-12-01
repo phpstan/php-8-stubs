@@ -1,6 +1,6 @@
 <?php 
 
 /** @param string|int $value */
-function xml_parser_set_option(\XmlParser $parser, int $option, $value) : bool
+function xml_parser_set_option(\XMLParser $parser, int $option, $value) : bool
 {
 }

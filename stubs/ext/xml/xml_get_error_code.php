@@ -1,5 +1,5 @@
 <?php 
 
-function xml_get_error_code(\XmlParser $parser) : int
+function xml_get_error_code(\XMLParser $parser) : int
 {
 }

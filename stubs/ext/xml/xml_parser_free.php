@@ -1,5 +1,5 @@
 <?php 
 
-function xml_parser_free(\XmlParser $parser) : bool
+function xml_parser_free(\XMLParser $parser) : bool
 {
 }

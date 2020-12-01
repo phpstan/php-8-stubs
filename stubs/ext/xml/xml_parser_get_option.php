@@ -1,5 +1,5 @@
 <?php 
 
-function xml_parser_get_option(\XmlParser $parser, int $option) : string|int
+function xml_parser_get_option(\XMLParser $parser, int $option) : string|int
 {
 }

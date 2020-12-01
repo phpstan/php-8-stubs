@@ -76,7 +76,7 @@ class Php8StubsMap
   'soapclient' => 'stubs/ext/soap/SoapClient.php',
   'ocilob' => 'stubs/ext/oci8/OCILob.php',
   'ocicollection' => 'stubs/ext/oci8/OCICollection.php',
-  'xmlparser' => 'stubs/ext/xml/XmlParser.php',
+  'xmlparser' => 'stubs/ext/xml/XMLParser.php',
   'gdimage' => 'stubs/ext/gd/GdImage.php',
   'shmop' => 'stubs/ext/shmop/Shmop.php',
   'php_user_filter' => 'stubs/ext/standard/php_user_filter.php',
