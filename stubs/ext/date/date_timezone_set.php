@@ -1,5 +1,5 @@
 <?php 
 
-function date_timezone_set(\DateTimeInterface $object, \DateTimeZone $timezone) : \DateTime
+function date_timezone_set(\DateTime $object, \DateTimeZone $timezone) : \DateTime
 {
 }

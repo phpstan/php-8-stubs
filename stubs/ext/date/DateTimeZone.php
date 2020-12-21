@@ -41,7 +41,7 @@ class DateTimeZone
     {
     }
     /**
-     * @return array|false
+     * @return array
      * @alias timezone_identifiers_list
      */
     public static function listIdentifiers(int $timezoneGroup = DateTimeZone::ALL, ?string $countryCode = null)
