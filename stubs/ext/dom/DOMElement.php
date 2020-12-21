@@ -46,7 +46,7 @@ class DOMElement implements \DOMParentNode, \DOMChildNode
     {
     }
     /** @return DOMAttr|false */
-    public function removeAttributeNode(string $qualifiedName)
+    public function removeAttributeNode(DOMAttr $attr)
     {
     }
     /** @return DOMAttr|bool */
