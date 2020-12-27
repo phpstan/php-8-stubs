@@ -8,7 +8,7 @@ interface DateTimeInterface
     public function format(string $format);
     /** @return DateTimeZone|false */
     public function getTimezone();
-    /** @return int|false */
+    /** @return int */
     public function getOffset();
     /** @return int|false */
     public function getTimestamp();

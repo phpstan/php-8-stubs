@@ -77,7 +77,7 @@ class DateTime implements \DateTimeInterface
     {
     }
     /**
-     * @return int|false
+     * @return int
      * @alias date_offset_get
      */
     public function getOffset()
