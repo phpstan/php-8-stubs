@@ -9,7 +9,7 @@ class DateTimeImmutable implements \DateTimeInterface
     public function __wakeup()
     {
     }
-    /** @return DateTimeZone */
+    /** @return DateTimeImmutable */
     public static function __set_state(array $array)
     {
     }

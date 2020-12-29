@@ -8,7 +8,7 @@ final class FFI
     public static function load(string $filename) : ?FFI
     {
     }
-    public static function scope(string $name) : ?FFI
+    public static function scope(string $name) : FFI
     {
     }
     public static function new(FFI\CType|string $type, bool $owned = true, bool $persistent = false) : ?FFI\CData
@@ -19,7 +19,7 @@ final class FFI
     {
     }
     /**
-     * @param FFI\CData|string|int|null $ptr
+     * @param FFI\CData|int|float|bool|null $ptr
      * @prefer-ref $ptr
      */
     public static function cast(FFI\CType|string $type, $ptr) : ?FFI\CData
@@ -32,7 +32,7 @@ final class FFI
     public static function typeof(FFI\CData $ptr) : FFI\CType
     {
     }
-    public static function arrayType(FFI\CType $type, array $dimensions) : ?FFI\CType
+    public static function arrayType(FFI\CType $type, array $dimensions) : FFI\CType
     {
     }
     /** @prefer-ref $ptr */
@@ -75,7 +75,7 @@ final class FFI
     {
     }
     /** @prefer-ref $ptr */
-    public static function string(FFI\CData $ptr, ?int $size = null) : ?string
+    public static function string(FFI\CData $ptr, ?int $size = null) : string
     {
     }
     /** @prefer-ref $ptr */
