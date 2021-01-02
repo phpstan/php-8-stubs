@@ -83,7 +83,7 @@ class ReflectionClass implements \Reflector
     public function hasConstant(string $name)
     {
     }
-    /** @return array|null */
+    /** @return array */
     public function getConstants(?int $filter = null)
     {
     }
