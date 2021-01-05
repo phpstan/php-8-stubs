@@ -67,7 +67,7 @@ class SQLite3
     public function exec(string $query)
     {
     }
-    /** @return SQLite3Result|false|null */
+    /** @return SQLite3Result|false */
     public function query(string $query)
     {
     }
