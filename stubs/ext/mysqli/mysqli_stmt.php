@@ -6,7 +6,7 @@ class mysqli_stmt
     {
     }
     /**
-     * @return int|false
+     * @return int
      * @alias mysqli_stmt_attr_get
      */
     public function attr_get(int $attribute)

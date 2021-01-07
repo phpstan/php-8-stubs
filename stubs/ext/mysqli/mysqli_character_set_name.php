@@ -1,5 +1,5 @@
 <?php 
 
-function mysqli_character_set_name(\mysqli $mysql) : ?string
+function mysqli_character_set_name(\mysqli $mysql) : string
 {
 }

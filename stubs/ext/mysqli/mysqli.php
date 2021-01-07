@@ -27,7 +27,7 @@ class mysqli
     {
     }
     /**
-     * @return string|null
+     * @return string
      * @alias mysqli_character_set_name
      */
     public function character_set_name()
@@ -44,7 +44,7 @@ class mysqli
      * @return bool
      * @alias mysqli_commit
      */
-    public function commit(int $flags = -1, ?string $name = null)
+    public function commit(int $flags = 0, ?string $name = null)
     {
     }
     /**
@@ -94,7 +94,7 @@ class mysqli
     }
     #endif
     /**
-     * @return string|null
+     * @return string
      * @alias mysqli_get_server_info
      */
     public function get_server_info()
@@ -153,7 +153,7 @@ class mysqli
      * @return int|false
      * @alias mysqli_poll
      */
-    public static function poll(?array &$read, ?array &$write, array &$error, int $seconds, int $microseconds = 0)
+    public static function poll(?array &$read, ?array &$error, array &$reject, int $seconds, int $microseconds = 0)
     {
     }
     #endif

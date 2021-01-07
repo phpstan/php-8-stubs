@@ -49,7 +49,7 @@ class mysqli_result implements \IteratorAggregate
     }
     #if defined(MYSQLI_USE_MYSQLND)
     /**
-     * @return array|false
+     * @return array
      * @alias mysqli_fetch_all
      */
     public function fetch_all(int $mode = MYSQLI_NUM)
@@ -64,21 +64,21 @@ class mysqli_result implements \IteratorAggregate
     {
     }
     /**
-     * @return array|null
+     * @return array|null|false
      * @alias mysqli_fetch_assoc
      */
     public function fetch_assoc()
     {
     }
     /**
-     * @return object|null
+     * @return object|null|false
      * @alias mysqli_fetch_object
      */
     public function fetch_object(string $class = "stdClass", array $constructor_args = [])
     {
     }
     /**
-     * @return array|null
+     * @return array|null|false
      * @alias mysqli_fetch_row
      */
     public function fetch_row()

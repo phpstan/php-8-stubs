@@ -1,5 +1,5 @@
 <?php 
 
-function mysqli_sqlstate(\mysqli $mysql) : ?string
+function mysqli_sqlstate(\mysqli $mysql) : string
 {
 }

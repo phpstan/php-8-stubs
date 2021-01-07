@@ -1,5 +1,5 @@
 <?php 
 
-function mysqli_commit(\mysqli $mysql, int $flags = -1, ?string $name = null) : bool
+function mysqli_commit(\mysqli $mysql, int $flags = 0, ?string $name = null) : bool
 {
 }
