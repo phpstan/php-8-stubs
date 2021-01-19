@@ -140,7 +140,7 @@ class PharData extends \RecursiveDirectoryIterator implements \Countable, \Array
      * @return mixed
      * @implementation-alias Phar::getMetadata
      */
-    public function getMetadata(array $unserialize_options = [])
+    public function getMetadata(array $unserializeOptions = [])
     {
     }
     /**
@@ -268,11 +268,11 @@ class PharData extends \RecursiveDirectoryIterator implements \Countable, \Array
     {
     }
     /**
-     * @param resource $newstub
+     * @param resource|string $stub
      * @return bool
      * @implementation-alias Phar::setStub
      */
-    public function setStub($newstub, int $maxlen = -1)
+    public function setStub($stub, int $length = UNKNOWN)
     {
     }
     /**

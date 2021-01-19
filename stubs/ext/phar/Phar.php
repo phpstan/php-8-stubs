@@ -166,10 +166,10 @@ class Phar extends \RecursiveDirectoryIterator implements \Countable, \ArrayAcce
     {
     }
     /**
-     * @param resource $stub
+     * @param resource|string $stub
      * @return bool
      */
-    public function setStub($stub, int $length = -1)
+    public function setStub($stub, int $length = UNKNOWN)
     {
     }
     /** @return void */

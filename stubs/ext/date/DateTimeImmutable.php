@@ -56,7 +56,7 @@ class DateTimeImmutable implements \DateTimeInterface
     {
     }
     /**
-     * @return DateInterval|false
+     * @return DateInterval
      * @alias date_diff
      */
     public function diff(DateTimeInterface $targetObject, bool $absolute = false)

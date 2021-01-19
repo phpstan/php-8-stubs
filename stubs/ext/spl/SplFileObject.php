@@ -19,7 +19,7 @@ class SplFileObject extends \SplFileInfo implements \RecursiveIterator, \Seekabl
     public function valid()
     {
     }
-    /** @return string|false */
+    /** @return string */
     public function fgets()
     {
     }
@@ -127,7 +127,7 @@ class SplFileObject extends \SplFileInfo implements \RecursiveIterator, \Seekabl
     {
     }
     /**
-     * @return string|false
+     * @return string
      * @alias SplFileObject::fgets
      */
     public function getCurrentLine()

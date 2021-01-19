@@ -54,7 +54,7 @@ class IntlDateFormatter
     {
     }
     /**
-     * @return IntlCalendar|null|false
+     * @return IntlCalendar|false|null
      * @alias datefmt_get_calendar_object
      */
     public function getCalendarObject()
