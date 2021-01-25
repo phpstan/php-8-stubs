@@ -8,6 +8,7 @@ class Php8StubsMap
 	public const CLASSES = array (
   'xsltprocessor' => 'stubs/ext/xsl/XSLTProcessor.php',
   'snmp' => 'stubs/ext/snmp/SNMP.php',
+  'snmpexception' => 'stubs/ext/snmp/SNMPException.php',
   'xmlparser' => 'stubs/ext/xml/XMLParser.php',
   'reflectionexception' => 'stubs/ext/reflection/ReflectionException.php',
   'reflection' => 'stubs/ext/reflection/Reflection.php',
@@ -179,6 +180,7 @@ class Php8StubsMap
   'variant' => 'stubs/ext/com_dotnet/variant.php',
   'com' => 'stubs/ext/com_dotnet/com.php',
   'dotnet' => 'stubs/ext/com_dotnet/dotnet.php',
+  'com_exception' => 'stubs/ext/com_dotnet/com_exception.php',
   'compersisthelper' => 'stubs/ext/com_dotnet/COMPersistHelper.php',
   'curlhandle' => 'stubs/ext/curl/CurlHandle.php',
   'curlmultihandle' => 'stubs/ext/curl/CurlMultiHandle.php',
