@@ -77,6 +77,7 @@ class Php8StubsMap
   'mysqli_stmt' => 'stubs/ext/mysqli/mysqli_stmt.php',
   'mysqli_warning' => 'stubs/ext/mysqli/mysqli_warning.php',
   'mysqli_sql_exception' => 'stubs/ext/mysqli/mysqli_sql_exception.php',
+  'sodiumexception' => 'stubs/ext/sodium/SodiumException.php',
   'variant' => 'stubs/ext/com_dotnet/variant.php',
   'com' => 'stubs/ext/com_dotnet/com.php',
   'dotnet' => 'stubs/ext/com_dotnet/dotnet.php',
