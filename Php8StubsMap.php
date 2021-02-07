@@ -259,6 +259,7 @@ class Php8StubsMap
   'zend_string_or_stdclass' => 'stubs/ext/zend_test/zend_string_or_stdclass.php',
   'zend_string_or_stdclass_or_null' => 'stubs/ext/zend_test/zend_string_or_stdclass_or_null.php',
   'zend_iterable' => 'stubs/ext/zend_test/zend_iterable.php',
+  'zendtestns2\\zendsubns\\namespaced_func' => 'stubs/ext/zend_test/ZendTestNS2/ZendSubNS/namespaced_func.php',
   'dba_popen' => 'stubs/ext/dba/dba_popen.php',
   'dba_open' => 'stubs/ext/dba/dba_open.php',
   'dba_close' => 'stubs/ext/dba/dba_close.php',
