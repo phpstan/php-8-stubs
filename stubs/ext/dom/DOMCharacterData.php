@@ -1,6 +1,6 @@
 <?php 
 
-class DOMCharacterData implements \DOMChildNode
+class DOMCharacterData extends \DOMNode implements \DOMChildNode
 {
     /** @return bool */
     public function appendData(string $data)

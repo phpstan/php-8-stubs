@@ -346,7 +346,7 @@ class PharData extends \RecursiveDirectoryIterator implements \Countable, \Array
     {
     }
     /** @implementation-alias Phar::webPhar */
-    public static final function webPhar(?string $alias = null, ?string $index = null, string $fileNotFoundScript = "", array $mimeTypes = [], ?callable $rewrite = null) : void
+    public static final function webPhar(?string $alias = null, ?string $index = null, ?string $fileNotFoundScript = null, array $mimeTypes = [], ?callable $rewrite = null) : void
     {
     }
 }

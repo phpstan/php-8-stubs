@@ -1,6 +1,6 @@
 <?php 
 
-class DOMDocumentFragment implements \DOMParentNode
+class DOMDocumentFragment extends \DOMNode implements \DOMParentNode
 {
     public function __construct()
     {

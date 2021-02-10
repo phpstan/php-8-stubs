@@ -1,6 +1,6 @@
 <?php 
 
-class DOMElement implements \DOMParentNode, \DOMChildNode
+class DOMElement extends \DOMNode implements \DOMParentNode, \DOMChildNode
 {
     public function __construct(string $qualifiedName, ?string $value = null, string $namespace = "")
     {
@@ -26,7 +26,7 @@ class DOMElement implements \DOMParentNode, \DOMChildNode
     {
     }
     /** @return DOMNodeList */
-    public function getElementsByTagNameNS(string $namespace, string $localName)
+    public function getElementsByTagNameNS(?string $namespace, string $localName)
     {
     }
     /** @return bool */

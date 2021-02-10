@@ -1,6 +1,6 @@
 <?php 
 
-class DOMText
+class DOMText extends \DOMCharacterData
 {
     public function __construct(string $data = "")
     {

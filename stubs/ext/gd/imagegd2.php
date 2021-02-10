@@ -1,5 +1,5 @@
 <?php 
 
-function imagegd2(\GdImage $image, string $file = UNKNOWN, int $chunk_size = UNKNOWN, int $mode = UNKNOWN) : bool
+function imagegd2(\GdImage $image, ?string $file = null, int $chunk_size = UNKNOWN, int $mode = UNKNOWN) : bool
 {
 }

@@ -222,7 +222,7 @@ class Phar extends \RecursiveDirectoryIterator implements \Countable, \ArrayAcce
     public static final function unlinkArchive(string $filename) : bool
     {
     }
-    public static final function webPhar(?string $alias = null, ?string $index = null, string $fileNotFoundScript = "", array $mimeTypes = [], ?callable $rewrite = null) : void
+    public static final function webPhar(?string $alias = null, ?string $index = null, ?string $fileNotFoundScript = null, array $mimeTypes = [], ?callable $rewrite = null) : void
     {
     }
 }

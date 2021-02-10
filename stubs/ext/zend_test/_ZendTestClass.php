@@ -1,5 +1,6 @@
 <?php 
 
+/** @alias _ZendTestClassAlias */
 class _ZendTestClass
 {
     public static function is_object() : int

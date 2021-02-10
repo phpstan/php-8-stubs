@@ -1,6 +1,6 @@
 <?php 
 
-class DOMDocument implements \DOMParentNode
+class DOMDocument extends \DOMNode implements \DOMParentNode
 {
     public function __construct(string $version = "1.0", string $encoding = "")
     {
@@ -54,7 +54,7 @@ class DOMDocument implements \DOMParentNode
     {
     }
     /** @return DOMNodeList */
-    public function getElementsByTagNameNS(string $namespace, string $localName)
+    public function getElementsByTagNameNS(?string $namespace, string $localName)
     {
     }
     /** @return DOMNode|false */
