@@ -263,7 +263,7 @@ class mysqli
      * @return bool
      * @alias mysqli_ssl_set
      */
-    public function ssl_set(string $key, string $certificate, string $ca_certificate, string $ca_path, string $cipher_algos)
+    public function ssl_set(?string $key, ?string $certificate, ?string $ca_certificate, ?string $ca_path, ?string $cipher_algos)
     {
     }
     /**

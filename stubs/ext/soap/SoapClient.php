@@ -61,7 +61,7 @@ class SoapClient
     {
     }
     /** @return string|null */
-    public function __setLocation(string $location = "")
+    public function __setLocation(?string $location = null)
     {
     }
 }

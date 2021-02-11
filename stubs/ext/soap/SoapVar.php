@@ -2,7 +2,7 @@
 
 class SoapVar
 {
-    public function __construct(mixed $data, ?int $encoding, string $typeName = "", string $typeNamespace = "", string $nodeName = "", string $nodeNamespace = "")
+    public function __construct(mixed $data, ?int $encoding, ?string $typeName = null, ?string $typeNamespace = null, ?string $nodeName = null, ?string $nodeNamespace = null)
     {
     }
 }
