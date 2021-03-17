@@ -2,9 +2,9 @@
 
 /**
  * @param resource $ldap
- * @param resource $result
+ * @param resource $entry
  * @return resource|false
  */
-function ldap_next_entry($ldap, $result)
+function ldap_next_entry($ldap, $entry)
 {
 }
