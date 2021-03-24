@@ -60,6 +60,8 @@ $command = new class(
 			}
 		}
 
+		ksort($classes);
+		ksort($functions);
 		$this->dumpMap($classes, $functions);
 
 		return 0;
