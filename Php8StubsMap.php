@@ -706,7 +706,6 @@ class Php8StubsMap
   'getallheaders' => 'stubs/sapi/cli/getallheaders.php',
   'getcwd' => 'stubs/ext/standard/getcwd.php',
   'getdate' => 'stubs/ext/date/getdate.php',
-  'getdir' => 'stubs/ext/standard/getdir.php',
   'getenv' => 'stubs/ext/standard/getenv.php',
   'gethostbyaddr' => 'stubs/ext/standard/gethostbyaddr.php',
   'gethostbyname' => 'stubs/ext/standard/gethostbyname.php',
