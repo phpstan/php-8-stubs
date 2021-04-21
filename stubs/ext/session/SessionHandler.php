@@ -10,7 +10,7 @@ class SessionHandler implements \SessionHandlerInterface, \SessionIdInterface
     public function close()
     {
     }
-    /** @return string */
+    /** @return string|false */
     public function read(string $id)
     {
     }

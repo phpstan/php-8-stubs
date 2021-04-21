@@ -6,7 +6,7 @@ interface SessionHandlerInterface
     public function open(string $path, string $name);
     /** @return bool */
     public function close();
-    /** @return string */
+    /** @return string|false */
     public function read(string $id);
     /** @return bool */
     public function write(string $id, string $data);
