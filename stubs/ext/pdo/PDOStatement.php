@@ -40,11 +40,11 @@ class PDOStatement implements \IteratorAggregate
     {
     }
     /** @return mixed */
-    public function fetch(int $mode = PDO::FETCH_BOTH, int $cursorOrientation = PDO::FETCH_ORI_NEXT, int $cursorOffset = 0)
+    public function fetch(int $mode = PDO::FETCH_DEFAULT, int $cursorOrientation = PDO::FETCH_ORI_NEXT, int $cursorOffset = 0)
     {
     }
     /** @return array */
-    public function fetchAll(int $mode = PDO::FETCH_BOTH, mixed ...$args)
+    public function fetchAll(int $mode = PDO::FETCH_DEFAULT, mixed ...$args)
     {
     }
     /** @return mixed */
