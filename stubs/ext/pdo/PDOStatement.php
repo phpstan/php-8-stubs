@@ -52,7 +52,7 @@ class PDOStatement implements \IteratorAggregate
     {
     }
     /** @return object|false */
-    public function fetchObject(?string $class = "stdClass", ?array $ctorArgs = null)
+    public function fetchObject(?string $class = "stdClass", array $constructorArgs = [])
     {
     }
     /** @return mixed */
