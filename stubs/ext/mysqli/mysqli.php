@@ -108,7 +108,7 @@ class mysqli
     {
     }
     /**
-     * @return mysqli|false
+     * @return null|false
      */
     public function init()
     {
