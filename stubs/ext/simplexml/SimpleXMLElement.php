@@ -2,7 +2,7 @@
 
 class SimpleXMLElement implements \Stringable, \Countable, \RecursiveIterator
 {
-    /** @return array|false */
+    /** @return array|null|false */
     public function xpath(string $expression)
     {
     }
@@ -29,22 +29,22 @@ class SimpleXMLElement implements \Stringable, \Countable, \RecursiveIterator
     public function getDocNamespaces(bool $recursive = false, bool $fromRoot = true)
     {
     }
-    /** @return SimpleXMLIterator */
+    /** @return SimpleXMLElement|null */
     public function children(?string $namespaceOrPrefix = null, bool $isPrefix = false)
     {
     }
-    /** @return SimpleXMLIterator */
+    /** @return SimpleXMLElement|null */
     public function attributes(?string $namespaceOrPrefix = null, bool $isPrefix = false)
     {
     }
     public function __construct(string $data, int $options = 0, bool $dataIsURL = false, string $namespaceOrPrefix = "", bool $isPrefix = false)
     {
     }
-    /** @return SimpleXMLElement */
+    /** @return SimpleXMLElement|null */
     public function addChild(string $qualifiedName, ?string $value = null, ?string $namespace = null)
     {
     }
-    /** @return SimpleXMLElement */
+    /** @return SimpleXMLElement|null */
     public function addAttribute(string $qualifiedName, ?string $value = null, ?string $namespace = null)
     {
     }
