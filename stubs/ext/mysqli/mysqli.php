@@ -48,7 +48,7 @@ class mysqli
     {
     }
     /**
-     * @return mysqli|null|false
+     * @return bool|null
      * @alias mysqli_connect
      * @no-verify
      */
@@ -78,7 +78,7 @@ class mysqli
     {
     }
     /**
-     * @return string|null
+     * @return string
      * @alias mysqli_get_client_info
      */
     public function get_client_info()
