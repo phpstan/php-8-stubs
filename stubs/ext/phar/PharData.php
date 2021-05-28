@@ -60,15 +60,17 @@ class PharData extends \RecursiveDirectoryIterator implements \Countable, \Array
     {
     }
     /**
-     * @return Phar|null
+     * @return PharData|null
      * @implementation-alias Phar::compress
+     * @no-verify
      */
     public function compress(int $compression, ?string $extension = null)
     {
     }
     /**
-     * @return Phar|null
+     * @return PharData|null
      * @implementation-alias Phar::decompress
+     * @no-verify
      */
     public function decompress(?string $extension = null)
     {
@@ -81,7 +83,7 @@ class PharData extends \RecursiveDirectoryIterator implements \Countable, \Array
     {
     }
     /**
-     * @return Phar|null
+     * @return PharData|null
      * @implementation-alias Phar::convertToData
      */
     public function convertToData(?int $format = null, ?int $compression = null, ?string $extension = null)

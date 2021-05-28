@@ -12,6 +12,6 @@ interface SessionHandlerInterface
     public function write(string $id, string $data);
     /** @return bool */
     public function destroy(string $id);
-    /** @return int|bool */
+    /** @return int|false */
     public function gc(int $max_lifetime);
 }

@@ -48,7 +48,7 @@ class Phar extends \RecursiveDirectoryIterator implements \Countable, \ArrayAcce
     public function convertToExecutable(?int $format = null, ?int $compression = null, ?string $extension = null)
     {
     }
-    /** @return Phar|null */
+    /** @return PharData|null */
     public function convertToData(?int $format = null, ?int $compression = null, ?string $extension = null)
     {
     }
