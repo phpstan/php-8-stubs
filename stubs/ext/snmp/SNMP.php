@@ -13,19 +13,19 @@ class SNMP
     public function setSecurity(string $securityLevel, string $authProtocol = "", string $authPassphrase = "", string $privacyProtocol = "", string $privacyPassphrase = "", string $contextName = "", string $contextEngineId = "")
     {
     }
-    /** @return array|bool */
+    /** @return mixed */
     public function get(array|string $objectId, bool $preserveKeys = false)
     {
     }
-    /** @return array|bool */
+    /** @return mixed */
     public function getnext(array|string $objectId)
     {
     }
-    /** @return array|bool */
+    /** @return array|false */
     public function walk(array|string $objectId, bool $suffixAsKey = false, int $maxRepetitions = -1, int $nonRepeaters = -1)
     {
     }
-    /** @return array|bool */
+    /** @return bool */
     public function set(array|string $objectId, array|string $type, array|string $value)
     {
     }
