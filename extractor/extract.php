@@ -45,7 +45,8 @@ $command = new class(
 		$this->clearOldStubs($ourStubsDir);
 		$srcDir = realpath(__DIR__ . '/../php-src');
 		$finder = new Finder();
-		$finder->files()->in($srcDir)->name('*.stub.php');
+		$finder->files()->in($srcDir)->name('*.stub.php')
+			->exclude('ext/skeleton');
 
 		$classes = [];
 		$functions = [];
