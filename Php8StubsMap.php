@@ -2414,8 +2414,6 @@ class Php8StubsMap
   'tan' => 'stubs/ext/standard/tan.php',
   'tanh' => 'stubs/ext/standard/tanh.php',
   'tempnam' => 'stubs/ext/standard/tempnam.php',
-  'test1' => 'stubs/ext/skeleton/test1.php',
-  'test2' => 'stubs/ext/skeleton/test2.php',
   'textdomain' => 'stubs/ext/gettext/textdomain.php',
   'tidy_access_count' => 'stubs/ext/tidy/tidy_access_count.php',
   'tidy_clean_repair' => 'stubs/ext/tidy/tidy_clean_repair.php',
