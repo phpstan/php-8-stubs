@@ -98,7 +98,7 @@ class ArrayObject implements \IteratorAggregate, \ArrayAccess, \Serializable, \C
     public function getIterator()
     {
     }
-    /** @return array|null */
+    /** @return array */
     public function exchangeArray(array|object $array)
     {
     }
