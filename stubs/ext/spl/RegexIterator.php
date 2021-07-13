@@ -2,7 +2,7 @@
 
 class RegexIterator extends \FilterIterator
 {
-    public function __construct(Iterator $iterator, string $pattern, int $mode = self::MATCH, int $flags = 0, int $pregFlags = 0)
+    public function __construct(Iterator $iterator, string $pattern, int $mode = RegexIterator::MATCH, int $flags = 0, int $pregFlags = 0)
     {
     }
     /** @return bool */

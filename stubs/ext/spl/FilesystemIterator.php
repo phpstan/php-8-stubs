@@ -13,7 +13,7 @@ class FilesystemIterator extends \DirectoryIterator
     public function key()
     {
     }
-    /** @return string|SplFileInfo|self */
+    /** @return string|SplFileInfo|FilesystemIterator */
     public function current()
     {
     }

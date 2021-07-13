@@ -2,7 +2,7 @@
 
 class RecursiveCachingIterator extends \CachingIterator implements \RecursiveIterator
 {
-    public function __construct(Iterator $iterator, int $flags = self::CALL_TOSTRING)
+    public function __construct(Iterator $iterator, int $flags = RecursiveCachingIterator::CALL_TOSTRING)
     {
     }
     /** @return bool */

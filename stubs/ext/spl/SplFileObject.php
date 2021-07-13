@@ -35,7 +35,7 @@ class SplFileObject extends \SplFileInfo implements \RecursiveIterator, \Seekabl
     public function fputcsv(array $fields, string $separator = ",", string $enclosure = "\"", string $escape = "\\")
     {
     }
-    /** @return bool|null */
+    /** @return void */
     public function setCsvControl(string $separator = ",", string $enclosure = "\"", string $escape = "\\")
     {
     }
@@ -70,7 +70,7 @@ class SplFileObject extends \SplFileInfo implements \RecursiveIterator, \Seekabl
     public function fpassthru()
     {
     }
-    /** @return array|int|false|null */
+    /** @return array|int|null */
     public function fscanf(string $format, mixed &...$vars)
     {
     }
@@ -118,7 +118,7 @@ class SplFileObject extends \SplFileInfo implements \RecursiveIterator, \Seekabl
     public function hasChildren()
     {
     }
-    /** @return null */
+    /** @return RecursiveIterator|null */
     public function getChildren()
     {
     }

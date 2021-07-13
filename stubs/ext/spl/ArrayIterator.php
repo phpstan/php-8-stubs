@@ -6,35 +6,31 @@ class ArrayIterator implements \SeekableIterator, \ArrayAccess, \Serializable, \
     {
     }
     /**
-     * @param string|int $key
      * @return bool
      * @implementation-alias ArrayObject::offsetExists
      */
-    public function offsetExists($key)
+    public function offsetExists(mixed $key)
     {
     }
     /**
-     * @param string|int $key
      * @return mixed
      * @implementation-alias ArrayObject::offsetGet
      */
-    public function offsetGet($key)
+    public function offsetGet(mixed $key)
     {
     }
     /**
-     * @param string|int $key
      * @return void
      * @implementation-alias ArrayObject::offsetSet
      */
-    public function offsetSet($key, mixed $value)
+    public function offsetSet(mixed $key, mixed $value)
     {
     }
     /**
-     * @param string|int $key
      * @return void
      * @implementation-alias ArrayObject::offsetUnset
      */
-    public function offsetUnset($key)
+    public function offsetUnset(mixed $key)
     {
     }
     /**

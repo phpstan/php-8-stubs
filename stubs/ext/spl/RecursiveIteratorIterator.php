@@ -2,7 +2,7 @@
 
 class RecursiveIteratorIterator implements \OuterIterator
 {
-    public function __construct(Traversable $iterator, int $mode = self::LEAVES_ONLY, int $flags = 0)
+    public function __construct(Traversable $iterator, int $mode = RecursiveIteratorIterator::LEAVES_ONLY, int $flags = 0)
     {
     }
     /** @return void */

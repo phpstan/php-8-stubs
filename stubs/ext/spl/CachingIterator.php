@@ -2,7 +2,7 @@
 
 class CachingIterator extends \IteratorIterator implements \ArrayAccess, \Countable
 {
-    public function __construct(Iterator $iterator, int $flags = self::CALL_TOSTRING)
+    public function __construct(Iterator $iterator, int $flags = CachingIterator::CALL_TOSTRING)
     {
     }
     /** @return void */

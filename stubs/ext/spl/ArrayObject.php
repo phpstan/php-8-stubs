@@ -6,32 +6,20 @@ class ArrayObject implements \IteratorAggregate, \ArrayAccess, \Serializable, \C
     public function __construct(array|object $array = [], int $flags = 0, string $iteratorClass = ArrayIterator::class)
     {
     }
-    /**
-     * @param string|int $key
-     * @return bool
-     */
-    public function offsetExists($key)
+    /** @return bool */
+    public function offsetExists(mixed $key)
     {
     }
-    /**
-     * @param string|int $key
-     * @return mixed
-     */
-    public function offsetGet($key)
+    /** @return mixed */
+    public function offsetGet(mixed $key)
     {
     }
-    /**
-     * @param string|int $key
-     * @return void
-     */
-    public function offsetSet($key, mixed $value)
+    /** @return void */
+    public function offsetSet(mixed $key, mixed $value)
     {
     }
-    /**
-     * @param string|int $key
-     * @return void
-     */
-    public function offsetUnset($key)
+    /** @return void */
+    public function offsetUnset(mixed $key)
     {
     }
     /** @return void */

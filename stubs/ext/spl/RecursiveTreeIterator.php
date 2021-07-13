@@ -3,7 +3,7 @@
 class RecursiveTreeIterator extends \RecursiveIteratorIterator
 {
     /** @param RecursiveIterator|IteratorAggregate $iterator */
-    public function __construct($iterator, int $flags = self::BYPASS_KEY, int $cachingIteratorFlags = CachingIterator::CATCH_GET_CHILD, int $mode = self::SELF_FIRST)
+    public function __construct($iterator, int $flags = RecursiveTreeIterator::BYPASS_KEY, int $cachingIteratorFlags = CachingIterator::CATCH_GET_CHILD, int $mode = RecursiveTreeIterator::SELF_FIRST)
     {
     }
     /** @return mixed */

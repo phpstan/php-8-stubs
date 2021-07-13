@@ -2,7 +2,7 @@
 
 class RecursiveRegexIterator extends \RegexIterator implements \RecursiveIterator
 {
-    public function __construct(RecursiveIterator $iterator, string $pattern, int $mode = self::MATCH, int $flags = 0, int $pregFlags = 0)
+    public function __construct(RecursiveIterator $iterator, string $pattern, int $mode = RecursiveRegexIterator::MATCH, int $flags = 0, int $pregFlags = 0)
     {
     }
     /** @return bool */
