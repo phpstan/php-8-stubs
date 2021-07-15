@@ -37,11 +37,11 @@ class MultipleIterator implements \Iterator
     public function valid()
     {
     }
-    /** @return array */
+    /** @return array|false */
     public function key()
     {
     }
-    /** @return array */
+    /** @return array|false */
     public function current()
     {
     }

@@ -18,11 +18,11 @@ class SplObjectStorage implements \Countable, \Iterator, \Serializable, \ArrayAc
     public function addAll(SplObjectStorage $storage)
     {
     }
-    /** @return void */
+    /** @return int */
     public function removeAll(SplObjectStorage $storage)
     {
     }
-    /** @return void */
+    /** @return int */
     public function removeAllExcept(SplObjectStorage $storage)
     {
     }
@@ -50,7 +50,7 @@ class SplObjectStorage implements \Countable, \Iterator, \Serializable, \ArrayAc
     public function key()
     {
     }
-    /** @return object */
+    /** @return object|null */
     public function current()
     {
     }
