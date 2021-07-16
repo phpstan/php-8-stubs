@@ -25,7 +25,7 @@ class AppendIterator extends \IteratorIterator
     public function next()
     {
     }
-    /** @return int */
+    /** @return int|null */
     public function getIteratorIndex()
     {
     }

@@ -2,6 +2,6 @@
 
 interface OuterIterator extends \Iterator
 {
-    /** @return Iterator */
+    /** @return Iterator|null */
     public function getInnerIterator();
 }

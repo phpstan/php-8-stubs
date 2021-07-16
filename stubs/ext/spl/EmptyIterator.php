@@ -3,7 +3,7 @@
 /** @generate-function-entries */
 class EmptyIterator implements \Iterator
 {
-    /** @return void */
+    /** @return mixed */
     public function current()
     {
     }
@@ -11,7 +11,7 @@ class EmptyIterator implements \Iterator
     public function next()
     {
     }
-    /** @return void */
+    /** @return mixed */
     public function key()
     {
     }
