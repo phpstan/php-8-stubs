@@ -1,6 +1,6 @@
 <?php 
 
 #endif
-function dom_import_simplexml(object $node) : ?\DOMElement
+function dom_import_simplexml(object $node) : \DOMElement
 {
 }
