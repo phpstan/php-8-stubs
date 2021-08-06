@@ -13,11 +13,11 @@ class DOMElement extends \DOMNode implements \DOMParentNode, \DOMChildNode
     public function getAttributeNS(?string $namespace, string $localName)
     {
     }
-    /** @return DOMAttr|DOMNamespaceNode|false */
+    /** @return DOMAttr|DOMNameSpaceNode|false */
     public function getAttributeNode(string $qualifiedName)
     {
     }
-    /** @return DOMAttr|DOMNamespaceNode|null */
+    /** @return DOMAttr|DOMNameSpaceNode|null */
     public function getAttributeNodeNS(?string $namespace, string $localName)
     {
     }
