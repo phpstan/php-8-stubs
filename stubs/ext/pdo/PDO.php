@@ -58,7 +58,7 @@ class PDO
     public function rollBack()
     {
     }
-    public function setAttribute(int $attribute, $value)
+    public function setAttribute(int $attribute, mixed $value)
     {
     }
 }
