@@ -1,5 +1,5 @@
 <?php 
 
-function imagecolorsforindex(\GdImage $image, int $color) : array|false
+function imagecolorsforindex(\GdImage $image, int $color) : array
 {
 }
