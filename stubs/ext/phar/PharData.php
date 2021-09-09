@@ -93,7 +93,7 @@ class PharData extends \RecursiveDirectoryIterator implements \Countable, \Array
      * @return bool
      * @implementation-alias Phar::copy
      */
-    public function copy(string $to, string $from)
+    public function copy(string $from, string $to)
     {
     }
     /**

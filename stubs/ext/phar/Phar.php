@@ -53,7 +53,7 @@ class Phar extends \RecursiveDirectoryIterator implements \Countable, \ArrayAcce
     {
     }
     /** @return bool */
-    public function copy(string $to, string $from)
+    public function copy(string $from, string $to)
     {
     }
     /** @return int */
