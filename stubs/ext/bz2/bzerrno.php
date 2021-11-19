@@ -1,6 +1,6 @@
 <?php 
 
 /** @param resource $bz */
-function bzerrno($bz) : int
+function bzerrno($bz) : int|false
 {
 }

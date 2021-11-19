@@ -1,6 +1,6 @@
 <?php 
 
 /** @param resource $bz */
-function bzerrstr($bz) : string
+function bzerrstr($bz) : string|false
 {
 }
