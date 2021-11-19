@@ -33,6 +33,7 @@ jobs:
         run: "composer require phpstan/php-8-stubs:$GITHUB_REF_NAME"
 
       - name: "Create Pull Request"
+        id: create-pr
         uses: peter-evans/create-pull-request@v3
         with:
           token: ${{ secrets.PHPSTAN_BOT_TOKEN }}
@@ -43,3 +44,11 @@ jobs:
           body: "Update PHP 8 stubs to ${{ env.GITHUB_REF_NAME }}"
           committer: "phpstan-bot <ondrej+phpstanbot@mirtes.cz>"
           commit-message: "Update PHP 8 stubs"
+
+      - name: "Enable Pull Request Automerge"
+        if: steps.create-pr.outputs.pull-request-operation == 'created'
+        uses: peter-evans/enable-pull-request-automerge@v1
+        with:
+          token: ${{ secrets.PHPSTAN_BOT_TOKEN }}
+          pull-request-number: ${{ steps.create-pr.outputs.pull-request-number }}
+          merge-method: rebase
