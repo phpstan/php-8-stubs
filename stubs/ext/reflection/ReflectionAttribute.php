@@ -1,6 +1,6 @@
 <?php 
 
-class ReflectionAttribute
+final class ReflectionAttribute
 {
     public function getName() : string
     {
