@@ -30,7 +30,7 @@ jobs:
 
       - name: "Change composer.json"
         working-directory: ./phpstan-src
-        run: "composer require phpstan/php-8-stubs:${{ env.GITHUB_REF }}"
+        run: "composer require phpstan/php-8-stubs:$GITHUB_REF_NAME"
 
       - name: "Create Pull Request"
         uses: peter-evans/create-pull-request@v3
@@ -40,6 +40,6 @@ jobs:
           branch-suffix: short-commit-hash
           delete-branch: true
           title: "Update PHP 8 stubs"
-          body: "Update PHP 8 stubs to ${{ env.GITHUB_REF }}"
+          body: "Update PHP 8 stubs to ${{ env.GITHUB_REF_NAME }}"
           committer: "phpstan-bot <ondrej+phpstanbot@mirtes.cz>"
           commit-message: "Update PHP 8 stubs"
