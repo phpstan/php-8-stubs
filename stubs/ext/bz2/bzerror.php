@@ -1,6 +1,6 @@
 <?php 
 
 /** @param resource $bz */
-function bzerror($bz) : array|false
+function bzerror($bz) : array
 {
 }
