@@ -44,3 +44,4 @@ jobs:
           body: "Update PHP 8 stubs to ${{ env.GITHUB_REF_NAME }}"
           committer: "phpstan-bot <ondrej+phpstanbot@mirtes.cz>"
           commit-message: "Update PHP 8 stubs"
+          labels: "automerge"
