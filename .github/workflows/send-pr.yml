@@ -38,7 +38,7 @@ jobs:
         with:
           token: ${{ secrets.PHPSTAN_BOT_TOKEN }}
           path: ./phpstan-src
-          branch-suffix: short-commit-hash
+          branch-suffix: random
           delete-branch: true
           title: "Update PHP 8 stubs"
           body: "Update PHP 8 stubs to ${{ env.GITHUB_REF_NAME }}"
