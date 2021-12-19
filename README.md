@@ -16,5 +16,7 @@ cd ..
 
 cd extractor/
 composer install
-php extract.php
+cd ..
+
+php ./extractor/extract.php
 ```
