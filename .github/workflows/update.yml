@@ -34,7 +34,7 @@ jobs:
         with:
           repository: "php/php-src"
           path: "php-src"
-          ref: "PHP-8.0"
+          ref: "PHP-8.1"
       - name: "Extract stubs"
         run: "./extractor/extract.php"
       - name: 'Get previous tag'
