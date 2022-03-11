@@ -244,7 +244,7 @@ class Php8StubsMap
   'apache_lookup_uri' => 'stubs/sapi/apache2handler/apache_lookup_uri.php',
   'apache_note' => 'stubs/sapi/apache2handler/apache_note.php',
   'apache_request_headers' => 'stubs/sapi/fpm/fpm/apache_request_headers.php',
-  'apache_response_headers' => 'stubs/sapi/cgi/apache_response_headers.php',
+  'apache_response_headers' => 'stubs/sapi/cli/apache_response_headers.php',
   'apache_setenv' => 'stubs/sapi/apache2handler/apache_setenv.php',
   'array_change_key_case' => 'stubs/ext/standard/array_change_key_case.php',
   'array_chunk' => 'stubs/ext/standard/array_chunk.php',
