@@ -3,6 +3,14 @@
 		"php": "^7.4 || ^8.0",
 		"symfony/console": "^6.0.0",
 		"symfony/finder": "^6.0",
-		"nikic/php-parser": "^4.10"
+		"nikic/php-parser": "^4.10",
+		"phpstan/phpstan": "^1.5",
+		"phpstan/phpstan-php-parser": "^1.1",
+		"phpstan/extension-installer": "^1.1"
+	},
+	"config": {
+		"allow-plugins": {
+			"phpstan/extension-installer": true
+		}
 	}
 }

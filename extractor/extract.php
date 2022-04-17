@@ -34,7 +34,7 @@ $command = new class(
 		$this->printer = $printer;
 	}
 
-	protected function configure()
+	protected function configure(): void
 	{
 		$this->setName('extract');
 	}
@@ -42,8 +42,14 @@ $command = new class(
 	protected function execute(InputInterface $input, OutputInterface $output): int
 	{
 		$ourStubsDir = realpath(__DIR__ . '/../stubs');
+		if ($ourStubsDir === false) {
+			throw new \LogicException('Invalid stubs path');
+		}
 		$this->clearOldStubs($ourStubsDir);
 		$srcDir = realpath(__DIR__ . '/../php-src');
+		if ($srcDir === false) {
+			throw new \LogicException('Invalid php-src path');
+		}
 		$finder = new Finder();
 		$finder->files()->in($srcDir)->name('*.stub.php')
 			->exclude('ext/skeleton');
@@ -134,6 +140,8 @@ $command = new class(
 				} else {
 					throw new \Exception(sprintf('Unhandled node type %s in %s on line %s.', get_class($node), $this->stubPath, $node->getLine()));
 				}
+
+				return null;
 			}
 
 			/**
@@ -146,12 +154,24 @@ $command = new class(
 		};
 
 		$nodeTraverser->addVisitor($visitor);
-		$nodeTraverser->traverse($this->parser->parse(file_get_contents($stubPath)));
+
+		$stubContents = file_get_contents($stubPath);
+		if ($stubContents === false) {
+			throw new \LogicException('Could not read stub');
+		}
+		$ast = $this->parser->parse($stubContents);
+		if ($ast === null) {
+			throw new \LogicException('AST cannot be null');
+		}
+		$nodeTraverser->traverse($ast);
 
 		$stmts = $visitor->getStmts();
 		$classes = [];
 		$functions = [];
 		foreach ($stmts as $stmt) {
+			if (!$stmt instanceof Node\Stmt\Class_ && !$stmt instanceof Node\Stmt\Interface_ && !$stmt instanceof Node\Stmt\Trait_ && !$stmt instanceof Node\Stmt\Function_) {
+				throw new \Exception(sprintf('Unhandled node type %s in %s on line %s.', get_class($stmt), $stubPath, $stmt->getLine()));
+			}
 			$namespacedName = $stmt->namespacedName->toString();
 			$pathPart = 'stubs/' . dirname($relativeStubPath) . '/' . str_replace('\\', '/', $namespacedName) . '.php';
 			$targetStubPath = __DIR__ . '/../' . $pathPart;
@@ -159,10 +179,8 @@ $command = new class(
 			if ($stmt instanceof Node\Stmt\Class_ || $stmt instanceof Node\Stmt\Interface_ || $stmt instanceof Node\Stmt\Trait_) {
 				$classes[strtolower($namespacedName)] = $pathPart;
 				$stmt = $this->filterClassPhpDocs($stmt);
-			} elseif ($stmt instanceof Node\Stmt\Function_) {
-				$functions[strtolower($namespacedName)] = $pathPart;
 			} else {
-				throw new \Exception(sprintf('Unhandled node type %s in %s on line %s.', get_class($stmt), $stubPath, $stmt->getLine()));
+				$functions[strtolower($namespacedName)] = $pathPart;
 			}
 
 			if (strpos($namespacedName, '\\') !== false) {
@@ -228,7 +246,7 @@ class Php8StubsMap
 {
 
 	public const CLASSES = %s;
-	
+
 	public const FUNCTIONS = %s;
 
 }
