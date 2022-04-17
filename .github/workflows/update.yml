@@ -69,3 +69,4 @@ jobs:
           commit_user_name: "phpstan-bot"
           commit_user_email: "ondrej+phpstanbot@mirtes.cz"
           commit_author: "phpstan-bot <ondrej+phpstanbot@mirtes.cz>"
+          tagging_message: ${{ steps.semvers.outputs.patch }}
