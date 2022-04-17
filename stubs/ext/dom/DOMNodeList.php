@@ -2,14 +2,8 @@
 
 class DOMNodeList implements \IteratorAggregate, \Countable
 {
-    /** @return int|false */
-    #[\Until('8.1')]
-    public function count()
-    {
-    }
     /** @tentative-return-type */
-    #[\Since('8.1')]
-    public function count() : int
+    public function count()
     {
     }
     public function getIterator() : Iterator

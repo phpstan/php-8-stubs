@@ -17,19 +17,10 @@ class Error implements \Throwable
     {
     }
     /**
-     * @return void
-     * @implementation-alias Exception::__wakeup
-     */
-    #[\Until('8.1')]
-    public function __wakeup()
-    {
-    }
-    /**
      * @tentative-return-type
      * @implementation-alias Exception::__wakeup
      */
-    #[\Since('8.1')]
-    public function __wakeup() : void
+    public function __wakeup()
     {
     }
     /** @implementation-alias Exception::getMessage */

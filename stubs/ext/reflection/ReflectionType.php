@@ -13,14 +13,8 @@ abstract class ReflectionType implements \Stringable
     private function __clone() : void
     {
     }
-    /** @return bool */
-    #[\Until('8.1')]
-    public function allowsNull()
-    {
-    }
     /** @tentative-return-type */
-    #[\Since('8.1')]
-    public function allowsNull() : bool
+    public function allowsNull()
     {
     }
     public function __toString() : string

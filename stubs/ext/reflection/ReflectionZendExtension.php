@@ -19,54 +19,24 @@ class ReflectionZendExtension implements \Reflector
     public function __toString() : string
     {
     }
-    /** @return string */
-    #[\Until('8.1')]
+    /** @tentative-return-type */
     public function getName()
     {
     }
     /** @tentative-return-type */
-    #[\Since('8.1')]
-    public function getName() : string
-    {
-    }
-    /** @return string */
-    #[\Until('8.1')]
     public function getVersion()
     {
     }
     /** @tentative-return-type */
-    #[\Since('8.1')]
-    public function getVersion() : string
-    {
-    }
-    /** @return string */
-    #[\Until('8.1')]
     public function getAuthor()
     {
     }
     /** @tentative-return-type */
-    #[\Since('8.1')]
-    public function getAuthor() : string
-    {
-    }
-    /** @return string */
-    #[\Until('8.1')]
     public function getURL()
     {
     }
     /** @tentative-return-type */
-    #[\Since('8.1')]
-    public function getURL() : string
-    {
-    }
-    /** @return string */
-    #[\Until('8.1')]
     public function getCopyright()
-    {
-    }
-    /** @tentative-return-type */
-    #[\Since('8.1')]
-    public function getCopyright() : string
     {
     }
 }

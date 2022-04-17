@@ -10,38 +10,18 @@ class finfo
     }
     /**
      * @param resource|null $context
-     * @return string|false
+     * @tentative-return-type
      * @alias finfo_file
      */
-    #[\Until('8.1')]
     public function file(string $filename, int $flags = FILEINFO_NONE, $context = null)
     {
     }
     /**
      * @param resource|null $context
      * @tentative-return-type
-     * @alias finfo_file
-     */
-    #[\Since('8.1')]
-    public function file(string $filename, int $flags = FILEINFO_NONE, $context = null) : string|false
-    {
-    }
-    /**
-     * @param resource|null $context
-     * @return string|false
      * @alias finfo_buffer
      */
-    #[\Until('8.1')]
     public function buffer(string $string, int $flags = FILEINFO_NONE, $context = null)
-    {
-    }
-    /**
-     * @param resource|null $context
-     * @tentative-return-type
-     * @alias finfo_buffer
-     */
-    #[\Since('8.1')]
-    public function buffer(string $string, int $flags = FILEINFO_NONE, $context = null) : string|false
     {
     }
     /**

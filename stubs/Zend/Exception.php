@@ -13,14 +13,8 @@ class Exception implements \Throwable
     public function __construct(string $message = "", int $code = 0, ?Throwable $previous = null)
     {
     }
-    /** @return void */
-    #[\Until('8.1')]
-    public function __wakeup()
-    {
-    }
     /** @tentative-return-type */
-    #[\Since('8.1')]
-    public function __wakeup() : void
+    public function __wakeup()
     {
     }
     public final function getMessage() : string

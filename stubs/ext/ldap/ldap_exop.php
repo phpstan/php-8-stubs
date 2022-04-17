@@ -19,6 +19,6 @@ function ldap_exop($ldap, string $request_oid, ?string $request_data = null, ?ar
  * @param string $response_oid
  */
 #[\Since('8.1')]
-function ldap_exop(\LDAP\Connection $ldap, string $request_oid, ?string $request_data = null, ?array $controls = NULL, &$response_data = UNKNOWN, &$response_oid = null) : \LDAP\Result|bool
+function ldap_exop(\LDAP\Connection $ldap, string $request_oid, ?string $request_data = null, ?array $controls = NULL, &$response_data = UNKNOWN, &$response_oid = null)
 {
 }

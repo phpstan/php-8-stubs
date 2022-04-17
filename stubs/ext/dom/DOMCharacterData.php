@@ -2,48 +2,24 @@
 
 class DOMCharacterData extends \DOMNode implements \DOMChildNode
 {
-    /** @return bool */
-    #[\Until('8.1')]
-    public function appendData(string $data)
-    {
-    }
     /** @tentative-return-type */
-    #[\Since('8.1')]
-    public function appendData(string $data) : bool
+    public function appendData(string $data)
     {
     }
     /** @return string|false */
     public function substringData(int $offset, int $count)
     {
     }
-    /** @return bool */
-    #[\Until('8.1')]
+    /** @tentative-return-type */
     public function insertData(int $offset, string $data)
     {
     }
     /** @tentative-return-type */
-    #[\Since('8.1')]
-    public function insertData(int $offset, string $data) : bool
-    {
-    }
-    /** @return bool */
-    #[\Until('8.1')]
     public function deleteData(int $offset, int $count)
     {
     }
     /** @tentative-return-type */
-    #[\Since('8.1')]
-    public function deleteData(int $offset, int $count) : bool
-    {
-    }
-    /** @return bool */
-    #[\Until('8.1')]
     public function replaceData(int $offset, int $count, string $data)
-    {
-    }
-    /** @tentative-return-type */
-    #[\Since('8.1')]
-    public function replaceData(int $offset, int $count, string $data) : bool
     {
     }
     /** @param DOMNode|string $nodes */

@@ -5,14 +5,8 @@ class DOMDocumentFragment extends \DOMNode implements \DOMParentNode
     public function __construct()
     {
     }
-    /** @return bool */
-    #[\Until('8.1')]
-    public function appendXML(string $data)
-    {
-    }
     /** @tentative-return-type */
-    #[\Since('8.1')]
-    public function appendXML(string $data) : bool
+    public function appendXML(string $data)
     {
     }
     /** @param DOMNode|string $nodes */
