@@ -5,7 +5,9 @@ use PhpParser\Node;
 use PhpParser\ParserFactory;
 use Symfony\Component\Console\Application;
 use Symfony\Component\Console\Command\Command;
+use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Finder\Finder;
 
@@ -37,15 +39,26 @@ $command = new class(
 	protected function configure(): void
 	{
 		$this->setName('extract');
+		$this->addOption('update', null, InputOption::VALUE_NONE);
+		$this->addArgument('updateTo', InputArgument::OPTIONAL);
 	}
 
 	protected function execute(InputInterface $input, OutputInterface $output): int
 	{
+		$isUpdate = $input->getOption('update');
 		$ourStubsDir = realpath(__DIR__ . '/../stubs');
 		if ($ourStubsDir === false) {
 			throw new \LogicException('Invalid stubs path');
 		}
-		$this->clearOldStubs($ourStubsDir);
+
+		$updateTo = $input->getArgument('updateTo');
+		if (!$isUpdate) {
+			$this->clearOldStubs($ourStubsDir);
+		} else {
+			if ($updateTo === null) {
+				throw new \LogicException('Missing arguments');
+			}
+		}
 		$srcDir = realpath(__DIR__ . '/../php-src');
 		if ($srcDir === false) {
 			throw new \LogicException('Invalid php-src path');
@@ -56,9 +69,14 @@ $command = new class(
 
 		$classes = [];
 		$functions = [];
+		if ($isUpdate) {
+			require_once __DIR__ . '/../Php8StubsMap.php';
+			$classes = \PHPStan\Php8StubsMap::CLASSES;
+			$functions = \PHPStan\Php8StubsMap::FUNCTIONS;
+		}
 		foreach ($finder as $file) {
 			$stubPath = $file->getRealPath();
-			[$tmpClasses, $tmpFunctions] = $this->extractStub($stubPath, $file->getRelativePathname(), $ourStubsDir);
+			[$tmpClasses, $tmpFunctions] = $this->extractStub($stubPath, $file->getRelativePathname(), $isUpdate, $updateTo);
 			foreach ($tmpClasses as $className => $fileName) {
 				$classes[$className] = $fileName;
 			}
@@ -66,6 +84,8 @@ $command = new class(
 				$functions[$functionName] = $fileName;
 			}
 		}
+
+		// todo are there symbols missing at their original locations?
 
 		ksort($classes);
 		ksort($functions);
@@ -96,10 +116,9 @@ $command = new class(
 	/**
 	 * @param string $stubPath
 	 * @param string $relativeStubPath
-	 * @param string $ourStubsDir
 	 * @return array{array<string, string>, array<string, string>}
 	 */
-	private function extractStub(string $stubPath, string $relativeStubPath, string $ourStubsDir): array
+	private function extractStub(string $stubPath, string $relativeStubPath, bool $isUpdate, ?string $updateTo): array
 	{
 		$nameResolver = new PhpParser\NodeVisitor\NameResolver;
 		$nodeTraverser = new PhpParser\NodeTraverser;
@@ -122,6 +141,9 @@ $command = new class(
 				if ($node instanceof Node\Stmt\Namespace_) {
 					// pass
 				} elseif ($node instanceof Node\Stmt\Class_) {
+					$this->stmts[] = $node;
+					return \PhpParser\NodeTraverser::DONT_TRAVERSE_CHILDREN;
+				} elseif ($node instanceof Node\Stmt\Enum_) {
 					$this->stmts[] = $node;
 					return \PhpParser\NodeTraverser::DONT_TRAVERSE_CHILDREN;
 				} elseif ($node instanceof Node\Stmt\Interface_) {
@@ -151,6 +173,11 @@ $command = new class(
 			{
 				return $this->stmts;
 			}
+
+			public function clear(): void
+			{
+				$this->stmts = [];
+			}
 		};
 
 		$nodeTraverser->addVisitor($visitor);
@@ -169,7 +196,7 @@ $command = new class(
 		$classes = [];
 		$functions = [];
 		foreach ($stmts as $stmt) {
-			if (!$stmt instanceof Node\Stmt\Class_ && !$stmt instanceof Node\Stmt\Interface_ && !$stmt instanceof Node\Stmt\Trait_ && !$stmt instanceof Node\Stmt\Function_) {
+			if (!$stmt instanceof Node\Stmt\Class_ && !$stmt instanceof Node\Stmt\Interface_ && !$stmt instanceof Node\Stmt\Trait_ && !$stmt instanceof Node\Stmt\Enum_ && !$stmt instanceof Node\Stmt\Function_) {
 				throw new \Exception(sprintf('Unhandled node type %s in %s on line %s.', get_class($stmt), $stubPath, $stmt->getLine()));
 			}
 			$namespacedName = $stmt->namespacedName->toString();
@@ -177,24 +204,282 @@ $command = new class(
 			$targetStubPath = __DIR__ . '/../' . $pathPart;
 
 			if ($stmt instanceof Node\Stmt\Class_ || $stmt instanceof Node\Stmt\Interface_ || $stmt instanceof Node\Stmt\Trait_) {
+				if (array_key_exists(strtolower($namespacedName), $classes)) {
+					continue;
+				}
 				$classes[strtolower($namespacedName)] = $pathPart;
 				$stmt = $this->filterClassPhpDocs($stmt);
 			} else {
+				if (array_key_exists(strtolower($namespacedName), $functions)) {
+					continue;
+				}
 				$functions[strtolower($namespacedName)] = $pathPart;
 			}
 
+			$originalStmt = $stmt;
 			if (strpos($namespacedName, '\\') !== false) {
 				$stmt = new Node\Stmt\Namespace_($stmt->namespacedName->slice(0, -1), [$stmt]);
 			}
 
 			@mkdir(dirname($targetStubPath), 0777, true);
-			if (is_file($targetStubPath)) {
+
+			if (!$isUpdate) {
+				if (is_file($targetStubPath)) {
+					continue;
+				}
+				file_put_contents($targetStubPath, "<?php \n\n" . $this->printer->prettyPrint([$stmt]));
 				continue;
 			}
-			file_put_contents($targetStubPath, "<?php \n\n" . $this->printer->prettyPrint([$stmt]));
+
+			if (!is_file($targetStubPath)) {
+				$originalStmt->attrGroups[] = new Node\AttributeGroup([
+					new Node\Attribute(
+						new Node\Name\FullyQualified('Since'),
+						[new Node\Arg(new Node\Scalar\String_($updateTo))],
+					),
+				]);
+				file_put_contents($targetStubPath, "<?php \n\n" . $this->printer->prettyPrint([$stmt]));
+				continue;
+			}
+
+			$oldStubContents = file_get_contents($targetStubPath);
+			if ($oldStubContents === false) {
+				throw new \LogicException('Could not read old stub');
+			}
+			$oldStubAst = $this->parser->parse($oldStubContents);
+			if ($oldStubAst === null) {
+				throw new \LogicException('Old stub AST cannot be null');
+			}
+			$visitor->clear();
+			$nodeTraverser->traverse($oldStubAst);
+
+			$oldStmts = $visitor->getStmts();
+			if (count($oldStmts) !== 1) {
+				throw new \LogicException('There is supposed to be one statement in the old AST: ' . $targetStubPath);
+			}
+
+			$oldStmt = $oldStmts[0];
+			if (!$oldStmt instanceof Node\Stmt\Class_ && !$oldStmt instanceof Node\Stmt\Interface_ && !$oldStmt instanceof Node\Stmt\Trait_ && !$oldStmt instanceof Node\Stmt\Enum_ && !$oldStmt instanceof Node\Stmt\Function_) {
+				throw new \Exception(sprintf('Unhandled node type %s in %s on line %s.', get_class($stmt), $stubPath, $stmt->getLine()));
+			}
+			$oldNamespacedName = $oldStmt->namespacedName->toString();
+			if (strpos($oldNamespacedName, '\\') !== false) {
+				$oldStmt = new Node\Stmt\Namespace_($oldStmt->namespacedName->slice(0, -1), [$oldStmt]);
+			}
+
+			$newStmts = $this->compareStatements($oldStmt, $stmt, $updateTo);
+			file_put_contents($targetStubPath, "<?php \n\n" . $this->printer->prettyPrint($newStmts));
 		}
 
 		return [$classes, $functions];
+	}
+
+	/** @return Node\Stmt[] */
+	private function compareStatements(Node\Stmt $old, Node\Stmt $new, string $updateTo): array
+	{
+		if ($old instanceof Node\Stmt\Namespace_ && $new instanceof Node\Stmt\Namespace_) {
+			if ($old->name->toString() !== $new->name->toString()) {
+				throw new \LogicException('Namespace name changed');
+			}
+
+			return $this->compareStatementsInNamespace($old->stmts, $new->stmts, $updateTo);
+		} elseif (!$old instanceof Node\Stmt\Namespace_ && !$new instanceof Node\Stmt\Namespace_) {
+			return $this->compareStatementsInNamespace([$old], [$new], $updateTo);
+		}
+
+		throw new \LogicException('Something about a namespace changed');
+	}
+
+	/**
+	 * @param Node\Stmt[] $oldStmts
+	 * @param Node\Stmt[] $newStmts
+	 * @return Node\Stmt[]
+	 */
+	private function compareStatementsInNamespace(array $oldStmts, array $newStmts, string $updateTo): array
+	{
+		if (count($oldStmts) !== 1 || count($newStmts) !== 1) {
+			throw new \LogicException('There is supposed to be one statement in the AST');
+		}
+
+		$old = $oldStmts[0];
+		$new = $newStmts[0];
+
+		if ($old instanceof Node\Stmt\ClassLike && $new instanceof Node\Stmt\ClassLike) {
+			if ($old->namespacedName->toString() !== $new->namespacedName->toString()) {
+				throw new \LogicException('Classname changed');
+			}
+			$new->stmts = array_filter($new->stmts, fn (Node\Stmt $stmt) => $stmt instanceof Node\Stmt\ClassMethod);
+			$oldMethods = [];
+			foreach ($old->stmts as $stmt) {
+				if (!$stmt instanceof Node\Stmt\ClassMethod) {
+					continue;
+				}
+
+				$oldMethods[$stmt->name->toLowerString()] = $stmt;
+			}
+
+			if ($new->stmts !== null) {
+				$newStmtsToSet = [];
+				foreach ($new->stmts as $i => $stmt) {
+					$methodName = $stmt->name->toLowerString();
+					if (!array_key_exists($methodName, $oldMethods)) {
+						$new->stmts[$i]->attrGroups[] = new Node\AttributeGroup([
+							new Node\Attribute(
+								new Node\Name\FullyQualified('Since'),
+								[new Node\Arg(new Node\Scalar\String_($updateTo))],
+							),
+						]);
+						continue;
+					}
+
+					foreach ($this->compareFunctions($oldMethods[$methodName], $stmt, $updateTo) as $functionStmt) {
+						$newStmtsToSet[] = $functionStmt;
+					}
+				}
+
+				// todo has a method been removed?
+
+				$new->stmts = $newStmtsToSet;
+			}
+
+			return [$new];
+		}
+
+		if ($old instanceof Node\Stmt\Function_ && $new instanceof Node\Stmt\Function_) {
+			return $this->compareFunctions($old, $new, $updateTo);
+		}
+
+		throw new \LogicException('Unknown AST node type combination');
+	}
+
+	/**
+	 * @template T of Node\FunctionLike
+	 * @param T $old
+	 * @param T $new
+	 * @return T[]
+	 */
+	private function compareFunctions(Node\FunctionLike $old, Node\FunctionLike $new, string $updateTo): array
+	{
+		if ($this->printType($old->getReturnType()) !== $this->printType($new->getReturnType())) {
+			return $this->functionDiff($old, $new, $updateTo);
+		}
+		if ($old->returnsByRef() !== $new->returnsByRef()) {
+			return $this->functionDiff($old, $new, $updateTo);
+		}
+		if (count($old->getParams()) !== count($new->getParams())) {
+			return $this->functionDiff($old, $new, $updateTo);
+		}
+
+		foreach ($old->getParams() as $i => $oldParam) {
+			$newParam = $new->getParams()[$i];
+			if ($this->printType($oldParam->type) !== $this->printType($newParam->type)) {
+				return $this->functionDiff($old, $new, $updateTo);
+			}
+			if ($oldParam->byRef !== $newParam->byRef) {
+				return $this->functionDiff($old, $new, $updateTo);
+			}
+			if ($oldParam->variadic !== $newParam->variadic) {
+				return $this->functionDiff($old, $new, $updateTo);
+			}
+			assert($oldParam->var instanceof Node\Expr\Variable);
+			assert(is_string($oldParam->var->name));
+			assert($newParam->var instanceof Node\Expr\Variable);
+			assert(is_string($newParam->var->name));
+			if ($oldParam->var->name !== $newParam->var->name) {
+				return $this->functionDiff($old, $new, $updateTo);
+			}
+			if (is_null($oldParam->default) !== is_null($newParam->default)) {
+				return $this->functionDiff($old, $new, $updateTo);
+			}
+			if ($oldParam->default !== null && $newParam->default !== null) {
+				if ($this->printer->prettyPrintExpr($oldParam->default) !== $this->printer->prettyPrintExpr($newParam->default)) {
+					return $this->functionDiff($old, $new, $updateTo);
+				}
+			}
+			if ($oldParam->flags !== $newParam->flags) {
+				return $this->functionDiff($old, $new, $updateTo);
+			}
+		}
+
+		if ($old instanceof Node\Stmt\ClassMethod && $new instanceof Node\Stmt\ClassMethod) {
+			if ($old->flags !== $new->flags) {
+				return $this->functionDiff($old, $new, $updateTo);
+			}
+		}
+
+		return [$new];
+	}
+
+	/**
+	 * @template T of Node\FunctionLike
+	 * @param T $old
+	 * @param T $new
+	 * @return T[]
+	 */
+	private function functionDiff(Node\FunctionLike $old, Node\FunctionLike $new, string $updateTo): array
+	{
+		$args = [new Node\Arg(new Node\Scalar\String_($updateTo))];
+		$old = clone $old;
+
+		// @phpstan-ignore-next-line
+		$old->attrGroups[] = new Node\AttributeGroup([
+			new Node\Attribute(
+				new Node\Name\FullyQualified('Until'),
+				$args,
+			),
+		]);
+		$new = clone $new;
+
+		// @phpstan-ignore-next-line
+		$new->attrGroups[] = new Node\AttributeGroup([
+			new Node\Attribute(
+				new Node\Name\FullyQualified('Since'),
+				$args,
+			),
+		]);
+		return [$old, $new];
+	}
+
+	/**
+	 * @param Node\Identifier|Node\Name|Node\ComplexType|null $type
+	 */
+	private function printType($type): ?string
+	{
+		if ($type === null) {
+			return null;
+		}
+
+		if ($type instanceof Node\NullableType) {
+			return '?' . $this->printType($type->type);
+		}
+
+		if ($type instanceof Node\UnionType) {
+			return implode('|', array_map(function ($innerType): string {
+				$printedType = $this->printType($innerType);
+				if ($printedType === null) {
+					throw new \LogicException();
+				}
+
+				return $printedType;
+			}, $type->types));
+		}
+
+		if ($type instanceof Node\IntersectionType) {
+			return implode('&', array_map(function ($innerType): string {
+				$printedType = $this->printType($innerType);
+				if ($printedType === null) {
+					throw new \LogicException();
+				}
+
+				return $printedType;
+			}, $type->types));
+		}
+
+		if ($type instanceof Node\Identifier || $type instanceof Node\Name) {
+			return $type->toString();
+		}
+
+		throw new \LogicException();
 	}
 
 	private function filterClassPhpDocs(Node\Stmt\ClassLike $class): Node\Stmt\ClassLike
