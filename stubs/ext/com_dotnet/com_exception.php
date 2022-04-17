@@ -1,6 +1,5 @@
 <?php 
 
-#endif
-final class com_exception extends \exception
+final class com_exception extends \Exception
 {
 }

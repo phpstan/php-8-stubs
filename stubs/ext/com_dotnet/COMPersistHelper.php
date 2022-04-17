@@ -1,6 +1,6 @@
 <?php 
 
-/** @generate-function-entries */
+/** @generate-class-entries */
 final class COMPersistHelper
 {
     public function __construct(?variant $variant = null)

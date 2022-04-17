@@ -1,6 +1,7 @@
 <?php 
 
-class ReflectionAttribute
+/** @not-serializable */
+class ReflectionAttribute implements \Reflector
 {
     public function getName() : string
     {

@@ -7,31 +7,73 @@ class RecursiveTreeIterator extends \RecursiveIteratorIterator
     {
     }
     /** @return mixed */
+    #[\Until('8.1')]
     public function key()
     {
     }
+    /** @tentative-return-type */
+    #[\Since('8.1')]
+    public function key() : mixed
+    {
+    }
     /** @return mixed */
+    #[\Until('8.1')]
     public function current()
     {
     }
+    /** @tentative-return-type */
+    #[\Since('8.1')]
+    public function current() : mixed
+    {
+    }
     /** @return string */
+    #[\Until('8.1')]
     public function getPrefix()
     {
     }
+    /** @tentative-return-type */
+    #[\Since('8.1')]
+    public function getPrefix() : string
+    {
+    }
     /** @return void */
+    #[\Until('8.1')]
     public function setPostfix(string $postfix)
     {
     }
+    /** @tentative-return-type */
+    #[\Since('8.1')]
+    public function setPostfix(string $postfix) : void
+    {
+    }
     /** @return void */
+    #[\Until('8.1')]
     public function setPrefixPart(int $part, string $value)
     {
     }
-    /** @return string */
-    public function getEntry()
+    /** @tentative-return-type */
+    #[\Since('8.1')]
+    public function setPrefixPart(int $part, string $value) : void
     {
     }
     /** @return string */
+    #[\Until('8.1')]
+    public function getEntry()
+    {
+    }
+    /** @tentative-return-type */
+    #[\Since('8.1')]
+    public function getEntry() : string
+    {
+    }
+    /** @return string */
+    #[\Until('8.1')]
     public function getPostfix()
+    {
+    }
+    /** @tentative-return-type */
+    #[\Since('8.1')]
+    public function getPostfix() : string
     {
     }
 }

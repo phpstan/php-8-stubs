@@ -1,7 +1,7 @@
 <?php 
 
 /**
- * @param resource $connection
+ * @param PgSql\Connection $connection
  * @param string|int $oid
  * @alias pg_lo_create
  * @deprecated

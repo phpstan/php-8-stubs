@@ -6,7 +6,13 @@ class DOMDocumentFragment extends \DOMNode implements \DOMParentNode
     {
     }
     /** @return bool */
+    #[\Until('8.1')]
     public function appendXML(string $data)
+    {
+    }
+    /** @tentative-return-type */
+    #[\Since('8.1')]
+    public function appendXML(string $data) : bool
     {
     }
     /** @param DOMNode|string $nodes */

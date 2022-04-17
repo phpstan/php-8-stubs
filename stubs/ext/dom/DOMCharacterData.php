@@ -3,7 +3,13 @@
 class DOMCharacterData extends \DOMNode implements \DOMChildNode
 {
     /** @return bool */
+    #[\Until('8.1')]
     public function appendData(string $data)
+    {
+    }
+    /** @tentative-return-type */
+    #[\Since('8.1')]
+    public function appendData(string $data) : bool
     {
     }
     /** @return string|false */
@@ -11,15 +17,33 @@ class DOMCharacterData extends \DOMNode implements \DOMChildNode
     {
     }
     /** @return bool */
+    #[\Until('8.1')]
     public function insertData(int $offset, string $data)
     {
     }
-    /** @return bool */
-    public function deleteData(int $offset, int $count)
+    /** @tentative-return-type */
+    #[\Since('8.1')]
+    public function insertData(int $offset, string $data) : bool
     {
     }
     /** @return bool */
+    #[\Until('8.1')]
+    public function deleteData(int $offset, int $count)
+    {
+    }
+    /** @tentative-return-type */
+    #[\Since('8.1')]
+    public function deleteData(int $offset, int $count) : bool
+    {
+    }
+    /** @return bool */
+    #[\Until('8.1')]
     public function replaceData(int $offset, int $count, string $data)
+    {
+    }
+    /** @tentative-return-type */
+    #[\Since('8.1')]
+    public function replaceData(int $offset, int $count, string $data) : bool
     {
     }
     /** @param DOMNode|string $nodes */

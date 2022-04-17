@@ -1,5 +1,6 @@
 <?php 
 
+/** @not-serializable */
 final class ReflectionReference
 {
     public static function fromArrayElement(array $array, int|string $key) : ?ReflectionReference

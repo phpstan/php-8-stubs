@@ -1,5 +1,6 @@
 <?php 
 
+/** @not-serializable */
 final class FFI
 {
     public static function cdef(string $code = "", ?string $lib = null) : FFI

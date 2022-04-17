@@ -6,18 +6,39 @@ class RecursiveRegexIterator extends \RegexIterator implements \RecursiveIterato
     {
     }
     /** @return bool */
+    #[\Until('8.1')]
     public function accept()
+    {
+    }
+    /** @tentative-return-type */
+    #[\Since('8.1')]
+    public function accept() : bool
     {
     }
     /**
      * @return bool
      * @implementation-alias RecursiveFilterIterator::hasChildren
      */
+    #[\Until('8.1')]
     public function hasChildren()
     {
     }
+    /**
+     * @tentative-return-type
+     * @implementation-alias RecursiveFilterIterator::hasChildren
+     */
+    #[\Since('8.1')]
+    public function hasChildren() : bool
+    {
+    }
     /** @return RecursiveRegexIterator */
+    #[\Until('8.1')]
     public function getChildren()
+    {
+    }
+    /** @tentative-return-type */
+    #[\Since('8.1')]
+    public function getChildren() : RecursiveRegexIterator
     {
     }
 }

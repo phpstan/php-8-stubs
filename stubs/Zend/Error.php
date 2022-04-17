@@ -3,7 +3,13 @@
 class Error implements \Throwable
 {
     /** @implementation-alias Exception::__clone */
+    #[\Until('8.1')]
     private final function __clone() : void
+    {
+    }
+    /** @implementation-alias Exception::__clone */
+    #[\Since('8.1')]
+    private function __clone() : void
     {
     }
     /** @implementation-alias Exception::__construct */
@@ -14,7 +20,16 @@ class Error implements \Throwable
      * @return void
      * @implementation-alias Exception::__wakeup
      */
+    #[\Until('8.1')]
     public function __wakeup()
+    {
+    }
+    /**
+     * @tentative-return-type
+     * @implementation-alias Exception::__wakeup
+     */
+    #[\Since('8.1')]
+    public function __wakeup() : void
     {
     }
     /** @implementation-alias Exception::getMessage */

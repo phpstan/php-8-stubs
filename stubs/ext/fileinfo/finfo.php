@@ -1,6 +1,7 @@
 <?php 
 
-/** @generate-function-entries */
+/** @generate-class-entries */
+/** @not-serializable */
 class finfo
 {
     /** @alias finfo_open */
@@ -12,7 +13,17 @@ class finfo
      * @return string|false
      * @alias finfo_file
      */
+    #[\Until('8.1')]
     public function file(string $filename, int $flags = FILEINFO_NONE, $context = null)
+    {
+    }
+    /**
+     * @param resource|null $context
+     * @tentative-return-type
+     * @alias finfo_file
+     */
+    #[\Since('8.1')]
+    public function file(string $filename, int $flags = FILEINFO_NONE, $context = null) : string|false
     {
     }
     /**
@@ -20,7 +31,17 @@ class finfo
      * @return string|false
      * @alias finfo_buffer
      */
+    #[\Until('8.1')]
     public function buffer(string $string, int $flags = FILEINFO_NONE, $context = null)
+    {
+    }
+    /**
+     * @param resource|null $context
+     * @tentative-return-type
+     * @alias finfo_buffer
+     */
+    #[\Since('8.1')]
+    public function buffer(string $string, int $flags = FILEINFO_NONE, $context = null) : string|false
     {
     }
     /**

@@ -5,6 +5,7 @@
  * @param string $error_message
  * @param resource|null $context
  * @return resource|false
+ * @refcount 1
  */
 function stream_socket_server(string $address, &$error_code = null, &$error_message = null, int $flags = STREAM_SERVER_BIND | STREAM_SERVER_LISTEN, $context = null)
 {

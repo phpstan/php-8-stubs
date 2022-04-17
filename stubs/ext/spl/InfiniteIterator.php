@@ -6,7 +6,13 @@ class InfiniteIterator extends \IteratorIterator
     {
     }
     /** @return void */
+    #[\Until('8.1')]
     public function next()
+    {
+    }
+    /** @tentative-return-type */
+    #[\Since('8.1')]
+    public function next() : void
     {
     }
 }

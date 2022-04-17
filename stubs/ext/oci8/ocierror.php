@@ -2,6 +2,7 @@
 
 /**
  * @param resource|null $connection_or_statement
+ * @return array<string, int|string>|false
  * @alias oci_error
  * @deprecated
  */

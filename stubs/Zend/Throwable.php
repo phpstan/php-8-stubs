@@ -1,6 +1,6 @@
 <?php 
 
-/** @generate-function-entries */
+/** @generate-class-entries */
 interface Throwable extends \Stringable
 {
     public function getMessage() : string;

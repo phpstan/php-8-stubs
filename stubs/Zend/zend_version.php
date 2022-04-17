@@ -1,6 +1,6 @@
 <?php 
 
-/** @generate-function-entries */
+/** @refcount 1 */
 function zend_version() : string
 {
 }

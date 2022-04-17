@@ -6,19 +6,43 @@ class RecursiveDirectoryIterator extends \FilesystemIterator implements \Recursi
     {
     }
     /** @return bool */
+    #[\Until('8.1')]
     public function hasChildren(bool $allowLinks = false)
     {
     }
+    /** @tentative-return-type */
+    #[\Since('8.1')]
+    public function hasChildren(bool $allowLinks = false) : bool
+    {
+    }
     /** @return RecursiveDirectoryIterator */
+    #[\Until('8.1')]
     public function getChildren()
     {
     }
-    /** @return string */
-    public function getSubPath()
+    /** @tentative-return-type */
+    #[\Since('8.1')]
+    public function getChildren() : RecursiveDirectoryIterator
     {
     }
     /** @return string */
+    #[\Until('8.1')]
+    public function getSubPath()
+    {
+    }
+    /** @tentative-return-type */
+    #[\Since('8.1')]
+    public function getSubPath() : string
+    {
+    }
+    /** @return string */
+    #[\Until('8.1')]
     public function getSubPathname()
+    {
+    }
+    /** @tentative-return-type */
+    #[\Since('8.1')]
+    public function getSubPathname() : string
     {
     }
 }
