@@ -10,6 +10,7 @@ class NumberFormatter
     /**
      * @tentative-return-type
      * @alias numfmt_create
+     * @return (NumberFormatter | null)
      */
     public static function create(string $locale, int $style, ?string $pattern = null)
     {
@@ -17,6 +18,7 @@ class NumberFormatter
     /**
      * @tentative-return-type
      * @alias numfmt_format
+     * @return (string | false)
      */
     public function format(int|float $num, int $type = NumberFormatter::TYPE_DEFAULT)
     {
@@ -25,6 +27,7 @@ class NumberFormatter
      * @param int $offset
      * @tentative-return-type
      * @alias numfmt_parse
+     * @return (int | float | false)
      */
     public function parse(string $string, int $type = NumberFormatter::TYPE_DOUBLE, &$offset = null)
     {
@@ -32,6 +35,7 @@ class NumberFormatter
     /**
      * @tentative-return-type
      * @alias numfmt_format_currency
+     * @return (string | false)
      */
     public function formatCurrency(float $amount, string $currency)
     {
@@ -41,6 +45,7 @@ class NumberFormatter
      * @param int $offset
      * @tentative-return-type
      * @alias numfmt_parse_currency
+     * @return (float | false)
      */
     public function parseCurrency(string $string, &$currency, &$offset = null)
     {
@@ -48,6 +53,7 @@ class NumberFormatter
     /**
      * @tentative-return-type
      * @alias numfmt_set_attribute
+     * @return bool
      */
     public function setAttribute(int $attribute, int|float $value)
     {
@@ -55,6 +61,7 @@ class NumberFormatter
     /**
      * @tentative-return-type
      * @alias numfmt_get_attribute
+     * @return (int | float | false)
      */
     public function getAttribute(int $attribute)
     {
@@ -62,6 +69,7 @@ class NumberFormatter
     /**
      * @tentative-return-type
      * @alias numfmt_set_text_attribute
+     * @return bool
      */
     public function setTextAttribute(int $attribute, string $value)
     {
@@ -69,6 +77,7 @@ class NumberFormatter
     /**
      * @tentative-return-type
      * @alias numfmt_get_text_attribute
+     * @return (string | false)
      */
     public function getTextAttribute(int $attribute)
     {
@@ -76,6 +85,7 @@ class NumberFormatter
     /**
      * @tentative-return-type
      * @alias numfmt_set_symbol
+     * @return bool
      */
     public function setSymbol(int $symbol, string $value)
     {
@@ -83,6 +93,7 @@ class NumberFormatter
     /**
      * @tentative-return-type
      * @alias numfmt_get_symbol
+     * @return (string | false)
      */
     public function getSymbol(int $symbol)
     {
@@ -90,6 +101,7 @@ class NumberFormatter
     /**
      * @tentative-return-type
      * @alias numfmt_set_pattern
+     * @return bool
      */
     public function setPattern(string $pattern)
     {
@@ -97,6 +109,7 @@ class NumberFormatter
     /**
      * @tentative-return-type
      * @alias numfmt_get_pattern
+     * @return (string | false)
      */
     public function getPattern()
     {
@@ -104,6 +117,7 @@ class NumberFormatter
     /**
      * @tentative-return-type
      * @alias numfmt_get_locale
+     * @return (string | false)
      */
     public function getLocale(int $type = ULOC_ACTUAL_LOCALE)
     {
@@ -111,6 +125,7 @@ class NumberFormatter
     /**
      * @tentative-return-type
      * @alias numfmt_get_error_code
+     * @return int
      */
     public function getErrorCode()
     {
@@ -118,6 +133,7 @@ class NumberFormatter
     /**
      * @tentative-return-type
      * @alias numfmt_get_error_message
+     * @return string
      */
     public function getErrorMessage()
     {

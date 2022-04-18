@@ -13,7 +13,10 @@ class Exception implements \Throwable
     public function __construct(string $message = "", int $code = 0, ?Throwable $previous = null)
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return void
+     */
     public function __wakeup()
     {
     }

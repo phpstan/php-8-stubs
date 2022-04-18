@@ -8,59 +8,101 @@ class ReflectionMethod extends \ReflectionFunctionAbstract
     public function __toString() : string
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function isPublic()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function isPrivate()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function isProtected()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function isAbstract()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function isFinal()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function isConstructor()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function isDestructor()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return Closure
+     */
     public function getClosure(?object $object = null)
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return int
+     */
     public function getModifiers()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return mixed
+     */
     public function invoke(?object $object, mixed ...$args)
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return mixed
+     */
     public function invokeArgs(?object $object, array $args)
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return ReflectionClass
+     */
     public function getDeclaringClass()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return ReflectionMethod
+     */
     public function getPrototype()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return void
+     */
     public function setAccessible(bool $accessible)
     {
     }

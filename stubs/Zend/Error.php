@@ -19,6 +19,7 @@ class Error implements \Throwable
     /**
      * @tentative-return-type
      * @implementation-alias Exception::__wakeup
+     * @return void
      */
     public function __wakeup()
     {

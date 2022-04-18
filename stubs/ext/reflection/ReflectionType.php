@@ -13,7 +13,10 @@ abstract class ReflectionType implements \Stringable
     private function __clone() : void
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function allowsNull()
     {
     }

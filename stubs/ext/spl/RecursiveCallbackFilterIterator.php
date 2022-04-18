@@ -8,11 +8,15 @@ class RecursiveCallbackFilterIterator extends \CallbackFilterIterator implements
     /**
      * @tentative-return-type
      * @implementation-alias RecursiveFilterIterator::hasChildren
+     * @return bool
      */
     public function hasChildren()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return RecursiveCallbackFilterIterator
+     */
     public function getChildren()
     {
     }

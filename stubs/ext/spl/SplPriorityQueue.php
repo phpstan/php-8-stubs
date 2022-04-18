@@ -3,7 +3,10 @@
 /** @generate-class-entries */
 class SplPriorityQueue implements \Iterator, \Countable
 {
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return int
+     */
     public function compare(mixed $priority1, mixed $priority2)
     {
     }
@@ -12,21 +15,31 @@ class SplPriorityQueue implements \Iterator, \Countable
     {
     }
     // TODO make return type void
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return int
+     */
     public function setExtractFlags(int $flags)
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return mixed
+     */
     public function top()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return mixed
+     */
     public function extract()
     {
     }
     /**
      * @tentative-return-type
      * @implementation-alias SplHeap::count
+     * @return int
      */
     public function count()
     {
@@ -34,6 +47,7 @@ class SplPriorityQueue implements \Iterator, \Countable
     /**
      * @tentative-return-type
      * @implementation-alias SplHeap::isEmpty
+     * @return bool
      */
     public function isEmpty()
     {
@@ -41,17 +55,22 @@ class SplPriorityQueue implements \Iterator, \Countable
     /**
      * @tentative-return-type
      * @implementation-alias SplHeap::rewind
+     * @return void
      */
     public function rewind()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return mixed
+     */
     public function current()
     {
     }
     /**
      * @tentative-return-type
      * @implementation-alias SplHeap::key
+     * @return int
      */
     public function key()
     {
@@ -59,6 +78,7 @@ class SplPriorityQueue implements \Iterator, \Countable
     /**
      * @tentative-return-type
      * @implementation-alias SplHeap::next
+     * @return void
      */
     public function next()
     {
@@ -66,6 +86,7 @@ class SplPriorityQueue implements \Iterator, \Countable
     /**
      * @tentative-return-type
      * @implementation-alias SplHeap::valid
+     * @return bool
      */
     public function valid()
     {
@@ -81,15 +102,22 @@ class SplPriorityQueue implements \Iterator, \Countable
     /**
      * @tentative-return-type
      * @implementation-alias SplHeap::isCorrupted
+     * @return bool
      */
     public function isCorrupted()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return int
+     */
     public function getExtractFlags()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return array
+     */
     public function __debugInfo()
     {
     }

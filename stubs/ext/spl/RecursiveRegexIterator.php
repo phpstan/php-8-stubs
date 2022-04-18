@@ -5,18 +5,25 @@ class RecursiveRegexIterator extends \RegexIterator implements \RecursiveIterato
     public function __construct(RecursiveIterator $iterator, string $pattern, int $mode = RecursiveRegexIterator::MATCH, int $flags = 0, int $pregFlags = 0)
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function accept()
     {
     }
     /**
      * @tentative-return-type
      * @implementation-alias RecursiveFilterIterator::hasChildren
+     * @return bool
      */
     public function hasChildren()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return RecursiveRegexIterator
+     */
     public function getChildren()
     {
     }

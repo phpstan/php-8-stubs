@@ -3,6 +3,9 @@
 /** @generate-class-entries */
 interface SplObserver
 {
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return void
+     */
     public function update(SplSubject $subject);
 }

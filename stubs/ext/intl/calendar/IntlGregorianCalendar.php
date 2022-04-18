@@ -16,6 +16,7 @@ class IntlGregorianCalendar extends \IntlCalendar
     /**
      * @tentative-return-type
      * @alias intlgregcal_set_gregorian_change
+     * @return bool
      */
     public function setGregorianChange(float $timestamp)
     {
@@ -23,6 +24,7 @@ class IntlGregorianCalendar extends \IntlCalendar
     /**
      * @tentative-return-type
      * @alias intlgregcal_get_gregorian_change
+     * @return float
      */
     public function getGregorianChange()
     {
@@ -30,6 +32,7 @@ class IntlGregorianCalendar extends \IntlCalendar
     /**
      * @tentative-return-type
      * @alias intlgregcal_is_leap_year
+     * @return bool
      */
     public function isLeapYear(int $year)
     {

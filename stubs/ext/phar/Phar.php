@@ -8,27 +8,45 @@ class Phar extends \RecursiveDirectoryIterator implements \Countable, \ArrayAcce
     public function __destruct()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return void
+     */
     public function addEmptyDir(string $directory)
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return void
+     */
     public function addFile(string $filename, ?string $localName = null)
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return void
+     */
     public function addFromString(string $localName, string $contents)
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return (array | false)
+     */
     public function buildFromDirectory(string $directory, string $pattern = "")
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return (array | false)
+     */
     public function buildFromIterator(Traversable $iterator, ?string $baseDirectory = null)
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return void
+     */
     public function compressFiles(int $compression)
     {
     }
@@ -37,19 +55,31 @@ class Phar extends \RecursiveDirectoryIterator implements \Countable, \ArrayAcce
     {
     }
     // TODO make return type void
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return (Phar | null)
+     */
     public function compress(int $compression, ?string $extension = null)
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return (Phar | null)
+     */
     public function decompress(?string $extension = null)
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return (Phar | null)
+     */
     public function convertToExecutable(?int $format = null, ?int $compression = null, ?string $extension = null)
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return (PharData | null)
+     */
     public function convertToData(?int $format = null, ?int $compression = null, ?string $extension = null)
     {
     }
@@ -58,7 +88,10 @@ class Phar extends \RecursiveDirectoryIterator implements \Countable, \ArrayAcce
     {
     }
     // TODO make return type void
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return int
+     */
     public function count(int $mode = COUNT_NORMAL)
     {
     }
@@ -72,61 +105,101 @@ class Phar extends \RecursiveDirectoryIterator implements \Countable, \ArrayAcce
     {
     }
     // TODO make return type void
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function extractTo(string $directory, array|string|null $files = null, bool $overwrite = false)
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return (string | null)
+     */
     public function getAlias()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return string
+     */
     public function getPath()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return mixed
+     */
     public function getMetadata(array $unserializeOptions = [])
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function getModified()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return (array | false)
+     */
     public function getSignature()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return string
+     */
     public function getStub()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return string
+     */
     public function getVersion()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function hasMetadata()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function isBuffering()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return (int | false)
+     */
     public function isCompressed()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function isFileFormat(int $format)
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function isWritable()
     {
     }
     /**
      * @param string $localName
      * @tentative-return-type
+     * @return bool
      */
     public function offsetExists($localName)
     {
@@ -134,14 +207,16 @@ class Phar extends \RecursiveDirectoryIterator implements \Countable, \ArrayAcce
     /**
      * @param string $localName
      * @tentative-return-type
+     * @return PharFileInfo
      */
     public function offsetGet($localName)
     {
     }
     /**
      * @param string $localName
-     * @param resource|string $value
+     * @param (resource | string) $value
      * @tentative-return-type
+     * @return void
      */
     public function offsetSet($localName, $value)
     {
@@ -149,23 +224,36 @@ class Phar extends \RecursiveDirectoryIterator implements \Countable, \ArrayAcce
     /**
      * @param string $localName
      * @tentative-return-type
+     * @return bool
      */
     public function offsetUnset($localName)
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function setAlias(string $alias)
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function setDefaultStub(?string $index = null, ?string $webIndex = null)
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return void
+     */
     public function setMetadata(mixed $metadata)
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return void
+     */
     public function setSignatureAlgorithm(int $algo, ?string $privateKey = null)
     {
     }
@@ -177,11 +265,17 @@ class Phar extends \RecursiveDirectoryIterator implements \Countable, \ArrayAcce
     {
     }
     // TODO make return type void
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return void
+     */
     public function startBuffering()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return void
+     */
     public function stopBuffering()
     {
     }

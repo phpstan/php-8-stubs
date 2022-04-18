@@ -6,6 +6,7 @@ class Directory
     /**
      * @tentative-return-type
      * @implementation-alias closedir
+     * @return void
      */
     public function close()
     {
@@ -13,6 +14,7 @@ class Directory
     /**
      * @tentative-return-type
      * @implementation-alias rewinddir
+     * @return void
      */
     public function rewind()
     {
@@ -20,6 +22,7 @@ class Directory
     /**
      * @tentative-return-type
      * @implementation-alias readdir
+     * @return (string | false)
      */
     public function read()
     {

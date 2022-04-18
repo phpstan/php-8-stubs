@@ -2,6 +2,9 @@
 
 interface IteratorAggregate extends \Traversable
 {
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return Traversable
+     */
     public function getIterator();
 }

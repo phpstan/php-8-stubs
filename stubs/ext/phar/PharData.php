@@ -16,6 +16,7 @@ class PharData extends \RecursiveDirectoryIterator implements \Countable, \Array
     /**
      * @tentative-return-type
      * @implementation-alias Phar::addEmptyDir
+     * @return void
      */
     public function addEmptyDir(string $directory)
     {
@@ -23,6 +24,7 @@ class PharData extends \RecursiveDirectoryIterator implements \Countable, \Array
     /**
      * @tentative-return-type
      * @implementation-alias Phar::addFile
+     * @return void
      */
     public function addFile(string $filename, ?string $localName = null)
     {
@@ -30,6 +32,7 @@ class PharData extends \RecursiveDirectoryIterator implements \Countable, \Array
     /**
      * @tentative-return-type
      * @implementation-alias Phar::addFromString
+     * @return void
      */
     public function addFromString(string $localName, string $contents)
     {
@@ -37,6 +40,7 @@ class PharData extends \RecursiveDirectoryIterator implements \Countable, \Array
     /**
      * @tentative-return-type
      * @implementation-alias Phar::buildFromDirectory
+     * @return (array | false)
      */
     public function buildFromDirectory(string $directory, string $pattern = "")
     {
@@ -44,6 +48,7 @@ class PharData extends \RecursiveDirectoryIterator implements \Countable, \Array
     /**
      * @tentative-return-type
      * @implementation-alias Phar::buildFromIterator
+     * @return (array | false)
      */
     public function buildFromIterator(Traversable $iterator, ?string $baseDirectory = null)
     {
@@ -51,6 +56,7 @@ class PharData extends \RecursiveDirectoryIterator implements \Countable, \Array
     /**
      * @tentative-return-type
      * @implementation-alias Phar::compressFiles
+     * @return void
      */
     public function compressFiles(int $compression)
     {
@@ -67,6 +73,7 @@ class PharData extends \RecursiveDirectoryIterator implements \Countable, \Array
      * @tentative-return-type
      * @implementation-alias Phar::compress
      * @no-verify
+     * @return (PharData | null)
      */
     public function compress(int $compression, ?string $extension = null)
     {
@@ -75,6 +82,7 @@ class PharData extends \RecursiveDirectoryIterator implements \Countable, \Array
      * @tentative-return-type
      * @implementation-alias Phar::decompress
      * @no-verify
+     * @return (PharData | null)
      */
     public function decompress(?string $extension = null)
     {
@@ -82,6 +90,7 @@ class PharData extends \RecursiveDirectoryIterator implements \Countable, \Array
     /**
      * @tentative-return-type
      * @implementation-alias Phar::convertToExecutable
+     * @return (Phar | null)
      */
     public function convertToExecutable(?int $format = null, ?int $compression = null, ?string $extension = null)
     {
@@ -89,6 +98,7 @@ class PharData extends \RecursiveDirectoryIterator implements \Countable, \Array
     /**
      * @tentative-return-type
      * @implementation-alias Phar::convertToData
+     * @return (PharData | null)
      */
     public function convertToData(?int $format = null, ?int $compression = null, ?string $extension = null)
     {
@@ -104,6 +114,7 @@ class PharData extends \RecursiveDirectoryIterator implements \Countable, \Array
     /**
      * @tentative-return-type
      * @implementation-alias Phar::count
+     * @return int
      */
     public function count(int $mode = COUNT_NORMAL)
     {
@@ -127,6 +138,7 @@ class PharData extends \RecursiveDirectoryIterator implements \Countable, \Array
     /**
      * @tentative-return-type
      * @implementation-alias Phar::extractTo
+     * @return bool
      */
     public function extractTo(string $directory, array|string|null $files = null, bool $overwrite = false)
     {
@@ -134,6 +146,7 @@ class PharData extends \RecursiveDirectoryIterator implements \Countable, \Array
     /**
      * @tentative-return-type
      * @implementation-alias Phar::getAlias
+     * @return (string | null)
      */
     public function getAlias()
     {
@@ -141,6 +154,7 @@ class PharData extends \RecursiveDirectoryIterator implements \Countable, \Array
     /**
      * @tentative-return-type
      * @implementation-alias Phar::getPath
+     * @return string
      */
     public function getPath()
     {
@@ -148,6 +162,7 @@ class PharData extends \RecursiveDirectoryIterator implements \Countable, \Array
     /**
      * @tentative-return-type
      * @implementation-alias Phar::getMetadata
+     * @return mixed
      */
     public function getMetadata(array $unserializeOptions = [])
     {
@@ -155,6 +170,7 @@ class PharData extends \RecursiveDirectoryIterator implements \Countable, \Array
     /**
      * @tentative-return-type
      * @implementation-alias Phar::getModified
+     * @return bool
      */
     public function getModified()
     {
@@ -162,6 +178,7 @@ class PharData extends \RecursiveDirectoryIterator implements \Countable, \Array
     /**
      * @tentative-return-type
      * @implementation-alias Phar::getSignature
+     * @return (array | false)
      */
     public function getSignature()
     {
@@ -169,6 +186,7 @@ class PharData extends \RecursiveDirectoryIterator implements \Countable, \Array
     /**
      * @tentative-return-type
      * @implementation-alias Phar::getStub
+     * @return string
      */
     public function getStub()
     {
@@ -176,6 +194,7 @@ class PharData extends \RecursiveDirectoryIterator implements \Countable, \Array
     /**
      * @tentative-return-type
      * @implementation-alias Phar::getVersion
+     * @return string
      */
     public function getVersion()
     {
@@ -183,6 +202,7 @@ class PharData extends \RecursiveDirectoryIterator implements \Countable, \Array
     /**
      * @tentative-return-type
      * @implementation-alias Phar::hasMetadata
+     * @return bool
      */
     public function hasMetadata()
     {
@@ -190,6 +210,7 @@ class PharData extends \RecursiveDirectoryIterator implements \Countable, \Array
     /**
      * @tentative-return-type
      * @implementation-alias Phar::isBuffering
+     * @return bool
      */
     public function isBuffering()
     {
@@ -197,6 +218,7 @@ class PharData extends \RecursiveDirectoryIterator implements \Countable, \Array
     /**
      * @tentative-return-type
      * @implementation-alias Phar::isCompressed
+     * @return (int | false)
      */
     public function isCompressed()
     {
@@ -204,6 +226,7 @@ class PharData extends \RecursiveDirectoryIterator implements \Countable, \Array
     /**
      * @tentative-return-type
      * @implementation-alias Phar::isFileFormat
+     * @return bool
      */
     public function isFileFormat(int $format)
     {
@@ -211,6 +234,7 @@ class PharData extends \RecursiveDirectoryIterator implements \Countable, \Array
     /**
      * @tentative-return-type
      * @implementation-alias Phar::isWritable
+     * @return bool
      */
     public function isWritable()
     {
@@ -219,6 +243,7 @@ class PharData extends \RecursiveDirectoryIterator implements \Countable, \Array
      * @param string $localName
      * @tentative-return-type
      * @implementation-alias Phar::offsetExists
+     * @return bool
      */
     public function offsetExists($localName)
     {
@@ -227,15 +252,17 @@ class PharData extends \RecursiveDirectoryIterator implements \Countable, \Array
      * @param string $localName
      * @tentative-return-type
      * @implementation-alias Phar::offsetGet
+     * @return PharFileInfo
      */
     public function offsetGet($localName)
     {
     }
     /**
      * @param string $localName
-     * @param resource|string $value
+     * @param (resource | string) $value
      * @tentative-return-type
      * @implementation-alias Phar::offsetSet
+     * @return void
      */
     public function offsetSet($localName, $value)
     {
@@ -244,6 +271,7 @@ class PharData extends \RecursiveDirectoryIterator implements \Countable, \Array
      * @param string $localName
      * @tentative-return-type
      * @implementation-alias Phar::offsetUnset
+     * @return bool
      */
     public function offsetUnset($localName)
     {
@@ -251,6 +279,7 @@ class PharData extends \RecursiveDirectoryIterator implements \Countable, \Array
     /**
      * @tentative-return-type
      * @implementation-alias Phar::setAlias
+     * @return bool
      */
     public function setAlias(string $alias)
     {
@@ -258,6 +287,7 @@ class PharData extends \RecursiveDirectoryIterator implements \Countable, \Array
     /**
      * @tentative-return-type
      * @implementation-alias Phar::setDefaultStub
+     * @return bool
      */
     public function setDefaultStub(?string $index = null, ?string $webIndex = null)
     {
@@ -265,6 +295,7 @@ class PharData extends \RecursiveDirectoryIterator implements \Countable, \Array
     /**
      * @tentative-return-type
      * @implementation-alias Phar::setMetadata
+     * @return void
      */
     public function setMetadata(mixed $metadata)
     {
@@ -272,6 +303,7 @@ class PharData extends \RecursiveDirectoryIterator implements \Countable, \Array
     /**
      * @tentative-return-type
      * @implementation-alias Phar::setSignatureAlgorithm
+     * @return void
      */
     public function setSignatureAlgorithm(int $algo, ?string $privateKey = null)
     {
@@ -288,6 +320,7 @@ class PharData extends \RecursiveDirectoryIterator implements \Countable, \Array
     /**
      * @tentative-return-type
      * @implementation-alias Phar::startBuffering
+     * @return void
      */
     public function startBuffering()
     {
@@ -295,6 +328,7 @@ class PharData extends \RecursiveDirectoryIterator implements \Countable, \Array
     /**
      * @tentative-return-type
      * @implementation-alias Phar::stopBuffering
+     * @return void
      */
     public function stopBuffering()
     {

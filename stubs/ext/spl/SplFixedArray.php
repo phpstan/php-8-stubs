@@ -6,23 +6,38 @@ class SplFixedArray implements \IteratorAggregate, \ArrayAccess, \Countable, \Js
     public function __construct(int $size = 0)
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return void
+     */
     public function __wakeup()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return int
+     */
     public function count()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return array
+     */
     public function toArray()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return SplFixedArray
+     */
     public static function fromArray(array $array, bool $preserveKeys = true)
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return int
+     */
     public function getSize()
     {
     }
@@ -34,6 +49,7 @@ class SplFixedArray implements \IteratorAggregate, \ArrayAccess, \Countable, \Js
     /**
      * @param int $index
      * @tentative-return-type
+     * @return bool
      */
     public function offsetExists($index)
     {
@@ -41,6 +57,7 @@ class SplFixedArray implements \IteratorAggregate, \ArrayAccess, \Countable, \Js
     /**
      * @param int $index
      * @tentative-return-type
+     * @return mixed
      */
     public function offsetGet($index)
     {
@@ -48,6 +65,7 @@ class SplFixedArray implements \IteratorAggregate, \ArrayAccess, \Countable, \Js
     /**
      * @param int $index
      * @tentative-return-type
+     * @return void
      */
     public function offsetSet($index, mixed $value)
     {
@@ -55,6 +73,7 @@ class SplFixedArray implements \IteratorAggregate, \ArrayAccess, \Countable, \Js
     /**
      * @param int $index
      * @tentative-return-type
+     * @return void
      */
     public function offsetUnset($index)
     {

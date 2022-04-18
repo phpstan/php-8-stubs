@@ -8,6 +8,7 @@ class DateTimeZone
     /**
      * @tentative-return-type
      * @alias timezone_name_get
+     * @return string
      */
     public function getName()
     {
@@ -15,6 +16,7 @@ class DateTimeZone
     /**
      * @tentative-return-type
      * @alias timezone_offset_get
+     * @return int
      */
     public function getOffset(DateTimeInterface $datetime)
     {
@@ -51,11 +53,17 @@ class DateTimeZone
     public static function listIdentifiers(int $timezoneGroup = DateTimeZone::ALL, ?string $countryCode = null)
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return void
+     */
     public function __wakeup()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return DateTimeZone
+     */
     public static function __set_state(array $array)
     {
     }

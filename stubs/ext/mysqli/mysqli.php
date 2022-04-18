@@ -8,6 +8,7 @@ class mysqli
     /**
      * @tentative-return-type
      * @alias mysqli_autocommit
+     * @return bool
      */
     public function autocommit(bool $enable)
     {
@@ -15,6 +16,7 @@ class mysqli
     /**
      * @tentative-return-type
      * @alias mysqli_begin_transaction
+     * @return bool
      */
     public function begin_transaction(int $flags = 0, ?string $name = null)
     {
@@ -22,6 +24,7 @@ class mysqli
     /**
      * @tentative-return-type
      * @alias mysqli_change_user
+     * @return bool
      */
     public function change_user(string $username, string $password, ?string $database)
     {
@@ -29,6 +32,7 @@ class mysqli
     /**
      * @tentative-return-type
      * @alias mysqli_character_set_name
+     * @return string
      */
     public function character_set_name()
     {
@@ -45,6 +49,7 @@ class mysqli
     /**
      * @tentative-return-type
      * @alias mysqli_commit
+     * @return bool
      */
     public function commit(int $flags = 0, ?string $name = null)
     {
@@ -53,6 +58,7 @@ class mysqli
      * @tentative-return-type
      * @alias mysqli_connect
      * @no-verify
+     * @return (bool | null)
      */
     public function connect(?string $hostname = null, ?string $username = null, ?string $password = null, ?string $database = null, ?int $port = null, ?string $socket = null)
     {
@@ -60,6 +66,7 @@ class mysqli
     /**
      * @tentative-return-type
      * @alias mysqli_dump_debug_info
+     * @return bool
      */
     public function dump_debug_info()
     {
@@ -76,6 +83,7 @@ class mysqli
     /**
      * @tentative-return-type
      * @alias mysqli_get_charset
+     * @return (object | null)
      */
     public function get_charset()
     {
@@ -84,6 +92,7 @@ class mysqli
      * @tentative-return-type
      * @alias mysqli_get_client_info
      * @deprecated 8.1.0
+     * @return string
      */
     public function get_client_info()
     {
@@ -101,6 +110,7 @@ class mysqli
     /**
      * @tentative-return-type
      * @alias mysqli_get_server_info
+     * @return string
      */
     public function get_server_info()
     {
@@ -108,6 +118,7 @@ class mysqli
     /**
      * @tentative-return-type
      * @alias mysqli_get_warnings
+     * @return (mysqli_warning | false)
      */
     public function get_warnings()
     {
@@ -122,6 +133,7 @@ class mysqli
     /**
      * @tentative-return-type
      * @alias mysqli_kill
+     * @return bool
      */
     public function kill(int $process_id)
     {
@@ -129,6 +141,7 @@ class mysqli
     /**
      * @tentative-return-type
      * @alias mysqli_multi_query
+     * @return bool
      */
     public function multi_query(string $query)
     {
@@ -136,6 +149,7 @@ class mysqli
     /**
      * @tentative-return-type
      * @alias mysqli_more_results
+     * @return bool
      */
     public function more_results()
     {
@@ -143,6 +157,7 @@ class mysqli
     /**
      * @tentative-return-type
      * @alias mysqli_next_result
+     * @return bool
      */
     public function next_result()
     {
@@ -150,6 +165,7 @@ class mysqli
     /**
      * @tentative-return-type
      * @alias mysqli_ping
+     * @return bool
      */
     public function ping()
     {
@@ -158,6 +174,7 @@ class mysqli
     /**
      * @tentative-return-type
      * @alias mysqli_poll
+     * @return (int | false)
      */
     public static function poll(?array &$read, ?array &$error, array &$reject, int $seconds, int $microseconds = 0)
     {
@@ -166,6 +183,7 @@ class mysqli
     /**
      * @tentative-return-type
      * @alias mysqli_prepare
+     * @return (mysqli_stmt | false)
      */
     public function prepare(string $query)
     {
@@ -173,6 +191,7 @@ class mysqli
     /**
      * @tentative-return-type
      * @alias mysqli_query
+     * @return (mysqli_result | bool)
      */
     public function query(string $query, int $result_mode = MYSQLI_STORE_RESULT)
     {
@@ -180,6 +199,7 @@ class mysqli
     /**
      * @tentative-return-type
      * @alias mysqli_real_connect
+     * @return bool
      */
     public function real_connect(?string $hostname = null, ?string $username = null, ?string $password = null, ?string $database = null, ?int $port = null, ?string $socket = null, int $flags = 0)
     {
@@ -187,6 +207,7 @@ class mysqli
     /**
      * @tentative-return-type
      * @alias mysqli_real_escape_string
+     * @return string
      */
     public function real_escape_string(string $string)
     {
@@ -195,6 +216,7 @@ class mysqli
     /**
      * @tentative-return-type
      * @alias mysqli_reap_async_query
+     * @return (mysqli_result | bool)
      */
     public function reap_async_query()
     {
@@ -203,6 +225,7 @@ class mysqli
     /**
      * @tentative-return-type
      * @alias mysqli_real_escape_string
+     * @return string
      */
     public function escape_string(string $string)
     {
@@ -210,6 +233,7 @@ class mysqli
     /**
      * @tentative-return-type
      * @alias mysqli_real_query
+     * @return bool
      */
     public function real_query(string $query)
     {
@@ -217,6 +241,7 @@ class mysqli
     /**
      * @tentative-return-type
      * @alias mysqli_release_savepoint
+     * @return bool
      */
     public function release_savepoint(string $name)
     {
@@ -224,6 +249,7 @@ class mysqli
     /**
      * @tentative-return-type
      * @alias mysqli_rollback
+     * @return bool
      */
     public function rollback(int $flags = 0, ?string $name = null)
     {
@@ -231,6 +257,7 @@ class mysqli
     /**
      * @tentative-return-type
      * @alias mysqli_savepoint
+     * @return bool
      */
     public function savepoint(string $name)
     {
@@ -238,6 +265,7 @@ class mysqli
     /**
      * @tentative-return-type
      * @alias mysqli_select_db
+     * @return bool
      */
     public function select_db(string $database)
     {
@@ -245,22 +273,25 @@ class mysqli
     /**
      * @tentative-return-type
      * @alias mysqli_set_charset
+     * @return bool
      */
     public function set_charset(string $charset)
     {
     }
     /**
-     * @param string|int $value
+     * @param (string | int) $value
      * @tentative-return-type
      * @alias mysqli_options
+     * @return bool
      */
     public function options(int $option, $value)
     {
     }
     /**
-     * @param string|int $value
+     * @param (string | int) $value
      * @tentative-return-type
      * @alias mysqli_options
+     * @return bool
      */
     public function set_opt(int $option, $value)
     {
@@ -277,6 +308,7 @@ class mysqli
     /**
      * @tentative-return-type
      * @alias mysqli_stat
+     * @return (string | false)
      */
     public function stat()
     {
@@ -284,6 +316,7 @@ class mysqli
     /**
      * @tentative-return-type
      * @alias mysqli_stmt_init
+     * @return (mysqli_stmt | false)
      */
     public function stmt_init()
     {
@@ -291,6 +324,7 @@ class mysqli
     /**
      * @tentative-return-type
      * @alias mysqli_store_result
+     * @return (mysqli_result | false)
      */
     public function store_result(int $mode = 0)
     {
@@ -298,6 +332,7 @@ class mysqli
     /**
      * @tentative-return-type
      * @alias mysqli_thread_safe
+     * @return bool
      */
     public function thread_safe()
     {
@@ -305,6 +340,7 @@ class mysqli
     /**
      * @tentative-return-type
      * @alias mysqli_use_result
+     * @return (mysqli_result | false)
      */
     public function use_result()
     {
@@ -312,6 +348,7 @@ class mysqli
     /**
      * @tentative-return-type
      * @alias mysqli_refresh
+     * @return bool
      */
     public function refresh(int $flags)
     {

@@ -2,7 +2,10 @@
 
 class SplMinHeap extends \SplHeap
 {
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return int
+     */
     protected function compare(mixed $value1, mixed $value2)
     {
     }

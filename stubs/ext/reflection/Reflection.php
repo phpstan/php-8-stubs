@@ -2,7 +2,10 @@
 
 class Reflection
 {
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return string[]
+     */
     public static function getModifierNames(int $modifiers)
     {
     }

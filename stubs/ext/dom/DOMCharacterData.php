@@ -2,7 +2,10 @@
 
 class DOMCharacterData extends \DOMNode implements \DOMChildNode
 {
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function appendData(string $data)
     {
     }
@@ -10,15 +13,24 @@ class DOMCharacterData extends \DOMNode implements \DOMChildNode
     public function substringData(int $offset, int $count)
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function insertData(int $offset, string $data)
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function deleteData(int $offset, int $count)
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function replaceData(int $offset, int $count, string $data)
     {
     }

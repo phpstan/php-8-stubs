@@ -8,6 +8,7 @@ class mysqli_result implements \IteratorAggregate
     /**
      * @tentative-return-type
      * @alias mysqli_free_result
+     * @return void
      */
     public function close()
     {
@@ -15,6 +16,7 @@ class mysqli_result implements \IteratorAggregate
     /**
      * @tentative-return-type
      * @alias mysqli_free_result
+     * @return void
      */
     public function free()
     {
@@ -22,6 +24,7 @@ class mysqli_result implements \IteratorAggregate
     /**
      * @tentative-return-type
      * @alias mysqli_data_seek
+     * @return bool
      */
     public function data_seek(int $offset)
     {
@@ -29,6 +32,7 @@ class mysqli_result implements \IteratorAggregate
     /**
      * @tentative-return-type
      * @alias mysqli_fetch_field
+     * @return (object | false)
      */
     public function fetch_field()
     {
@@ -44,6 +48,7 @@ class mysqli_result implements \IteratorAggregate
     /**
      * @tentative-return-type
      * @alias mysqli_fetch_field_direct
+     * @return (object | false)
      */
     public function fetch_field_direct(int $index)
     {
@@ -75,6 +80,7 @@ class mysqli_result implements \IteratorAggregate
     /**
      * @tentative-return-type
      * @alias mysqli_fetch_object
+     * @return (object | null | false)
      */
     public function fetch_object(string $class = "stdClass", array $constructor_args = [])
     {
@@ -90,6 +96,7 @@ class mysqli_result implements \IteratorAggregate
     /**
      * @tentative-return-type
      * @alias mysqli_field_seek
+     * @return bool
      */
     public function field_seek(int $index)
     {
@@ -97,6 +104,7 @@ class mysqli_result implements \IteratorAggregate
     /**
      * @tentative-return-type
      * @alias mysqli_free_result
+     * @return void
      */
     public function free_result()
     {

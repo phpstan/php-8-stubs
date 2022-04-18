@@ -9,17 +9,19 @@ class finfo
     {
     }
     /**
-     * @param resource|null $context
+     * @param (resource | null) $context
      * @tentative-return-type
      * @alias finfo_file
+     * @return (string | false)
      */
     public function file(string $filename, int $flags = FILEINFO_NONE, $context = null)
     {
     }
     /**
-     * @param resource|null $context
+     * @param (resource | null) $context
      * @tentative-return-type
      * @alias finfo_buffer
+     * @return (string | false)
      */
     public function buffer(string $string, int $flags = FILEINFO_NONE, $context = null)
     {

@@ -2,8 +2,14 @@
 
 interface SessionUpdateTimestampHandlerInterface
 {
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function validateId(string $id);
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function updateTimestamp(string $id, string $data);
 }

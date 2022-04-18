@@ -9,6 +9,7 @@ class MessageFormatter
     /**
      * @tentative-return-type
      * @alias msgfmt_create
+     * @return (MessageFormatter | null)
      */
     public static function create(string $locale, string $pattern)
     {
@@ -16,6 +17,7 @@ class MessageFormatter
     /**
      * @tentative-return-type
      * @alias msgfmt_format
+     * @return (string | false)
      */
     public function format(array $values)
     {
@@ -23,6 +25,7 @@ class MessageFormatter
     /**
      * @tentative-return-type
      * @alias msgfmt_format_message
+     * @return (string | false)
      */
     public static function formatMessage(string $locale, string $pattern, array $values)
     {
@@ -46,6 +49,7 @@ class MessageFormatter
     /**
      * @tentative-return-type
      * @alias msgfmt_set_pattern
+     * @return bool
      */
     public function setPattern(string $pattern)
     {
@@ -53,6 +57,7 @@ class MessageFormatter
     /**
      * @tentative-return-type
      * @alias msgfmt_get_pattern
+     * @return (string | false)
      */
     public function getPattern()
     {
@@ -60,6 +65,7 @@ class MessageFormatter
     /**
      * @tentative-return-type
      * @alias msgfmt_get_locale
+     * @return string
      */
     public function getLocale()
     {
@@ -67,6 +73,7 @@ class MessageFormatter
     /**
      * @tentative-return-type
      * @alias msgfmt_get_error_code
+     * @return int
      */
     public function getErrorCode()
     {
@@ -74,6 +81,7 @@ class MessageFormatter
     /**
      * @tentative-return-type
      * @alias msgfmt_get_error_message
+     * @return string
      */
     public function getErrorMessage()
     {

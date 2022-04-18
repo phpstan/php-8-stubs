@@ -8,7 +8,10 @@
 function pg_get_result($connection)
 {
 }
-/** @refcount 1 */
+/**
+ * @refcount 1
+ * @return (resource | false)
+ */
 #[\Since('8.1')]
 function pg_get_result(\PgSql\Connection $connection)
 {

@@ -2,14 +2,29 @@
 
 interface Iterator extends \Traversable
 {
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return mixed
+     */
     public function current();
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return void
+     */
     public function next();
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return mixed
+     */
     public function key();
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function valid();
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return void
+     */
     public function rewind();
 }

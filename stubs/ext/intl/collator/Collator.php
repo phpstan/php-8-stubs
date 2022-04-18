@@ -9,6 +9,7 @@ class Collator
     /**
      * @tentative-return-type
      * @alias collator_create
+     * @return (Collator | null)
      */
     public static function create(string $locale)
     {
@@ -16,6 +17,7 @@ class Collator
     /**
      * @tentative-return-type
      * @alias collator_compare
+     * @return (int | false)
      */
     public function compare(string $string1, string $string2)
     {
@@ -23,6 +25,7 @@ class Collator
     /**
      * @tentative-return-type
      * @alias collator_sort
+     * @return bool
      */
     public function sort(array &$array, int $flags = Collator::SORT_REGULAR)
     {
@@ -30,6 +33,7 @@ class Collator
     /**
      * @tentative-return-type
      * @alias collator_sort_with_sort_keys
+     * @return bool
      */
     public function sortWithSortKeys(array &$array)
     {
@@ -37,6 +41,7 @@ class Collator
     /**
      * @tentative-return-type
      * @alias collator_asort
+     * @return bool
      */
     public function asort(array &$array, int $flags = Collator::SORT_REGULAR)
     {
@@ -44,6 +49,7 @@ class Collator
     /**
      * @tentative-return-type
      * @alias collator_get_attribute
+     * @return (int | false)
      */
     public function getAttribute(int $attribute)
     {
@@ -51,6 +57,7 @@ class Collator
     /**
      * @tentative-return-type
      * @alias collator_set_attribute
+     * @return bool
      */
     public function setAttribute(int $attribute, int $value)
     {
@@ -58,6 +65,7 @@ class Collator
     /**
      * @tentative-return-type
      * @alias collator_get_strength
+     * @return int
      */
     public function getStrength()
     {
@@ -73,6 +81,7 @@ class Collator
     /**
      * @tentative-return-type
      * @alias collator_get_locale
+     * @return (string | false)
      */
     public function getLocale(int $type)
     {
@@ -80,6 +89,7 @@ class Collator
     /**
      * @tentative-return-type
      * @alias collator_get_error_code
+     * @return (int | false)
      */
     public function getErrorCode()
     {
@@ -87,6 +97,7 @@ class Collator
     /**
      * @tentative-return-type
      * @alias collator_get_error_message
+     * @return (string | false)
      */
     public function getErrorMessage()
     {
@@ -94,6 +105,7 @@ class Collator
     /**
      * @tentative-return-type
      * @alias collator_get_sort_key
+     * @return (string | false)
      */
     public function getSortKey(string $string)
     {

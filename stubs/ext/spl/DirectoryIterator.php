@@ -5,27 +5,45 @@ class DirectoryIterator extends \SplFileInfo implements \SeekableIterator
     public function __construct(string $directory)
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return string
+     */
     public function getFilename()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return string
+     */
     public function getExtension()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return string
+     */
     public function getBasename(string $suffix = "")
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function isDot()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return void
+     */
     public function rewind()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function valid()
     {
     }
@@ -45,11 +63,17 @@ class DirectoryIterator extends \SplFileInfo implements \SeekableIterator
     {
     }
     // TODO narrow return type
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return void
+     */
     public function next()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return void
+     */
     public function seek(int $offset)
     {
     }

@@ -19,35 +19,59 @@ class ReflectionClassConstant implements \Reflector
     public function __toString() : string
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return (string | false)
+     */
     public function getName()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return mixed
+     */
     public function getValue()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function isPublic()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function isPrivate()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function isProtected()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return int
+     */
     public function getModifiers()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return ReflectionClass
+     */
     public function getDeclaringClass()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return (string | false)
+     */
     public function getDocComment()
     {
     }

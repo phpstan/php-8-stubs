@@ -5,6 +5,7 @@ class OCILob
     /**
      * @alias oci_lob_save
      * @tentative-return-type
+     * @return bool
      */
     public function save(string $data, int $offset = 0)
     {
@@ -12,6 +13,7 @@ class OCILob
     /**
      * @alias oci_lob_import
      * @tentative-return-type
+     * @return bool
      */
     public function import(string $filename)
     {
@@ -19,6 +21,7 @@ class OCILob
     /**
      * @alias oci_lob_import
      * @tentative-return-type
+     * @return bool
      */
     public function saveFile(string $filename)
     {
@@ -26,6 +29,7 @@ class OCILob
     /**
      * @alias oci_lob_load
      * @tentative-return-type
+     * @return (string | false)
      */
     public function load()
     {
@@ -33,6 +37,7 @@ class OCILob
     /**
      * @alias oci_lob_read
      * @tentative-return-type
+     * @return (string | false)
      */
     public function read(int $length)
     {
@@ -40,6 +45,7 @@ class OCILob
     /**
      * @alias oci_lob_eof
      * @tentative-return-type
+     * @return bool
      */
     public function eof()
     {
@@ -47,6 +53,7 @@ class OCILob
     /**
      * @alias oci_lob_tell
      * @tentative-return-type
+     * @return (int | false)
      */
     public function tell()
     {
@@ -54,6 +61,7 @@ class OCILob
     /**
      * @alias oci_lob_rewind
      * @tentative-return-type
+     * @return bool
      */
     public function rewind()
     {
@@ -61,6 +69,7 @@ class OCILob
     /**
      * @alias oci_lob_seek
      * @tentative-return-type
+     * @return bool
      */
     public function seek(int $offset, int $whence = OCI_SEEK_SET)
     {
@@ -68,6 +77,7 @@ class OCILob
     /**
      * @alias oci_lob_size
      * @tentative-return-type
+     * @return (int | false)
      */
     public function size()
     {
@@ -75,6 +85,7 @@ class OCILob
     /**
      * @alias oci_lob_write
      * @tentative-return-type
+     * @return (int | false)
      */
     public function write(string $data, ?int $length = null)
     {
@@ -82,6 +93,7 @@ class OCILob
     /**
      * @alias oci_lob_append
      * @tentative-return-type
+     * @return bool
      */
     public function append(OCILob $from)
     {
@@ -89,6 +101,7 @@ class OCILob
     /**
      * @alias oci_lob_truncate
      * @tentative-return-type
+     * @return bool
      */
     public function truncate(int $length = 0)
     {
@@ -96,6 +109,7 @@ class OCILob
     /**
      * @alias oci_lob_erase
      * @tentative-return-type
+     * @return (int | false)
      */
     public function erase(?int $offset = null, ?int $length = null)
     {
@@ -110,6 +124,7 @@ class OCILob
     /**
      * @alias ocisetbufferinglob
      * @tentative-return-type
+     * @return bool
      */
     public function setBuffering(bool $mode)
     {
@@ -117,6 +132,7 @@ class OCILob
     /**
      * @alias ocigetbufferinglob
      * @tentative-return-type
+     * @return bool
      */
     public function getBuffering()
     {
@@ -124,6 +140,7 @@ class OCILob
     /**
      * @alias oci_lob_export
      * @tentative-return-type
+     * @return bool
      */
     public function writeToFile(string $filename, ?int $offset = null, ?int $length = null)
     {
@@ -131,21 +148,29 @@ class OCILob
     /**
      * @alias oci_lob_export
      * @tentative-return-type
+     * @return bool
      */
     public function export(string $filename, ?int $offset = null, ?int $length = null)
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function writeTemporary(string $data, int $type = OCI_TEMP_CLOB)
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function close()
     {
     }
     /**
      * @alias oci_free_descriptor
      * @tentative-return-type
+     * @return bool
      */
     public function free()
     {

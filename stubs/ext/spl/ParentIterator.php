@@ -8,6 +8,7 @@ class ParentIterator extends \RecursiveFilterIterator
     /**
      * @tentative-return-type
      * @implementation-alias RecursiveFilterIterator::hasChildren
+     * @return bool
      */
     public function accept()
     {

@@ -20,44 +20,67 @@ class ReflectionParameter implements \Reflector
     public function __toString() : string
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return string
+     */
     public function getName()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function isPassedByReference()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function canBePassedByValue()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return ReflectionFunctionAbstract
+     */
     public function getDeclaringFunction()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return (ReflectionClass | null)
+     */
     public function getDeclaringClass()
     {
     }
     /**
      * @tentative-return-type
      * @deprecated Use ReflectionParameter::getType() instead
+     * @return (ReflectionClass | null)
      */
     public function getClass()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function hasType()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return (ReflectionType | null)
+     */
     public function getType()
     {
     }
     /**
      * @tentative-return-type
      * @deprecated Use ReflectionParameter::getType() instead
+     * @return bool
      */
     public function isArray()
     {
@@ -65,39 +88,64 @@ class ReflectionParameter implements \Reflector
     /**
      * @tentative-return-type
      * @deprecated Use ReflectionParameter::getType() instead
+     * @return bool
      */
     public function isCallable()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function allowsNull()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return int
+     */
     public function getPosition()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function isOptional()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function isDefaultValueAvailable()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return mixed
+     */
     public function getDefaultValue()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function isDefaultValueConstant()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return (string | null)
+     */
     public function getDefaultValueConstantName()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function isVariadic()
     {
     }

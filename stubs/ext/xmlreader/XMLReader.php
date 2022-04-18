@@ -8,59 +8,101 @@ class XMLReader
     {
     }
     // TODO make the return type void
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return (string | null)
+     */
     public function getAttribute(string $name)
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return (string | null)
+     */
     public function getAttributeNo(int $index)
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return (string | null)
+     */
     public function getAttributeNs(string $name, string $namespace)
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function getParserProperty(int $property)
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function isValid()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return (string | null)
+     */
     public function lookupNamespace(string $prefix)
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function moveToAttribute(string $name)
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function moveToAttributeNo(int $index)
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function moveToAttributeNs(string $name, string $namespace)
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function moveToElement()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function moveToFirstAttribute()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function moveToNextAttribute()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function read()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function next(?string $name = null)
     {
     }
@@ -69,31 +111,52 @@ class XMLReader
     {
     }
     // TODO Return type shouldn't be dependent on the call scope
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return string
+     */
     public function readInnerXml()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return string
+     */
     public function readOuterXml()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return string
+     */
     public function readString()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function setSchema(?string $filename)
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function setParserProperty(int $property, bool $value)
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function setRelaxNGSchema(?string $filename)
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function setRelaxNGSchemaSource(?string $source)
     {
     }
@@ -102,7 +165,10 @@ class XMLReader
     {
     }
     // TODO Return type shouldn't be dependent on the call scope
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return (DOMNode | false)
+     */
     public function expand(?DOMNode $baseNode = null)
     {
     }

@@ -8,6 +8,7 @@ class mysqli_stmt
     /**
      * @tentative-return-type
      * @alias mysqli_stmt_attr_get
+     * @return int
      */
     public function attr_get(int $attribute)
     {
@@ -15,6 +16,7 @@ class mysqli_stmt
     /**
      * @tentative-return-type
      * @alias mysqli_stmt_attr_set
+     * @return bool
      */
     public function attr_set(int $attribute, int $value)
     {
@@ -22,6 +24,7 @@ class mysqli_stmt
     /**
      * @tentative-return-type
      * @alias mysqli_stmt_bind_param
+     * @return bool
      */
     public function bind_param(string $types, mixed &...$vars)
     {
@@ -29,6 +32,7 @@ class mysqli_stmt
     /**
      * @tentative-return-type
      * @alias mysqli_stmt_bind_result
+     * @return bool
      */
     public function bind_result(mixed &...$vars)
     {
@@ -45,6 +49,7 @@ class mysqli_stmt
     /**
      * @tentative-return-type
      * @alias mysqli_stmt_data_seek
+     * @return void
      */
     public function data_seek(int $offset)
     {
@@ -60,6 +65,7 @@ class mysqli_stmt
     /**
      * @tentative-return-type
      * @alias mysqli_stmt_execute
+     * @return bool
      */
     #[\Since('8.1')]
     public function execute(?array $params = null)
@@ -68,6 +74,7 @@ class mysqli_stmt
     /**
      * @tentative-return-type
      * @alias mysqli_stmt_fetch
+     * @return (bool | null)
      */
     public function fetch()
     {
@@ -75,6 +82,7 @@ class mysqli_stmt
     /**
      * @tentative-return-type
      * @alias mysqli_stmt_get_warnings
+     * @return (mysqli_warning | false)
      */
     public function get_warnings()
     {
@@ -82,6 +90,7 @@ class mysqli_stmt
     /**
      * @tentative-return-type
      * @alias mysqli_stmt_result_metadata
+     * @return (mysqli_result | false)
      */
     public function result_metadata()
     {
@@ -90,6 +99,7 @@ class mysqli_stmt
     /**
      * @tentative-return-type
      * @alias mysqli_stmt_more_results
+     * @return bool
      */
     public function more_results()
     {
@@ -98,6 +108,7 @@ class mysqli_stmt
     /**
      * @tentative-return-type
      * @alias mysqli_stmt_next_result
+     * @return bool
      */
     public function next_result()
     {
@@ -105,6 +116,7 @@ class mysqli_stmt
     /**
      * @tentative-return-type
      * @alias mysqli_stmt_num_rows
+     * @return (int | string)
      */
     public function num_rows()
     {
@@ -112,6 +124,7 @@ class mysqli_stmt
     /**
      * @tentative-return-type
      * @alias mysqli_stmt_send_long_data
+     * @return bool
      */
     public function send_long_data(int $param_num, string $data)
     {
@@ -119,6 +132,7 @@ class mysqli_stmt
     /**
      * @tentative-return-type
      * @alias mysqli_stmt_free_result
+     * @return void
      */
     public function free_result()
     {
@@ -126,6 +140,7 @@ class mysqli_stmt
     /**
      * @tentative-return-type
      * @alias mysqli_stmt_reset
+     * @return bool
      */
     public function reset()
     {
@@ -133,6 +148,7 @@ class mysqli_stmt
     /**
      * @tentative-return-type
      * @alias mysqli_stmt_prepare
+     * @return bool
      */
     public function prepare(string $query)
     {
@@ -140,6 +156,7 @@ class mysqli_stmt
     /**
      * @tentative-return-type
      * @alias mysqli_stmt_store_result
+     * @return bool
      */
     public function store_result()
     {
@@ -148,6 +165,7 @@ class mysqli_stmt
     /**
      * @tentative-return-type
      * @alias mysqli_stmt_get_result
+     * @return (mysqli_result | false)
      */
     public function get_result()
     {

@@ -7,9 +7,10 @@ class IntlCalendar
     {
     }
     /**
-     * @param IntlTimeZone|DateTimeZone|string|null $timezone
+     * @param (IntlTimeZone | DateTimeZone | string | null) $timezone
      * @tentative-return-type
      * @alias intlcal_create_instance
+     * @return (IntlCalendar | null)
      */
     public static function createInstance($timezone = null, ?string $locale = null)
     {
@@ -17,6 +18,7 @@ class IntlCalendar
     /**
      * @tentative-return-type
      * @alias intlcal_equals
+     * @return bool
      */
     public function equals(IntlCalendar $other)
     {
@@ -24,6 +26,7 @@ class IntlCalendar
     /**
      * @tentative-return-type
      * @alias intlcal_field_difference
+     * @return (int | false)
      */
     public function fieldDifference(float $timestamp, int $field)
     {
@@ -31,6 +34,7 @@ class IntlCalendar
     /**
      * @tentative-return-type
      * @alias intlcal_add
+     * @return bool
      */
     public function add(int $field, int $value)
     {
@@ -38,6 +42,7 @@ class IntlCalendar
     /**
      * @tentative-return-type
      * @alias intlcal_after
+     * @return bool
      */
     public function after(IntlCalendar $other)
     {
@@ -45,6 +50,7 @@ class IntlCalendar
     /**
      * @tentative-return-type
      * @alias intlcal_before
+     * @return bool
      */
     public function before(IntlCalendar $other)
     {
@@ -60,6 +66,7 @@ class IntlCalendar
     /**
      * @tentative-return-type
      * @alias intlcal_from_date_time
+     * @return (IntlCalendar | null)
      */
     public static function fromDateTime(DateTime|string $datetime, ?string $locale = null)
     {
@@ -67,6 +74,7 @@ class IntlCalendar
     /**
      * @tentative-return-type
      * @alias intlcal_get
+     * @return (int | false)
      */
     public function get(int $field)
     {
@@ -74,6 +82,7 @@ class IntlCalendar
     /**
      * @tentative-return-type
      * @alias intlcal_get_actual_maximum
+     * @return (int | false)
      */
     public function getActualMaximum(int $field)
     {
@@ -81,6 +90,7 @@ class IntlCalendar
     /**
      * @tentative-return-type
      * @alias intlcal_get_actual_minimum
+     * @return (int | false)
      */
     public function getActualMinimum(int $field)
     {
@@ -96,6 +106,7 @@ class IntlCalendar
     /**
      * @tentative-return-type
      * @alias intlcal_get_day_of_week_type
+     * @return (int | false)
      */
     public function getDayOfWeekType(int $dayOfWeek)
     {
@@ -103,6 +114,7 @@ class IntlCalendar
     /**
      * @tentative-return-type
      * @alias intlcal_get_error_code
+     * @return (int | false)
      */
     public function getErrorCode()
     {
@@ -110,6 +122,7 @@ class IntlCalendar
     /**
      * @tentative-return-type
      * @alias intlcal_get_error_message
+     * @return (string | false)
      */
     public function getErrorMessage()
     {
@@ -117,6 +130,7 @@ class IntlCalendar
     /**
      * @tentative-return-type
      * @alias intlcal_get_first_day_of_week
+     * @return (int | false)
      */
     public function getFirstDayOfWeek()
     {
@@ -124,6 +138,7 @@ class IntlCalendar
     /**
      * @tentative-return-type
      * @alias intlcal_get_greatest_minimum
+     * @return (int | false)
      */
     public function getGreatestMinimum(int $field)
     {
@@ -131,6 +146,7 @@ class IntlCalendar
     /**
      * @tentative-return-type
      * @alias intlcal_get_keyword_values_for_locale
+     * @return (IntlIterator | false)
      */
     public static function getKeywordValuesForLocale(string $keyword, string $locale, bool $onlyCommon)
     {
@@ -138,6 +154,7 @@ class IntlCalendar
     /**
      * @tentative-return-type
      * @alias intlcal_get_least_maximum
+     * @return (int | false)
      */
     public function getLeastMaximum(int $field)
     {
@@ -145,6 +162,7 @@ class IntlCalendar
     /**
      * @tentative-return-type
      * @alias intlcal_get_locale
+     * @return (string | false)
      */
     public function getLocale(int $type)
     {
@@ -152,6 +170,7 @@ class IntlCalendar
     /**
      * @tentative-return-type
      * @alias intlcal_get_maximum
+     * @return (int | false)
      */
     public function getMaximum(int $field)
     {
@@ -159,6 +178,7 @@ class IntlCalendar
     /**
      * @tentative-return-type
      * @alias intlcal_get_minimal_days_in_first_week
+     * @return (int | false)
      */
     public function getMinimalDaysInFirstWeek()
     {
@@ -174,6 +194,7 @@ class IntlCalendar
     /**
      * @tentative-return-type
      * @alias intlcal_get_minimum
+     * @return (int | false)
      */
     public function getMinimum(int $field)
     {
@@ -181,6 +202,7 @@ class IntlCalendar
     /**
      * @tentative-return-type
      * @alias intlcal_get_now
+     * @return float
      */
     public static function getNow()
     {
@@ -188,6 +210,7 @@ class IntlCalendar
     /**
      * @tentative-return-type
      * @alias intlcal_get_repeated_wall_time_option
+     * @return int
      */
     public function getRepeatedWallTimeOption()
     {
@@ -195,6 +218,7 @@ class IntlCalendar
     /**
      * @tentative-return-type
      * @alias intlcal_get_skipped_wall_time_option
+     * @return int
      */
     public function getSkippedWallTimeOption()
     {
@@ -202,6 +226,7 @@ class IntlCalendar
     /**
      * @tentative-return-type
      * @alias intlcal_get_time
+     * @return (float | false)
      */
     public function getTime()
     {
@@ -209,6 +234,7 @@ class IntlCalendar
     /**
      * @tentative-return-type
      * @alias intlcal_get_time_zone
+     * @return (IntlTimeZone | false)
      */
     public function getTimeZone()
     {
@@ -216,6 +242,7 @@ class IntlCalendar
     /**
      * @tentative-return-type
      * @alias intlcal_get_type
+     * @return string
      */
     public function getType()
     {
@@ -223,6 +250,7 @@ class IntlCalendar
     /**
      * @tentative-return-type
      * @alias intlcal_get_weekend_transition
+     * @return (int | false)
      */
     public function getWeekendTransition(int $dayOfWeek)
     {
@@ -230,6 +258,7 @@ class IntlCalendar
     /**
      * @tentative-return-type
      * @alias intlcal_in_daylight_time
+     * @return bool
      */
     public function inDaylightTime()
     {
@@ -237,6 +266,7 @@ class IntlCalendar
     /**
      * @tentative-return-type
      * @alias intlcal_is_equivalent_to
+     * @return bool
      */
     public function isEquivalentTo(IntlCalendar $other)
     {
@@ -244,6 +274,7 @@ class IntlCalendar
     /**
      * @tentative-return-type
      * @alias intlcal_is_lenient
+     * @return bool
      */
     public function isLenient()
     {
@@ -251,14 +282,16 @@ class IntlCalendar
     /**
      * @tentative-return-type
      * @alias intlcal_is_weekend
+     * @return bool
      */
     public function isWeekend(?float $timestamp = null)
     {
     }
     /**
-     * @param int|bool $value
+     * @param (int | bool) $value
      * @alias intlcal_roll
      * @tentative-return-type
+     * @return bool
      */
     public function roll(int $field, $value)
     {
@@ -266,6 +299,7 @@ class IntlCalendar
     /**
      * @tentative-return-type
      * @alias intlcal_is_set
+     * @return bool
      */
     public function isSet(int $field)
     {
@@ -313,14 +347,16 @@ class IntlCalendar
     /**
      * @tentative-return-type
      * @alias intlcal_set_time
+     * @return bool
      */
     public function setTime(float $timestamp)
     {
     }
     /**
-     * @param IntlTimeZone|DateTimeZone|string|null $timezone
+     * @param (IntlTimeZone | DateTimeZone | string | null) $timezone
      * @tentative-return-type
      * @alias intlcal_set_time_zone
+     * @return bool
      */
     public function setTimeZone($timezone)
     {
@@ -328,6 +364,7 @@ class IntlCalendar
     /**
      * @tentative-return-type
      * @alias intlcal_to_date_time
+     * @return (DateTime | false)
      */
     public function toDateTime()
     {

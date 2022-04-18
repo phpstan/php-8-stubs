@@ -11,27 +11,45 @@ class DatePeriod implements \IteratorAggregate
     public function __construct($start, $interval = UNKNOWN, $end = UNKNOWN, $options = UNKNOWN)
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return DateTimeInterface
+     */
     public function getStartDate()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return (DateTimeInterface | null)
+     */
     public function getEndDate()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return DateInterval
+     */
     public function getDateInterval()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return (int | null)
+     */
     public function getRecurrences()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return void
+     */
     public function __wakeup()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return DatePeriod
+     */
     public static function __set_state(array $array)
     {
     }

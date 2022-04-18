@@ -19,47 +19,80 @@ class ReflectionExtension implements \Reflector
     public function __toString() : string
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return string
+     */
     public function getName()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return (string | null)
+     */
     public function getVersion()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return ReflectionFunction[]
+     */
     public function getFunctions()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return array
+     */
     public function getConstants()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return array
+     */
     public function getINIEntries()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return ReflectionClass[]
+     */
     public function getClasses()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return string[]
+     */
     public function getClassNames()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return array
+     */
     public function getDependencies()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return void
+     */
     public function info()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function isPersistent()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function isTemporary()
     {
     }

@@ -8,7 +8,10 @@
 function pg_insert($connection, string $table_name, array $values, int $flags = PGSQL_DML_EXEC)
 {
 }
-/** @refcount 1 */
+/**
+ * @refcount 1
+ * @return (resource | string | bool)
+ */
 #[\Since('8.1')]
 function pg_insert(\PgSql\Connection $connection, string $table_name, array $values, int $flags = PGSQL_DML_EXEC)
 {

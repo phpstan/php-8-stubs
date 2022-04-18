@@ -2,6 +2,9 @@
 
 interface JsonSerializable
 {
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return mixed
+     */
     public function jsonSerialize();
 }

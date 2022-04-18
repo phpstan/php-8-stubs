@@ -29,9 +29,10 @@ class IntlDateFormatter
     {
     }
     /**
-     * @param IntlTimeZone|DateTimeZone|string|null $timezone
+     * @param (IntlTimeZone | DateTimeZone | string | null) $timezone
      * @tentative-return-type
      * @alias datefmt_create
+     * @return (IntlDateFormatter | null)
      */
     #[\Since('8.1')]
     public static function create(?string $locale, int $dateType = IntlDateFormatter::FULL, int $timeType = IntlDateFormatter::FULL, $timezone = null, IntlCalendar|int|null $calendar = null, ?string $pattern = null)
@@ -40,6 +41,7 @@ class IntlDateFormatter
     /**
      * @tentative-return-type
      * @alias datefmt_get_datetype
+     * @return (int | false)
      */
     public function getDateType()
     {
@@ -47,6 +49,7 @@ class IntlDateFormatter
     /**
      * @tentative-return-type
      * @alias datefmt_get_timetype
+     * @return (int | false)
      */
     public function getTimeType()
     {
@@ -54,6 +57,7 @@ class IntlDateFormatter
     /**
      * @tentative-return-type
      * @alias datefmt_get_calendar
+     * @return (int | false)
      */
     public function getCalendar()
     {
@@ -61,6 +65,7 @@ class IntlDateFormatter
     /**
      * @tentative-return-type
      * @alias datefmt_set_calendar
+     * @return bool
      */
     public function setCalendar(IntlCalendar|int|null $calendar)
     {
@@ -68,6 +73,7 @@ class IntlDateFormatter
     /**
      * @tentative-return-type
      * @alias datefmt_get_timezone_id
+     * @return (string | false)
      */
     public function getTimeZoneId()
     {
@@ -75,6 +81,7 @@ class IntlDateFormatter
     /**
      * @tentative-return-type
      * @alias datefmt_get_calendar_object
+     * @return (IntlCalendar | false | null)
      */
     public function getCalendarObject()
     {
@@ -82,14 +89,16 @@ class IntlDateFormatter
     /**
      * @tentative-return-type
      * @alias datefmt_get_timezone
+     * @return (IntlTimeZone | false)
      */
     public function getTimeZone()
     {
     }
     /**
-     * @param IntlTimeZone|DateTimeZone|string|null $timezone
+     * @param (IntlTimeZone | DateTimeZone | string | null) $timezone
      * @tentative-return-type
      * @alias datefmt_set_timezone
+     * @return (bool | null)
      */
     public function setTimeZone($timezone)
     {
@@ -98,6 +107,7 @@ class IntlDateFormatter
     /**
      * @tentative-return-type
      * @alias datefmt_set_pattern
+     * @return bool
      */
     public function setPattern(string $pattern)
     {
@@ -105,6 +115,7 @@ class IntlDateFormatter
     /**
      * @tentative-return-type
      * @alias datefmt_get_pattern
+     * @return (string | false)
      */
     public function getPattern()
     {
@@ -112,6 +123,7 @@ class IntlDateFormatter
     /**
      * @tentative-return-type
      * @alias datefmt_get_locale
+     * @return (string | false)
      */
     public function getLocale(int $type = ULOC_ACTUAL_LOCALE)
     {
@@ -119,6 +131,7 @@ class IntlDateFormatter
     /**
      * @tentative-return-type
      * @alias datefmt_set_lenient
+     * @return void
      */
     public function setLenient(bool $lenient)
     {
@@ -126,23 +139,26 @@ class IntlDateFormatter
     /**
      * @tentative-return-type
      * @alias datefmt_is_lenient
+     * @return bool
      */
     public function isLenient()
     {
     }
     /**
-     * @param IntlCalendar|DateTimeInterface|array|string|int|float $datetime
+     * @param (IntlCalendar | DateTimeInterface | array | string | int | float) $datetime
      * @tentative-return-type
      * @alias datefmt_format
+     * @return (string | false)
      */
     public function format($datetime)
     {
     }
     /**
-     * @param IntlCalendar|DateTime $datetime
-     * @param array|int|string|null $format
+     * @param (IntlCalendar | DateTime) $datetime
+     * @param (array | int | string | null) $format
      * @tentative-return-type
      * @alias datefmt_format_object
+     * @return (string | false)
      */
     public static function formatObject($datetime, $format = null, ?string $locale = null)
     {
@@ -151,6 +167,7 @@ class IntlDateFormatter
      * @param int $offset
      * @tentative-return-type
      * @alias datefmt_parse
+     * @return (int | float | false)
      */
     public function parse(string $string, &$offset = null)
     {
@@ -167,6 +184,7 @@ class IntlDateFormatter
     /**
      * @tentative-return-type
      * @alias datefmt_get_error_code
+     * @return int
      */
     public function getErrorCode()
     {
@@ -174,6 +192,7 @@ class IntlDateFormatter
     /**
      * @tentative-return-type
      * @alias datefmt_get_error_message
+     * @return string
      */
     public function getErrorMessage()
     {

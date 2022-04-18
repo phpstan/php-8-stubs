@@ -8,6 +8,7 @@ class tidy
     /**
      * @tentative-return-type
      * @alias tidy_getopt
+     * @return (string | int | bool)
      */
     public function getOpt(string $option)
     {
@@ -15,21 +16,29 @@ class tidy
     /**
      * @tentative-return-type
      * @alias tidy_clean_repair
+     * @return bool
      */
     public function cleanRepair()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function parseFile(string $filename, array|string|null $config = null, ?string $encoding = null, bool $useIncludePath = false)
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function parseString(string $string, array|string|null $config = null, ?string $encoding = null)
     {
     }
     /**
      * @tentative-return-type
      * @alias tidy_repair_string
+     * @return (string | false)
      */
     public static function repairString(string $string, array|string|null $config = null, ?string $encoding = null)
     {
@@ -37,6 +46,7 @@ class tidy
     /**
      * @tentative-return-type
      * @alias tidy_repair_file
+     * @return (string | false)
      */
     public static function repairFile(string $filename, array|string|null $config = null, ?string $encoding = null, bool $useIncludePath = false)
     {
@@ -44,6 +54,7 @@ class tidy
     /**
      * @tentative-return-type
      * @alias tidy_diagnose
+     * @return bool
      */
     public function diagnose()
     {
@@ -51,6 +62,7 @@ class tidy
     /**
      * @tentative-return-type
      * @alias tidy_get_release
+     * @return string
      */
     public function getRelease()
     {
@@ -58,6 +70,7 @@ class tidy
     /**
      * @tentative-return-type
      * @alias tidy_get_config
+     * @return array
      */
     public function getConfig()
     {
@@ -65,6 +78,7 @@ class tidy
     /**
      * @tentative-return-type
      * @alias tidy_get_status
+     * @return int
      */
     public function getStatus()
     {
@@ -72,6 +86,7 @@ class tidy
     /**
      * @tentative-return-type
      * @alias tidy_get_html_ver
+     * @return int
      */
     public function getHtmlVer()
     {
@@ -80,6 +95,7 @@ class tidy
     /**
      * @tentative-return-type
      * @alias tidy_get_opt_doc
+     * @return (string | false)
      */
     public function getOptDoc(string $option)
     {
@@ -88,6 +104,7 @@ class tidy
     /**
      * @tentative-return-type
      * @alias tidy_is_xhtml
+     * @return bool
      */
     public function isXhtml()
     {
@@ -95,6 +112,7 @@ class tidy
     /**
      * @tentative-return-type
      * @alias tidy_is_xml
+     * @return bool
      */
     public function isXml()
     {
@@ -102,6 +120,7 @@ class tidy
     /**
      * @tentative-return-type
      * @alias tidy_get_root
+     * @return (tidyNode | null)
      */
     public function root()
     {
@@ -109,6 +128,7 @@ class tidy
     /**
      * @tentative-return-type
      * @alias tidy_get_head
+     * @return (tidyNode | null)
      */
     public function head()
     {
@@ -116,6 +136,7 @@ class tidy
     /**
      * @tentative-return-type
      * @alias tidy_get_html
+     * @return (tidyNode | null)
      */
     public function html()
     {
@@ -123,6 +144,7 @@ class tidy
     /**
      * @tentative-return-type
      * @alias tidy_get_body
+     * @return (tidyNode | null)
      */
     public function body()
     {

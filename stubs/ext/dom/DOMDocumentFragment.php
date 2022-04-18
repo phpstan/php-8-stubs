@@ -5,7 +5,10 @@ class DOMDocumentFragment extends \DOMNode implements \DOMParentNode
     public function __construct()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function appendXML(string $data)
     {
     }

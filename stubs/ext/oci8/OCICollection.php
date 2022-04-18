@@ -5,6 +5,7 @@ class OCICollection
     /**
      * @alias oci_free_collection
      * @tentative-return-type
+     * @return bool
      */
     public function free()
     {
@@ -12,6 +13,7 @@ class OCICollection
     /**
      * @alias oci_collection_append
      * @tentative-return-type
+     * @return bool
      */
     public function append(string $value)
     {
@@ -19,6 +21,7 @@ class OCICollection
     /**
      * @alias oci_collection_element_get
      * @tentative-return-type
+     * @return (string | float | null | false)
      */
     public function getElem(int $index)
     {
@@ -26,6 +29,7 @@ class OCICollection
     /**
      * @alias oci_collection_assign
      * @tentative-return-type
+     * @return bool
      */
     public function assign(OCICollection $from)
     {
@@ -33,6 +37,7 @@ class OCICollection
     /**
      * @alias oci_collection_element_assign
      * @tentative-return-type
+     * @return bool
      */
     public function assignElem(int $index, string $value)
     {
@@ -40,6 +45,7 @@ class OCICollection
     /**
      * @alias oci_collection_size
      * @tentative-return-type
+     * @return (int | false)
      */
     public function size()
     {
@@ -47,6 +53,7 @@ class OCICollection
     /**
      * @alias oci_collection_max
      * @tentative-return-type
+     * @return (int | false)
      */
     public function max()
     {
@@ -54,6 +61,7 @@ class OCICollection
     /**
      * @alias oci_collection_trim
      * @tentative-return-type
+     * @return bool
      */
     public function trim(int $num)
     {

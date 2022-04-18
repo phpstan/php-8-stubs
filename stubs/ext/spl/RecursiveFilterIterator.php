@@ -5,11 +5,17 @@ abstract class RecursiveFilterIterator extends \FilterIterator implements \Recur
     public function __construct(RecursiveIterator $iterator)
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function hasChildren()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return (RecursiveFilterIterator | null)
+     */
     public function getChildren()
     {
     }

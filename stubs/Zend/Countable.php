@@ -2,6 +2,9 @@
 
 interface Countable
 {
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return int
+     */
     public function count();
 }

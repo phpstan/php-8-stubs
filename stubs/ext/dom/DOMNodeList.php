@@ -2,7 +2,10 @@
 
 class DOMNodeList implements \IteratorAggregate, \Countable
 {
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return (int | false)
+     */
     public function count()
     {
     }

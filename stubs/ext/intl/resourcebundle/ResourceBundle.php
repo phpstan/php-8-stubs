@@ -9,14 +9,16 @@ class ResourceBundle implements \IteratorAggregate, \Countable
     /**
      * @tentative-return-type
      * @alias resourcebundle_create
+     * @return (ResourceBundle | null)
      */
     public static function create(?string $locale, ?string $bundle, bool $fallback = true)
     {
     }
     /**
-     * @param string|int $index
+     * @param (string | int) $index
      * @tentative-return-type
      * @alias resourcebundle_get
+     * @return mixed
      */
     public function get($index, bool $fallback = true)
     {
@@ -24,6 +26,7 @@ class ResourceBundle implements \IteratorAggregate, \Countable
     /**
      * @tentative-return-type
      * @alias resourcebundle_count
+     * @return int
      */
     public function count()
     {
@@ -39,6 +42,7 @@ class ResourceBundle implements \IteratorAggregate, \Countable
     /**
      * @tentative-return-type
      * @alias resourcebundle_get_error_code
+     * @return int
      */
     public function getErrorCode()
     {
@@ -46,6 +50,7 @@ class ResourceBundle implements \IteratorAggregate, \Countable
     /**
      * @tentative-return-type
      * @alias resourcebundle_get_error_message
+     * @return string
      */
     public function getErrorMessage()
     {

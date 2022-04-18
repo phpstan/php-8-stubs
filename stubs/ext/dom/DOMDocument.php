@@ -17,11 +17,17 @@ class DOMDocument extends \DOMNode implements \DOMParentNode
     public function createCDATASection(string $data)
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return (DOMComment | false)
+     */
     public function createComment(string $data)
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return (DOMDocumentFragment | false)
+     */
     public function createDocumentFragment()
     {
     }
@@ -41,19 +47,31 @@ class DOMDocument extends \DOMNode implements \DOMParentNode
     public function createProcessingInstruction(string $target, string $data = "")
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return (DOMText | false)
+     */
     public function createTextNode(string $data)
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return (DOMElement | null)
+     */
     public function getElementById(string $elementId)
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return DOMNodeList
+     */
     public function getElementsByTagName(string $qualifiedName)
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return DOMNodeList
+     */
     public function getElementsByTagNameNS(?string $namespace, string $localName)
     {
     }
@@ -71,15 +89,24 @@ class DOMDocument extends \DOMNode implements \DOMParentNode
     {
     }
     // TODO return type shouldn't depend on the call scope
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return void
+     */
     public function normalizeDocument()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function registerNodeClass(string $baseClass, ?string $extendedClass)
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return (int | false)
+     */
     public function save(string $filename, int $options = 0)
     {
     }
@@ -94,42 +121,69 @@ class DOMDocument extends \DOMNode implements \DOMParentNode
     {
     }
     // TODO return type shouldn't depend on the call scope
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return (string | false)
+     */
     public function saveHTML(?DOMNode $node = null)
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return (int | false)
+     */
     public function saveHTMLFile(string $filename)
     {
     }
     #endif
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return (string | false)
+     */
     public function saveXML(?DOMNode $node = null, int $options = 0)
     {
     }
     #ifdef LIBXML_SCHEMAS_ENABLED
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function schemaValidate(string $filename, int $flags = 0)
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function schemaValidateSource(string $source, int $flags = 0)
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function relaxNGValidate(string $filename)
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function relaxNGValidateSource(string $source)
     {
     }
     #endif
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function validate()
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return (int | false)
+     */
     public function xinclude(int $options = 0)
     {
     }

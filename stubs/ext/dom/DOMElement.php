@@ -5,11 +5,17 @@ class DOMElement extends \DOMNode implements \DOMParentNode, \DOMChildNode
     public function __construct(string $qualifiedName, ?string $value = null, string $namespace = "")
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return string
+     */
     public function getAttribute(string $qualifiedName)
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return string
+     */
     public function getAttributeNS(?string $namespace, string $localName)
     {
     }
@@ -21,27 +27,45 @@ class DOMElement extends \DOMNode implements \DOMParentNode, \DOMChildNode
     public function getAttributeNodeNS(?string $namespace, string $localName)
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return DOMNodeList
+     */
     public function getElementsByTagName(string $qualifiedName)
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return DOMNodeList
+     */
     public function getElementsByTagNameNS(?string $namespace, string $localName)
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function hasAttribute(string $qualifiedName)
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function hasAttributeNS(?string $namespace, string $localName)
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function removeAttribute(string $qualifiedName)
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return void
+     */
     public function removeAttributeNS(?string $namespace, string $localName)
     {
     }
@@ -54,7 +78,10 @@ class DOMElement extends \DOMNode implements \DOMParentNode, \DOMChildNode
     {
     }
     // TODO return type shouldn't depend on the call scope
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return void
+     */
     public function setAttributeNS(?string $namespace, string $qualifiedName, string $value)
     {
     }
@@ -66,15 +93,24 @@ class DOMElement extends \DOMNode implements \DOMParentNode, \DOMChildNode
     public function setAttributeNodeNS(DOMAttr $attr)
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return void
+     */
     public function setIdAttribute(string $qualifiedName, bool $isId)
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return void
+     */
     public function setIdAttributeNS(string $namespace, string $qualifiedName, bool $isId)
     {
     }
-    /** @tentative-return-type */
+    /**
+     * @tentative-return-type
+     * @return void
+     */
     public function setIdAttributeNode(DOMAttr $attr, bool $isId)
     {
     }
