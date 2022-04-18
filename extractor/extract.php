@@ -410,7 +410,7 @@ $command = new class(
 	private function compareFunctions(Node\FunctionLike $old, Node\FunctionLike $new, string $updateTo): array
 	{
 		if ($old->getReturnType() === null && $new->getReturnType() !== null) {
-			if ($new->getDocComment() !== null && strpos($new->getDocComment()->getText(), '@tentative-return-type') !== 0) {
+			if ($new->getDocComment() !== null && strpos($new->getDocComment()->getText(), '@tentative-return-type') !== false) {
 				$new->returnType = null; // @phpstan-ignore-line
 				if ($old->getDocComment() !== null) {
 					$oldPhpDocNode = $this->parseDocComment($old->getDocComment()->getText());
