@@ -1,12 +1,23 @@
 <?php 
 
 /**
- * @param PgSql\Connection $connection
- * @param (string | int) $oid
+ * @param resource $connection
+ * @param string|int $oid
+ * @return resource|false
  * @alias pg_lo_open
  * @deprecated
- * @return (resource | false)
  */
+#[\Until('8.1')]
 function pg_loopen($connection, $oid = UNKNOWN, string $mode = UNKNOWN)
+{
+}
+/**
+ * @param PgSql\Connection $connection
+ * @param string|int $oid
+ * @alias pg_lo_open
+ * @deprecated
+ */
+#[\Since('8.1')]
+function pg_loopen($connection, $oid = UNKNOWN, string $mode = UNKNOWN) : \PgSql\Lob|false
 {
 }
