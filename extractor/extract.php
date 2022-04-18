@@ -1,8 +1,17 @@
 #!/usr/bin/env php
 <?php declare(strict_types = 1);
 
+use PhpParser\Comment;
 use PhpParser\Node;
 use PhpParser\ParserFactory;
+use PHPStan\PhpDocParser\Ast\PhpDoc\PhpDocNode;
+use PHPStan\PhpDocParser\Ast\PhpDoc\PhpDocTagNode;
+use PHPStan\PhpDocParser\Ast\PhpDoc\ReturnTagValueNode;
+use PHPStan\PhpDocParser\Lexer\Lexer;
+use PHPStan\PhpDocParser\Parser\PhpDocParser;
+use PHPStan\PhpDocParser\Parser\TokenIterator;
+use PHPStan\PhpDocParser\Parser\ConstExprParser;
+use PHPStan\PhpDocParser\Parser\TypeParser;
 use Symfony\Component\Console\Application;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
@@ -26,6 +35,12 @@ $command = new class(
 	/** @var \PhpParser\PrettyPrinter\Standard */
 	private $printer;
 
+	/** @var Lexer */
+	private $phpDocLexer;
+
+	/** @var PhpDocParser */
+	private $phpDocParser;
+
 	public function __construct(
 		\PhpParser\Parser $parser,
 		\PhpParser\PrettyPrinter\Standard $printer
@@ -34,6 +49,11 @@ $command = new class(
 		parent::__construct();
 		$this->parser = $parser;
 		$this->printer = $printer;
+		$this->phpDocLexer = new Lexer();
+
+		$constExprParser = new ConstExprParser();
+		$typeParser = new TypeParser($constExprParser);
+		$this->phpDocParser = new PhpDocParser($typeParser, $constExprParser);
 	}
 
 	protected function configure(): void
@@ -363,6 +383,20 @@ $command = new class(
 		if ($old->getReturnType() === null && $new->getReturnType() !== null) {
 			if ($new->getDocComment() !== null && strpos($new->getDocComment()->getText(), '@tentative-return-type') !== 0) {
 				$new->returnType = null; // @phpstan-ignore-line
+				if ($old->getDocComment() !== null) {
+					$oldPhpDocNode = $this->parseDocComment($old->getDocComment()->getText());
+					$oldPhpDocReturn = $this->findPhpDocReturn($oldPhpDocNode);
+					if ($oldPhpDocNode !== null) {
+						$newPhpDocNode = $this->parseDocComment($new->getDocComment()->getText());
+						$newPhpDocReturn = $this->findPhpDocReturn($newPhpDocNode);
+						if ($newPhpDocReturn === null) {
+							$children = $newPhpDocNode->children;
+							$children[] = new PhpDocTagNode('@return', $oldPhpDocReturn);
+							$newPhpDocNodeWithReturn = new PhpDocNode($children);
+							$new->setDocComment(new Comment\Doc((string) $newPhpDocNodeWithReturn));
+						}
+					}
+				}
 			}
 		}
 		if ($this->printType($old->getReturnType()) !== $this->printType($new->getReturnType())) {
@@ -519,6 +553,25 @@ $command = new class(
 		}
 
 		return $class;
+	}
+
+	private function parseDocComment(string $docComment): PhpDocNode
+	{
+		$tokens = new TokenIterator($this->phpDocLexer->tokenize($docComment));
+		$phpDocNode = $this->phpDocParser->parse($tokens);
+		$tokens->consumeTokenType(Lexer::TOKEN_END);
+
+		return $phpDocNode;
+	}
+
+	private function findPhpDocReturn(PhpDocNode $node): ?ReturnTagValueNode
+	{
+		$returnTags = $node->getReturnTagValues();
+		if (count($returnTags) !== 1) {
+			return null;
+		}
+
+		return $returnTags[0];
 	}
 
 	/**
