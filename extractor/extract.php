@@ -87,21 +87,50 @@ $command = new class(
 		$finder->files()->in($srcDir)->name('*.stub.php')
 			->exclude('ext/skeleton');
 
-		$classes = [];
-		$functions = [];
-		if ($isUpdate) {
-			require_once __DIR__ . '/../Php8StubsMap.php';
-			$classes = \PHPStan\Php8StubsMap::CLASSES;
-			$functions = \PHPStan\Php8StubsMap::FUNCTIONS;
-		}
+		$addClasses = [];
+		$addFunctions = [];
 		foreach ($finder as $file) {
 			$stubPath = $file->getRealPath();
 			[$tmpClasses, $tmpFunctions] = $this->extractStub($stubPath, $file->getRelativePathname(), $isUpdate, $updateTo);
 			foreach ($tmpClasses as $className => $fileName) {
-				$classes[$className] = $fileName;
+				$addClasses[$className] = $fileName;
 			}
 			foreach ($tmpFunctions as $functionName => $fileName) {
-				$functions[$functionName] = $fileName;
+				$addFunctions[$functionName] = $fileName;
+			}
+		}
+
+		if (!$isUpdate) {
+			$classes = $addClasses;
+			$functions = $addFunctions;
+			$addClasses = [];
+			$addFunctions = [];
+		} else {
+			require_once __DIR__ . '/../Php8StubsMap.php';
+			$map = new \PHPStan\Php8StubsMap(80000); // todo "from" argument when updating from 8.1 to 8.2 for example
+			$classes = $map->classes;
+			$functions = $map->functions;
+			foreach ($addClasses as $className => $fileName) {
+				if (!array_key_exists($className, $classes)) {
+					continue;
+				}
+
+				if ($classes[$className] !== $fileName) {
+					throw new \LogicException(sprintf('File name of class %s changed from %s to %s.', $className, $classes[$className], $fileName));
+				}
+
+				unset($addClasses[$className]);
+			}
+			foreach ($addFunctions as $functionName => $fileName) {
+				if (!array_key_exists($functionName, $functions)) {
+					continue;
+				}
+
+				if ($functions[$functionName] !== $fileName) {
+					throw new \LogicException(sprintf('File name of function %s changed from %s to %s.', $functionName, $functions[$functionName], $fileName));
+				}
+
+				unset($addFunctions[$functionName]);
 			}
 		}
 
@@ -109,7 +138,7 @@ $command = new class(
 
 		ksort($classes);
 		ksort($functions);
-		$this->dumpMap($classes, $functions);
+		$this->dumpMap($classes, $functions, $updateTo, $addClasses, $addFunctions);
 
 		return 0;
 	}
@@ -577,8 +606,10 @@ $command = new class(
 	/**
 	 * @param array<string, string> $classes
 	 * @param array<string, string> $functions
+	 * @param array<string, string> $addClasses
+	 * @param array<string, string> $addFunctions
 	 */
-	private function dumpMap(array $classes, array $functions): void
+	private function dumpMap(array $classes, array $functions, ?string $updateTo, array $addClasses, array $addFunctions): void
 	{
 		$template = <<<'PHP'
 <?php declare(strict_types = 1);
@@ -588,18 +619,50 @@ namespace PHPStan;
 class Php8StubsMap
 {
 
-	public const CLASSES = %s;
+	/** @var array<string, string> */
+	public $classes;
 
-	public const FUNCTIONS = %s;
+	/** @var array<string, string> */
+	public $functions;
+
+	public function __construct(int $phpVersionId)
+	{
+		$classes = %s;
+		$functions = %s;
+		%s
+		$this->classes = $classes;
+		$this->functions = $functions;
+	}
 
 }
 PHP;
+		$updateTemplate = <<<'PHP'
+if ($phpVersionId >= %d) {
+	$classes = \array_merge($classes, %s);
+	$functions = \array_merge($functions, %s);
+}
+PHP;
+
+		$phpVersion = null;
+		if ($updateTo !== null) {
+			$parts = explode('.', $updateTo);
+			$phpVersion = (int) $parts[0] * 10000 + (int) ($parts[1] ?? 0) * 100 + (int) ($parts[2] ?? 0);
+		}
 
 		file_put_contents(
 			__DIR__ . '/../Php8StubsMap.php',
-			sprintf($template, var_export($classes, true), var_export($functions, true))
+			sprintf(
+				$template,
+				var_export($classes, true),
+				var_export($functions, true),
+				$phpVersion === null ? '' : sprintf(
+					$updateTemplate,
+					$phpVersion,
+					var_export($addClasses, true),
+					var_export($addFunctions, true)
+				)
+			),
 		);
-
 	}
 
 };
