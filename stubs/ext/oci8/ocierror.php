@@ -1,8 +1,7 @@
 <?php 
 
 /**
- * @param resource|null $connection_or_statement
- * @return array<string, int|string>|false
+ * @param (resource | null) $connection_or_statement
  * @alias oci_error
  * @deprecated
  */

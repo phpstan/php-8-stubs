@@ -3,7 +3,6 @@
 /* datetime.c */
 #if HAVE_STRPTIME
 /**
- * @return array<string, int|string>|false
  * @deprecated
  * @refcount 1
  */
