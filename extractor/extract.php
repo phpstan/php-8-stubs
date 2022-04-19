@@ -491,7 +491,11 @@ $command = new class(
 
 						return !$child->value instanceof ReturnTagValueNode;
 					})));
-					$new->setDocComment(new Comment\Doc((string) $newPhpDocNodeWithoutReturn));
+					if (count($newPhpDocNodeWithoutReturn->children) === 0) {
+						$new->setAttribute('comments', []);
+					} else {
+						$new->setDocComment(new Comment\Doc((string) $newPhpDocNodeWithoutReturn));
+					}
 				}
 			}
 		}
