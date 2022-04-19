@@ -1,8 +1,5 @@
 <?php 
 
-/**
- *
- */
 function closelog() : bool
 {
 }
