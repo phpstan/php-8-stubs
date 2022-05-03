@@ -62,7 +62,7 @@ class ZipArchive implements \Countable
      * @tentative-return-type
      * @return bool
      */
-    public function replaceFile(string $filepath, string $index, int $start = 0, int $length = 0, int $flags = 0)
+    public function replaceFile(string $filepath, int $index, int $start = 0, int $length = 0, int $flags = 0)
     {
     }
     /**
