@@ -2590,6 +2590,7 @@ class Php8StubsMap
   'xmlwriter_write_pi' => 'stubs/ext/xmlwriter/xmlwriter_write_pi.php',
   'xmlwriter_write_raw' => 'stubs/ext/xmlwriter/xmlwriter_write_raw.php',
   'zend_create_unterminated_string' => 'stubs/ext/zend_test/zend_create_unterminated_string.php',
+  'zend_get_current_func_name' => 'stubs/ext/zend_test/zend_get_current_func_name.php',
   'zend_iterable' => 'stubs/ext/zend_test/zend_iterable.php',
   'zend_leak_bytes' => 'stubs/ext/zend_test/zend_leak_bytes.php',
   'zend_leak_variable' => 'stubs/ext/zend_test/zend_leak_variable.php',
