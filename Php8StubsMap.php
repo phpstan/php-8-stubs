@@ -2691,6 +2691,8 @@ class Php8StubsMap
   'sodium_crypto_stream_xchacha20' => 'stubs/ext/sodium/sodium_crypto_stream_xchacha20.php',
   'sodium_crypto_stream_xchacha20_keygen' => 'stubs/ext/sodium/sodium_crypto_stream_xchacha20_keygen.php',
   'sodium_crypto_stream_xchacha20_xor' => 'stubs/ext/sodium/sodium_crypto_stream_xchacha20_xor.php',
+  'dl_test_test1' => 'stubs/ext/dl_test/dl_test_test1.php',
+  'dl_test_test2' => 'stubs/ext/dl_test/dl_test_test2.php',
   'pcntl_rfork' => 'stubs/ext/pcntl/pcntl_rfork.php',
   'imagecreatefromavif' => 'stubs/ext/gd/imagecreatefromavif.php',
   'imageavif' => 'stubs/ext/gd/imageavif.php',
