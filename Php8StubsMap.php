@@ -2683,6 +2683,7 @@ class Php8StubsMap
   'zendteststringenum' => 'stubs/ext/zend_test/ZendTestStringEnum.php',
   'zend_get_unit_enum' => 'stubs/ext/zend_test/zend_get_unit_enum.php',
   'zend_test_parameter_with_attribute' => 'stubs/ext/zend_test/zend_test_parameter_with_attribute.php',
+  'zend_call_method' => 'stubs/ext/zend_test/zend_call_method.php',
   'pcntl_rfork' => 'stubs/ext/pcntl/pcntl_rfork.php',
   'sodium_crypto_core_ristretto255_add' => 'stubs/ext/sodium/sodium_crypto_core_ristretto255_add.php',
   'sodium_crypto_core_ristretto255_from_hash' => 'stubs/ext/sodium/sodium_crypto_core_ristretto255_from_hash.php',
