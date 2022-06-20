@@ -3,6 +3,6 @@
 	"description": "PHP stubs extracted from php-src",
 	"license": ["MIT", "PHP-3.01"],
 	"autoload": {
-		"files": ["Php8StubsMap.php"]
+		"classmap": ["Php8StubsMap.php"]
 	}
 }
