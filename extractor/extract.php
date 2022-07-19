@@ -666,6 +666,8 @@ if ($phpVersionId >= %d) {
 	$classes = \array_merge($classes, %s);
 	$functions = \array_merge($functions, %s);
 }
+
+// UPDATE BELONGS HERE
 PHP;
 
 		$phpVersion = null;
@@ -680,7 +682,7 @@ PHP;
 				$template,
 				var_export($classes, true),
 				var_export($functions, true),
-				$phpVersion === null ? '' : sprintf(
+				$phpVersion === null ? '// UPDATE BELONGS HERE' : sprintf(
 					$updateTemplate,
 					$phpVersion,
 					var_export($addClasses, true),
