@@ -332,7 +332,7 @@ $command = new class(
 				throw new \LogicException('Namespace name changed');
 			}
 
-			return $this->compareStatementsInNamespace($old->stmts, $new->stmts, $updateTo);
+			return [new Node\Stmt\Namespace_($old->name, $this->compareStatementsInNamespace($old->stmts, $new->stmts, $updateTo))];
 		} elseif (!$old instanceof Node\Stmt\Namespace_ && !$new instanceof Node\Stmt\Namespace_) {
 			return $this->compareStatementsInNamespace([$old], [$new], $updateTo);
 		}
