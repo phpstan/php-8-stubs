@@ -48,7 +48,21 @@ jobs:
           path: "php-src"
           ref: "PHP-8.1"
       - name: "Update stubs"
-        run: "./extractor/extract.php --update -- 8.1"
+        run: "./extractor/extract.php --update -- 8.0 8.1"
+
+      # ---
+
+      - name: "Delete checked out php-src repo"
+        run: "rm -rf php-src"
+      - name: "Checkout PHP 8.2"
+        uses: actions/checkout@v3
+        with:
+          repository: "php/php-src"
+          path: "php-src"
+          ref: "master"
+      - name: "Update stubs"
+        run: "./extractor/extract.php --update -- 8.1 8.2"
+
       # end repeat
 
       - name: 'Get previous tag'

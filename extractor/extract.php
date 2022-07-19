@@ -61,6 +61,7 @@ $command = new class(
 	{
 		$this->setName('extract');
 		$this->addOption('update', null, InputOption::VALUE_NONE);
+		$this->addArgument('updateFrom', InputArgument::OPTIONAL);
 		$this->addArgument('updateTo', InputArgument::OPTIONAL);
 	}
 
@@ -72,10 +73,14 @@ $command = new class(
 			throw new \LogicException('Invalid stubs path');
 		}
 
+		$updateFrom = $input->getArgument('updateFrom');
 		$updateTo = $input->getArgument('updateTo');
 		if (!$isUpdate) {
 			$this->clearOldStubs($ourStubsDir);
 		} else {
+			if ($updateFrom === null) {
+				throw new \LogicException('Missing arguments');
+			}
 			if ($updateTo === null) {
 				throw new \LogicException('Missing arguments');
 			}
@@ -92,7 +97,7 @@ $command = new class(
 		$addFunctions = [];
 		foreach ($finder as $file) {
 			$stubPath = $file->getRealPath();
-			[$tmpClasses, $tmpFunctions] = $this->extractStub($stubPath, $file->getRelativePathname(), $isUpdate, $updateTo);
+			[$tmpClasses, $tmpFunctions] = $this->extractStub($stubPath, $file->getRelativePathname(), $isUpdate, $updateFrom, $updateTo);
 			foreach ($tmpClasses as $className => $fileName) {
 				$addClasses[$className] = $fileName;
 			}
@@ -108,7 +113,8 @@ $command = new class(
 			$addFunctions = [];
 		} else {
 			require_once __DIR__ . '/../Php8StubsMap.php';
-			$map = new \PHPStan\Php8StubsMap(80000); // todo "from" argument when updating from 8.1 to 8.2 for example
+			$parts = explode('.', $updateFrom);
+			$map = new \PHPStan\Php8StubsMap((int) $parts[0] * 10000 + (int) ($parts[1] ?? 0) * 100 + (int) ($parts[2] ?? 0));
 			$classes = $map->classes;
 			$functions = $map->functions;
 			foreach ($addClasses as $className => $fileName) {
@@ -117,7 +123,8 @@ $command = new class(
 				}
 
 				if ($classes[$className] !== $fileName) {
-					throw new \LogicException(sprintf('File name of class %s changed from %s to %s.', $className, $classes[$className], $fileName));
+					$addClasses[$className] = $fileName;
+					continue;
 				}
 
 				unset($addClasses[$className]);
@@ -128,7 +135,8 @@ $command = new class(
 				}
 
 				if ($functions[$functionName] !== $fileName) {
-					throw new \LogicException(sprintf('File name of function %s changed from %s to %s.', $functionName, $functions[$functionName], $fileName));
+					$addFunctions[$functionName] = $fileName;
+					continue;
 				}
 
 				unset($addFunctions[$functionName]);
@@ -164,11 +172,9 @@ $command = new class(
 	}
 
 	/**
-	 * @param string $stubPath
-	 * @param string $relativeStubPath
 	 * @return array{array<string, string>, array<string, string>}
 	 */
-	private function extractStub(string $stubPath, string $relativeStubPath, bool $isUpdate, ?string $updateTo): array
+	private function extractStub(string $stubPath, string $relativeStubPath, bool $isUpdate, ?string $updateFrom, ?string $updateTo): array
 	{
 		$nameResolver = new PhpParser\NodeVisitor\NameResolver;
 		$nodeTraverser = new PhpParser\NodeTraverser;
@@ -179,7 +185,7 @@ $command = new class(
 			private string $stubPath;
 
 			/** @var PhpParser\Node\Stmt[] */
-			private array $stmts;
+			private array $stmts = [];
 
 			public function __construct(string $stubPath)
 			{
@@ -209,6 +215,10 @@ $command = new class(
 					// pass
 				} elseif ($node instanceof Node\Name) {
 					// pass
+				} elseif ($node instanceof Node\Stmt\Expression) {
+					return PhpParser\NodeTraverser::DONT_TRAVERSE_CHILDREN;
+				} elseif ($node instanceof Node\Stmt\Const_) {
+					return PhpParser\NodeTraverser::DONT_TRAVERSE_CHILDREN;
 				} else {
 					throw new \Exception(sprintf('Unhandled node type %s in %s on line %s.', get_class($node), $this->stubPath, $node->getLine()));
 				}
@@ -303,7 +313,7 @@ $command = new class(
 			$visitor->clear();
 			$nodeTraverser->traverse($oldStubAst);
 
-			$oldStmts = $visitor->getStmts();
+			[$untouchedStmts, $oldStmts] = $this->filterStatementsByVersion($visitor->getStmts(), $updateFrom);
 			if (count($oldStmts) !== 1) {
 				throw new \LogicException('There is supposed to be one statement in the old AST: ' . $targetStubPath);
 			}
@@ -317,24 +327,85 @@ $command = new class(
 				$oldStmt = new Node\Stmt\Namespace_($oldStmt->namespacedName->slice(0, -1), [$oldStmt]);
 			}
 
-			$newStmts = $this->compareStatements($oldStmt, $stmt, $updateTo);
-			file_put_contents($targetStubPath, "<?php \n\n" . $this->printer->prettyPrint($newStmts));
+			$newStmts = $this->compareStatements($oldStmt, $stmt, $updateFrom, $updateTo);
+			file_put_contents($targetStubPath, "<?php \n\n" . $this->printer->prettyPrint(array_merge($untouchedStmts, $newStmts)));
 		}
 
 		return [$classes, $functions];
 	}
 
+	/**
+	 * @param Node\Stmt[] $stmts
+	 * @return array{Node\Stmt[], Node\Stmt[]}
+	 */
+	private function filterStatementsByVersion(array $stmts, string $updateFrom): array
+	{
+		$oldStmts = [];
+		$newStmts = [];
+		$parts = explode('.', $updateFrom);
+		$phpVersionFrom = (int) $parts[0] * 10000 + (int) ($parts[1] ?? 0) * 100 + (int) ($parts[2] ?? 0);
+		foreach ($stmts as $stmt) {
+			if (!isset($stmt->attrGroups)) {
+				$newStmts[] = $stmt;
+				continue;
+			}
+			$attrGroups = $stmt->attrGroups;
+			if (count($attrGroups) === 0) {
+				$newStmts[] = $stmt;
+				continue;
+			}
+
+			$since = null;
+			$until = null;
+			foreach ($attrGroups as $attrGroup) {
+				foreach ($attrGroup->attrs as $attr) {
+					if ($attr->name->toLowerString() === 'since') {
+						$since = $attr;
+						continue;
+					}
+					if ($attr->name->toLowerString() === 'until') {
+						$until = $attr;
+						continue;
+					}
+				}
+			}
+
+			$sinceId = null;
+			if ($since !== null) {
+				$parts = explode('.', $since->args[0]->value->value);
+				$sinceId = (int) $parts[0] * 10000 + (int) ($parts[1] ?? 0) * 100 + (int) ($parts[2] ?? 0);
+				if ($sinceId > $phpVersionFrom) {
+					$oldStmts[] = $stmt;
+					continue;
+				}
+			}
+			$untilId = null;
+			if ($until !== null) {
+				$parts = explode('.', $until->args[0]->value->value);
+				$untilId = ((int) $parts[0] * 10000 + (int) ($parts[1] ?? 0) * 100 + (int) ($parts[2] ?? 99)) - 100;
+				if ($untilId < $phpVersionFrom) {
+					$oldStmts[] = $stmt;
+					continue;
+				}
+			}
+
+			$newStmts[] = $stmt;
+		}
+
+		return [$oldStmts, $newStmts];
+	}
+
 	/** @return Node\Stmt[] */
-	private function compareStatements(Node\Stmt $old, Node\Stmt $new, string $updateTo): array
+	private function compareStatements(Node\Stmt $old, Node\Stmt $new, string $updateFrom, string $updateTo): array
 	{
 		if ($old instanceof Node\Stmt\Namespace_ && $new instanceof Node\Stmt\Namespace_) {
 			if ($old->name->toString() !== $new->name->toString()) {
 				throw new \LogicException('Namespace name changed');
 			}
 
-			return [new Node\Stmt\Namespace_($old->name, $this->compareStatementsInNamespace($old->stmts, $new->stmts, $updateTo))];
+			return [new Node\Stmt\Namespace_($old->name, $this->compareStatementsInNamespace($old->stmts, $new->stmts, $updateFrom, $updateTo))];
 		} elseif (!$old instanceof Node\Stmt\Namespace_ && !$new instanceof Node\Stmt\Namespace_) {
-			return $this->compareStatementsInNamespace([$old], [$new], $updateTo);
+			return $this->compareStatementsInNamespace([$old], [$new], $updateFrom, $updateTo);
 		}
 
 		throw new \LogicException('Something about a namespace changed');
@@ -345,8 +416,9 @@ $command = new class(
 	 * @param Node\Stmt[] $newStmts
 	 * @return Node\Stmt[]
 	 */
-	private function compareStatementsInNamespace(array $oldStmts, array $newStmts, string $updateTo): array
+	private function compareStatementsInNamespace(array $oldStmts, array $newStmts, string $updateFrom, string $updateTo): array
 	{
+		[$untouchedStmts, $oldStmts] = $this->filterStatementsByVersion($oldStmts, $updateFrom);
 		if (count($oldStmts) !== 1 || count($newStmts) !== 1) {
 			throw new \LogicException('There is supposed to be one statement in the AST');
 		}
@@ -358,9 +430,10 @@ $command = new class(
 			if ($old->namespacedName->toString() !== $new->namespacedName->toString()) {
 				throw new \LogicException('Classname changed');
 			}
-			$new->stmts = array_filter($new->stmts, fn (Node\Stmt $stmt) => $stmt instanceof Node\Stmt\ClassMethod);
+			$newMethods = array_filter($new->stmts, fn (Node\Stmt $stmt) => $stmt instanceof Node\Stmt\ClassMethod);
+			[$untouchedStmts, $oldMethodsStmt] = $this->filterStatementsByVersion($old->stmts, $updateFrom);
 			$oldMethods = [];
-			foreach ($old->stmts as $stmt) {
+			foreach ($oldMethodsStmt as $stmt) {
 				if (!$stmt instanceof Node\Stmt\ClassMethod) {
 					continue;
 				}
@@ -368,17 +441,18 @@ $command = new class(
 				$oldMethods[$stmt->name->toLowerString()] = $stmt;
 			}
 
-			if ($new->stmts !== null) {
-				$newStmtsToSet = [];
-				foreach ($new->stmts as $i => $stmt) {
+			if ($old->stmts !== null) {
+				$newStmtsToSet = $untouchedStmts;
+				foreach ($newMethods as $stmt) {
 					$methodName = $stmt->name->toLowerString();
 					if (!array_key_exists($methodName, $oldMethods)) {
-						$new->stmts[$i]->attrGroups[] = new Node\AttributeGroup([
+						$stmt->attrGroups[] = new Node\AttributeGroup([
 							new Node\Attribute(
 								new Node\Name\FullyQualified('Since'),
 								[new Node\Arg(new Node\Scalar\String_($updateTo))],
 							),
 						]);
+						$newStmtsToSet[] = $stmt;
 						continue;
 					}
 
@@ -389,10 +463,10 @@ $command = new class(
 
 				// todo has a method been removed?
 
-				$new->stmts = $newStmtsToSet;
+				$old->stmts = $newStmtsToSet;
 			}
 
-			return [$new];
+			return [$old];
 		}
 
 		if ($old instanceof Node\Stmt\Function_ && $new instanceof Node\Stmt\Function_) {
@@ -416,14 +490,14 @@ $command = new class(
 				if ($old->getDocComment() !== null) {
 					$oldPhpDocNode = $this->parseDocComment($old->getDocComment()->getText());
 					$oldPhpDocReturn = $this->findPhpDocReturn($oldPhpDocNode);
-					if ($oldPhpDocNode !== null) {
+					if ($oldPhpDocReturn !== null) {
 						$newPhpDocNode = $this->parseDocComment($new->getDocComment()->getText());
 						$newPhpDocReturn = $this->findPhpDocReturn($newPhpDocNode);
 						if ($newPhpDocReturn === null) {
 							$children = $newPhpDocNode->children;
 							$children[] = new PhpDocTagNode('@return', $oldPhpDocReturn);
 							$newPhpDocNodeWithReturn = new PhpDocNode($children);
-							$new->setDocComment(new Comment\Doc((string) $newPhpDocNodeWithReturn));
+							$old->setDocComment(new Comment\Doc((string) $newPhpDocNodeWithReturn));
 						}
 					}
 				}
@@ -492,15 +566,15 @@ $command = new class(
 						return !$child->value instanceof ReturnTagValueNode;
 					})));
 					if (count($newPhpDocNodeWithoutReturn->children) === 0) {
-						$new->setAttribute('comments', []);
+						$old->setAttribute('comments', []);
 					} else {
-						$new->setDocComment(new Comment\Doc((string) $newPhpDocNodeWithoutReturn));
+						$old->setDocComment(new Comment\Doc((string) $newPhpDocNodeWithoutReturn));
 					}
 				}
 			}
 		}
 
-		return [$new];
+		return [$old];
 	}
 
 	/**
@@ -654,13 +728,26 @@ class Php8StubsMap
 	{
 		$classes = %s;
 		$functions = %s;
-		%s
+		// UPDATE BELONGS HERE
 		$this->classes = $classes;
 		$this->functions = $functions;
 	}
 
 }
 PHP;
+
+		if ($updateTo === null) {
+			file_put_contents(
+				__DIR__ . '/../Php8StubsMap.php',
+				sprintf(
+					$template,
+					var_export($classes, true),
+					var_export($functions, true),
+				),
+			);
+			return;
+		}
+
 		$updateTemplate = <<<'PHP'
 if ($phpVersionId >= %d) {
 	$classes = \array_merge($classes, %s);
@@ -670,25 +757,21 @@ if ($phpVersionId >= %d) {
 // UPDATE BELONGS HERE
 PHP;
 
-		$phpVersion = null;
-		if ($updateTo !== null) {
-			$parts = explode('.', $updateTo);
-			$phpVersion = (int) $parts[0] * 10000 + (int) ($parts[1] ?? 0) * 100 + (int) ($parts[2] ?? 0);
-		}
+		$parts = explode('.', $updateTo);
+		$phpVersion = (int) $parts[0] * 10000 + (int) ($parts[1] ?? 0) * 100 + (int) ($parts[2] ?? 0);
+		$updateString = sprintf(
+			$updateTemplate,
+			$phpVersion,
+			var_export($addClasses, true),
+			var_export($addFunctions, true)
+		);
+
+		$currentMap = file_get_contents(__DIR__ . '/../Php8StubsMap.php');
+		$newMap = str_replace('// UPDATE BELONGS HERE', $updateString, $currentMap);
 
 		file_put_contents(
 			__DIR__ . '/../Php8StubsMap.php',
-			sprintf(
-				$template,
-				var_export($classes, true),
-				var_export($functions, true),
-				$phpVersion === null ? '// UPDATE BELONGS HERE' : sprintf(
-					$updateTemplate,
-					$phpVersion,
-					var_export($addClasses, true),
-					var_export($addFunctions, true)
-				)
-			),
+			$newMap,
 		);
 	}
 
