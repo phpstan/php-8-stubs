@@ -1,9 +1,12 @@
 <?php 
 
-/** @generate-class-entries */
-/** @not-serializable */
+/** @generate-function-entries */
 class PDO
 {
+    #[\Until('8.1')]
+    public function setAttribute(int $attribute, mixed $value)
+    {
+    }
     public function __construct(string $dsn, ?string $username = null, ?string $password = null, ?array $options = null)
     {
     }
@@ -96,10 +99,6 @@ class PDO
      * @return bool
      */
     public function rollBack()
-    {
-    }
-    #[\Until('8.1')]
-    public function setAttribute(int $attribute, mixed $value)
     {
     }
     #[\Since('8.1')]

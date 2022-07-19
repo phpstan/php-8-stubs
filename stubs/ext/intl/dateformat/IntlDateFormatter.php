@@ -1,6 +1,6 @@
 <?php 
 
-/** @generate-class-entries */
+/** @generate-function-entries */
 class IntlDateFormatter
 {
     /**
@@ -9,6 +9,16 @@ class IntlDateFormatter
      */
     #[\Until('8.1')]
     public function __construct(?string $locale, int $dateType, int $timeType, $timezone = null, $calendar = null, ?string $pattern = null)
+    {
+    }
+    /**
+     * @param (IntlTimeZone | DateTimeZone | string | null) $timezone
+     * @tentative-return-type
+     * @alias datefmt_create
+     * @return (IntlDateFormatter | null)
+     */
+    #[\Until('8.1')]
+    public static function create(?string $locale, int $dateType, int $timeType, $timezone = null, IntlCalendar|int|null $calendar = null, ?string $pattern = null)
     {
     }
     /**
@@ -21,18 +31,8 @@ class IntlDateFormatter
     }
     /**
      * @param IntlTimeZone|DateTimeZone|string|null $timezone
-     * @return IntlDateFormatter|null
-     * @alias datefmt_create
-     */
-    #[\Until('8.1')]
-    public static function create(?string $locale, int $dateType, int $timeType, $timezone = null, IntlCalendar|int|null $calendar = null, ?string $pattern = null)
-    {
-    }
-    /**
-     * @param (IntlTimeZone | DateTimeZone | string | null) $timezone
      * @tentative-return-type
      * @alias datefmt_create
-     * @return (IntlDateFormatter | null)
      */
     #[\Since('8.1')]
     public static function create(?string $locale, int $dateType = IntlDateFormatter::FULL, int $timeType = IntlDateFormatter::FULL, $timezone = null, IntlCalendar|int|null $calendar = null, ?string $pattern = null)
@@ -103,7 +103,6 @@ class IntlDateFormatter
     public function setTimeZone($timezone)
     {
     }
-    // TODO return true on success
     /**
      * @tentative-return-type
      * @alias datefmt_set_pattern
@@ -174,8 +173,7 @@ class IntlDateFormatter
     }
     /**
      * @param int $offset
-     * @return array<string, int>|false
-     * @tentative-return-type
+     * @return array|false
      * @alias datefmt_localtime
      */
     public function localtime(string $string, &$offset = null)

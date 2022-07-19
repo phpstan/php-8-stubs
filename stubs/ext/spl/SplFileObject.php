@@ -3,6 +3,14 @@
 #endif
 class SplFileObject extends \SplFileInfo implements \RecursiveIterator, \SeekableIterator
 {
+    /**
+     * @tentative-return-type
+     * @return (int | false)
+     */
+    #[\Until('8.1')]
+    public function fputcsv(array $fields, string $separator = ",", string $enclosure = "\"", string $escape = "\\")
+    {
+    }
     /** @param resource|null $context */
     public function __construct(string $filename, string $mode = "r", bool $useIncludePath = false, $context = null)
     {
@@ -49,15 +57,7 @@ class SplFileObject extends \SplFileInfo implements \RecursiveIterator, \Seekabl
     public function fgetcsv(string $separator = ",", string $enclosure = "\"", string $escape = "\\")
     {
     }
-    /** @return int|false */
-    #[\Until('8.1')]
-    public function fputcsv(array $fields, string $separator = ",", string $enclosure = "\"", string $escape = "\\")
-    {
-    }
-    /**
-     * @tentative-return-type
-     * @return (int | false)
-     */
+    /** @tentative-return-type */
     #[\Since('8.1')]
     public function fputcsv(array $fields, string $separator = ",", string $enclosure = "\"", string $escape = "\\", string $eol = "\n")
     {

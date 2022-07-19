@@ -1,7 +1,6 @@
 <?php 
 
-/** @generate-class-entries */
-/** @not-serializable */
+/** @generate-function-entries */
 class finfo
 {
     /** @alias finfo_open */

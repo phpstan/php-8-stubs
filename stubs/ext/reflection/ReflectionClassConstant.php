@@ -1,6 +1,5 @@
 <?php 
 
-/** @not-serializable */
 class ReflectionClassConstant implements \Reflector
 {
     /** @implementation-alias ReflectionClass::__clone */
@@ -54,6 +53,10 @@ class ReflectionClassConstant implements \Reflector
     public function isProtected()
     {
     }
+    #[\Since('8.1')]
+    public function isFinal() : bool
+    {
+    }
     /**
      * @tentative-return-type
      * @return int
@@ -75,7 +78,12 @@ class ReflectionClassConstant implements \Reflector
     public function getDocComment()
     {
     }
+    /** @return ReflectionAttribute[] */
     public function getAttributes(?string $name = null, int $flags = 0) : array
+    {
+    }
+    #[\Since('8.1')]
+    public function isEnumCase() : bool
     {
     }
 }

@@ -1,6 +1,6 @@
 <?php 
 
-/** @return callable|null */
+/** @return string|array|object|null */
 function set_exception_handler(?callable $callback)
 {
 }

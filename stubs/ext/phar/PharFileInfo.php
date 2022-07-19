@@ -19,17 +19,14 @@ class PharFileInfo extends \SplFileInfo
     public function compress(int $compression)
     {
     }
-    // TODO make return type void
     /** @return bool */
     public function decompress()
     {
     }
-    // TODO make return type void
     /** @return bool */
     public function delMetadata()
     {
     }
-    // TODO make return type void
     /**
      * @tentative-return-type
      * @return int

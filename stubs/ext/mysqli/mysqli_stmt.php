@@ -2,6 +2,15 @@
 
 class mysqli_stmt
 {
+    /**
+     * @tentative-return-type
+     * @alias mysqli_stmt_execute
+     * @return bool
+     */
+    #[\Until('8.1')]
+    public function execute()
+    {
+    }
     public function __construct(mysqli $mysql, ?string $query = null)
     {
     }
@@ -38,14 +47,12 @@ class mysqli_stmt
     {
     }
     /**
-     * @return true
+     * @return bool
      * @alias mysqli_stmt_close
-     * @no-verify
      */
     public function close()
     {
     }
-    // TODO make return type void
     /**
      * @tentative-return-type
      * @alias mysqli_stmt_data_seek
@@ -55,17 +62,8 @@ class mysqli_stmt
     {
     }
     /**
-     * @return bool
-     * @alias mysqli_stmt_execute
-     */
-    #[\Until('8.1')]
-    public function execute()
-    {
-    }
-    /**
      * @tentative-return-type
      * @alias mysqli_stmt_execute
-     * @return bool
      */
     #[\Since('8.1')]
     public function execute(?array $params = null)
@@ -104,7 +102,6 @@ class mysqli_stmt
     public function more_results()
     {
     }
-    #endif
     /**
      * @tentative-return-type
      * @alias mysqli_stmt_next_result
@@ -113,6 +110,7 @@ class mysqli_stmt
     public function next_result()
     {
     }
+    #endif
     /**
      * @tentative-return-type
      * @alias mysqli_stmt_num_rows

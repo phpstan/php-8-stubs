@@ -2708,6 +2708,47 @@ class Php8StubsMap
 ));
 }
 
+if ($phpVersionId >= 80200) {
+	$classes = \array_merge($classes, array (
+  'random\\engine\\mt19937' => 'stubs/ext/random/Random/Engine/Mt19937.php',
+  'random\\engine\\pcgoneseq128xslrr64' => 'stubs/ext/random/Random/Engine/PcgOneseq128XslRr64.php',
+  'random\\engine\\xoshiro256starstar' => 'stubs/ext/random/Random/Engine/Xoshiro256StarStar.php',
+  'random\\engine\\secure' => 'stubs/ext/random/Random/Engine/Secure.php',
+  'random\\engine' => 'stubs/ext/random/Random/Engine.php',
+  'random\\cryptosafeengine' => 'stubs/ext/random/Random/CryptoSafeEngine.php',
+  'random\\randomizer' => 'stubs/ext/random/Random/Randomizer.php',
+  'zendtestforbiddynamiccall' => 'stubs/ext/zend_test/ZendTestForbidDynamicCall.php',
+  'allowdynamicproperties' => 'stubs/Zend/AllowDynamicProperties.php',
+  'sensitiveparameter' => 'stubs/Zend/SensitiveParameter.php',
+  'sensitiveparametervalue' => 'stubs/Zend/SensitiveParameterValue.php',
+));
+	$functions = \array_merge($functions, array (
+  'sodium_crypto_stream_xchacha20_xor_ic' => 'stubs/ext/sodium/sodium_crypto_stream_xchacha20_xor_ic.php',
+  'lcg_value' => 'stubs/ext/random/lcg_value.php',
+  'mt_srand' => 'stubs/ext/random/mt_srand.php',
+  'srand' => 'stubs/ext/random/srand.php',
+  'rand' => 'stubs/ext/random/rand.php',
+  'mt_rand' => 'stubs/ext/random/mt_rand.php',
+  'mt_getrandmax' => 'stubs/ext/random/mt_getrandmax.php',
+  'getrandmax' => 'stubs/ext/random/getrandmax.php',
+  'random_bytes' => 'stubs/ext/random/random_bytes.php',
+  'random_int' => 'stubs/ext/random/random_int.php',
+  'curl_upkeep' => 'stubs/ext/curl/curl_upkeep.php',
+  'mysqli_execute_query' => 'stubs/ext/mysqli/mysqli_execute_query.php',
+  'oci_set_prefetch_lob' => 'stubs/ext/oci8/oci_set_prefetch_lob.php',
+  'odbc_connection_string_is_quoted' => 'stubs/ext/odbc/odbc_connection_string_is_quoted.php',
+  'odbc_connection_string_should_quote' => 'stubs/ext/odbc/odbc_connection_string_should_quote.php',
+  'odbc_connection_string_quote' => 'stubs/ext/odbc/odbc_connection_string_quote.php',
+  'ini_parse_quantity' => 'stubs/ext/standard/ini_parse_quantity.php',
+  'memory_reset_peak_usage' => 'stubs/ext/standard/memory_reset_peak_usage.php',
+  'pcntl_forkx' => 'stubs/ext/pcntl/pcntl_forkx.php',
+  'zendtestintenum' => 'stubs/ext/zend_test/ZendTestIntEnum.php',
+  'zend_test_compile_string' => 'stubs/ext/zend_test/zend_test_compile_string.php',
+  'zend_test_zend_ini_parse_quantity' => 'stubs/ext/zend_test/zend_test_zend_ini_parse_quantity.php',
+  'zend_test_zend_ini_parse_uquantity' => 'stubs/ext/zend_test/zend_test_zend_ini_parse_uquantity.php',
+));
+}
+
 // UPDATE BELONGS HERE
 		$this->classes = $classes;
 		$this->functions = $functions;

@@ -1,7 +1,6 @@
 <?php 
 
-/** @not-serializable */
-class ReflectionAttribute implements \Reflector
+class ReflectionAttribute
 {
     public function getName() : string
     {
@@ -16,6 +15,10 @@ class ReflectionAttribute implements \Reflector
     {
     }
     public function newInstance() : object
+    {
+    }
+    #[\Since('8.1')]
+    public function __toString() : string
     {
     }
     private function __clone() : void

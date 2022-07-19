@@ -1,6 +1,5 @@
 <?php 
 
-/** @not-serializable */
 class DOMNode
 {
     /** @return DOMNode|false */

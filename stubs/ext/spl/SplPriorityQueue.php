@@ -1,6 +1,6 @@
 <?php 
 
-/** @generate-class-entries */
+/** @generate-function-entries */
 class SplPriorityQueue implements \Iterator, \Countable
 {
     /**
@@ -14,7 +14,6 @@ class SplPriorityQueue implements \Iterator, \Countable
     public function insert(mixed $value, mixed $priority)
     {
     }
-    // TODO make return type void
     /**
      * @tentative-return-type
      * @return int
@@ -98,7 +97,6 @@ class SplPriorityQueue implements \Iterator, \Countable
     public function recoverFromCorruption()
     {
     }
-    // TODO make return type void
     /**
      * @tentative-return-type
      * @implementation-alias SplHeap::isCorrupted

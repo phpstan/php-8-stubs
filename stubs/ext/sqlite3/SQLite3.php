@@ -1,13 +1,9 @@
 <?php 
 
-/** @generate-class-entries */
-/** @not-serializable */
+/** @generate-function-entries */
 class SQLite3
 {
-    /**
-     * @implementation-alias SQLite3::open
-     * @no-verify SQLite3::open should really be static
-     */
+    /** @implementation-alias SQLite3::open */
     public function __construct(string $filename, int $flags = SQLITE3_OPEN_READWRITE | SQLITE3_OPEN_CREATE, string $encryptionKey = "")
     {
     }
@@ -22,7 +18,6 @@ class SQLite3
     public function close()
     {
     }
-    // TODO make return type void
     /**
      * @tentative-return-type
      * @return array

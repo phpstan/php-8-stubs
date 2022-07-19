@@ -1,6 +1,5 @@
 <?php 
 
-/** @not-serializable */
 abstract class ReflectionType implements \Stringable
 {
     /** @implementation-alias ReflectionClass::__clone */

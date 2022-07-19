@@ -77,7 +77,6 @@ class DOMElement extends \DOMNode implements \DOMParentNode, \DOMChildNode
     public function setAttribute(string $qualifiedName, string $value)
     {
     }
-    // TODO return type shouldn't depend on the call scope
     /**
      * @tentative-return-type
      * @return void

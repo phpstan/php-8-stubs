@@ -99,6 +99,10 @@ class ReflectionMethod extends \ReflectionFunctionAbstract
     public function getPrototype()
     {
     }
+    #[\Since('8.2')]
+    public function hasPrototype() : bool
+    {
+    }
     /**
      * @tentative-return-type
      * @return void

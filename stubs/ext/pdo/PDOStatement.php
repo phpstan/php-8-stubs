@@ -1,7 +1,6 @@
 <?php 
 
-/** @generate-class-entries */
-/** @not-serializable */
+/** @generate-function-entries */
 class PDOStatement implements \IteratorAggregate
 {
     /**
@@ -134,7 +133,6 @@ class PDOStatement implements \IteratorAggregate
     public function setFetchMode(int $mode, mixed ...$args)
     {
     }
-    // TODO make return type void
     public function getIterator() : Iterator
     {
     }

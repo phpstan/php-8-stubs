@@ -1,8 +1,7 @@
 <?php 
 
-/** @generate-class-entries */
-/** @not-serializable */
-class SplFileInfo implements \Stringable
+/** @generate-function-entries */
+class SplFileInfo
 {
     public function __construct(string $filename)
     {
@@ -209,6 +208,7 @@ class SplFileInfo implements \Stringable
     {
     }
     /**
+     * @deprecated
      * @tentative-return-type
      * @return void
      */

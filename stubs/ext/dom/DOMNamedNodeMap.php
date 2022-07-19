@@ -9,7 +9,6 @@ class DOMNamedNodeMap implements \IteratorAggregate, \Countable
     public function getNamedItem(string $qualifiedName)
     {
     }
-    // TODO DOM spec returns DOMAttr
     /**
      * @tentative-return-type
      * @return (DOMNode | null)
@@ -17,7 +16,6 @@ class DOMNamedNodeMap implements \IteratorAggregate, \Countable
     public function getNamedItemNS(?string $namespace, string $localName)
     {
     }
-    // TODO DOM spec returns DOMAttr
     /**
      * @tentative-return-type
      * @return (DOMNode | null)
@@ -25,7 +23,6 @@ class DOMNamedNodeMap implements \IteratorAggregate, \Countable
     public function item(int $index)
     {
     }
-    // TODO DOM spec returns DOMAttr
     /**
      * @tentative-return-type
      * @return (int | false)

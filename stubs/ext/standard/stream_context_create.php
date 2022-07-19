@@ -1,9 +1,6 @@
 <?php 
 
-/**
- * @return resource
- * @refcount 1
- */
+/** @return resource */
 function stream_context_create(?array $options = null, ?array $params = null)
 {
 }

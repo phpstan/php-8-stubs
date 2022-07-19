@@ -1,6 +1,6 @@
 <?php 
 
-/** @generate-class-entries */
+/** @generate-function-entries */
 function readline(?string $prompt = null) : string|false
 {
 }

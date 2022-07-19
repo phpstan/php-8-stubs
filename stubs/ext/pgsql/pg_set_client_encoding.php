@@ -1,6 +1,6 @@
 <?php 
 
-/** @param PgSql\Connection|string $connection */
+/** @param resource|string $connection */
 function pg_set_client_encoding($connection, string $encoding = UNKNOWN) : int
 {
 }

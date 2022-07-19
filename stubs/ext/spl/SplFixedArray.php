@@ -1,7 +1,7 @@
 <?php 
 
-/** @generate-class-entries */
-class SplFixedArray implements \IteratorAggregate, \ArrayAccess, \Countable, \JsonSerializable
+/** @generate-function-entries */
+class SplFixedArray implements \IteratorAggregate, \ArrayAccess, \Countable
 {
     public function __construct(int $size = 0)
     {
@@ -45,7 +45,6 @@ class SplFixedArray implements \IteratorAggregate, \ArrayAccess, \Countable, \Js
     public function setSize(int $size)
     {
     }
-    // TODO make return type void
     /**
      * @param int $index
      * @tentative-return-type
@@ -79,6 +78,10 @@ class SplFixedArray implements \IteratorAggregate, \ArrayAccess, \Countable, \Js
     {
     }
     public function getIterator() : Iterator
+    {
+    }
+    #[\Since('8.1')]
+    public function jsonSerialize() : array
     {
     }
 }

@@ -1,5 +1,7 @@
 <?php 
 
+// NB: Adding return types to methods is a BC break!
+// For now only using @return annotations here.
 interface DateTimeInterface
 {
     /**
@@ -32,4 +34,8 @@ interface DateTimeInterface
      * @return void
      */
     public function __wakeup();
+    #[\Since('8.2')]
+    public function __serialize() : array;
+    #[\Since('8.2')]
+    public function __unserialize(array $data) : void;
 }

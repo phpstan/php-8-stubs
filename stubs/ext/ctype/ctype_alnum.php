@@ -1,6 +1,6 @@
 <?php 
 
-/** @generate-class-entries */
+/** @generate-function-entries */
 function ctype_alnum(mixed $text) : bool
 {
 }

@@ -1,6 +1,6 @@
 <?php 
 
-/** @generate-class-entries */
+/** @generate-function-entries */
 class IntlCalendar
 {
     private function __construct()
@@ -62,7 +62,6 @@ class IntlCalendar
     public function clear(?int $field = null)
     {
     }
-    // TODO make return type void
     /**
      * @tentative-return-type
      * @alias intlcal_from_date_time
@@ -96,8 +95,7 @@ class IntlCalendar
     {
     }
     /**
-     * @return array<int, string>
-     * @tentative-return-type
+     * @return array
      * @alias intlcal_get_available_locales
      */
     public static function getAvailableLocales()
@@ -190,7 +188,6 @@ class IntlCalendar
     public function setMinimalDaysInFirstWeek(int $days)
     {
     }
-    // TODO make return void
     /**
      * @tentative-return-type
      * @alias intlcal_get_minimum
@@ -311,7 +308,6 @@ class IntlCalendar
     public function set(int $year, int $month, int $dayOfMonth = UNKNOWN, int $hour = UNKNOWN, int $minute = UNKNOWN, int $second = UNKNOWN)
     {
     }
-    // TODO make return type void
     /**
      * @return bool
      * @alias intlcal_set_first_day_of_week
@@ -319,7 +315,6 @@ class IntlCalendar
     public function setFirstDayOfWeek(int $dayOfWeek)
     {
     }
-    // TODO make return type void
     /**
      * @return bool
      * @alias intlcal_set_lenient
@@ -327,7 +322,6 @@ class IntlCalendar
     public function setLenient(bool $lenient)
     {
     }
-    // TODO make return type void
     /**
      * @return bool
      * @alias intlcal_set_repeated_wall_time_option
@@ -335,7 +329,6 @@ class IntlCalendar
     public function setRepeatedWallTimeOption(int $option)
     {
     }
-    // TODO make return type void
     /**
      * @return bool
      * @alias intlcal_set_skipped_wall_time_option
@@ -343,7 +336,6 @@ class IntlCalendar
     public function setSkippedWallTimeOption(int $option)
     {
     }
-    // TODO make return type void
     /**
      * @tentative-return-type
      * @alias intlcal_set_time

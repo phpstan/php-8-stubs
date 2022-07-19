@@ -1,6 +1,5 @@
 <?php 
 
-/** @generate-class-entries */
 class IntlPartsIterator extends \IntlIterator
 {
     /**
@@ -8,6 +7,11 @@ class IntlPartsIterator extends \IntlIterator
      * @return IntlBreakIterator
      */
     public function getBreakIterator()
+    {
+    }
+    /** @tentative-return-type */
+    #[\Since('8.1')]
+    public function getRuleStatus() : int
     {
     }
 }

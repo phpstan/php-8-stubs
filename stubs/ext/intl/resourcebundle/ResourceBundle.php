@@ -1,6 +1,6 @@
 <?php 
 
-/** @generate-class-entries */
+/** @generate-function-entries */
 class ResourceBundle implements \IteratorAggregate, \Countable
 {
     public function __construct(?string $locale, ?string $bundle, bool $fallback = true)
@@ -32,8 +32,7 @@ class ResourceBundle implements \IteratorAggregate, \Countable
     {
     }
     /**
-     * @return array<int, string>|false
-     * @tentative-return-type
+     * @return array|false
      * @alias resourcebundle_locales
      */
     public static function getLocales(string $bundle)

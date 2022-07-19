@@ -22,35 +22,39 @@ class DateTimeZone
     {
     }
     /**
-     * @return array<int, array>|false
-     * @tentative-return-type
+     * @return array|false
      * @alias timezone_transitions_get
      */
     public function getTransitions(int $timestampBegin = PHP_INT_MIN, int $timestampEnd = PHP_INT_MAX)
     {
     }
     /**
-     * @return array<string, float|string>|false
-     * @tentative-return-type
+     * @return array|false
      * @alias timezone_location_get
      */
     public function getLocation()
     {
     }
     /**
-     * @return array<string, array>
-     * @tentative-return-type
+     * @return array
      * @alias timezone_abbreviations_list
      */
     public static function listAbbreviations()
     {
     }
     /**
-     * @return array<int, string>
-     * @tentative-return-type
+     * @return array
      * @alias timezone_identifiers_list
      */
     public static function listIdentifiers(int $timezoneGroup = DateTimeZone::ALL, ?string $countryCode = null)
+    {
+    }
+    #[\Since('8.2')]
+    public function __serialize() : array
+    {
+    }
+    #[\Since('8.2')]
+    public function __unserialize(array $data) : void
     {
     }
     /**

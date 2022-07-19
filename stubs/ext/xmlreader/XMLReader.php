@@ -1,13 +1,12 @@
 <?php 
 
-/** @generate-class-entries */
+/** @generate-function-entries */
 class XMLReader
 {
     /** @return bool */
     public function close()
     {
     }
-    // TODO make the return type void
     /**
      * @tentative-return-type
      * @return (string | null)
@@ -110,7 +109,6 @@ class XMLReader
     public static function open(string $uri, ?string $encoding = null, int $flags = 0)
     {
     }
-    // TODO Return type shouldn't be dependent on the call scope
     /**
      * @tentative-return-type
      * @return string
@@ -164,7 +162,6 @@ class XMLReader
     public static function XML(string $source, ?string $encoding = null, int $flags = 0)
     {
     }
-    // TODO Return type shouldn't be dependent on the call scope
     /**
      * @tentative-return-type
      * @return (DOMNode | false)

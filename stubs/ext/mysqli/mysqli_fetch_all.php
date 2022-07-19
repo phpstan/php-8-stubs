@@ -1,5 +1,6 @@
 <?php 
 
+#if defined(MYSQLI_USE_MYSQLND)
 /**
  * @refcount 1
  */

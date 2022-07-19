@@ -5,6 +5,14 @@ class DateTime implements \DateTimeInterface
     public function __construct(string $datetime = "now", ?DateTimeZone $timezone = null)
     {
     }
+    #[\Since('8.2')]
+    public function __serialize() : array
+    {
+    }
+    #[\Since('8.2')]
+    public function __unserialize(array $data) : void
+    {
+    }
     /**
      * @tentative-return-type
      * @return void
@@ -38,8 +46,7 @@ class DateTime implements \DateTimeInterface
     {
     }
     /**
-     * @return array<string, int|array>|false
-     * @tentative-return-type
+     * @return array|false
      * @alias date_get_last_errors
      */
     public static function getLastErrors()

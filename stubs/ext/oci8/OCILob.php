@@ -116,7 +116,7 @@ class OCILob
     }
     /**
      * @alias oci_lob_flush
-     * @tentative-return-type
+     * @return bool
      */
     public function flush(int $flag = 0) : bool
     {

@@ -1,6 +1,6 @@
 <?php 
 
-/** @generate-class-entries */
+/** @generate-function-entries */
 class Collator
 {
     public function __construct(string $locale)
@@ -77,7 +77,6 @@ class Collator
     public function setStrength(int $strength)
     {
     }
-    // TODO make return type void
     /**
      * @tentative-return-type
      * @alias collator_get_locale

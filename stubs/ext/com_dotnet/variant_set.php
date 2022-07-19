@@ -1,6 +1,6 @@
 <?php 
 
-/** @generate-class-entries */
+/** @generate-function-entries */
 function variant_set(\variant $variant, mixed $value) : void
 {
 }

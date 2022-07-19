@@ -1,6 +1,6 @@
 <?php 
 
-/** @generate-class-entries */
+/** @generate-function-entries */
 class DOMDocumentType extends \DOMNode
 {
 }

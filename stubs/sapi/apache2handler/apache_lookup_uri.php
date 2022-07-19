@@ -1,6 +1,6 @@
 <?php 
 
-/** @generate-class-entries */
+/** @generate-function-entries */
 function apache_lookup_uri(string $filename) : object|false
 {
 }

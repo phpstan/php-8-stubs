@@ -1,9 +1,6 @@
 <?php 
 
-/**
- * @return resource|false
- * @refcount 1
- */
+/** @return resource|false */
 function tmpfile()
 {
 }

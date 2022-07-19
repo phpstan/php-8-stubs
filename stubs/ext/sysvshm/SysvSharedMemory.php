@@ -1,10 +1,6 @@
 <?php 
 
-/** @generate-class-entries */
-/**
- * @strict-properties
- * @not-serializable
- */
+/** @generate-function-entries */
 final class SysvSharedMemory
 {
 }

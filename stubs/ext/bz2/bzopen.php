@@ -1,6 +1,6 @@
 <?php 
 
-/** @generate-class-entries */
+/** @generate-function-entries */
 /**
  * @param string|resource $file
  * @return resource|false

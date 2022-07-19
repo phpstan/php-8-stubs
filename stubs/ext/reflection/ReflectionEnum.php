@@ -18,7 +18,12 @@ class ReflectionEnum extends \ReflectionClass
     public function isBacked() : bool
     {
     }
+    #[\Until('8.2')]
     public function getBackingType() : ?ReflectionType
+    {
+    }
+    #[\Since('8.2')]
+    public function getBackingType() : ?ReflectionNamedType
     {
     }
 }

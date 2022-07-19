@@ -1,6 +1,5 @@
 <?php 
 
-/** @not-serializable */
 class SQLite3Stmt
 {
     private function __construct(SQLite3 $sqlite3, string $query)

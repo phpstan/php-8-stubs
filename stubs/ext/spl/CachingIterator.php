@@ -1,6 +1,6 @@
 <?php 
 
-class CachingIterator extends \IteratorIterator implements \ArrayAccess, \Countable, \Stringable
+class CachingIterator extends \IteratorIterator implements \ArrayAccess, \Countable
 {
     public function __construct(Iterator $iterator, int $flags = CachingIterator::CALL_TOSTRING)
     {

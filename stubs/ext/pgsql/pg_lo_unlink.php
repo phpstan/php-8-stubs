@@ -1,7 +1,7 @@
 <?php 
 
 /**
- * @param PgSql\Connection $connection
+ * @param resource $connection
  * @param string|int $oid
  */
 function pg_lo_unlink($connection, $oid = UNKNOWN) : bool

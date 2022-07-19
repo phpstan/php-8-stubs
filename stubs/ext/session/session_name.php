@@ -1,7 +1,6 @@
 <?php 
 
-/** @generate-class-entries */
-/** @refcount 1 */
+/** @generate-function-entries */
 function session_name(?string $name = null) : string|false
 {
 }

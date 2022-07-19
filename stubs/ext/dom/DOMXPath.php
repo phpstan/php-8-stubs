@@ -1,7 +1,6 @@
 <?php 
 
 #ifdef LIBXML_XPATH_ENABLED
-/** @not-serializable */
 class DOMXPath
 {
     public function __construct(DOMDocument $document, bool $registerNodeNS = true)

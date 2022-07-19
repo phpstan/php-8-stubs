@@ -1,7 +1,6 @@
 <?php 
 
-/** @generate-class-entries */
-/** @refcount 1 */
+/** @generate-function-entries */
 function bcadd(string $num1, string $num2, ?int $scale = null) : string
 {
 }

@@ -1,7 +1,7 @@
 <?php 
 
 /**
- * @param PgSql\Connection|string $connection
+ * @param resource|string $connection
  * @alias pg_set_client_encoding
  * @deprecated
  */

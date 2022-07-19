@@ -1,6 +1,5 @@
 <?php 
 
-/** @not-serializable */
 class ReflectionProperty implements \Reflector
 {
     /** @implementation-alias ReflectionClass::__clone */
@@ -75,6 +74,10 @@ class ReflectionProperty implements \Reflector
     public function isStatic()
     {
     }
+    #[\Since('8.1')]
+    public function isReadOnly() : bool
+    {
+    }
     /**
      * @tentative-return-type
      * @return bool
@@ -137,6 +140,7 @@ class ReflectionProperty implements \Reflector
     public function getDefaultValue()
     {
     }
+    /** @return ReflectionAttribute[] */
     public function getAttributes(?string $name = null, int $flags = 0) : array
     {
     }

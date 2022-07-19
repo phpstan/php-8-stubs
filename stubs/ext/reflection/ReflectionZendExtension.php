@@ -1,6 +1,5 @@
 <?php 
 
-/** @not-serializable */
 class ReflectionZendExtension implements \Reflector
 {
     /** @implementation-alias ReflectionClass::__clone */

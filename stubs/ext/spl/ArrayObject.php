@@ -1,6 +1,6 @@
 <?php 
 
-/** @generate-class-entries */
+/** @generate-function-entries */
 class ArrayObject implements \IteratorAggregate, \ArrayAccess, \Serializable, \Countable
 {
     public function __construct(array|object $array = [], int $flags = 0, string $iteratorClass = ArrayIterator::class)

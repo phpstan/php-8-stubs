@@ -1,6 +1,6 @@
 <?php 
 
-class ZipArchive implements \Countable
+class ZipArchive
 {
     /**
      * @tentative-return-type
@@ -35,6 +35,10 @@ class ZipArchive implements \Countable
      * @return string
      */
     public function getStatusString()
+    {
+    }
+    #[\Since('8.2')]
+    public function clearError() : void
     {
     }
     /**
@@ -243,6 +247,16 @@ class ZipArchive implements \Countable
     {
     }
     /** @return resource|false */
+    #[\Since('8.2')]
+    public function getStreamIndex(int $index, int $flags = 0)
+    {
+    }
+    /** @return resource|false */
+    #[\Since('8.2')]
+    public function getStreamName(string $name, int $flags = 0)
+    {
+    }
+    /** @return resource|false */
     public function getStream(string $name)
     {
     }
@@ -329,9 +343,11 @@ class ZipArchive implements \Countable
     }
     #endif
     #ifdef HAVE_METHOD_SUPPORTED
+    /** @return bool */
     public static function isCompressionMethodSupported(int $method, bool $enc = true) : bool
     {
     }
+    /** @return bool */
     public static function isEncryptionMethodSupported(int $method, bool $enc = true) : bool
     {
     }

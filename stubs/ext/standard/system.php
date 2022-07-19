@@ -1,9 +1,6 @@
 <?php 
 
-/**
- * @param int $result_code
- * @refcount 1
- */
+/** @param int $result_code */
 function system(string $command, &$result_code = null) : string|false
 {
 }

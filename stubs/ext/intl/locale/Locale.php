@@ -1,6 +1,6 @@
 <?php 
 
-/** @generate-class-entries */
+/** @generate-function-entries */
 class Locale
 {
     /**
@@ -18,7 +18,6 @@ class Locale
     public static function setDefault(string $locale)
     {
     }
-    // TODO make return type void
     /**
      * @tentative-return-type
      * @alias locale_get_primary_language
@@ -44,8 +43,7 @@ class Locale
     {
     }
     /**
-     * @return array<string, string>|false|null
-     * @tentative-return-type
+     * @return array|false|null
      * @alias locale_get_keywords
      */
     public static function getKeywords(string $locale)

@@ -1,6 +1,6 @@
 <?php 
 
-/** @generate-class-entries */
+/** @generate-function-entries */
 class MessageFormatter
 {
     public function __construct(string $locale, string $pattern)
@@ -31,16 +31,14 @@ class MessageFormatter
     {
     }
     /**
-     * @return array<int, int|float|string>|false
-     * @tentative-return-type
+     * @return array|false
      * @alias msgfmt_parse
      */
     public function parse(string $string)
     {
     }
     /**
-     * @return array<int, int|float|string>|false
-     * @tentative-return-type
+     * @return array|false
      * @alias msgfmt_parse_message
      */
     public static function parseMessage(string $locale, string $pattern, string $message)

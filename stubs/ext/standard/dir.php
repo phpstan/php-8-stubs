@@ -1,9 +1,6 @@
 <?php 
 
-/**
- * @param resource|null $context
- * @refcount 1
- */
+/** @param resource|null $context */
 function dir(string $directory, $context = null) : \Directory|false
 {
 }

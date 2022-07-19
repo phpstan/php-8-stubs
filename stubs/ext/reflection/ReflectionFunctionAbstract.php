@@ -1,6 +1,5 @@
 <?php 
 
-/** @not-serializable */
 abstract class ReflectionFunctionAbstract implements \Reflector
 {
     /** @implementation-alias ReflectionClass::__clone */
@@ -62,6 +61,11 @@ abstract class ReflectionFunctionAbstract implements \Reflector
     public function isVariadic()
     {
     }
+    /** @tentative-return-type */
+    #[\Since('8.1')]
+    public function isStatic() : bool
+    {
+    }
     /**
      * @tentative-return-type
      * @return (object | null)
@@ -74,6 +78,10 @@ abstract class ReflectionFunctionAbstract implements \Reflector
      * @return (ReflectionClass | null)
      */
     public function getClosureScopeClass()
+    {
+    }
+    #[\Since('8.1')]
+    public function getClosureUsedVariables() : array
     {
     }
     /**
@@ -188,6 +196,15 @@ abstract class ReflectionFunctionAbstract implements \Reflector
     public function getReturnType()
     {
     }
+    #[\Since('8.1')]
+    public function hasTentativeReturnType() : bool
+    {
+    }
+    #[\Since('8.1')]
+    public function getTentativeReturnType() : ?ReflectionType
+    {
+    }
+    /** @return ReflectionAttribute[] */
     public function getAttributes(?string $name = null, int $flags = 0) : array
     {
     }

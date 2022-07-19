@@ -1,6 +1,5 @@
 <?php 
 
-/** @not-serializable */
 class ReflectionParameter implements \Reflector
 {
     /** @implementation-alias ReflectionClass::__clone */
@@ -152,6 +151,7 @@ class ReflectionParameter implements \Reflector
     public function isPromoted() : bool
     {
     }
+    /** @return ReflectionAttribute[] */
     public function getAttributes(?string $name = null, int $flags = 0) : array
     {
     }

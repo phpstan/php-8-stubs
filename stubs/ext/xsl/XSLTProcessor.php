@@ -1,6 +1,6 @@
 <?php 
 
-/** @generate-class-entries */
+/** @generate-function-entries */
 class XSLTProcessor
 {
     /**
@@ -74,7 +74,6 @@ class XSLTProcessor
     public function setProfiling(?string $filename)
     {
     }
-    // TODO make the return type void
     /**
      * @tentative-return-type
      * @return int

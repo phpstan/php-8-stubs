@@ -1,6 +1,6 @@
 <?php 
 
-/** @generate-class-entries */
+/** @generate-function-entries */
 class UConverter
 {
     public function __construct(?string $destination_encoding = null, ?string $source_encoding = null)
@@ -21,17 +21,11 @@ class UConverter
     public function fromUCallback(int $reason, array $source, int $codePoint, &$error)
     {
     }
-    /**
-     * @return array<int, string>|false|null
-     * @tentative-return-type
-     */
+    /** @return array|false|null */
     public static function getAliases(string $name)
     {
     }
-    /**
-     * @return array<int, string>
-     * @tentative-return-type
-     */
+    /** @return array */
     public static function getAvailable()
     {
     }

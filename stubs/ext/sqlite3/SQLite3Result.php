@@ -1,6 +1,5 @@
 <?php 
 
-/** @not-serializable */
 class SQLite3Result
 {
     private function __construct()

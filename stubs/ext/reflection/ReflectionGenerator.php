@@ -1,6 +1,5 @@
 <?php 
 
-/** @not-serializable */
 final class ReflectionGenerator
 {
     public function __construct(Generator $generator)

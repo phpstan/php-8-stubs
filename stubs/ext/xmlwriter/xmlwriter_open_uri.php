@@ -1,6 +1,6 @@
 <?php 
 
-/** @generate-class-entries */
+/** @generate-function-entries */
 function xmlwriter_open_uri(string $uri) : \XMLWriter|false
 {
 }

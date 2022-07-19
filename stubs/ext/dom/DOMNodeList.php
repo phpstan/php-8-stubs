@@ -12,7 +12,7 @@ class DOMNodeList implements \IteratorAggregate, \Countable
     public function getIterator() : Iterator
     {
     }
-    /** @return DOMNode|DOMNameSpaceNode|null */
+    /** @return DOMNode|null */
     public function item(int $index)
     {
     }

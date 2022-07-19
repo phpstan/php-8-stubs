@@ -1,6 +1,6 @@
 <?php 
 
-/** @generate-class-entries */
+/** @generate-function-entries */
 function use_soap_error_handler(bool $enable = true) : bool
 {
 }

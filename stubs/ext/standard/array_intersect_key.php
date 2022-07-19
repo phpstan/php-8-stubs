@@ -1,6 +1,5 @@
 <?php 
 
-/** @refcount 1 */
 function array_intersect_key(array $array, array ...$arrays) : array
 {
 }

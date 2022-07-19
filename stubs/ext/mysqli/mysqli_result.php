@@ -38,8 +38,7 @@ class mysqli_result implements \IteratorAggregate
     {
     }
     /**
-     * @return array<int, object>
-     * @tentative-return-type
+     * @return array
      * @alias mysqli_fetch_fields
      */
     public function fetch_fields()
@@ -53,25 +52,24 @@ class mysqli_result implements \IteratorAggregate
     public function fetch_field_direct(int $index)
     {
     }
+    #if defined(MYSQLI_USE_MYSQLND)
     /**
-     * @return array<int|string, mixed>
-     * @tentative-return-type
+     * @return array
      * @alias mysqli_fetch_all
      */
     public function fetch_all(int $mode = MYSQLI_NUM)
     {
     }
+    #endif
     /**
-     * @return array<int|string, mixed>|null|false
-     * @tentative-return-type
+     * @return array|null|false
      * @alias mysqli_fetch_array
      */
     public function fetch_array(int $mode = MYSQLI_BOTH)
     {
     }
     /**
-     * @return array<int|string, mixed>|null|false
-     * @tentative-return-type
+     * @return array|null|false
      * @alias mysqli_fetch_assoc
      */
     public function fetch_assoc()
@@ -86,11 +84,15 @@ class mysqli_result implements \IteratorAggregate
     {
     }
     /**
-     * @return array<int, mixed>|null|false
-     * @tentative-return-type
+     * @return array|null|false
      * @alias mysqli_fetch_row
      */
     public function fetch_row()
+    {
+    }
+    /** @alias mysqli_fetch_column */
+    #[\Since('8.1')]
+    public function fetch_column(int $column = 0) : null|int|float|string|false
     {
     }
     /**
@@ -109,7 +111,5 @@ class mysqli_result implements \IteratorAggregate
     public function free_result()
     {
     }
-    public function getIterator() : Iterator
-    {
-    }
+    public function getIterator() : Iterator;
 }

@@ -38,14 +38,12 @@ class mysqli
     {
     }
     /**
-     * @return true
+     * @return bool
      * @alias mysqli_close
-     * @no-verify
      */
     public function close()
     {
     }
-    // TODO make return type void
     /**
      * @tentative-return-type
      * @alias mysqli_commit
@@ -72,20 +70,26 @@ class mysqli
     {
     }
     /**
-     * @return true
+     * @return bool
      * @alias mysqli_debug
      * @no-verify Should really be a static method
      */
     public function debug(string $options)
     {
     }
-    // TODO make return type void
     /**
      * @tentative-return-type
      * @alias mysqli_get_charset
      * @return (object | null)
      */
     public function get_charset()
+    {
+    }
+    /**
+     * @alias mysqli_execute_query
+     */
+    #[\Since('8.2')]
+    public function execute_query(string $query, ?array $params = null) : mysqli_result|bool
     {
     }
     /**
@@ -99,8 +103,7 @@ class mysqli
     }
     #if defined(MYSQLI_USE_MYSQLND)
     /**
-     * @return array<string, mixed>
-     * @tentative-return-type
+     * @return array
      * @alias mysqli_get_connection_stats
      */
     public function get_connection_stats()
@@ -124,9 +127,8 @@ class mysqli
     {
     }
     /**
-     * @deprecated
-     * @return bool|null
-     * */
+     * @return null|false
+     */
     public function init()
     {
     }
@@ -297,14 +299,12 @@ class mysqli
     {
     }
     /**
-     * @return true
+     * @return bool
      * @alias mysqli_ssl_set
-     * @no-verify
      */
     public function ssl_set(?string $key, ?string $certificate, ?string $ca_certificate, ?string $ca_path, ?string $cipher_algos)
     {
     }
-    // TODO make return type void
     /**
      * @tentative-return-type
      * @alias mysqli_stat

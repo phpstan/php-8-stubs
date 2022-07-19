@@ -1,6 +1,5 @@
 <?php 
 
-/** @not-serializable */
 class ReflectionClass implements \Reflector
 {
     #[\Until('8.1')]
@@ -220,6 +219,10 @@ class ReflectionClass implements \Reflector
     public function isTrait()
     {
     }
+    #[\Since('8.1')]
+    public function isEnum() : bool
+    {
+    }
     /**
      * @tentative-return-type
      * @return bool
@@ -232,6 +235,10 @@ class ReflectionClass implements \Reflector
      * @return bool
      */
     public function isFinal()
+    {
+    }
+    #[\Since('8.2')]
+    public function isReadOnly() : bool
     {
     }
     /**
@@ -368,6 +375,7 @@ class ReflectionClass implements \Reflector
     public function getShortName()
     {
     }
+    /** @return ReflectionAttribute[] */
     public function getAttributes(?string $name = null, int $flags = 0) : array
     {
     }

@@ -1,6 +1,6 @@
 <?php 
 
-/** @generate-class-entries */
+/** @generate-function-entries */
 class IntlChar
 {
     /**
@@ -80,7 +80,6 @@ class IntlChar
     public static function enumCharNames(int|string $start, int|string $end, callable $callback, int $type = IntlChar::UNICODE_CHAR_NAME)
     {
     }
-    // TODO return values just don't make sense
     /**
      * @tentative-return-type
      * @return void

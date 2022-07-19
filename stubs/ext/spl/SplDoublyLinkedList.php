@@ -1,6 +1,6 @@
 <?php 
 
-/** @generate-class-entries */
+/** @generate-function-entries */
 class SplDoublyLinkedList implements \Iterator, \Countable, \ArrayAccess, \Serializable
 {
     /**

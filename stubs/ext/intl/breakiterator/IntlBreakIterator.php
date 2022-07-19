@@ -1,6 +1,6 @@
 <?php 
 
-/** @generate-class-entries */
+/** @generate-function-entries */
 class IntlBreakIterator implements \IteratorAggregate
 {
     /**
@@ -146,7 +146,6 @@ class IntlBreakIterator implements \IteratorAggregate
     public function setText(string $text)
     {
     }
-    // TODO return false instead of null in case of failure
     public function getIterator() : Iterator
     {
     }

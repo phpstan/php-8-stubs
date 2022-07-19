@@ -54,7 +54,6 @@ class Phar extends \RecursiveDirectoryIterator implements \Countable, \ArrayAcce
     public function decompressFiles()
     {
     }
-    // TODO make return type void
     /**
      * @tentative-return-type
      * @return (Phar | null)
@@ -87,7 +86,6 @@ class Phar extends \RecursiveDirectoryIterator implements \Countable, \ArrayAcce
     public function copy(string $from, string $to)
     {
     }
-    // TODO make return type void
     /**
      * @tentative-return-type
      * @return int
@@ -99,12 +97,10 @@ class Phar extends \RecursiveDirectoryIterator implements \Countable, \ArrayAcce
     public function delete(string $localName)
     {
     }
-    // TODO make return type void
     /** @return bool */
     public function delMetadata()
     {
     }
-    // TODO make return type void
     /**
      * @tentative-return-type
      * @return bool
@@ -264,7 +260,6 @@ class Phar extends \RecursiveDirectoryIterator implements \Countable, \ArrayAcce
     public function setStub($stub, int $length = UNKNOWN)
     {
     }
-    // TODO make return type void
     /**
      * @tentative-return-type
      * @return void
@@ -321,7 +316,6 @@ class Phar extends \RecursiveDirectoryIterator implements \Countable, \ArrayAcce
     public static final function unlinkArchive(string $filename) : bool
     {
     }
-    // TODO make return type void
     public static final function webPhar(?string $alias = null, ?string $index = null, ?string $fileNotFoundScript = null, array $mimeTypes = [], ?callable $rewrite = null) : void
     {
     }

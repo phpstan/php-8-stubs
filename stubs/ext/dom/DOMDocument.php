@@ -83,12 +83,10 @@ class DOMDocument extends \DOMNode implements \DOMParentNode
     public function load(string $filename, int $options = 0)
     {
     }
-    // TODO return type shouldn't depend on the call scope
     /** @return DOMDocument|bool */
     public function loadXML(string $source, int $options = 0)
     {
     }
-    // TODO return type shouldn't depend on the call scope
     /**
      * @tentative-return-type
      * @return void
@@ -115,12 +113,10 @@ class DOMDocument extends \DOMNode implements \DOMParentNode
     public function loadHTML(string $source, int $options = 0)
     {
     }
-    // TODO return type shouldn't depend on the call scope
     /** @return DOMDocument|bool */
     public function loadHTMLFile(string $filename, int $options = 0)
     {
     }
-    // TODO return type shouldn't depend on the call scope
     /**
      * @tentative-return-type
      * @return (string | false)

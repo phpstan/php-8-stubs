@@ -1,6 +1,6 @@
 <?php 
 
-/** @generate-class-entries */
+/** @generate-function-entries */
 class Transliterator
 {
     private final function __construct()
@@ -31,8 +31,7 @@ class Transliterator
     {
     }
     /**
-     * @return array<int, string>|false
-     * @tentative-return-type
+     * @return array|false
      * @alias transliterator_list_ids
      */
     public static function listIDs()

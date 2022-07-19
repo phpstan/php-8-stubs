@@ -1,6 +1,5 @@
 <?php 
 
-/** @not-serializable */
 class ReflectionExtension implements \Reflector
 {
     /** @implementation-alias ReflectionClass::__clone */

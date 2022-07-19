@@ -1,6 +1,6 @@
 <?php 
 
-/** @generate-class-entries */
+/** @generate-function-entries */
 /**
  * @param (object | string) $object_or_class
  * @refcount 1

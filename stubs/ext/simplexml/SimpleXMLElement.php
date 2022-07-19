@@ -1,8 +1,11 @@
 <?php 
 
-/** @not-serializable */
 class SimpleXMLElement implements \Stringable, \Countable, \RecursiveIterator
 {
+    #[\Until('8.1')]
+    public function current()
+    {
+    }
     /**
      * @tentative-return-type
      * @return (array | null | false)
@@ -106,10 +109,6 @@ class SimpleXMLElement implements \Stringable, \Countable, \RecursiveIterator
      * @return bool
      */
     public function valid()
-    {
-    }
-    #[\Until('8.1')]
-    public function current()
     {
     }
     #[\Since('8.1')]

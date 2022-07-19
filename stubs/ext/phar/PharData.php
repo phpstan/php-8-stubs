@@ -2,10 +2,7 @@
 
 class PharData extends \RecursiveDirectoryIterator implements \Countable, \ArrayAccess
 {
-    /**
-     * @implementation-alias Phar::__construct
-     * @no-verify PharData constructor accepts extra $format argument
-     */
+    /** @implementation-alias Phar::__construct */
     public function __construct(string $filename, int $flags = FilesystemIterator::SKIP_DOTS | FilesystemIterator::UNIX_PATHS, ?string $alias = null, int $format = 0)
     {
     }
@@ -68,7 +65,6 @@ class PharData extends \RecursiveDirectoryIterator implements \Countable, \Array
     public function decompressFiles()
     {
     }
-    // TODO make return type void
     /**
      * @tentative-return-type
      * @implementation-alias Phar::compress
@@ -110,7 +106,6 @@ class PharData extends \RecursiveDirectoryIterator implements \Countable, \Array
     public function copy(string $from, string $to)
     {
     }
-    // TODO make return type void
     /**
      * @tentative-return-type
      * @implementation-alias Phar::count
@@ -126,7 +121,6 @@ class PharData extends \RecursiveDirectoryIterator implements \Countable, \Array
     public function delete(string $localName)
     {
     }
-    // TODO make return type void
     /**
      * @return bool
      * @implementation-alias Phar::delMetadata
@@ -134,7 +128,6 @@ class PharData extends \RecursiveDirectoryIterator implements \Countable, \Array
     public function delMetadata()
     {
     }
-    // TODO make return type void
     /**
      * @tentative-return-type
      * @implementation-alias Phar::extractTo
@@ -316,7 +309,6 @@ class PharData extends \RecursiveDirectoryIterator implements \Countable, \Array
     public function setStub($stub, int $length = UNKNOWN)
     {
     }
-    // TODO make return type void
     /**
      * @tentative-return-type
      * @implementation-alias Phar::startBuffering
@@ -389,7 +381,6 @@ class PharData extends \RecursiveDirectoryIterator implements \Countable, \Array
     public static final function unlinkArchive(string $filename) : bool
     {
     }
-    // TODO make return type void
     /** @implementation-alias Phar::webPhar */
     public static final function webPhar(?string $alias = null, ?string $index = null, ?string $fileNotFoundScript = null, array $mimeTypes = [], ?callable $rewrite = null) : void
     {
