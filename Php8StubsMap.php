@@ -2707,6 +2707,8 @@ class Php8StubsMap
   'enum_exists' => 'stubs/Zend/enum_exists.php',
 ));
 }
+
+// UPDATE BELONGS HERE
 		$this->classes = $classes;
 		$this->functions = $functions;
 	}
