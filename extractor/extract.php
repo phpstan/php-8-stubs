@@ -574,6 +574,27 @@ $command = new class(
 			}
 		}
 
+		$oldPhpDocParameters = [];
+		$newPhpDocParameters = [];
+		if ($old->getDocComment() !== null) {
+			$oldPhpDocNode = $this->parseDocComment($old->getDocComment()->getText());
+			$oldParamTags = $oldPhpDocNode->getParamTagValues();
+			foreach ($oldParamTags as $paramTag) {
+				$oldPhpDocParameters[$paramTag->parameterName] = $paramTag->__toString();
+			}
+		}
+		if ($new->getDocComment() !== null) {
+			$newPhpDocNode = $this->parseDocComment($new->getDocComment()->getText());
+			$newParamTags = $newPhpDocNode->getParamTagValues();
+			foreach ($newParamTags as $paramTag) {
+				$newPhpDocParameters[$paramTag->parameterName] = $paramTag->__toString();
+			}
+		}
+
+		if ($oldPhpDocParameters !== $newPhpDocParameters) {
+			return $this->functionDiff($old, $new, $updateTo);
+		}
+
 		return [$old];
 	}
 
