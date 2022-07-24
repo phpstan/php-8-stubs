@@ -12,9 +12,9 @@
 function dba_popen($path, $mode, $handler = UNKNOWN, ...$handler_params)
 {
 }
-/** @generate-class-entries */
+#endif
 /** @return resource|false */
 #[\Since('8.2')]
-function dba_popen(string $path, string $mode, ?string $handler = null, int $permission = 0644, int $map_size = 0)
+function dba_popen(string $path, string $mode, ?string $handler = null, int $permission = 0644, int $map_size = 0, ?int $flags = null)
 {
 }
