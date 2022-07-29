@@ -2718,6 +2718,7 @@ if ($phpVersionId >= 80200) {
   'random\\cryptosafeengine' => 'stubs/ext/random/Random/CryptoSafeEngine.php',
   'random\\randomizer' => 'stubs/ext/random/Random/Randomizer.php',
   'zendtestforbiddynamiccall' => 'stubs/ext/zend_test/ZendTestForbidDynamicCall.php',
+  'zendtestns\\unlikelycompileerror' => 'stubs/ext/zend_test/ZendTestNS/UnlikelyCompileError.php',
   'allowdynamicproperties' => 'stubs/Zend/AllowDynamicProperties.php',
   'sensitiveparameter' => 'stubs/Zend/SensitiveParameter.php',
   'sensitiveparametervalue' => 'stubs/Zend/SensitiveParameterValue.php',
