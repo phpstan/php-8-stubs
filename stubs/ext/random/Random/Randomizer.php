@@ -12,7 +12,10 @@ final class Randomizer
     public function __construct(?Engine $engine = null)
     {
     }
-    public function getInt(int $min = UNKNOWN, int $max = UNKNOWN) : int
+    public function nextInt() : int
+    {
+    }
+    public function getInt(int $min, int $max) : int
     {
     }
     public function getBytes(int $length) : string
