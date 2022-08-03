@@ -8,7 +8,7 @@ namespace Random\Engine;
 #[\Since('8.2')]
 final class PcgOneseq128XslRr64 implements \Random\Engine
 {
-    public function __construct(string|int|null $seed = null, string|int $sequence = 0)
+    public function __construct(string|int|null $seed = null)
     {
     }
     /** @implementation-alias Random\Engine\Mt19937::generate */
