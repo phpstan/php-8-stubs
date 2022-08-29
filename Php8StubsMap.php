@@ -2746,10 +2746,12 @@ if ($phpVersionId >= 80200) {
   'oci_set_prefetch_lob' => 'stubs/ext/oci8/oci_set_prefetch_lob.php',
   'mysqli_execute_query' => 'stubs/ext/mysqli/mysqli_execute_query.php',
   'curl_upkeep' => 'stubs/ext/curl/curl_upkeep.php',
+  'openssl_cipher_key_length' => 'stubs/ext/openssl/openssl_cipher_key_length.php',
   'sodium_crypto_stream_xchacha20_xor_ic' => 'stubs/ext/sodium/sodium_crypto_stream_xchacha20_xor_ic.php',
   'odbc_connection_string_is_quoted' => 'stubs/ext/odbc/odbc_connection_string_is_quoted.php',
   'odbc_connection_string_should_quote' => 'stubs/ext/odbc/odbc_connection_string_should_quote.php',
   'odbc_connection_string_quote' => 'stubs/ext/odbc/odbc_connection_string_quote.php',
+  'libxml_get_external_entity_loader' => 'stubs/ext/libxml/libxml_get_external_entity_loader.php',
 ));
 }
 
