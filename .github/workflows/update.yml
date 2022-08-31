@@ -59,7 +59,7 @@ jobs:
         with:
           repository: "php/php-src"
           path: "php-src"
-          ref: "master"
+          ref: "PHP-8.2"
       - name: "Update stubs"
         run: "./extractor/extract.php --update -- 8.1 8.2"
 
