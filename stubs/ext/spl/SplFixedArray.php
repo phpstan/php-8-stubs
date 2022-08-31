@@ -13,6 +13,14 @@ class SplFixedArray implements \IteratorAggregate, \ArrayAccess, \Countable
     public function __wakeup()
     {
     }
+    #[\Since('8.2')]
+    public function __serialize() : array
+    {
+    }
+    #[\Since('8.2')]
+    public function __unserialize(array $data) : void
+    {
+    }
     /**
      * @tentative-return-type
      * @return int
