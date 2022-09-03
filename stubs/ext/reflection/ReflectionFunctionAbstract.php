@@ -80,6 +80,13 @@ abstract class ReflectionFunctionAbstract implements \Reflector
     public function getClosureScopeClass()
     {
     }
+    /**
+     * @tentative-return-type
+     * @return (ReflectionClass | null)
+     */
+    public function getClosureCalledClass()
+    {
+    }
     #[\Since('8.1')]
     public function getClosureUsedVariables() : array
     {
