@@ -5,6 +5,6 @@ function restore_exception_handler() : bool
 {
 }
 #[\Since('8.2')]
-function restore_exception_handler() : \true
+function restore_exception_handler() : true
 {
 }

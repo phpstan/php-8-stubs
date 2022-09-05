@@ -5,6 +5,6 @@ function closelog() : bool
 {
 }
 #[\Since('8.2')]
-function closelog() : \true
+function closelog() : true
 {
 }
