@@ -2744,6 +2744,7 @@ if ($phpVersionId >= 80200) {
   'zend_test_deprecated_aliased' => 'stubs/ext/zend_test/zend_test_deprecated_aliased.php',
   'zend_test_zend_ini_parse_quantity' => 'stubs/ext/zend_test/zend_test_zend_ini_parse_quantity.php',
   'zend_test_zend_ini_parse_uquantity' => 'stubs/ext/zend_test/zend_test_zend_ini_parse_uquantity.php',
+  'zend_test_zend_ini_str' => 'stubs/ext/zend_test/zend_test_zend_ini_str.php',
   'zendtestns2\\namespaced_func' => 'stubs/ext/zend_test/ZendTestNS2/namespaced_func.php',
   'zendtestns2\\namespaced_deprecated_func' => 'stubs/ext/zend_test/ZendTestNS2/namespaced_deprecated_func.php',
   'zendtestns2\\namespaced_aliased_func' => 'stubs/ext/zend_test/ZendTestNS2/namespaced_aliased_func.php',
