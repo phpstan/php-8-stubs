@@ -249,7 +249,6 @@ class Php8StubsMap
   'apache_get_version' => 'stubs/sapi/apache2handler/apache_get_version.php',
   'apache_getenv' => 'stubs/sapi/apache2handler/apache_getenv.php',
   'apache_lookup_uri' => 'stubs/sapi/apache2handler/apache_lookup_uri.php',
-  'apache_note' => 'stubs/sapi/apache2handler/apache_note.php',
   'apache_request_headers' => 'stubs/sapi/cgi/apache_request_headers.php',
   'apache_response_headers' => 'stubs/sapi/cgi/apache_response_headers.php',
   'apache_setenv' => 'stubs/sapi/apache2handler/apache_setenv.php',
