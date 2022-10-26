@@ -91,13 +91,16 @@ $command = new class(
 		}
 		$finder = new Finder();
 		$finder->files()->in($srcDir)->name('*.stub.php')
-			->exclude('ext/skeleton');
+			->exclude('ext/skeleton')
+			->sortByName();
 
 		$addClasses = [];
 		$addFunctions = [];
 		foreach ($finder as $file) {
 			$stubPath = $file->getRealPath();
 			[$tmpClasses, $tmpFunctions] = $this->extractStub($stubPath, $file->getRelativePathname(), $isUpdate, $updateFrom, $updateTo);
+			ksort($tmpClasses);
+			ksort($tmpFunctions);
 			foreach ($tmpClasses as $className => $fileName) {
 				if (array_key_exists($className, $addClasses)) {
 					throw new \Exception('Duplicate class ' . $className);
