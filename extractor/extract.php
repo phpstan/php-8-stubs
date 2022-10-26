@@ -99,9 +99,15 @@ $command = new class(
 			$stubPath = $file->getRealPath();
 			[$tmpClasses, $tmpFunctions] = $this->extractStub($stubPath, $file->getRelativePathname(), $isUpdate, $updateFrom, $updateTo);
 			foreach ($tmpClasses as $className => $fileName) {
+				if (array_key_exists($className, $addClasses)) {
+					throw new \Exception('Duplicate class ' . $className);
+				}
 				$addClasses[$className] = $fileName;
 			}
 			foreach ($tmpFunctions as $functionName => $fileName) {
+				if (array_key_exists($functionName, $addFunctions)) {
+					continue;
+				}
 				$addFunctions[$functionName] = $fileName;
 			}
 		}
@@ -731,6 +737,8 @@ $command = new class(
 	 */
 	private function dumpMap(array $classes, array $functions, ?string $updateTo, array $addClasses, array $addFunctions): void
 	{
+		ksort($classes);
+		ksort($functions);
 		$template = <<<'PHP'
 <?php declare(strict_types = 1);
 
@@ -777,6 +785,9 @@ if ($phpVersionId >= %d) {
 
 // UPDATE BELONGS HERE
 PHP;
+
+		ksort($addClasses);
+		ksort($addFunctions);
 
 		$parts = explode('.', $updateTo);
 		$phpVersion = (int) $parts[0] * 10000 + (int) ($parts[1] ?? 0) * 100 + (int) ($parts[2] ?? 0);
