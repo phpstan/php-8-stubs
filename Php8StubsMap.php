@@ -2725,6 +2725,7 @@ if ($phpVersionId >= 80200) {
   'sensitiveparametervalue' => 'stubs/Zend/SensitiveParameterValue.php',
   'zendtestforbiddynamiccall' => 'stubs/ext/zend_test/ZendTestForbidDynamicCall.php',
   'zendtestns\\unlikelycompileerror' => 'stubs/ext/zend_test/ZendTestNS/UnlikelyCompileError.php',
+  'zendtestpropertyattribute' => 'stubs/ext/zend_test/ZendTestPropertyAttribute.php',
 ));
 	$functions = \array_merge($functions, array (
   'curl_upkeep' => 'stubs/ext/curl/curl_upkeep.php',
