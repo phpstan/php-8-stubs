@@ -2730,6 +2730,7 @@ if ($phpVersionId >= 80200) {
 	$functions = \array_merge($functions, array (
   'curl_upkeep' => 'stubs/ext/curl/curl_upkeep.php',
   'getrandmax' => 'stubs/ext/random/getrandmax.php',
+  'imap_is_open' => 'stubs/ext/imap/imap_is_open.php',
   'ini_parse_quantity' => 'stubs/ext/standard/ini_parse_quantity.php',
   'lcg_value' => 'stubs/ext/random/lcg_value.php',
   'libxml_get_external_entity_loader' => 'stubs/ext/libxml/libxml_get_external_entity_loader.php',
