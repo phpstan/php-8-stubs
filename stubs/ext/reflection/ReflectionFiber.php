@@ -10,10 +10,10 @@ final class ReflectionFiber
     public function getFiber() : Fiber
     {
     }
-    public function getExecutingFile() : string
+    public function getExecutingFile() : ?string
     {
     }
-    public function getExecutingLine() : int
+    public function getExecutingLine() : ?int
     {
     }
     public function getCallable() : callable
