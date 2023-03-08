@@ -2701,6 +2701,7 @@ class Php8StubsMap
   'sodium_crypto_stream_xchacha20_keygen' => 'stubs/ext/sodium/sodium_crypto_stream_xchacha20_keygen.php',
   'sodium_crypto_stream_xchacha20_xor' => 'stubs/ext/sodium/sodium_crypto_stream_xchacha20_xor.php',
   'zend_call_method' => 'stubs/ext/zend_test/zend_call_method.php',
+  'zend_get_map_ptr_last' => 'stubs/ext/zend_test/zend_get_map_ptr_last.php',
   'zend_get_unit_enum' => 'stubs/ext/zend_test/zend_get_unit_enum.php',
   'zend_test_parameter_with_attribute' => 'stubs/ext/zend_test/zend_test_parameter_with_attribute.php',
   'zendteststringenum' => 'stubs/ext/zend_test/ZendTestStringEnum.php',
