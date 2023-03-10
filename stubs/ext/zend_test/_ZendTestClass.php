@@ -26,4 +26,8 @@ class _ZendTestClass
     public function returnsThrowable() : Throwable
     {
     }
+    #[\Since('8.1')]
+    public static function variadicTest(string|Iterator ...$elements) : static
+    {
+    }
 }
