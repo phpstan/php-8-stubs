@@ -14,10 +14,6 @@ class Php8StubsMap
 	public function __construct(int $phpVersionId)
 	{
 		$classes = array (
-  '_zendtestchildclass' => 'stubs/ext/zend_test/_ZendTestChildClass.php',
-  '_zendtestclass' => 'stubs/ext/zend_test/_ZendTestClass.php',
-  '_zendtestinterface' => 'stubs/ext/zend_test/_ZendTestInterface.php',
-  '_zendtesttrait' => 'stubs/ext/zend_test/_ZendTestTrait.php',
   'addressinfo' => 'stubs/ext/sockets/AddressInfo.php',
   'appenditerator' => 'stubs/ext/spl/AppendIterator.php',
   'argumentcounterror' => 'stubs/Zend/ArgumentCountError.php',
@@ -232,9 +228,6 @@ class Php8StubsMap
   'xmlreader' => 'stubs/ext/xmlreader/XMLReader.php',
   'xmlwriter' => 'stubs/ext/xmlwriter/XMLWriter.php',
   'xsltprocessor' => 'stubs/ext/xsl/XSLTProcessor.php',
-  'zendtestattribute' => 'stubs/ext/zend_test/ZendTestAttribute.php',
-  'zendtestns2\\foo' => 'stubs/ext/zend_test/ZendTestNS2/Foo.php',
-  'zendtestns\\foo' => 'stubs/ext/zend_test/ZendTestNS/Foo.php',
   'ziparchive' => 'stubs/ext/zip/ZipArchive.php',
 );
 		$functions = array (
@@ -2589,26 +2582,8 @@ class Php8StubsMap
   'xmlwriter_write_element_ns' => 'stubs/ext/xmlwriter/xmlwriter_write_element_ns.php',
   'xmlwriter_write_pi' => 'stubs/ext/xmlwriter/xmlwriter_write_pi.php',
   'xmlwriter_write_raw' => 'stubs/ext/xmlwriter/xmlwriter_write_raw.php',
-  'zend_create_unterminated_string' => 'stubs/ext/zend_test/zend_create_unterminated_string.php',
-  'zend_get_current_func_name' => 'stubs/ext/zend_test/zend_get_current_func_name.php',
-  'zend_iterable' => 'stubs/ext/zend_test/zend_iterable.php',
-  'zend_leak_bytes' => 'stubs/ext/zend_test/zend_leak_bytes.php',
-  'zend_leak_variable' => 'stubs/ext/zend_test/zend_leak_variable.php',
-  'zend_string_or_object' => 'stubs/ext/zend_test/zend_string_or_object.php',
-  'zend_string_or_object_or_null' => 'stubs/ext/zend_test/zend_string_or_object_or_null.php',
-  'zend_string_or_stdclass' => 'stubs/ext/zend_test/zend_string_or_stdclass.php',
-  'zend_string_or_stdclass_or_null' => 'stubs/ext/zend_test/zend_string_or_stdclass_or_null.php',
-  'zend_terminate_string' => 'stubs/ext/zend_test/zend_terminate_string.php',
-  'zend_test_array_return' => 'stubs/ext/zend_test/zend_test_array_return.php',
-  'zend_test_deprecated' => 'stubs/ext/zend_test/zend_test_deprecated.php',
-  'zend_test_nullable_array_return' => 'stubs/ext/zend_test/zend_test_nullable_array_return.php',
-  'zend_test_void_return' => 'stubs/ext/zend_test/zend_test_void_return.php',
   'zend_thread_id' => 'stubs/Zend/zend_thread_id.php',
   'zend_version' => 'stubs/Zend/zend_version.php',
-  'zend_weakmap_attach' => 'stubs/ext/zend_test/zend_weakmap_attach.php',
-  'zend_weakmap_dump' => 'stubs/ext/zend_test/zend_weakmap_dump.php',
-  'zend_weakmap_remove' => 'stubs/ext/zend_test/zend_weakmap_remove.php',
-  'zendtestns2\\zendsubns\\namespaced_func' => 'stubs/ext/zend_test/ZendTestNS2/ZendSubNS/namespaced_func.php',
   'zip_close' => 'stubs/ext/zip/zip_close.php',
   'zip_entry_close' => 'stubs/ext/zip/zip_entry_close.php',
   'zip_entry_compressedsize' => 'stubs/ext/zip/zip_entry_compressedsize.php',
@@ -2626,7 +2601,6 @@ class Php8StubsMap
 		if ($phpVersionId >= 80100) {
 	$classes = \array_merge($classes, array (
   '__php_incomplete_class' => 'stubs/ext/standard/__PHP_Incomplete_Class.php',
-  '_zendtestfiber' => 'stubs/ext/zend_test/_ZendTestFiber.php',
   'assertionerror' => 'stubs/ext/standard/AssertionError.php',
   'backedenum' => 'stubs/Zend/BackedEnum.php',
   'badfunctioncallexception' => 'stubs/ext/spl/BadFunctionCallException.php',
@@ -2666,15 +2640,9 @@ class Php8StubsMap
   'underflowexception' => 'stubs/ext/spl/UnderflowException.php',
   'unexpectedvalueexception' => 'stubs/ext/spl/UnexpectedValueException.php',
   'unitenum' => 'stubs/Zend/UnitEnum.php',
-  'zendtestchildclasswithmethodwithparameterattribute' => 'stubs/ext/zend_test/ZendTestChildClassWithMethodWithParameterAttribute.php',
-  'zendtestclasswithmethodwithparameterattribute' => 'stubs/ext/zend_test/ZendTestClassWithMethodWithParameterAttribute.php',
-  'zendtestns2\\zendsubns\\foo' => 'stubs/ext/zend_test/ZendTestNS2/ZendSubNS/Foo.php',
-  'zendtestparameterattribute' => 'stubs/ext/zend_test/ZendTestParameterAttribute.php',
 ));
 	$functions = \array_merge($functions, array (
   'array_is_list' => 'stubs/ext/standard/array_is_list.php',
-  'dl_test_test1' => 'stubs/ext/dl_test/dl_test_test1.php',
-  'dl_test_test2' => 'stubs/ext/dl_test/dl_test_test2.php',
   'enum_exists' => 'stubs/Zend/enum_exists.php',
   'fdatasync' => 'stubs/ext/standard/fdatasync.php',
   'fsync' => 'stubs/ext/standard/fsync.php',
@@ -2700,12 +2668,6 @@ class Php8StubsMap
   'sodium_crypto_stream_xchacha20' => 'stubs/ext/sodium/sodium_crypto_stream_xchacha20.php',
   'sodium_crypto_stream_xchacha20_keygen' => 'stubs/ext/sodium/sodium_crypto_stream_xchacha20_keygen.php',
   'sodium_crypto_stream_xchacha20_xor' => 'stubs/ext/sodium/sodium_crypto_stream_xchacha20_xor.php',
-  'zend_call_method' => 'stubs/ext/zend_test/zend_call_method.php',
-  'zend_get_map_ptr_last' => 'stubs/ext/zend_test/zend_get_map_ptr_last.php',
-  'zend_get_unit_enum' => 'stubs/ext/zend_test/zend_get_unit_enum.php',
-  'zend_test_parameter_with_attribute' => 'stubs/ext/zend_test/zend_test_parameter_with_attribute.php',
-  'zendteststringenum' => 'stubs/ext/zend_test/ZendTestStringEnum.php',
-  'zendtestunitenum' => 'stubs/ext/zend_test/ZendTestUnitEnum.php',
 ));
 }
 
@@ -2724,9 +2686,6 @@ if ($phpVersionId >= 80200) {
   'random\\randomizer' => 'stubs/ext/random/Random/Randomizer.php',
   'sensitiveparameter' => 'stubs/Zend/SensitiveParameter.php',
   'sensitiveparametervalue' => 'stubs/Zend/SensitiveParameterValue.php',
-  'zendtestforbiddynamiccall' => 'stubs/ext/zend_test/ZendTestForbidDynamicCall.php',
-  'zendtestns\\unlikelycompileerror' => 'stubs/ext/zend_test/ZendTestNS/UnlikelyCompileError.php',
-  'zendtestpropertyattribute' => 'stubs/ext/zend_test/ZendTestPropertyAttribute.php',
 ));
 	$functions = \array_merge($functions, array (
   'curl_upkeep' => 'stubs/ext/curl/curl_upkeep.php',
@@ -2751,20 +2710,6 @@ if ($phpVersionId >= 80200) {
   'random_int' => 'stubs/ext/random/random_int.php',
   'sodium_crypto_stream_xchacha20_xor_ic' => 'stubs/ext/sodium/sodium_crypto_stream_xchacha20_xor_ic.php',
   'srand' => 'stubs/ext/random/srand.php',
-  'zend_test_aliased' => 'stubs/ext/zend_test/zend_test_aliased.php',
-  'zend_test_compile_string' => 'stubs/ext/zend_test/zend_test_compile_string.php',
-  'zend_test_deprecated_aliased' => 'stubs/ext/zend_test/zend_test_deprecated_aliased.php',
-  'zend_test_zend_ini_parse_quantity' => 'stubs/ext/zend_test/zend_test_zend_ini_parse_quantity.php',
-  'zend_test_zend_ini_parse_uquantity' => 'stubs/ext/zend_test/zend_test_zend_ini_parse_uquantity.php',
-  'zend_test_zend_ini_str' => 'stubs/ext/zend_test/zend_test_zend_ini_str.php',
-  'zendtestintenum' => 'stubs/ext/zend_test/ZendTestIntEnum.php',
-  'zendtestns2\\namespaced_aliased_func' => 'stubs/ext/zend_test/ZendTestNS2/namespaced_aliased_func.php',
-  'zendtestns2\\namespaced_deprecated_aliased_func' => 'stubs/ext/zend_test/ZendTestNS2/namespaced_deprecated_aliased_func.php',
-  'zendtestns2\\namespaced_deprecated_func' => 'stubs/ext/zend_test/ZendTestNS2/namespaced_deprecated_func.php',
-  'zendtestns2\\namespaced_func' => 'stubs/ext/zend_test/ZendTestNS2/namespaced_func.php',
-  'zendtestns2\\zendsubns\\namespaced_aliased_func' => 'stubs/ext/zend_test/ZendTestNS2/ZendSubNS/namespaced_aliased_func.php',
-  'zendtestns2\\zendsubns\\namespaced_deprecated_aliased_func' => 'stubs/ext/zend_test/ZendTestNS2/ZendSubNS/namespaced_deprecated_aliased_func.php',
-  'zendtestns2\\zendsubns\\namespaced_deprecated_func' => 'stubs/ext/zend_test/ZendTestNS2/ZendSubNS/namespaced_deprecated_func.php',
 ));
 }
 
