@@ -117,12 +117,7 @@ $command = new class(
 			}
 		}
 
-		if (!$isUpdate) {
-			$classes = $addClasses;
-			$functions = $addFunctions;
-			$addClasses = [];
-			$addFunctions = [];
-		} else {
+		if ($isUpdate) {
 			require_once __DIR__ . '/../Php8StubsMap.php';
 			$parts = explode('.', $updateFrom);
 			$map = new \PHPStan\Php8StubsMap((int) $parts[0] * 10000 + (int) ($parts[1] ?? 0) * 100 + (int) ($parts[2] ?? 0));
@@ -156,9 +151,7 @@ $command = new class(
 
 		// todo are there symbols missing at their original locations?
 
-		ksort($classes);
-		ksort($functions);
-		$this->dumpMap($classes, $functions, $updateTo, $addClasses, $addFunctions);
+		$this->dumpMap($addClasses, $addFunctions, $updateTo);
 
 		return 0;
 	}
@@ -737,79 +730,112 @@ $command = new class(
 	/**
 	 * @param array<string, string> $classes
 	 * @param array<string, string> $functions
-	 * @param array<string, string> $addClasses
-	 * @param array<string, string> $addFunctions
 	 */
-	private function dumpMap(array $classes, array $functions, ?string $updateTo, array $addClasses, array $addFunctions): void
+	private function dumpMap(array $classes, array $functions, ?string $updateTo): void
 	{
 		ksort($classes);
 		ksort($functions);
-		$template = <<<'PHP'
-<?php declare(strict_types = 1);
 
-namespace PHPStan;
+		$source = $updateTo === null
+			? $this->exportInitMap($classes, $functions)
+			: $this->exportUpdateMap($classes, $functions, $updateTo);
 
-class Php8StubsMap
-{
-
-	/** @var array<string, string> */
-	public $classes;
-
-	/** @var array<string, string> */
-	public $functions;
-
-	public function __construct(int $phpVersionId)
-	{
-		$classes = %s;
-		$functions = %s;
-		// UPDATE BELONGS HERE
-		$this->classes = $classes;
-		$this->functions = $functions;
+		file_put_contents(__DIR__ . '/../Php8StubsMap.php', $source);
 	}
 
-}
-PHP;
+	/**
+	 * @param array<string, string> $classes
+	 * @param array<string, string> $functions
+	 */
+	private function exportInitMap(array $classes, array $functions): string
+	{
+		$template = <<<'PHP'
+			<?php declare(strict_types = 1);
 
-		if ($updateTo === null) {
-			file_put_contents(
-				__DIR__ . '/../Php8StubsMap.php',
-				sprintf(
-					$template,
-					var_export($classes, true),
-					var_export($functions, true),
-				),
-			);
-			return;
-		}
+			namespace PHPStan;
 
-		$updateTemplate = <<<'PHP'
-if ($phpVersionId >= %d) {
-	$classes = \array_merge($classes, %s);
-	$functions = \array_merge($functions, %s);
-}
+			class Php8StubsMap
+			{
 
-// UPDATE BELONGS HERE
-PHP;
+				/** @var array<string, string> */
+				public $classes;
 
-		ksort($addClasses);
-		ksort($addFunctions);
+				/** @var array<string, string> */
+				public $functions;
+
+				public function __construct(int $phpVersionId)
+				{
+					$classes = %s;
+
+					$functions = %s;
+
+					// UPDATE BELONGS HERE
+
+					$this->classes = $classes;
+					$this->functions = $functions;
+				}
+
+			}
+
+			PHP;
+
+		return sprintf(
+			$template,
+			$this->indent($this->exportArray($classes), 2),
+			$this->indent($this->exportArray($functions), 2),
+		);
+	}
+
+	/**
+	 * @param array<string, string> $classes
+	 * @param array<string, string> $functions
+	 */
+	private function exportUpdateMap(array $classes, array $functions, string $updateTo): string
+	{
+		$template = <<<'PHP'
+			if ($phpVersionId >= %d) {
+				$classes = \array_merge($classes, %s);
+
+				$functions = \array_merge($functions, %s);
+			}
+
+			// UPDATE BELONGS HERE
+			PHP;
 
 		$parts = explode('.', $updateTo);
 		$phpVersion = (int) $parts[0] * 10000 + (int) ($parts[1] ?? 0) * 100 + (int) ($parts[2] ?? 0);
 		$updateString = sprintf(
-			$updateTemplate,
+			$this->indent($template, 2),
 			$phpVersion,
-			var_export($addClasses, true),
-			var_export($addFunctions, true)
+			$this->indent($this->exportArray($classes), 3),
+			$this->indent($this->exportArray($functions), 3),
 		);
 
 		$currentMap = file_get_contents(__DIR__ . '/../Php8StubsMap.php');
-		$newMap = str_replace('// UPDATE BELONGS HERE', $updateString, $currentMap);
 
-		file_put_contents(
-			__DIR__ . '/../Php8StubsMap.php',
-			$newMap,
-		);
+		if ($currentMap === false) {
+			throw new \RuntimeException('Could not read Php8StubsMap.php');
+		}
+
+		return str_replace('// UPDATE BELONGS HERE', $updateString, $currentMap);
+	}
+
+	/**
+	 * @param array<string, string> $array
+	 */
+	private function exportArray(array $array): string
+	{
+		$lines = [];
+		foreach ($array as $key => $value) {
+			$lines[] = sprintf("\t%s => %s,", var_export($key, true), var_export($value, true));
+		}
+
+		return "[\n" . implode("\n", $lines) . "\n]";
+	}
+
+	private function indent(string $s, int $level): string
+	{
+		return preg_replace('#\n(?!\n)#', "\n" . str_repeat("\t", $level), $s);
 	}
 
 };
