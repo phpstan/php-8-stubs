@@ -92,6 +92,8 @@ $command = new class(
 		$finder = new Finder();
 		$finder->files()->in($srcDir)->name('*.stub.php')
 			->exclude('ext/skeleton')
+			->exclude('ext/dl_test')
+			->exclude('ext/zend_test')
 			->sortByName();
 
 		$addClasses = [];
