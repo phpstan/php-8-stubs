@@ -64,16 +64,16 @@
         },
         {
             "name": "phpstan/extension-installer",
-            "version": "1.2.0",
+            "version": "1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/extension-installer.git",
-                "reference": "f06dbb052ddc394e7896fcd1cfcd533f9f6ace40"
+                "reference": "f5e02d40f277d28513001976f444d9ff1dc15e9a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/extension-installer/zipball/f06dbb052ddc394e7896fcd1cfcd533f9f6ace40",
-                "reference": "f06dbb052ddc394e7896fcd1cfcd533f9f6ace40",
+                "url": "https://api.github.com/repos/phpstan/extension-installer/zipball/f5e02d40f277d28513001976f444d9ff1dc15e9a",
+                "reference": "f5e02d40f277d28513001976f444d9ff1dc15e9a",
                 "shasum": ""
             },
             "require": {
@@ -88,7 +88,12 @@
             },
             "type": "composer-plugin",
             "extra": {
-                "class": "PHPStan\\ExtensionInstaller\\Plugin"
+                "class": "PHPStan\\ExtensionInstaller\\Plugin",
+                "phpstan/extension-installer": {
+                    "ignore": [
+                        "phpstan/phpstan-phpunit"
+                    ]
+                }
             },
             "autoload": {
                 "psr-4": {
@@ -102,22 +107,22 @@
             "description": "Composer plugin for automatic installation of PHPStan extensions",
             "support": {
                 "issues": "https://github.com/phpstan/extension-installer/issues",
-                "source": "https://github.com/phpstan/extension-installer/tree/1.2.0"
+                "source": "https://github.com/phpstan/extension-installer/tree/1.3.0"
             },
-            "time": "2022-10-17T12:59:16+00:00"
+            "time": "2023-04-18T13:08:02+00:00"
         },
         {
             "name": "phpstan/phpdoc-parser",
-            "version": "1.18.1",
+            "version": "1.20.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpdoc-parser.git",
-                "reference": "22dcdfd725ddf99583bfe398fc624ad6c5004a0f"
+                "reference": "90490bd8fd8530a272043c4950c180b6d0cf5f81"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/22dcdfd725ddf99583bfe398fc624ad6c5004a0f",
-                "reference": "22dcdfd725ddf99583bfe398fc624ad6c5004a0f",
+                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/90490bd8fd8530a272043c4950c180b6d0cf5f81",
+                "reference": "90490bd8fd8530a272043c4950c180b6d0cf5f81",
                 "shasum": ""
             },
             "require": {
@@ -147,22 +152,22 @@
             "description": "PHPDoc parser with support for nullable, intersection and generic types",
             "support": {
                 "issues": "https://github.com/phpstan/phpdoc-parser/issues",
-                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.18.1"
+                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.20.2"
             },
-            "time": "2023-04-07T11:51:11+00:00"
+            "time": "2023-04-22T12:59:35+00:00"
         },
         {
             "name": "phpstan/phpstan",
-            "version": "1.10.13",
+            "version": "1.10.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "f07bf8c6980b81bf9e49d44bd0caf2e737614a70"
+                "reference": "d232901b09e67538e5c86a724be841bea5768a7c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/f07bf8c6980b81bf9e49d44bd0caf2e737614a70",
-                "reference": "f07bf8c6980b81bf9e49d44bd0caf2e737614a70",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/d232901b09e67538e5c86a724be841bea5768a7c",
+                "reference": "d232901b09e67538e5c86a724be841bea5768a7c",
                 "shasum": ""
             },
             "require": {
@@ -211,7 +216,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-04-12T19:29:52+00:00"
+            "time": "2023-04-19T13:47:27+00:00"
         },
         {
             "name": "phpstan/phpstan-php-parser",
