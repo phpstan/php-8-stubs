@@ -3,6 +3,10 @@
 #[\Since('8.1')]
 class ReflectionEnum extends \ReflectionClass
 {
+    #[\Until('8.2')]
+    public function getBackingType() : ?ReflectionType
+    {
+    }
     public function __construct(object|string $objectOrClass)
     {
     }
@@ -16,10 +20,6 @@ class ReflectionEnum extends \ReflectionClass
     {
     }
     public function isBacked() : bool
-    {
-    }
-    #[\Until('8.2')]
-    public function getBackingType() : ?ReflectionType
     {
     }
     #[\Since('8.2')]

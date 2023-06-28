@@ -183,7 +183,10 @@ class DOMDocument extends \DOMNode implements \DOMParentNode
     public function xinclude(int $options = 0)
     {
     }
-    /** @return DOMNode|false */
+    /**
+     * @tentative-return-type
+     * @return (DOMNode | false)
+     */
     public function adoptNode(DOMNode $node)
     {
     }

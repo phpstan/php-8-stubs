@@ -62,7 +62,6 @@ class DateTime implements \DateTimeInterface
     }
     /**
      * @tentative-return-type
-     * @alias date_modify
      * @return (DateTime | false)
      */
     public function modify(string $modifier)
@@ -78,7 +77,6 @@ class DateTime implements \DateTimeInterface
     }
     /**
      * @tentative-return-type
-     * @alias date_sub
      * @return DateTime
      */
     public function sub(DateInterval $interval)

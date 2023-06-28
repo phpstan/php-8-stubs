@@ -111,6 +111,14 @@ class ZipArchive
     public function getArchiveComment(int $flags = 0)
     {
     }
+    #[\Since('8.3')]
+    public function setArchiveFlag(int $flag, int $value) : bool
+    {
+    }
+    #[\Since('8.3')]
+    public function getArchiveFlag(int $flag, int $flags = 0) : int
+    {
+    }
     /**
      * @tentative-return-type
      * @return bool

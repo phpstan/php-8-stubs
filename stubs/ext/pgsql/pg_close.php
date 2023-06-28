@@ -6,6 +6,11 @@ function pg_close($connection = null) : bool
 {
 }
 #[\Since('8.1')]
+#[\Until('8.3')]
 function pg_close(?\PgSql\Connection $connection = null) : bool
+{
+}
+#[\Since('8.3')]
+function pg_close(?\PgSql\Connection $connection = null) : true
 {
 }

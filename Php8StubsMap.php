@@ -2717,6 +2717,36 @@ class Php8StubsMap
 			]);
 		}
 
+		if ($phpVersionId >= 80300) {
+			$classes = \array_merge($classes, [
+				'dateerror' => 'stubs/ext/date/DateError.php',
+				'dateexception' => 'stubs/ext/date/DateException.php',
+				'dateinvalidoperationexception' => 'stubs/ext/date/DateInvalidOperationException.php',
+				'dateinvalidtimezoneexception' => 'stubs/ext/date/DateInvalidTimeZoneException.php',
+				'datemalformedintervalstringexception' => 'stubs/ext/date/DateMalformedIntervalStringException.php',
+				'datemalformedperiodstringexception' => 'stubs/ext/date/DateMalformedPeriodStringException.php',
+				'datemalformedstringexception' => 'stubs/ext/date/DateMalformedStringException.php',
+				'dateobjecterror' => 'stubs/ext/date/DateObjectError.php',
+				'daterangeerror' => 'stubs/ext/date/DateRangeError.php',
+			]);
+
+			$functions = \array_merge($functions, [
+				'json_validate' => 'stubs/ext/json/json_validate.php',
+				'mb_str_pad' => 'stubs/ext/mbstring/mb_str_pad.php',
+				'pg_enter_pipeline_mode' => 'stubs/ext/pgsql/pg_enter_pipeline_mode.php',
+				'pg_exit_pipeline_mode' => 'stubs/ext/pgsql/pg_exit_pipeline_mode.php',
+				'pg_pipeline_status' => 'stubs/ext/pgsql/pg_pipeline_status.php',
+				'pg_pipeline_sync' => 'stubs/ext/pgsql/pg_pipeline_sync.php',
+				'pg_set_error_context_visibility' => 'stubs/ext/pgsql/pg_set_error_context_visibility.php',
+				'posix_eaccess' => 'stubs/ext/posix/posix_eaccess.php',
+				'posix_fpathconf' => 'stubs/ext/posix/posix_fpathconf.php',
+				'posix_pathconf' => 'stubs/ext/posix/posix_pathconf.php',
+				'posix_sysconf' => 'stubs/ext/posix/posix_sysconf.php',
+				'random\\intervalboundary' => 'stubs/ext/random/Random/IntervalBoundary.php',
+				'socket_atmark' => 'stubs/ext/sockets/socket_atmark.php',
+			]);
+		}
+
 		// UPDATE BELONGS HERE
 
 		$this->classes = $classes;

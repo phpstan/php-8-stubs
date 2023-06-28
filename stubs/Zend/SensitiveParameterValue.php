@@ -7,7 +7,6 @@
 #[\Since('8.2')]
 final class SensitiveParameterValue
 {
-    private readonly mixed $value;
     public function __construct(mixed $value)
     {
     }

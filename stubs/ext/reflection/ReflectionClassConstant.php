@@ -86,4 +86,12 @@ class ReflectionClassConstant implements \Reflector
     public function isEnumCase() : bool
     {
     }
+    #[\Since('8.3')]
+    public function hasType() : bool
+    {
+    }
+    #[\Since('8.3')]
+    public function getType() : ?ReflectionType
+    {
+    }
 }

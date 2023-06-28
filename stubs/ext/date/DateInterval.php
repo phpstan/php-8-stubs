@@ -7,7 +7,6 @@ class DateInterval
     }
     /**
      * @tentative-return-type
-     * @alias date_interval_create_from_date_string
      * @return (DateInterval | false)
      */
     public static function createFromDateString(string $datetime)
