@@ -63,6 +63,19 @@ jobs:
       - name: "Update stubs"
         run: "./extractor/extract.php --update -- 8.1 8.2"
 
+      # ---
+
+      - name: "Delete checked out php-src repo"
+        run: "rm -rf php-src"
+      - name: "Checkout PHP 8.3"
+        uses: actions/checkout@v3
+        with:
+          repository: "php/php-src"
+          path: "php-src"
+          ref: "master" # todo 8.3 after feature freeze
+      - name: "Update stubs"
+        run: "./extractor/extract.php --update -- 8.2 8.3"
+
       # end repeat
 
       - name: 'Get previous tag'
