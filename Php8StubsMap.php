@@ -2728,6 +2728,7 @@ class Php8StubsMap
 				'datemalformedstringexception' => 'stubs/ext/date/DateMalformedStringException.php',
 				'dateobjecterror' => 'stubs/ext/date/DateObjectError.php',
 				'daterangeerror' => 'stubs/ext/date/DateRangeError.php',
+				'override' => 'stubs/Zend/Override.php',
 			]);
 
 			$functions = \array_merge($functions, [
