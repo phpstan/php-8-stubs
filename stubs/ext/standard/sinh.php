@@ -1,5 +1,5 @@
 <?php 
 
-function sinh(float $num) : float
+function sinh(float $num): float
 {
 }

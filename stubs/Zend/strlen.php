@@ -1,5 +1,5 @@
 <?php 
 
-function strlen(string $string) : int
+function strlen(string $string): int
 {
 }

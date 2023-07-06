@@ -1,5 +1,5 @@
 <?php 
 
-function curl_error(\CurlHandle $handle) : string
+function curl_error(\CurlHandle $handle): string
 {
 }

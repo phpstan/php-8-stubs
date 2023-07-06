@@ -1,6 +1,6 @@
 <?php 
 
 /* basic_functions.c */
-function constant(string $name) : mixed
+function constant(string $name): mixed
 {
 }

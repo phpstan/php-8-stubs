@@ -1,5 +1,5 @@
 <?php 
 
-function gmp_com(\GMP|int|string $num) : \GMP
+function gmp_com(\GMP|int|string $num): \GMP
 {
 }

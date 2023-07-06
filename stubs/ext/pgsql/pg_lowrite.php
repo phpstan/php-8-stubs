@@ -6,7 +6,7 @@
  * @deprecated
  */
 #[\Until('8.1')]
-function pg_lowrite($lob, string $data, ?int $length = null) : int|false
+function pg_lowrite($lob, string $data, ?int $length = null): int|false
 {
 }
 /**
@@ -14,6 +14,6 @@ function pg_lowrite($lob, string $data, ?int $length = null) : int|false
  * @deprecated
  */
 #[\Since('8.1')]
-function pg_lowrite(\PgSql\Lob $lob, string $data, ?int $length = null) : int|false
+function pg_lowrite(\PgSql\Lob $lob, string $data, ?int $length = null): int|false
 {
 }

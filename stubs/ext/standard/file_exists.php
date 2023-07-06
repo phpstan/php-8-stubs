@@ -1,5 +1,5 @@
 <?php 
 
-function file_exists(string $filename) : bool
+function file_exists(string $filename): bool
 {
 }

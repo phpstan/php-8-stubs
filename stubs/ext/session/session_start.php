@@ -1,5 +1,5 @@
 <?php 
 
-function session_start(array $options = []) : bool
+function session_start(array $options = []): bool
 {
 }

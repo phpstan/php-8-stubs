@@ -1,6 +1,6 @@
 <?php 
 
 /** @deprecated */
-function libxml_disable_entity_loader(bool $disable = true) : bool
+function libxml_disable_entity_loader(bool $disable = true): bool
 {
 }

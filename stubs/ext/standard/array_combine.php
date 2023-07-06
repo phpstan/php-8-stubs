@@ -1,5 +1,5 @@
 <?php 
 
-function array_combine(array $keys, array $values) : array
+function array_combine(array $keys, array $values): array
 {
 }

@@ -1,6 +1,6 @@
 <?php 
 
 #ifdef HAVE_NGETTEXT
-function ngettext(string $singular, string $plural, int $count) : string
+function ngettext(string $singular, string $plural, int $count): string
 {
 }

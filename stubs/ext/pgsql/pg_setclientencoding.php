@@ -6,7 +6,7 @@
  * @deprecated
  */
 #[\Until('8.1')]
-function pg_setclientencoding($connection, string $encoding = UNKNOWN) : int
+function pg_setclientencoding($connection, string $encoding = UNKNOWN): int
 {
 }
 /**
@@ -15,6 +15,6 @@ function pg_setclientencoding($connection, string $encoding = UNKNOWN) : int
  * @deprecated
  */
 #[\Since('8.1')]
-function pg_setclientencoding($connection, string $encoding = UNKNOWN) : int
+function pg_setclientencoding($connection, string $encoding = UNKNOWN): int
 {
 }

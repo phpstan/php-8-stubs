@@ -6,7 +6,7 @@
  * @deprecated
  */
 #[\Until('8.1')]
-function pg_getlastoid($result) : string|int|false
+function pg_getlastoid($result): string|int|false
 {
 }
 /**
@@ -14,6 +14,6 @@ function pg_getlastoid($result) : string|int|false
  * @deprecated
  */
 #[\Since('8.1')]
-function pg_getlastoid(\PgSql\Result $result) : string|int|false
+function pg_getlastoid(\PgSql\Result $result): string|int|false
 {
 }

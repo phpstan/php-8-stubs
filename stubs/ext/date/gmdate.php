@@ -1,5 +1,5 @@
 <?php 
 
-function gmdate(string $format, ?int $timestamp = null) : string
+function gmdate(string $format, ?int $timestamp = null): string
 {
 }

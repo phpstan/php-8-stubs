@@ -1,6 +1,6 @@
 <?php 
 
 #if HAVE_NL_LANGINFO
-function nl_langinfo(int $item) : string|false
+function nl_langinfo(int $item): string|false
 {
 }

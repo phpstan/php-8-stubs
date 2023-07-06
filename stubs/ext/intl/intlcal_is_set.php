@@ -1,5 +1,5 @@
 <?php 
 
-function intlcal_is_set(\IntlCalendar $calendar, int $field) : bool
+function intlcal_is_set(\IntlCalendar $calendar, int $field): bool
 {
 }

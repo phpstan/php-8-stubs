@@ -1,5 +1,5 @@
 <?php 
 
-function rawurldecode(string $string) : string
+function rawurldecode(string $string): string
 {
 }

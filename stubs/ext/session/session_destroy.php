@@ -1,5 +1,5 @@
 <?php 
 
-function session_destroy() : bool
+function session_destroy(): bool
 {
 }

@@ -2,7 +2,7 @@
 
 /** @param resource $ftp */
 #[\Until('8.1')]
-function ftp_mlsd($ftp, string $directory) : array|false
+function ftp_mlsd($ftp, string $directory): array|false
 {
 }
 /**
@@ -10,6 +10,6 @@ function ftp_mlsd($ftp, string $directory) : array|false
  * @refcount 1
  */
 #[\Since('8.1')]
-function ftp_mlsd(\FTP\Connection $ftp, string $directory) : array|false
+function ftp_mlsd(\FTP\Connection $ftp, string $directory): array|false
 {
 }

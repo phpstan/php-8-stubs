@@ -1,5 +1,5 @@
 <?php 
 
-function cos(float $num) : float
+function cos(float $num): float
 {
 }

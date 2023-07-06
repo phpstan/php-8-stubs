@@ -1,5 +1,5 @@
 <?php 
 
-function utf8_encode(string $string) : string
+function utf8_encode(string $string): string
 {
 }

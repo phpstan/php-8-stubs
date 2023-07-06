@@ -2,6 +2,6 @@
 
 #endif
 #ifdef HAVE_GD_PNG
-function imagecreatefrompng(string $filename) : \GdImage|false
+function imagecreatefrompng(string $filename): \GdImage|false
 {
 }

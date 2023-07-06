@@ -1,6 +1,6 @@
 <?php 
 
 #endif
-function sys_get_temp_dir() : string
+function sys_get_temp_dir(): string
 {
 }

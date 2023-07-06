@@ -1,6 +1,6 @@
 <?php 
 
 #endif
-function clearstatcache(bool $clear_realpath_cache = false, string $filename = "") : void
+function clearstatcache(bool $clear_realpath_cache = false, string $filename = ""): void
 {
 }

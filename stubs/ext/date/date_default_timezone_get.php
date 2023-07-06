@@ -1,5 +1,5 @@
 <?php 
 
-function date_default_timezone_get() : string
+function date_default_timezone_get(): string
 {
 }

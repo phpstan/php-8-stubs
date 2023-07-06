@@ -274,49 +274,49 @@ class Phar extends \RecursiveDirectoryIterator implements \Countable, \ArrayAcce
     public function stopBuffering()
     {
     }
-    public static final function apiVersion() : string
+    final public static function apiVersion(): string
     {
     }
-    public static final function canCompress(int $compression = 0) : bool
+    final public static function canCompress(int $compression = 0): bool
     {
     }
-    public static final function canWrite() : bool
+    final public static function canWrite(): bool
     {
     }
-    public static final function createDefaultStub(?string $index = null, ?string $webIndex = null) : string
+    final public static function createDefaultStub(?string $index = null, ?string $webIndex = null): string
     {
     }
-    public static final function getSupportedCompression() : array
+    final public static function getSupportedCompression(): array
     {
     }
-    public static final function getSupportedSignatures() : array
+    final public static function getSupportedSignatures(): array
     {
     }
-    public static final function interceptFileFuncs() : void
+    final public static function interceptFileFuncs(): void
     {
     }
-    public static final function isValidPharFilename(string $filename, bool $executable = true) : bool
+    final public static function isValidPharFilename(string $filename, bool $executable = true): bool
     {
     }
-    public static final function loadPhar(string $filename, ?string $alias = null) : bool
+    final public static function loadPhar(string $filename, ?string $alias = null): bool
     {
     }
-    public static final function mapPhar(?string $alias = null, int $offset = 0) : bool
+    final public static function mapPhar(?string $alias = null, int $offset = 0): bool
     {
     }
-    public static final function running(bool $returnPhar = true) : string
+    final public static function running(bool $returnPhar = true): string
     {
     }
-    public static final function mount(string $pharPath, string $externalPath) : void
+    final public static function mount(string $pharPath, string $externalPath): void
     {
     }
-    public static final function mungServer(array $variables) : void
+    final public static function mungServer(array $variables): void
     {
     }
-    public static final function unlinkArchive(string $filename) : bool
+    final public static function unlinkArchive(string $filename): bool
     {
     }
-    public static final function webPhar(?string $alias = null, ?string $index = null, ?string $fileNotFoundScript = null, array $mimeTypes = [], ?callable $rewrite = null) : void
+    final public static function webPhar(?string $alias = null, ?string $index = null, ?string $fileNotFoundScript = null, array $mimeTypes = [], ?callable $rewrite = null): void
     {
     }
 }

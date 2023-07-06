@@ -3,6 +3,6 @@
 #endif
 /* dns.c */
 #ifdef HAVE_GETHOSTNAME
-function gethostname() : string|false
+function gethostname(): string|false
 {
 }

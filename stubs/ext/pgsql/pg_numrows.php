@@ -6,7 +6,7 @@
  * @deprecated
  */
 #[\Until('8.1')]
-function pg_numrows($result) : int
+function pg_numrows($result): int
 {
 }
 /**
@@ -14,6 +14,6 @@ function pg_numrows($result) : int
  * @deprecated
  */
 #[\Since('8.1')]
-function pg_numrows(\PgSql\Result $result) : int
+function pg_numrows(\PgSql\Result $result): int
 {
 }

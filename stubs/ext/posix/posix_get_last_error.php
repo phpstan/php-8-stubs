@@ -1,6 +1,6 @@
 <?php 
 
 #endif
-function posix_get_last_error() : int
+function posix_get_last_error(): int
 {
 }

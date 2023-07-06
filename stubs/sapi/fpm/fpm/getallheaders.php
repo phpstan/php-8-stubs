@@ -1,6 +1,6 @@
 <?php 
 
 /** @alias apache_request_headers */
-function getallheaders() : array
+function getallheaders(): array
 {
 }

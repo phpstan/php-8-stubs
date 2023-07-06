@@ -1,5 +1,5 @@
 <?php 
 
-function random_int(int $min, int $max) : int
+function random_int(int $min, int $max): int
 {
 }

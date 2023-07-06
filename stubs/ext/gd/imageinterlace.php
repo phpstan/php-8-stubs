@@ -1,5 +1,5 @@
 <?php 
 
-function imageinterlace(\GdImage $image, ?bool $enable = null) : bool
+function imageinterlace(\GdImage $image, ?bool $enable = null): bool
 {
 }

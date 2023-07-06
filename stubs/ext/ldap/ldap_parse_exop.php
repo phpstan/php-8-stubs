@@ -9,7 +9,7 @@
  * @param string $response_oid
  */
 #[\Until('8.1')]
-function ldap_parse_exop($ldap, $result, &$response_data = null, &$response_oid = null) : bool
+function ldap_parse_exop($ldap, $result, &$response_data = null, &$response_oid = null): bool
 {
 }
 #endif
@@ -19,6 +19,6 @@ function ldap_parse_exop($ldap, $result, &$response_data = null, &$response_oid 
  * @param string $response_oid
  */
 #[\Since('8.1')]
-function ldap_parse_exop(\LDAP\Connection $ldap, \LDAP\Result $result, &$response_data = null, &$response_oid = null) : bool
+function ldap_parse_exop(\LDAP\Connection $ldap, \LDAP\Result $result, &$response_data = null, &$response_oid = null): bool
 {
 }

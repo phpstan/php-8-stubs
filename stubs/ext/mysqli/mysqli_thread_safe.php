@@ -1,5 +1,5 @@
 <?php 
 
-function mysqli_thread_safe() : bool
+function mysqli_thread_safe(): bool
 {
 }

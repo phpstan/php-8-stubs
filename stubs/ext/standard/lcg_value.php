@@ -1,6 +1,6 @@
 <?php 
 
 /* lcg.c */
-function lcg_value() : float
+function lcg_value(): float
 {
 }

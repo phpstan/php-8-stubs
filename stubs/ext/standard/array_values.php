@@ -3,6 +3,6 @@
 /**
  * @compile-time-eval
  */
-function array_values(array $array) : array
+function array_values(array $array): array
 {
 }

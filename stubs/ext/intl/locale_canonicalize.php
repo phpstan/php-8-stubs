@@ -1,5 +1,5 @@
 <?php 
 
-function locale_canonicalize(string $locale) : ?string
+function locale_canonicalize(string $locale): ?string
 {
 }

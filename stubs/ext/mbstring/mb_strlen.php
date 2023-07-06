@@ -1,5 +1,5 @@
 <?php 
 
-function mb_strlen(string $string, ?string $encoding = null) : int
+function mb_strlen(string $string, ?string $encoding = null): int
 {
 }

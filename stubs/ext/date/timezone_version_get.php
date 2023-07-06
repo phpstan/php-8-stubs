@@ -1,5 +1,5 @@
 <?php 
 
-function timezone_version_get() : string
+function timezone_version_get(): string
 {
 }

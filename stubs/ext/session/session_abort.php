@@ -1,5 +1,5 @@
 <?php 
 
-function session_abort() : bool
+function session_abort(): bool
 {
 }

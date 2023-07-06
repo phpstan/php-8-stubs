@@ -226,7 +226,7 @@ class SplFileObject extends \SplFileInfo implements \RecursiveIterator, \Seekabl
     {
     }
     /** @implementation-alias SplFileObject::fgets */
-    public function __toString() : string
+    public function __toString(): string
     {
     }
 }

@@ -18,6 +18,6 @@ function pg_loopen($connection, $oid = UNKNOWN, string $mode = UNKNOWN)
  * @deprecated
  */
 #[\Since('8.1')]
-function pg_loopen($connection, $oid = UNKNOWN, string $mode = UNKNOWN) : \PgSql\Lob|false
+function pg_loopen($connection, $oid = UNKNOWN, string $mode = UNKNOWN): \PgSql\Lob|false
 {
 }

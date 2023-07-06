@@ -1,5 +1,5 @@
 <?php 
 
-function tidy_get_html_ver(\tidy $tidy) : int
+function tidy_get_html_ver(\tidy $tidy): int
 {
 }

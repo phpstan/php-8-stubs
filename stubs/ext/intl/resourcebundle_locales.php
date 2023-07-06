@@ -3,6 +3,6 @@
 /**
  * @refcount 1
  */
-function resourcebundle_locales(string $bundle) : array|false
+function resourcebundle_locales(string $bundle): array|false
 {
 }

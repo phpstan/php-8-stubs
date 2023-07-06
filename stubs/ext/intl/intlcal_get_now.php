@@ -1,5 +1,5 @@
 <?php 
 
-function intlcal_get_now() : float
+function intlcal_get_now(): float
 {
 }

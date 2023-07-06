@@ -1,5 +1,5 @@
 <?php 
 
-function get_mangled_object_vars(object $object) : array
+function get_mangled_object_vars(object $object): array
 {
 }

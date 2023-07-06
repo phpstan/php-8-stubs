@@ -1,5 +1,5 @@
 <?php 
 
-function locale_get_script(string $locale) : ?string
+function locale_get_script(string $locale): ?string
 {
 }

@@ -1,5 +1,5 @@
 <?php 
 
-function bindec(string $binary_string) : int|float
+function bindec(string $binary_string): int|float
 {
 }

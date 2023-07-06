@@ -1,5 +1,5 @@
 <?php 
 
-function session_unset() : bool
+function session_unset(): bool
 {
 }

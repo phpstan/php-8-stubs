@@ -1,5 +1,5 @@
 <?php 
 
-function session_status() : int
+function session_status(): int
 {
 }

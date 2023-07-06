@@ -1,5 +1,5 @@
 <?php 
 
-function checkdate(int $month, int $day, int $year) : bool
+function checkdate(int $month, int $day, int $year): bool
 {
 }

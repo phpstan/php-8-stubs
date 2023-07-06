@@ -1,5 +1,5 @@
 <?php 
 
-function str_rot13(string $string) : string
+function str_rot13(string $string): string
 {
 }

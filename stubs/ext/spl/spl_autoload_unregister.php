@@ -1,5 +1,5 @@
 <?php 
 
-function spl_autoload_unregister(callable $callback) : bool
+function spl_autoload_unregister(callable $callback): bool
 {
 }

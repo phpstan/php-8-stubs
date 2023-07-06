@@ -14,11 +14,11 @@ class SplFixedArray implements \IteratorAggregate, \ArrayAccess, \Countable
     {
     }
     #[\Since('8.2')]
-    public function __serialize() : array
+    public function __serialize(): array
     {
     }
     #[\Since('8.2')]
-    public function __unserialize(array $data) : void
+    public function __unserialize(array $data): void
     {
     }
     /**
@@ -85,11 +85,11 @@ class SplFixedArray implements \IteratorAggregate, \ArrayAccess, \Countable
     public function offsetUnset($index)
     {
     }
-    public function getIterator() : Iterator
+    public function getIterator(): Iterator
     {
     }
     #[\Since('8.1')]
-    public function jsonSerialize() : array
+    public function jsonSerialize(): array
     {
     }
 }

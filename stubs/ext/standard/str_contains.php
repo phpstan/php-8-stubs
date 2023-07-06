@@ -1,5 +1,5 @@
 <?php 
 
-function str_contains(string $haystack, string $needle) : bool
+function str_contains(string $haystack, string $needle): bool
 {
 }

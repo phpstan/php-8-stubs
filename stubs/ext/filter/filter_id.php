@@ -1,5 +1,5 @@
 <?php 
 
-function filter_id(string $name) : int|false
+function filter_id(string $name): int|false
 {
 }

@@ -10,7 +10,7 @@ namespace Random\Engine;
 final class Secure implements \Random\CryptoSafeEngine
 {
     /** @implementation-alias Random\Engine\Mt19937::generate */
-    public function generate() : string
+    public function generate(): string
     {
     }
 }

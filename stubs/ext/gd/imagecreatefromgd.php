@@ -1,5 +1,5 @@
 <?php 
 
-function imagecreatefromgd(string $filename) : \GdImage|false
+function imagecreatefromgd(string $filename): \GdImage|false
 {
 }

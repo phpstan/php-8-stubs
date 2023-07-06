@@ -1,5 +1,5 @@
 <?php 
 
-function bcscale(?int $scale = null) : int
+function bcscale(?int $scale = null): int
 {
 }

@@ -1,5 +1,5 @@
 <?php 
 
-function hexdec(string $hex_string) : int|float
+function hexdec(string $hex_string): int|float
 {
 }

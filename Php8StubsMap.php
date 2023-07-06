@@ -2729,6 +2729,7 @@ class Php8StubsMap
 				'dateobjecterror' => 'stubs/ext/date/DateObjectError.php',
 				'daterangeerror' => 'stubs/ext/date/DateRangeError.php',
 				'override' => 'stubs/Zend/Override.php',
+				'sqlite3exception' => 'stubs/ext/sqlite3/SQLite3Exception.php',
 			]);
 
 			$functions = \array_merge($functions, [

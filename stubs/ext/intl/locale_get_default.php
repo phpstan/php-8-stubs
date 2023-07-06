@@ -1,6 +1,6 @@
 <?php 
 
 /* locale */
-function locale_get_default() : string
+function locale_get_default(): string
 {
 }

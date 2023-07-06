@@ -5,6 +5,6 @@
  * @alias oci_field_name
  * @deprecated
  */
-function ocicolumnname($statement, string|int $column) : string|false
+function ocicolumnname($statement, string|int $column): string|false
 {
 }

@@ -1,5 +1,5 @@
 <?php 
 
-function curl_close(\CurlHandle $handle) : void
+function curl_close(\CurlHandle $handle): void
 {
 }

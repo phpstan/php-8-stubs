@@ -1,5 +1,5 @@
 <?php 
 
-function mysqli_info(\mysqli $mysql) : ?string
+function mysqli_info(\mysqli $mysql): ?string
 {
 }

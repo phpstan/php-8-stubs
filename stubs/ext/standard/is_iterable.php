@@ -1,5 +1,5 @@
 <?php 
 
-function is_iterable(mixed $value) : bool
+function is_iterable(mixed $value): bool
 {
 }

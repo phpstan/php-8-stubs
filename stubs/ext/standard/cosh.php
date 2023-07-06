@@ -1,5 +1,5 @@
 <?php 
 
-function cosh(float $num) : float
+function cosh(float $num): float
 {
 }

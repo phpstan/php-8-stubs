@@ -5,6 +5,6 @@
  * @alias oci_statement_type
  * @deprecated
  */
-function ocistatementtype($statement) : string|false
+function ocistatementtype($statement): string|false
 {
 }

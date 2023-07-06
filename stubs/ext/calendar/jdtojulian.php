@@ -1,5 +1,5 @@
 <?php 
 
-function jdtojulian(int $julian_day) : string
+function jdtojulian(int $julian_day): string
 {
 }

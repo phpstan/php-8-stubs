@@ -1,5 +1,5 @@
 <?php 
 
-function phpdbg_clear() : void
+function phpdbg_clear(): void
 {
 }

@@ -1,5 +1,5 @@
 <?php 
 
-function hash_update(\HashContext $context, string $data) : bool
+function hash_update(\HashContext $context, string $data): bool
 {
 }

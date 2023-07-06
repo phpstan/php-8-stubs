@@ -1,5 +1,5 @@
 <?php 
 
-function ob_get_level() : int
+function ob_get_level(): int
 {
 }

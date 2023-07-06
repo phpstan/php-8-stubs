@@ -1,5 +1,5 @@
 <?php 
 
-function atan(float $num) : float
+function atan(float $num): float
 {
 }

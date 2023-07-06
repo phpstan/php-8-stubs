@@ -1,5 +1,5 @@
 <?php 
 
-function readline_redisplay() : void
+function readline_redisplay(): void
 {
 }

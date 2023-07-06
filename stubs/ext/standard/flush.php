@@ -1,5 +1,5 @@
 <?php 
 
-function flush() : void
+function flush(): void
 {
 }

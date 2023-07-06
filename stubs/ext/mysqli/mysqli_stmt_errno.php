@@ -1,5 +1,5 @@
 <?php 
 
-function mysqli_stmt_errno(\mysqli_stmt $statement) : int
+function mysqli_stmt_errno(\mysqli_stmt $statement): int
 {
 }

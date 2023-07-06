@@ -1,6 +1,6 @@
 <?php 
 
 /* string.c */
-function bin2hex(string $string) : string
+function bin2hex(string $string): string
 {
 }

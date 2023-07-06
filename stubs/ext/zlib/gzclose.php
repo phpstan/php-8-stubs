@@ -4,6 +4,6 @@
  * @param resource $stream
  * @alias fclose
  */
-function gzclose($stream) : bool
+function gzclose($stream): bool
 {
 }

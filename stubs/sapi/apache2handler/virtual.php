@@ -1,5 +1,5 @@
 <?php 
 
-function virtual(string $uri) : bool
+function virtual(string $uri): bool
 {
 }

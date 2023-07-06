@@ -30,7 +30,7 @@ class DOMNamedNodeMap implements \IteratorAggregate, \Countable
     public function count()
     {
     }
-    public function getIterator() : Iterator
+    public function getIterator(): Iterator
     {
     }
 }

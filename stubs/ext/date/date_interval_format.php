@@ -1,5 +1,5 @@
 <?php 
 
-function date_interval_format(\DateInterval $object, string $format) : string
+function date_interval_format(\DateInterval $object, string $format): string
 {
 }

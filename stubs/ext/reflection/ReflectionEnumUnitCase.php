@@ -6,14 +6,14 @@ class ReflectionEnumUnitCase extends \ReflectionClassConstant
     public function __construct(object|string $class, string $constant)
     {
     }
-    public function getEnum() : ReflectionEnum
+    public function getEnum(): ReflectionEnum
     {
     }
     /**
      * @implementation-alias ReflectionClassConstant::getValue
      * @no-verify
      */
-    public function getValue() : UnitEnum
+    public function getValue(): UnitEnum
     {
     }
 }

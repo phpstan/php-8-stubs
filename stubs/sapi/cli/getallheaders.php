@@ -1,5 +1,5 @@
 <?php 
 
-function getallheaders() : array
+function getallheaders(): array
 {
 }

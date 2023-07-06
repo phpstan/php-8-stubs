@@ -1,6 +1,6 @@
 <?php 
 
 /** @param resource $odbc */
-function odbc_commit($odbc) : bool
+function odbc_commit($odbc): bool
 {
 }

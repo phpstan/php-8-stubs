@@ -1,5 +1,5 @@
 <?php 
 
-function strcmp(string $string1, string $string2) : int
+function strcmp(string $string1, string $string2): int
 {
 }

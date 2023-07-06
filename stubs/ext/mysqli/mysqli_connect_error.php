@@ -1,5 +1,5 @@
 <?php 
 
-function mysqli_connect_error() : ?string
+function mysqli_connect_error(): ?string
 {
 }

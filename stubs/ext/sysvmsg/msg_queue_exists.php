@@ -1,5 +1,5 @@
 <?php 
 
-function msg_queue_exists(int $key) : bool
+function msg_queue_exists(int $key): bool
 {
 }

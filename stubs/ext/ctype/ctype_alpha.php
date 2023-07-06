@@ -1,5 +1,5 @@
 <?php 
 
-function ctype_alpha(mixed $text) : bool
+function ctype_alpha(mixed $text): bool
 {
 }

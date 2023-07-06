@@ -1,5 +1,5 @@
 <?php 
 
-function tanh(float $num) : float
+function tanh(float $num): float
 {
 }

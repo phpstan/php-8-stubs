@@ -1,5 +1,5 @@
 <?php 
 
-function shmop_open(int $key, string $mode, int $permissions, int $size) : \Shmop|false
+function shmop_open(int $key, string $mode, int $permissions, int $size): \Shmop|false
 {
 }

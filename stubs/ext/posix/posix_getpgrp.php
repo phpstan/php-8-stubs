@@ -1,6 +1,6 @@
 <?php 
 
 #endif
-function posix_getpgrp() : int
+function posix_getpgrp(): int
 {
 }

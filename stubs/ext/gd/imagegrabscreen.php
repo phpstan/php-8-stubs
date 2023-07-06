@@ -1,5 +1,5 @@
 <?php 
 
-function imagegrabscreen() : \GdImage|false
+function imagegrabscreen(): \GdImage|false
 {
 }

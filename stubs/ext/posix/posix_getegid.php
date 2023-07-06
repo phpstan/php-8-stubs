@@ -1,5 +1,5 @@
 <?php 
 
-function posix_getegid() : int
+function posix_getegid(): int
 {
 }

@@ -4,5 +4,5 @@
 #[\Since('8.1')]
 interface UnitEnum
 {
-    public static function cases() : array;
+    public static function cases(): array;
 }

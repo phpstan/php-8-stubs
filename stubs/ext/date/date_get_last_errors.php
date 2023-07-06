@@ -3,6 +3,6 @@
 /**
  * @refcount 1
  */
-function date_get_last_errors() : array|false
+function date_get_last_errors(): array|false
 {
 }

@@ -326,63 +326,63 @@ class PharData extends \RecursiveDirectoryIterator implements \Countable, \Array
     {
     }
     /** @implementation-alias Phar::apiVersion */
-    public static final function apiVersion() : string
+    final public static function apiVersion(): string
     {
     }
     /** @implementation-alias Phar::canCompress */
-    public static final function canCompress(int $compression = 0) : bool
+    final public static function canCompress(int $compression = 0): bool
     {
     }
     /** @implementation-alias Phar::canWrite */
-    public static final function canWrite() : bool
+    final public static function canWrite(): bool
     {
     }
     /** @implementation-alias Phar::createDefaultStub */
-    public static final function createDefaultStub(?string $index = null, ?string $webIndex = null) : string
+    final public static function createDefaultStub(?string $index = null, ?string $webIndex = null): string
     {
     }
     /** @implementation-alias Phar::getSupportedCompression */
-    public static final function getSupportedCompression() : array
+    final public static function getSupportedCompression(): array
     {
     }
     /** @implementation-alias Phar::getSupportedSignatures */
-    public static final function getSupportedSignatures() : array
+    final public static function getSupportedSignatures(): array
     {
     }
     /** @implementation-alias Phar::interceptFileFuncs */
-    public static final function interceptFileFuncs() : void
+    final public static function interceptFileFuncs(): void
     {
     }
     /** @implementation-alias Phar::isValidPharFilename */
-    public static final function isValidPharFilename(string $filename, bool $executable = true) : bool
+    final public static function isValidPharFilename(string $filename, bool $executable = true): bool
     {
     }
     /** @implementation-alias Phar::loadPhar */
-    public static final function loadPhar(string $filename, ?string $alias = null) : bool
+    final public static function loadPhar(string $filename, ?string $alias = null): bool
     {
     }
     /** @implementation-alias Phar::mapPhar */
-    public static final function mapPhar(?string $alias = null, int $offset = 0) : bool
+    final public static function mapPhar(?string $alias = null, int $offset = 0): bool
     {
     }
     /** @implementation-alias Phar::running */
-    public static final function running(bool $returnPhar = true) : string
+    final public static function running(bool $returnPhar = true): string
     {
     }
     /** @implementation-alias Phar::mount */
-    public static final function mount(string $pharPath, string $externalPath) : void
+    final public static function mount(string $pharPath, string $externalPath): void
     {
     }
     /** @implementation-alias Phar::mungServer */
-    public static final function mungServer(array $variables) : void
+    final public static function mungServer(array $variables): void
     {
     }
     /** @implementation-alias Phar::unlinkArchive */
-    public static final function unlinkArchive(string $filename) : bool
+    final public static function unlinkArchive(string $filename): bool
     {
     }
     /** @implementation-alias Phar::webPhar */
-    public static final function webPhar(?string $alias = null, ?string $index = null, ?string $fileNotFoundScript = null, array $mimeTypes = [], ?callable $rewrite = null) : void
+    final public static function webPhar(?string $alias = null, ?string $index = null, ?string $fileNotFoundScript = null, array $mimeTypes = [], ?callable $rewrite = null): void
     {
     }
 }

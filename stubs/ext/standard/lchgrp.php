@@ -1,5 +1,5 @@
 <?php 
 
-function lchgrp(string $filename, string|int $group) : bool
+function lchgrp(string $filename, string|int $group): bool
 {
 }

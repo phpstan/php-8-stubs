@@ -1,5 +1,5 @@
 <?php 
 
-function oci_lob_rewind(\OCILob $lob) : bool
+function oci_lob_rewind(\OCILob $lob): bool
 {
 }

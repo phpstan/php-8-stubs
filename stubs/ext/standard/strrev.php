@@ -1,5 +1,5 @@
 <?php 
 
-function strrev(string $string) : string
+function strrev(string $string): string
 {
 }

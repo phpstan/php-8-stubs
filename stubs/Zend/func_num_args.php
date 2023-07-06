@@ -1,5 +1,5 @@
 <?php 
 
-function func_num_args() : int
+function func_num_args(): int
 {
 }

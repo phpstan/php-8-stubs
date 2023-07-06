@@ -1,5 +1,5 @@
 <?php 
 
-function ceil(int|float $num) : float
+function ceil(int|float $num): float
 {
 }

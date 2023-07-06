@@ -2,6 +2,6 @@
 
 /* }}} */
 /* assert.c */
-function assert(mixed $assertion, \Throwable|string|null $description = null) : bool
+function assert(mixed $assertion, \Throwable|string|null $description = null): bool
 {
 }

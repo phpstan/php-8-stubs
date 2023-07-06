@@ -1,5 +1,5 @@
 <?php 
 
-function litespeed_response_headers() : array|false
+function litespeed_response_headers(): array|false
 {
 }

@@ -1,5 +1,5 @@
 <?php 
 
-function imagesetthickness(\GdImage $image, int $thickness) : bool
+function imagesetthickness(\GdImage $image, int $thickness): bool
 {
 }

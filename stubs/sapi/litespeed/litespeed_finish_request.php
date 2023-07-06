@@ -1,5 +1,5 @@
 <?php 
 
-function litespeed_finish_request() : bool
+function litespeed_finish_request(): bool
 {
 }

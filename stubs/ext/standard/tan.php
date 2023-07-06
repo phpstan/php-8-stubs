@@ -1,5 +1,5 @@
 <?php 
 
-function tan(float $num) : float
+function tan(float $num): float
 {
 }

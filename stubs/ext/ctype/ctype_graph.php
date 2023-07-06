@@ -1,5 +1,5 @@
 <?php 
 
-function ctype_graph(mixed $text) : bool
+function ctype_graph(mixed $text): bool
 {
 }

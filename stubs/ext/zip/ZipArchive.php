@@ -38,7 +38,7 @@ class ZipArchive
     {
     }
     #[\Since('8.2')]
-    public function clearError() : void
+    public function clearError(): void
     {
     }
     /**
@@ -112,11 +112,11 @@ class ZipArchive
     {
     }
     #[\Since('8.3')]
-    public function setArchiveFlag(int $flag, int $value) : bool
+    public function setArchiveFlag(int $flag, int $value): bool
     {
     }
     #[\Since('8.3')]
-    public function getArchiveFlag(int $flag, int $flags = 0) : int
+    public function getArchiveFlag(int $flag, int $flags = 0): int
     {
     }
     /**
@@ -352,11 +352,11 @@ class ZipArchive
     #endif
     #ifdef HAVE_METHOD_SUPPORTED
     /** @return bool */
-    public static function isCompressionMethodSupported(int $method, bool $enc = true) : bool
+    public static function isCompressionMethodSupported(int $method, bool $enc = true): bool
     {
     }
     /** @return bool */
-    public static function isEncryptionMethodSupported(int $method, bool $enc = true) : bool
+    public static function isEncryptionMethodSupported(int $method, bool $enc = true): bool
     {
     }
 }

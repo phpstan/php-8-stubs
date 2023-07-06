@@ -1,5 +1,5 @@
 <?php 
 
-function mysqli_get_host_info(\mysqli $mysql) : string
+function mysqli_get_host_info(\mysqli $mysql): string
 {
 }

@@ -1,5 +1,5 @@
 <?php 
 
-function error_clear_last() : void
+function error_clear_last(): void
 {
 }

@@ -6,7 +6,7 @@
  * @deprecated
  */
 #[\Until('8.1')]
-function pg_numfields($result) : int
+function pg_numfields($result): int
 {
 }
 /**
@@ -14,6 +14,6 @@ function pg_numfields($result) : int
  * @deprecated
  */
 #[\Since('8.1')]
-function pg_numfields(\PgSql\Result $result) : int
+function pg_numfields(\PgSql\Result $result): int
 {
 }

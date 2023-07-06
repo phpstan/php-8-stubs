@@ -33,7 +33,7 @@ class CachingIterator extends \IteratorIterator implements \ArrayAccess, \Counta
     public function hasNext()
     {
     }
-    public function __toString() : string
+    public function __toString(): string
     {
     }
     /**

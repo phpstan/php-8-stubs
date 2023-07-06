@@ -1,5 +1,5 @@
 <?php 
 
-function unixtojd(?int $timestamp = null) : int|false
+function unixtojd(?int $timestamp = null): int|false
 {
 }

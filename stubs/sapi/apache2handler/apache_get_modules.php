@@ -1,5 +1,5 @@
 <?php 
 
-function apache_get_modules() : array
+function apache_get_modules(): array
 {
 }

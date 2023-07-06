@@ -1,5 +1,5 @@
 <?php 
 
-function is_dir(string $filename) : bool
+function is_dir(string $filename): bool
 {
 }

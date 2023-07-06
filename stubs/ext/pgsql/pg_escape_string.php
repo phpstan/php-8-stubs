@@ -2,7 +2,7 @@
 
 /** @param resource|string $connection */
 #[\Until('8.1')]
-function pg_escape_string($connection, string $string = UNKNOWN) : string
+function pg_escape_string($connection, string $string = UNKNOWN): string
 {
 }
 /**
@@ -10,6 +10,6 @@ function pg_escape_string($connection, string $string = UNKNOWN) : string
  * @refcount 1
  */
 #[\Since('8.1')]
-function pg_escape_string($connection, string $string = UNKNOWN) : string
+function pg_escape_string($connection, string $string = UNKNOWN): string
 {
 }

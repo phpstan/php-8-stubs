@@ -9,6 +9,6 @@ function imap_open(string $mailbox, string $user, string $password, int $flags =
 {
 }
 #[\Since('8.1')]
-function imap_open(string $mailbox, string $user, string $password, int $flags = 0, int $retries = 0, array $options = []) : \IMAP\Connection|false
+function imap_open(string $mailbox, string $user, string $password, int $flags = 0, int $retries = 0, array $options = []): \IMAP\Connection|false
 {
 }

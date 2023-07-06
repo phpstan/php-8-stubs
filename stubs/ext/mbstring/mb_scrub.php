@@ -1,5 +1,5 @@
 <?php 
 
-function mb_scrub(string $string, ?string $encoding = null) : string
+function mb_scrub(string $string, ?string $encoding = null): string
 {
 }

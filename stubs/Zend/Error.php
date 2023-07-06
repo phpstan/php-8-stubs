@@ -4,12 +4,12 @@ class Error implements \Throwable
 {
     /** @implementation-alias Exception::__clone */
     #[\Until('8.1')]
-    private final function __clone() : void
+    final private function __clone(): void
     {
     }
     /** @implementation-alias Exception::__clone */
     #[\Since('8.1')]
-    private function __clone() : void
+    private function __clone(): void
     {
     }
     /** @implementation-alias Exception::__construct */
@@ -25,38 +25,38 @@ class Error implements \Throwable
     {
     }
     /** @implementation-alias Exception::getMessage */
-    public final function getMessage() : string
+    final public function getMessage(): string
     {
     }
     /**
      * @return int
      * @implementation-alias Exception::getCode
      */
-    public final function getCode()
+    final public function getCode()
     {
     }
     /** @implementation-alias Exception::getFile */
-    public final function getFile() : string
+    final public function getFile(): string
     {
     }
     /** @implementation-alias Exception::getLine */
-    public final function getLine() : int
+    final public function getLine(): int
     {
     }
     /** @implementation-alias Exception::getTrace */
-    public final function getTrace() : array
+    final public function getTrace(): array
     {
     }
     /** @implementation-alias Exception::getPrevious */
-    public final function getPrevious() : ?Throwable
+    final public function getPrevious(): ?Throwable
     {
     }
     /** @implementation-alias Exception::getTraceAsString */
-    public final function getTraceAsString() : string
+    final public function getTraceAsString(): string
     {
     }
     /** @implementation-alias Exception::__toString */
-    public function __toString() : string
+    public function __toString(): string
     {
     }
 }

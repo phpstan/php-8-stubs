@@ -1,5 +1,5 @@
 <?php 
 
-function mt_getrandmax() : int
+function mt_getrandmax(): int
 {
 }

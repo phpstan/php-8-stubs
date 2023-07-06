@@ -1,5 +1,5 @@
 <?php 
 
-function addslashes(string $string) : string
+function addslashes(string $string): string
 {
 }

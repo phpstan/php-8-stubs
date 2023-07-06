@@ -7,7 +7,7 @@
  * @deprecated
  */
 #[\Until('8.1')]
-function pg_result($result, $row, string|int $field = UNKNOWN) : string|false|null
+function pg_result($result, $row, string|int $field = UNKNOWN): string|false|null
 {
 }
 /**
@@ -16,6 +16,6 @@ function pg_result($result, $row, string|int $field = UNKNOWN) : string|false|nu
  * @deprecated
  */
 #[\Since('8.1')]
-function pg_result(\PgSql\Result $result, $row, string|int $field = UNKNOWN) : string|false|null
+function pg_result(\PgSql\Result $result, $row, string|int $field = UNKNOWN): string|false|null
 {
 }

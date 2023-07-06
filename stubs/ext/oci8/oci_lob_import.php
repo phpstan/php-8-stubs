@@ -1,5 +1,5 @@
 <?php 
 
-function oci_lob_import(\OCILob $lob, string $filename) : bool
+function oci_lob_import(\OCILob $lob, string $filename): bool
 {
 }

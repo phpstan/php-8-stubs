@@ -1,5 +1,5 @@
 <?php 
 
-function sleep(int $seconds) : int
+function sleep(int $seconds): int
 {
 }

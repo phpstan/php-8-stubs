@@ -1,5 +1,5 @@
 <?php 
 
-function xmlwriter_write_pi(\XMLWriter $writer, string $target, string $content) : bool
+function xmlwriter_write_pi(\XMLWriter $writer, string $target, string $content): bool
 {
 }

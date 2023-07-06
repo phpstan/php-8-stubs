@@ -1,5 +1,5 @@
 <?php 
 
-function gc_enabled() : bool
+function gc_enabled(): bool
 {
 }

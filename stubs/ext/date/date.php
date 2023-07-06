@@ -1,5 +1,5 @@
 <?php 
 
-function date(string $format, ?int $timestamp = null) : string
+function date(string $format, ?int $timestamp = null): string
 {
 }

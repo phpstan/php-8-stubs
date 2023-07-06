@@ -1,5 +1,5 @@
 <?php 
 
-function curl_multi_close(\CurlMultiHandle $multi_handle) : void
+function curl_multi_close(\CurlMultiHandle $multi_handle): void
 {
 }

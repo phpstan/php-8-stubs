@@ -1,5 +1,5 @@
 <?php 
 
-function openssl_spki_export_challenge(string $spki) : string|false
+function openssl_spki_export_challenge(string $spki): string|false
 {
 }

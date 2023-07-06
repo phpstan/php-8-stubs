@@ -1,5 +1,5 @@
 <?php 
 
-function min(mixed $value, mixed ...$values) : mixed
+function min(mixed $value, mixed ...$values): mixed
 {
 }

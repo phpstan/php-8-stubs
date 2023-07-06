@@ -1,5 +1,5 @@
 <?php 
 
-function mb_decode_mimeheader(string $string) : string
+function mb_decode_mimeheader(string $string): string
 {
 }

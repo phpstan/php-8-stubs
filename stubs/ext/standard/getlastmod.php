@@ -1,5 +1,5 @@
 <?php 
 
-function getlastmod() : int|false
+function getlastmod(): int|false
 {
 }

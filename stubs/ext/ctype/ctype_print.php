@@ -1,5 +1,5 @@
 <?php 
 
-function ctype_print(mixed $text) : bool
+function ctype_print(mixed $text): bool
 {
 }

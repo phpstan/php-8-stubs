@@ -1,5 +1,5 @@
 <?php 
 
-function lcfirst(string $string) : string
+function lcfirst(string $string): string
 {
 }

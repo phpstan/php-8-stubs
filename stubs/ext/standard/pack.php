@@ -2,6 +2,6 @@
 
 #endif
 /* pack.c */
-function pack(string $format, mixed ...$values) : string
+function pack(string $format, mixed ...$values): string
 {
 }

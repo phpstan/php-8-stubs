@@ -5,6 +5,6 @@
  * @alias oci_field_size
  * @deprecated
  */
-function ocicolumnsize($statement, string|int $column) : int|false
+function ocicolumnsize($statement, string|int $column): int|false
 {
 }

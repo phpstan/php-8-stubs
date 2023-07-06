@@ -1,5 +1,5 @@
 <?php 
 
-function gzuncompress(string $data, int $max_length = 0) : string|false
+function gzuncompress(string $data, int $max_length = 0): string|false
 {
 }

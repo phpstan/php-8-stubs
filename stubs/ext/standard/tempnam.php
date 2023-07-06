@@ -1,5 +1,5 @@
 <?php 
 
-function tempnam(string $directory, string $prefix) : string|false
+function tempnam(string $directory, string $prefix): string|false
 {
 }

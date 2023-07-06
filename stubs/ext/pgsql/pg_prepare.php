@@ -13,6 +13,6 @@ function pg_prepare($connection, string $statement_name, string $query = UNKNOWN
  * @refcount 1
  */
 #[\Since('8.1')]
-function pg_prepare($connection, string $statement_name, string $query = UNKNOWN) : \PgSql\Result|false
+function pg_prepare($connection, string $statement_name, string $query = UNKNOWN): \PgSql\Result|false
 {
 }

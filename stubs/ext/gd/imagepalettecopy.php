@@ -1,5 +1,5 @@
 <?php 
 
-function imagepalettecopy(\GdImage $dst, \GdImage $src) : void
+function imagepalettecopy(\GdImage $dst, \GdImage $src): void
 {
 }

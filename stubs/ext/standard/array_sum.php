@@ -1,5 +1,5 @@
 <?php 
 
-function array_sum(array $array) : int|float
+function array_sum(array $array): int|float
 {
 }

@@ -1,5 +1,5 @@
 <?php 
 
-function pow(mixed $num, mixed $exponent) : int|float|object
+function pow(mixed $num, mixed $exponent): int|float|object
 {
 }

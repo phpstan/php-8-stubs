@@ -1,5 +1,5 @@
 <?php 
 
-function gettext(string $message) : string
+function gettext(string $message): string
 {
 }

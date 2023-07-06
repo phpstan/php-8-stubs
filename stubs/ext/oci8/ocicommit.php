@@ -5,6 +5,6 @@
  * @alias oci_commit
  * @deprecated
  */
-function ocicommit($connection) : bool
+function ocicommit($connection): bool
 {
 }

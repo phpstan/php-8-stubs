@@ -3,6 +3,6 @@
 /**
  * @refcount 1
  */
-function posix_times() : array|false
+function posix_times(): array|false
 {
 }

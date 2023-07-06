@@ -1,5 +1,5 @@
 <?php 
 
-function prev(array|object &$array) : mixed
+function prev(array|object &$array): mixed
 {
 }

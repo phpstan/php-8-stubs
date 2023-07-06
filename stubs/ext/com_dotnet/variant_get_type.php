@@ -1,5 +1,5 @@
 <?php 
 
-function variant_get_type(\variant $variant) : int
+function variant_get_type(\variant $variant): int
 {
 }

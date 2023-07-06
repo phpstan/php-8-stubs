@@ -1,5 +1,5 @@
 <?php 
 
-function floatval(mixed $value) : float
+function floatval(mixed $value): float
 {
 }

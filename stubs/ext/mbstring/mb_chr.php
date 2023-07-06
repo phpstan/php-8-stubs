@@ -1,5 +1,5 @@
 <?php 
 
-function mb_chr(int $codepoint, ?string $encoding = null) : string|false
+function mb_chr(int $codepoint, ?string $encoding = null): string|false
 {
 }

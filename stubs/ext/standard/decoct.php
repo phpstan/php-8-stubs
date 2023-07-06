@@ -1,5 +1,5 @@
 <?php 
 
-function decoct(int $num) : string
+function decoct(int $num): string
 {
 }

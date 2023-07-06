@@ -2,7 +2,7 @@
 
 /** @param resource $ftp */
 #[\Until('8.1')]
-function ftp_raw($ftp, string $command) : ?array
+function ftp_raw($ftp, string $command): ?array
 {
 }
 /**
@@ -10,6 +10,6 @@ function ftp_raw($ftp, string $command) : ?array
  * @refcount 1
  */
 #[\Since('8.1')]
-function ftp_raw(\FTP\Connection $ftp, string $command) : ?array
+function ftp_raw(\FTP\Connection $ftp, string $command): ?array
 {
 }

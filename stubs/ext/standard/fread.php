@@ -1,6 +1,6 @@
 <?php 
 
 /** @param resource $stream */
-function fread($stream, int $length) : string|false
+function fread($stream, int $length): string|false
 {
 }

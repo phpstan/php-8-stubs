@@ -1,5 +1,5 @@
 <?php 
 
-function timezone_name_get(\DateTimeZone $object) : string
+function timezone_name_get(\DateTimeZone $object): string
 {
 }

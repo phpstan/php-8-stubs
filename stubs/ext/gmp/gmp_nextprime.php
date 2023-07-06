@@ -1,5 +1,5 @@
 <?php 
 
-function gmp_nextprime(\GMP|int|string $num) : \GMP
+function gmp_nextprime(\GMP|int|string $num): \GMP
 {
 }

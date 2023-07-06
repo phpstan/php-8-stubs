@@ -1,5 +1,5 @@
 <?php 
 
-function shm_remove(\SysvSharedMemory $shm) : bool
+function shm_remove(\SysvSharedMemory $shm): bool
 {
 }

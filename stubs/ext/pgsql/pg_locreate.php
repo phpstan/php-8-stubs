@@ -7,7 +7,7 @@
  * @deprecated
  */
 #[\Until('8.1')]
-function pg_locreate($connection = UNKNOWN, $oid = UNKNOWN) : string|int|false
+function pg_locreate($connection = UNKNOWN, $oid = UNKNOWN): string|int|false
 {
 }
 /**
@@ -17,6 +17,6 @@ function pg_locreate($connection = UNKNOWN, $oid = UNKNOWN) : string|int|false
  * @deprecated
  */
 #[\Since('8.1')]
-function pg_locreate($connection = UNKNOWN, $oid = UNKNOWN) : string|int|false
+function pg_locreate($connection = UNKNOWN, $oid = UNKNOWN): string|int|false
 {
 }

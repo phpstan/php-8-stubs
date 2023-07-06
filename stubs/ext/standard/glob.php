@@ -4,6 +4,6 @@
 /**
  * @refcount 1
  */
-function glob(string $pattern, int $flags = 0) : array|false
+function glob(string $pattern, int $flags = 0): array|false
 {
 }

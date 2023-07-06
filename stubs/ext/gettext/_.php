@@ -1,6 +1,6 @@
 <?php 
 
 /** @alias gettext */
-function _(string $message) : string
+function _(string $message): string
 {
 }

@@ -5,6 +5,6 @@
  * @alias oci_cancel
  * @deprecated
  */
-function ocicancel($statement) : bool
+function ocicancel($statement): bool
 {
 }

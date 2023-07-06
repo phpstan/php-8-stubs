@@ -1,5 +1,5 @@
 <?php 
 
-function array_product(array $array) : int|float
+function array_product(array $array): int|float
 {
 }

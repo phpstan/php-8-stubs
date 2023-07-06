@@ -1,6 +1,6 @@
 <?php 
 
 #endif
-function posix_getgid() : int
+function posix_getgid(): int
 {
 }

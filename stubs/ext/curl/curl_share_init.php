@@ -1,5 +1,5 @@
 <?php 
 
-function curl_share_init() : \CurlShareHandle
+function curl_share_init(): \CurlShareHandle
 {
 }

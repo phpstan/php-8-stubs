@@ -1,5 +1,5 @@
 <?php 
 
-function acosh(float $num) : float
+function acosh(float $num): float
 {
 }

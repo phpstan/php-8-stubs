@@ -11,7 +11,7 @@ class IntlPartsIterator extends \IntlIterator
     }
     /** @tentative-return-type */
     #[\Since('8.1')]
-    public function getRuleStatus() : int
+    public function getRuleStatus(): int
     {
     }
 }

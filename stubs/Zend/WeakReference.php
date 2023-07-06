@@ -6,10 +6,10 @@ final class WeakReference
     public function __construct()
     {
     }
-    public static function create(object $object) : WeakReference
+    public static function create(object $object): WeakReference
     {
     }
-    public function get() : ?object
+    public function get(): ?object
     {
     }
 }

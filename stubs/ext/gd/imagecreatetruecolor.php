@@ -1,5 +1,5 @@
 <?php 
 
-function imagecreatetruecolor(int $width, int $height) : \GdImage|false
+function imagecreatetruecolor(int $width, int $height): \GdImage|false
 {
 }

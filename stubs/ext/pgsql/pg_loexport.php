@@ -9,7 +9,7 @@
  * @deprecated
  */
 #[\Until('8.1')]
-function pg_loexport($connection, $oid = UNKNOWN, $filename = UNKNOWN) : bool
+function pg_loexport($connection, $oid = UNKNOWN, $filename = UNKNOWN): bool
 {
 }
 /**
@@ -20,6 +20,6 @@ function pg_loexport($connection, $oid = UNKNOWN, $filename = UNKNOWN) : bool
  * @deprecated
  */
 #[\Since('8.1')]
-function pg_loexport($connection, $oid = UNKNOWN, $filename = UNKNOWN) : bool
+function pg_loexport($connection, $oid = UNKNOWN, $filename = UNKNOWN): bool
 {
 }

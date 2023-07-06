@@ -5,7 +5,7 @@
  * @param callable $end_handler
  */
 #[\Until('8.2')]
-function xml_set_element_handler(\XMLParser $parser, $start_handler, $end_handler) : bool
+function xml_set_element_handler(\XMLParser $parser, $start_handler, $end_handler): bool
 {
 }
 /**
@@ -13,6 +13,6 @@ function xml_set_element_handler(\XMLParser $parser, $start_handler, $end_handle
  * @param callable $end_handler
  */
 #[\Since('8.2')]
-function xml_set_element_handler(\XMLParser $parser, $start_handler, $end_handler) : true
+function xml_set_element_handler(\XMLParser $parser, $start_handler, $end_handler): true
 {
 }

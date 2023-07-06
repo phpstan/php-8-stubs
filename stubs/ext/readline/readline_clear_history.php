@@ -1,5 +1,5 @@
 <?php 
 
-function readline_clear_history() : bool
+function readline_clear_history(): bool
 {
 }

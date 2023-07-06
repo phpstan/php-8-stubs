@@ -118,7 +118,7 @@ class OCILob
      * @alias oci_lob_flush
      * @return bool
      */
-    public function flush(int $flag = 0) : bool
+    public function flush(int $flag = 0): bool
     {
     }
     /**

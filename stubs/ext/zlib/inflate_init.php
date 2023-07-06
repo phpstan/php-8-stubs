@@ -1,5 +1,5 @@
 <?php 
 
-function inflate_init(int $encoding, array $options = []) : \InflateContext|false
+function inflate_init(int $encoding, array $options = []): \InflateContext|false
 {
 }

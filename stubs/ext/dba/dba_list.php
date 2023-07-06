@@ -1,5 +1,5 @@
 <?php 
 
-function dba_list() : array
+function dba_list(): array
 {
 }

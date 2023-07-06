@@ -1,5 +1,5 @@
 <?php 
 
-function variant_eqv(mixed $left, mixed $right) : \variant
+function variant_eqv(mixed $left, mixed $right): \variant
 {
 }

@@ -1,5 +1,5 @@
 <?php 
 
-function interface_exists(string $interface, bool $autoload = true) : bool
+function interface_exists(string $interface, bool $autoload = true): bool
 {
 }

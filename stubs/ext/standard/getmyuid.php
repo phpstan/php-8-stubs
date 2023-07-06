@@ -1,6 +1,6 @@
 <?php 
 
 /* pageinfo.c */
-function getmyuid() : int|false
+function getmyuid(): int|false
 {
 }

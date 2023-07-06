@@ -1,5 +1,5 @@
 <?php 
 
-function class_alias(string $class, string $alias, bool $autoload = true) : bool
+function class_alias(string $class, string $alias, bool $autoload = true): bool
 {
 }

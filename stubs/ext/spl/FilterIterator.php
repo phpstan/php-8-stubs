@@ -6,7 +6,7 @@ abstract class FilterIterator extends \IteratorIterator
      * @tentative-return-type
      * @return bool
      */
-    public abstract function accept();
+    abstract public function accept();
     public function __construct(Iterator $iterator)
     {
     }

@@ -5,6 +5,6 @@
  * @param array $weights
  * @alias dns_get_mx
  */
-function getmxrr(string $hostname, &$hosts, &$weights = null) : bool
+function getmxrr(string $hostname, &$hosts, &$weights = null): bool
 {
 }

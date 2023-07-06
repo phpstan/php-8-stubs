@@ -1,6 +1,6 @@
 <?php 
 
 /* filestat.c */
-function fileatime(string $filename) : int|false
+function fileatime(string $filename): int|false
 {
 }

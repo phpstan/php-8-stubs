@@ -4,6 +4,6 @@
 /**
  * @refcount 1
  */
-function mysqli_get_connection_stats(\mysqli $mysql) : array
+function mysqli_get_connection_stats(\mysqli $mysql): array
 {
 }

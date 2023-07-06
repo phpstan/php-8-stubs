@@ -1,5 +1,5 @@
 <?php 
 
-function pcntl_signal_dispatch() : bool
+function pcntl_signal_dispatch(): bool
 {
 }

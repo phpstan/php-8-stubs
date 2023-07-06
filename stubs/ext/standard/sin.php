@@ -1,5 +1,5 @@
 <?php 
 
-function sin(float $num) : float
+function sin(float $num): float
 {
 }

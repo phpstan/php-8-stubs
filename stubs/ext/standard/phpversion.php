@@ -1,5 +1,5 @@
 <?php 
 
-function phpversion(?string $extension = null) : string|false
+function phpversion(?string $extension = null): string|false
 {
 }

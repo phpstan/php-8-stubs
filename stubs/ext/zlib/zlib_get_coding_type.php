@@ -1,5 +1,5 @@
 <?php 
 
-function zlib_get_coding_type() : string|false
+function zlib_get_coding_type(): string|false
 {
 }

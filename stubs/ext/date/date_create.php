@@ -1,5 +1,5 @@
 <?php 
 
-function date_create(string $datetime = "now", ?\DateTimeZone $timezone = null) : \DateTime|false
+function date_create(string $datetime = "now", ?\DateTimeZone $timezone = null): \DateTime|false
 {
 }

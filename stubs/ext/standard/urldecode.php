@@ -1,5 +1,5 @@
 <?php 
 
-function urldecode(string $string) : string
+function urldecode(string $string): string
 {
 }

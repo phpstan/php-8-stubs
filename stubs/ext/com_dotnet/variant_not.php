@@ -1,5 +1,5 @@
 <?php 
 
-function variant_not(mixed $value) : \variant
+function variant_not(mixed $value): \variant
 {
 }

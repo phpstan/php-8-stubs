@@ -1,5 +1,5 @@
 <?php 
 
-function oci_lob_eof(\OCILob $lob) : bool
+function oci_lob_eof(\OCILob $lob): bool
 {
 }

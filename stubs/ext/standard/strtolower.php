@@ -1,5 +1,5 @@
 <?php 
 
-function strtolower(string $string) : string
+function strtolower(string $string): string
 {
 }

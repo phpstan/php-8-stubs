@@ -1,5 +1,5 @@
 <?php 
 
-function realpath(string $path) : string|false
+function realpath(string $path): string|false
 {
 }

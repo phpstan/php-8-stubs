@@ -1,5 +1,5 @@
 <?php 
 
-function time() : int
+function time(): int
 {
 }

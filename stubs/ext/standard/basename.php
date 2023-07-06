@@ -1,5 +1,5 @@
 <?php 
 
-function basename(string $path, string $suffix = "") : string
+function basename(string $path, string $suffix = ""): string
 {
 }

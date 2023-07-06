@@ -3,6 +3,6 @@
 /**
  * @refcount 1
  */
-function pdo_drivers() : array
+function pdo_drivers(): array
 {
 }

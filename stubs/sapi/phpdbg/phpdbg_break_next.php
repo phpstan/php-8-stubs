@@ -1,6 +1,6 @@
 <?php 
 
 /** @generate-function-entries */
-function phpdbg_break_next() : void
+function phpdbg_break_next(): void
 {
 }

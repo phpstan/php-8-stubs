@@ -1,5 +1,5 @@
 <?php 
 
-function gc_collect_cycles() : int
+function gc_collect_cycles(): int
 {
 }

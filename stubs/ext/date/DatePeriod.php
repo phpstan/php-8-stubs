@@ -40,9 +40,9 @@ class DatePeriod implements \IteratorAggregate
     {
     }
     #[\Since('8.2')]
-    public function __serialize() : array;
+    public function __serialize(): array;
     #[\Since('8.2')]
-    public function __unserialize(array $data) : void;
+    public function __unserialize(array $data): void;
     /**
      * @tentative-return-type
      * @return void
@@ -57,7 +57,7 @@ class DatePeriod implements \IteratorAggregate
     public static function __set_state(array $array)
     {
     }
-    public function getIterator() : Iterator
+    public function getIterator(): Iterator
     {
     }
 }

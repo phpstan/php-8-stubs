@@ -1,5 +1,5 @@
 <?php 
 
-function date_offset_get(\DateTimeInterface $object) : int
+function date_offset_get(\DateTimeInterface $object): int
 {
 }

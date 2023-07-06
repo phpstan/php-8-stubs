@@ -1,5 +1,5 @@
 <?php 
 
-function dechex(int $num) : string
+function dechex(int $num): string
 {
 }

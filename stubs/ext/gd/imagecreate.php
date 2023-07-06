@@ -1,5 +1,5 @@
 <?php 
 
-function imagecreate(int $width, int $height) : \GdImage|false
+function imagecreate(int $width, int $height): \GdImage|false
 {
 }

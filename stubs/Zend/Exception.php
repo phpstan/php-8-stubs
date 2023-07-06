@@ -3,11 +3,11 @@
 class Exception implements \Throwable
 {
     #[\Until('8.1')]
-    private final function __clone() : void
+    final private function __clone(): void
     {
     }
     #[\Since('8.1')]
-    private function __clone() : void
+    private function __clone(): void
     {
     }
     public function __construct(string $message = "", int $code = 0, ?Throwable $previous = null)
@@ -20,28 +20,28 @@ class Exception implements \Throwable
     public function __wakeup()
     {
     }
-    public final function getMessage() : string
+    final public function getMessage(): string
     {
     }
-    public final function getCode()
+    final public function getCode()
     {
     }
-    public final function getFile() : string
+    final public function getFile(): string
     {
     }
-    public final function getLine() : int
+    final public function getLine(): int
     {
     }
-    public final function getTrace() : array
+    final public function getTrace(): array
     {
     }
-    public final function getPrevious() : ?Throwable
+    final public function getPrevious(): ?Throwable
     {
     }
-    public final function getTraceAsString() : string
+    final public function getTraceAsString(): string
     {
     }
-    public function __toString() : string
+    public function __toString(): string
     {
     }
 }

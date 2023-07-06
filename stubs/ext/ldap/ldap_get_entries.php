@@ -5,7 +5,7 @@
  * @param resource $result
  */
 #[\Until('8.1')]
-function ldap_get_entries($ldap, $result) : array|false
+function ldap_get_entries($ldap, $result): array|false
 {
 }
 /**
@@ -13,6 +13,6 @@ function ldap_get_entries($ldap, $result) : array|false
  * @refcount 1
  */
 #[\Since('8.1')]
-function ldap_get_entries(\LDAP\Connection $ldap, \LDAP\Result $result) : array|false
+function ldap_get_entries(\LDAP\Connection $ldap, \LDAP\Result $result): array|false
 {
 }

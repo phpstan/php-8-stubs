@@ -3,6 +3,6 @@
 /**
  * @refcount 1
  */
-function localeconv() : array
+function localeconv(): array
 {
 }

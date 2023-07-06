@@ -1,5 +1,5 @@
 <?php 
 
-function variant_cat(mixed $left, mixed $right) : \variant
+function variant_cat(mixed $left, mixed $right): \variant
 {
 }

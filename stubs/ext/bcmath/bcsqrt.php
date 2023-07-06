@@ -1,5 +1,5 @@
 <?php 
 
-function bcsqrt(string $num, ?int $scale = null) : string
+function bcsqrt(string $num, ?int $scale = null): string
 {
 }

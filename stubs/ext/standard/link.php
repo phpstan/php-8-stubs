@@ -1,5 +1,5 @@
 <?php 
 
-function link(string $target, string $link) : bool
+function link(string $target, string $link): bool
 {
 }

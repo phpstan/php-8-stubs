@@ -1,5 +1,5 @@
 <?php 
 
-function escapeshellarg(string $arg) : string
+function escapeshellarg(string $arg): string
 {
 }

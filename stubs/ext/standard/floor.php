@@ -1,5 +1,5 @@
 <?php 
 
-function floor(int|float $num) : float
+function floor(int|float $num): float
 {
 }

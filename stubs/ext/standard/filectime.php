@@ -1,5 +1,5 @@
 <?php 
 
-function filectime(string $filename) : int|false
+function filectime(string $filename): int|false
 {
 }

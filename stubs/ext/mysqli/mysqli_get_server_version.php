@@ -1,5 +1,5 @@
 <?php 
 
-function mysqli_get_server_version(\mysqli $mysql) : int
+function mysqli_get_server_version(\mysqli $mysql): int
 {
 }

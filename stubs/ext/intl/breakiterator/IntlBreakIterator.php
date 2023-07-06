@@ -146,7 +146,7 @@ class IntlBreakIterator implements \IteratorAggregate
     public function setText(string $text)
     {
     }
-    public function getIterator() : Iterator
+    public function getIterator(): Iterator
     {
     }
 }

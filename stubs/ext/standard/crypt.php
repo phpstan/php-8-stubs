@@ -1,6 +1,6 @@
 <?php 
 
 /* crypt.c */
-function crypt(string $string, string $salt) : string
+function crypt(string $string, string $salt): string
 {
 }

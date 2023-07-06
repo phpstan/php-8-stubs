@@ -1,5 +1,5 @@
 <?php 
 
-function octdec(string $octal_string) : int|float
+function octdec(string $octal_string): int|float
 {
 }

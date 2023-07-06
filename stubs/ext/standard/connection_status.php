@@ -1,5 +1,5 @@
 <?php 
 
-function connection_status() : int
+function connection_status(): int
 {
 }

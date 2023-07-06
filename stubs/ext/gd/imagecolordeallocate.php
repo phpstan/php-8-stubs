@@ -1,5 +1,5 @@
 <?php 
 
-function imagecolordeallocate(\GdImage $image, int $color) : bool
+function imagecolordeallocate(\GdImage $image, int $color): bool
 {
 }

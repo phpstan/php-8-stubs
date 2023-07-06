@@ -1,5 +1,5 @@
 <?php 
 
-function msgfmt_get_pattern(\MessageFormatter $formatter) : string|false
+function msgfmt_get_pattern(\MessageFormatter $formatter): string|false
 {
 }

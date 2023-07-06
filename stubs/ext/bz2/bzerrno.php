@@ -2,11 +2,11 @@
 
 /** @param resource $bz */
 #[\Until('8.1')]
-function bzerrno($bz) : int|false
+function bzerrno($bz): int|false
 {
 }
 /** @param resource $bz */
 #[\Since('8.1')]
-function bzerrno($bz) : int
+function bzerrno($bz): int
 {
 }

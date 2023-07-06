@@ -1,5 +1,5 @@
 <?php 
 
-function dcgettext(string $domain, string $message, int $category) : string
+function dcgettext(string $domain, string $message, int $category): string
 {
 }

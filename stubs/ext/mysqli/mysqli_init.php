@@ -1,5 +1,5 @@
 <?php 
 
-function mysqli_init() : \mysqli|false
+function mysqli_init(): \mysqli|false
 {
 }

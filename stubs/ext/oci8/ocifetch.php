@@ -5,6 +5,6 @@
  * @alias oci_fetch
  * @deprecated
  */
-function ocifetch($statement) : bool
+function ocifetch($statement): bool
 {
 }

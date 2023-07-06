@@ -5,6 +5,6 @@
  * @alias oci_new_descriptor
  * @deprecated
  */
-function ocinewdescriptor($connection, int $type = OCI_DTYPE_LOB) : ?\OCILob
+function ocinewdescriptor($connection, int $type = OCI_DTYPE_LOB): ?\OCILob
 {
 }

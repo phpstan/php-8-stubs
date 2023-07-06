@@ -5,6 +5,6 @@
 /**
  * @refcount 1
  */
-function sys_getloadavg() : array|false
+function sys_getloadavg(): array|false
 {
 }

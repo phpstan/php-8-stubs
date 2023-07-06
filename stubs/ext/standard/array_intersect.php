@@ -1,5 +1,5 @@
 <?php 
 
-function array_intersect(array $array, array ...$arrays) : array
+function array_intersect(array $array, array ...$arrays): array
 {
 }

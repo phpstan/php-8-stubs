@@ -1,5 +1,5 @@
 <?php 
 
-function is_file(string $filename) : bool
+function is_file(string $filename): bool
 {
 }

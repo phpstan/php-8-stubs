@@ -1,5 +1,5 @@
 <?php 
 
-function mysqli_ping(\mysqli $mysql) : bool
+function mysqli_ping(\mysqli $mysql): bool
 {
 }

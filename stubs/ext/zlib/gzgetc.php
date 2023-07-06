@@ -4,6 +4,6 @@
  * @param resource $stream
  * @alias fgetc
  */
-function gzgetc($stream) : string|false
+function gzgetc($stream): string|false
 {
 }

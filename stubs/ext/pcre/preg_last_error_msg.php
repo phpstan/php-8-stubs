@@ -1,5 +1,5 @@
 <?php 
 
-function preg_last_error_msg() : string
+function preg_last_error_msg(): string
 {
 }

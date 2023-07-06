@@ -1,5 +1,5 @@
 <?php 
 
-function dl(string $extension_filename) : bool
+function dl(string $extension_filename): bool
 {
 }

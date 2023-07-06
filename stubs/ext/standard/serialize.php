@@ -1,5 +1,5 @@
 <?php 
 
-function serialize(mixed $value) : string
+function serialize(mixed $value): string
 {
 }

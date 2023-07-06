@@ -1,5 +1,5 @@
 <?php 
 
-function asin(float $num) : float
+function asin(float $num): float
 {
 }

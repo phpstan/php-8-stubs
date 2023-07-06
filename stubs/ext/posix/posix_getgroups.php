@@ -5,6 +5,6 @@
 /**
  * @refcount 1
  */
-function posix_getgroups() : array|false
+function posix_getgroups(): array|false
 {
 }

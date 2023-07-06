@@ -1,10 +1,10 @@
 <?php 
 
 #[\Until('8.2')]
-function sodium_crypto_generichash_update(string &$state, string $message) : bool
+function sodium_crypto_generichash_update(string &$state, string $message): bool
 {
 }
 #[\Since('8.2')]
-function sodium_crypto_generichash_update(string &$state, string $message) : true
+function sodium_crypto_generichash_update(string &$state, string $message): true
 {
 }

@@ -5,6 +5,6 @@
  * @alias oci_num_fields
  * @deprecated
  */
-function ocinumcols($statement) : int
+function ocinumcols($statement): int
 {
 }

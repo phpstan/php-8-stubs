@@ -6,7 +6,7 @@
  * @deprecated
  */
 #[\Until('8.1')]
-function pg_loreadall($lob) : int
+function pg_loreadall($lob): int
 {
 }
 /**
@@ -14,6 +14,6 @@ function pg_loreadall($lob) : int
  * @deprecated
  */
 #[\Since('8.1')]
-function pg_loreadall(\PgSql\Lob $lob) : int
+function pg_loreadall(\PgSql\Lob $lob): int
 {
 }

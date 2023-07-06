@@ -9,7 +9,7 @@ class DOMNodeList implements \IteratorAggregate, \Countable
     public function count()
     {
     }
-    public function getIterator() : Iterator
+    public function getIterator(): Iterator
     {
     }
     /** @return DOMNode|null */

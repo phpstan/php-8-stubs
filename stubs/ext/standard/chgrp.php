@@ -1,5 +1,5 @@
 <?php 
 
-function chgrp(string $filename, string|int $group) : bool
+function chgrp(string $filename, string|int $group): bool
 {
 }

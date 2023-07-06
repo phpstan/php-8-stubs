@@ -1,5 +1,5 @@
 <?php 
 
-function mb_strwidth(string $string, ?string $encoding = null) : int
+function mb_strwidth(string $string, ?string $encoding = null): int
 {
 }

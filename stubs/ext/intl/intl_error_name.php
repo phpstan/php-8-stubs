@@ -1,5 +1,5 @@
 <?php 
 
-function intl_error_name(int $errorCode) : string
+function intl_error_name(int $errorCode): string
 {
 }

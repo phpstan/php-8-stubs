@@ -5,7 +5,7 @@
  * @param string|int $oid
  */
 #[\Until('8.1')]
-function pg_lo_create($connection = UNKNOWN, $oid = UNKNOWN) : string|int|false
+function pg_lo_create($connection = UNKNOWN, $oid = UNKNOWN): string|int|false
 {
 }
 /**
@@ -14,6 +14,6 @@ function pg_lo_create($connection = UNKNOWN, $oid = UNKNOWN) : string|int|false
  * @refcount 1
  */
 #[\Since('8.1')]
-function pg_lo_create($connection = UNKNOWN, $oid = UNKNOWN) : string|int|false
+function pg_lo_create($connection = UNKNOWN, $oid = UNKNOWN): string|int|false
 {
 }

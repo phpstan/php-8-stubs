@@ -1,5 +1,5 @@
 <?php 
 
-function urlencode(string $string) : string
+function urlencode(string $string): string
 {
 }

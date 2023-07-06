@@ -3,6 +3,6 @@
 /**
  * @refcount 1
  */
-function getdate(?int $timestamp = null) : array
+function getdate(?int $timestamp = null): array
 {
 }

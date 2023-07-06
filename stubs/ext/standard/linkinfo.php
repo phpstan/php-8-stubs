@@ -1,5 +1,5 @@
 <?php 
 
-function linkinfo(string $path) : int|false
+function linkinfo(string $path): int|false
 {
 }

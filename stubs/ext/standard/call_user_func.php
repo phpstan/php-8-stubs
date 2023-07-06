@@ -1,5 +1,5 @@
 <?php 
 
-function call_user_func(callable $callback, mixed ...$args) : mixed
+function call_user_func(callable $callback, mixed ...$args): mixed
 {
 }

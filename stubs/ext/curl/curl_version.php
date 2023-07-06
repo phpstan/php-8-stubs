@@ -3,6 +3,6 @@
 /**
  * @refcount 1
  */
-function curl_version() : array|false
+function curl_version(): array|false
 {
 }

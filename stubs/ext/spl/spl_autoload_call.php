@@ -1,5 +1,5 @@
 <?php 
 
-function spl_autoload_call(string $class) : void
+function spl_autoload_call(string $class): void
 {
 }

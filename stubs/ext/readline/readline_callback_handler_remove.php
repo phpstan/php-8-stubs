@@ -1,5 +1,5 @@
 <?php 
 
-function readline_callback_handler_remove() : bool
+function readline_callback_handler_remove(): bool
 {
 }

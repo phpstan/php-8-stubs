@@ -1,6 +1,6 @@
 <?php 
 
 #ifdef HAVE_CTERMID
-function posix_ctermid() : string|false
+function posix_ctermid(): string|false
 {
 }

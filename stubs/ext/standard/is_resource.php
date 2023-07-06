@@ -1,5 +1,5 @@
 <?php 
 
-function is_resource(mixed $value) : bool
+function is_resource(mixed $value): bool
 {
 }

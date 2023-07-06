@@ -4,12 +4,12 @@ abstract class ReflectionType implements \Stringable
 {
     /** @implementation-alias ReflectionClass::__clone */
     #[\Until('8.1')]
-    private final function __clone() : void
+    final private function __clone(): void
     {
     }
     /** @implementation-alias ReflectionClass::__clone */
     #[\Since('8.1')]
-    private function __clone() : void
+    private function __clone(): void
     {
     }
     /**
@@ -19,7 +19,7 @@ abstract class ReflectionType implements \Stringable
     public function allowsNull()
     {
     }
-    public function __toString() : string
+    public function __toString(): string
     {
     }
 }

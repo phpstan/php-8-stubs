@@ -3,6 +3,6 @@
 /**
  * @refcount 1
  */
-function filter_list() : array
+function filter_list(): array
 {
 }

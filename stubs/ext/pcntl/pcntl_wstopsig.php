@@ -1,5 +1,5 @@
 <?php 
 
-function pcntl_wstopsig(int $status) : int|false
+function pcntl_wstopsig(int $status): int|false
 {
 }

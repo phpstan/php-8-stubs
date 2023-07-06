@@ -1,5 +1,5 @@
 <?php 
 
-function sodium_crypto_kx_keypair() : string
+function sodium_crypto_kx_keypair(): string
 {
 }

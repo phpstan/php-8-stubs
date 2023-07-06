@@ -3,17 +3,17 @@
 class ReflectionClass implements \Reflector
 {
     #[\Until('8.1')]
-    private final function __clone() : void
+    final private function __clone(): void
     {
     }
     #[\Since('8.1')]
-    private function __clone() : void
+    private function __clone(): void
     {
     }
     public function __construct(object|string $objectOrClass)
     {
     }
-    public function __toString() : string
+    public function __toString(): string
     {
     }
     /**
@@ -220,7 +220,7 @@ class ReflectionClass implements \Reflector
     {
     }
     #[\Since('8.1')]
-    public function isEnum() : bool
+    public function isEnum(): bool
     {
     }
     /**
@@ -238,7 +238,7 @@ class ReflectionClass implements \Reflector
     {
     }
     #[\Since('8.2')]
-    public function isReadOnly() : bool
+    public function isReadOnly(): bool
     {
     }
     /**
@@ -376,7 +376,7 @@ class ReflectionClass implements \Reflector
     {
     }
     /** @return ReflectionAttribute[] */
-    public function getAttributes(?string $name = null, int $flags = 0) : array
+    public function getAttributes(?string $name = null, int $flags = 0): array
     {
     }
 }

@@ -2,10 +2,10 @@
 
 /** @param resource $result */
 #[\Until('8.1')]
-function pg_num_rows($result) : int
+function pg_num_rows($result): int
 {
 }
 #[\Since('8.1')]
-function pg_num_rows(\PgSql\Result $result) : int
+function pg_num_rows(\PgSql\Result $result): int
 {
 }

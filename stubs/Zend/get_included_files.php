@@ -3,6 +3,6 @@
 /**
  * @refcount 1
  */
-function get_included_files() : array
+function get_included_files(): array
 {
 }

@@ -1,5 +1,5 @@
 <?php 
 
-function gethostbyname(string $hostname) : string
+function gethostbyname(string $hostname): string
 {
 }

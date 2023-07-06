@@ -5,6 +5,6 @@
  * @alias oci_close
  * @deprecated
  */
-function ocilogoff($connection) : ?bool
+function ocilogoff($connection): ?bool
 {
 }

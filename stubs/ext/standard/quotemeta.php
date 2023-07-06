@@ -1,5 +1,5 @@
 <?php 
 
-function quotemeta(string $string) : string
+function quotemeta(string $string): string
 {
 }

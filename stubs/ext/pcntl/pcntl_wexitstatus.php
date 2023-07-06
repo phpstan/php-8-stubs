@@ -1,5 +1,5 @@
 <?php 
 
-function pcntl_wexitstatus(int $status) : int|false
+function pcntl_wexitstatus(int $status): int|false
 {
 }

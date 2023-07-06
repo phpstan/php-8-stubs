@@ -89,7 +89,7 @@ class mysqli
      * @alias mysqli_execute_query
      */
     #[\Since('8.2')]
-    public function execute_query(string $query, ?array $params = null) : mysqli_result|bool
+    public function execute_query(string $query, ?array $params = null): mysqli_result|bool
     {
     }
     /**

@@ -4,6 +4,6 @@
 /**
  * @refcount 1
  */
-function password_get_info(string $hash) : array
+function password_get_info(string $hash): array
 {
 }

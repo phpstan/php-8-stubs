@@ -1,5 +1,5 @@
 <?php 
 
-function fileperms(string $filename) : int|false
+function fileperms(string $filename): int|false
 {
 }

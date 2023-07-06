@@ -1,6 +1,6 @@
 <?php 
 
 #endif
-function gethostbyaddr(string $ip) : string|false
+function gethostbyaddr(string $ip): string|false
 {
 }

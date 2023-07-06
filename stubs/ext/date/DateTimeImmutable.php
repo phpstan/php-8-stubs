@@ -6,11 +6,11 @@ class DateTimeImmutable implements \DateTimeInterface
     {
     }
     #[\Since('8.2')]
-    public function __serialize() : array
+    public function __serialize(): array
     {
     }
     #[\Since('8.2')]
-    public function __unserialize(array $data) : void
+    public function __unserialize(array $data): void
     {
     }
     /**
@@ -145,7 +145,7 @@ class DateTimeImmutable implements \DateTimeInterface
     public static function createFromMutable(DateTime $object)
     {
     }
-    public static function createFromInterface(DateTimeInterface $object) : DateTimeImmutable
+    public static function createFromInterface(DateTimeInterface $object): DateTimeImmutable
     {
     }
 }

@@ -9,7 +9,7 @@
  * @deprecated
  */
 #[\Until('8.1')]
-function pg_loimport($connection, $filename = UNKNOWN, $oid = UNKNOWN) : string|int|false
+function pg_loimport($connection, $filename = UNKNOWN, $oid = UNKNOWN): string|int|false
 {
 }
 /**
@@ -20,6 +20,6 @@ function pg_loimport($connection, $filename = UNKNOWN, $oid = UNKNOWN) : string|
  * @deprecated
  */
 #[\Since('8.1')]
-function pg_loimport($connection, $filename = UNKNOWN, $oid = UNKNOWN) : string|int|false
+function pg_loimport($connection, $filename = UNKNOWN, $oid = UNKNOWN): string|int|false
 {
 }

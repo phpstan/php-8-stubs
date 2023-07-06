@@ -7,7 +7,7 @@
  * @deprecated
  */
 #[\Until('8.1')]
-function pg_lounlink($connection, $oid = UNKNOWN) : bool
+function pg_lounlink($connection, $oid = UNKNOWN): bool
 {
 }
 /**
@@ -17,6 +17,6 @@ function pg_lounlink($connection, $oid = UNKNOWN) : bool
  * @deprecated
  */
 #[\Since('8.1')]
-function pg_lounlink($connection, $oid = UNKNOWN) : bool
+function pg_lounlink($connection, $oid = UNKNOWN): bool
 {
 }

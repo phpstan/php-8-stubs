@@ -1,5 +1,5 @@
 <?php 
 
-function vprintf(string $format, array $values) : int
+function vprintf(string $format, array $values): int
 {
 }

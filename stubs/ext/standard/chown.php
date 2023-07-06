@@ -1,5 +1,5 @@
 <?php 
 
-function chown(string $filename, string|int $user) : bool
+function chown(string $filename, string|int $user): bool
 {
 }

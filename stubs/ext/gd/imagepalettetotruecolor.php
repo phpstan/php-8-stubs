@@ -1,5 +1,5 @@
 <?php 
 
-function imagepalettetotruecolor(\GdImage $image) : bool
+function imagepalettetotruecolor(\GdImage $image): bool
 {
 }

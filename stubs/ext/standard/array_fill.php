@@ -1,5 +1,5 @@
 <?php 
 
-function array_fill(int $start_index, int $count, mixed $value) : array
+function array_fill(int $start_index, int $count, mixed $value): array
 {
 }

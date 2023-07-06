@@ -1,5 +1,5 @@
 <?php 
 
-function tidy_access_count(\tidy $tidy) : int
+function tidy_access_count(\tidy $tidy): int
 {
 }

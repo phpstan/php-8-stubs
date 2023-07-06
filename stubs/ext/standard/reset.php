@@ -1,5 +1,5 @@
 <?php 
 
-function reset(array|object &$array) : mixed
+function reset(array|object &$array): mixed
 {
 }

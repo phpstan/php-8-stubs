@@ -1,5 +1,5 @@
 <?php 
 
-function escapeshellcmd(string $command) : string
+function escapeshellcmd(string $command): string
 {
 }

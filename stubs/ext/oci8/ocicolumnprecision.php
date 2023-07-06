@@ -5,6 +5,6 @@
  * @alias oci_field_precision
  * @deprecated
  */
-function ocicolumnprecision($statement, string|int $column) : int|false
+function ocicolumnprecision($statement, string|int $column): int|false
 {
 }

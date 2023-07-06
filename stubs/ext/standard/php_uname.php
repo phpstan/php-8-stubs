@@ -1,5 +1,5 @@
 <?php 
 
-function php_uname(string $mode = "a") : string
+function php_uname(string $mode = "a"): string
 {
 }

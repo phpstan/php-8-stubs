@@ -1,6 +1,6 @@
 <?php 
 
 /** @generate-function-entries */
-function textdomain(?string $domain) : string
+function textdomain(?string $domain): string
 {
 }

@@ -1,5 +1,5 @@
 <?php 
 
-function pi() : float
+function pi(): float
 {
 }

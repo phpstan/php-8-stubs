@@ -1,5 +1,5 @@
 <?php 
 
-function is_bool(mixed $value) : bool
+function is_bool(mixed $value): bool
 {
 }

@@ -1,5 +1,5 @@
 <?php 
 
-function mhash_count() : int
+function mhash_count(): int
 {
 }

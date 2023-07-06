@@ -3,6 +3,6 @@
 /**
  * @refcount 1
  */
-function get_declared_classes() : array
+function get_declared_classes(): array
 {
 }

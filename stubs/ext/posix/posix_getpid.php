@@ -1,5 +1,5 @@
 <?php 
 
-function posix_getpid() : int
+function posix_getpid(): int
 {
 }

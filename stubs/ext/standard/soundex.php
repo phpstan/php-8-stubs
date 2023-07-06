@@ -1,6 +1,6 @@
 <?php 
 
 /* soundex.c */
-function soundex(string $string) : string
+function soundex(string $string): string
 {
 }

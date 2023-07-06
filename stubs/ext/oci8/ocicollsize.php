@@ -4,6 +4,6 @@
  * @alias oci_collection_size
  * @deprecated
  */
-function ocicollsize(\OCICollection $collection) : int|false
+function ocicollsize(\OCICollection $collection): int|false
 {
 }

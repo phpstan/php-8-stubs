@@ -1,5 +1,5 @@
 <?php 
 
-function func_get_arg(int $position) : mixed
+function func_get_arg(int $position): mixed
 {
 }

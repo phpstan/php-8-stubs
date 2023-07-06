@@ -1,5 +1,5 @@
 <?php 
 
-function ctype_digit(mixed $text) : bool
+function ctype_digit(mixed $text): bool
 {
 }

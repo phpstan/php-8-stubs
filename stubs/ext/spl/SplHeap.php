@@ -83,7 +83,7 @@ abstract class SplHeap implements \Iterator, \Countable
      * @tentative-return-type
      * @return int
      */
-    protected abstract function compare(mixed $value1, mixed $value2);
+    abstract protected function compare(mixed $value1, mixed $value2);
     /**
      * @tentative-return-type
      * @return bool

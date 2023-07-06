@@ -12,7 +12,7 @@
  * @param array $controls
  */
 #[\Until('8.1')]
-function ldap_parse_result($ldap, $result, &$error_code, &$matched_dn = null, &$error_message = null, &$referrals = null, &$controls = null) : bool
+function ldap_parse_result($ldap, $result, &$error_code, &$matched_dn = null, &$error_message = null, &$referrals = null, &$controls = null): bool
 {
 }
 #endif
@@ -25,6 +25,6 @@ function ldap_parse_result($ldap, $result, &$error_code, &$matched_dn = null, &$
  * @param array $controls
  */
 #[\Since('8.1')]
-function ldap_parse_result(\LDAP\Connection $ldap, \LDAP\Result $result, &$error_code, &$matched_dn = null, &$error_message = null, &$referrals = null, &$controls = null) : bool
+function ldap_parse_result(\LDAP\Connection $ldap, \LDAP\Result $result, &$error_code, &$matched_dn = null, &$error_message = null, &$referrals = null, &$controls = null): bool
 {
 }

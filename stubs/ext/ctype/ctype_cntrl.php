@@ -1,5 +1,5 @@
 <?php 
 
-function ctype_cntrl(mixed $text) : bool
+function ctype_cntrl(mixed $text): bool
 {
 }

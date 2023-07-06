@@ -15,6 +15,6 @@ function pg_execute($connection, $statement_name, array $params = UNKNOWN)
  * @refcount 1
  */
 #[\Since('8.1')]
-function pg_execute($connection, $statement_name, array $params = UNKNOWN) : \PgSql\Result|false
+function pg_execute($connection, $statement_name, array $params = UNKNOWN): \PgSql\Result|false
 {
 }

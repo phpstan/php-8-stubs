@@ -1,5 +1,5 @@
 <?php 
 
-function long2ip(int $ip) : string|false
+function long2ip(int $ip): string|false
 {
 }

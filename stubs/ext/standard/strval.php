@@ -1,5 +1,5 @@
 <?php 
 
-function strval(mixed $value) : string
+function strval(mixed $value): string
 {
 }

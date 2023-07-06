@@ -1,5 +1,5 @@
 <?php 
 
-function imap_alerts() : array|false
+function imap_alerts(): array|false
 {
 }

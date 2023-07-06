@@ -2,5 +2,5 @@
 
 interface Stringable
 {
-    public function __toString() : string;
+    public function __toString(): string;
 }

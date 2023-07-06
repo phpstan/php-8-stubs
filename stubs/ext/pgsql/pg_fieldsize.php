@@ -6,7 +6,7 @@
  * @deprecated
  */
 #[\Until('8.1')]
-function pg_fieldsize($result, int $field) : int
+function pg_fieldsize($result, int $field): int
 {
 }
 /**
@@ -14,6 +14,6 @@ function pg_fieldsize($result, int $field) : int
  * @deprecated
  */
 #[\Since('8.1')]
-function pg_fieldsize(\PgSql\Result $result, int $field) : int
+function pg_fieldsize(\PgSql\Result $result, int $field): int
 {
 }

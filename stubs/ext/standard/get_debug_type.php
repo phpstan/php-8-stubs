@@ -1,5 +1,5 @@
 <?php 
 
-function get_debug_type(mixed $value) : string
+function get_debug_type(mixed $value): string
 {
 }

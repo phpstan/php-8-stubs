@@ -1,5 +1,5 @@
 <?php 
 
-function password_algos() : array
+function password_algos(): array
 {
 }

@@ -1,5 +1,5 @@
 <?php 
 
-function mysqli_next_result(\mysqli $mysql) : bool
+function mysqli_next_result(\mysqli $mysql): bool
 {
 }

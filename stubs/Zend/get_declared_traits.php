@@ -3,6 +3,6 @@
 /**
  * @refcount 1
  */
-function get_declared_traits() : array
+function get_declared_traits(): array
 {
 }

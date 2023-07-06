@@ -1,5 +1,5 @@
 <?php 
 
-function gmp_intval(\GMP|int|string $num) : int
+function gmp_intval(\GMP|int|string $num): int
 {
 }

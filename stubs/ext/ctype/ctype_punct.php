@@ -1,5 +1,5 @@
 <?php 
 
-function ctype_punct(mixed $text) : bool
+function ctype_punct(mixed $text): bool
 {
 }

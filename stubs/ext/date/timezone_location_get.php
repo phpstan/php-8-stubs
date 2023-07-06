@@ -3,6 +3,6 @@
 /**
  * @refcount 1
  */
-function timezone_location_get(\DateTimeZone $object) : array|false
+function timezone_location_get(\DateTimeZone $object): array|false
 {
 }

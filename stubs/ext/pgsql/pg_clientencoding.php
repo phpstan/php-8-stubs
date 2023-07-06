@@ -6,7 +6,7 @@
  * @deprecated
  */
 #[\Until('8.1')]
-function pg_clientencoding($connection = null) : string
+function pg_clientencoding($connection = null): string
 {
 }
 /**
@@ -14,6 +14,6 @@ function pg_clientencoding($connection = null) : string
  * @deprecated
  */
 #[\Since('8.1')]
-function pg_clientencoding(?\PgSql\Connection $connection = null) : string
+function pg_clientencoding(?\PgSql\Connection $connection = null): string
 {
 }

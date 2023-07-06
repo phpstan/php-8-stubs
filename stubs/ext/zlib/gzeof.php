@@ -4,6 +4,6 @@
  * @param resource $stream
  * @alias feof
  */
-function gzeof($stream) : bool
+function gzeof($stream): bool
 {
 }

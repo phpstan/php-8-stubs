@@ -1,5 +1,5 @@
 <?php 
 
-function frenchtojd(int $month, int $day, int $year) : int
+function frenchtojd(int $month, int $day, int $year): int
 {
 }

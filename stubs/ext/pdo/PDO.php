@@ -102,7 +102,7 @@ class PDO
     {
     }
     #[\Since('8.1')]
-    public function setAttribute(int $attribute, mixed $value) : bool
+    public function setAttribute(int $attribute, mixed $value): bool
     {
     }
 }

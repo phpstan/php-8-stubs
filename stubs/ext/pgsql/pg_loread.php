@@ -6,7 +6,7 @@
  * @deprecated
  */
 #[\Until('8.1')]
-function pg_loread($lob, int $length = 8192) : string|false
+function pg_loread($lob, int $length = 8192): string|false
 {
 }
 /**
@@ -14,6 +14,6 @@ function pg_loread($lob, int $length = 8192) : string|false
  * @deprecated
  */
 #[\Since('8.1')]
-function pg_loread(\PgSql\Lob $lob, int $length = 8192) : string|false
+function pg_loread(\PgSql\Lob $lob, int $length = 8192): string|false
 {
 }

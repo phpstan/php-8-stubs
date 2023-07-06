@@ -1,5 +1,5 @@
 <?php 
 
-function ctype_upper(mixed $text) : bool
+function ctype_upper(mixed $text): bool
 {
 }

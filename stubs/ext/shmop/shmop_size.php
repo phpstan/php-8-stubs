@@ -1,5 +1,5 @@
 <?php 
 
-function shmop_size(\Shmop $shmop) : int
+function shmop_size(\Shmop $shmop): int
 {
 }

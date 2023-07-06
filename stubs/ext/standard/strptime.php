@@ -6,6 +6,6 @@
  * @deprecated
  * @refcount 1
  */
-function strptime(string $timestamp, string $format) : array|false
+function strptime(string $timestamp, string $format): array|false
 {
 }

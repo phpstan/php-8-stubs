@@ -1,5 +1,5 @@
 <?php 
 
-function imagecreatefromgif(string $filename) : \GdImage|false
+function imagecreatefromgif(string $filename): \GdImage|false
 {
 }

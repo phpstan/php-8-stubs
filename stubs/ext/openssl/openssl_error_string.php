@@ -1,5 +1,5 @@
 <?php 
 
-function openssl_error_string() : string|false
+function openssl_error_string(): string|false
 {
 }

@@ -1,6 +1,6 @@
 <?php 
 
 /** @alias current */
-function pos(array|object $array) : mixed
+function pos(array|object $array): mixed
 {
 }

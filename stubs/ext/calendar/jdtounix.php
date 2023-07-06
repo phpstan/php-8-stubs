@@ -1,5 +1,5 @@
 <?php 
 
-function jdtounix(int $julian_day) : int
+function jdtounix(int $julian_day): int
 {
 }

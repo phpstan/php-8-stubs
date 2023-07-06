@@ -1,5 +1,5 @@
 <?php 
 
-function session_encode() : string|false
+function session_encode(): string|false
 {
 }

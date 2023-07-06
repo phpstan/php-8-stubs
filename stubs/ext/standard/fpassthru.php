@@ -1,6 +1,6 @@
 <?php 
 
 /** @param resource $stream */
-function fpassthru($stream) : int
+function fpassthru($stream): int
 {
 }

@@ -10,14 +10,14 @@ final class InternalIterator implements \Iterator
     public function key();
     private function __construct();
     #[\Since('8.1')]
-    public function current() : mixed
+    public function current(): mixed
     {
     }
     #[\Since('8.1')]
-    public function key() : mixed
+    public function key(): mixed
     {
     }
-    public function next() : void;
-    public function valid() : bool;
-    public function rewind() : void;
+    public function next(): void;
+    public function valid(): bool;
+    public function rewind(): void;
 }

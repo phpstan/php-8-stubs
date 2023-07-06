@@ -3,6 +3,6 @@
 /**
  * @refcount 1
  */
-function mb_encoding_aliases(string $encoding) : array
+function mb_encoding_aliases(string $encoding): array
 {
 }

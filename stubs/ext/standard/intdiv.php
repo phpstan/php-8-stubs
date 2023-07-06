@@ -1,5 +1,5 @@
 <?php 
 
-function intdiv(int $num1, int $num2) : int
+function intdiv(int $num1, int $num2): int
 {
 }

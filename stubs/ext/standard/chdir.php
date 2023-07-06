@@ -1,5 +1,5 @@
 <?php 
 
-function chdir(string $directory) : bool
+function chdir(string $directory): bool
 {
 }

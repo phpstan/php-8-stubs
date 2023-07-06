@@ -6,6 +6,6 @@
  * @prefer-ref $array
  * @prefer-ref $rest
  */
-function array_multisort(&$array, &...$rest) : bool
+function array_multisort(&$array, &...$rest): bool
 {
 }

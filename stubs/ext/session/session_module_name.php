@@ -1,5 +1,5 @@
 <?php 
 
-function session_module_name(?string $module = null) : string|false
+function session_module_name(?string $module = null): string|false
 {
 }

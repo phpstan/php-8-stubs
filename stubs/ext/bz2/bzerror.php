@@ -2,7 +2,7 @@
 
 /** @param resource $bz */
 #[\Until('8.1')]
-function bzerror($bz) : array|false
+function bzerror($bz): array|false
 {
 }
 /**
@@ -11,6 +11,6 @@ function bzerror($bz) : array|false
  * @refcount 1
  */
 #[\Since('8.1')]
-function bzerror($bz) : array
+function bzerror($bz): array
 {
 }

@@ -1,5 +1,5 @@
 <?php 
 
-function filegroup(string $filename) : int|false
+function filegroup(string $filename): int|false
 {
 }

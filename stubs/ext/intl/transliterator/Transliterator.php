@@ -3,7 +3,7 @@
 /** @generate-function-entries */
 class Transliterator
 {
-    private final function __construct()
+    final private function __construct()
     {
     }
     /**

@@ -113,27 +113,27 @@ class DOMElement extends \DOMNode implements \DOMParentNode, \DOMChildNode
     public function setIdAttributeNode(DOMAttr $attr, bool $isId)
     {
     }
-    public function remove() : void
+    public function remove(): void
     {
     }
     /** @param DOMNode|string $nodes */
-    public function before(...$nodes) : void
+    public function before(...$nodes): void
     {
     }
     /** @param DOMNode|string $nodes */
-    public function after(...$nodes) : void
+    public function after(...$nodes): void
     {
     }
     /** @param DOMNode|string $nodes */
-    public function replaceWith(...$nodes) : void
+    public function replaceWith(...$nodes): void
     {
     }
     /** @param DOMNode|string $nodes */
-    public function append(...$nodes) : void
+    public function append(...$nodes): void
     {
     }
     /** @param DOMNode|string $nodes */
-    public function prepend(...$nodes) : void
+    public function prepend(...$nodes): void
     {
     }
 }

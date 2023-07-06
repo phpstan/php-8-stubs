@@ -1,5 +1,5 @@
 <?php 
 
-function gmp_sqrt(\GMP|int|string $num) : \GMP
+function gmp_sqrt(\GMP|int|string $num): \GMP
 {
 }

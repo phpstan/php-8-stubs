@@ -1,5 +1,5 @@
 <?php 
 
-function php_sapi_name() : string|false
+function php_sapi_name(): string|false
 {
 }

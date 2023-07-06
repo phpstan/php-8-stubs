@@ -4,6 +4,6 @@
 /**
  * @refcount 1
  */
-function config_get_hash() : array
+function config_get_hash(): array
 {
 }

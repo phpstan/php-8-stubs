@@ -1,5 +1,5 @@
 <?php 
 
-function disk_free_space(string $directory) : float|false
+function disk_free_space(string $directory): float|false
 {
 }

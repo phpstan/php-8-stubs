@@ -1,5 +1,5 @@
 <?php 
 
-function session_gc() : int|false
+function session_gc(): int|false
 {
 }

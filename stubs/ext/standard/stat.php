@@ -3,6 +3,6 @@
 /**
  * @refcount 1
  */
-function stat(string $filename) : array|false
+function stat(string $filename): array|false
 {
 }

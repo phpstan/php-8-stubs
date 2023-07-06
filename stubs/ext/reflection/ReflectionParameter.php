@@ -4,19 +4,19 @@ class ReflectionParameter implements \Reflector
 {
     /** @implementation-alias ReflectionClass::__clone */
     #[\Until('8.1')]
-    private final function __clone() : void
+    final private function __clone(): void
     {
     }
     /** @implementation-alias ReflectionClass::__clone */
     #[\Since('8.1')]
-    private function __clone() : void
+    private function __clone(): void
     {
     }
     /** @param string|array|object $function */
     public function __construct($function, int|string $param)
     {
     }
-    public function __toString() : string
+    public function __toString(): string
     {
     }
     /**
@@ -148,11 +148,11 @@ class ReflectionParameter implements \Reflector
     public function isVariadic()
     {
     }
-    public function isPromoted() : bool
+    public function isPromoted(): bool
     {
     }
     /** @return ReflectionAttribute[] */
-    public function getAttributes(?string $name = null, int $flags = 0) : array
+    public function getAttributes(?string $name = null, int $flags = 0): array
     {
     }
 }

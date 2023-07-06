@@ -5,6 +5,6 @@
  * @alias oci_num_rows
  * @deprecated
  */
-function ocirowcount($statement) : int|false
+function ocirowcount($statement): int|false
 {
 }

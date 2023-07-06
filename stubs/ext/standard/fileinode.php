@@ -1,5 +1,5 @@
 <?php 
 
-function fileinode(string $filename) : int|false
+function fileinode(string $filename): int|false
 {
 }

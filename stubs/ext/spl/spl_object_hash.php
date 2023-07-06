@@ -1,5 +1,5 @@
 <?php 
 
-function spl_object_hash(object $object) : string
+function spl_object_hash(object $object): string
 {
 }

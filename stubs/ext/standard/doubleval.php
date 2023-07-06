@@ -1,6 +1,6 @@
 <?php 
 
 /** @alias floatval */
-function doubleval(mixed $value) : float
+function doubleval(mixed $value): float
 {
 }

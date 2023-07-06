@@ -1,5 +1,5 @@
 <?php 
 
-function opcache_compile_file(string $filename) : bool
+function opcache_compile_file(string $filename): bool
 {
 }

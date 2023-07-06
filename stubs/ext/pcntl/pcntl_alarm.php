@@ -1,5 +1,5 @@
 <?php 
 
-function pcntl_alarm(int $seconds) : int
+function pcntl_alarm(int $seconds): int
 {
 }

@@ -2,15 +2,15 @@
 
 /** @param resource|null $connection */
 #[\Until('8.1')]
-function pg_untrace($connection = null) : bool
+function pg_untrace($connection = null): bool
 {
 }
 #[\Since('8.1')]
 #[\Until('8.3')]
-function pg_untrace(?\PgSql\Connection $connection = null) : bool
+function pg_untrace(?\PgSql\Connection $connection = null): bool
 {
 }
 #[\Since('8.3')]
-function pg_untrace(?\PgSql\Connection $connection = null) : true
+function pg_untrace(?\PgSql\Connection $connection = null): true
 {
 }

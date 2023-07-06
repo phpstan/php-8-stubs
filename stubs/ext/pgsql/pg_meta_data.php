@@ -2,7 +2,7 @@
 
 /** @param resource $connection */
 #[\Until('8.1')]
-function pg_meta_data($connection, string $table_name, bool $extended = false) : array|false
+function pg_meta_data($connection, string $table_name, bool $extended = false): array|false
 {
 }
 /**
@@ -10,6 +10,6 @@ function pg_meta_data($connection, string $table_name, bool $extended = false) :
  * @refcount 1
  */
 #[\Since('8.1')]
-function pg_meta_data(\PgSql\Connection $connection, string $table_name, bool $extended = false) : array|false
+function pg_meta_data(\PgSql\Connection $connection, string $table_name, bool $extended = false): array|false
 {
 }

@@ -1,5 +1,5 @@
 <?php 
 
-function log1p(float $num) : float
+function log1p(float $num): float
 {
 }

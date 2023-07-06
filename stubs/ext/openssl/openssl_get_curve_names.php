@@ -4,6 +4,6 @@
 /**
  * @refcount 1
  */
-function openssl_get_curve_names() : array|false
+function openssl_get_curve_names(): array|false
 {
 }

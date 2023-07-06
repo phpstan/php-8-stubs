@@ -1,5 +1,5 @@
 <?php 
 
-function gc_enable() : void
+function gc_enable(): void
 {
 }

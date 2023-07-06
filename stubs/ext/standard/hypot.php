@@ -1,5 +1,5 @@
 <?php 
 
-function hypot(float $x, float $y) : float
+function hypot(float $x, float $y): float
 {
 }

@@ -2,6 +2,6 @@
 
 #endif
 /* type.c */
-function gettype(mixed $value) : string
+function gettype(mixed $value): string
 {
 }

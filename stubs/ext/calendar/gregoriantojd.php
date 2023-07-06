@@ -1,5 +1,5 @@
 <?php 
 
-function gregoriantojd(int $month, int $day, int $year) : int
+function gregoriantojd(int $month, int $day, int $year): int
 {
 }

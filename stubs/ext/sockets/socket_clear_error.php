@@ -1,5 +1,5 @@
 <?php 
 
-function socket_clear_error(?\Socket $socket = null) : void
+function socket_clear_error(?\Socket $socket = null): void
 {
 }

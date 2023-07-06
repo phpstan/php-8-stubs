@@ -1,5 +1,5 @@
 <?php 
 
-function intl_get_error_message() : string
+function intl_get_error_message(): string
 {
 }

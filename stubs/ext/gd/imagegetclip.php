@@ -3,6 +3,6 @@
 /**
  * @refcount 1
  */
-function imagegetclip(\GdImage $image) : array
+function imagegetclip(\GdImage $image): array
 {
 }

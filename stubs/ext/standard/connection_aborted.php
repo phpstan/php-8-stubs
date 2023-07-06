@@ -1,5 +1,5 @@
 <?php 
 
-function connection_aborted() : int
+function connection_aborted(): int
 {
 }

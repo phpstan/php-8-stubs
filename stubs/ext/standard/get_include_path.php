@@ -1,5 +1,5 @@
 <?php 
 
-function get_include_path() : string|false
+function get_include_path(): string|false
 {
 }

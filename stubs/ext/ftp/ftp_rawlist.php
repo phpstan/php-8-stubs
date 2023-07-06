@@ -2,7 +2,7 @@
 
 /** @param resource $ftp */
 #[\Until('8.1')]
-function ftp_rawlist($ftp, string $directory, bool $recursive = false) : array|false
+function ftp_rawlist($ftp, string $directory, bool $recursive = false): array|false
 {
 }
 /**
@@ -10,6 +10,6 @@ function ftp_rawlist($ftp, string $directory, bool $recursive = false) : array|f
  * @refcount 1
  */
 #[\Since('8.1')]
-function ftp_rawlist(\FTP\Connection $ftp, string $directory, bool $recursive = false) : array|false
+function ftp_rawlist(\FTP\Connection $ftp, string $directory, bool $recursive = false): array|false
 {
 }

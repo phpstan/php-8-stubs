@@ -7,7 +7,7 @@
  * @deprecated
  */
 #[\Until('8.1')]
-function pg_fieldprtlen($result, $row, string|int $field = UNKNOWN) : int|false
+function pg_fieldprtlen($result, $row, string|int $field = UNKNOWN): int|false
 {
 }
 /**
@@ -16,6 +16,6 @@ function pg_fieldprtlen($result, $row, string|int $field = UNKNOWN) : int|false
  * @deprecated
  */
 #[\Since('8.1')]
-function pg_fieldprtlen(\PgSql\Result $result, $row, string|int $field = UNKNOWN) : int|false
+function pg_fieldprtlen(\PgSql\Result $result, $row, string|int $field = UNKNOWN): int|false
 {
 }

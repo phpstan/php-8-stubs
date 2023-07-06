@@ -1,5 +1,5 @@
 <?php 
 
-function is_numeric(mixed $value) : bool
+function is_numeric(mixed $value): bool
 {
 }

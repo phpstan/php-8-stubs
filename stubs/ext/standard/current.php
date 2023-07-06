@@ -1,5 +1,5 @@
 <?php 
 
-function current(array|object $array) : mixed
+function current(array|object $array): mixed
 {
 }

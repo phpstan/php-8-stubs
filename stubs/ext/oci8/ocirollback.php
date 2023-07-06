@@ -5,6 +5,6 @@
  * @alias oci_rollback
  * @deprecated
  */
-function ocirollback($connection) : bool
+function ocirollback($connection): bool
 {
 }

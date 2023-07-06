@@ -1,5 +1,5 @@
 <?php 
 
-function is_link(string $filename) : bool
+function is_link(string $filename): bool
 {
 }

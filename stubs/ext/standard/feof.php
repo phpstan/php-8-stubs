@@ -1,6 +1,6 @@
 <?php 
 
 /** @param resource $stream */
-function feof($stream) : bool
+function feof($stream): bool
 {
 }

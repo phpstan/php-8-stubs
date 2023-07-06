@@ -2,6 +2,6 @@
 
 #endif
 #ifdef HAVE_GD_WEBP
-function imagecreatefromwebp(string $filename) : \GdImage|false
+function imagecreatefromwebp(string $filename): \GdImage|false
 {
 }

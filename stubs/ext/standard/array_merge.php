@@ -1,5 +1,5 @@
 <?php 
 
-function array_merge(array ...$arrays) : array
+function array_merge(array ...$arrays): array
 {
 }

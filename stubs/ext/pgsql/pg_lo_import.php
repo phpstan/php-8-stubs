@@ -7,7 +7,7 @@
  * @return resource|false
  */
 #[\Until('8.1')]
-function pg_lo_import($connection, $filename = UNKNOWN, $oid = UNKNOWN) : string|int|false
+function pg_lo_import($connection, $filename = UNKNOWN, $oid = UNKNOWN): string|int|false
 {
 }
 /**
@@ -17,6 +17,6 @@ function pg_lo_import($connection, $filename = UNKNOWN, $oid = UNKNOWN) : string
  * @refcount 1
  */
 #[\Since('8.1')]
-function pg_lo_import($connection, $filename = UNKNOWN, $oid = UNKNOWN) : string|int|false
+function pg_lo_import($connection, $filename = UNKNOWN, $oid = UNKNOWN): string|int|false
 {
 }

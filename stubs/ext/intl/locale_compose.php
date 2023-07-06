@@ -1,5 +1,5 @@
 <?php 
 
-function locale_compose(array $subtags) : string|false
+function locale_compose(array $subtags): string|false
 {
 }

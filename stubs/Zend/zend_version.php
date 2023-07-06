@@ -1,6 +1,6 @@
 <?php 
 
 /** @generate-function-entries */
-function zend_version() : string
+function zend_version(): string
 {
 }

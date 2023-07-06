@@ -1,5 +1,5 @@
 <?php 
 
-function atanh(float $num) : float
+function atanh(float $num): float
 {
 }

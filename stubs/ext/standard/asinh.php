@@ -1,5 +1,5 @@
 <?php 
 
-function asinh(float $num) : float
+function asinh(float $num): float
 {
 }

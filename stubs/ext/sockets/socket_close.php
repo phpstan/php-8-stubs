@@ -1,5 +1,5 @@
 <?php 
 
-function socket_close(\Socket $socket) : void
+function socket_close(\Socket $socket): void
 {
 }

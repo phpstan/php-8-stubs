@@ -4,6 +4,6 @@
  * @param resource $zip
  * @deprecated
  */
-function zip_close($zip) : void
+function zip_close($zip): void
 {
 }

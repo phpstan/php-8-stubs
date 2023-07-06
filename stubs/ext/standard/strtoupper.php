@@ -1,5 +1,5 @@
 <?php 
 
-function strtoupper(string $string) : string
+function strtoupper(string $string): string
 {
 }

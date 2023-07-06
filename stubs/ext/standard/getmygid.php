@@ -1,5 +1,5 @@
 <?php 
 
-function getmygid() : int|false
+function getmygid(): int|false
 {
 }

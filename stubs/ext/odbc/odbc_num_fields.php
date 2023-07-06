@@ -2,6 +2,6 @@
 
 #endif
 /** @param resource $statement */
-function odbc_num_fields($statement) : int
+function odbc_num_fields($statement): int
 {
 }

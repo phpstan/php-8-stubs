@@ -1,5 +1,5 @@
 <?php 
 
-function stripslashes(string $string) : string
+function stripslashes(string $string): string
 {
 }

@@ -1,5 +1,5 @@
 <?php 
 
-function posix_getuid() : int
+function posix_getuid(): int
 {
 }

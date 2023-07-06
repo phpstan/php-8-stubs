@@ -5,7 +5,7 @@
  * @param resource|null $context
  */
 #[\Until('8.1')]
-function finfo_file($finfo, string $filename, int $flags = FILEINFO_NONE, $context = null) : string|false
+function finfo_file($finfo, string $filename, int $flags = FILEINFO_NONE, $context = null): string|false
 {
 }
 // TODO make return type void
@@ -14,6 +14,6 @@ function finfo_file($finfo, string $filename, int $flags = FILEINFO_NONE, $conte
  * @refcount 1
  */
 #[\Since('8.1')]
-function finfo_file(\finfo $finfo, string $filename, int $flags = FILEINFO_NONE, $context = null) : string|false
+function finfo_file(\finfo $finfo, string $filename, int $flags = FILEINFO_NONE, $context = null): string|false
 {
 }

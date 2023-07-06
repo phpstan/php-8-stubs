@@ -1,5 +1,5 @@
 <?php 
 
-function highlight_file(string $filename, bool $return = false) : string|bool
+function highlight_file(string $filename, bool $return = false): string|bool
 {
 }

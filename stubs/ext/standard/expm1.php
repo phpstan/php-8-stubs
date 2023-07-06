@@ -1,5 +1,5 @@
 <?php 
 
-function expm1(float $num) : float
+function expm1(float $num): float
 {
 }

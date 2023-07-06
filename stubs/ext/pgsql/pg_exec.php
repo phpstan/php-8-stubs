@@ -14,6 +14,6 @@ function pg_exec($connection, string $query = UNKNOWN)
  * @alias pg_query
  */
 #[\Since('8.1')]
-function pg_exec($connection, string $query = UNKNOWN) : \PgSql\Result|false
+function pg_exec($connection, string $query = UNKNOWN): \PgSql\Result|false
 {
 }

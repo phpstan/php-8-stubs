@@ -1,5 +1,5 @@
 <?php 
 
-function intltz_get_gmt() : \IntlTimeZone
+function intltz_get_gmt(): \IntlTimeZone
 {
 }

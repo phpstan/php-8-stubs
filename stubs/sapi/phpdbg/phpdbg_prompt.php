@@ -1,5 +1,5 @@
 <?php 
 
-function phpdbg_prompt(string $string) : void
+function phpdbg_prompt(string $string): void
 {
 }

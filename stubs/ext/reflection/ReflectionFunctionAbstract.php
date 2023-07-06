@@ -4,12 +4,12 @@ abstract class ReflectionFunctionAbstract implements \Reflector
 {
     /** @implementation-alias ReflectionClass::__clone */
     #[\Until('8.1')]
-    private final function __clone() : void
+    final private function __clone(): void
     {
     }
     /** @implementation-alias ReflectionClass::__clone */
     #[\Since('8.1')]
-    private function __clone() : void
+    private function __clone(): void
     {
     }
     /**
@@ -63,7 +63,7 @@ abstract class ReflectionFunctionAbstract implements \Reflector
     }
     /** @tentative-return-type */
     #[\Since('8.1')]
-    public function isStatic() : bool
+    public function isStatic(): bool
     {
     }
     /**
@@ -88,7 +88,7 @@ abstract class ReflectionFunctionAbstract implements \Reflector
     {
     }
     #[\Since('8.1')]
-    public function getClosureUsedVariables() : array
+    public function getClosureUsedVariables(): array
     {
     }
     /**
@@ -204,15 +204,15 @@ abstract class ReflectionFunctionAbstract implements \Reflector
     {
     }
     #[\Since('8.1')]
-    public function hasTentativeReturnType() : bool
+    public function hasTentativeReturnType(): bool
     {
     }
     #[\Since('8.1')]
-    public function getTentativeReturnType() : ?ReflectionType
+    public function getTentativeReturnType(): ?ReflectionType
     {
     }
     /** @return ReflectionAttribute[] */
-    public function getAttributes(?string $name = null, int $flags = 0) : array
+    public function getAttributes(?string $name = null, int $flags = 0): array
     {
     }
 }

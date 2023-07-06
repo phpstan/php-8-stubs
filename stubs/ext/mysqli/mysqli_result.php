@@ -92,7 +92,7 @@ class mysqli_result implements \IteratorAggregate
     }
     /** @alias mysqli_fetch_column */
     #[\Since('8.1')]
-    public function fetch_column(int $column = 0) : null|int|float|string|false
+    public function fetch_column(int $column = 0): null|int|float|string|false
     {
     }
     /**
@@ -111,5 +111,5 @@ class mysqli_result implements \IteratorAggregate
     public function free_result()
     {
     }
-    public function getIterator() : Iterator;
+    public function getIterator(): Iterator;
 }

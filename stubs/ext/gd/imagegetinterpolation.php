@@ -1,5 +1,5 @@
 <?php 
 
-function imagegetinterpolation(\GdImage $image) : int
+function imagegetinterpolation(\GdImage $image): int
 {
 }

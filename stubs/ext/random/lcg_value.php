@@ -1,6 +1,6 @@
 <?php 
 
 #[\Since('8.2')]
-function lcg_value() : float
+function lcg_value(): float
 {
 }

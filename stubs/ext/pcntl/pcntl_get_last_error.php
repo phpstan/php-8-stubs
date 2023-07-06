@@ -1,5 +1,5 @@
 <?php 
 
-function pcntl_get_last_error() : int
+function pcntl_get_last_error(): int
 {
 }

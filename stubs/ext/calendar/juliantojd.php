@@ -1,5 +1,5 @@
 <?php 
 
-function juliantojd(int $month, int $day, int $year) : int
+function juliantojd(int $month, int $day, int $year): int
 {
 }

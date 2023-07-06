@@ -1,5 +1,5 @@
 <?php 
 
-function imageflip(\GdImage $image, int $mode) : bool
+function imageflip(\GdImage $image, int $mode): bool
 {
 }

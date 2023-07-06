@@ -1,5 +1,5 @@
 <?php 
 
-function printf(string $format, mixed ...$values) : int
+function printf(string $format, mixed ...$values): int
 {
 }

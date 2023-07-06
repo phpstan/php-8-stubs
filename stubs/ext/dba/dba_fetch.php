@@ -6,7 +6,7 @@
  * @param resource $dba
  */
 #[\Until('8.2')]
-function dba_fetch($key, $skip, $dba = UNKNOWN) : string|false
+function dba_fetch($key, $skip, $dba = UNKNOWN): string|false
 {
 }
 /**
@@ -14,6 +14,6 @@ function dba_fetch($key, $skip, $dba = UNKNOWN) : string|false
  * @param resource|int $skip overloaded legacy signature has params flipped
  */
 #[\Since('8.2')]
-function dba_fetch(string|array $key, $dba, $skip = 0) : string|false
+function dba_fetch(string|array $key, $dba, $skip = 0): string|false
 {
 }

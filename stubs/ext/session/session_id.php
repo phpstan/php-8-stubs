@@ -1,5 +1,5 @@
 <?php 
 
-function session_id(?string $id = null) : string|false
+function session_id(?string $id = null): string|false
 {
 }

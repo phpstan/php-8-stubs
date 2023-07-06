@@ -1,5 +1,5 @@
 <?php 
 
-function phpdbg_exec(string $context) : string|bool
+function phpdbg_exec(string $context): string|bool
 {
 }

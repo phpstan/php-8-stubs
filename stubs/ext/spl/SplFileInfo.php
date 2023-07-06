@@ -197,7 +197,7 @@ class SplFileInfo
     {
     }
     /** @implementation-alias SplFileInfo::getPathname */
-    public function __toString() : string
+    public function __toString(): string
     {
     }
     /**
@@ -212,7 +212,7 @@ class SplFileInfo
      * @tentative-return-type
      * @return void
      */
-    public final function _bad_state_ex()
+    final public function _bad_state_ex()
     {
     }
 }

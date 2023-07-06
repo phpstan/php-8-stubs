@@ -1,5 +1,5 @@
 <?php 
 
-function array_shift(array &$array) : mixed
+function array_shift(array &$array): mixed
 {
 }

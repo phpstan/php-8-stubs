@@ -1,5 +1,5 @@
 <?php 
 
-function date_timestamp_get(\DateTimeInterface $object) : int
+function date_timestamp_get(\DateTimeInterface $object): int
 {
 }

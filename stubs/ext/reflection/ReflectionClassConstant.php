@@ -4,18 +4,18 @@ class ReflectionClassConstant implements \Reflector
 {
     /** @implementation-alias ReflectionClass::__clone */
     #[\Until('8.1')]
-    private final function __clone() : void
+    final private function __clone(): void
     {
     }
     /** @implementation-alias ReflectionClass::__clone */
     #[\Since('8.1')]
-    private function __clone() : void
+    private function __clone(): void
     {
     }
     public function __construct(object|string $class, string $constant)
     {
     }
-    public function __toString() : string
+    public function __toString(): string
     {
     }
     /**
@@ -54,7 +54,7 @@ class ReflectionClassConstant implements \Reflector
     {
     }
     #[\Since('8.1')]
-    public function isFinal() : bool
+    public function isFinal(): bool
     {
     }
     /**
@@ -79,19 +79,19 @@ class ReflectionClassConstant implements \Reflector
     {
     }
     /** @return ReflectionAttribute[] */
-    public function getAttributes(?string $name = null, int $flags = 0) : array
+    public function getAttributes(?string $name = null, int $flags = 0): array
     {
     }
     #[\Since('8.1')]
-    public function isEnumCase() : bool
+    public function isEnumCase(): bool
     {
     }
     #[\Since('8.3')]
-    public function hasType() : bool
+    public function hasType(): bool
     {
     }
     #[\Since('8.3')]
-    public function getType() : ?ReflectionType
+    public function getType(): ?ReflectionType
     {
     }
 }

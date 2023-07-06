@@ -1,6 +1,6 @@
 <?php 
 
 #endif
-function curl_exec(\CurlHandle $handle) : string|bool
+function curl_exec(\CurlHandle $handle): string|bool
 {
 }

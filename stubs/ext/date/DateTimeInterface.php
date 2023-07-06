@@ -35,7 +35,7 @@ interface DateTimeInterface
      */
     public function __wakeup();
     #[\Since('8.2')]
-    public function __serialize() : array;
+    public function __serialize(): array;
     #[\Since('8.2')]
-    public function __unserialize(array $data) : void;
+    public function __unserialize(array $data): void;
 }

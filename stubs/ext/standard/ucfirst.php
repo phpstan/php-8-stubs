@@ -1,5 +1,5 @@
 <?php 
 
-function ucfirst(string $string) : string
+function ucfirst(string $string): string
 {
 }

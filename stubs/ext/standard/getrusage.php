@@ -5,6 +5,6 @@
 /**
  * @refcount 1
  */
-function getrusage(int $mode = 0) : array|false
+function getrusage(int $mode = 0): array|false
 {
 }

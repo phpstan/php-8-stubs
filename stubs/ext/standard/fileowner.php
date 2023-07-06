@@ -1,5 +1,5 @@
 <?php 
 
-function fileowner(string $filename) : int|false
+function fileowner(string $filename): int|false
 {
 }

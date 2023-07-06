@@ -1,5 +1,5 @@
 <?php 
 
-function curl_multi_init() : \CurlMultiHandle
+function curl_multi_init(): \CurlMultiHandle
 {
 }

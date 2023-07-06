@@ -1,5 +1,5 @@
 <?php 
 
-function assert_options(int $option, mixed $value = UNKNOWN) : mixed
+function assert_options(int $option, mixed $value = UNKNOWN): mixed
 {
 }

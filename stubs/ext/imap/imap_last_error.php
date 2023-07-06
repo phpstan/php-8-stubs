@@ -1,5 +1,5 @@
 <?php 
 
-function imap_last_error() : string|false
+function imap_last_error(): string|false
 {
 }

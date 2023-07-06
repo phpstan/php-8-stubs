@@ -1,5 +1,5 @@
 <?php 
 
-function xmlwriter_text(\XMLWriter $writer, string $content) : bool
+function xmlwriter_text(\XMLWriter $writer, string $content): bool
 {
 }

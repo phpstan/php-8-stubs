@@ -1,5 +1,5 @@
 <?php 
 
-function settype(mixed &$var, string $type) : bool
+function settype(mixed &$var, string $type): bool
 {
 }

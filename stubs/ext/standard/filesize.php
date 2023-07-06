@@ -1,5 +1,5 @@
 <?php 
 
-function filesize(string $filename) : int|false
+function filesize(string $filename): int|false
 {
 }

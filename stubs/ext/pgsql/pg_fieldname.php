@@ -6,7 +6,7 @@
  * @deprecated
  */
 #[\Until('8.1')]
-function pg_fieldname($result, int $field) : string
+function pg_fieldname($result, int $field): string
 {
 }
 /**
@@ -14,6 +14,6 @@ function pg_fieldname($result, int $field) : string
  * @deprecated
  */
 #[\Since('8.1')]
-function pg_fieldname(\PgSql\Result $result, int $field) : string
+function pg_fieldname(\PgSql\Result $result, int $field): string
 {
 }

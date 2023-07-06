@@ -1,5 +1,5 @@
 <?php 
 
-function is_int(mixed $value) : bool
+function is_int(mixed $value): bool
 {
 }

@@ -4,6 +4,6 @@
  * @param resource $stream
  * @alias fpassthru
  */
-function gzpassthru($stream) : int
+function gzpassthru($stream): int
 {
 }

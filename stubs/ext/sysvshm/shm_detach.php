@@ -1,5 +1,5 @@
 <?php 
 
-function shm_detach(\SysvSharedMemory $shm) : bool
+function shm_detach(\SysvSharedMemory $shm): bool
 {
 }

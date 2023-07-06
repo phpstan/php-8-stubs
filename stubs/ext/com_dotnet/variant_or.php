@@ -1,5 +1,5 @@
 <?php 
 
-function variant_or(mixed $left, mixed $right) : \variant
+function variant_or(mixed $left, mixed $right): \variant
 {
 }

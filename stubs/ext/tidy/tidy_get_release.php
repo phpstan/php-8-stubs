@@ -1,5 +1,5 @@
 <?php 
 
-function tidy_get_release() : string
+function tidy_get_release(): string
 {
 }

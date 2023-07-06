@@ -54,7 +54,7 @@ class ResourceBundle implements \IteratorAggregate, \Countable
     public function getErrorMessage()
     {
     }
-    public function getIterator() : Iterator
+    public function getIterator(): Iterator
     {
     }
 }

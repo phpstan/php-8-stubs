@@ -15,6 +15,6 @@ function pg_lo_open($connection, $oid = UNKNOWN, string $mode = UNKNOWN)
  * @refcount 1
  */
 #[\Since('8.1')]
-function pg_lo_open($connection, $oid = UNKNOWN, string $mode = UNKNOWN) : \PgSql\Lob|false
+function pg_lo_open($connection, $oid = UNKNOWN, string $mode = UNKNOWN): \PgSql\Lob|false
 {
 }

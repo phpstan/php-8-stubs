@@ -1,5 +1,5 @@
 <?php 
 
-function array_pad(array $array, int $length, mixed $value) : array
+function array_pad(array $array, int $length, mixed $value): array
 {
 }

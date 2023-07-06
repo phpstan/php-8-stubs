@@ -87,7 +87,7 @@ class SimpleXMLElement implements \Stringable, \Countable, \RecursiveIterator
     public function getName()
     {
     }
-    public function __toString() : string
+    public function __toString(): string
     {
     }
     /**
@@ -112,7 +112,7 @@ class SimpleXMLElement implements \Stringable, \Countable, \RecursiveIterator
     {
     }
     #[\Since('8.1')]
-    public function current() : SimpleXMLElement
+    public function current(): SimpleXMLElement
     {
     }
     /**

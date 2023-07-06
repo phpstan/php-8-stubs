@@ -1,5 +1,5 @@
 <?php 
 
-function posix_getcwd() : string|false
+function posix_getcwd(): string|false
 {
 }

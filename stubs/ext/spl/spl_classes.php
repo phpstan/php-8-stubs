@@ -3,6 +3,6 @@
 /**
  * @refcount 1
  */
-function spl_classes() : array
+function spl_classes(): array
 {
 }

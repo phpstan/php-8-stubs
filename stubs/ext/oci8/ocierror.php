@@ -5,6 +5,6 @@
  * @alias oci_error
  * @deprecated
  */
-function ocierror($connection_or_statement = null) : array|false
+function ocierror($connection_or_statement = null): array|false
 {
 }

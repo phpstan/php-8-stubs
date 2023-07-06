@@ -1,5 +1,5 @@
 <?php 
 
-function usleep(int $microseconds) : void
+function usleep(int $microseconds): void
 {
 }

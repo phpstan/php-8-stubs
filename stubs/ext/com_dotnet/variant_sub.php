@@ -1,5 +1,5 @@
 <?php 
 
-function variant_sub(mixed $left, mixed $right) : \variant
+function variant_sub(mixed $left, mixed $right): \variant
 {
 }

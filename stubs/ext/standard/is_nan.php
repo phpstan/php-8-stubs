@@ -1,5 +1,5 @@
 <?php 
 
-function is_nan(float $num) : bool
+function is_nan(float $num): bool
 {
 }

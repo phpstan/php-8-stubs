@@ -1,5 +1,5 @@
 <?php 
 
-function sem_remove(\SysvSemaphore $semaphore) : bool
+function sem_remove(\SysvSemaphore $semaphore): bool
 {
 }

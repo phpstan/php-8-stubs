@@ -1,5 +1,5 @@
 <?php 
 
-function locale_get_region(string $locale) : ?string
+function locale_get_region(string $locale): ?string
 {
 }

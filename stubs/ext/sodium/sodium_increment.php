@@ -1,5 +1,5 @@
 <?php 
 
-function sodium_increment(string &$string) : void
+function sodium_increment(string &$string): void
 {
 }

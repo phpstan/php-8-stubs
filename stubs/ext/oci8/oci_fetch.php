@@ -1,6 +1,6 @@
 <?php 
 
 /** @param resource $statement */
-function oci_fetch($statement) : bool
+function oci_fetch($statement): bool
 {
 }

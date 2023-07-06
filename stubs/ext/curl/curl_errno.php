@@ -1,5 +1,5 @@
 <?php 
 
-function curl_errno(\CurlHandle $handle) : int
+function curl_errno(\CurlHandle $handle): int
 {
 }

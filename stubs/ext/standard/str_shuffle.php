@@ -1,5 +1,5 @@
 <?php 
 
-function str_shuffle(string $string) : string
+function str_shuffle(string $string): string
 {
 }

@@ -1,5 +1,5 @@
 <?php 
 
-function phpdbg_start_oplog() : void
+function phpdbg_start_oplog(): void
 {
 }

@@ -1,6 +1,6 @@
 <?php 
 
 /** @param resource $stream */
-function fflush($stream) : bool
+function fflush($stream): bool
 {
 }

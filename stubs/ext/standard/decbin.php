@@ -1,5 +1,5 @@
 <?php 
 
-function decbin(int $num) : string
+function decbin(int $num): string
 {
 }

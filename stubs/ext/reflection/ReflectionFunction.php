@@ -5,11 +5,11 @@ class ReflectionFunction extends \ReflectionFunctionAbstract
     public function __construct(Closure|string $function)
     {
     }
-    public function __toString() : string
+    public function __toString(): string
     {
     }
     #[\Since('8.2')]
-    public function isAnonymous() : bool
+    public function isAnonymous(): bool
     {
     }
     /**

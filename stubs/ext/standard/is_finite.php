@@ -1,5 +1,5 @@
 <?php 
 
-function is_finite(float $num) : bool
+function is_finite(float $num): bool
 {
 }

@@ -1,5 +1,5 @@
 <?php 
 
-function implode(string|array $separator, ?array $array = null) : string
+function implode(string|array $separator, ?array $array = null): string
 {
 }

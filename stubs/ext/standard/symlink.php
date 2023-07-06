@@ -1,5 +1,5 @@
 <?php 
 
-function symlink(string $target, string $link) : bool
+function symlink(string $target, string $link): bool
 {
 }

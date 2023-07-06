@@ -1,5 +1,5 @@
 <?php 
 
-function apache_response_headers() : array
+function apache_response_headers(): array
 {
 }

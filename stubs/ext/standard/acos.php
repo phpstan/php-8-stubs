@@ -1,5 +1,5 @@
 <?php 
 
-function acos(float $num) : float
+function acos(float $num): float
 {
 }

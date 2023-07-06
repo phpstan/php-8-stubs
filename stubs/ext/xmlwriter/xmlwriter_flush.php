@@ -1,5 +1,5 @@
 <?php 
 
-function xmlwriter_flush(\XMLWriter $writer, bool $empty = true) : string|int
+function xmlwriter_flush(\XMLWriter $writer, bool $empty = true): string|int
 {
 }

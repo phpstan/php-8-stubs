@@ -1,5 +1,5 @@
 <?php 
 
-function curl_multi_select(\CurlMultiHandle $multi_handle, float $timeout = 1.0) : int
+function curl_multi_select(\CurlMultiHandle $multi_handle, float $timeout = 1.0): int
 {
 }

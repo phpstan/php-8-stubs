@@ -1,5 +1,5 @@
 <?php 
 
-function quoted_printable_encode(string $string) : string
+function quoted_printable_encode(string $string): string
 {
 }

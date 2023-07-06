@@ -1,5 +1,5 @@
 <?php 
 
-function max(mixed $value, mixed ...$values) : mixed
+function max(mixed $value, mixed ...$values): mixed
 {
 }

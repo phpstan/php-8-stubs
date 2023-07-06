@@ -1,5 +1,5 @@
 <?php 
 
-function mysqli_savepoint(\mysqli $mysql, string $name) : bool
+function mysqli_savepoint(\mysqli $mysql, string $name): bool
 {
 }

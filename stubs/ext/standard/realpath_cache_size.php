@@ -1,5 +1,5 @@
 <?php 
 
-function realpath_cache_size() : int
+function realpath_cache_size(): int
 {
 }

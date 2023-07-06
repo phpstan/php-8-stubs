@@ -1,5 +1,5 @@
 <?php 
 
-function func_get_args() : array
+function func_get_args(): array
 {
 }

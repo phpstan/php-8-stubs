@@ -5,7 +5,7 @@
  * @param string|int $row
  */
 #[\Until('8.1')]
-function pg_fetch_result($result, $row, string|int $field = UNKNOWN) : string|false|null
+function pg_fetch_result($result, $row, string|int $field = UNKNOWN): string|false|null
 {
 }
 /**
@@ -13,6 +13,6 @@ function pg_fetch_result($result, $row, string|int $field = UNKNOWN) : string|fa
  * @refcount 1
  */
 #[\Since('8.1')]
-function pg_fetch_result(\PgSql\Result $result, $row, string|int $field = UNKNOWN) : string|false|null
+function pg_fetch_result(\PgSql\Result $result, $row, string|int $field = UNKNOWN): string|false|null
 {
 }

@@ -1,5 +1,5 @@
 <?php 
 
-function ocisetbufferinglob(\OCILob $lob, bool $mode) : bool
+function ocisetbufferinglob(\OCILob $lob, bool $mode): bool
 {
 }

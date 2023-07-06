@@ -3,6 +3,6 @@
 /**
  * @param resource $stream
  */
-function stream_get_meta_data($stream) : array
+function stream_get_meta_data($stream): array
 {
 }

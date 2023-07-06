@@ -6,7 +6,7 @@
  * @deprecated
  */
 #[\Until('8.1')]
-function pg_loclose($lob) : bool
+function pg_loclose($lob): bool
 {
 }
 /**
@@ -14,6 +14,6 @@ function pg_loclose($lob) : bool
  * @deprecated
  */
 #[\Since('8.1')]
-function pg_loclose(\PgSql\Lob $lob) : bool
+function pg_loclose(\PgSql\Lob $lob): bool
 {
 }

@@ -1,5 +1,5 @@
 <?php 
 
-function imagesy(\GdImage $image) : int
+function imagesy(\GdImage $image): int
 {
 }

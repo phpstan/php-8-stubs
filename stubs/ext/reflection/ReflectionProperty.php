@@ -4,18 +4,18 @@ class ReflectionProperty implements \Reflector
 {
     /** @implementation-alias ReflectionClass::__clone */
     #[\Until('8.1')]
-    private final function __clone() : void
+    final private function __clone(): void
     {
     }
     /** @implementation-alias ReflectionClass::__clone */
     #[\Since('8.1')]
-    private function __clone() : void
+    private function __clone(): void
     {
     }
     public function __construct(object|string $class, string $property)
     {
     }
-    public function __toString() : string
+    public function __toString(): string
     {
     }
     /**
@@ -75,7 +75,7 @@ class ReflectionProperty implements \Reflector
     {
     }
     #[\Since('8.1')]
-    public function isReadOnly() : bool
+    public function isReadOnly(): bool
     {
     }
     /**
@@ -85,7 +85,7 @@ class ReflectionProperty implements \Reflector
     public function isDefault()
     {
     }
-    public function isPromoted() : bool
+    public function isPromoted(): bool
     {
     }
     /**
@@ -130,7 +130,7 @@ class ReflectionProperty implements \Reflector
     public function hasType()
     {
     }
-    public function hasDefaultValue() : bool
+    public function hasDefaultValue(): bool
     {
     }
     /**
@@ -141,7 +141,7 @@ class ReflectionProperty implements \Reflector
     {
     }
     /** @return ReflectionAttribute[] */
-    public function getAttributes(?string $name = null, int $flags = 0) : array
+    public function getAttributes(?string $name = null, int $flags = 0): array
     {
     }
 }

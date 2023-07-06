@@ -1,5 +1,5 @@
 <?php 
 
-function session_write_close() : bool
+function session_write_close(): bool
 {
 }

@@ -1,5 +1,5 @@
 <?php 
 
-function ctype_lower(mixed $text) : bool
+function ctype_lower(mixed $text): bool
 {
 }

@@ -3,6 +3,6 @@
 /**
  * @refcount 1
  */
-function get_defined_vars() : array
+function get_defined_vars(): array
 {
 }

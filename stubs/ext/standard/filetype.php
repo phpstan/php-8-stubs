@@ -1,5 +1,5 @@
 <?php 
 
-function filetype(string $filename) : string|false
+function filetype(string $filename): string|false
 {
 }

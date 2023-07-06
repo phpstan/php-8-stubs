@@ -1,5 +1,5 @@
 <?php 
 
-function sqrt(float $num) : float
+function sqrt(float $num): float
 {
 }

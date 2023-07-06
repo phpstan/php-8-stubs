@@ -1,5 +1,5 @@
 <?php 
 
-function ord(string $character) : int
+function ord(string $character): int
 {
 }

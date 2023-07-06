@@ -2,7 +2,7 @@
 
 /** @param resource $connection */
 #[\Until('8.1')]
-function pg_get_notify($connection, int $mode = PGSQL_ASSOC) : array|false
+function pg_get_notify($connection, int $mode = PGSQL_ASSOC): array|false
 {
 }
 /**
@@ -10,6 +10,6 @@ function pg_get_notify($connection, int $mode = PGSQL_ASSOC) : array|false
  * @refcount 1
  */
 #[\Since('8.1')]
-function pg_get_notify(\PgSql\Connection $connection, int $mode = PGSQL_ASSOC) : array|false
+function pg_get_notify(\PgSql\Connection $connection, int $mode = PGSQL_ASSOC): array|false
 {
 }

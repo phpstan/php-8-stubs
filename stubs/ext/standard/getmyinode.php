@@ -1,5 +1,5 @@
 <?php 
 
-function getmyinode() : int|false
+function getmyinode(): int|false
 {
 }

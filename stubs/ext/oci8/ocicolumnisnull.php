@@ -5,6 +5,6 @@
  * @alias oci_field_is_null
  * @deprecated
  */
-function ocicolumnisnull($statement, string|int $column) : bool
+function ocicolumnisnull($statement, string|int $column): bool
 {
 }

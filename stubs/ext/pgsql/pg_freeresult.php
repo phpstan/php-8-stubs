@@ -6,7 +6,7 @@
  * @deprecated
  */
 #[\Until('8.1')]
-function pg_freeresult($result) : bool
+function pg_freeresult($result): bool
 {
 }
 /**
@@ -14,6 +14,6 @@ function pg_freeresult($result) : bool
  * @deprecated
  */
 #[\Since('8.1')]
-function pg_freeresult(\PgSql\Result $result) : bool
+function pg_freeresult(\PgSql\Result $result): bool
 {
 }

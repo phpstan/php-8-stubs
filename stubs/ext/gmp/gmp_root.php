@@ -1,5 +1,5 @@
 <?php 
 
-function gmp_root(\GMP|int|string $num, int $nth) : \GMP
+function gmp_root(\GMP|int|string $num, int $nth): \GMP
 {
 }

@@ -5,7 +5,7 @@ class ReflectionMethod extends \ReflectionFunctionAbstract
     public function __construct(object|string $objectOrMethod, ?string $method = null)
     {
     }
-    public function __toString() : string
+    public function __toString(): string
     {
     }
     /**
@@ -100,7 +100,7 @@ class ReflectionMethod extends \ReflectionFunctionAbstract
     {
     }
     #[\Since('8.2')]
-    public function hasPrototype() : bool
+    public function hasPrototype(): bool
     {
     }
     /**

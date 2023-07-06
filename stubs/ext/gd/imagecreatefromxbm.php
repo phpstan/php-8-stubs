@@ -1,6 +1,6 @@
 <?php 
 
 #endif
-function imagecreatefromxbm(string $filename) : \GdImage|false
+function imagecreatefromxbm(string $filename): \GdImage|false
 {
 }

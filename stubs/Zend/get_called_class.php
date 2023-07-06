@@ -1,5 +1,5 @@
 <?php 
 
-function get_called_class() : string
+function get_called_class(): string
 {
 }

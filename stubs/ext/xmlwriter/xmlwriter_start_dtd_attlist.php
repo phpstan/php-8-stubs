@@ -1,5 +1,5 @@
 <?php 
 
-function xmlwriter_start_dtd_attlist(\XMLWriter $writer, string $name) : bool
+function xmlwriter_start_dtd_attlist(\XMLWriter $writer, string $name): bool
 {
 }

@@ -1,5 +1,5 @@
 <?php 
 
-function oci_client_version() : string
+function oci_client_version(): string
 {
 }

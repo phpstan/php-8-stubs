@@ -2,6 +2,6 @@
 
 /** @param resource $stream */
 #[\Since('8.1')]
-function fdatasync($stream) : bool
+function fdatasync($stream): bool
 {
 }

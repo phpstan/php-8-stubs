@@ -1,6 +1,6 @@
 <?php 
 
 /** @param resource $handle */
-function pclose($handle) : int
+function pclose($handle): int
 {
 }

@@ -1,5 +1,5 @@
 <?php 
 
-function ob_end_clean() : bool
+function ob_end_clean(): bool
 {
 }

@@ -70,7 +70,7 @@ class DirectoryIterator extends \SplFileInfo implements \SeekableIterator
     {
     }
     /** @implementation-alias DirectoryIterator::getFilename */
-    public function __toString() : string
+    public function __toString(): string
     {
     }
 }

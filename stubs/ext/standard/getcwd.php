@@ -1,6 +1,6 @@
 <?php 
 
 #endif
-function getcwd() : string|false
+function getcwd(): string|false
 {
 }

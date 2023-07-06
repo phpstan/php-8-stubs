@@ -4,6 +4,6 @@
  * @param resource $stream
  * @alias rewind
  */
-function gzrewind($stream) : bool
+function gzrewind($stream): bool
 {
 }

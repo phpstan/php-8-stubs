@@ -1,5 +1,5 @@
 <?php 
 
-function variant_mul(mixed $left, mixed $right) : \variant
+function variant_mul(mixed $left, mixed $right): \variant
 {
 }

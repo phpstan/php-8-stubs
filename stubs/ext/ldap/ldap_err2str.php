@@ -1,5 +1,5 @@
 <?php 
 
-function ldap_err2str(int $errno) : string
+function ldap_err2str(int $errno): string
 {
 }

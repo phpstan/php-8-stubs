@@ -1,5 +1,5 @@
 <?php 
 
-function imagecrop(\GdImage $image, array $rectangle) : \GdImage|false
+function imagecrop(\GdImage $image, array $rectangle): \GdImage|false
 {
 }

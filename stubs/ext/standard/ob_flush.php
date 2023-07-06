@@ -1,5 +1,5 @@
 <?php 
 
-function ob_flush() : bool
+function ob_flush(): bool
 {
 }

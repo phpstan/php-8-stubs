@@ -5,6 +5,6 @@
  * @alias oci_result
  * @deprecated
  */
-function ociresult($statement, string|int $column) : mixed
+function ociresult($statement, string|int $column): mixed
 {
 }

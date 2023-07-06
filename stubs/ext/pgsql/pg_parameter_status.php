@@ -2,7 +2,7 @@
 
 /** @param resource|string $connection */
 #[\Until('8.1')]
-function pg_parameter_status($connection, string $name = UNKNOWN) : string|false
+function pg_parameter_status($connection, string $name = UNKNOWN): string|false
 {
 }
 /**
@@ -10,6 +10,6 @@ function pg_parameter_status($connection, string $name = UNKNOWN) : string|false
  * @refcount 1
  */
 #[\Since('8.1')]
-function pg_parameter_status($connection, string $name = UNKNOWN) : string|false
+function pg_parameter_status($connection, string $name = UNKNOWN): string|false
 {
 }

@@ -133,7 +133,7 @@ class PDOStatement implements \IteratorAggregate
     public function setFetchMode(int $mode, mixed ...$args)
     {
     }
-    public function getIterator() : Iterator
+    public function getIterator(): Iterator
     {
     }
 }

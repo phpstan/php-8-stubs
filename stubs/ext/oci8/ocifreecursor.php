@@ -5,6 +5,6 @@
  * @alias oci_free_statement
  * @deprecated
  */
-function ocifreecursor($statement) : bool
+function ocifreecursor($statement): bool
 {
 }

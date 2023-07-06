@@ -1,5 +1,5 @@
 <?php 
 
-function chr(int $codepoint) : string
+function chr(int $codepoint): string
 {
 }

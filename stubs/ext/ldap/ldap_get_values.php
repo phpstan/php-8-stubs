@@ -6,7 +6,7 @@
  * @alias ldap_get_values_len
  */
 #[\Until('8.1')]
-function ldap_get_values($ldap, $entry, string $attribute) : array|false
+function ldap_get_values($ldap, $entry, string $attribute): array|false
 {
 }
 /**
@@ -15,6 +15,6 @@ function ldap_get_values($ldap, $entry, string $attribute) : array|false
  * @alias ldap_get_values_len
  */
 #[\Since('8.1')]
-function ldap_get_values(\LDAP\Connection $ldap, \LDAP\ResultEntry $entry, string $attribute) : array|false
+function ldap_get_values(\LDAP\Connection $ldap, \LDAP\ResultEntry $entry, string $attribute): array|false
 {
 }

@@ -1,5 +1,5 @@
 <?php 
 
-function mysqli_connect_errno() : int
+function mysqli_connect_errno(): int
 {
 }

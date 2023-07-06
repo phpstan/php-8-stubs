@@ -1,5 +1,5 @@
 <?php 
 
-function libxml_clear_errors() : void
+function libxml_clear_errors(): void
 {
 }

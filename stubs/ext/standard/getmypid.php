@@ -1,5 +1,5 @@
 <?php 
 
-function getmypid() : int|false
+function getmypid(): int|false
 {
 }

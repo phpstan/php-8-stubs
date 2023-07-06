@@ -12,25 +12,25 @@ final class Xoshiro256StarStar implements \Random\Engine
     {
     }
     /** @implementation-alias Random\Engine\Mt19937::generate */
-    public function generate() : string
+    public function generate(): string
     {
     }
-    public function jump() : void
+    public function jump(): void
     {
     }
-    public function jumpLong() : void
+    public function jumpLong(): void
     {
     }
     /** @implementation-alias Random\Engine\Mt19937::__serialize */
-    public function __serialize() : array
+    public function __serialize(): array
     {
     }
     /** @implementation-alias Random\Engine\Mt19937::__unserialize */
-    public function __unserialize(array $data) : void
+    public function __unserialize(array $data): void
     {
     }
     /** @implementation-alias Random\Engine\Mt19937::__debugInfo */
-    public function __debugInfo() : array
+    public function __debugInfo(): array
     {
     }
 }

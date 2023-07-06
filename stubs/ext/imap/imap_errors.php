@@ -1,5 +1,5 @@
 <?php 
 
-function imap_errors() : array|false
+function imap_errors(): array|false
 {
 }
