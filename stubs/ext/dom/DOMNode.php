@@ -106,4 +106,8 @@ class DOMNode
     public function replaceChild(DOMNode $node, DOMNode $child)
     {
     }
+    #[\Since('8.3')]
+    public function contains(DOMNode|DOMNameSpaceNode|null $other): bool
+    {
+    }
 }
