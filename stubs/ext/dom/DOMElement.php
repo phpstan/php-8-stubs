@@ -12,6 +12,10 @@ class DOMElement extends \DOMNode implements \DOMParentNode, \DOMChildNode
     public function getAttribute(string $qualifiedName)
     {
     }
+    #[\Since('8.3')]
+    public function getAttributeNames(): array
+    {
+    }
     /**
      * @tentative-return-type
      * @return string

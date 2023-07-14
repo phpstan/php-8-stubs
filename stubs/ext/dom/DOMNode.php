@@ -110,4 +110,8 @@ class DOMNode
     public function contains(DOMNode|DOMNameSpaceNode|null $other): bool
     {
     }
+    #[\Since('8.3')]
+    public function getRootNode(?array $options = null): DOMNode
+    {
+    }
 }
