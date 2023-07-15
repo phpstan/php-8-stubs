@@ -140,4 +140,9 @@ class DOMElement extends \DOMNode implements \DOMParentNode, \DOMChildNode
     public function prepend(...$nodes): void
     {
     }
+    /** @param DOMNode|string $nodes */
+    #[\Since('8.3')]
+    public function replaceChildren(...$nodes): void
+    {
+    }
 }
