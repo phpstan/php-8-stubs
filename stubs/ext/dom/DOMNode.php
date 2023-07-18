@@ -70,6 +70,10 @@ class DOMNode
     public function isSameNode(DOMNode $otherNode)
     {
     }
+    #[\Since('8.3')]
+    public function isEqualNode(?DOMNode $otherNode): bool
+    {
+    }
     /**
      * @tentative-return-type
      * @return bool

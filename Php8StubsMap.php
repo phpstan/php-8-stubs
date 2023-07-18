@@ -2746,6 +2746,8 @@ class Php8StubsMap
 				'posix_sysconf' => 'stubs/ext/posix/posix_sysconf.php',
 				'random\\intervalboundary' => 'stubs/ext/random/Random/IntervalBoundary.php',
 				'socket_atmark' => 'stubs/ext/sockets/socket_atmark.php',
+				'str_decrement' => 'stubs/ext/standard/str_decrement.php',
+				'str_increment' => 'stubs/ext/standard/str_increment.php',
 			]);
 		}
 
