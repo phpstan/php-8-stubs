@@ -2,6 +2,14 @@
 
 class IntlGregorianCalendar extends \IntlCalendar
 {
+    #[\Since('8.3')]
+    public static function createFromDate(int $year, int $month, int $dayOfMonth): static
+    {
+    }
+    #[\Since('8.3')]
+    public static function createFromDateTime(int $year, int $month, int $dayOfMonth, int $hour, int $minute, ?int $second = null): static
+    {
+    }
     /**
      * @param DateTimeZone|IntlTimeZone|string|int|null $timezoneOrYear
      * @param string|int|null $localeOrMonth

@@ -2734,6 +2734,8 @@ class Php8StubsMap
 
 			$functions = \array_merge($functions, [
 				'json_validate' => 'stubs/ext/json/json_validate.php',
+				'ldap_connect_wallet' => 'stubs/ext/ldap/ldap_connect_wallet.php',
+				'ldap_exop_sync' => 'stubs/ext/ldap/ldap_exop_sync.php',
 				'mb_str_pad' => 'stubs/ext/mbstring/mb_str_pad.php',
 				'pg_enter_pipeline_mode' => 'stubs/ext/pgsql/pg_enter_pipeline_mode.php',
 				'pg_exit_pipeline_mode' => 'stubs/ext/pgsql/pg_exit_pipeline_mode.php',
@@ -2748,6 +2750,7 @@ class Php8StubsMap
 				'socket_atmark' => 'stubs/ext/sockets/socket_atmark.php',
 				'str_decrement' => 'stubs/ext/standard/str_decrement.php',
 				'str_increment' => 'stubs/ext/standard/str_increment.php',
+				'stream_context_set_options' => 'stubs/ext/standard/stream_context_set_options.php',
 			]);
 		}
 

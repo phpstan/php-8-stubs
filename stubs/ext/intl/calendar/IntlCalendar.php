@@ -308,6 +308,15 @@ class IntlCalendar
     public function set(int $year, int $month, int $dayOfMonth = UNKNOWN, int $hour = UNKNOWN, int $minute = UNKNOWN, int $second = UNKNOWN)
     {
     }
+    // TODO make return type void
+    #[\Since('8.3')]
+    public function setDate(int $year, int $month, int $dayOfMonth): void
+    {
+    }
+    #[\Since('8.3')]
+    public function setDateTime(int $year, int $month, int $dayOfMonth, int $hour, int $minute, ?int $second = null): void
+    {
+    }
     /**
      * @return bool
      * @alias intlcal_set_first_day_of_week

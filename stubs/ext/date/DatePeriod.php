@@ -2,6 +2,10 @@
 
 class DatePeriod implements \IteratorAggregate
 {
+    #[\Since('8.3')]
+    public static function createFromISO8601String(string $specification, int $options = 0): static
+    {
+    }
     /**
      * @param DateTimeInterface|string $start
      * @param DateInterval|int $interval

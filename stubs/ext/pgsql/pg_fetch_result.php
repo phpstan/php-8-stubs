@@ -13,6 +13,15 @@ function pg_fetch_result($result, $row, string|int $field = UNKNOWN): string|fal
  * @refcount 1
  */
 #[\Since('8.1')]
+#[\Until('8.3')]
+function pg_fetch_result(\PgSql\Result $result, $row, string|int $field = UNKNOWN): string|false|null
+{
+}
+/**
+ * @param string|int|null $row
+ * @refcount 1
+ */
+#[\Since('8.3')]
 function pg_fetch_result(\PgSql\Result $result, $row, string|int $field = UNKNOWN): string|false|null
 {
 }

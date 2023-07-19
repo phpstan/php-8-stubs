@@ -5,6 +5,10 @@ class ReflectionMethod extends \ReflectionFunctionAbstract
     public function __construct(object|string $objectOrMethod, ?string $method = null)
     {
     }
+    #[\Since('8.3')]
+    public static function createFromMethodName(string $method): static
+    {
+    }
     public function __toString(): string
     {
     }
