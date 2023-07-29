@@ -59,14 +59,26 @@ class ZipArchive
      * @tentative-return-type
      * @return bool
      */
+    #[\Until('8.3')]
     public function addFile(string $filepath, string $entryname = "", int $start = 0, int $length = 0, int $flags = ZipArchive::FL_OVERWRITE)
+    {
+    }
+    /** @tentative-return-type */
+    #[\Since('8.3')]
+    public function addFile(string $filepath, string $entryname = "", int $start = 0, int $length = ZipArchive::LENGTH_TO_END, int $flags = ZipArchive::FL_OVERWRITE)
     {
     }
     /**
      * @tentative-return-type
      * @return bool
      */
+    #[\Until('8.3')]
     public function replaceFile(string $filepath, int $index, int $start = 0, int $length = 0, int $flags = 0)
+    {
+    }
+    /** @tentative-return-type */
+    #[\Since('8.3')]
+    public function replaceFile(string $filepath, int $index, int $start = 0, int $length = ZipArchive::LENGTH_TO_END, int $flags = 0)
     {
     }
     /**
