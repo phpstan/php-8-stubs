@@ -79,11 +79,17 @@ class DOMDocument extends \DOMNode implements \DOMParentNode
     public function importNode(DOMNode $node, bool $deep = false)
     {
     }
-    /** @return DOMDocument|bool */
+    /**
+     * @tentative-return-type
+     * @return (DOMDocument | bool)
+     */
     public function load(string $filename, int $options = 0)
     {
     }
-    /** @return DOMDocument|bool */
+    /**
+     * @tentative-return-type
+     * @return (DOMDocument | bool)
+     */
     public function loadXML(string $source, int $options = 0)
     {
     }
@@ -109,11 +115,17 @@ class DOMDocument extends \DOMNode implements \DOMParentNode
     {
     }
     #ifdef LIBXML_HTML_ENABLED
-    /** @return DOMDocument|bool */
+    /**
+     * @tentative-return-type
+     * @return (DOMDocument | bool)
+     */
     public function loadHTML(string $source, int $options = 0)
     {
     }
-    /** @return DOMDocument|bool */
+    /**
+     * @tentative-return-type
+     * @return (DOMDocument | bool)
+     */
     public function loadHTMLFile(string $filename, int $options = 0)
     {
     }
