@@ -4,6 +4,6 @@
  * @strict-properties
  */
 #[\Since('8.3')]
-class DateRangeError extends \DateRangeError
+class DateRangeError extends \DateError
 {
 }
