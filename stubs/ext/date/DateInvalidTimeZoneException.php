@@ -4,6 +4,6 @@
  * @strict-properties
  */
 #[\Since('8.3')]
-class DateInvalidTimeZoneException extends \Exception
+class DateInvalidTimeZoneException extends \DateException
 {
 }
