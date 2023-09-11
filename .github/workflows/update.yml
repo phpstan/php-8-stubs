@@ -16,7 +16,7 @@ jobs:
     runs-on: "ubuntu-latest"
     steps:
       - name: "Checkout"
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           ref: ${{ github.head_ref }}
           fetch-depth: '0'
@@ -30,7 +30,7 @@ jobs:
         run: "composer install"
         working-directory: ./extractor
       - name: "Checkout"
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: "php/php-src"
           path: "php-src"
@@ -42,7 +42,7 @@ jobs:
       - name: "Delete checked out php-src repo"
         run: "rm -rf php-src"
       - name: "Checkout PHP 8.1"
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: "php/php-src"
           path: "php-src"
@@ -55,7 +55,7 @@ jobs:
       - name: "Delete checked out php-src repo"
         run: "rm -rf php-src"
       - name: "Checkout PHP 8.2"
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: "php/php-src"
           path: "php-src"
@@ -68,7 +68,7 @@ jobs:
       - name: "Delete checked out php-src repo"
         run: "rm -rf php-src"
       - name: "Checkout PHP 8.3"
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: "php/php-src"
           path: "php-src"
