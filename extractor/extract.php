@@ -827,7 +827,7 @@ $command = new class(
 	{
 		$lines = [];
 		foreach ($array as $key => $value) {
-			$lines[] = sprintf("\t%s => %s,", var_export($key, true), var_export($value, true));
+			$lines[] = sprintf("\t%s => %s,", var_export($key, true), '__DIR__ . \'/' . ltrim(var_export($value, true), '\''));
 		}
 
 		return "[\n" . implode("\n", $lines) . "\n]";
