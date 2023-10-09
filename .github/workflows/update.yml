@@ -89,7 +89,7 @@ jobs:
         with:
           version: ${{ steps.previous_tag.outputs.tag }}
       - name: "Commit changes"
-        uses: "stefanzweifel/git-auto-commit-action@v4"
+        uses: "stefanzweifel/git-auto-commit-action@v5"
         id: "commit"
         with:
           commit_message: "Update stubs"
