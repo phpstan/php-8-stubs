@@ -2,6 +2,14 @@
 
 class DOMNode
 {
+    #[\Since('8.1')]
+    public function __sleep(): array
+    {
+    }
+    #[\Since('8.1')]
+    public function __wakeup(): void
+    {
+    }
     /** @return DOMNode|false */
     public function appendChild(DOMNode $node)
     {
