@@ -207,4 +207,30 @@ class ArrayIterator implements \SeekableIterator, \ArrayAccess, \Serializable, \
     public function __debugInfo()
     {
     }
+    /**
+     * @var int
+     * @cvalue SPL_ARRAY_STD_PROP_LIST
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const STD_PROP_LIST = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SPL_ARRAY_STD_PROP_LIST
+     */
+    #[\Since('8.3')]
+    public const STD_PROP_LIST = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SPL_ARRAY_ARRAY_AS_PROPS
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const ARRAY_AS_PROPS = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SPL_ARRAY_ARRAY_AS_PROPS
+     */
+    #[\Since('8.3')]
+    public const ARRAY_AS_PROPS = UNKNOWN;
 }

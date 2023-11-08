@@ -61,4 +61,95 @@ class RegexIterator extends \FilterIterator
     public function setPregFlags(int $pregFlags)
     {
     }
+    /**
+     * @var int
+     * @cvalue REGIT_USE_KEY
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const USE_KEY = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue REGIT_USE_KEY
+     */
+    #[\Since('8.3')]
+    public const USE_KEY = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue REGIT_INVERTED
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const INVERT_MATCH = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue REGIT_INVERTED
+     */
+    #[\Since('8.3')]
+    public const INVERT_MATCH = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue REGIT_MODE_MATCH
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const MATCH = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue REGIT_MODE_MATCH
+     */
+    #[\Since('8.3')]
+    public const MATCH = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue REGIT_MODE_GET_MATCH
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const GET_MATCH = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue REGIT_MODE_GET_MATCH
+     */
+    #[\Since('8.3')]
+    public const GET_MATCH = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue REGIT_MODE_ALL_MATCHES
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const ALL_MATCHES = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue REGIT_MODE_ALL_MATCHES
+     */
+    #[\Since('8.3')]
+    public const ALL_MATCHES = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue REGIT_MODE_SPLIT
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const SPLIT = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue REGIT_MODE_SPLIT
+     */
+    #[\Since('8.3')]
+    public const SPLIT = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue REGIT_MODE_REPLACE
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const REPLACE = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue REGIT_MODE_REPLACE
+     */
+    #[\Since('8.3')]
+    public const REPLACE = UNKNOWN;
 }

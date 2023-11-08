@@ -144,4 +144,69 @@ class ReflectionProperty implements \Reflector
     public function getAttributes(?string $name = null, int $flags = 0): array
     {
     }
+    /**
+     * @var int
+     * @cvalue ZEND_ACC_STATIC
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const IS_STATIC = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue ZEND_ACC_STATIC
+     */
+    #[\Since('8.3')]
+    public const IS_STATIC = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue ZEND_ACC_READONLY
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const IS_READONLY = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue ZEND_ACC_READONLY
+     */
+    #[\Since('8.3')]
+    public const IS_READONLY = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue ZEND_ACC_PUBLIC
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const IS_PUBLIC = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue ZEND_ACC_PUBLIC
+     */
+    #[\Since('8.3')]
+    public const IS_PUBLIC = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue ZEND_ACC_PROTECTED
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const IS_PROTECTED = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue ZEND_ACC_PROTECTED
+     */
+    #[\Since('8.3')]
+    public const IS_PROTECTED = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue ZEND_ACC_PRIVATE
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const IS_PRIVATE = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue ZEND_ACC_PRIVATE
+     */
+    #[\Since('8.3')]
+    public const IS_PRIVATE = UNKNOWN;
 }

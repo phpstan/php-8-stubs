@@ -166,4 +166,565 @@ class SQLite3
     public function setAuthorizer(?callable $callback)
     {
     }
+    /**
+     * @var int
+     * @cvalue SQLITE_OK
+     * @link sqlite3.class.constants.ok
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const OK = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SQLITE_OK
+     * @link sqlite3.class.constants.ok
+     */
+    #[\Since('8.3')]
+    public const OK = UNKNOWN;
+    /* Constants for authorizer return */
+    /**
+     * @var int
+     * @cvalue SQLITE_DENY
+     * @link sqlite3.class.constants.deny
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const DENY = UNKNOWN;
+    /* Constants for authorizer return */
+    /**
+     * @var int
+     * @cvalue SQLITE_DENY
+     * @link sqlite3.class.constants.deny
+     */
+    #[\Since('8.3')]
+    public const DENY = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SQLITE_IGNORE
+     * @link sqlite3.class.constants.ignore
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const IGNORE = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SQLITE_IGNORE
+     * @link sqlite3.class.constants.ignore
+     */
+    #[\Since('8.3')]
+    public const IGNORE = UNKNOWN;
+    /* Constants for authorizer actions */
+    /**
+     * @var int
+     * @cvalue SQLITE_CREATE_INDEX
+     * @link sqlite3.class.constants.create-index
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const CREATE_INDEX = UNKNOWN;
+    /* Constants for authorizer actions */
+    /**
+     * @var int
+     * @cvalue SQLITE_CREATE_INDEX
+     * @link sqlite3.class.constants.create-index
+     */
+    #[\Since('8.3')]
+    public const CREATE_INDEX = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SQLITE_CREATE_TABLE
+     * @link sqlite3.class.constants.create-table
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const CREATE_TABLE = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SQLITE_CREATE_TABLE
+     * @link sqlite3.class.constants.create-table
+     */
+    #[\Since('8.3')]
+    public const CREATE_TABLE = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SQLITE_CREATE_TEMP_INDEX
+     * @link sqlite3.class.constants.create-temp-index
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const CREATE_TEMP_INDEX = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SQLITE_CREATE_TEMP_INDEX
+     * @link sqlite3.class.constants.create-temp-index
+     */
+    #[\Since('8.3')]
+    public const CREATE_TEMP_INDEX = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SQLITE_CREATE_TEMP_TABLE
+     * @link sqlite3.class.constants.create-temp-table
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const CREATE_TEMP_TABLE = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SQLITE_CREATE_TEMP_TABLE
+     * @link sqlite3.class.constants.create-temp-table
+     */
+    #[\Since('8.3')]
+    public const CREATE_TEMP_TABLE = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SQLITE_CREATE_TEMP_TRIGGER
+     * @link sqlite3.class.constants.create-temp-trigger
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const CREATE_TEMP_TRIGGER = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SQLITE_CREATE_TEMP_TRIGGER
+     * @link sqlite3.class.constants.create-temp-trigger
+     */
+    #[\Since('8.3')]
+    public const CREATE_TEMP_TRIGGER = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SQLITE_CREATE_TEMP_VIEW
+     * @link sqlite3.class.constants.create-temp-view
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const CREATE_TEMP_VIEW = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SQLITE_CREATE_TEMP_VIEW
+     * @link sqlite3.class.constants.create-temp-view
+     */
+    #[\Since('8.3')]
+    public const CREATE_TEMP_VIEW = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SQLITE_CREATE_TRIGGER
+     * @link sqlite3.class.constants.create-trigger
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const CREATE_TRIGGER = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SQLITE_CREATE_TRIGGER
+     * @link sqlite3.class.constants.create-trigger
+     */
+    #[\Since('8.3')]
+    public const CREATE_TRIGGER = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SQLITE_CREATE_VIEW
+     * @link sqlite3.class.constants.create-view
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const CREATE_VIEW = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SQLITE_CREATE_VIEW
+     * @link sqlite3.class.constants.create-view
+     */
+    #[\Since('8.3')]
+    public const CREATE_VIEW = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SQLITE_DELETE
+     * @link sqlite3.class.constants.delete
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const DELETE = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SQLITE_DELETE
+     * @link sqlite3.class.constants.delete
+     */
+    #[\Since('8.3')]
+    public const DELETE = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SQLITE_DROP_INDEX
+     * @link sqlite3.class.constants.drop-index
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const DROP_INDEX = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SQLITE_DROP_INDEX
+     * @link sqlite3.class.constants.drop-index
+     */
+    #[\Since('8.3')]
+    public const DROP_INDEX = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SQLITE_DROP_TABLE
+     * @link sqlite3.class.constants.drop-table
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const DROP_TABLE = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SQLITE_DROP_TABLE
+     * @link sqlite3.class.constants.drop-table
+     */
+    #[\Since('8.3')]
+    public const DROP_TABLE = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SQLITE_DROP_TEMP_INDEX
+     * @link sqlite3.class.constants.drop-temp-index
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const DROP_TEMP_INDEX = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SQLITE_DROP_TEMP_INDEX
+     * @link sqlite3.class.constants.drop-temp-index
+     */
+    #[\Since('8.3')]
+    public const DROP_TEMP_INDEX = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SQLITE_DROP_TEMP_TABLE
+     * @link sqlite3.class.constants.drop-temp-table
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const DROP_TEMP_TABLE = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SQLITE_DROP_TEMP_TABLE
+     * @link sqlite3.class.constants.drop-temp-table
+     */
+    #[\Since('8.3')]
+    public const DROP_TEMP_TABLE = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SQLITE_DROP_TEMP_TRIGGER
+     * @link sqlite3.class.constants.drop-temp-trigger
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const DROP_TEMP_TRIGGER = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SQLITE_DROP_TEMP_TRIGGER
+     * @link sqlite3.class.constants.drop-temp-trigger
+     */
+    #[\Since('8.3')]
+    public const DROP_TEMP_TRIGGER = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SQLITE_DROP_TEMP_VIEW
+     * @link sqlite3.class.constants.drop-temp-view
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const DROP_TEMP_VIEW = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SQLITE_DROP_TEMP_VIEW
+     * @link sqlite3.class.constants.drop-temp-view
+     */
+    #[\Since('8.3')]
+    public const DROP_TEMP_VIEW = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SQLITE_DROP_TRIGGER
+     * @link sqlite3.class.constants.drop-trigger
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const DROP_TRIGGER = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SQLITE_DROP_TRIGGER
+     * @link sqlite3.class.constants.drop-trigger
+     */
+    #[\Since('8.3')]
+    public const DROP_TRIGGER = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SQLITE_DROP_VIEW
+     * @link sqlite3.class.constants.drop-view
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const DROP_VIEW = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SQLITE_DROP_VIEW
+     * @link sqlite3.class.constants.drop-view
+     */
+    #[\Since('8.3')]
+    public const DROP_VIEW = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SQLITE_INSERT
+     * @link sqlite3.class.constants.insert
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const INSERT = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SQLITE_INSERT
+     * @link sqlite3.class.constants.insert
+     */
+    #[\Since('8.3')]
+    public const INSERT = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SQLITE_PRAGMA
+     * @link sqlite3.class.constants.pragma
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const PRAGMA = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SQLITE_PRAGMA
+     * @link sqlite3.class.constants.pragma
+     */
+    #[\Since('8.3')]
+    public const PRAGMA = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SQLITE_READ
+     * @link sqlite3.class.constants.read
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const READ = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SQLITE_READ
+     * @link sqlite3.class.constants.read
+     */
+    #[\Since('8.3')]
+    public const READ = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SQLITE_SELECT
+     * @link sqlite3.class.constants.select
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const SELECT = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SQLITE_SELECT
+     * @link sqlite3.class.constants.select
+     */
+    #[\Since('8.3')]
+    public const SELECT = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SQLITE_TRANSACTION
+     * @link sqlite3.class.constants.transaction
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const TRANSACTION = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SQLITE_TRANSACTION
+     * @link sqlite3.class.constants.transaction
+     */
+    #[\Since('8.3')]
+    public const TRANSACTION = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SQLITE_UPDATE
+     * @link sqlite3.class.constants.update
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const UPDATE = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SQLITE_UPDATE
+     * @link sqlite3.class.constants.update
+     */
+    #[\Since('8.3')]
+    public const UPDATE = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SQLITE_ATTACH
+     * @link sqlite3.class.constants.attach
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const ATTACH = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SQLITE_ATTACH
+     * @link sqlite3.class.constants.attach
+     */
+    #[\Since('8.3')]
+    public const ATTACH = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SQLITE_DETACH
+     * @link sqlite3.class.constants.detach
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const DETACH = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SQLITE_DETACH
+     * @link sqlite3.class.constants.detach
+     */
+    #[\Since('8.3')]
+    public const DETACH = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SQLITE_ALTER_TABLE
+     * @link sqlite3.class.constants.alter-table
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const ALTER_TABLE = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SQLITE_ALTER_TABLE
+     * @link sqlite3.class.constants.alter-table
+     */
+    #[\Since('8.3')]
+    public const ALTER_TABLE = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SQLITE_REINDEX
+     * @link sqlite3.class.constants.reindex
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const REINDEX = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SQLITE_REINDEX
+     * @link sqlite3.class.constants.reindex
+     */
+    #[\Since('8.3')]
+    public const REINDEX = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SQLITE_ANALYZE
+     * @link sqlite3.class.constants.analyze
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const ANALYZE = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SQLITE_ANALYZE
+     * @link sqlite3.class.constants.analyze
+     */
+    #[\Since('8.3')]
+    public const ANALYZE = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SQLITE_CREATE_VTABLE
+     * @link sqlite3.class.constants.create-vtable
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const CREATE_VTABLE = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SQLITE_CREATE_VTABLE
+     * @link sqlite3.class.constants.create-vtable
+     */
+    #[\Since('8.3')]
+    public const CREATE_VTABLE = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SQLITE_DROP_VTABLE
+     * @link sqlite3.class.constants.drop-vtable
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const DROP_VTABLE = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SQLITE_DROP_VTABLE
+     * @link sqlite3.class.constants.drop-vtable
+     */
+    #[\Since('8.3')]
+    public const DROP_VTABLE = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SQLITE_FUNCTION
+     * @link sqlite3.class.constants.function
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const FUNCTION = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SQLITE_FUNCTION
+     * @link sqlite3.class.constants.function
+     */
+    #[\Since('8.3')]
+    public const FUNCTION = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SQLITE_SAVEPOINT
+     * @link sqlite3.class.constants.savepoint
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const SAVEPOINT = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SQLITE_SAVEPOINT
+     * @link sqlite3.class.constants.savepoint
+     */
+    #[\Since('8.3')]
+    public const SAVEPOINT = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SQLITE_COPY
+     * @link sqlite3.class.constants.copy
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const COPY = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SQLITE_COPY
+     * @link sqlite3.class.constants.copy
+     */
+    #[\Since('8.3')]
+    public const COPY = UNKNOWN;
+    #ifdef SQLITE_RECURSIVE
+    /**
+     * @var int
+     * @cvalue SQLITE_RECURSIVE
+     * @link sqlite3.class.constants.recursive
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const RECURSIVE = UNKNOWN;
+    #ifdef SQLITE_RECURSIVE
+    /**
+     * @var int
+     * @cvalue SQLITE_RECURSIVE
+     * @link sqlite3.class.constants.recursive
+     */
+    #[\Since('8.3')]
+    public const RECURSIVE = UNKNOWN;
 }

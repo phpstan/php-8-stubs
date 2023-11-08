@@ -76,4 +76,18 @@ final class FFI
     public static function isNull(FFI\CData $ptr): bool
     {
     }
+    /**
+     * @var int
+     * @cvalue __BIGGEST_ALIGNMENT__
+     * @link ffi-ffi.constants.biggest-alignment
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const __BIGGEST_ALIGNMENT__ = UNKNOWN;
+    /**
+     * @cvalue __BIGGEST_ALIGNMENT__
+     * @link ffi-ffi.constants.biggest-alignment
+     */
+    #[\Since('8.3')]
+    public const int __BIGGEST_ALIGNMENT__ = UNKNOWN;
 }

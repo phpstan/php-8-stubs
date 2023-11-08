@@ -16,4 +16,17 @@ class RecursiveArrayIterator extends \ArrayIterator implements \RecursiveIterato
     public function getChildren()
     {
     }
+    /**
+     * @var int
+     * @cvalue SPL_ARRAY_CHILD_ARRAYS_ONLY
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const CHILD_ARRAYS_ONLY = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SPL_ARRAY_CHILD_ARRAYS_ONLY
+     */
+    #[\Since('8.3')]
+    public const CHILD_ARRAYS_ONLY = UNKNOWN;
 }

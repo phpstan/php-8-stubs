@@ -124,4 +124,56 @@ class RecursiveIteratorIterator implements \OuterIterator
     public function getMaxDepth()
     {
     }
+    /**
+     * @var int
+     * @cvalue RIT_LEAVES_ONLY
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const LEAVES_ONLY = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue RIT_LEAVES_ONLY
+     */
+    #[\Since('8.3')]
+    public const LEAVES_ONLY = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue RIT_SELF_FIRST
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const SELF_FIRST = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue RIT_SELF_FIRST
+     */
+    #[\Since('8.3')]
+    public const SELF_FIRST = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue RIT_CHILD_FIRST
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const CHILD_FIRST = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue RIT_CHILD_FIRST
+     */
+    #[\Since('8.3')]
+    public const CHILD_FIRST = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue RIT_CATCH_GET_CHILD
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const CATCH_GET_CHILD = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue RIT_CATCH_GET_CHILD
+     */
+    #[\Since('8.3')]
+    public const CATCH_GET_CHILD = UNKNOWN;
 }

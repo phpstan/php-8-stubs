@@ -189,4 +189,56 @@ class SplDoublyLinkedList implements \Iterator, \Countable, \ArrayAccess, \Seria
     public function __unserialize(array $data)
     {
     }
+    /**
+     * @var int
+     * @cvalue SPL_DLLIST_IT_LIFO
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const IT_MODE_LIFO = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SPL_DLLIST_IT_LIFO
+     */
+    #[\Since('8.3')]
+    public const IT_MODE_LIFO = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SPL_DLLIST_IT_FIFO
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const IT_MODE_FIFO = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SPL_DLLIST_IT_FIFO
+     */
+    #[\Since('8.3')]
+    public const IT_MODE_FIFO = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SPL_DLLIST_IT_DELETE
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const IT_MODE_DELETE = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SPL_DLLIST_IT_DELETE
+     */
+    #[\Since('8.3')]
+    public const IT_MODE_DELETE = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SPL_DLLIST_IT_KEEP
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const IT_MODE_KEEP = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SPL_DLLIST_IT_KEEP
+     */
+    #[\Since('8.3')]
+    public const IT_MODE_KEEP = UNKNOWN;
 }
