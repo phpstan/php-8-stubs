@@ -664,7 +664,15 @@ $command = new class(
 	 */
 	private function compareConstants(Node\Stmt\ClassConst $old, Node\Stmt\ClassConst $new, string $updateTo): array
 	{
-		if ($old->getDocComment() !== $new->getDocComment()) {
+		if ($old->getDocComment() !== null) {
+			if ($new->getDocComment() === null) {
+				return $this->stmtDiff($old, $new, $updateTo);
+			}
+
+			if ($old->getDocComment()->getText() !== $new->getDocComment()->getText()) {
+				return $this->stmtDiff($old, $new, $updateTo);
+			}
+		} elseif ($new->getDocComment() !== null) {
 			return $this->stmtDiff($old, $new, $updateTo);
 		}
 		if ($old->flags !== $new->flags) {
