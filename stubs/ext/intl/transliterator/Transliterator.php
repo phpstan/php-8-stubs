@@ -66,25 +66,11 @@ class Transliterator
      * @cvalue TRANSLITERATOR_FORWARD
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const FORWARD = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue TRANSLITERATOR_FORWARD
-     */
-    #[\Since('8.3')]
     public const FORWARD = UNKNOWN;
     /**
      * @var int
      * @cvalue TRANSLITERATOR_REVERSE
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const REVERSE = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue TRANSLITERATOR_REVERSE
-     */
-    #[\Since('8.3')]
     public const REVERSE = UNKNOWN;
 }

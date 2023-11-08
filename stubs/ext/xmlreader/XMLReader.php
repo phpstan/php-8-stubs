@@ -175,235 +175,108 @@ class XMLReader
      * @cvalue XML_READER_TYPE_NONE
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const NONE = UNKNOWN;
-    /* Constants for NodeType - cannot define common types to share with dom as there are differences in these types */
-    /**
-     * @var int
-     * @cvalue XML_READER_TYPE_NONE
-     */
-    #[\Since('8.3')]
     public const NONE = UNKNOWN;
     /**
      * @var int
      * @cvalue XML_READER_TYPE_ELEMENT
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const ELEMENT = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue XML_READER_TYPE_ELEMENT
-     */
-    #[\Since('8.3')]
     public const ELEMENT = UNKNOWN;
     /**
      * @var int
      * @cvalue XML_READER_TYPE_ATTRIBUTE
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const ATTRIBUTE = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue XML_READER_TYPE_ATTRIBUTE
-     */
-    #[\Since('8.3')]
     public const ATTRIBUTE = UNKNOWN;
     /**
      * @var int
      * @cvalue XML_READER_TYPE_TEXT
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const TEXT = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue XML_READER_TYPE_TEXT
-     */
-    #[\Since('8.3')]
     public const TEXT = UNKNOWN;
     /**
      * @var int
      * @cvalue XML_READER_TYPE_CDATA
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const CDATA = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue XML_READER_TYPE_CDATA
-     */
-    #[\Since('8.3')]
     public const CDATA = UNKNOWN;
     /**
      * @var int
      * @cvalue XML_READER_TYPE_ENTITY_REFERENCE
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const ENTITY_REF = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue XML_READER_TYPE_ENTITY_REFERENCE
-     */
-    #[\Since('8.3')]
     public const ENTITY_REF = UNKNOWN;
     /**
      * @var int
      * @cvalue XML_READER_TYPE_ENTITY
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const ENTITY = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue XML_READER_TYPE_ENTITY
-     */
-    #[\Since('8.3')]
     public const ENTITY = UNKNOWN;
     /**
      * @var int
      * @cvalue XML_READER_TYPE_PROCESSING_INSTRUCTION
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const PI = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue XML_READER_TYPE_PROCESSING_INSTRUCTION
-     */
-    #[\Since('8.3')]
     public const PI = UNKNOWN;
     /**
      * @var int
      * @cvalue XML_READER_TYPE_COMMENT
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const COMMENT = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue XML_READER_TYPE_COMMENT
-     */
-    #[\Since('8.3')]
     public const COMMENT = UNKNOWN;
     /**
      * @var int
      * @cvalue XML_READER_TYPE_DOCUMENT
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const DOC = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue XML_READER_TYPE_DOCUMENT
-     */
-    #[\Since('8.3')]
     public const DOC = UNKNOWN;
     /**
      * @var int
      * @cvalue XML_READER_TYPE_DOCUMENT_TYPE
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const DOC_TYPE = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue XML_READER_TYPE_DOCUMENT_TYPE
-     */
-    #[\Since('8.3')]
     public const DOC_TYPE = UNKNOWN;
     /**
      * @var int
      * @cvalue XML_READER_TYPE_DOCUMENT_FRAGMENT
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const DOC_FRAGMENT = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue XML_READER_TYPE_DOCUMENT_FRAGMENT
-     */
-    #[\Since('8.3')]
     public const DOC_FRAGMENT = UNKNOWN;
     /**
      * @var int
      * @cvalue XML_READER_TYPE_NOTATION
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const NOTATION = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue XML_READER_TYPE_NOTATION
-     */
-    #[\Since('8.3')]
     public const NOTATION = UNKNOWN;
     /**
      * @var int
      * @cvalue XML_READER_TYPE_WHITESPACE
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const WHITESPACE = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue XML_READER_TYPE_WHITESPACE
-     */
-    #[\Since('8.3')]
     public const WHITESPACE = UNKNOWN;
     /**
      * @var int
      * @cvalue XML_READER_TYPE_SIGNIFICANT_WHITESPACE
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const SIGNIFICANT_WHITESPACE = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue XML_READER_TYPE_SIGNIFICANT_WHITESPACE
-     */
-    #[\Since('8.3')]
     public const SIGNIFICANT_WHITESPACE = UNKNOWN;
     /**
      * @var int
      * @cvalue XML_READER_TYPE_END_ELEMENT
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const END_ELEMENT = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue XML_READER_TYPE_END_ELEMENT
-     */
-    #[\Since('8.3')]
     public const END_ELEMENT = UNKNOWN;
     /**
      * @var int
      * @cvalue XML_READER_TYPE_END_ENTITY
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const END_ENTITY = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue XML_READER_TYPE_END_ENTITY
-     */
-    #[\Since('8.3')]
     public const END_ENTITY = UNKNOWN;
     /**
      * @var int
      * @cvalue XML_READER_TYPE_XML_DECLARATION
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const XML_DECLARATION = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue XML_READER_TYPE_XML_DECLARATION
-     */
-    #[\Since('8.3')]
     public const XML_DECLARATION = UNKNOWN;
     /* Constants for Parser options */
     /**
@@ -411,52 +284,23 @@ class XMLReader
      * @cvalue XML_PARSER_LOADDTD
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const LOADDTD = UNKNOWN;
-    /* Constants for Parser options */
-    /**
-     * @var int
-     * @cvalue XML_PARSER_LOADDTD
-     */
-    #[\Since('8.3')]
     public const LOADDTD = UNKNOWN;
     /**
      * @var int
      * @cvalue XML_PARSER_DEFAULTATTRS
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const DEFAULTATTRS = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue XML_PARSER_DEFAULTATTRS
-     */
-    #[\Since('8.3')]
     public const DEFAULTATTRS = UNKNOWN;
     /**
      * @var int
      * @cvalue XML_PARSER_VALIDATE
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const VALIDATE = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue XML_PARSER_VALIDATE
-     */
-    #[\Since('8.3')]
     public const VALIDATE = UNKNOWN;
     /**
      * @var int
      * @cvalue XML_PARSER_SUBST_ENTITIES
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const SUBST_ENTITIES = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue XML_PARSER_SUBST_ENTITIES
-     */
-    #[\Since('8.3')]
     public const SUBST_ENTITIES = UNKNOWN;
 }

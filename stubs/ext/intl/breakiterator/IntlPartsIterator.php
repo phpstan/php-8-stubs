@@ -19,38 +19,17 @@ class IntlPartsIterator extends \IntlIterator
      * @cvalue PARTS_ITERATOR_KEY_SEQUENTIAL
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const KEY_SEQUENTIAL = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue PARTS_ITERATOR_KEY_SEQUENTIAL
-     */
-    #[\Since('8.3')]
     public const KEY_SEQUENTIAL = UNKNOWN;
     /**
      * @var int
      * @cvalue PARTS_ITERATOR_KEY_LEFT
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const KEY_LEFT = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue PARTS_ITERATOR_KEY_LEFT
-     */
-    #[\Since('8.3')]
     public const KEY_LEFT = UNKNOWN;
     /**
      * @var int
      * @cvalue PARTS_ITERATOR_KEY_RIGHT
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const KEY_RIGHT = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue PARTS_ITERATOR_KEY_RIGHT
-     */
-    #[\Since('8.3')]
     public const KEY_RIGHT = UNKNOWN;
 }

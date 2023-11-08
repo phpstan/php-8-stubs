@@ -385,52 +385,23 @@ class ReflectionClass implements \Reflector
      * @todo deprecate
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const IS_IMPLICIT_ABSTRACT = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue ZEND_ACC_IMPLICIT_ABSTRACT_CLASS
-     * @todo deprecate
-     */
-    #[\Since('8.3')]
     public const IS_IMPLICIT_ABSTRACT = UNKNOWN;
     /**
      * @var int
      * @cvalue ZEND_ACC_EXPLICIT_ABSTRACT_CLASS
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const IS_EXPLICIT_ABSTRACT = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue ZEND_ACC_EXPLICIT_ABSTRACT_CLASS
-     */
-    #[\Since('8.3')]
     public const IS_EXPLICIT_ABSTRACT = UNKNOWN;
     /**
      * @var int
      * @cvalue ZEND_ACC_FINAL
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const IS_FINAL = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue ZEND_ACC_FINAL
-     */
-    #[\Since('8.3')]
     public const IS_FINAL = UNKNOWN;
     /**
      * @var int
      * @cvalue ZEND_ACC_READONLY_CLASS
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const IS_READONLY = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue ZEND_ACC_READONLY_CLASS
-     */
-    #[\Since('8.3')]
     public const IS_READONLY = UNKNOWN;
 }

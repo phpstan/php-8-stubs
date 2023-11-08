@@ -101,77 +101,35 @@ class CachingIterator extends \IteratorIterator implements \ArrayAccess, \Counta
      * @cvalue CIT_CALL_TOSTRING
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const CALL_TOSTRING = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue CIT_CALL_TOSTRING
-     */
-    #[\Since('8.3')]
     public const CALL_TOSTRING = UNKNOWN;
     /**
      * @var int
      * @cvalue CIT_CATCH_GET_CHILD
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const CATCH_GET_CHILD = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue CIT_CATCH_GET_CHILD
-     */
-    #[\Since('8.3')]
     public const CATCH_GET_CHILD = UNKNOWN;
     /**
      * @var int
      * @cvalue CIT_TOSTRING_USE_KEY
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const TOSTRING_USE_KEY = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue CIT_TOSTRING_USE_KEY
-     */
-    #[\Since('8.3')]
     public const TOSTRING_USE_KEY = UNKNOWN;
     /**
      * @var int
      * @cvalue CIT_TOSTRING_USE_CURRENT
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const TOSTRING_USE_CURRENT = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue CIT_TOSTRING_USE_CURRENT
-     */
-    #[\Since('8.3')]
     public const TOSTRING_USE_CURRENT = UNKNOWN;
     /**
      * @var int
      * @cvalue CIT_TOSTRING_USE_INNER
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const TOSTRING_USE_INNER = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue CIT_TOSTRING_USE_INNER
-     */
-    #[\Since('8.3')]
     public const TOSTRING_USE_INNER = UNKNOWN;
     /**
      * @var int
      * @cvalue CIT_FULL_CACHE
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const FULL_CACHE = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue CIT_FULL_CACHE
-     */
-    #[\Since('8.3')]
     public const FULL_CACHE = UNKNOWN;
 }

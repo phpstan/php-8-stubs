@@ -375,506 +375,233 @@ class IntlCalendar
      * @cvalue UCAL_ERA
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const FIELD_ERA = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCAL_ERA
-     */
-    #[\Since('8.3')]
     public const FIELD_ERA = UNKNOWN;
     /**
      * @var int
      * @cvalue UCAL_YEAR
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const FIELD_YEAR = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCAL_YEAR
-     */
-    #[\Since('8.3')]
     public const FIELD_YEAR = UNKNOWN;
     /**
      * @var int
      * @cvalue UCAL_MONTH
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const FIELD_MONTH = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCAL_MONTH
-     */
-    #[\Since('8.3')]
     public const FIELD_MONTH = UNKNOWN;
     /**
      * @var int
      * @cvalue UCAL_WEEK_OF_YEAR
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const FIELD_WEEK_OF_YEAR = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCAL_WEEK_OF_YEAR
-     */
-    #[\Since('8.3')]
     public const FIELD_WEEK_OF_YEAR = UNKNOWN;
     /**
      * @var int
      * @cvalue UCAL_WEEK_OF_MONTH
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const FIELD_WEEK_OF_MONTH = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCAL_WEEK_OF_MONTH
-     */
-    #[\Since('8.3')]
     public const FIELD_WEEK_OF_MONTH = UNKNOWN;
     /**
      * @var int
      * @cvalue UCAL_DATE
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const FIELD_DATE = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCAL_DATE
-     */
-    #[\Since('8.3')]
     public const FIELD_DATE = UNKNOWN;
     /**
      * @var int
      * @cvalue UCAL_DAY_OF_YEAR
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const FIELD_DAY_OF_YEAR = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCAL_DAY_OF_YEAR
-     */
-    #[\Since('8.3')]
     public const FIELD_DAY_OF_YEAR = UNKNOWN;
     /**
      * @var int
      * @cvalue UCAL_DAY_OF_WEEK
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const FIELD_DAY_OF_WEEK = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCAL_DAY_OF_WEEK
-     */
-    #[\Since('8.3')]
     public const FIELD_DAY_OF_WEEK = UNKNOWN;
     /**
      * @var int
      * @cvalue UCAL_DAY_OF_WEEK_IN_MONTH
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const FIELD_DAY_OF_WEEK_IN_MONTH = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCAL_DAY_OF_WEEK_IN_MONTH
-     */
-    #[\Since('8.3')]
     public const FIELD_DAY_OF_WEEK_IN_MONTH = UNKNOWN;
     /**
      * @var int
      * @cvalue UCAL_AM_PM
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const FIELD_AM_PM = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCAL_AM_PM
-     */
-    #[\Since('8.3')]
     public const FIELD_AM_PM = UNKNOWN;
     /**
      * @var int
      * @cvalue UCAL_HOUR
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const FIELD_HOUR = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCAL_HOUR
-     */
-    #[\Since('8.3')]
     public const FIELD_HOUR = UNKNOWN;
     /**
      * @var int
      * @cvalue UCAL_HOUR_OF_DAY
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const FIELD_HOUR_OF_DAY = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCAL_HOUR_OF_DAY
-     */
-    #[\Since('8.3')]
     public const FIELD_HOUR_OF_DAY = UNKNOWN;
     /**
      * @var int
      * @cvalue UCAL_MINUTE
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const FIELD_MINUTE = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCAL_MINUTE
-     */
-    #[\Since('8.3')]
     public const FIELD_MINUTE = UNKNOWN;
     /**
      * @var int
      * @cvalue UCAL_SECOND
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const FIELD_SECOND = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCAL_SECOND
-     */
-    #[\Since('8.3')]
     public const FIELD_SECOND = UNKNOWN;
     /**
      * @var int
      * @cvalue UCAL_MILLISECOND
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const FIELD_MILLISECOND = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCAL_MILLISECOND
-     */
-    #[\Since('8.3')]
     public const FIELD_MILLISECOND = UNKNOWN;
     /**
      * @var int
      * @cvalue UCAL_ZONE_OFFSET
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const FIELD_ZONE_OFFSET = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCAL_ZONE_OFFSET
-     */
-    #[\Since('8.3')]
     public const FIELD_ZONE_OFFSET = UNKNOWN;
     /**
      * @var int
      * @cvalue UCAL_DST_OFFSET
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const FIELD_DST_OFFSET = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCAL_DST_OFFSET
-     */
-    #[\Since('8.3')]
     public const FIELD_DST_OFFSET = UNKNOWN;
     /**
      * @var int
      * @cvalue UCAL_YEAR_WOY
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const FIELD_YEAR_WOY = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCAL_YEAR_WOY
-     */
-    #[\Since('8.3')]
     public const FIELD_YEAR_WOY = UNKNOWN;
     /**
      * @var int
      * @cvalue UCAL_DOW_LOCAL
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const FIELD_DOW_LOCAL = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCAL_DOW_LOCAL
-     */
-    #[\Since('8.3')]
     public const FIELD_DOW_LOCAL = UNKNOWN;
     /**
      * @var int
      * @cvalue UCAL_EXTENDED_YEAR
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const FIELD_EXTENDED_YEAR = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCAL_EXTENDED_YEAR
-     */
-    #[\Since('8.3')]
     public const FIELD_EXTENDED_YEAR = UNKNOWN;
     /**
      * @var int
      * @cvalue UCAL_JULIAN_DAY
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const FIELD_JULIAN_DAY = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCAL_JULIAN_DAY
-     */
-    #[\Since('8.3')]
     public const FIELD_JULIAN_DAY = UNKNOWN;
     /**
      * @var int
      * @cvalue UCAL_MILLISECONDS_IN_DAY
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const FIELD_MILLISECONDS_IN_DAY = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCAL_MILLISECONDS_IN_DAY
-     */
-    #[\Since('8.3')]
     public const FIELD_MILLISECONDS_IN_DAY = UNKNOWN;
     /**
      * @var int
      * @cvalue UCAL_IS_LEAP_MONTH
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const FIELD_IS_LEAP_MONTH = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCAL_IS_LEAP_MONTH
-     */
-    #[\Since('8.3')]
     public const FIELD_IS_LEAP_MONTH = UNKNOWN;
     /**
      * @var int
      * @cvalue UCAL_FIELD_COUNT
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const FIELD_FIELD_COUNT = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCAL_FIELD_COUNT
-     */
-    #[\Since('8.3')]
     public const FIELD_FIELD_COUNT = UNKNOWN;
     /**
      * @var int
      * @cvalue UCAL_DAY_OF_MONTH
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const FIELD_DAY_OF_MONTH = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCAL_DAY_OF_MONTH
-     */
-    #[\Since('8.3')]
     public const FIELD_DAY_OF_MONTH = UNKNOWN;
     /**
      * @var int
      * @cvalue UCAL_SUNDAY
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const DOW_SUNDAY = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCAL_SUNDAY
-     */
-    #[\Since('8.3')]
     public const DOW_SUNDAY = UNKNOWN;
     /**
      * @var int
      * @cvalue UCAL_MONDAY
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const DOW_MONDAY = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCAL_MONDAY
-     */
-    #[\Since('8.3')]
     public const DOW_MONDAY = UNKNOWN;
     /**
      * @var int
      * @cvalue UCAL_TUESDAY
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const DOW_TUESDAY = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCAL_TUESDAY
-     */
-    #[\Since('8.3')]
     public const DOW_TUESDAY = UNKNOWN;
     /**
      * @var int
      * @cvalue UCAL_WEDNESDAY
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const DOW_WEDNESDAY = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCAL_WEDNESDAY
-     */
-    #[\Since('8.3')]
     public const DOW_WEDNESDAY = UNKNOWN;
     /**
      * @var int
      * @cvalue UCAL_THURSDAY
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const DOW_THURSDAY = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCAL_THURSDAY
-     */
-    #[\Since('8.3')]
     public const DOW_THURSDAY = UNKNOWN;
     /**
      * @var int
      * @cvalue UCAL_FRIDAY
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const DOW_FRIDAY = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCAL_FRIDAY
-     */
-    #[\Since('8.3')]
     public const DOW_FRIDAY = UNKNOWN;
     /**
      * @var int
      * @cvalue UCAL_SATURDAY
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const DOW_SATURDAY = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCAL_SATURDAY
-     */
-    #[\Since('8.3')]
     public const DOW_SATURDAY = UNKNOWN;
     /**
      * @var int
      * @cvalue UCAL_WEEKDAY
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const DOW_TYPE_WEEKDAY = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCAL_WEEKDAY
-     */
-    #[\Since('8.3')]
     public const DOW_TYPE_WEEKDAY = UNKNOWN;
     /**
      * @var int
      * @cvalue UCAL_WEEKEND
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const DOW_TYPE_WEEKEND = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCAL_WEEKEND
-     */
-    #[\Since('8.3')]
     public const DOW_TYPE_WEEKEND = UNKNOWN;
     /**
      * @var int
      * @cvalue UCAL_WEEKEND_ONSET
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const DOW_TYPE_WEEKEND_OFFSET = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCAL_WEEKEND_ONSET
-     */
-    #[\Since('8.3')]
     public const DOW_TYPE_WEEKEND_OFFSET = UNKNOWN;
     /**
      * @var int
      * @cvalue UCAL_WEEKEND_CEASE
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const DOW_TYPE_WEEKEND_CEASE = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCAL_WEEKEND_CEASE
-     */
-    #[\Since('8.3')]
     public const DOW_TYPE_WEEKEND_CEASE = UNKNOWN;
     /**
      * @var int
      * @cvalue UCAL_WALLTIME_FIRST
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const WALLTIME_FIRST = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCAL_WALLTIME_FIRST
-     */
-    #[\Since('8.3')]
     public const WALLTIME_FIRST = UNKNOWN;
     /**
      * @var int
      * @cvalue UCAL_WALLTIME_LAST
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const WALLTIME_LAST = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCAL_WALLTIME_LAST
-     */
-    #[\Since('8.3')]
     public const WALLTIME_LAST = UNKNOWN;
     /**
      * @var int
      * @cvalue UCAL_WALLTIME_NEXT_VALID
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const WALLTIME_NEXT_VALID = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCAL_WALLTIME_NEXT_VALID
-     */
-    #[\Since('8.3')]
     public const WALLTIME_NEXT_VALID = UNKNOWN;
 }

@@ -134,79 +134,36 @@ class UConverter
      * @cvalue UCNV_UNASSIGNED
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const REASON_UNASSIGNED = UNKNOWN;
-    /* enum UConverterCallbackReason */
-    /**
-     * @var int
-     * @cvalue UCNV_UNASSIGNED
-     */
-    #[\Since('8.3')]
     public const REASON_UNASSIGNED = UNKNOWN;
     /**
      * @var int
      * @cvalue UCNV_ILLEGAL
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const REASON_ILLEGAL = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCNV_ILLEGAL
-     */
-    #[\Since('8.3')]
     public const REASON_ILLEGAL = UNKNOWN;
     /**
      * @var int
      * @cvalue UCNV_IRREGULAR
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const REASON_IRREGULAR = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCNV_IRREGULAR
-     */
-    #[\Since('8.3')]
     public const REASON_IRREGULAR = UNKNOWN;
     /**
      * @var int
      * @cvalue UCNV_RESET
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const REASON_RESET = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCNV_RESET
-     */
-    #[\Since('8.3')]
     public const REASON_RESET = UNKNOWN;
     /**
      * @var int
      * @cvalue UCNV_CLOSE
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const REASON_CLOSE = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCNV_CLOSE
-     */
-    #[\Since('8.3')]
     public const REASON_CLOSE = UNKNOWN;
     /**
      * @var int
      * @cvalue UCNV_CLONE
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const REASON_CLONE = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCNV_CLONE
-     */
-    #[\Since('8.3')]
     public const REASON_CLONE = UNKNOWN;
     /* enum UConverterType */
     /**
@@ -214,455 +171,209 @@ class UConverter
      * @cvalue UCNV_UNSUPPORTED_CONVERTER
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const UNSUPPORTED_CONVERTER = UNKNOWN;
-    /* enum UConverterType */
-    /**
-     * @var int
-     * @cvalue UCNV_UNSUPPORTED_CONVERTER
-     */
-    #[\Since('8.3')]
     public const UNSUPPORTED_CONVERTER = UNKNOWN;
     /**
      * @var int
      * @cvalue UCNV_SBCS
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const SBCS = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCNV_SBCS
-     */
-    #[\Since('8.3')]
     public const SBCS = UNKNOWN;
     /**
      * @var int
      * @cvalue UCNV_DBCS
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const DBCS = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCNV_DBCS
-     */
-    #[\Since('8.3')]
     public const DBCS = UNKNOWN;
     /**
      * @var int
      * @cvalue UCNV_MBCS
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const MBCS = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCNV_MBCS
-     */
-    #[\Since('8.3')]
     public const MBCS = UNKNOWN;
     /**
      * @var int
      * @cvalue UCNV_LATIN_1
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const LATIN_1 = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCNV_LATIN_1
-     */
-    #[\Since('8.3')]
     public const LATIN_1 = UNKNOWN;
     /**
      * @var int
      * @cvalue UCNV_UTF8
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const UTF8 = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCNV_UTF8
-     */
-    #[\Since('8.3')]
     public const UTF8 = UNKNOWN;
     /**
      * @var int
      * @cvalue UCNV_UTF16_BigEndian
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const UTF16_BigEndian = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCNV_UTF16_BigEndian
-     */
-    #[\Since('8.3')]
     public const UTF16_BigEndian = UNKNOWN;
     /**
      * @var int
      * @cvalue UCNV_UTF16_LittleEndian
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const UTF16_LittleEndian = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCNV_UTF16_LittleEndian
-     */
-    #[\Since('8.3')]
     public const UTF16_LittleEndian = UNKNOWN;
     /**
      * @var int
      * @cvalue UCNV_UTF32_BigEndian
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const UTF32_BigEndian = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCNV_UTF32_BigEndian
-     */
-    #[\Since('8.3')]
     public const UTF32_BigEndian = UNKNOWN;
     /**
      * @var int
      * @cvalue UCNV_UTF32_LittleEndian
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const UTF32_LittleEndian = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCNV_UTF32_LittleEndian
-     */
-    #[\Since('8.3')]
     public const UTF32_LittleEndian = UNKNOWN;
     /**
      * @var int
      * @cvalue UCNV_EBCDIC_STATEFUL
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const EBCDIC_STATEFUL = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCNV_EBCDIC_STATEFUL
-     */
-    #[\Since('8.3')]
     public const EBCDIC_STATEFUL = UNKNOWN;
     /**
      * @var int
      * @cvalue UCNV_ISO_2022
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const ISO_2022 = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCNV_ISO_2022
-     */
-    #[\Since('8.3')]
     public const ISO_2022 = UNKNOWN;
     /**
      * @var int
      * @cvalue UCNV_LMBCS_1
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const LMBCS_1 = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCNV_LMBCS_1
-     */
-    #[\Since('8.3')]
     public const LMBCS_1 = UNKNOWN;
     /**
      * @var int
      * @cvalue UCNV_LMBCS_2
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const LMBCS_2 = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCNV_LMBCS_2
-     */
-    #[\Since('8.3')]
     public const LMBCS_2 = UNKNOWN;
     /**
      * @var int
      * @cvalue UCNV_LMBCS_3
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const LMBCS_3 = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCNV_LMBCS_3
-     */
-    #[\Since('8.3')]
     public const LMBCS_3 = UNKNOWN;
     /**
      * @var int
      * @cvalue UCNV_LMBCS_4
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const LMBCS_4 = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCNV_LMBCS_4
-     */
-    #[\Since('8.3')]
     public const LMBCS_4 = UNKNOWN;
     /**
      * @var int
      * @cvalue UCNV_LMBCS_5
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const LMBCS_5 = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCNV_LMBCS_5
-     */
-    #[\Since('8.3')]
     public const LMBCS_5 = UNKNOWN;
     /**
      * @var int
      * @cvalue UCNV_LMBCS_6
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const LMBCS_6 = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCNV_LMBCS_6
-     */
-    #[\Since('8.3')]
     public const LMBCS_6 = UNKNOWN;
     /**
      * @var int
      * @cvalue UCNV_LMBCS_8
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const LMBCS_8 = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCNV_LMBCS_8
-     */
-    #[\Since('8.3')]
     public const LMBCS_8 = UNKNOWN;
     /**
      * @var int
      * @cvalue UCNV_LMBCS_11
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const LMBCS_11 = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCNV_LMBCS_11
-     */
-    #[\Since('8.3')]
     public const LMBCS_11 = UNKNOWN;
     /**
      * @var int
      * @cvalue UCNV_LMBCS_16
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const LMBCS_16 = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCNV_LMBCS_16
-     */
-    #[\Since('8.3')]
     public const LMBCS_16 = UNKNOWN;
     /**
      * @var int
      * @cvalue UCNV_LMBCS_17
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const LMBCS_17 = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCNV_LMBCS_17
-     */
-    #[\Since('8.3')]
     public const LMBCS_17 = UNKNOWN;
     /**
      * @var int
      * @cvalue UCNV_LMBCS_18
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const LMBCS_18 = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCNV_LMBCS_18
-     */
-    #[\Since('8.3')]
     public const LMBCS_18 = UNKNOWN;
     /**
      * @var int
      * @cvalue UCNV_LMBCS_19
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const LMBCS_19 = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCNV_LMBCS_19
-     */
-    #[\Since('8.3')]
     public const LMBCS_19 = UNKNOWN;
     /**
      * @var int
      * @cvalue UCNV_LMBCS_LAST
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const LMBCS_LAST = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCNV_LMBCS_LAST
-     */
-    #[\Since('8.3')]
     public const LMBCS_LAST = UNKNOWN;
     /**
      * @var int
      * @cvalue UCNV_HZ
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const HZ = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCNV_HZ
-     */
-    #[\Since('8.3')]
     public const HZ = UNKNOWN;
     /**
      * @var int
      * @cvalue UCNV_SCSU
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const SCSU = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCNV_SCSU
-     */
-    #[\Since('8.3')]
     public const SCSU = UNKNOWN;
     /**
      * @var int
      * @cvalue UCNV_ISCII
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const ISCII = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCNV_ISCII
-     */
-    #[\Since('8.3')]
     public const ISCII = UNKNOWN;
     /**
      * @var int
      * @cvalue UCNV_US_ASCII
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const US_ASCII = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCNV_US_ASCII
-     */
-    #[\Since('8.3')]
     public const US_ASCII = UNKNOWN;
     /**
      * @var int
      * @cvalue UCNV_UTF7
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const UTF7 = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCNV_UTF7
-     */
-    #[\Since('8.3')]
     public const UTF7 = UNKNOWN;
     /**
      * @var int
      * @cvalue UCNV_BOCU1
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const BOCU1 = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCNV_BOCU1
-     */
-    #[\Since('8.3')]
     public const BOCU1 = UNKNOWN;
     /**
      * @var int
      * @cvalue UCNV_UTF16
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const UTF16 = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCNV_UTF16
-     */
-    #[\Since('8.3')]
     public const UTF16 = UNKNOWN;
     /**
      * @var int
      * @cvalue UCNV_UTF32
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const UTF32 = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCNV_UTF32
-     */
-    #[\Since('8.3')]
     public const UTF32 = UNKNOWN;
     /**
      * @var int
      * @cvalue UCNV_CESU8
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const CESU8 = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCNV_CESU8
-     */
-    #[\Since('8.3')]
     public const CESU8 = UNKNOWN;
     /**
      * @var int
      * @cvalue UCNV_IMAP_MAILBOX
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const IMAP_MAILBOX = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCNV_IMAP_MAILBOX
-     */
-    #[\Since('8.3')]
     public const IMAP_MAILBOX = UNKNOWN;
 }

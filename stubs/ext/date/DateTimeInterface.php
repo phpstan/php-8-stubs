@@ -40,100 +40,44 @@ interface DateTimeInterface
     public function __unserialize(array $data): void;
     /** @var string */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const ATOM = DATE_ATOM;
-    /** @var string */
-    #[\Since('8.3')]
     public const ATOM = DATE_ATOM;
     /** @var string */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const COOKIE = DATE_COOKIE;
-    /** @var string */
-    #[\Since('8.3')]
     public const COOKIE = DATE_COOKIE;
     /** @var string */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const ISO8601 = DATE_ISO8601;
-    /** @var string */
-    #[\Since('8.3')]
     public const ISO8601 = DATE_ISO8601;
     /** @var string */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const ISO8601_EXPANDED = DATE_ISO8601_EXPANDED;
-    /** @var string */
-    #[\Since('8.3')]
     public const ISO8601_EXPANDED = DATE_ISO8601_EXPANDED;
     /** @var string */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const RFC822 = DATE_RFC822;
-    /** @var string */
-    #[\Since('8.3')]
     public const RFC822 = DATE_RFC822;
     /** @var string */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const RFC850 = DATE_RFC850;
-    /** @var string */
-    #[\Since('8.3')]
     public const RFC850 = DATE_RFC850;
     /** @var string */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const RFC1036 = DATE_RFC1036;
-    /** @var string */
-    #[\Since('8.3')]
     public const RFC1036 = DATE_RFC1036;
     /** @var string */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const RFC1123 = DATE_RFC1123;
-    /** @var string */
-    #[\Since('8.3')]
     public const RFC1123 = DATE_RFC1123;
     /** @var string */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const RFC7231 = DATE_RFC7231;
-    /** @var string */
-    #[\Since('8.3')]
     public const RFC7231 = DATE_RFC7231;
     /** @var string */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const RFC2822 = DATE_RFC2822;
-    /** @var string */
-    #[\Since('8.3')]
     public const RFC2822 = DATE_RFC2822;
     /** @var string */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const RFC3339 = DATE_RFC3339;
-    /** @var string */
-    #[\Since('8.3')]
     public const RFC3339 = DATE_RFC3339;
     /** @var string */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const RFC3339_EXTENDED = DATE_RFC3339_EXTENDED;
-    /** @var string */
-    #[\Since('8.3')]
     public const RFC3339_EXTENDED = DATE_RFC3339_EXTENDED;
     /** @var string */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const RSS = DATE_RSS;
-    /** @var string */
-    #[\Since('8.3')]
     public const RSS = DATE_RSS;
     /** @var string */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const W3C = DATE_W3C;
-    /** @var string */
-    #[\Since('8.3')]
     public const W3C = DATE_W3C;
 }

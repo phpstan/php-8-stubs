@@ -124,38 +124,17 @@ class SplPriorityQueue implements \Iterator, \Countable
      * @cvalue SPL_PQUEUE_EXTR_BOTH
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const EXTR_BOTH = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue SPL_PQUEUE_EXTR_BOTH
-     */
-    #[\Since('8.3')]
     public const EXTR_BOTH = UNKNOWN;
     /**
      * @var int
      * @cvalue SPL_PQUEUE_EXTR_PRIORITY
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const EXTR_PRIORITY = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue SPL_PQUEUE_EXTR_PRIORITY
-     */
-    #[\Since('8.3')]
     public const EXTR_PRIORITY = UNKNOWN;
     /**
      * @var int
      * @cvalue SPL_PQUEUE_EXTR_DATA
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const EXTR_DATA = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue SPL_PQUEUE_EXTR_DATA
-     */
-    #[\Since('8.3')]
     public const EXTR_DATA = UNKNOWN;
 }

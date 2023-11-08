@@ -200,142 +200,65 @@ class IntlDateFormatter
      * @cvalue UDAT_FULL
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const FULL = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UDAT_FULL
-     */
-    #[\Since('8.3')]
     public const FULL = UNKNOWN;
     /**
      * @var int
      * @cvalue UDAT_LONG
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const LONG = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UDAT_LONG
-     */
-    #[\Since('8.3')]
     public const LONG = UNKNOWN;
     /**
      * @var int
      * @cvalue UDAT_MEDIUM
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const MEDIUM = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UDAT_MEDIUM
-     */
-    #[\Since('8.3')]
     public const MEDIUM = UNKNOWN;
     /**
      * @var int
      * @cvalue UDAT_SHORT
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const SHORT = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UDAT_SHORT
-     */
-    #[\Since('8.3')]
     public const SHORT = UNKNOWN;
     /**
      * @var int
      * @cvalue UDAT_NONE
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const NONE = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UDAT_NONE
-     */
-    #[\Since('8.3')]
     public const NONE = UNKNOWN;
     /**
      * @var int
      * @cvalue UDAT_FULL_RELATIVE
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const RELATIVE_FULL = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UDAT_FULL_RELATIVE
-     */
-    #[\Since('8.3')]
     public const RELATIVE_FULL = UNKNOWN;
     /**
      * @var int
      * @cvalue UDAT_LONG_RELATIVE
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const RELATIVE_LONG = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UDAT_LONG_RELATIVE
-     */
-    #[\Since('8.3')]
     public const RELATIVE_LONG = UNKNOWN;
     /**
      * @var int
      * @cvalue UDAT_MEDIUM_RELATIVE
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const RELATIVE_MEDIUM = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UDAT_MEDIUM_RELATIVE
-     */
-    #[\Since('8.3')]
     public const RELATIVE_MEDIUM = UNKNOWN;
     /**
      * @var int
      * @cvalue UDAT_SHORT_RELATIVE
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const RELATIVE_SHORT = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UDAT_SHORT_RELATIVE
-     */
-    #[\Since('8.3')]
     public const RELATIVE_SHORT = UNKNOWN;
     /**
      * @var int
      * @cvalue UCAL_GREGORIAN
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const GREGORIAN = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCAL_GREGORIAN
-     */
-    #[\Since('8.3')]
     public const GREGORIAN = UNKNOWN;
     /**
      * @var int
      * @cvalue UCAL_TRADITIONAL
      */
     #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const TRADITIONAL = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCAL_TRADITIONAL
-     */
-    #[\Since('8.3')]
     public const TRADITIONAL = UNKNOWN;
 }
