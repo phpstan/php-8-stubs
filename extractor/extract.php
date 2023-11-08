@@ -435,14 +435,21 @@ $command = new class(
 				throw new \LogicException('Classname changed');
 			}
 			$newMethods = array_filter($new->stmts, fn (Node\Stmt $stmt) => $stmt instanceof Node\Stmt\ClassMethod);
-			[$untouchedStmts, $oldMethodsStmt] = $this->filterStatementsByVersion($old->stmts, $updateFrom);
+			$newConstants = array_filter($new->stmts, fn (Node\Stmt $stmt) => $stmt instanceof Node\Stmt\ClassConst);
+			[$untouchedStmts, $oldStmts] = $this->filterStatementsByVersion($old->stmts, $updateFrom);
 			$oldMethods = [];
-			foreach ($oldMethodsStmt as $stmt) {
-				if (!$stmt instanceof Node\Stmt\ClassMethod) {
+			$oldConstants = [];
+			foreach ($oldStmts as $stmt) {
+				if ($stmt instanceof Node\Stmt\ClassMethod) {
+					$oldMethods[$stmt->name->toLowerString()] = $stmt;
 					continue;
 				}
 
-				$oldMethods[$stmt->name->toLowerString()] = $stmt;
+				if ($stmt instanceof Node\Stmt\ClassConst) {
+					$names = array_map(static fn (Node\Const_ $const) => $const->name->toString(), $stmt->consts);
+					$oldConstants[implode(',', $names)] = $stmt;
+					continue;
+				}
 			}
 
 			if ($old->stmts !== null) {
@@ -466,6 +473,26 @@ $command = new class(
 				}
 
 				// todo has a method been removed?
+
+				foreach ($newConstants as $stmt) {
+					$namesKey = implode(',', array_map(static fn (Node\Const_ $const) => $const->name->toString(), $stmt->consts));
+					if (!array_key_exists($namesKey, $oldConstants)) {
+						$stmt->attrGroups[] = new Node\AttributeGroup([
+							new Node\Attribute(
+								new Node\Name\FullyQualified('Since'),
+								[new Node\Arg(new Node\Scalar\String_($updateTo))],
+							),
+						]);
+						$newStmtsToSet[] = $stmt;
+						continue;
+					}
+
+					foreach ($this->compareConstants($oldConstants[$namesKey], $stmt, $updateTo) as $constantStmt) {
+						$newStmtsToSet[] = $constantStmt;
+					}
+				}
+
+				// todo has a constant been removed?
 
 				$old->stmts = $newStmtsToSet;
 			}
@@ -508,49 +535,49 @@ $command = new class(
 			}
 		}
 		if ($this->printType($old->getReturnType()) !== $this->printType($new->getReturnType())) {
-			return $this->functionDiff($old, $new, $updateTo);
+			return $this->stmtDiff($old, $new, $updateTo);
 		}
 		if ($old->returnsByRef() !== $new->returnsByRef()) {
-			return $this->functionDiff($old, $new, $updateTo);
+			return $this->stmtDiff($old, $new, $updateTo);
 		}
 		if (count($old->getParams()) !== count($new->getParams())) {
-			return $this->functionDiff($old, $new, $updateTo);
+			return $this->stmtDiff($old, $new, $updateTo);
 		}
 
 		foreach ($old->getParams() as $i => $oldParam) {
 			$newParam = $new->getParams()[$i];
 			if ($this->printType($oldParam->type) !== $this->printType($newParam->type)) {
-				return $this->functionDiff($old, $new, $updateTo);
+				return $this->stmtDiff($old, $new, $updateTo);
 			}
 			if ($oldParam->byRef !== $newParam->byRef) {
-				return $this->functionDiff($old, $new, $updateTo);
+				return $this->stmtDiff($old, $new, $updateTo);
 			}
 			if ($oldParam->variadic !== $newParam->variadic) {
-				return $this->functionDiff($old, $new, $updateTo);
+				return $this->stmtDiff($old, $new, $updateTo);
 			}
 			assert($oldParam->var instanceof Node\Expr\Variable);
 			assert(is_string($oldParam->var->name));
 			assert($newParam->var instanceof Node\Expr\Variable);
 			assert(is_string($newParam->var->name));
 			if ($oldParam->var->name !== $newParam->var->name) {
-				return $this->functionDiff($old, $new, $updateTo);
+				return $this->stmtDiff($old, $new, $updateTo);
 			}
 			if (is_null($oldParam->default) !== is_null($newParam->default)) {
-				return $this->functionDiff($old, $new, $updateTo);
+				return $this->stmtDiff($old, $new, $updateTo);
 			}
 			if ($oldParam->default !== null && $newParam->default !== null) {
 				if ($this->printer->prettyPrintExpr($oldParam->default) !== $this->printer->prettyPrintExpr($newParam->default)) {
-					return $this->functionDiff($old, $new, $updateTo);
+					return $this->stmtDiff($old, $new, $updateTo);
 				}
 			}
 			if ($oldParam->flags !== $newParam->flags) {
-				return $this->functionDiff($old, $new, $updateTo);
+				return $this->stmtDiff($old, $new, $updateTo);
 			}
 		}
 
 		if ($old instanceof Node\Stmt\ClassMethod && $new instanceof Node\Stmt\ClassMethod) {
 			if ($old->flags !== $new->flags) {
-				return $this->functionDiff($old, $new, $updateTo);
+				return $this->stmtDiff($old, $new, $updateTo);
 			}
 		}
 
@@ -596,19 +623,19 @@ $command = new class(
 		}
 
 		if ($oldPhpDocParameters !== $newPhpDocParameters) {
-			return $this->functionDiff($old, $new, $updateTo);
+			return $this->stmtDiff($old, $new, $updateTo);
 		}
 
 		return [$old];
 	}
 
 	/**
-	 * @template T of Node\FunctionLike
+	 * @template T of Node
 	 * @param T $old
 	 * @param T $new
 	 * @return T[]
 	 */
-	private function functionDiff(Node\FunctionLike $old, Node\FunctionLike $new, string $updateTo): array
+	private function stmtDiff(Node $old, Node $new, string $updateTo): array
 	{
 		$args = [new Node\Arg(new Node\Scalar\String_($updateTo))];
 		$old = clone $old;
@@ -630,6 +657,52 @@ $command = new class(
 			),
 		]);
 		return [$old, $new];
+	}
+
+	/**
+	 * @return Node\Stmt\ClassConst[]
+	 */
+	private function compareConstants(Node\Stmt\ClassConst $old, Node\Stmt\ClassConst $new, string $updateTo): array
+	{
+		if ($old->getDocComment() !== $new->getDocComment()) {
+			return $this->stmtDiff($old, $new, $updateTo);
+		}
+		if ($old->flags !== $new->flags) {
+			return $this->stmtDiff($old, $new, $updateTo);
+		}
+
+		if (count($old->consts) !== count($new->consts)) {
+			return $this->stmtDiff($old, $new, $updateTo);
+		}
+
+		foreach ($new->consts as $i => $newConst) {
+			$oldConst = $old->consts[$i];
+			if ($oldConst->name->toString() !== $newConst->name->toString()) {
+				return $this->stmtDiff($old, $new, $updateTo);
+			}
+
+			$oldValue = $this->printer->prettyPrintExpr($oldConst->value);
+			$newValue = $this->printer->prettyPrintExpr($newConst->value);
+			if ($oldValue !== $newValue) {
+				return $this->stmtDiff($old, $new, $updateTo);
+			}
+		}
+
+		$oldType = $old->type;
+		$newType = $new->type;
+		if ($oldType !== null) {
+			if ($newType === null) {
+				return $this->stmtDiff($old, $new, $updateTo);
+			}
+
+			if ($this->printType($oldType) !== $this->printType($newType)) {
+				return $this->stmtDiff($old, $new, $updateTo);
+			}
+		} elseif ($newType !== null) {
+			return $this->stmtDiff($old, $new, $updateTo);
+		}
+
+		return [$old];
 	}
 
 	/**
