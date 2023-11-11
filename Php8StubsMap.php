@@ -2741,6 +2741,7 @@ class Php8StubsMap
 				'pg_exit_pipeline_mode' => 'stubs/ext/pgsql/pg_exit_pipeline_mode.php',
 				'pg_pipeline_status' => 'stubs/ext/pgsql/pg_pipeline_status.php',
 				'pg_pipeline_sync' => 'stubs/ext/pgsql/pg_pipeline_sync.php',
+				'pg_send_flush_request' => 'stubs/ext/pgsql/pg_send_flush_request.php',
 				'pg_set_error_context_visibility' => 'stubs/ext/pgsql/pg_set_error_context_visibility.php',
 				'posix_eaccess' => 'stubs/ext/posix/posix_eaccess.php',
 				'posix_fpathconf' => 'stubs/ext/posix/posix_fpathconf.php',
