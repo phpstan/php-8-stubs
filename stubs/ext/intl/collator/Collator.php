@@ -109,150 +109,248 @@ class Collator
     public function getSortKey(string $string)
     {
     }
+    /** @cvalue UCOL_DEFAULT */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const int DEFAULT_VALUE = UNKNOWN;
     /**
      * @var int
      * @cvalue UCOL_DEFAULT
      */
-    #[\Since('8.2')]
+    #[\Since('8.3')]
     const DEFAULT_VALUE = UNKNOWN;
+    /** @cvalue UCOL_PRIMARY */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const int PRIMARY = UNKNOWN;
     /**
      * @var int
      * @cvalue UCOL_PRIMARY
      */
-    #[\Since('8.2')]
+    #[\Since('8.3')]
     const PRIMARY = UNKNOWN;
+    /** @cvalue UCOL_SECONDARY */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const int SECONDARY = UNKNOWN;
     /**
      * @var int
      * @cvalue UCOL_SECONDARY
      */
-    #[\Since('8.2')]
+    #[\Since('8.3')]
     const SECONDARY = UNKNOWN;
+    /** @cvalue UCOL_TERTIARY */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const int TERTIARY = UNKNOWN;
     /**
      * @var int
      * @cvalue UCOL_TERTIARY
      */
-    #[\Since('8.2')]
+    #[\Since('8.3')]
     const TERTIARY = UNKNOWN;
+    /** @cvalue UCOL_DEFAULT_STRENGTH */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const int DEFAULT_STRENGTH = UNKNOWN;
     /**
      * @var int
      * @cvalue UCOL_DEFAULT_STRENGTH
      */
-    #[\Since('8.2')]
+    #[\Since('8.3')]
     const DEFAULT_STRENGTH = UNKNOWN;
+    /** @cvalue UCOL_QUATERNARY */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const int QUATERNARY = UNKNOWN;
     /**
      * @var int
      * @cvalue UCOL_QUATERNARY
      */
-    #[\Since('8.2')]
+    #[\Since('8.3')]
     const QUATERNARY = UNKNOWN;
+    /** @cvalue UCOL_IDENTICAL */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const int IDENTICAL = UNKNOWN;
     /**
      * @var int
      * @cvalue UCOL_IDENTICAL
      */
-    #[\Since('8.2')]
+    #[\Since('8.3')]
     const IDENTICAL = UNKNOWN;
+    /** @cvalue UCOL_OFF */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const int OFF = UNKNOWN;
     /**
      * @var int
      * @cvalue UCOL_OFF
      */
-    #[\Since('8.2')]
+    #[\Since('8.3')]
     const OFF = UNKNOWN;
+    /** @cvalue UCOL_ON */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const int ON = UNKNOWN;
     /**
      * @var int
      * @cvalue UCOL_ON
      */
-    #[\Since('8.2')]
+    #[\Since('8.3')]
     const ON = UNKNOWN;
+    /** @cvalue UCOL_SHIFTED */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const int SHIFTED = UNKNOWN;
     /**
      * @var int
      * @cvalue UCOL_SHIFTED
      */
-    #[\Since('8.2')]
+    #[\Since('8.3')]
     const SHIFTED = UNKNOWN;
+    /** @cvalue UCOL_NON_IGNORABLE */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const int NON_IGNORABLE = UNKNOWN;
     /**
      * @var int
      * @cvalue UCOL_NON_IGNORABLE
      */
-    #[\Since('8.2')]
+    #[\Since('8.3')]
     const NON_IGNORABLE = UNKNOWN;
+    /** @cvalue UCOL_LOWER_FIRST */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const int LOWER_FIRST = UNKNOWN;
     /**
      * @var int
      * @cvalue UCOL_LOWER_FIRST
      */
-    #[\Since('8.2')]
+    #[\Since('8.3')]
     const LOWER_FIRST = UNKNOWN;
+    /** @cvalue UCOL_UPPER_FIRST */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const int UPPER_FIRST = UNKNOWN;
     /**
      * @var int
      * @cvalue UCOL_UPPER_FIRST
      */
-    #[\Since('8.2')]
+    #[\Since('8.3')]
     const UPPER_FIRST = UNKNOWN;
+    /* UColAttribute constants */
+    /** @cvalue UCOL_FRENCH_COLLATION */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const int FRENCH_COLLATION = UNKNOWN;
     /* UColAttribute constants */
     /**
      * @var int
      * @cvalue UCOL_FRENCH_COLLATION
      */
-    #[\Since('8.2')]
+    #[\Since('8.3')]
     const FRENCH_COLLATION = UNKNOWN;
+    /** @cvalue UCOL_ALTERNATE_HANDLING */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const int ALTERNATE_HANDLING = UNKNOWN;
     /**
      * @var int
      * @cvalue UCOL_ALTERNATE_HANDLING
      */
-    #[\Since('8.2')]
+    #[\Since('8.3')]
     const ALTERNATE_HANDLING = UNKNOWN;
+    /** @cvalue UCOL_CASE_FIRST */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const int CASE_FIRST = UNKNOWN;
     /**
      * @var int
      * @cvalue UCOL_CASE_FIRST
      */
-    #[\Since('8.2')]
+    #[\Since('8.3')]
     const CASE_FIRST = UNKNOWN;
+    /** @cvalue UCOL_CASE_LEVEL */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const int CASE_LEVEL = UNKNOWN;
     /**
      * @var int
      * @cvalue UCOL_CASE_LEVEL
      */
-    #[\Since('8.2')]
+    #[\Since('8.3')]
     const CASE_LEVEL = UNKNOWN;
+    /** @cvalue UCOL_NORMALIZATION_MODE */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const int NORMALIZATION_MODE = UNKNOWN;
     /**
      * @var int
      * @cvalue UCOL_NORMALIZATION_MODE
      */
-    #[\Since('8.2')]
+    #[\Since('8.3')]
     const NORMALIZATION_MODE = UNKNOWN;
+    /** @cvalue UCOL_STRENGTH */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const int STRENGTH = UNKNOWN;
     /**
      * @var int
      * @cvalue UCOL_STRENGTH
      */
-    #[\Since('8.2')]
+    #[\Since('8.3')]
     const STRENGTH = UNKNOWN;
+    /** @cvalue UCOL_HIRAGANA_QUATERNARY_MODE */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const int HIRAGANA_QUATERNARY_MODE = UNKNOWN;
     /**
      * @var int
      * @cvalue UCOL_HIRAGANA_QUATERNARY_MODE
      */
-    #[\Since('8.2')]
+    #[\Since('8.3')]
     const HIRAGANA_QUATERNARY_MODE = UNKNOWN;
+    /** @cvalue UCOL_NUMERIC_COLLATION */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const int NUMERIC_COLLATION = UNKNOWN;
     /**
      * @var int
      * @cvalue UCOL_NUMERIC_COLLATION
      */
-    #[\Since('8.2')]
+    #[\Since('8.3')]
     const NUMERIC_COLLATION = UNKNOWN;
+    /* sort flags */
+    /** @cvalue COLLATOR_SORT_REGULAR */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const int SORT_REGULAR = UNKNOWN;
     /* sort flags */
     /**
      * @var int
      * @cvalue COLLATOR_SORT_REGULAR
      */
-    #[\Since('8.2')]
+    #[\Since('8.3')]
     const SORT_REGULAR = UNKNOWN;
+    /** @cvalue COLLATOR_SORT_STRING */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const int SORT_STRING = UNKNOWN;
     /**
      * @var int
      * @cvalue COLLATOR_SORT_STRING
      */
-    #[\Since('8.2')]
+    #[\Since('8.3')]
     const SORT_STRING = UNKNOWN;
+    /** @cvalue COLLATOR_SORT_NUMERIC */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const int SORT_NUMERIC = UNKNOWN;
     /**
      * @var int
      * @cvalue COLLATOR_SORT_NUMERIC
      */
-    #[\Since('8.2')]
+    #[\Since('8.3')]
     const SORT_NUMERIC = UNKNOWN;
 }

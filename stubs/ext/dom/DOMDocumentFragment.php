@@ -20,8 +20,11 @@ class DOMDocumentFragment extends \DOMNode implements \DOMParentNode
     public function prepend(...$nodes): void
     {
     }
-    /** @param DOMNode|string $nodes */
-    #[\Since('8.3')]
+    /**
+     * @param DOMNode|string $nodes
+     * @implementation-alias DOM\Document::replaceChildren
+     */
+    #[\Since('8.2')]
     public function replaceChildren(...$nodes): void
     {
     }

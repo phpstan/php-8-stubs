@@ -3,6 +3,16 @@
 #ifdef LIBXML_XPATH_ENABLED
 class DOMXPath
 {
+    #[\Until('8.2')]
+    public function __construct(DOMDocument $document, bool $registerNodeNS = true)
+    {
+    }
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public function __construct(DOM\Document $document, bool $registerNodeNS = true)
+    {
+    }
+    #[\Since('8.3')]
     public function __construct(DOMDocument $document, bool $registerNodeNS = true)
     {
     }

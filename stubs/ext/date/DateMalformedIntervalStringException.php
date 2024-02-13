@@ -3,7 +3,7 @@
 /**
  * @strict-properties
  */
-#[\Since('8.3')]
+#[\Since('8.2')]
 class DateMalformedIntervalStringException extends \DateException
 {
 }

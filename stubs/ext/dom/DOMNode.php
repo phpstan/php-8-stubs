@@ -78,7 +78,7 @@ class DOMNode
     public function isSameNode(DOMNode $otherNode)
     {
     }
-    #[\Since('8.3')]
+    #[\Since('8.2')]
     public function isEqualNode(?DOMNode $otherNode): bool
     {
     }
@@ -118,11 +118,11 @@ class DOMNode
     public function replaceChild(DOMNode $node, DOMNode $child)
     {
     }
-    #[\Since('8.3')]
+    #[\Since('8.2')]
     public function contains(DOMNode|DOMNameSpaceNode|null $other): bool
     {
     }
-    #[\Since('8.3')]
+    #[\Since('8.2')]
     public function getRootNode(?array $options = null): DOMNode
     {
     }

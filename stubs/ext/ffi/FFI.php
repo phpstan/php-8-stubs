@@ -77,13 +77,12 @@ final class FFI
     {
     }
     /**
-     * @var int
      * @cvalue __BIGGEST_ALIGNMENT__
      * @link ffi-ffi.constants.biggest-alignment
      */
     #[\Since('8.2')]
     #[\Until('8.3')]
-    public const __BIGGEST_ALIGNMENT__ = UNKNOWN;
+    public const int __BIGGEST_ALIGNMENT__ = UNKNOWN;
     /**
      * @cvalue __BIGGEST_ALIGNMENT__
      * @link ffi-ffi.constants.biggest-alignment

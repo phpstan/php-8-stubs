@@ -86,36 +86,52 @@ class ReflectionClassConstant implements \Reflector
     public function isEnumCase(): bool
     {
     }
-    #[\Since('8.3')]
+    #[\Since('8.2')]
     public function hasType(): bool
     {
     }
-    #[\Since('8.3')]
+    #[\Since('8.2')]
     public function getType(): ?ReflectionType
     {
     }
+    /** @cvalue ZEND_ACC_PUBLIC */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const int IS_PUBLIC = UNKNOWN;
     /**
      * @var int
      * @cvalue ZEND_ACC_PUBLIC
      */
-    #[\Since('8.2')]
+    #[\Since('8.3')]
     public const IS_PUBLIC = UNKNOWN;
+    /** @cvalue ZEND_ACC_PROTECTED */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const int IS_PROTECTED = UNKNOWN;
     /**
      * @var int
      * @cvalue ZEND_ACC_PROTECTED
      */
-    #[\Since('8.2')]
+    #[\Since('8.3')]
     public const IS_PROTECTED = UNKNOWN;
+    /** @cvalue ZEND_ACC_PRIVATE */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const int IS_PRIVATE = UNKNOWN;
     /**
      * @var int
      * @cvalue ZEND_ACC_PRIVATE
      */
-    #[\Since('8.2')]
+    #[\Since('8.3')]
     public const IS_PRIVATE = UNKNOWN;
+    /** @cvalue ZEND_ACC_FINAL */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const int IS_FINAL = UNKNOWN;
     /**
      * @var int
      * @cvalue ZEND_ACC_FINAL
      */
-    #[\Since('8.2')]
+    #[\Since('8.3')]
     public const IS_FINAL = UNKNOWN;
 }

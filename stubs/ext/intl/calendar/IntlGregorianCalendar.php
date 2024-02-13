@@ -2,11 +2,11 @@
 
 class IntlGregorianCalendar extends \IntlCalendar
 {
-    #[\Since('8.3')]
+    #[\Since('8.2')]
     public static function createFromDate(int $year, int $month, int $dayOfMonth): static
     {
     }
-    #[\Since('8.3')]
+    #[\Since('8.2')]
     public static function createFromDateTime(int $year, int $month, int $dayOfMonth, int $hour, int $minute, ?int $second = null): static
     {
     }

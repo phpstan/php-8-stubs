@@ -2,11 +2,7 @@
 
 namespace Random;
 
-#[\Since('8.3')]
+#[\Since('8.2')]
 enum IntervalBoundary
 {
-    case ClosedOpen;
-    case ClosedClosed;
-    case OpenClosed;
-    case OpenOpen;
 }

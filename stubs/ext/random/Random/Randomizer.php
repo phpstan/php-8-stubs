@@ -14,11 +14,9 @@ final class Randomizer
     public function nextInt(): int
     {
     }
-    #[\Since('8.3')]
     public function nextFloat(): float
     {
     }
-    #[\Since('8.3')]
     public function getFloat(float $min, float $max, IntervalBoundary $boundary = IntervalBoundary::ClosedOpen): float
     {
     }
@@ -28,7 +26,6 @@ final class Randomizer
     public function getBytes(int $length): string
     {
     }
-    #[\Since('8.3')]
     public function getBytesFromString(string $string, int $length): string
     {
     }

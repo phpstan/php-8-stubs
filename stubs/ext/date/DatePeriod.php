@@ -2,7 +2,7 @@
 
 class DatePeriod implements \IteratorAggregate
 {
-    #[\Since('8.3')]
+    #[\Since('8.2')]
     public static function createFromISO8601String(string $specification, int $options = 0): static
     {
     }

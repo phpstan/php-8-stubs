@@ -229,28 +229,44 @@ class SplFileObject extends \SplFileInfo implements \RecursiveIterator, \Seekabl
     public function __toString(): string
     {
     }
+    /** @cvalue SPL_FILE_OBJECT_DROP_NEW_LINE */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const int DROP_NEW_LINE = UNKNOWN;
     /**
      * @var int
      * @cvalue SPL_FILE_OBJECT_DROP_NEW_LINE
      */
-    #[\Since('8.2')]
+    #[\Since('8.3')]
     public const DROP_NEW_LINE = UNKNOWN;
+    /** @cvalue SPL_FILE_OBJECT_READ_AHEAD */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const int READ_AHEAD = UNKNOWN;
     /**
      * @var int
      * @cvalue SPL_FILE_OBJECT_READ_AHEAD
      */
-    #[\Since('8.2')]
+    #[\Since('8.3')]
     public const READ_AHEAD = UNKNOWN;
+    /** @cvalue SPL_FILE_OBJECT_SKIP_EMPTY */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const int SKIP_EMPTY = UNKNOWN;
     /**
      * @var int
      * @cvalue SPL_FILE_OBJECT_SKIP_EMPTY
      */
-    #[\Since('8.2')]
+    #[\Since('8.3')]
     public const SKIP_EMPTY = UNKNOWN;
+    /** @cvalue SPL_FILE_OBJECT_READ_CSV */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const int READ_CSV = UNKNOWN;
     /**
      * @var int
      * @cvalue SPL_FILE_OBJECT_READ_CSV
      */
-    #[\Since('8.2')]
+    #[\Since('8.3')]
     public const READ_CSV = UNKNOWN;
 }

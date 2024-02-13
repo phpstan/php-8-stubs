@@ -1,10 +1,10 @@
 <?php 
 
-#[\Until('8.3')]
+#[\Until('8.2')]
 function intlcal_clear(\IntlCalendar $calendar, ?int $field = null): bool
 {
 }
-#[\Since('8.3')]
+#[\Since('8.2')]
 function intlcal_clear(\IntlCalendar $calendar, ?int $field = null): true
 {
 }

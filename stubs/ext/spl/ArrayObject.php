@@ -174,16 +174,24 @@ class ArrayObject implements \IteratorAggregate, \ArrayAccess, \Serializable, \C
     public function __debugInfo()
     {
     }
+    /** @cvalue SPL_ARRAY_STD_PROP_LIST */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const int STD_PROP_LIST = UNKNOWN;
     /**
      * @var int
      * @cvalue SPL_ARRAY_STD_PROP_LIST
      */
-    #[\Since('8.2')]
+    #[\Since('8.3')]
     const STD_PROP_LIST = UNKNOWN;
+    /** @cvalue SPL_ARRAY_ARRAY_AS_PROPS */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const int ARRAY_AS_PROPS = UNKNOWN;
     /**
      * @var int
      * @cvalue SPL_ARRAY_ARRAY_AS_PROPS
      */
-    #[\Since('8.2')]
+    #[\Since('8.3')]
     const ARRAY_AS_PROPS = UNKNOWN;
 }

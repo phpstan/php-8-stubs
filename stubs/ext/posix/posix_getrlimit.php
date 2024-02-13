@@ -4,7 +4,7 @@
 /**
  * @refcount 1
  */
-#[\Until('8.3')]
+#[\Until('8.2')]
 function posix_getrlimit(): array|false
 {
 }
@@ -13,7 +13,7 @@ function posix_getrlimit(): array|false
  * @return array<int|string, int|string>|false
  * @refcount 1
  */
-#[\Since('8.3')]
+#[\Since('8.2')]
 function posix_getrlimit(?int $resource = null): array|false
 {
 }

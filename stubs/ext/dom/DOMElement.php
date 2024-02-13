@@ -12,7 +12,7 @@ class DOMElement extends \DOMNode implements \DOMParentNode, \DOMChildNode
     public function getAttribute(string $qualifiedName)
     {
     }
-    #[\Since('8.3')]
+    #[\Since('8.2')]
     public function getAttributeNames(): array
     {
     }
@@ -117,7 +117,7 @@ class DOMElement extends \DOMNode implements \DOMParentNode, \DOMChildNode
     public function setIdAttributeNode(DOMAttr $attr, bool $isId)
     {
     }
-    #[\Since('8.3')]
+    #[\Since('8.2')]
     public function toggleAttribute(string $qualifiedName, ?bool $force = null): bool
     {
     }
@@ -145,15 +145,15 @@ class DOMElement extends \DOMNode implements \DOMParentNode, \DOMChildNode
     {
     }
     /** @param DOMNode|string $nodes */
-    #[\Since('8.3')]
+    #[\Since('8.2')]
     public function replaceChildren(...$nodes): void
     {
     }
-    #[\Since('8.3')]
+    #[\Since('8.2')]
     public function insertAdjacentElement(string $where, DOMElement $element): ?DOMElement
     {
     }
-    #[\Since('8.3')]
+    #[\Since('8.2')]
     public function insertAdjacentText(string $where, string $data): void
     {
     }

@@ -27,10 +27,14 @@ class ReflectionAttribute
     private function __construct()
     {
     }
+    /** @cvalue REFLECTION_ATTRIBUTE_IS_INSTANCEOF */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const int IS_INSTANCEOF = UNKNOWN;
     /**
      * @var int
      * @cvalue REFLECTION_ATTRIBUTE_IS_INSTANCEOF
      */
-    #[\Since('8.2')]
+    #[\Since('8.3')]
     public const IS_INSTANCEOF = UNKNOWN;
 }

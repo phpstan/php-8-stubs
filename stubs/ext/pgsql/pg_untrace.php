@@ -6,11 +6,11 @@ function pg_untrace($connection = null): bool
 {
 }
 #[\Since('8.1')]
-#[\Until('8.3')]
+#[\Until('8.2')]
 function pg_untrace(?\PgSql\Connection $connection = null): bool
 {
 }
-#[\Since('8.3')]
+#[\Since('8.2')]
 function pg_untrace(?\PgSql\Connection $connection = null): true
 {
 }

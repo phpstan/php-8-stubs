@@ -2677,6 +2677,25 @@ class Php8StubsMap
 		if ($phpVersionId >= 80200) {
 			$classes = \array_merge($classes, [
 				'allowdynamicproperties' => 'stubs/Zend/AllowDynamicProperties.php',
+				'dateerror' => 'stubs/ext/date/DateError.php',
+				'dateexception' => 'stubs/ext/date/DateException.php',
+				'dateinvalidoperationexception' => 'stubs/ext/date/DateInvalidOperationException.php',
+				'dateinvalidtimezoneexception' => 'stubs/ext/date/DateInvalidTimeZoneException.php',
+				'datemalformedintervalstringexception' => 'stubs/ext/date/DateMalformedIntervalStringException.php',
+				'datemalformedperiodstringexception' => 'stubs/ext/date/DateMalformedPeriodStringException.php',
+				'datemalformedstringexception' => 'stubs/ext/date/DateMalformedStringException.php',
+				'dateobjecterror' => 'stubs/ext/date/DateObjectError.php',
+				'daterangeerror' => 'stubs/ext/date/DateRangeError.php',
+				'dom\\document' => 'stubs/ext/dom/DOM/Document.php',
+				'dom\\htmldocument' => 'stubs/ext/dom/DOM/HTMLDocument.php',
+				'dom\\xmldocument' => 'stubs/ext/dom/DOM/XMLDocument.php',
+				'override' => 'stubs/Zend/Override.php',
+				'pdodblib' => 'stubs/ext/pdo_dblib/PdoDblib.php',
+				'pdofirebird' => 'stubs/ext/pdo_firebird/PdoFirebird.php',
+				'pdomysql' => 'stubs/ext/pdo_mysql/PdoMysql.php',
+				'pdoodbc' => 'stubs/ext/pdo_odbc/PdoOdbc.php',
+				'pdopgsql' => 'stubs/ext/pdo_pgsql/PdoPgsql.php',
+				'pdosqlite' => 'stubs/ext/pdo_sqlite/PdoSqlite.php',
 				'random\\brokenrandomengineerror' => 'stubs/ext/random/Random/BrokenRandomEngineError.php',
 				'random\\cryptosafeengine' => 'stubs/ext/random/Random/CryptoSafeEngine.php',
 				'random\\engine' => 'stubs/ext/random/Random/Engine.php',
@@ -2687,66 +2706,69 @@ class Php8StubsMap
 				'random\\randomerror' => 'stubs/ext/random/Random/RandomError.php',
 				'random\\randomexception' => 'stubs/ext/random/Random/RandomException.php',
 				'random\\randomizer' => 'stubs/ext/random/Random/Randomizer.php',
+				'requestparsebodyexception' => 'stubs/Zend/RequestParseBodyException.php',
 				'sensitiveparameter' => 'stubs/Zend/SensitiveParameter.php',
 				'sensitiveparametervalue' => 'stubs/Zend/SensitiveParameterValue.php',
+				'sqlite3exception' => 'stubs/ext/sqlite3/SQLite3Exception.php',
 			]);
 
 			$functions = \array_merge($functions, [
 				'curl_upkeep' => 'stubs/ext/curl/curl_upkeep.php',
+				'dom\\import_simplexml' => 'stubs/ext/dom/DOM/import_simplexml.php',
 				'getrandmax' => 'stubs/ext/random/getrandmax.php',
-				'imap_is_open' => 'stubs/ext/imap/imap_is_open.php',
 				'ini_parse_quantity' => 'stubs/ext/standard/ini_parse_quantity.php',
+				'json_validate' => 'stubs/ext/json/json_validate.php',
 				'lcg_value' => 'stubs/ext/random/lcg_value.php',
+				'ldap_connect_wallet' => 'stubs/ext/ldap/ldap_connect_wallet.php',
+				'ldap_exop_sync' => 'stubs/ext/ldap/ldap_exop_sync.php',
 				'libxml_get_external_entity_loader' => 'stubs/ext/libxml/libxml_get_external_entity_loader.php',
+				'mb_ltrim' => 'stubs/ext/mbstring/mb_ltrim.php',
+				'mb_rtrim' => 'stubs/ext/mbstring/mb_rtrim.php',
+				'mb_str_pad' => 'stubs/ext/mbstring/mb_str_pad.php',
+				'mb_trim' => 'stubs/ext/mbstring/mb_trim.php',
 				'memory_reset_peak_usage' => 'stubs/ext/standard/memory_reset_peak_usage.php',
 				'mt_getrandmax' => 'stubs/ext/random/mt_getrandmax.php',
 				'mt_rand' => 'stubs/ext/random/mt_rand.php',
 				'mt_srand' => 'stubs/ext/random/mt_srand.php',
 				'mysqli_execute_query' => 'stubs/ext/mysqli/mysqli_execute_query.php',
-				'oci_set_prefetch_lob' => 'stubs/ext/oci8/oci_set_prefetch_lob.php',
 				'odbc_connection_string_is_quoted' => 'stubs/ext/odbc/odbc_connection_string_is_quoted.php',
 				'odbc_connection_string_quote' => 'stubs/ext/odbc/odbc_connection_string_quote.php',
 				'odbc_connection_string_should_quote' => 'stubs/ext/odbc/odbc_connection_string_should_quote.php',
 				'openssl_cipher_key_length' => 'stubs/ext/openssl/openssl_cipher_key_length.php',
 				'pcntl_forkx' => 'stubs/ext/pcntl/pcntl_forkx.php',
-				'rand' => 'stubs/ext/random/rand.php',
-				'random_bytes' => 'stubs/ext/random/random_bytes.php',
-				'random_int' => 'stubs/ext/random/random_int.php',
-				'sodium_crypto_stream_xchacha20_xor_ic' => 'stubs/ext/sodium/sodium_crypto_stream_xchacha20_xor_ic.php',
-				'srand' => 'stubs/ext/random/srand.php',
-			]);
-		}
-
-		if ($phpVersionId >= 80300) {
-			$classes = \array_merge($classes, [
-				'dateerror' => 'stubs/ext/date/DateError.php',
-				'dateexception' => 'stubs/ext/date/DateException.php',
-				'dateinvalidoperationexception' => 'stubs/ext/date/DateInvalidOperationException.php',
-				'dateinvalidtimezoneexception' => 'stubs/ext/date/DateInvalidTimeZoneException.php',
-				'datemalformedintervalstringexception' => 'stubs/ext/date/DateMalformedIntervalStringException.php',
-				'datemalformedperiodstringexception' => 'stubs/ext/date/DateMalformedPeriodStringException.php',
-				'datemalformedstringexception' => 'stubs/ext/date/DateMalformedStringException.php',
-				'dateobjecterror' => 'stubs/ext/date/DateObjectError.php',
-				'daterangeerror' => 'stubs/ext/date/DateRangeError.php',
-				'override' => 'stubs/Zend/Override.php',
-				'sqlite3exception' => 'stubs/ext/sqlite3/SQLite3Exception.php',
-			]);
-
-			$functions = \array_merge($functions, [
-				'json_validate' => 'stubs/ext/json/json_validate.php',
-				'ldap_connect_wallet' => 'stubs/ext/ldap/ldap_connect_wallet.php',
-				'ldap_exop_sync' => 'stubs/ext/ldap/ldap_exop_sync.php',
-				'mb_str_pad' => 'stubs/ext/mbstring/mb_str_pad.php',
 				'pg_set_error_context_visibility' => 'stubs/ext/pgsql/pg_set_error_context_visibility.php',
 				'posix_eaccess' => 'stubs/ext/posix/posix_eaccess.php',
 				'posix_fpathconf' => 'stubs/ext/posix/posix_fpathconf.php',
 				'posix_pathconf' => 'stubs/ext/posix/posix_pathconf.php',
 				'posix_sysconf' => 'stubs/ext/posix/posix_sysconf.php',
+				'rand' => 'stubs/ext/random/rand.php',
 				'random\\intervalboundary' => 'stubs/ext/random/Random/IntervalBoundary.php',
+				'random_bytes' => 'stubs/ext/random/random_bytes.php',
+				'random_int' => 'stubs/ext/random/random_int.php',
+				'request_parse_body' => 'stubs/ext/standard/request_parse_body.php',
 				'socket_atmark' => 'stubs/ext/sockets/socket_atmark.php',
+				'sodium_crypto_aead_aegis128l_decrypt' => 'stubs/ext/sodium/sodium_crypto_aead_aegis128l_decrypt.php',
+				'sodium_crypto_aead_aegis128l_encrypt' => 'stubs/ext/sodium/sodium_crypto_aead_aegis128l_encrypt.php',
+				'sodium_crypto_aead_aegis128l_keygen' => 'stubs/ext/sodium/sodium_crypto_aead_aegis128l_keygen.php',
+				'sodium_crypto_aead_aegis256_decrypt' => 'stubs/ext/sodium/sodium_crypto_aead_aegis256_decrypt.php',
+				'sodium_crypto_aead_aegis256_encrypt' => 'stubs/ext/sodium/sodium_crypto_aead_aegis256_encrypt.php',
+				'sodium_crypto_aead_aegis256_keygen' => 'stubs/ext/sodium/sodium_crypto_aead_aegis256_keygen.php',
+				'sodium_crypto_stream_xchacha20_xor_ic' => 'stubs/ext/sodium/sodium_crypto_stream_xchacha20_xor_ic.php',
+				'srand' => 'stubs/ext/random/srand.php',
 				'str_decrement' => 'stubs/ext/standard/str_decrement.php',
 				'str_increment' => 'stubs/ext/standard/str_increment.php',
 				'stream_context_set_options' => 'stubs/ext/standard/stream_context_set_options.php',
+			]);
+		}
+
+		if ($phpVersionId >= 80300) {
+			$classes = \array_merge($classes, [
+
+			]);
+
+			$functions = \array_merge($functions, [
+				'imap_is_open' => 'stubs/ext/imap/imap_is_open.php',
+				'oci_set_prefetch_lob' => 'stubs/ext/oci8/oci_set_prefetch_lob.php',
 			]);
 		}
 
