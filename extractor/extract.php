@@ -23,7 +23,8 @@ use Symfony\Component\Finder\Finder;
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-$parser = (new ParserFactory)->create(ParserFactory::ONLY_PHP7);
+$parserFactory = new ParserFactory();
+$parser = $parserFactory->createForHostVersion();
 
 $command = new class(
 	$parser,
