@@ -19,6 +19,6 @@ jobs:
         uses: actions/checkout@v4
 
       - name: "Create release"
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         with:
           token: ${{ secrets.PHPSTAN_BOT_TOKEN }}
