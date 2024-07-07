@@ -59,8 +59,9 @@ class PharData extends \RecursiveDirectoryIterator implements \Countable, \Array
     {
     }
     /**
-     * @return bool
+     * @tentative-return-type
      * @implementation-alias Phar::decompressFiles
+     * @return bool
      */
     public function decompressFiles()
     {
@@ -68,7 +69,6 @@ class PharData extends \RecursiveDirectoryIterator implements \Countable, \Array
     /**
      * @tentative-return-type
      * @implementation-alias Phar::compress
-     * @no-verify
      * @return (PharData | null)
      */
     public function compress(int $compression, ?string $extension = null)
@@ -77,7 +77,6 @@ class PharData extends \RecursiveDirectoryIterator implements \Countable, \Array
     /**
      * @tentative-return-type
      * @implementation-alias Phar::decompress
-     * @no-verify
      * @return (PharData | null)
      */
     public function decompress(?string $extension = null)
@@ -100,8 +99,9 @@ class PharData extends \RecursiveDirectoryIterator implements \Countable, \Array
     {
     }
     /**
-     * @return bool
+     * @tentative-return-type
      * @implementation-alias Phar::copy
+     * @return bool
      */
     public function copy(string $from, string $to)
     {
@@ -115,15 +115,17 @@ class PharData extends \RecursiveDirectoryIterator implements \Countable, \Array
     {
     }
     /**
-     * @return bool
+     * @tentative-return-type
      * @implementation-alias Phar::delete
+     * @return bool
      */
     public function delete(string $localName)
     {
     }
     /**
-     * @return bool
+     * @tentative-return-type
      * @implementation-alias Phar::delMetadata
+     * @return bool
      */
     public function delMetadata()
     {
@@ -306,7 +308,16 @@ class PharData extends \RecursiveDirectoryIterator implements \Countable, \Array
      * @return bool
      * @implementation-alias Phar::setStub
      */
+    #[\Until('8.4')]
     public function setStub($stub, int $length = UNKNOWN)
+    {
+    }
+    /**
+     * @param resource|string $stub
+     * @implementation-alias Phar::setStub
+     */
+    #[\Since('8.4')]
+    public function setStub($stub, int $length = UNKNOWN): true
     {
     }
     /**
@@ -378,7 +389,13 @@ class PharData extends \RecursiveDirectoryIterator implements \Countable, \Array
     {
     }
     /** @implementation-alias Phar::unlinkArchive */
+    #[\Until('8.4')]
     final public static function unlinkArchive(string $filename): bool
+    {
+    }
+    /** @implementation-alias Phar::unlinkArchive */
+    #[\Since('8.4')]
+    final public static function unlinkArchive(string $filename): true
     {
     }
     /** @implementation-alias Phar::webPhar */

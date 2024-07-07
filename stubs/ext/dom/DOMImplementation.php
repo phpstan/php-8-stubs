@@ -20,7 +20,10 @@ class DOMImplementation
     public function createDocumentType(string $qualifiedName, string $publicId = "", string $systemId = "")
     {
     }
-    /** @return DOMDocument|false */
+    /**
+     * @tentative-return-type
+     * @return (DOMDocument | false)
+     */
     public function createDocument(?string $namespace = null, string $qualifiedName = "", ?DOMDocumentType $doctype = null)
     {
     }

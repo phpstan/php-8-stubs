@@ -45,6 +45,11 @@ class DateTime implements \DateTimeInterface
     public static function createFromFormat(string $format, string $datetime, ?DateTimeZone $timezone = null)
     {
     }
+    /** @tentative-return-type */
+    #[\Since('8.4')]
+    public static function createFromTimestamp(int|float $timestamp): static
+    {
+    }
     /**
      * @return array|false
      * @alias date_get_last_errors
@@ -106,6 +111,10 @@ class DateTime implements \DateTimeInterface
     public function getOffset()
     {
     }
+    #[\Since('8.4')]
+    public function getMicrosecond(): int
+    {
+    }
     /**
      * @tentative-return-type
      * @alias date_time_set
@@ -136,6 +145,10 @@ class DateTime implements \DateTimeInterface
      * @return DateTime
      */
     public function setTimestamp(int $timestamp)
+    {
+    }
+    #[\Since('8.4')]
+    public function setMicrosecond(int $microsecond): static
     {
     }
     /**

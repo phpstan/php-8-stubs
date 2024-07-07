@@ -49,7 +49,10 @@ class SplFixedArray implements \IteratorAggregate, \ArrayAccess, \Countable
     public function getSize()
     {
     }
-    /** @return bool */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function setSize(int $size)
     {
     }

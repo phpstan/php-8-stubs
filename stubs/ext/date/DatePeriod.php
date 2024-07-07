@@ -69,11 +69,19 @@ class DatePeriod implements \IteratorAggregate
      * @cvalue PHP_DATE_PERIOD_EXCLUDE_START_DATE
      */
     #[\Since('8.2')]
+    #[\Until('8.4')]
     public const EXCLUDE_START_DATE = UNKNOWN;
+    /** @cvalue PHP_DATE_PERIOD_EXCLUDE_START_DATE */
+    #[\Since('8.4')]
+    public const int EXCLUDE_START_DATE = UNKNOWN;
     /**
      * @var int
      * @cvalue PHP_DATE_PERIOD_INCLUDE_END_DATE
      */
     #[\Since('8.2')]
+    #[\Until('8.4')]
     public const INCLUDE_END_DATE = UNKNOWN;
+    /** @cvalue PHP_DATE_PERIOD_INCLUDE_END_DATE */
+    #[\Since('8.4')]
+    public const int INCLUDE_END_DATE = UNKNOWN;
 }

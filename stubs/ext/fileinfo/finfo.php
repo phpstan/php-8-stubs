@@ -26,8 +26,9 @@ class finfo
     {
     }
     /**
-     * @return bool
      * @alias finfo_set_flags
+     * @tentative-return-type
+     * @return bool
      */
     public function set_flags(int $flags)
     {

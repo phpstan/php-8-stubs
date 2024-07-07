@@ -4,7 +4,7 @@
 class XSLTProcessor
 {
     /**
-     * @param (DOMDocument | SimpleXMLElement) $stylesheet
+     * @param (DOMDocument | Dom\Document | SimpleXMLElement) $stylesheet
      * @tentative-return-type
      * @return bool
      */
@@ -12,7 +12,7 @@ class XSLTProcessor
     {
     }
     /**
-     * @param (DOMDocument | SimpleXMLElement) $document
+     * @param (DOMDocument | Dom\Document | SimpleXMLElement) $document
      * @tentative-return-type
      * @return (DOMDocument | false)
      */
@@ -20,7 +20,7 @@ class XSLTProcessor
     {
     }
     /**
-     * @param (DOMDocument | SimpleXMLElement) $document
+     * @param (DOMDocument | Dom\Document | SimpleXMLElement) $document
      * @tentative-return-type
      * @return int
      */
@@ -28,7 +28,7 @@ class XSLTProcessor
     {
     }
     /**
-     * @param (DOMDocument | SimpleXMLElement) $document
+     * @param (DOMDocument | Dom\Document | SimpleXMLElement) $document
      * @tentative-return-type
      * @return (string | false | null)
      */
@@ -70,7 +70,14 @@ class XSLTProcessor
     public function registerPHPFunctions(array|string|null $functions = null)
     {
     }
-    /** @return bool */
+    #[\Since('8.4')]
+    public function registerPHPFunctionNS(string $namespaceURI, string $name, callable $callable): void
+    {
+    }
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function setProfiling(?string $filename)
     {
     }

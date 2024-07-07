@@ -100,6 +100,10 @@ class SplObjectStorage implements \Countable, \Iterator, \Serializable, \ArrayAc
     public function next()
     {
     }
+    #[\Since('8.4')]
+    public function seek(int $offset): void
+    {
+    }
     /**
      * @tentative-return-type
      * @return void
@@ -136,7 +140,6 @@ class SplObjectStorage implements \Countable, \Iterator, \Serializable, \ArrayAc
      * @param object $object
      * @tentative-return-type
      * @implementation-alias SplObjectStorage::attach
-     * @no-verify Cannot specify arg type because ArrayAccess does not
      * @return void
      */
     public function offsetSet($object, mixed $info = null)
@@ -146,7 +149,6 @@ class SplObjectStorage implements \Countable, \Iterator, \Serializable, \ArrayAc
      * @param object $object
      * @tentative-return-type
      * @implementation-alias SplObjectStorage::detach
-     * @no-verify Cannot specify arg type because ArrayAccess does not
      * @return void
      */
     public function offsetUnset($object)

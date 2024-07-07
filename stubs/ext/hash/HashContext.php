@@ -12,4 +12,8 @@ final class HashContext
     public function __unserialize(array $data): void
     {
     }
+    #[\Since('8.4')]
+    public function __debugInfo(): array
+    {
+    }
 }

@@ -40,7 +40,10 @@ class SQLite3Result
     public function reset()
     {
     }
-    /** @return bool */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function finalize()
     {
     }

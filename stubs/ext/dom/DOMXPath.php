@@ -34,4 +34,12 @@ class DOMXPath
     public function registerPhpFunctions(string|array|null $restrict = null)
     {
     }
+    #[\Since('8.4')]
+    public function registerPhpFunctionNS(string $namespaceURI, string $name, callable $callable): void
+    {
+    }
+    #[\Since('8.4')]
+    public static function quote(string $str): string
+    {
+    }
 }

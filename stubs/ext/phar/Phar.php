@@ -2,6 +2,118 @@
 
 class Phar extends \RecursiveDirectoryIterator implements \Countable, \ArrayAccess
 {
+    /**
+     * @var int
+     * @cvalue PHAR_ENT_COMPRESSED_BZ2
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    const BZ2 = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue PHAR_ENT_COMPRESSED_GZ
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    const GZ = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue PHAR_ENT_COMPRESSED_NONE
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    const NONE = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue PHAR_FORMAT_PHAR
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    const PHAR = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue PHAR_FORMAT_TAR
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    const TAR = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue PHAR_FORMAT_ZIP
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    const ZIP = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue PHAR_ENT_COMPRESSION_MASK
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    const COMPRESSED = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue PHAR_MIME_PHP
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    const PHP = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue PHAR_MIME_PHPS
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    const PHPS = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue PHAR_SIG_MD5
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    const MD5 = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue PHAR_SIG_OPENSSL
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    const OPENSSL = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue PHAR_SIG_OPENSSL_SHA256
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    const OPENSSL_SHA256 = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue PHAR_SIG_OPENSSL_SHA512
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    const OPENSSL_SHA512 = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue PHAR_SIG_SHA1
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    const SHA1 = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue PHAR_SIG_SHA256
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    const SHA256 = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue PHAR_SIG_SHA512
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    const SHA512 = UNKNOWN;
     public function __construct(string $filename, int $flags = FilesystemIterator::SKIP_DOTS | FilesystemIterator::UNIX_PATHS, ?string $alias = null)
     {
     }
@@ -50,7 +162,10 @@ class Phar extends \RecursiveDirectoryIterator implements \Countable, \ArrayAcce
     public function compressFiles(int $compression)
     {
     }
-    /** @return bool */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function decompressFiles()
     {
     }
@@ -82,7 +197,10 @@ class Phar extends \RecursiveDirectoryIterator implements \Countable, \ArrayAcce
     public function convertToData(?int $format = null, ?int $compression = null, ?string $extension = null)
     {
     }
-    /** @return bool */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function copy(string $from, string $to)
     {
     }
@@ -93,11 +211,17 @@ class Phar extends \RecursiveDirectoryIterator implements \Countable, \ArrayAcce
     public function count(int $mode = COUNT_NORMAL)
     {
     }
-    /** @return bool */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function delete(string $localName)
     {
     }
-    /** @return bool */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function delMetadata()
     {
     }
@@ -254,7 +378,8 @@ class Phar extends \RecursiveDirectoryIterator implements \Countable, \ArrayAcce
     {
     }
     /**
-     * @param resource|string $stub
+     * @param (resource | string) $stub
+     * @tentative-return-type
      * @return bool
      */
     public function setStub($stub, int $length = UNKNOWN)
@@ -313,199 +438,92 @@ class Phar extends \RecursiveDirectoryIterator implements \Countable, \ArrayAcce
     final public static function mungServer(array $variables): void
     {
     }
+    #[\Until('8.4')]
     final public static function unlinkArchive(string $filename): bool
+    {
+    }
+    #[\Since('8.4')]
+    final public static function unlinkArchive(string $filename): true
     {
     }
     final public static function webPhar(?string $alias = null, ?string $index = null, ?string $fileNotFoundScript = null, array $mimeTypes = [], ?callable $rewrite = null): void
     {
     }
     /**
-     * @var int
-     * @cvalue PHAR_ENT_COMPRESSED_BZ2
-     */
-    #[\Since('8.2')]
-    #[\Until('8.3')]
-    const BZ2 = UNKNOWN;
-    /**
      * @cvalue PHAR_ENT_COMPRESSED_BZ2
      */
     #[\Since('8.3')]
     const int BZ2 = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue PHAR_ENT_COMPRESSED_GZ
-     */
-    #[\Since('8.2')]
-    #[\Until('8.3')]
-    const GZ = UNKNOWN;
     /**
      * @cvalue PHAR_ENT_COMPRESSED_GZ
      */
     #[\Since('8.3')]
     const int GZ = UNKNOWN;
     /**
-     * @var int
-     * @cvalue PHAR_ENT_COMPRESSED_NONE
-     */
-    #[\Since('8.2')]
-    #[\Until('8.3')]
-    const NONE = UNKNOWN;
-    /**
      * @cvalue PHAR_ENT_COMPRESSED_NONE
      */
     #[\Since('8.3')]
     const int NONE = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue PHAR_FORMAT_PHAR
-     */
-    #[\Since('8.2')]
-    #[\Until('8.3')]
-    const PHAR = UNKNOWN;
     /**
      * @cvalue PHAR_FORMAT_PHAR
      */
     #[\Since('8.3')]
     const int PHAR = UNKNOWN;
     /**
-     * @var int
-     * @cvalue PHAR_FORMAT_TAR
-     */
-    #[\Since('8.2')]
-    #[\Until('8.3')]
-    const TAR = UNKNOWN;
-    /**
      * @cvalue PHAR_FORMAT_TAR
      */
     #[\Since('8.3')]
     const int TAR = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue PHAR_FORMAT_ZIP
-     */
-    #[\Since('8.2')]
-    #[\Until('8.3')]
-    const ZIP = UNKNOWN;
     /**
      * @cvalue PHAR_FORMAT_ZIP
      */
     #[\Since('8.3')]
     const int ZIP = UNKNOWN;
     /**
-     * @var int
-     * @cvalue PHAR_ENT_COMPRESSION_MASK
-     */
-    #[\Since('8.2')]
-    #[\Until('8.3')]
-    const COMPRESSED = UNKNOWN;
-    /**
      * @cvalue PHAR_ENT_COMPRESSION_MASK
      */
     #[\Since('8.3')]
     const int COMPRESSED = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue PHAR_MIME_PHP
-     */
-    #[\Since('8.2')]
-    #[\Until('8.3')]
-    const PHP = UNKNOWN;
     /**
      * @cvalue PHAR_MIME_PHP
      */
     #[\Since('8.3')]
     const int PHP = UNKNOWN;
     /**
-     * @var int
-     * @cvalue PHAR_MIME_PHPS
-     */
-    #[\Since('8.2')]
-    #[\Until('8.3')]
-    const PHPS = UNKNOWN;
-    /**
      * @cvalue PHAR_MIME_PHPS
      */
     #[\Since('8.3')]
     const int PHPS = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue PHAR_SIG_MD5
-     */
-    #[\Since('8.2')]
-    #[\Until('8.3')]
-    const MD5 = UNKNOWN;
     /**
      * @cvalue PHAR_SIG_MD5
      */
     #[\Since('8.3')]
     const int MD5 = UNKNOWN;
     /**
-     * @var int
-     * @cvalue PHAR_SIG_OPENSSL
-     */
-    #[\Since('8.2')]
-    #[\Until('8.3')]
-    const OPENSSL = UNKNOWN;
-    /**
      * @cvalue PHAR_SIG_OPENSSL
      */
     #[\Since('8.3')]
     const int OPENSSL = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue PHAR_SIG_OPENSSL_SHA256
-     */
-    #[\Since('8.2')]
-    #[\Until('8.3')]
-    const OPENSSL_SHA256 = UNKNOWN;
     /**
      * @cvalue PHAR_SIG_OPENSSL_SHA256
      */
     #[\Since('8.3')]
     const int OPENSSL_SHA256 = UNKNOWN;
     /**
-     * @var int
-     * @cvalue PHAR_SIG_OPENSSL_SHA512
-     */
-    #[\Since('8.2')]
-    #[\Until('8.3')]
-    const OPENSSL_SHA512 = UNKNOWN;
-    /**
      * @cvalue PHAR_SIG_OPENSSL_SHA512
      */
     #[\Since('8.3')]
     const int OPENSSL_SHA512 = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue PHAR_SIG_SHA1
-     */
-    #[\Since('8.2')]
-    #[\Until('8.3')]
-    const SHA1 = UNKNOWN;
     /**
      * @cvalue PHAR_SIG_SHA1
      */
     #[\Since('8.3')]
     const int SHA1 = UNKNOWN;
     /**
-     * @var int
-     * @cvalue PHAR_SIG_SHA256
-     */
-    #[\Since('8.2')]
-    #[\Until('8.3')]
-    const SHA256 = UNKNOWN;
-    /**
      * @cvalue PHAR_SIG_SHA256
      */
     #[\Since('8.3')]
     const int SHA256 = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue PHAR_SIG_SHA512
-     */
-    #[\Since('8.2')]
-    #[\Until('8.3')]
-    const SHA512 = UNKNOWN;
     /**
      * @cvalue PHAR_SIG_SHA512
      */

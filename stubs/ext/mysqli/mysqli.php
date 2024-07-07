@@ -38,8 +38,9 @@ class mysqli
     {
     }
     /**
-     * @return bool
+     * @tentative-return-type
      * @alias mysqli_close
+     * @return bool
      */
     public function close()
     {
@@ -70,9 +71,10 @@ class mysqli
     {
     }
     /**
-     * @return bool
+     * @tentative-return-type
      * @alias mysqli_debug
      * @no-verify Should really be a static method
+     * @return bool
      */
     public function debug(string $options)
     {
@@ -299,8 +301,9 @@ class mysqli
     {
     }
     /**
-     * @return bool
+     * @tentative-return-type
      * @alias mysqli_ssl_set
+     * @return bool
      */
     public function ssl_set(?string $key, ?string $certificate, ?string $ca_certificate, ?string $ca_path, ?string $cipher_algos)
     {

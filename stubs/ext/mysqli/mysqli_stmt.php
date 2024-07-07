@@ -47,8 +47,9 @@ class mysqli_stmt
     {
     }
     /**
-     * @return bool
+     * @tentative-return-type
      * @alias mysqli_stmt_close
+     * @return bool
      */
     public function close()
     {

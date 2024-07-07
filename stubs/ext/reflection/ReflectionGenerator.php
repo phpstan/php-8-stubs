@@ -47,4 +47,8 @@ final class ReflectionGenerator
     public function getExecutingGenerator()
     {
     }
+    #[\Since('8.4')]
+    public function isClosed(): bool
+    {
+    }
 }

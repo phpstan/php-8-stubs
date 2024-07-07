@@ -15,12 +15,16 @@ class ResourceBundle implements \IteratorAggregate, \Countable
     {
     }
     /**
-     * @param (string | int) $index
      * @tentative-return-type
-     * @alias resourcebundle_get
      * @return mixed
      */
+    #[\Until('8.4')]
     public function get($index, bool $fallback = true)
+    {
+    }
+    /** @tentative-return-type */
+    #[\Since('8.4')]
+    public function get(string|int $index, bool $fallback = true)
     {
     }
     /**

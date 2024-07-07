@@ -27,4 +27,8 @@ final class Generator implements \Iterator
     public function getReturn(): mixed
     {
     }
+    #[\Since('8.4')]
+    public function __debugInfo(): array
+    {
+    }
 }

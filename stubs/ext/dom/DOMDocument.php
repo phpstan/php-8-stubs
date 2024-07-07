@@ -63,6 +63,7 @@ class DOMDocument extends \DOMNode implements \DOMParentNode
     }
     /**
      * @tentative-return-type
+     * @implementation-alias DOMElement::getElementsByTagName
      * @return DOMNodeList
      */
     public function getElementsByTagName(string $qualifiedName)
@@ -70,6 +71,7 @@ class DOMDocument extends \DOMNode implements \DOMParentNode
     }
     /**
      * @tentative-return-type
+     * @implementation-alias DOMElement::getElementsByTagNameNS
      * @return DOMNodeList
      */
     public function getElementsByTagNameNS(?string $namespace, string $localName)

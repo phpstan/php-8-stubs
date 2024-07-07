@@ -12,8 +12,9 @@ class Locale
     {
     }
     /**
-     * @return bool
+     * @tentative-return-type
      * @alias locale_set_default
+     * @return bool
      */
     public static function setDefault(string $locale)
     {
@@ -150,56 +151,95 @@ class Locale
      * @cvalue ULOC_ACTUAL_LOCALE
      */
     #[\Since('8.2')]
+    #[\Until('8.4')]
     public const ACTUAL_LOCALE = UNKNOWN;
+    /** @cvalue ULOC_ACTUAL_LOCALE */
+    #[\Since('8.4')]
+    public const int ACTUAL_LOCALE = UNKNOWN;
     /**
      * @var int
      * @cvalue ULOC_VALID_LOCALE
      */
     #[\Since('8.2')]
+    #[\Until('8.4')]
     public const VALID_LOCALE = UNKNOWN;
+    /** @cvalue ULOC_VALID_LOCALE */
+    #[\Since('8.4')]
+    public const int VALID_LOCALE = UNKNOWN;
     /** @var null */
     #[\Since('8.2')]
+    #[\Until('8.4')]
     public const DEFAULT_LOCALE = null;
+    #[\Since('8.4')]
+    public const null DEFAULT_LOCALE = null;
     /**
      * @var string
      * @cvalue LOC_LANG_TAG
      */
     #[\Since('8.2')]
+    #[\Until('8.4')]
     public const LANG_TAG = UNKNOWN;
+    /** @cvalue LOC_LANG_TAG */
+    #[\Since('8.4')]
+    public const string LANG_TAG = UNKNOWN;
     /**
      * @var string
      * @cvalue LOC_EXTLANG_TAG
      */
     #[\Since('8.2')]
+    #[\Until('8.4')]
     public const EXTLANG_TAG = UNKNOWN;
+    /** @cvalue LOC_EXTLANG_TAG */
+    #[\Since('8.4')]
+    public const string EXTLANG_TAG = UNKNOWN;
     /**
      * @var string
      * @cvalue LOC_SCRIPT_TAG
      */
     #[\Since('8.2')]
+    #[\Until('8.4')]
     public const SCRIPT_TAG = UNKNOWN;
+    /** @cvalue LOC_SCRIPT_TAG */
+    #[\Since('8.4')]
+    public const string SCRIPT_TAG = UNKNOWN;
     /**
      * @var string
      * @cvalue LOC_REGION_TAG
      */
     #[\Since('8.2')]
+    #[\Until('8.4')]
     public const REGION_TAG = UNKNOWN;
+    /** @cvalue LOC_REGION_TAG */
+    #[\Since('8.4')]
+    public const string REGION_TAG = UNKNOWN;
     /**
      * @var string
      * @cvalue LOC_VARIANT_TAG
      */
     #[\Since('8.2')]
+    #[\Until('8.4')]
     public const VARIANT_TAG = UNKNOWN;
+    /** @cvalue LOC_VARIANT_TAG */
+    #[\Since('8.4')]
+    public const string VARIANT_TAG = UNKNOWN;
     /**
      * @var string
      * @cvalue LOC_GRANDFATHERED_LANG_TAG
      */
     #[\Since('8.2')]
+    #[\Until('8.4')]
     public const GRANDFATHERED_LANG_TAG = UNKNOWN;
+    /** @cvalue LOC_GRANDFATHERED_LANG_TAG */
+    #[\Since('8.4')]
+    public const string GRANDFATHERED_LANG_TAG = UNKNOWN;
     /**
      * @var string
      * @cvalue LOC_PRIVATE_TAG
      */
     #[\Since('8.2')]
+    #[\Until('8.4')]
     public const PRIVATE_TAG = UNKNOWN;
+    /** @cvalue LOC_PRIVATE_TAG */
+    #[\Since('8.4')]
+    public const string PRIVATE_TAG = UNKNOWN;
 }

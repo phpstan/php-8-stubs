@@ -15,15 +15,24 @@ class PharFileInfo extends \SplFileInfo
     public function chmod(int $perms)
     {
     }
-    /** @return bool */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function compress(int $compression)
     {
     }
-    /** @return bool */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function decompress()
     {
     }
-    /** @return bool */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function delMetadata()
     {
     }

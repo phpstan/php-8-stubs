@@ -129,7 +129,10 @@ class PDOStatement implements \IteratorAggregate
     public function setAttribute(int $attribute, mixed $value)
     {
     }
-    /** @return bool */
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
     public function setFetchMode(int $mode, mixed ...$args)
     {
     }

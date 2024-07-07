@@ -2,14 +2,6 @@
 
 class DOMNode
 {
-    #[\Since('8.1')]
-    public function __sleep(): array
-    {
-    }
-    #[\Since('8.1')]
-    public function __wakeup(): void
-    {
-    }
     /** @return DOMNode|false */
     public function appendChild(DOMNode $node)
     {
@@ -126,4 +118,28 @@ class DOMNode
     public function getRootNode(?array $options = null): DOMNode
     {
     }
+    #[\Since('8.4')]
+    public function compareDocumentPosition(DOMNode $other): int
+    {
+    }
+    #[\Since('8.1')]
+    public function __sleep(): array
+    {
+    }
+    #[\Since('8.1')]
+    public function __wakeup(): void
+    {
+    }
+    #[\Since('8.4')]
+    public const int DOCUMENT_POSITION_DISCONNECTED = 0x1;
+    #[\Since('8.4')]
+    public const int DOCUMENT_POSITION_PRECEDING = 0x2;
+    #[\Since('8.4')]
+    public const int DOCUMENT_POSITION_FOLLOWING = 0x4;
+    #[\Since('8.4')]
+    public const int DOCUMENT_POSITION_CONTAINS = 0x8;
+    #[\Since('8.4')]
+    public const int DOCUMENT_POSITION_CONTAINED_BY = 0x10;
+    #[\Since('8.4')]
+    public const int DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC = 0x20;
 }

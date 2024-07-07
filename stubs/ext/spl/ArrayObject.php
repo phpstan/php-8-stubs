@@ -179,11 +179,19 @@ class ArrayObject implements \IteratorAggregate, \ArrayAccess, \Serializable, \C
      * @cvalue SPL_ARRAY_STD_PROP_LIST
      */
     #[\Since('8.2')]
+    #[\Until('8.4')]
     const STD_PROP_LIST = UNKNOWN;
+    /** @cvalue SPL_ARRAY_STD_PROP_LIST */
+    #[\Since('8.4')]
+    public const int STD_PROP_LIST = UNKNOWN;
     /**
      * @var int
      * @cvalue SPL_ARRAY_ARRAY_AS_PROPS
      */
     #[\Since('8.2')]
+    #[\Until('8.4')]
     const ARRAY_AS_PROPS = UNKNOWN;
+    /** @cvalue SPL_ARRAY_ARRAY_AS_PROPS */
+    #[\Since('8.4')]
+    public const int ARRAY_AS_PROPS = UNKNOWN;
 }

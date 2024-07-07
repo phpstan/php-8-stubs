@@ -46,5 +46,9 @@ class ReflectionFunction extends \ReflectionFunctionAbstract
      * @cvalue ZEND_ACC_DEPRECATED
      */
     #[\Since('8.2')]
+    #[\Until('8.4')]
     public const IS_DEPRECATED = UNKNOWN;
+    /** @cvalue ZEND_ACC_DEPRECATED */
+    #[\Since('8.4')]
+    public const int IS_DEPRECATED = UNKNOWN;
 }

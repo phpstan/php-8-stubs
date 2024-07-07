@@ -11,6 +11,10 @@ class XMLWriter
     public function openUri(string $uri)
     {
     }
+    #[\Since('8.4')]
+    public static function toUri(string $uri): static
+    {
+    }
     /**
      * @tentative-return-type
      * @alias xmlwriter_open_memory
@@ -18,6 +22,15 @@ class XMLWriter
      * @return bool
      */
     public function openMemory()
+    {
+    }
+    #[\Since('8.4')]
+    public static function toMemory(): static
+    {
+    }
+    /** @param resource $stream */
+    #[\Since('8.4')]
+    public static function toStream($stream): static
     {
     }
     /**

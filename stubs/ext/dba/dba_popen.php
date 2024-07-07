@@ -15,6 +15,12 @@ function dba_popen($path, $mode, $handler = UNKNOWN, ...$handler_params)
 #endif
 /** @return resource|false */
 #[\Since('8.2')]
+#[\Until('8.4')]
 function dba_popen(string $path, string $mode, ?string $handler = null, int $permission = 0644, int $map_size = 0, ?int $flags = null)
+{
+}
+#endif
+#[\Since('8.4')]
+function dba_popen(string $path, string $mode, ?string $handler = null, int $permission = 0644, int $map_size = 0, ?int $flags = null): \Dba\Connection|false
 {
 }

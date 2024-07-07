@@ -149,29 +149,49 @@ class ReflectionProperty implements \Reflector
      * @cvalue ZEND_ACC_STATIC
      */
     #[\Since('8.2')]
+    #[\Until('8.4')]
     public const IS_STATIC = UNKNOWN;
+    /** @cvalue ZEND_ACC_STATIC */
+    #[\Since('8.4')]
+    public const int IS_STATIC = UNKNOWN;
     /**
      * @var int
      * @cvalue ZEND_ACC_READONLY
      */
     #[\Since('8.2')]
+    #[\Until('8.4')]
     public const IS_READONLY = UNKNOWN;
+    /** @cvalue ZEND_ACC_READONLY */
+    #[\Since('8.4')]
+    public const int IS_READONLY = UNKNOWN;
     /**
      * @var int
      * @cvalue ZEND_ACC_PUBLIC
      */
     #[\Since('8.2')]
+    #[\Until('8.4')]
     public const IS_PUBLIC = UNKNOWN;
+    /** @cvalue ZEND_ACC_PUBLIC */
+    #[\Since('8.4')]
+    public const int IS_PUBLIC = UNKNOWN;
     /**
      * @var int
      * @cvalue ZEND_ACC_PROTECTED
      */
     #[\Since('8.2')]
+    #[\Until('8.4')]
     public const IS_PROTECTED = UNKNOWN;
+    /** @cvalue ZEND_ACC_PROTECTED */
+    #[\Since('8.4')]
+    public const int IS_PROTECTED = UNKNOWN;
     /**
      * @var int
      * @cvalue ZEND_ACC_PRIVATE
      */
     #[\Since('8.2')]
+    #[\Until('8.4')]
     public const IS_PRIVATE = UNKNOWN;
+    /** @cvalue ZEND_ACC_PRIVATE */
+    #[\Since('8.4')]
+    public const int IS_PRIVATE = UNKNOWN;
 }
