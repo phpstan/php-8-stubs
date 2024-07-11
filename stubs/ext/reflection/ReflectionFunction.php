@@ -14,7 +14,6 @@ class ReflectionFunction extends \ReflectionFunctionAbstract
     }
     /**
      * @tentative-return-type
-     * @deprecated ReflectionFunction can no longer be constructed for disabled functions
      * @return bool
      */
     public function isDisabled()

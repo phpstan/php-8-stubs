@@ -910,9 +910,9 @@ class NumberFormatter
     #[\Until('8.4')]
     public const TYPE_CURRENCY = UNKNOWN;
     /**
-     * @deprecated
      * @cvalue FORMAT_TYPE_CURRENCY
      */
+    #[\Deprecated(since: '8.3')]
     #[\Since('8.4')]
     public const int TYPE_CURRENCY = UNKNOWN;
 }

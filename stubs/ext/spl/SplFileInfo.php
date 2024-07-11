@@ -208,7 +208,6 @@ class SplFileInfo
     {
     }
     /**
-     * @deprecated
      * @tentative-return-type
      * @return void
      */

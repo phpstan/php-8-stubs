@@ -1205,6 +1205,15 @@ class ZipArchive
      * @deprecated
      */
     #[\Since('8.3')]
+    #[\Until('8.4')]
+    public const int FL_RECOMPRESS = UNKNOWN;
+    /* deprecated in libzip 1.10.0 */
+    #ifdef ZIP_FL_RECOMPRESS
+    /**
+     * @cvalue ZIP_FL_RECOMPRESS
+     */
+    #[\Deprecated(since: '8.3')]
+    #[\Since('8.4')]
     public const int FL_RECOMPRESS = UNKNOWN;
     #endif
     /**

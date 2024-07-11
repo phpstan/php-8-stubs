@@ -97,7 +97,6 @@ class mysqli
     /**
      * @tentative-return-type
      * @alias mysqli_get_client_info
-     * @deprecated 8.1.0
      * @return string
      */
     public function get_client_info()

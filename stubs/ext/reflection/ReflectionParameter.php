@@ -56,7 +56,6 @@ class ReflectionParameter implements \Reflector
     }
     /**
      * @tentative-return-type
-     * @deprecated Use ReflectionParameter::getType() instead
      * @return (ReflectionClass | null)
      */
     public function getClass()
@@ -78,7 +77,6 @@ class ReflectionParameter implements \Reflector
     }
     /**
      * @tentative-return-type
-     * @deprecated Use ReflectionParameter::getType() instead
      * @return bool
      */
     public function isArray()
@@ -86,7 +84,6 @@ class ReflectionParameter implements \Reflector
     }
     /**
      * @tentative-return-type
-     * @deprecated Use ReflectionParameter::getType() instead
      * @return bool
      */
     public function isCallable()

@@ -1,7 +1,7 @@
 <?php 
 
-#endif
-#ifdef HAVE_PTHREAD_SET_QOS_CLASS_SELF_NP
+namespace Pcntl;
+
 #[\Since('8.4')]
 enum QosClass
 {
