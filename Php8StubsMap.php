@@ -2831,6 +2831,7 @@ class Php8StubsMap
 				'pg_result_memory_size' => 'stubs/ext/pgsql/pg_result_memory_size.php',
 				'pg_set_chunked_rows_size' => 'stubs/ext/pgsql/pg_set_chunked_rows_size.php',
 				'pg_socket_poll' => 'stubs/ext/pgsql/pg_socket_poll.php',
+				'propertyhooktype' => 'stubs/ext/reflection/PropertyHookType.php',
 				'request_parse_body' => 'stubs/ext/standard/request_parse_body.php',
 				'sodium_crypto_aead_aegis128l_decrypt' => 'stubs/ext/sodium/sodium_crypto_aead_aegis128l_decrypt.php',
 				'sodium_crypto_aead_aegis128l_encrypt' => 'stubs/ext/sodium/sodium_crypto_aead_aegis128l_encrypt.php',

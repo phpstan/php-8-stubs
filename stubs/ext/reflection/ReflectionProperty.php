@@ -39,6 +39,14 @@ class ReflectionProperty implements \Reflector
     public function setValue(mixed $objectOrValue, mixed $value = UNKNOWN)
     {
     }
+    #[\Since('8.4')]
+    public function getRawValue(object $object): mixed
+    {
+    }
+    #[\Since('8.4')]
+    public function setRawValue(object $object, mixed $value): void
+    {
+    }
     /**
      * @tentative-return-type
      * @return bool
@@ -85,6 +93,14 @@ class ReflectionProperty implements \Reflector
     public function isDefault()
     {
     }
+    #[\Since('8.4')]
+    public function isAbstract(): bool
+    {
+    }
+    #[\Since('8.4')]
+    public function isVirtual(): bool
+    {
+    }
     public function isPromoted(): bool
     {
     }
@@ -123,6 +139,10 @@ class ReflectionProperty implements \Reflector
     public function getType()
     {
     }
+    #[\Since('8.4')]
+    public function getSettableType(): ?ReflectionType
+    {
+    }
     /**
      * @tentative-return-type
      * @return bool
@@ -142,6 +162,15 @@ class ReflectionProperty implements \Reflector
     }
     /** @return ReflectionAttribute[] */
     public function getAttributes(?string $name = null, int $flags = 0): array
+    {
+    }
+    /** @return array<string, ReflectionMethod> */
+    #[\Since('8.4')]
+    public function getHooks(): array
+    {
+    }
+    #[\Since('8.4')]
+    public function getHook(PropertyHookType $type): ?ReflectionMethod
     {
     }
     /**
@@ -194,4 +223,7 @@ class ReflectionProperty implements \Reflector
     /** @cvalue ZEND_ACC_PRIVATE */
     #[\Since('8.4')]
     public const int IS_PRIVATE = UNKNOWN;
+    /** @cvalue ZEND_ACC_ABSTRACT */
+    #[\Since('8.4')]
+    public const int IS_ABSTRACT = UNKNOWN;
 }
