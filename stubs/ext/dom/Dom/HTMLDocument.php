@@ -28,4 +28,9 @@ final class HTMLDocument extends \Dom\Document
     public function saveHtmlFile(string $filename): int|false
     {
     }
+    #if ZEND_DEBUG
+    public function debugGetTemplateCount(): int
+    {
+    }
+    #endif
 }
