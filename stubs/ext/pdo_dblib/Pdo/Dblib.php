@@ -7,7 +7,7 @@ namespace Pdo;
  * @not-serializable
  */
 #[\Since('8.4')]
-class Dblib extends \Pdo\PDO
+class Dblib extends \PDO
 {
     /** @cvalue PDO_DBLIB_ATTR_CONNECTION_TIMEOUT */
     public const int ATTR_CONNECTION_TIMEOUT = UNKNOWN;

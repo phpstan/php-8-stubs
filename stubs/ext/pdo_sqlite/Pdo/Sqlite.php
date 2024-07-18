@@ -7,7 +7,7 @@ namespace Pdo;
  * @not-serializable
  */
 #[\Since('8.4')]
-class Sqlite extends \Pdo\PDO
+class Sqlite extends \PDO
 {
     #ifdef SQLITE_DETERMINISTIC
     /** @cvalue SQLITE_DETERMINISTIC */

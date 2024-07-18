@@ -7,7 +7,7 @@ namespace Pdo;
  * @not-serializable
  */
 #[\Since('8.4')]
-class Firebird extends \Pdo\PDO
+class Firebird extends \PDO
 {
     /** @cvalue PDO_FB_ATTR_DATE_FORMAT */
     public const int ATTR_DATE_FORMAT = UNKNOWN;
@@ -15,6 +15,8 @@ class Firebird extends \Pdo\PDO
     public const int ATTR_TIME_FORMAT = UNKNOWN;
     /** @cvalue PDO_FB_ATTR_TIMESTAMP_FORMAT */
     public const int ATTR_TIMESTAMP_FORMAT = UNKNOWN;
+    /** @cvalue PDO_FB_ATTR_API_VERSION */
+    public const int ATTR_API_VERSION = UNKNOWN;
     /** @cvalue PDO_FB_TRANSACTION_ISOLATION_LEVEL */
     public const int TRANSACTION_ISOLATION_LEVEL = UNKNOWN;
     /** @cvalue PDO_FB_READ_COMMITTED */

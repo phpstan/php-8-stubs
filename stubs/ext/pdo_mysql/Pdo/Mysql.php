@@ -7,7 +7,7 @@ namespace Pdo;
  * @not-serializable
  */
 #[\Since('8.4')]
-class Mysql extends \Pdo\PDO
+class Mysql extends \PDO
 {
     /** @cvalue PDO_MYSQL_ATTR_USE_BUFFERED_QUERY */
     public const int ATTR_USE_BUFFERED_QUERY = UNKNOWN;

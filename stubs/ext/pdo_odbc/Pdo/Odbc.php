@@ -7,7 +7,7 @@ namespace Pdo;
  * @not-serializable
  */
 #[\Since('8.4')]
-class Odbc extends \Pdo\PDO
+class Odbc extends \PDO
 {
     /** @cvalue PDO_ODBC_ATTR_USE_CURSOR_LIBRARY */
     public const int ATTR_USE_CURSOR_LIBRARY = UNKNOWN;
