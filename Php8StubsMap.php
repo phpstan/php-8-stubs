@@ -2833,6 +2833,7 @@ class Php8StubsMap
 				'pg_socket_poll' => 'stubs/ext/pgsql/pg_socket_poll.php',
 				'propertyhooktype' => 'stubs/ext/reflection/PropertyHookType.php',
 				'request_parse_body' => 'stubs/ext/standard/request_parse_body.php',
+				'roundingmode' => 'stubs/ext/standard/RoundingMode.php',
 				'sodium_crypto_aead_aegis128l_decrypt' => 'stubs/ext/sodium/sodium_crypto_aead_aegis128l_decrypt.php',
 				'sodium_crypto_aead_aegis128l_encrypt' => 'stubs/ext/sodium/sodium_crypto_aead_aegis128l_encrypt.php',
 				'sodium_crypto_aead_aegis128l_keygen' => 'stubs/ext/sodium/sodium_crypto_aead_aegis128l_keygen.php',
