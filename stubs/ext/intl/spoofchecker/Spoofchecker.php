@@ -44,6 +44,11 @@ class Spoofchecker
     public function setRestrictionLevel(int $level)
     {
     }
+    #endif
+    #[\Since('8.4')]
+    public function setAllowedChars(string $pattern, int $patternOptions = 0): void
+    {
+    }
     /**
      * @var int
      * @cvalue USPOOF_SINGLE_SCRIPT_CONFUSABLE
@@ -200,4 +205,18 @@ class Spoofchecker
     /** @cvalue USPOOF_HIDDEN_OVERLAY */
     #[\Since('8.4')]
     public const int HIDDEN_OVERLAY = UNKNOWN;
+    #endif
+    /** @cvalue USET_IGNORE_SPACE */
+    #[\Since('8.4')]
+    public const int IGNORE_SPACE = UNKNOWN;
+    /** @cvalue USET_CASE_INSENSITIVE */
+    #[\Since('8.4')]
+    public const int CASE_INSENSITIVE = UNKNOWN;
+    /** @cvalue USET_ADD_CASE_MAPPINGS */
+    #[\Since('8.4')]
+    public const int ADD_CASE_MAPPINGS = UNKNOWN;
+    #if U_ICU_VERSION_MAJOR_NUM >= 73
+    /** @cvalue USET_SIMPLE_CASE_INSENSITIVE */
+    #[\Since('8.4')]
+    public const int SIMPLE_CASE_INSENSITIVE = UNKNOWN;
 }
