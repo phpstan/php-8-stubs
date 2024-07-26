@@ -32,4 +32,12 @@ final class tidyNode
     public function getParent(): ?tidyNode
     {
     }
+    #[\Since('8.4')]
+    public function getPreviousSibling(): ?tidyNode
+    {
+    }
+    #[\Since('8.4')]
+    public function getNextSibling(): ?tidyNode
+    {
+    }
 }
