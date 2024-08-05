@@ -4,13 +4,6 @@ class DOMImplementation
 {
     /**
      * @tentative-return-type
-     * @return void
-     */
-    public function getFeature(string $feature, string $version)
-    {
-    }
-    /**
-     * @tentative-return-type
      * @return bool
      */
     public function hasFeature(string $feature, string $version)
