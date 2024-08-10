@@ -36,9 +36,6 @@ class Sqlite extends \PDO
     public function createFunction(string $function_name, callable $callback, int $num_args = -1, int $flags = 0): bool
     {
     }
-    // PDO_SQLITE_OMIT_LOAD_EXTENSION might be defined by ext/pdo_sqlite/config.m4
-    // if Sqlite3 did not have the sqlite3_load_extension function present
-    // which can depend on how SQLite was compiled: https://www.sqlite.org/compile.html
     #ifndef PDO_SQLITE_OMIT_LOAD_EXTENSION
     public function loadExtension(string $name): void
     {
