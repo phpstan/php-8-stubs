@@ -284,6 +284,9 @@ $command = new class(
 				$classes[strtolower($namespacedName)] = $pathPart;
 				$stmt = $this->filterClassPhpDocs($stmt);
 			} else {
+				if (in_array($namespacedName, ['_exit', '_die'], true)) {
+					continue;
+				}
 				if (array_key_exists(strtolower($namespacedName), $functions)) {
 					continue;
 				}
