@@ -2797,6 +2797,8 @@ class Php8StubsMap
 			]);
 
 			$functions = \array_merge($functions, [
+				'_die' => 'stubs/Zend/_die.php',
+				'_exit' => 'stubs/Zend/_exit.php',
 				'array_all' => 'stubs/ext/standard/array_all.php',
 				'array_any' => 'stubs/ext/standard/array_any.php',
 				'array_find' => 'stubs/ext/standard/array_find.php',
