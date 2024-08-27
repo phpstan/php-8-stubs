@@ -75,6 +75,14 @@ class ReflectionProperty implements \Reflector
     public function isProtected()
     {
     }
+    #[\Since('8.4')]
+    public function isPrivateSet(): bool
+    {
+    }
+    #[\Since('8.4')]
+    public function isProtectedSet(): bool
+    {
+    }
     /**
      * @tentative-return-type
      * @return bool
@@ -226,4 +234,10 @@ class ReflectionProperty implements \Reflector
     /** @cvalue ZEND_ACC_ABSTRACT */
     #[\Since('8.4')]
     public const int IS_ABSTRACT = UNKNOWN;
+    /** @cvalue ZEND_ACC_PROTECTED_SET */
+    #[\Since('8.4')]
+    public const int IS_PROTECTED_SET = UNKNOWN;
+    /** @cvalue ZEND_ACC_PRIVATE_SET */
+    #[\Since('8.4')]
+    public const int IS_PRIVATE_SET = UNKNOWN;
 }
