@@ -9,39 +9,77 @@ class Node
     final private function __construct()
     {
     }
-    /** @readonly */
+    /**
+     * @readonly
+     * @virtual
+     */
     public int $nodeType;
-    /** @readonly */
+    /**
+     * @readonly
+     * @virtual
+     */
     public string $nodeName;
-    /** @readonly */
+    /**
+     * @readonly
+     * @virtual
+     */
     public string $baseURI;
-    /** @readonly */
+    /**
+     * @readonly
+     * @virtual
+     */
     public bool $isConnected;
-    /** @readonly */
+    /**
+     * @readonly
+     * @virtual
+     */
     public ?Document $ownerDocument;
     /** @implementation-alias DOMNode::getRootNode */
     public function getRootNode(array $options = []): Node
     {
     }
-    /** @readonly */
+    /**
+     * @readonly
+     * @virtual
+     */
     public ?Node $parentNode;
-    /** @readonly */
+    /**
+     * @readonly
+     * @virtual
+     */
     public ?Element $parentElement;
     /** @implementation-alias DOMNode::hasChildNodes */
     public function hasChildNodes(): bool
     {
     }
-    /** @readonly */
+    /**
+     * @readonly
+     * @virtual
+     */
     public NodeList $childNodes;
-    /** @readonly */
+    /**
+     * @readonly
+     * @virtual
+     */
     public ?Node $firstChild;
-    /** @readonly */
+    /**
+     * @readonly
+     * @virtual
+     */
     public ?Node $lastChild;
-    /** @readonly */
+    /**
+     * @readonly
+     * @virtual
+     */
     public ?Node $previousSibling;
-    /** @readonly */
+    /**
+     * @readonly
+     * @virtual
+     */
     public ?Node $nextSibling;
+    /** @virtual */
     public ?string $nodeValue;
+    /** @virtual */
     public ?string $textContent;
     /** @implementation-alias DOMNode::normalize */
     public function normalize(): void

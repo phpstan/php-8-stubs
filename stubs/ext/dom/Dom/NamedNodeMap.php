@@ -5,7 +5,10 @@ namespace Dom;
 #[\Since('8.4')]
 class NamedNodeMap implements \IteratorAggregate, \Countable
 {
-    /** @readonly */
+    /**
+     * @readonly
+     * @virtual
+     */
     public int $length;
     /** @implementation-alias DOMNamedNodeMap::item */
     public function item(int $index): ?Attr

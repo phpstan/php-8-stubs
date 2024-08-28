@@ -7,14 +7,25 @@ abstract class Document extends \Dom\Node implements \Dom\ParentNode
 {
     /** @readonly */
     public Implementation $implementation;
+    /** @virtual */
     public string $URL;
+    /** @virtual */
     public string $documentURI;
+    /** @virtual */
     public string $characterSet;
+    /** @virtual */
     public string $charset;
+    /** @virtual */
     public string $inputEncoding;
-    /** @readonly */
+    /**
+     * @readonly
+     * @virtual
+     */
     public ?DocumentType $doctype;
-    /** @readonly */
+    /**
+     * @readonly
+     * @virtual
+     */
     public ?Element $documentElement;
     /** @implementation-alias Dom\Element::getElementsByTagName */
     public function getElementsByTagName(string $qualifiedName): HTMLCollection
@@ -63,11 +74,20 @@ abstract class Document extends \Dom\Node implements \Dom\ParentNode
     public function createAttributeNS(?string $namespace, string $qualifiedName): Attr
     {
     }
-    /** @readonly */
+    /**
+     * @readonly
+     * @virtual
+     */
     public ?Element $firstElementChild;
-    /** @readonly */
+    /**
+     * @readonly
+     * @virtual
+     */
     public ?Element $lastElementChild;
-    /** @readonly */
+    /**
+     * @readonly
+     * @virtual
+     */
     public int $childElementCount;
     /** @implementation-alias DOMDocument::getElementById */
     public function getElementById(string $elementId): ?Element
@@ -117,8 +137,13 @@ abstract class Document extends \Dom\Node implements \Dom\ParentNode
     public function querySelectorAll(string $selectors): NodeList
     {
     }
+    /** @virtual */
     public ?HTMLElement $body;
-    /** @readonly */
+    /**
+     * @readonly
+     * @virtual
+     */
     public ?HTMLElement $head;
+    /** @virtual */
     public string $title;
 }

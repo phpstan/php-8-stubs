@@ -5,17 +5,35 @@ namespace Dom;
 #[\Since('8.4')]
 class DocumentType extends \Dom\Node implements \Dom\ChildNode
 {
-    /** @readonly */
+    /**
+     * @readonly
+     * @virtual
+     */
     public string $name;
-    /** @readonly */
+    /**
+     * @readonly
+     * @virtual
+     */
     public DtdNamedNodeMap $entities;
-    /** @readonly */
+    /**
+     * @readonly
+     * @virtual
+     */
     public DtdNamedNodeMap $notations;
-    /** @readonly */
+    /**
+     * @readonly
+     * @virtual
+     */
     public string $publicId;
-    /** @readonly */
+    /**
+     * @readonly
+     * @virtual
+     */
     public string $systemId;
-    /** @readonly */
+    /**
+     * @readonly
+     * @virtual
+     */
     public ?string $internalSubset;
     /** @implementation-alias DOMElement::remove */
     public function remove(): void

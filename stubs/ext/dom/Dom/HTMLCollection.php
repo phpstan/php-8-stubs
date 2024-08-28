@@ -5,7 +5,10 @@ namespace Dom;
 #[\Since('8.4')]
 class HTMLCollection implements \IteratorAggregate, \Countable
 {
-    /** @readonly */
+    /**
+     * @readonly
+     * @virtual
+     */
     public int $length;
     /** @implementation-alias DOMNodeList::item */
     public function item(int $index): ?Element

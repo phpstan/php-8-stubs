@@ -5,15 +5,29 @@ namespace Dom;
 #[\Since('8.4')]
 class Element extends \Dom\Node implements \Dom\ParentNode, \Dom\ChildNode
 {
-    /** @readonly */
+    /**
+     * @readonly
+     * @virtual
+     */
     public ?string $namespaceURI;
-    /** @readonly */
+    /**
+     * @readonly
+     * @virtual
+     */
     public ?string $prefix;
-    /** @readonly */
+    /**
+     * @readonly
+     * @virtual
+     */
     public string $localName;
-    /** @readonly */
+    /**
+     * @readonly
+     * @virtual
+     */
     public string $tagName;
+    /** @virtual */
     public string $id;
+    /** @virtual */
     public string $className;
     /** @readonly */
     public TokenList $classList;
@@ -21,7 +35,10 @@ class Element extends \Dom\Node implements \Dom\ParentNode, \Dom\ChildNode
     public function hasAttributes(): bool
     {
     }
-    /** @readonly */
+    /**
+     * @readonly
+     * @virtual
+     */
     public NamedNodeMap $attributes;
     /** @implementation-alias DOMElement::getAttributeNames */
     public function getAttributeNames(): array
@@ -92,15 +109,30 @@ class Element extends \Dom\Node implements \Dom\ParentNode, \Dom\ChildNode
     public function insertAdjacentText(AdjacentPosition $where, string $data): void
     {
     }
-    /** @readonly */
+    /**
+     * @readonly
+     * @virtual
+     */
     public ?Element $firstElementChild;
-    /** @readonly */
+    /**
+     * @readonly
+     * @virtual
+     */
     public ?Element $lastElementChild;
-    /** @readonly */
+    /**
+     * @readonly
+     * @virtual
+     */
     public int $childElementCount;
-    /** @readonly */
+    /**
+     * @readonly
+     * @virtual
+     */
     public ?Element $previousElementSibling;
-    /** @readonly */
+    /**
+     * @readonly
+     * @virtual
+     */
     public ?Element $nextElementSibling;
     /** @implementation-alias DOMElement::setIdAttribute */
     public function setIdAttribute(string $qualifiedName, bool $isId): void
@@ -153,7 +185,9 @@ class Element extends \Dom\Node implements \Dom\ParentNode, \Dom\ChildNode
     public function matches(string $selectors): bool
     {
     }
+    /** @virtual */
     public string $innerHTML;
+    /** @virtual */
     public string $substitutedNodeValue;
     /** @return list<NamespaceInfo> */
     public function getInScopeNamespaces(): array

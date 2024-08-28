@@ -5,12 +5,22 @@ namespace Dom;
 #[\Since('8.4')]
 class CharacterData extends \Dom\Node implements \Dom\ChildNode
 {
-    /** @readonly */
+    /**
+     * @readonly
+     * @virtual
+     */
     public ?Element $previousElementSibling;
-    /** @readonly */
+    /**
+     * @readonly
+     * @virtual
+     */
     public ?Element $nextElementSibling;
+    /** @virtual */
     public string $data;
-    /** @readonly */
+    /**
+     * @readonly
+     * @virtual
+     */
     public int $length;
     /** @implementation-alias DOMCharacterData::substringData */
     public function substringData(int $offset, int $count): string

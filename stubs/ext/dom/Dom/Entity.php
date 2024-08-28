@@ -5,10 +5,19 @@ namespace Dom;
 #[\Since('8.4')]
 class Entity extends \Dom\Node
 {
-    /** @readonly */
+    /**
+     * @readonly
+     * @virtual
+     */
     public ?string $publicId;
-    /** @readonly */
+    /**
+     * @readonly
+     * @virtual
+     */
     public ?string $systemId;
-    /** @readonly */
+    /**
+     * @readonly
+     * @virtual
+     */
     public ?string $notationName;
 }

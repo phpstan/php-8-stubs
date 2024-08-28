@@ -5,6 +5,9 @@ namespace Dom;
 #[\Since('8.4')]
 class ProcessingInstruction extends \Dom\CharacterData
 {
-    /** @readonly */
+    /**
+     * @readonly
+     * @virtual
+     */
     public string $target;
 }

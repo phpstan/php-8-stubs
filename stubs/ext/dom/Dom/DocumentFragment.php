@@ -5,11 +5,20 @@ namespace Dom;
 #[\Since('8.4')]
 class DocumentFragment extends \Dom\Node implements \Dom\ParentNode
 {
-    /** @readonly */
+    /**
+     * @readonly
+     * @virtual
+     */
     public ?Element $firstElementChild;
-    /** @readonly */
+    /**
+     * @readonly
+     * @virtual
+     */
     public ?Element $lastElementChild;
-    /** @readonly */
+    /**
+     * @readonly
+     * @virtual
+     */
     public int $childElementCount;
     /** @implementation-alias DOMDocumentFragment::appendXML */
     public function appendXml(string $data): bool

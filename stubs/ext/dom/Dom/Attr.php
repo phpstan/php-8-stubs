@@ -5,19 +5,38 @@ namespace Dom;
 #[\Since('8.4')]
 class Attr extends \Dom\Node
 {
-    /** @readonly */
+    /**
+     * @readonly
+     * @virtual
+     */
     public ?string $namespaceURI;
-    /** @readonly */
+    /**
+     * @readonly
+     * @virtual
+     */
     public ?string $prefix;
-    /** @readonly */
+    /**
+     * @readonly
+     * @virtual
+     */
     public string $localName;
-    /** @readonly */
+    /**
+     * @readonly
+     * @virtual
+     */
     public string $name;
+    /** @virtual */
     public string $value;
-    /** @readonly */
+    /**
+     * @readonly
+     * @virtual
+     */
     public ?Element $ownerElement;
-    /** @readonly */
-    public bool $specified = true;
+    /**
+     * @readonly
+     * @virtual
+     */
+    public bool $specified;
     /** @implementation-alias DOMAttr::isId */
     public function isId(): bool
     {
