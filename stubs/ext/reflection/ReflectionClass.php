@@ -276,6 +276,38 @@ class ReflectionClass implements \Reflector
     public function newInstanceArgs(array $args = [])
     {
     }
+    #[\Since('8.4')]
+    public function newLazyGhost(callable $initializer, int $options = 0): object
+    {
+    }
+    #[\Since('8.4')]
+    public function newLazyProxy(callable $factory, int $options = 0): object
+    {
+    }
+    #[\Since('8.4')]
+    public function resetAsLazyGhost(object $object, callable $factory, int $options = 0): void
+    {
+    }
+    #[\Since('8.4')]
+    public function resetAsLazyProxy(object $object, callable $factory, int $options = 0): void
+    {
+    }
+    #[\Since('8.4')]
+    public function initializeLazyObject(object $object): object
+    {
+    }
+    #[\Since('8.4')]
+    public function isUninitializedLazyObject(object $object): bool
+    {
+    }
+    #[\Since('8.4')]
+    public function markLazyObjectAsInitialized(object $object): object
+    {
+    }
+    #[\Since('8.4')]
+    public function getLazyInitializer(object $object): ?callable
+    {
+    }
     /**
      * @tentative-return-type
      * @return (ReflectionClass | false)
@@ -423,4 +455,10 @@ class ReflectionClass implements \Reflector
     /** @cvalue ZEND_ACC_READONLY_CLASS */
     #[\Since('8.4')]
     public const int IS_READONLY = UNKNOWN;
+    /** @cvalue ZEND_LAZY_OBJECT_SKIP_INITIALIZATION_ON_SERIALIZE */
+    #[\Since('8.4')]
+    public const int SKIP_INITIALIZATION_ON_SERIALIZE = UNKNOWN;
+    /** @cvalue ZEND_LAZY_OBJECT_SKIP_DESTRUCTOR */
+    #[\Since('8.4')]
+    public const int SKIP_DESTRUCTOR = UNKNOWN;
 }

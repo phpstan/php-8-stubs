@@ -47,6 +47,14 @@ class ReflectionProperty implements \Reflector
     public function setRawValue(object $object, mixed $value): void
     {
     }
+    #[\Since('8.4')]
+    public function setRawValueWithoutLazyInitialization(object $object, mixed $value): void
+    {
+    }
+    #[\Since('8.4')]
+    public function skipLazyInitialization(object $object): void
+    {
+    }
     /**
      * @tentative-return-type
      * @return bool
