@@ -2816,6 +2816,8 @@ class Php8StubsMap
 				'mb_rtrim' => 'stubs/ext/mbstring/mb_rtrim.php',
 				'mb_trim' => 'stubs/ext/mbstring/mb_trim.php',
 				'mb_ucfirst' => 'stubs/ext/mbstring/mb_ucfirst.php',
+				'openssl_password_hash' => 'stubs/ext/openssl/openssl_password_hash.php',
+				'openssl_password_verify' => 'stubs/ext/openssl/openssl_password_verify.php',
 				'pcntl\\qosclass' => 'stubs/ext/pcntl/Pcntl/QosClass.php',
 				'pcntl_getcpu' => 'stubs/ext/pcntl/pcntl_getcpu.php',
 				'pcntl_getcpuaffinity' => 'stubs/ext/pcntl/pcntl_getcpuaffinity.php',
