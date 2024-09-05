@@ -2752,6 +2752,7 @@ class Php8StubsMap
 
 		if ($phpVersionId >= 80400) {
 			$classes = \array_merge($classes, [
+				'bcmath\\number' => 'stubs/ext/bcmath/BcMath/Number.php',
 				'dba\\connection' => 'stubs/ext/dba/Dba/Connection.php',
 				'deprecated' => 'stubs/Zend/Deprecated.php',
 				'dom\\attr' => 'stubs/ext/dom/Dom/Attr.php',
