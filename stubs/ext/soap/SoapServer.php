@@ -62,4 +62,8 @@ class SoapServer
     public function handle(?string $request = null)
     {
     }
+    #[\Since('8.4')]
+    public function __getLastResponse(): ?string
+    {
+    }
 }
