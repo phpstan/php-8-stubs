@@ -110,6 +110,10 @@ class ReflectionProperty implements \Reflector
     {
     }
     #[\Since('8.4')]
+    public function isDynamic(): bool
+    {
+    }
+    #[\Since('8.4')]
     public function isAbstract(): bool
     {
     }
