@@ -184,9 +184,17 @@ class ReflectionProperty implements \Reflector
     public function getAttributes(?string $name = null, int $flags = 0): array
     {
     }
+    #[\Since('8.4')]
+    public function hasHooks(): bool
+    {
+    }
     /** @return array<string, ReflectionMethod> */
     #[\Since('8.4')]
     public function getHooks(): array
+    {
+    }
+    #[\Since('8.4')]
+    public function hasHook(PropertyHookType $type): bool
     {
     }
     #[\Since('8.4')]
