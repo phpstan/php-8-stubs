@@ -2803,6 +2803,7 @@ class Php8StubsMap
 				'array_find' => 'stubs/ext/standard/array_find.php',
 				'array_find_key' => 'stubs/ext/standard/array_find_key.php',
 				'bcceil' => 'stubs/ext/bcmath/bcceil.php',
+				'bcdivmod' => 'stubs/ext/bcmath/bcdivmod.php',
 				'bcfloor' => 'stubs/ext/bcmath/bcfloor.php',
 				'bcround' => 'stubs/ext/bcmath/bcround.php',
 				'dom\\adjacentposition' => 'stubs/ext/dom/Dom/AdjacentPosition.php',

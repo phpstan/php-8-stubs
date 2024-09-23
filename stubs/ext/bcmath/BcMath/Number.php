@@ -28,6 +28,10 @@ final readonly class Number implements \Stringable
     public function mod(Number|string|int $num, ?int $scale = null): Number
     {
     }
+    /** @return Number[] */
+    public function divmod(Number|string|int $num, ?int $scale = null): array
+    {
+    }
     public function powmod(Number|string|int $exponent, Number|string|int $modulus, ?int $scale = null): Number
     {
     }
