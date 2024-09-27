@@ -19,7 +19,12 @@ final class FFI
     public static function scope(string $name): FFI
     {
     }
+    #[\Until('8.4')]
     public static function new(FFI\CType|string $type, bool $owned = true, bool $persistent = false): ?FFI\CData
+    {
+    }
+    #[\Since('8.4')]
+    public static function new(FFI\CType|string $type, bool $owned = true, bool $persistent = false): FFI\CData
     {
     }
     /** @prefer-ref $ptr */
@@ -30,10 +35,24 @@ final class FFI
      * @param FFI\CData|int|float|bool|null $ptr
      * @prefer-ref $ptr
      */
+    #[\Until('8.4')]
     public static function cast(FFI\CType|string $type, $ptr): ?FFI\CData
     {
     }
+    /**
+     * @param FFI\CData|int|float|bool|null $ptr
+     * @prefer-ref $ptr
+     */
+    #[\Since('8.4')]
+    public static function cast(FFI\CType|string $type, $ptr): FFI\CData
+    {
+    }
+    #[\Until('8.4')]
     public static function type(string $type): ?FFI\CType
+    {
+    }
+    #[\Since('8.4')]
+    public static function type(string $type): FFI\CType
     {
     }
     /** @prefer-ref $ptr */
