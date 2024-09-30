@@ -4,7 +4,6 @@
 use PhpParser\Comment;
 use PhpParser\Node;
 use PhpParser\ParserFactory;
-use PHPStan\PhpDocParser\Ast\PhpDoc\PhpDocChildNode;
 use PHPStan\PhpDocParser\Ast\PhpDoc\PhpDocNode;
 use PHPStan\PhpDocParser\Ast\PhpDoc\PhpDocTagNode;
 use PHPStan\PhpDocParser\Ast\PhpDoc\ReturnTagValueNode;
@@ -591,30 +590,6 @@ $command = new class(
 		if ($old instanceof Node\Stmt\ClassMethod && $new instanceof Node\Stmt\ClassMethod) {
 			if ($old->flags !== $new->flags) {
 				return $this->stmtDiff($old, $new, $updateTo);
-			}
-		}
-
-		if (
-			$old->getReturnType() !== null
-			&& $new->getReturnType() !== null
-			&& $new->getDocComment() !== null
-		) {
-			if ($old->getDocComment() === null || $this->findPhpDocReturn($this->parseDocComment($old->getDocComment()->getText())) === null) {
-				$newPhpDocNode = $this->parseDocComment($new->getDocComment()->getText());
-				if ($this->findPhpDocReturn($newPhpDocNode) !== null) {
-					$newPhpDocNodeWithoutReturn = new PhpDocNode(array_values(array_filter($newPhpDocNode->children, function (PhpDocChildNode $child): bool {
-						if (!$child instanceof PhpDocTagNode) {
-							return true;
-						}
-
-						return !$child->value instanceof ReturnTagValueNode;
-					})));
-					if (count($newPhpDocNodeWithoutReturn->children) === 0) {
-						$old->setAttribute('comments', []);
-					} else {
-						$old->setDocComment(new Comment\Doc((string) $newPhpDocNodeWithoutReturn));
-					}
-				}
 			}
 		}
 
