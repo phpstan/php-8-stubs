@@ -1,9 +1,6 @@
 <?php 
 
-/**
- * @param resource $stream
- * @refcount 1
- */
+/** @param resource $stream */
 function fstat($stream): array|false
 {
 }

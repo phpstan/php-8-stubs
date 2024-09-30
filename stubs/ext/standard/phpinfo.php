@@ -1,5 +1,6 @@
 <?php 
 
+/* info.c */
 #[\Until('8.2')]
 function phpinfo(int $flags = INFO_ALL): bool
 {

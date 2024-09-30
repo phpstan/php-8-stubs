@@ -1,9 +1,6 @@
 <?php 
 
-/**
- * @param resource $context
- * @refcount 1
- */
+/** @param resource $context */
 function stream_context_get_params($context): array
 {
 }

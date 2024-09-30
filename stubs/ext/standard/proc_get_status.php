@@ -1,9 +1,6 @@
 <?php 
 
-/**
- * @param resource $process
- * @refcount 1
- */
+/** @param resource $process */
 function proc_get_status($process): array
 {
 }

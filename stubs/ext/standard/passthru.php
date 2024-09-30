@@ -1,8 +1,6 @@
 <?php 
 
-/**
- * @param int $result_code
- */
+/** @param int $result_code */
 #[\Until('8.2')]
 function passthru(string $command, &$result_code = null): ?bool
 {

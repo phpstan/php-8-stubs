@@ -1,9 +1,6 @@
 <?php 
 
-/**
- * @param (array | float) $options
- * @refcount 1
- */
+/** @param array|float $options */
 function imageaffinematrixget(int $type, $options): array|false
 {
 }

@@ -1,9 +1,6 @@
 <?php 
 
-/**
- * @param resource $stream
- * @refcount 1
- */
+/** @param resource $stream */
 function fscanf($stream, string $format, mixed &...$vars): array|int|false|null
 {
 }

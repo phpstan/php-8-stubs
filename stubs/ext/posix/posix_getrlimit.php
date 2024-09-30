@@ -1,9 +1,6 @@
 <?php 
 
 #ifdef HAVE_GETRLIMIT
-/**
- * @refcount 1
- */
 #[\Until('8.3')]
 function posix_getrlimit(): array|false
 {
