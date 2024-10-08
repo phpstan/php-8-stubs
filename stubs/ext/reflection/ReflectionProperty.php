@@ -264,6 +264,9 @@ class ReflectionProperty implements \Reflector
     /** @cvalue ZEND_ACC_PRIVATE_SET */
     #[\Since('8.4')]
     public const int IS_PRIVATE_SET = UNKNOWN;
+    /** @cvalue ZEND_ACC_VIRTUAL */
+    #[\Since('8.4')]
+    public const int IS_VIRTUAL = UNKNOWN;
     /** @cvalue ZEND_ACC_FINAL */
     #[\Since('8.4')]
     public const int IS_FINAL = UNKNOWN;
