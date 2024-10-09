@@ -250,15 +250,6 @@ $command = new class(
 		if ($stubContents === false) {
 			throw new \LogicException('Could not read stub');
 		}
-		if (str_ends_with($stubPath, '/Zend/zend_builtin_functions.stub.php')) {
-			$stubContents = str_replace([
-				'function exit',
-				'function die',
-			], [
-				'function _exit',
-				'function _die',
-			], $stubContents);
-		}
 		$ast = $this->parser->parse($stubContents);
 		if ($ast === null) {
 			throw new \LogicException('AST cannot be null');
