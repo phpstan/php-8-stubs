@@ -55,6 +55,10 @@ class ReflectionProperty implements \Reflector
     public function skipLazyInitialization(object $object): void
     {
     }
+    #[\Since('8.4')]
+    public function isLazy(object $object): bool
+    {
+    }
     /**
      * @tentative-return-type
      * @return bool
