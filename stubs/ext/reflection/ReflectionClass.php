@@ -285,7 +285,7 @@ class ReflectionClass implements \Reflector
     {
     }
     #[\Since('8.4')]
-    public function resetAsLazyGhost(object $object, callable $factory, int $options = 0): void
+    public function resetAsLazyGhost(object $object, callable $initializer, int $options = 0): void
     {
     }
     #[\Since('8.4')]
