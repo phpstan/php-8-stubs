@@ -7,7 +7,7 @@ namespace Dom;
  * @strict-properties
  */
 #[\Since('8.4')]
-final class TokenList implements \Dom\IteratorAggregate, \Dom\Countable
+final class TokenList implements \IteratorAggregate, \Countable
 {
     /** @implementation-alias Dom\Node::__construct */
     private function __construct()
