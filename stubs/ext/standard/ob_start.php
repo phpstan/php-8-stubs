@@ -1,7 +1,7 @@
 <?php 
 
 /* main/output.c */
-/** @param callable $callback */
+/** @param callable|null $callback */
 #[\Until('8.4')]
 function ob_start($callback = null, int $chunk_size = 0, int $flags = PHP_OUTPUT_HANDLER_STDFLAGS): bool
 {
