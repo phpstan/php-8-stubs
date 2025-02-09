@@ -267,13 +267,13 @@ $command = new class(
 			$pathPart = 'stubs/' . dirname($relativeStubPath) . '/' . str_replace('\\', '/', $namespacedName) . '.php';
 			$targetStubPath = __DIR__ . '/../' . $pathPart;
 
-			if ($stmt instanceof Node\Stmt\Class_ || $stmt instanceof Node\Stmt\Interface_ || $stmt instanceof Node\Stmt\Trait_) {
+			if ($stmt instanceof Node\Stmt\Class_ || $stmt instanceof Node\Stmt\Interface_ || $stmt instanceof Node\Stmt\Trait_ || $stmt instanceof Node\Stmt\Enum_) {
 				if (array_key_exists(strtolower($namespacedName), $classes)) {
 					continue;
 				}
 				$classes[strtolower($namespacedName)] = $pathPart;
 				$stmt = $this->filterClassPhpDocs($stmt);
-			} else {
+			} elseif ($stmt instanceof Node\Stmt\Function_) {
 				if (in_array($namespacedName, ['_exit', '_die'], true)) {
 					continue;
 				}
@@ -281,6 +281,8 @@ $command = new class(
 					continue;
 				}
 				$functions[strtolower($namespacedName)] = $pathPart;
+			} else {
+				throw new \Exception(sprintf('Unhandled node type %s in %s on line %s.', get_class($stmt), $stubPath, $stmt->getLine()));
 			}
 
 			$originalStmt = $stmt;
