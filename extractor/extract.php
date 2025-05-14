@@ -12,6 +12,7 @@ use PHPStan\PhpDocParser\Parser\PhpDocParser;
 use PHPStan\PhpDocParser\Parser\TokenIterator;
 use PHPStan\PhpDocParser\Parser\ConstExprParser;
 use PHPStan\PhpDocParser\Parser\TypeParser;
+use PHPStan\PhpDocParser\ParserConfig;
 use Symfony\Component\Console\Application;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
@@ -50,11 +51,13 @@ $command = new class(
 		parent::__construct();
 		$this->parser = $parser;
 		$this->printer = $printer;
-		$this->phpDocLexer = new Lexer();
 
-		$constExprParser = new ConstExprParser();
-		$typeParser = new TypeParser($constExprParser);
-		$this->phpDocParser = new PhpDocParser($typeParser, $constExprParser);
+		$config = new ParserConfig(usedAttributes: ['lines' => true, 'indexes' => true]);
+		$this->phpDocLexer = new Lexer($config);
+
+		$constExprParser = new ConstExprParser($config);
+		$typeParser = new TypeParser($config, $constExprParser);
+		$this->phpDocParser = new PhpDocParser($config, $typeParser, $constExprParser);
 	}
 
 	protected function configure(): void
