@@ -120,6 +120,8 @@ $command = new class(
 		if ($isUpdate) {
 			require_once __DIR__ . '/../Php8StubsMap.php';
 			$parts = explode('.', $updateFrom);
+
+			// @phpstan-ignore phpstanApi.constructor
 			$map = new \PHPStan\Php8StubsMap((int) $parts[0] * 10000 + (int) ($parts[1] ?? 0) * 100 + (int) ($parts[2] ?? 0));
 			$classes = $map->classes;
 			$functions = $map->functions;
@@ -196,7 +198,7 @@ $command = new class(
 				$this->stubPath = $stubPath;
 			}
 
-			public function enterNode(Node $node)
+			public function enterNode(Node $node): ?int
 			{
 				if ($node instanceof Node\Stmt\Namespace_) {
 					// pass
@@ -457,50 +459,48 @@ $command = new class(
 				}
 			}
 
-			if ($old->stmts !== null) {
-				$newStmtsToSet = $untouchedStmts;
-				foreach ($newMethods as $stmt) {
-					$methodName = $stmt->name->toLowerString();
-					if (!array_key_exists($methodName, $oldMethods)) {
-						$stmt->attrGroups[] = new Node\AttributeGroup([
-							new Node\Attribute(
-								new Node\Name\FullyQualified('Since'),
-								[new Node\Arg(new Node\Scalar\String_($updateTo))],
-							),
-						]);
-						$newStmtsToSet[] = $stmt;
-						continue;
-					}
-
-					foreach ($this->compareFunctions($oldMethods[$methodName], $stmt, $updateTo) as $functionStmt) {
-						$newStmtsToSet[] = $functionStmt;
-					}
+			$newStmtsToSet = $untouchedStmts;
+			foreach ($newMethods as $stmt) {
+				$methodName = $stmt->name->toLowerString();
+				if (!array_key_exists($methodName, $oldMethods)) {
+					$stmt->attrGroups[] = new Node\AttributeGroup([
+						new Node\Attribute(
+							new Node\Name\FullyQualified('Since'),
+							[new Node\Arg(new Node\Scalar\String_($updateTo))],
+						),
+					]);
+					$newStmtsToSet[] = $stmt;
+					continue;
 				}
 
-				// todo has a method been removed?
-
-				foreach ($newConstants as $stmt) {
-					$namesKey = implode(',', array_map(static fn (Node\Const_ $const) => $const->name->toString(), $stmt->consts));
-					if (!array_key_exists($namesKey, $oldConstants)) {
-						$stmt->attrGroups[] = new Node\AttributeGroup([
-							new Node\Attribute(
-								new Node\Name\FullyQualified('Since'),
-								[new Node\Arg(new Node\Scalar\String_($updateTo))],
-							),
-						]);
-						$newStmtsToSet[] = $stmt;
-						continue;
-					}
-
-					foreach ($this->compareConstants($oldConstants[$namesKey], $stmt, $updateTo) as $constantStmt) {
-						$newStmtsToSet[] = $constantStmt;
-					}
+				foreach ($this->compareFunctions($oldMethods[$methodName], $stmt, $updateTo) as $functionStmt) {
+					$newStmtsToSet[] = $functionStmt;
 				}
-
-				// todo has a constant been removed?
-
-				$old->stmts = $newStmtsToSet;
 			}
+
+			// todo has a method been removed?
+
+			foreach ($newConstants as $stmt) {
+				$namesKey = implode(',', array_map(static fn (Node\Const_ $const) => $const->name->toString(), $stmt->consts));
+				if (!array_key_exists($namesKey, $oldConstants)) {
+					$stmt->attrGroups[] = new Node\AttributeGroup([
+						new Node\Attribute(
+							new Node\Name\FullyQualified('Since'),
+							[new Node\Arg(new Node\Scalar\String_($updateTo))],
+						),
+					]);
+					$newStmtsToSet[] = $stmt;
+					continue;
+				}
+
+				foreach ($this->compareConstants($oldConstants[$namesKey], $stmt, $updateTo) as $constantStmt) {
+					$newStmtsToSet[] = $constantStmt;
+				}
+			}
+
+			// todo has a constant been removed?
+
+			$old->stmts = $newStmtsToSet;
 
 			return [$old];
 		}
