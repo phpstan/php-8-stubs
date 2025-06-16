@@ -6,12 +6,6 @@ function odbc_pconnect(string $dsn, string $user, string $password, int $cursor_
 {
 }
 #[\Since('8.4')]
-function odbc_pconnect(
-    string $dsn,
-    ?string $user = null,
-    #[\SensitiveParameter]
-    ?string $password = null,
-    int $cursor_option = SQL_CUR_USE_DRIVER
-): \Odbc\Connection|false
+function odbc_pconnect(string $dsn, ?string $user = null, #[\SensitiveParameter] ?string $password = null, int $cursor_option = SQL_CUR_USE_DRIVER): \Odbc\Connection|false
 {
 }

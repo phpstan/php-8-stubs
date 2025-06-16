@@ -11,13 +11,7 @@ class PDO
     {
     }
     #[\Since('8.4')]
-    public static function connect(
-        string $dsn,
-        ?string $username = null,
-        #[\SensitiveParameter]
-        ?string $password = null,
-        ?array $options = null
-    ): static
+    public static function connect(string $dsn, ?string $username = null, #[\SensitiveParameter] ?string $password = null, ?array $options = null): static
     {
     }
     /**
