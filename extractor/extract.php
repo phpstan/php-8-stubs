@@ -28,7 +28,7 @@ $parser = $parserFactory->createForHostVersion();
 
 $command = new class(
 	$parser,
-	new \PhpParser\PrettyPrinter\Standard()
+	new \PhpParser\PrettyPrinter\Standard(['phpVersion' => \PhpParser\PhpVersion::fromComponents(8, 0)])
 ) extends Command {
 
 	/** @var \PhpParser\Parser */
