@@ -6,6 +6,11 @@ function pg_copy_from($connection, string $table_name, array $rows, string $sepa
 {
 }
 #[\Since('8.1')]
+#[\Until('8.5')]
 function pg_copy_from(\PgSql\Connection $connection, string $table_name, array $rows, string $separator = "\t", string $null_as = "\\\\N"): bool
+{
+}
+#[\Since('8.5')]
+function pg_copy_from(\PgSql\Connection $connection, string $table_name, array|\Traversable $rows, string $separator = "\t", string $null_as = "\\\\N"): bool
 {
 }

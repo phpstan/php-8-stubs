@@ -2,6 +2,20 @@
 
 class PharData extends \RecursiveDirectoryIterator implements \Countable, \ArrayAccess
 {
+    /**
+     * @param resource|string $stub
+     * @return bool
+     * @implementation-alias Phar::setStub
+     */
+    #[\Until('8.4')]
+    public function setStub($stub, int $length = UNKNOWN)
+    {
+    }
+    /** @implementation-alias Phar::unlinkArchive */
+    #[\Until('8.4')]
+    final public static function unlinkArchive(string $filename): bool
+    {
+    }
     /** @implementation-alias Phar::__construct */
     public function __construct(string $filename, int $flags = FilesystemIterator::SKIP_DOTS | FilesystemIterator::UNIX_PATHS, ?string $alias = null, int $format = 0)
     {
@@ -305,15 +319,6 @@ class PharData extends \RecursiveDirectoryIterator implements \Countable, \Array
     }
     /**
      * @param resource|string $stub
-     * @return bool
-     * @implementation-alias Phar::setStub
-     */
-    #[\Until('8.4')]
-    public function setStub($stub, int $length = UNKNOWN)
-    {
-    }
-    /**
-     * @param resource|string $stub
      * @implementation-alias Phar::setStub
      */
     #[\Since('8.4')]
@@ -386,11 +391,6 @@ class PharData extends \RecursiveDirectoryIterator implements \Countable, \Array
     }
     /** @implementation-alias Phar::mungServer */
     final public static function mungServer(array $variables): void
-    {
-    }
-    /** @implementation-alias Phar::unlinkArchive */
-    #[\Until('8.4')]
-    final public static function unlinkArchive(string $filename): bool
     {
     }
     /** @implementation-alias Phar::unlinkArchive */

@@ -68,4 +68,23 @@ class SQLite3Stmt
     public function reset()
     {
     }
+    #[\Since('8.5')]
+    public function busy(): bool
+    {
+    }
+    #[\Since('8.5')]
+    public function explain(): int
+    {
+    }
+    #[\Since('8.5')]
+    public function setExplain(int $mode): bool
+    {
+    }
+    #if SQLITE_VERSION_NUMBER >= 3043000
+    #[\Since('8.5')]
+    public const int EXPLAIN_MODE_PREPARED = 0;
+    #[\Since('8.5')]
+    public const int EXPLAIN_MODE_EXPLAIN = 1;
+    #[\Since('8.5')]
+    public const int EXPLAIN_MODE_EXPLAIN_QUERY_PLAN = 2;
 }

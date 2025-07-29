@@ -7,6 +7,34 @@ class ReflectionClassConstant implements \Reflector
     final private function __clone(): void
     {
     }
+    /**
+     * @var int
+     * @cvalue ZEND_ACC_PUBLIC
+     */
+    #[\Since('8.2')]
+    #[\Until('8.4')]
+    public const IS_PUBLIC = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue ZEND_ACC_PROTECTED
+     */
+    #[\Since('8.2')]
+    #[\Until('8.4')]
+    public const IS_PROTECTED = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue ZEND_ACC_PRIVATE
+     */
+    #[\Since('8.2')]
+    #[\Until('8.4')]
+    public const IS_PRIVATE = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue ZEND_ACC_FINAL
+     */
+    #[\Since('8.2')]
+    #[\Until('8.4')]
+    public const IS_FINAL = UNKNOWN;
     /** @implementation-alias ReflectionClass::__clone */
     #[\Since('8.1')]
     private function __clone(): void
@@ -98,43 +126,15 @@ class ReflectionClassConstant implements \Reflector
     public function getType(): ?ReflectionType
     {
     }
-    /**
-     * @var int
-     * @cvalue ZEND_ACC_PUBLIC
-     */
-    #[\Since('8.2')]
-    #[\Until('8.4')]
-    public const IS_PUBLIC = UNKNOWN;
     /** @cvalue ZEND_ACC_PUBLIC */
     #[\Since('8.4')]
     public const int IS_PUBLIC = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue ZEND_ACC_PROTECTED
-     */
-    #[\Since('8.2')]
-    #[\Until('8.4')]
-    public const IS_PROTECTED = UNKNOWN;
     /** @cvalue ZEND_ACC_PROTECTED */
     #[\Since('8.4')]
     public const int IS_PROTECTED = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue ZEND_ACC_PRIVATE
-     */
-    #[\Since('8.2')]
-    #[\Until('8.4')]
-    public const IS_PRIVATE = UNKNOWN;
     /** @cvalue ZEND_ACC_PRIVATE */
     #[\Since('8.4')]
     public const int IS_PRIVATE = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue ZEND_ACC_FINAL
-     */
-    #[\Since('8.2')]
-    #[\Until('8.4')]
-    public const IS_FINAL = UNKNOWN;
     /** @cvalue ZEND_ACC_FINAL */
     #[\Since('8.4')]
     public const int IS_FINAL = UNKNOWN;

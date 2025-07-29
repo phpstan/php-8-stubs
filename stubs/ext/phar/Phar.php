@@ -114,6 +114,10 @@ class Phar extends \RecursiveDirectoryIterator implements \Countable, \ArrayAcce
     #[\Since('8.2')]
     #[\Until('8.3')]
     const SHA512 = UNKNOWN;
+    #[\Until('8.4')]
+    final public static function unlinkArchive(string $filename): bool
+    {
+    }
     public function __construct(string $filename, int $flags = FilesystemIterator::SKIP_DOTS | FilesystemIterator::UNIX_PATHS, ?string $alias = null)
     {
     }
@@ -436,10 +440,6 @@ class Phar extends \RecursiveDirectoryIterator implements \Countable, \ArrayAcce
     {
     }
     final public static function mungServer(array $variables): void
-    {
-    }
-    #[\Until('8.4')]
-    final public static function unlinkArchive(string $filename): bool
     {
     }
     #[\Since('8.4')]

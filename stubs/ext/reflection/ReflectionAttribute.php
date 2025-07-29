@@ -2,6 +2,13 @@
 
 class ReflectionAttribute
 {
+    /**
+     * @var int
+     * @cvalue REFLECTION_ATTRIBUTE_IS_INSTANCEOF
+     */
+    #[\Since('8.2')]
+    #[\Until('8.4')]
+    public const IS_INSTANCEOF = UNKNOWN;
     public function getName(): string
     {
     }
@@ -27,13 +34,6 @@ class ReflectionAttribute
     private function __construct()
     {
     }
-    /**
-     * @var int
-     * @cvalue REFLECTION_ATTRIBUTE_IS_INSTANCEOF
-     */
-    #[\Since('8.2')]
-    #[\Until('8.4')]
-    public const IS_INSTANCEOF = UNKNOWN;
     /** @cvalue REFLECTION_ATTRIBUTE_IS_INSTANCEOF */
     #[\Since('8.4')]
     public const int IS_INSTANCEOF = UNKNOWN;

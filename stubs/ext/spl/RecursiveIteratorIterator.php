@@ -2,6 +2,34 @@
 
 class RecursiveIteratorIterator implements \OuterIterator
 {
+    /**
+     * @var int
+     * @cvalue RIT_LEAVES_ONLY
+     */
+    #[\Since('8.2')]
+    #[\Until('8.4')]
+    public const LEAVES_ONLY = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue RIT_SELF_FIRST
+     */
+    #[\Since('8.2')]
+    #[\Until('8.4')]
+    public const SELF_FIRST = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue RIT_CHILD_FIRST
+     */
+    #[\Since('8.2')]
+    #[\Until('8.4')]
+    public const CHILD_FIRST = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue RIT_CATCH_GET_CHILD
+     */
+    #[\Since('8.2')]
+    #[\Until('8.4')]
+    public const CATCH_GET_CHILD = UNKNOWN;
     public function __construct(Traversable $iterator, int $mode = RecursiveIteratorIterator::LEAVES_ONLY, int $flags = 0)
     {
     }
@@ -124,43 +152,15 @@ class RecursiveIteratorIterator implements \OuterIterator
     public function getMaxDepth()
     {
     }
-    /**
-     * @var int
-     * @cvalue RIT_LEAVES_ONLY
-     */
-    #[\Since('8.2')]
-    #[\Until('8.4')]
-    public const LEAVES_ONLY = UNKNOWN;
     /** @cvalue RIT_LEAVES_ONLY */
     #[\Since('8.4')]
     public const int LEAVES_ONLY = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue RIT_SELF_FIRST
-     */
-    #[\Since('8.2')]
-    #[\Until('8.4')]
-    public const SELF_FIRST = UNKNOWN;
     /** @cvalue RIT_SELF_FIRST */
     #[\Since('8.4')]
     public const int SELF_FIRST = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue RIT_CHILD_FIRST
-     */
-    #[\Since('8.2')]
-    #[\Until('8.4')]
-    public const CHILD_FIRST = UNKNOWN;
     /** @cvalue RIT_CHILD_FIRST */
     #[\Since('8.4')]
     public const int CHILD_FIRST = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue RIT_CATCH_GET_CHILD
-     */
-    #[\Since('8.2')]
-    #[\Until('8.4')]
-    public const CATCH_GET_CHILD = UNKNOWN;
     /** @cvalue RIT_CATCH_GET_CHILD */
     #[\Since('8.4')]
     public const int CATCH_GET_CHILD = UNKNOWN;

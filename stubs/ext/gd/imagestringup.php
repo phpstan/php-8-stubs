@@ -5,6 +5,11 @@ function imagestringup(\GdImage $image, int $font, int $x, int $y, string $strin
 {
 }
 #[\Since('8.1')]
+#[\Until('8.5')]
 function imagestringup(\GdImage $image, \GdFont|int $font, int $x, int $y, string $string, int $color): bool
+{
+}
+#[\Since('8.5')]
+function imagestringup(\GdImage $image, \GdFont|int $font, int $x, int $y, string $string, int $color): true
 {
 }

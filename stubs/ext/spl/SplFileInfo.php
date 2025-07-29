@@ -211,7 +211,13 @@ class SplFileInfo
      * @tentative-return-type
      * @return void
      */
+    #[\Until('8.5')]
     final public function _bad_state_ex()
+    {
+    }
+    #[\Deprecated(since: '8.2')]
+    #[\Since('8.5')]
+    final public function _bad_state_ex(): void
     {
     }
 }

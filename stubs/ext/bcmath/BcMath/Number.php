@@ -6,10 +6,6 @@ namespace BcMath;
 #[\Since('8.4')]
 final readonly class Number implements \Stringable
 {
-    /** @virtual */
-    public string $value;
-    /** @virtual */
-    public int $scale;
     public function __construct(string|int $num)
     {
     }

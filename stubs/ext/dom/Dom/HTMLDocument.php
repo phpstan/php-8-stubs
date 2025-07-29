@@ -32,5 +32,4 @@ final class HTMLDocument extends \Dom\Document
     public function debugGetTemplateCount(): int
     {
     }
-    #endif
 }

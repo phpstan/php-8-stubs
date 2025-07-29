@@ -14,17 +14,6 @@ final class XMLDocument extends \Dom\Document
     public static function createFromString(string $source, int $options = 0, ?string $overrideEncoding = null): XMLDocument
     {
     }
-    /**
-     * @readonly
-     * @virtual
-     */
-    public string $xmlEncoding;
-    /** @virtual */
-    public bool $xmlStandalone;
-    /** @virtual */
-    public string $xmlVersion;
-    /** @virtual */
-    public bool $formatOutput;
     /** @implementation-alias DOMDocument::createEntityReference */
     public function createEntityReference(string $name): EntityReference
     {

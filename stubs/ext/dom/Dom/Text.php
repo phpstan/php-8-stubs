@@ -10,9 +10,4 @@ class Text extends \Dom\CharacterData
     public function splitText(int $offset): Text
     {
     }
-    /**
-     * @readonly
-     * @virtual
-     */
-    public string $wholeText;
 }

@@ -2,6 +2,13 @@
 
 class ReflectionFunction extends \ReflectionFunctionAbstract
 {
+    /**
+     * @var int
+     * @cvalue ZEND_ACC_DEPRECATED
+     */
+    #[\Since('8.2')]
+    #[\Until('8.4')]
+    public const IS_DEPRECATED = UNKNOWN;
     public function __construct(Closure|string $function)
     {
     }
@@ -40,13 +47,6 @@ class ReflectionFunction extends \ReflectionFunctionAbstract
     public function getClosure()
     {
     }
-    /**
-     * @var int
-     * @cvalue ZEND_ACC_DEPRECATED
-     */
-    #[\Since('8.2')]
-    #[\Until('8.4')]
-    public const IS_DEPRECATED = UNKNOWN;
     /** @cvalue ZEND_ACC_DEPRECATED */
     #[\Since('8.4')]
     public const int IS_DEPRECATED = UNKNOWN;

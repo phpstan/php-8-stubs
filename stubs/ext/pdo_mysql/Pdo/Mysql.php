@@ -9,6 +9,10 @@ namespace Pdo;
 #[\Since('8.4')]
 class Mysql extends \PDO
 {
+    #endif
+    public function getWarningCount(): int
+    {
+    }
     /** @cvalue PDO_MYSQL_ATTR_USE_BUFFERED_QUERY */
     public const int ATTR_USE_BUFFERED_QUERY = UNKNOWN;
     /** @cvalue PDO_MYSQL_ATTR_LOCAL_INFILE */
@@ -26,6 +30,10 @@ class Mysql extends \PDO
     /** @cvalue PDO_MYSQL_ATTR_COMPRESS */
     public const int ATTR_COMPRESS = UNKNOWN;
     /** @cvalue PDO_MYSQL_ATTR_DIRECT_QUERY */
+    #[\Until('8.5')]
+    public const int ATTR_DIRECT_QUERY = UNKNOWN;
+    /** @cvalue PDO_ATTR_EMULATE_PREPARES */
+    #[\Since('8.5')]
     public const int ATTR_DIRECT_QUERY = UNKNOWN;
     /** @cvalue PDO_MYSQL_ATTR_FOUND_ROWS */
     public const int ATTR_FOUND_ROWS = UNKNOWN;
@@ -54,8 +62,4 @@ class Mysql extends \PDO
     #if MYSQL_VERSION_ID >= 80021 || defined(PDO_USE_MYSQLND)
     /** @cvalue PDO_MYSQL_ATTR_LOCAL_INFILE_DIRECTORY */
     public const int ATTR_LOCAL_INFILE_DIRECTORY = UNKNOWN;
-    #endif
-    public function getWarningCount(): int
-    {
-    }
 }

@@ -9,78 +9,14 @@ class Node
     final private function __construct()
     {
     }
-    /**
-     * @readonly
-     * @virtual
-     */
-    public int $nodeType;
-    /**
-     * @readonly
-     * @virtual
-     */
-    public string $nodeName;
-    /**
-     * @readonly
-     * @virtual
-     */
-    public string $baseURI;
-    /**
-     * @readonly
-     * @virtual
-     */
-    public bool $isConnected;
-    /**
-     * @readonly
-     * @virtual
-     */
-    public ?Document $ownerDocument;
     /** @implementation-alias DOMNode::getRootNode */
     public function getRootNode(array $options = []): Node
     {
     }
-    /**
-     * @readonly
-     * @virtual
-     */
-    public ?Node $parentNode;
-    /**
-     * @readonly
-     * @virtual
-     */
-    public ?Element $parentElement;
     /** @implementation-alias DOMNode::hasChildNodes */
     public function hasChildNodes(): bool
     {
     }
-    /**
-     * @readonly
-     * @virtual
-     */
-    public NodeList $childNodes;
-    /**
-     * @readonly
-     * @virtual
-     */
-    public ?Node $firstChild;
-    /**
-     * @readonly
-     * @virtual
-     */
-    public ?Node $lastChild;
-    /**
-     * @readonly
-     * @virtual
-     */
-    public ?Node $previousSibling;
-    /**
-     * @readonly
-     * @virtual
-     */
-    public ?Node $nextSibling;
-    /** @virtual */
-    public ?string $nodeValue;
-    /** @virtual */
-    public ?string $textContent;
     /** @implementation-alias DOMNode::normalize */
     public function normalize(): void
     {
@@ -95,12 +31,6 @@ class Node
     public function isSameNode(?Node $otherNode): bool
     {
     }
-    public const int DOCUMENT_POSITION_DISCONNECTED = 0x1;
-    public const int DOCUMENT_POSITION_PRECEDING = 0x2;
-    public const int DOCUMENT_POSITION_FOLLOWING = 0x4;
-    public const int DOCUMENT_POSITION_CONTAINS = 0x8;
-    public const int DOCUMENT_POSITION_CONTAINED_BY = 0x10;
-    public const int DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC = 0x20;
     public function compareDocumentPosition(Node $other): int
     {
     }
@@ -152,4 +82,10 @@ class Node
     public function __wakeup(): void
     {
     }
+    public const int DOCUMENT_POSITION_DISCONNECTED = 0x1;
+    public const int DOCUMENT_POSITION_PRECEDING = 0x2;
+    public const int DOCUMENT_POSITION_FOLLOWING = 0x4;
+    public const int DOCUMENT_POSITION_CONTAINS = 0x8;
+    public const int DOCUMENT_POSITION_CONTAINED_BY = 0x10;
+    public const int DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC = 0x20;
 }

@@ -80,6 +80,9 @@ final class Attribute
     /** @cvalue ZEND_ATTRIBUTE_TARGET_PARAMETER */
     #[\Since('8.3')]
     const int TARGET_PARAMETER = UNKNOWN;
+    /** @cvalue ZEND_ATTRIBUTE_TARGET_CONST */
+    #[\Since('8.5')]
+    const int TARGET_CONSTANT = UNKNOWN;
     /** @cvalue ZEND_ATTRIBUTE_TARGET_ALL */
     #[\Since('8.3')]
     const int TARGET_ALL = UNKNOWN;

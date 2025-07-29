@@ -18,4 +18,8 @@ final class Closure
     public static function fromCallable(callable $callback): Closure
     {
     }
+    #[\Since('8.5')]
+    public static function getCurrent(): Closure
+    {
+    }
 }

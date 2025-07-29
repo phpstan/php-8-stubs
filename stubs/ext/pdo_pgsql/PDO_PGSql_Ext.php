@@ -16,7 +16,13 @@ class PDO_PGSql_Ext
      * @tentative-return-type
      * @return bool
      */
+    #[\Until('8.5')]
     public function pgsqlCopyFromArray(string $tableName, array $rows, string $separator = "\t", string $nullAs = "\\\\N", ?string $fields = null)
+    {
+    }
+    /** @tentative-return-type */
+    #[\Since('8.5')]
+    public function pgsqlCopyFromArray(string $tableName, array|Traversable $rows, string $separator = "\t", string $nullAs = "\\\\N", ?string $fields = null)
     {
     }
     /**

@@ -2850,6 +2850,41 @@ class Php8StubsMap
 			]);
 		}
 
+		if ($phpVersionId >= 80500) {
+			$classes = \array_merge($classes, [
+				'curlsharepersistenthandle' => 'stubs/ext/curl/CurlSharePersistentHandle.php',
+				'intllistformatter' => 'stubs/ext/intl/listformatter/IntlListFormatter.php',
+				'nodiscard' => 'stubs/Zend/NoDiscard.php',
+				'uri\\invaliduriexception' => 'stubs/ext/uri/Uri/InvalidUriException.php',
+				'uri\\rfc3986\\uri' => 'stubs/ext/uri/Uri/Rfc3986/Uri.php',
+				'uri\\uricomparisonmode' => 'stubs/ext/uri/Uri/UriComparisonMode.php',
+				'uri\\uriexception' => 'stubs/ext/uri/Uri/UriException.php',
+				'uri\\whatwg\\invalidurlexception' => 'stubs/ext/uri/Uri/WhatWg/InvalidUrlException.php',
+				'uri\\whatwg\\url' => 'stubs/ext/uri/Uri/WhatWg/Url.php',
+				'uri\\whatwg\\urlvalidationerror' => 'stubs/ext/uri/Uri/WhatWg/UrlValidationError.php',
+				'uri\\whatwg\\urlvalidationerrortype' => 'stubs/ext/uri/Uri/WhatWg/UrlValidationErrorType.php',
+			]);
+
+			$functions = \array_merge($functions, [
+				'array_first' => 'stubs/ext/standard/array_first.php',
+				'array_last' => 'stubs/ext/standard/array_last.php',
+				'clone' => 'stubs/Zend/clone.php',
+				'curl_multi_get_handles' => 'stubs/ext/curl/curl_multi_get_handles.php',
+				'curl_share_init_persistent' => 'stubs/ext/curl/curl_share_init_persistent.php',
+				'enchant_dict_remove' => 'stubs/ext/enchant/enchant_dict_remove.php',
+				'enchant_dict_remove_from_session' => 'stubs/ext/enchant/enchant_dict_remove_from_session.php',
+				'get_error_handler' => 'stubs/Zend/get_error_handler.php',
+				'get_exception_handler' => 'stubs/Zend/get_exception_handler.php',
+				'grapheme_levenshtein' => 'stubs/ext/intl/grapheme_levenshtein.php',
+				'locale_add_likely_subtags' => 'stubs/ext/intl/locale_add_likely_subtags.php',
+				'locale_is_right_to_left' => 'stubs/ext/intl/locale_is_right_to_left.php',
+				'locale_minimize_subtags' => 'stubs/ext/intl/locale_minimize_subtags.php',
+				'opcache_is_script_cached_in_file_cache' => 'stubs/ext/opcache/opcache_is_script_cached_in_file_cache.php',
+				'pg_close_stmt' => 'stubs/ext/pgsql/pg_close_stmt.php',
+				'pg_service' => 'stubs/ext/pgsql/pg_service.php',
+			]);
+		}
+
 		// UPDATE BELONGS HERE
 
 		$this->classes = $classes;

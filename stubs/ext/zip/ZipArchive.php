@@ -798,6 +798,15 @@ class ZipArchive
     #[\Since('8.2')]
     #[\Until('8.3')]
     public const LIBZIP_VERSION = UNKNOWN;
+    /* deprecated in libzip 1.10.0 */
+    #ifdef ZIP_FL_RECOMPRESS
+    /**
+     * @cvalue ZIP_FL_RECOMPRESS
+     * @deprecated
+     */
+    #[\Since('8.3')]
+    #[\Until('8.4')]
+    public const int FL_RECOMPRESS = UNKNOWN;
     /**
      * @tentative-return-type
      * @return (bool | int)
@@ -1198,15 +1207,6 @@ class ZipArchive
      */
     #[\Since('8.3')]
     public const int FL_UNCHANGED = UNKNOWN;
-    /* deprecated in libzip 1.10.0 */
-    #ifdef ZIP_FL_RECOMPRESS
-    /**
-     * @cvalue ZIP_FL_RECOMPRESS
-     * @deprecated
-     */
-    #[\Since('8.3')]
-    #[\Until('8.4')]
-    public const int FL_RECOMPRESS = UNKNOWN;
     /* deprecated in libzip 1.10.0 */
     #ifdef ZIP_FL_RECOMPRESS
     /**

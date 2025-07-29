@@ -9,7 +9,13 @@ class SoapServer
      * @tentative-return-type
      * @return void
      */
+    #[\Until('8.5')]
     public function fault(string $code, string $string, string $actor = "", mixed $details = null, string $name = "")
+    {
+    }
+    /** @tentative-return-type */
+    #[\Since('8.5')]
+    public function fault(string $code, string $string, string $actor = "", mixed $details = null, string $name = "", string $lang = "")
     {
     }
     /**

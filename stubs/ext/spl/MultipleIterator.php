@@ -2,6 +2,34 @@
 
 class MultipleIterator implements \Iterator
 {
+    /**
+     * @var int
+     * @cvalue MIT_NEED_ANY
+     */
+    #[\Since('8.2')]
+    #[\Until('8.4')]
+    public const MIT_NEED_ANY = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue MIT_NEED_ALL
+     */
+    #[\Since('8.2')]
+    #[\Until('8.4')]
+    public const MIT_NEED_ALL = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue MIT_KEYS_NUMERIC
+     */
+    #[\Since('8.2')]
+    #[\Until('8.4')]
+    public const MIT_KEYS_NUMERIC = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue MIT_KEYS_ASSOC
+     */
+    #[\Since('8.2')]
+    #[\Until('8.4')]
+    public const MIT_KEYS_ASSOC = UNKNOWN;
     public function __construct(int $flags = MultipleIterator::MIT_NEED_ALL | MultipleIterator::MIT_KEYS_NUMERIC)
     {
     }
@@ -90,43 +118,15 @@ class MultipleIterator implements \Iterator
     public function __debugInfo()
     {
     }
-    /**
-     * @var int
-     * @cvalue MIT_NEED_ANY
-     */
-    #[\Since('8.2')]
-    #[\Until('8.4')]
-    public const MIT_NEED_ANY = UNKNOWN;
     /** @cvalue MIT_NEED_ANY */
     #[\Since('8.4')]
     public const int MIT_NEED_ANY = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue MIT_NEED_ALL
-     */
-    #[\Since('8.2')]
-    #[\Until('8.4')]
-    public const MIT_NEED_ALL = UNKNOWN;
     /** @cvalue MIT_NEED_ALL */
     #[\Since('8.4')]
     public const int MIT_NEED_ALL = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue MIT_KEYS_NUMERIC
-     */
-    #[\Since('8.2')]
-    #[\Until('8.4')]
-    public const MIT_KEYS_NUMERIC = UNKNOWN;
     /** @cvalue MIT_KEYS_NUMERIC */
     #[\Since('8.4')]
     public const int MIT_KEYS_NUMERIC = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue MIT_KEYS_ASSOC
-     */
-    #[\Since('8.2')]
-    #[\Until('8.4')]
-    public const MIT_KEYS_ASSOC = UNKNOWN;
     /** @cvalue MIT_KEYS_ASSOC */
     #[\Since('8.4')]
     public const int MIT_KEYS_ASSOC = UNKNOWN;

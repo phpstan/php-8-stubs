@@ -13,11 +13,6 @@ final class TokenList implements \IteratorAggregate, \Countable
     private function __construct()
     {
     }
-    /**
-     * @readonly
-     * @virtual
-     */
-    public int $length;
     public function item(int $index): ?string
     {
     }
@@ -39,8 +34,6 @@ final class TokenList implements \IteratorAggregate, \Countable
     public function supports(string $token): bool
     {
     }
-    /** @virtual */
-    public string $value;
     public function count(): int
     {
     }

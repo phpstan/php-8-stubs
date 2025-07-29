@@ -3,6 +3,83 @@
 /** @generate-function-entries */
 class IntlTimeZone
 {
+    /**
+     * @var int
+     * @cvalue TimeZone::SHORT
+     */
+    #[\Since('8.2')]
+    #[\Until('8.4')]
+    public const DISPLAY_SHORT = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue TimeZone::LONG
+     */
+    #[\Since('8.2')]
+    #[\Until('8.4')]
+    public const DISPLAY_LONG = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue TimeZone::SHORT_GENERIC
+     */
+    #[\Since('8.2')]
+    #[\Until('8.4')]
+    public const DISPLAY_SHORT_GENERIC = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue TimeZone::LONG_GENERIC
+     */
+    #[\Since('8.2')]
+    #[\Until('8.4')]
+    public const DISPLAY_LONG_GENERIC = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue TimeZone::SHORT_GMT
+     */
+    #[\Since('8.2')]
+    #[\Until('8.4')]
+    public const DISPLAY_SHORT_GMT = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue TimeZone::LONG_GMT
+     */
+    #[\Since('8.2')]
+    #[\Until('8.4')]
+    public const DISPLAY_LONG_GMT = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue TimeZone::SHORT_COMMONLY_USED
+     */
+    #[\Since('8.2')]
+    #[\Until('8.4')]
+    public const DISPLAY_SHORT_COMMONLY_USED = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue TimeZone::GENERIC_LOCATION
+     */
+    #[\Since('8.2')]
+    #[\Until('8.4')]
+    public const DISPLAY_GENERIC_LOCATION = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue UCAL_ZONE_TYPE_ANY
+     */
+    #[\Since('8.2')]
+    #[\Until('8.4')]
+    public const TYPE_ANY = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue UCAL_ZONE_TYPE_CANONICAL
+     */
+    #[\Since('8.2')]
+    #[\Until('8.4')]
+    public const TYPE_CANONICAL = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue UCAL_ZONE_TYPE_CANONICAL_LOCATION
+     */
+    #[\Since('8.2')]
+    #[\Until('8.4')]
+    public const TYPE_CANONICAL_LOCATION = UNKNOWN;
     private function __construct()
     {
     }
@@ -212,113 +289,36 @@ class IntlTimeZone
     public function useDaylightTime()
     {
     }
-    /**
-     * @var int
-     * @cvalue TimeZone::SHORT
-     */
-    #[\Since('8.2')]
-    #[\Until('8.4')]
-    public const DISPLAY_SHORT = UNKNOWN;
     /** @cvalue TimeZone::SHORT */
     #[\Since('8.4')]
     public const int DISPLAY_SHORT = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue TimeZone::LONG
-     */
-    #[\Since('8.2')]
-    #[\Until('8.4')]
-    public const DISPLAY_LONG = UNKNOWN;
     /** @cvalue TimeZone::LONG */
     #[\Since('8.4')]
     public const int DISPLAY_LONG = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue TimeZone::SHORT_GENERIC
-     */
-    #[\Since('8.2')]
-    #[\Until('8.4')]
-    public const DISPLAY_SHORT_GENERIC = UNKNOWN;
     /** @cvalue TimeZone::SHORT_GENERIC */
     #[\Since('8.4')]
     public const int DISPLAY_SHORT_GENERIC = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue TimeZone::LONG_GENERIC
-     */
-    #[\Since('8.2')]
-    #[\Until('8.4')]
-    public const DISPLAY_LONG_GENERIC = UNKNOWN;
     /** @cvalue TimeZone::LONG_GENERIC */
     #[\Since('8.4')]
     public const int DISPLAY_LONG_GENERIC = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue TimeZone::SHORT_GMT
-     */
-    #[\Since('8.2')]
-    #[\Until('8.4')]
-    public const DISPLAY_SHORT_GMT = UNKNOWN;
     /** @cvalue TimeZone::SHORT_GMT */
     #[\Since('8.4')]
     public const int DISPLAY_SHORT_GMT = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue TimeZone::LONG_GMT
-     */
-    #[\Since('8.2')]
-    #[\Until('8.4')]
-    public const DISPLAY_LONG_GMT = UNKNOWN;
     /** @cvalue TimeZone::LONG_GMT */
     #[\Since('8.4')]
     public const int DISPLAY_LONG_GMT = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue TimeZone::SHORT_COMMONLY_USED
-     */
-    #[\Since('8.2')]
-    #[\Until('8.4')]
-    public const DISPLAY_SHORT_COMMONLY_USED = UNKNOWN;
     /** @cvalue TimeZone::SHORT_COMMONLY_USED */
     #[\Since('8.4')]
     public const int DISPLAY_SHORT_COMMONLY_USED = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue TimeZone::GENERIC_LOCATION
-     */
-    #[\Since('8.2')]
-    #[\Until('8.4')]
-    public const DISPLAY_GENERIC_LOCATION = UNKNOWN;
     /** @cvalue TimeZone::GENERIC_LOCATION */
     #[\Since('8.4')]
     public const int DISPLAY_GENERIC_LOCATION = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCAL_ZONE_TYPE_ANY
-     */
-    #[\Since('8.2')]
-    #[\Until('8.4')]
-    public const TYPE_ANY = UNKNOWN;
     /** @cvalue UCAL_ZONE_TYPE_ANY */
     #[\Since('8.4')]
     public const int TYPE_ANY = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCAL_ZONE_TYPE_CANONICAL
-     */
-    #[\Since('8.2')]
-    #[\Until('8.4')]
-    public const TYPE_CANONICAL = UNKNOWN;
     /** @cvalue UCAL_ZONE_TYPE_CANONICAL */
     #[\Since('8.4')]
     public const int TYPE_CANONICAL = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue UCAL_ZONE_TYPE_CANONICAL_LOCATION
-     */
-    #[\Since('8.2')]
-    #[\Until('8.4')]
-    public const TYPE_CANONICAL_LOCATION = UNKNOWN;
     /** @cvalue UCAL_ZONE_TYPE_CANONICAL_LOCATION */
     #[\Since('8.4')]
     public const int TYPE_CANONICAL_LOCATION = UNKNOWN;

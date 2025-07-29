@@ -10,6 +10,12 @@ function ftp_set_option($ftp, int $option, $value): bool
 }
 /** @param int|bool $value */
 #[\Since('8.1')]
+#[\Until('8.5')]
 function ftp_set_option(\FTP\Connection $ftp, int $option, $value): bool
+{
+}
+/** @param int|bool $value */
+#[\Since('8.5')]
+function ftp_set_option(\FTP\Connection $ftp, int $option, $value): true
 {
 }

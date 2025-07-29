@@ -11,6 +11,34 @@ class SplFileObject extends \SplFileInfo implements \RecursiveIterator, \Seekabl
     public function fputcsv(array $fields, string $separator = ",", string $enclosure = "\"", string $escape = "\\")
     {
     }
+    /**
+     * @var int
+     * @cvalue SPL_FILE_OBJECT_DROP_NEW_LINE
+     */
+    #[\Since('8.2')]
+    #[\Until('8.4')]
+    public const DROP_NEW_LINE = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SPL_FILE_OBJECT_READ_AHEAD
+     */
+    #[\Since('8.2')]
+    #[\Until('8.4')]
+    public const READ_AHEAD = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SPL_FILE_OBJECT_SKIP_EMPTY
+     */
+    #[\Since('8.2')]
+    #[\Until('8.4')]
+    public const SKIP_EMPTY = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SPL_FILE_OBJECT_READ_CSV
+     */
+    #[\Since('8.2')]
+    #[\Until('8.4')]
+    public const READ_CSV = UNKNOWN;
     /** @param resource|null $context */
     public function __construct(string $filename, string $mode = "r", bool $useIncludePath = false, $context = null)
     {
@@ -130,7 +158,13 @@ class SplFileObject extends \SplFileInfo implements \RecursiveIterator, \Seekabl
      * @tentative-return-type
      * @return (int | false)
      */
+    #[\Until('8.5')]
     public function fwrite(string $data, int $length = 0)
+    {
+    }
+    /** @tentative-return-type */
+    #[\Since('8.5')]
+    public function fwrite(string $data, ?int $length = null)
     {
     }
     /**
@@ -229,43 +263,15 @@ class SplFileObject extends \SplFileInfo implements \RecursiveIterator, \Seekabl
     public function __toString(): string
     {
     }
-    /**
-     * @var int
-     * @cvalue SPL_FILE_OBJECT_DROP_NEW_LINE
-     */
-    #[\Since('8.2')]
-    #[\Until('8.4')]
-    public const DROP_NEW_LINE = UNKNOWN;
     /** @cvalue SPL_FILE_OBJECT_DROP_NEW_LINE */
     #[\Since('8.4')]
     public const int DROP_NEW_LINE = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue SPL_FILE_OBJECT_READ_AHEAD
-     */
-    #[\Since('8.2')]
-    #[\Until('8.4')]
-    public const READ_AHEAD = UNKNOWN;
     /** @cvalue SPL_FILE_OBJECT_READ_AHEAD */
     #[\Since('8.4')]
     public const int READ_AHEAD = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue SPL_FILE_OBJECT_SKIP_EMPTY
-     */
-    #[\Since('8.2')]
-    #[\Until('8.4')]
-    public const SKIP_EMPTY = UNKNOWN;
     /** @cvalue SPL_FILE_OBJECT_SKIP_EMPTY */
     #[\Since('8.4')]
     public const int SKIP_EMPTY = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue SPL_FILE_OBJECT_READ_CSV
-     */
-    #[\Since('8.2')]
-    #[\Until('8.4')]
-    public const READ_CSV = UNKNOWN;
     /** @cvalue SPL_FILE_OBJECT_READ_CSV */
     #[\Since('8.4')]
     public const int READ_CSV = UNKNOWN;

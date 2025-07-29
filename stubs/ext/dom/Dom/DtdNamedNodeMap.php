@@ -5,11 +5,6 @@ namespace Dom;
 #[\Since('8.4')]
 class DtdNamedNodeMap implements \IteratorAggregate, \Countable
 {
-    /**
-     * @readonly
-     * @virtual
-     */
-    public int $length;
     /** @implementation-alias DOMNamedNodeMap::item */
     public function item(int $index): Entity|Notation|null
     {

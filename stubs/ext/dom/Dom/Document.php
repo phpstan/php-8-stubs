@@ -5,34 +5,17 @@ namespace Dom;
 #[\Since('8.4')]
 abstract class Document extends \Dom\Node implements \Dom\ParentNode
 {
-    /** @readonly */
-    public Implementation $implementation;
-    /** @virtual */
-    public string $URL;
-    /** @virtual */
-    public string $documentURI;
-    /** @virtual */
-    public string $characterSet;
-    /** @virtual */
-    public string $charset;
-    /** @virtual */
-    public string $inputEncoding;
-    /**
-     * @readonly
-     * @virtual
-     */
-    public ?DocumentType $doctype;
-    /**
-     * @readonly
-     * @virtual
-     */
-    public ?Element $documentElement;
     /** @implementation-alias Dom\Element::getElementsByTagName */
     public function getElementsByTagName(string $qualifiedName): HTMLCollection
     {
     }
     /** @implementation-alias Dom\Element::getElementsByTagNameNS */
     public function getElementsByTagNameNS(?string $namespace, string $localName): HTMLCollection
+    {
+    }
+    /** @implementation-alias Dom\Element::getElementsByClassName */
+    #[\Since('8.5')]
+    public function getElementsByClassName(string $classNames): HTMLCollection
     {
     }
     public function createElement(string $localName): Element
@@ -74,21 +57,6 @@ abstract class Document extends \Dom\Node implements \Dom\ParentNode
     public function createAttributeNS(?string $namespace, string $qualifiedName): Attr
     {
     }
-    /**
-     * @readonly
-     * @virtual
-     */
-    public ?Element $firstElementChild;
-    /**
-     * @readonly
-     * @virtual
-     */
-    public ?Element $lastElementChild;
-    /**
-     * @readonly
-     * @virtual
-     */
-    public int $childElementCount;
     /** @implementation-alias DOMDocument::getElementById */
     public function getElementById(string $elementId): ?Element
     {
@@ -137,13 +105,4 @@ abstract class Document extends \Dom\Node implements \Dom\ParentNode
     public function querySelectorAll(string $selectors): NodeList
     {
     }
-    /** @virtual */
-    public ?HTMLElement $body;
-    /**
-     * @readonly
-     * @virtual
-     */
-    public ?HTMLElement $head;
-    /** @virtual */
-    public string $title;
 }

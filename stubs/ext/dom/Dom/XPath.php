@@ -7,13 +7,6 @@ namespace Dom;
 #[\Since('8.4')]
 final class XPath
 {
-    /**
-     * @readonly
-     * @virtual
-     */
-    public Document $document;
-    /** @virtual */
-    public bool $registerNodeNamespaces;
     public function __construct(Document $document, bool $registerNodeNS = true)
     {
     }
