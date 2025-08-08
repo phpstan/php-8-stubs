@@ -100,12 +100,20 @@ class IntlTimeZone
     {
     }
     /**
-     * @param (IntlTimeZone | string | int | float | null) $countryOrRawOffset
      * @tentative-return-type
      * @alias intltz_create_enumeration
      * @return (IntlIterator | false)
      */
+    #[\Until('8.5')]
     public static function createEnumeration($countryOrRawOffset = null)
+    {
+    }
+    /**
+     * @tentative-return-type
+     * @alias intltz_create_enumeration
+     */
+    #[\Since('8.5')]
+    public static function createEnumeration(string|int|null $countryOrRawOffset = null)
     {
     }
     /**
