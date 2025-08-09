@@ -12,6 +12,7 @@ function finfo_close($finfo): bool
 function finfo_close(\finfo $finfo): bool
 {
 }
+#[\Deprecated(since: '8.5', message: 'as finfo objects are freed automatically')]
 #[\Since('8.5')]
 function finfo_close(\finfo $finfo): true
 {

@@ -280,12 +280,20 @@ class IntlCalendar
     {
     }
     /**
-     * @param (IntlTimeZone | DateTimeZone | string | null) $timezone
      * @tentative-return-type
      * @alias intlcal_create_instance
      * @return (IntlCalendar | null)
      */
+    #[\Until('8.5')]
     public static function createInstance($timezone = null, ?string $locale = null)
+    {
+    }
+    /**
+     * @tentative-return-type
+     * @alias intlcal_create_instance
+     */
+    #[\Since('8.5')]
+    public static function createInstance(IntlTimeZone|DateTimeZone|string|null $timezone = null, ?string $locale = null)
     {
     }
     /**
@@ -634,12 +642,18 @@ class IntlCalendar
     {
     }
     /**
-     * @param (IntlTimeZone | DateTimeZone | string | null) $timezone
      * @tentative-return-type
-     * @alias intlcal_set_time_zone
      * @return bool
      */
+    #[\Until('8.5')]
     public function setTimeZone($timezone)
+    {
+    }
+    /**
+     * @tentative-return-type
+     */
+    #[\Since('8.5')]
+    public function setTimeZone(IntlTimeZone|DateTimeZone|string|null $timezone)
     {
     }
     /**
