@@ -556,7 +556,7 @@ $command = new class(
 		if (count($oldAttribGroups) !== count($newAttribGroups)) {
 			return $this->stmtDiff($old, $new, $updateTo);
 		}
-		foreach ($oldAttribGroups as $groupN => $oldGroups) {
+		foreach ($oldAttribGroups as $groupN => $oldGroup) {
 			$oldAttribs = $oldGroup->attrs;
 			$newAttribs = $newAttribGroups[$groupN]->attrs;
 			if (count($oldAttribs) !== count($newAttribs)) {
