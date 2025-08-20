@@ -3,6 +3,7 @@
 name: "Update stubs"
 on:
   workflow_dispatch:
+  pull_request:
   push:
     branches:
       - "main"
@@ -115,6 +116,7 @@ jobs:
         with:
           version: ${{ steps.previous_tag.outputs.tag }}
       - name: "Commit changes"
+        if: github.event_name != 'pull_request'
         uses: "stefanzweifel/git-auto-commit-action@v6"
         id: "commit"
         with:
@@ -123,3 +125,6 @@ jobs:
           commit_user_email: "ondrej+phpstanbot@mirtes.cz"
           commit_author: "phpstan-bot <ondrej+phpstanbot@mirtes.cz>"
           tagging_message: ${{ steps.semvers.outputs.patch }}
+      - name: "Show diff"
+        if: github.event_name == 'pull_request'
+        run: "git diff"
