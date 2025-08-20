@@ -565,7 +565,7 @@ $command = new class(
 		foreach ($newAttribGroups as $group) {
 			foreach ($group->attrs as $attrib) {
 				if ($attrib->name->toLowerString() !== 'since' && $attrib->name->toLowerString() !== 'until') {
-					$oldAttribs[] = $attrib;
+					$newAttribs[] = $attrib;
 				}
 			}
 		}
@@ -573,7 +573,7 @@ $command = new class(
 			return $this->stmtDiff($old, $new, $updateTo);
 		}
 		foreach ($oldAttribs as $idx => $oldAttrib) {
-			$newAttrib = $newAttribs[$attribIdx];
+			$newAttrib = $newAttribs[$idx];
 			if ($oldAttrib->name->name !== $newAttrib->name->name) {
 				return $this->stmtDiff($old, $new, $updateTo);
 			}
