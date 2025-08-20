@@ -1,0 +1,33 @@
+# https://help.github.com/en/categories/automating-your-workflow-with-github-actions
+
+name: "Update stubs"
+on:
+  pull_request:
+    paths:
+      - 'extractor/**'
+      - '.github/workflows/phpstan.yml'
+  push:
+    branches:
+      - "main"
+    paths:
+      - 'extractor/**'
+      - '.github/workflows/phpstan.yml'
+
+jobs:
+  phpstan:
+    name: "PHPStan"
+    runs-on: "ubuntu-latest"
+    steps:
+      - name: "Checkout"
+        uses: actions/checkout@v4
+      - name: "Install PHP"
+        uses: "shivammathur/setup-php@v2"
+        with:
+          coverage: "none"
+          php-version: "8.3"
+      - name: "Install dependencies"
+        run: "composer install"
+        working-directory: ./extractor
+      - name: "Run PHPStan"
+        working-directory: ./extractor
+        run: "vendor/bin/phpstan"
