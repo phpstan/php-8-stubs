@@ -578,6 +578,9 @@ $command = new class(
 						if ($oldArg->name->name !== $newArg->name->name) {
 							return $this->stmtDiff($old, $new, $updateTo);
 						}
+						if ($oldArg->name->name === 'Since' || $oldArg->name->name === 'Until') {
+							continue;
+						}
 					} elseif ($oldArg->name !== null || $newArg->name !== null) {
 						return $this->stmtDiff($old, $new, $updateTo);
 					}
