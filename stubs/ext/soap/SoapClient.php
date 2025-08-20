@@ -67,7 +67,13 @@ class SoapClient
      * @tentative-return-type
      * @return (string | null)
      */
+    #[\Until('8.5')]
     public function __doRequest(string $request, string $location, string $action, int $version, bool $oneWay = false)
+    {
+    }
+    /** @tentative-return-type */
+    #[\Since('8.5')]
+    public function __doRequest(string $request, string $location, string $action, int $version, bool $oneWay = false, ?string $uriParserClass = null)
     {
     }
     /**
