@@ -5,6 +5,26 @@ function htmlspecialchars_decode(string $string, int $flags = ENT_COMPAT): strin
 {
 }
 #[\Since('8.1')]
+#[\Until('8.2')]
+function htmlspecialchars_decode(string $string, int $flags = ENT_QUOTES | ENT_SUBSTITUTE | ENT_HTML401): string
+{
+}
+#[\Since('8.2')]
+#[\Until('8.3')]
+function htmlspecialchars_decode(string $string, int $flags = ENT_QUOTES | ENT_SUBSTITUTE | ENT_HTML401): string
+{
+}
+#[\Since('8.3')]
+#[\Until('8.4')]
+function htmlspecialchars_decode(string $string, int $flags = ENT_QUOTES | ENT_SUBSTITUTE | ENT_HTML401): string
+{
+}
+#[\Since('8.4')]
+#[\Until('8.5')]
+function htmlspecialchars_decode(string $string, int $flags = ENT_QUOTES | ENT_SUBSTITUTE | ENT_HTML401): string
+{
+}
+#[\Since('8.5')]
 function htmlspecialchars_decode(string $string, int $flags = ENT_QUOTES | ENT_SUBSTITUTE | ENT_HTML401): string
 {
 }

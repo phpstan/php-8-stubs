@@ -10,6 +10,12 @@ function odbc_field_precision($statement, int $field): int|false
 }
 /** @alias odbc_field_len */
 #[\Since('8.4')]
+#[\Until('8.5')]
+function odbc_field_precision(\Odbc\Result $statement, int $field): int|false
+{
+}
+/** @alias odbc_field_len */
+#[\Since('8.5')]
 function odbc_field_precision(\Odbc\Result $statement, int $field): int|false
 {
 }

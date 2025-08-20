@@ -6,6 +6,11 @@ function odbc_fetch_array($statement, int $row = -1): array|false
 {
 }
 #[\Since('8.4')]
+#[\Until('8.5')]
+function odbc_fetch_array(\Odbc\Result $statement, ?int $row = null): array|false
+{
+}
+#[\Since('8.5')]
 function odbc_fetch_array(\Odbc\Result $statement, ?int $row = null): array|false
 {
 }

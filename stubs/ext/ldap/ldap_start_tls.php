@@ -10,6 +10,34 @@ function ldap_start_tls($ldap): bool
 #endif
 #ifdef HAVE_LDAP_START_TLS_S
 #[\Since('8.1')]
+#[\Until('8.2')]
+function ldap_start_tls(\LDAP\Connection $ldap): bool
+{
+}
+#endif
+#ifdef HAVE_LDAP_START_TLS_S
+#[\Since('8.2')]
+#[\Until('8.3')]
+function ldap_start_tls(\LDAP\Connection $ldap): bool
+{
+}
+#endif
+#ifdef HAVE_LDAP_START_TLS_S
+#[\Since('8.3')]
+#[\Until('8.4')]
+function ldap_start_tls(\LDAP\Connection $ldap): bool
+{
+}
+#endif
+#ifdef HAVE_LDAP_START_TLS_S
+#[\Since('8.4')]
+#[\Until('8.5')]
+function ldap_start_tls(\LDAP\Connection $ldap): bool
+{
+}
+#endif
+#ifdef HAVE_LDAP_START_TLS_S
+#[\Since('8.5')]
 function ldap_start_tls(\LDAP\Connection $ldap): bool
 {
 }

@@ -9,6 +9,14 @@ function openssl_csr_sign(\OpenSSLCertificateSigningRequest|string $csr, \OpenSS
  * @param OpenSSLAsymmetricKey|OpenSSLCertificate|array|string $private_key
  */
 #[\Since('8.4')]
+#[\Until('8.5')]
+function openssl_csr_sign(\OpenSSLCertificateSigningRequest|string $csr, \OpenSSLCertificate|string|null $ca_certificate, #[\SensitiveParameter] $private_key, int $days, ?array $options = null, int $serial = 0, ?string $serial_hex = null): \OpenSSLCertificate|false
+{
+}
+/**
+ * @param OpenSSLAsymmetricKey|OpenSSLCertificate|array|string $private_key
+ */
+#[\Since('8.5')]
 function openssl_csr_sign(\OpenSSLCertificateSigningRequest|string $csr, \OpenSSLCertificate|string|null $ca_certificate, #[\SensitiveParameter] $private_key, int $days, ?array $options = null, int $serial = 0, ?string $serial_hex = null): \OpenSSLCertificate|false
 {
 }

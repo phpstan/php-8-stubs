@@ -12,6 +12,11 @@ class XMLWriter
     {
     }
     #[\Since('8.4')]
+    #[\Until('8.5')]
+    public static function toUri(string $uri): static
+    {
+    }
+    #[\Since('8.5')]
     public static function toUri(string $uri): static
     {
     }
@@ -25,11 +30,22 @@ class XMLWriter
     {
     }
     #[\Since('8.4')]
+    #[\Until('8.5')]
+    public static function toMemory(): static
+    {
+    }
+    #[\Since('8.5')]
     public static function toMemory(): static
     {
     }
     /** @param resource $stream */
     #[\Since('8.4')]
+    #[\Until('8.5')]
+    public static function toStream($stream): static
+    {
+    }
+    /** @param resource $stream */
+    #[\Since('8.5')]
     public static function toStream($stream): static
     {
     }

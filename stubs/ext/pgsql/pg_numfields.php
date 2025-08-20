@@ -14,6 +14,42 @@ function pg_numfields($result): int
  * @deprecated
  */
 #[\Since('8.1')]
+#[\Until('8.2')]
+function pg_numfields(\PgSql\Result $result): int
+{
+}
+/**
+ * @alias pg_num_fields
+ * @deprecated
+ */
+#[\Since('8.2')]
+#[\Until('8.3')]
+function pg_numfields(\PgSql\Result $result): int
+{
+}
+/**
+ * @alias pg_num_fields
+ * @deprecated
+ */
+#[\Since('8.3')]
+#[\Until('8.4')]
+function pg_numfields(\PgSql\Result $result): int
+{
+}
+/**
+ * @alias pg_num_fields
+ */
+#[\Deprecated(since: '8.0', message: 'use pg_num_fields() instead')]
+#[\Since('8.4')]
+#[\Until('8.5')]
+function pg_numfields(\PgSql\Result $result): int
+{
+}
+/**
+ * @alias pg_num_fields
+ */
+#[\Deprecated(since: '8.0', message: 'use pg_num_fields() instead')]
+#[\Since('8.5')]
 function pg_numfields(\PgSql\Result $result): int
 {
 }

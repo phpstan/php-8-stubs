@@ -33,10 +33,20 @@ final class tidyNode
     {
     }
     #[\Since('8.4')]
+    #[\Until('8.5')]
+    public function getPreviousSibling(): ?tidyNode
+    {
+    }
+    #[\Since('8.5')]
     public function getPreviousSibling(): ?tidyNode
     {
     }
     #[\Since('8.4')]
+    #[\Until('8.5')]
+    public function getNextSibling(): ?tidyNode
+    {
+    }
+    #[\Since('8.5')]
     public function getNextSibling(): ?tidyNode
     {
     }

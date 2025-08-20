@@ -7,6 +7,16 @@ class ReflectionEnum extends \ReflectionClass
     public function getBackingType(): ?ReflectionType
     {
     }
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public function getBackingType(): ?ReflectionNamedType
+    {
+    }
+    #[\Since('8.3')]
+    #[\Until('8.4')]
+    public function getBackingType(): ?ReflectionNamedType
+    {
+    }
     public function __construct(object|string $objectOrClass)
     {
     }
@@ -22,7 +32,12 @@ class ReflectionEnum extends \ReflectionClass
     public function isBacked(): bool
     {
     }
-    #[\Since('8.2')]
+    #[\Since('8.4')]
+    #[\Until('8.5')]
+    public function getBackingType(): ?ReflectionNamedType
+    {
+    }
+    #[\Since('8.5')]
     public function getBackingType(): ?ReflectionNamedType
     {
     }

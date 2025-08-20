@@ -202,6 +202,15 @@ class IntlTimeZone
      * @alias intltz_get_iana_id
      */
     #[\Since('8.4')]
+    #[\Until('8.5')]
+    public static function getIanaID(string $timezoneId): string|false
+    {
+    }
+    #if U_ICU_VERSION_MAJOR_NUM >= 74
+    /**
+     * @alias intltz_get_iana_id
+     */
+    #[\Since('8.5')]
     public static function getIanaID(string $timezoneId): string|false
     {
     }

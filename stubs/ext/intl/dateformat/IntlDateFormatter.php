@@ -22,6 +22,63 @@ class IntlDateFormatter
     {
     }
     /**
+     * @param IntlTimeZone|DateTimeZone|string|null $timezone
+     * @param IntlCalendar|int|null $calendar
+     */
+    #[\Since('8.1')]
+    #[\Until('8.2')]
+    public function __construct(?string $locale, int $dateType = IntlDateFormatter::FULL, int $timeType = IntlDateFormatter::FULL, $timezone = null, $calendar = null, ?string $pattern = null)
+    {
+    }
+    /**
+     * @param IntlTimeZone|DateTimeZone|string|null $timezone
+     * @tentative-return-type
+     * @alias datefmt_create
+     */
+    #[\Since('8.1')]
+    #[\Until('8.2')]
+    public static function create(?string $locale, int $dateType = IntlDateFormatter::FULL, int $timeType = IntlDateFormatter::FULL, $timezone = null, IntlCalendar|int|null $calendar = null, ?string $pattern = null)
+    {
+    }
+    /**
+     * @param IntlTimeZone|DateTimeZone|string|null $timezone
+     * @param IntlCalendar|int|null $calendar
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public function __construct(?string $locale, int $dateType = IntlDateFormatter::FULL, int $timeType = IntlDateFormatter::FULL, $timezone = null, $calendar = null, ?string $pattern = null)
+    {
+    }
+    /**
+     * @param IntlTimeZone|DateTimeZone|string|null $timezone
+     * @tentative-return-type
+     * @alias datefmt_create
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public static function create(?string $locale, int $dateType = IntlDateFormatter::FULL, int $timeType = IntlDateFormatter::FULL, $timezone = null, IntlCalendar|int|null $calendar = null, ?string $pattern = null)
+    {
+    }
+    /**
+     * @param IntlTimeZone|DateTimeZone|string|null $timezone
+     * @param IntlCalendar|int|null $calendar
+     */
+    #[\Since('8.3')]
+    #[\Until('8.4')]
+    public function __construct(?string $locale, int $dateType = IntlDateFormatter::FULL, int $timeType = IntlDateFormatter::FULL, $timezone = null, $calendar = null, ?string $pattern = null)
+    {
+    }
+    /**
+     * @param IntlTimeZone|DateTimeZone|string|null $timezone
+     * @tentative-return-type
+     * @alias datefmt_create
+     */
+    #[\Since('8.3')]
+    #[\Until('8.4')]
+    public static function create(?string $locale, int $dateType = IntlDateFormatter::FULL, int $timeType = IntlDateFormatter::FULL, $timezone = null, IntlCalendar|int|null $calendar = null, ?string $pattern = null)
+    {
+    }
+    /**
      * @var int
      * @cvalue UDAT_FULL
      */
@@ -102,7 +159,7 @@ class IntlDateFormatter
      * @param IntlTimeZone|DateTimeZone|string|null $timezone
      * @param IntlCalendar|int|null $calendar
      */
-    #[\Since('8.1')]
+    #[\Since('8.4')]
     #[\Until('8.5')]
     public function __construct(?string $locale, int $dateType = IntlDateFormatter::FULL, int $timeType = IntlDateFormatter::FULL, $timezone = null, $calendar = null, ?string $pattern = null)
     {
@@ -119,7 +176,7 @@ class IntlDateFormatter
      * @tentative-return-type
      * @alias datefmt_create
      */
-    #[\Since('8.1')]
+    #[\Since('8.4')]
     #[\Until('8.5')]
     public static function create(?string $locale, int $dateType = IntlDateFormatter::FULL, int $timeType = IntlDateFormatter::FULL, $timezone = null, IntlCalendar|int|null $calendar = null, ?string $pattern = null)
     {
@@ -275,6 +332,14 @@ class IntlDateFormatter
      * @param int $offset
      */
     #[\Since('8.4')]
+    #[\Until('8.5')]
+    public function parseToCalendar(string $string, &$offset = null): int|float|false
+    {
+    }
+    /**
+     * @param int $offset
+     */
+    #[\Since('8.5')]
     public function parseToCalendar(string $string, &$offset = null): int|float|false
     {
     }

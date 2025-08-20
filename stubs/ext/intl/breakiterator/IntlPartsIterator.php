@@ -2,6 +2,24 @@
 
 class IntlPartsIterator extends \IntlIterator
 {
+    /** @tentative-return-type */
+    #[\Since('8.1')]
+    #[\Until('8.2')]
+    public function getRuleStatus(): int
+    {
+    }
+    /** @tentative-return-type */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public function getRuleStatus(): int
+    {
+    }
+    /** @tentative-return-type */
+    #[\Since('8.3')]
+    #[\Until('8.4')]
+    public function getRuleStatus(): int
+    {
+    }
     /**
      * @var int
      * @cvalue PARTS_ITERATOR_KEY_SEQUENTIAL
@@ -31,7 +49,13 @@ class IntlPartsIterator extends \IntlIterator
     {
     }
     /** @tentative-return-type */
-    #[\Since('8.1')]
+    #[\Since('8.4')]
+    #[\Until('8.5')]
+    public function getRuleStatus(): int
+    {
+    }
+    /** @tentative-return-type */
+    #[\Since('8.5')]
     public function getRuleStatus(): int
     {
     }

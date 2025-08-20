@@ -35,10 +35,20 @@ class DOMXPath
     {
     }
     #[\Since('8.4')]
+    #[\Until('8.5')]
+    public function registerPhpFunctionNS(string $namespaceURI, string $name, callable $callable): void
+    {
+    }
+    #[\Since('8.5')]
     public function registerPhpFunctionNS(string $namespaceURI, string $name, callable $callable): void
     {
     }
     #[\Since('8.4')]
+    #[\Until('8.5')]
+    public static function quote(string $str): string
+    {
+    }
+    #[\Since('8.5')]
     public static function quote(string $str): string
     {
     }

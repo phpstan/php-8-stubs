@@ -5,6 +5,16 @@ function intlcal_set_repeated_wall_time_option(\IntlCalendar $calendar, int $opt
 {
 }
 #[\Since('8.3')]
+#[\Until('8.4')]
+function intlcal_set_repeated_wall_time_option(\IntlCalendar $calendar, int $option): true
+{
+}
+#[\Since('8.4')]
+#[\Until('8.5')]
+function intlcal_set_repeated_wall_time_option(\IntlCalendar $calendar, int $option): true
+{
+}
+#[\Since('8.5')]
 function intlcal_set_repeated_wall_time_option(\IntlCalendar $calendar, int $option): true
 {
 }

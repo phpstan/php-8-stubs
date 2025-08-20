@@ -2,14 +2,44 @@
 
 class DateTimeImmutable implements \DateTimeInterface
 {
-    public function __construct(string $datetime = "now", ?DateTimeZone $timezone = null)
-    {
-    }
     #[\Since('8.2')]
+    #[\Until('8.3')]
     public function __serialize(): array
     {
     }
     #[\Since('8.2')]
+    #[\Until('8.3')]
+    public function __unserialize(array $data): void
+    {
+    }
+    #[\Since('8.3')]
+    #[\Until('8.4')]
+    public function __serialize(): array
+    {
+    }
+    #[\Since('8.3')]
+    #[\Until('8.4')]
+    public function __unserialize(array $data): void
+    {
+    }
+    public function __construct(string $datetime = "now", ?DateTimeZone $timezone = null)
+    {
+    }
+    #[\Since('8.4')]
+    #[\Until('8.5')]
+    public function __serialize(): array
+    {
+    }
+    #[\Since('8.5')]
+    public function __serialize(): array
+    {
+    }
+    #[\Since('8.4')]
+    #[\Until('8.5')]
+    public function __unserialize(array $data): void
+    {
+    }
+    #[\Since('8.5')]
     public function __unserialize(array $data): void
     {
     }
@@ -37,6 +67,12 @@ class DateTimeImmutable implements \DateTimeInterface
     }
     /** @tentative-return-type */
     #[\Since('8.4')]
+    #[\Until('8.5')]
+    public static function createFromTimestamp(int|float $timestamp): static
+    {
+    }
+    /** @tentative-return-type */
+    #[\Since('8.5')]
     public static function createFromTimestamp(int|float $timestamp): static
     {
     }
@@ -83,6 +119,14 @@ class DateTimeImmutable implements \DateTimeInterface
      * @alias DateTime::getMicrosecond
      */
     #[\Since('8.4')]
+    #[\Until('8.5')]
+    public function getMicrosecond(): int
+    {
+    }
+    /**
+     * @alias DateTime::getMicrosecond
+     */
+    #[\Since('8.5')]
     public function getMicrosecond(): int
     {
     }
@@ -98,6 +142,13 @@ class DateTimeImmutable implements \DateTimeInterface
      * @tentative-return-type
      * @return (DateTimeImmutable | false)
      */
+    #[\Until('8.5')]
+    public function modify(string $modifier)
+    {
+    }
+    /** @tentative-return-type */
+    #[\NoDiscard(message: "as DateTimeImmutable::modify() does not modify the object itself")]
+    #[\Since('8.5')]
     public function modify(string $modifier)
     {
     }
@@ -105,6 +156,13 @@ class DateTimeImmutable implements \DateTimeInterface
      * @tentative-return-type
      * @return DateTimeImmutable
      */
+    #[\Until('8.5')]
+    public function add(DateInterval $interval)
+    {
+    }
+    /** @tentative-return-type */
+    #[\NoDiscard(message: "as DateTimeImmutable::add() does not modify the object itself")]
+    #[\Since('8.5')]
     public function add(DateInterval $interval)
     {
     }
@@ -112,6 +170,13 @@ class DateTimeImmutable implements \DateTimeInterface
      * @tentative-return-type
      * @return DateTimeImmutable
      */
+    #[\Until('8.5')]
+    public function sub(DateInterval $interval)
+    {
+    }
+    /** @tentative-return-type */
+    #[\NoDiscard(message: "as DateTimeImmutable::sub() does not modify the object itself")]
+    #[\Since('8.5')]
     public function sub(DateInterval $interval)
     {
     }
@@ -119,6 +184,13 @@ class DateTimeImmutable implements \DateTimeInterface
      * @tentative-return-type
      * @return DateTimeImmutable
      */
+    #[\Until('8.5')]
+    public function setTimezone(DateTimeZone $timezone)
+    {
+    }
+    /** @tentative-return-type */
+    #[\NoDiscard(message: "as DateTimeImmutable::setTimezone() does not modify the object itself")]
+    #[\Since('8.5')]
     public function setTimezone(DateTimeZone $timezone)
     {
     }
@@ -126,6 +198,13 @@ class DateTimeImmutable implements \DateTimeInterface
      * @tentative-return-type
      * @return DateTimeImmutable
      */
+    #[\Until('8.5')]
+    public function setTime(int $hour, int $minute, int $second = 0, int $microsecond = 0)
+    {
+    }
+    /** @tentative-return-type */
+    #[\NoDiscard(message: "as DateTimeImmutable::setTime() does not modify the object itself")]
+    #[\Since('8.5')]
     public function setTime(int $hour, int $minute, int $second = 0, int $microsecond = 0)
     {
     }
@@ -133,6 +212,13 @@ class DateTimeImmutable implements \DateTimeInterface
      * @tentative-return-type
      * @return DateTimeImmutable
      */
+    #[\Until('8.5')]
+    public function setDate(int $year, int $month, int $day)
+    {
+    }
+    /** @tentative-return-type */
+    #[\NoDiscard(message: "as DateTimeImmutable::setDate() does not modify the object itself")]
+    #[\Since('8.5')]
     public function setDate(int $year, int $month, int $day)
     {
     }
@@ -140,6 +226,13 @@ class DateTimeImmutable implements \DateTimeInterface
      * @tentative-return-type
      * @return DateTimeImmutable
      */
+    #[\Until('8.5')]
+    public function setISODate(int $year, int $week, int $dayOfWeek = 1)
+    {
+    }
+    /** @tentative-return-type */
+    #[\NoDiscard(message: "as DateTimeImmutable::setISODate() does not modify the object itself")]
+    #[\Since('8.5')]
     public function setISODate(int $year, int $week, int $dayOfWeek = 1)
     {
     }
@@ -147,10 +240,23 @@ class DateTimeImmutable implements \DateTimeInterface
      * @tentative-return-type
      * @return DateTimeImmutable
      */
+    #[\Until('8.5')]
+    public function setTimestamp(int $timestamp)
+    {
+    }
+    /** @tentative-return-type */
+    #[\NoDiscard(message: "as DateTimeImmutable::setTimestamp() does not modify the object itself")]
+    #[\Since('8.5')]
     public function setTimestamp(int $timestamp)
     {
     }
     #[\Since('8.4')]
+    #[\Until('8.5')]
+    public function setMicrosecond(int $microsecond): static
+    {
+    }
+    #[\NoDiscard(message: "as DateTimeImmutable::setMicrosecond() does not modify the object itself")]
+    #[\Since('8.5')]
     public function setMicrosecond(int $microsecond): static
     {
     }

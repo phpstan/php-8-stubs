@@ -6,6 +6,46 @@ class ReflectionClass implements \Reflector
     final private function __clone(): void
     {
     }
+    #[\Since('8.1')]
+    #[\Until('8.2')]
+    private function __clone(): void
+    {
+    }
+    #[\Since('8.1')]
+    #[\Until('8.2')]
+    public function isEnum(): bool
+    {
+    }
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    private function __clone(): void
+    {
+    }
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public function isEnum(): bool
+    {
+    }
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public function isReadOnly(): bool
+    {
+    }
+    #[\Since('8.3')]
+    #[\Until('8.4')]
+    private function __clone(): void
+    {
+    }
+    #[\Since('8.3')]
+    #[\Until('8.4')]
+    public function isEnum(): bool
+    {
+    }
+    #[\Since('8.3')]
+    #[\Until('8.4')]
+    public function isReadOnly(): bool
+    {
+    }
     /**
      * @var int
      * @cvalue ZEND_ACC_IMPLICIT_ABSTRACT_CLASS
@@ -35,7 +75,12 @@ class ReflectionClass implements \Reflector
     #[\Since('8.2')]
     #[\Until('8.4')]
     public const IS_READONLY = UNKNOWN;
-    #[\Since('8.1')]
+    #[\Since('8.4')]
+    #[\Until('8.5')]
+    private function __clone(): void
+    {
+    }
+    #[\Since('8.5')]
     private function __clone(): void
     {
     }
@@ -248,7 +293,12 @@ class ReflectionClass implements \Reflector
     public function isTrait()
     {
     }
-    #[\Since('8.1')]
+    #[\Since('8.4')]
+    #[\Until('8.5')]
+    public function isEnum(): bool
+    {
+    }
+    #[\Since('8.5')]
     public function isEnum(): bool
     {
     }
@@ -266,7 +316,12 @@ class ReflectionClass implements \Reflector
     public function isFinal()
     {
     }
-    #[\Since('8.2')]
+    #[\Since('8.4')]
+    #[\Until('8.5')]
+    public function isReadOnly(): bool
+    {
+    }
+    #[\Since('8.5')]
     public function isReadOnly(): bool
     {
     }
@@ -306,34 +361,74 @@ class ReflectionClass implements \Reflector
     {
     }
     #[\Since('8.4')]
+    #[\Until('8.5')]
+    public function newLazyGhost(callable $initializer, int $options = 0): object
+    {
+    }
+    #[\Since('8.5')]
     public function newLazyGhost(callable $initializer, int $options = 0): object
     {
     }
     #[\Since('8.4')]
+    #[\Until('8.5')]
+    public function newLazyProxy(callable $factory, int $options = 0): object
+    {
+    }
+    #[\Since('8.5')]
     public function newLazyProxy(callable $factory, int $options = 0): object
     {
     }
     #[\Since('8.4')]
+    #[\Until('8.5')]
+    public function resetAsLazyGhost(object $object, callable $initializer, int $options = 0): void
+    {
+    }
+    #[\Since('8.5')]
     public function resetAsLazyGhost(object $object, callable $initializer, int $options = 0): void
     {
     }
     #[\Since('8.4')]
+    #[\Until('8.5')]
+    public function resetAsLazyProxy(object $object, callable $factory, int $options = 0): void
+    {
+    }
+    #[\Since('8.5')]
     public function resetAsLazyProxy(object $object, callable $factory, int $options = 0): void
     {
     }
     #[\Since('8.4')]
+    #[\Until('8.5')]
+    public function initializeLazyObject(object $object): object
+    {
+    }
+    #[\Since('8.5')]
     public function initializeLazyObject(object $object): object
     {
     }
     #[\Since('8.4')]
+    #[\Until('8.5')]
+    public function isUninitializedLazyObject(object $object): bool
+    {
+    }
+    #[\Since('8.5')]
     public function isUninitializedLazyObject(object $object): bool
     {
     }
     #[\Since('8.4')]
+    #[\Until('8.5')]
+    public function markLazyObjectAsInitialized(object $object): object
+    {
+    }
+    #[\Since('8.5')]
     public function markLazyObjectAsInitialized(object $object): object
     {
     }
     #[\Since('8.4')]
+    #[\Until('8.5')]
+    public function getLazyInitializer(object $object): ?callable
+    {
+    }
+    #[\Since('8.5')]
     public function getLazyInitializer(object $object): ?callable
     {
     }

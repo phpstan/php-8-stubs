@@ -11,6 +11,12 @@ function odbc_tableprivileges($odbc, ?string $catalog, string $schema, string $t
 }
 #if !defined(HAVE_DBMAKER) && !defined(HAVE_SOLID) && !defined(HAVE_SOLID_30) &&!defined(HAVE_SOLID_35)
 #[\Since('8.4')]
+#[\Until('8.5')]
+function odbc_tableprivileges(\Odbc\Connection $odbc, ?string $catalog, string $schema, string $table): \Odbc\Result|false
+{
+}
+#if !defined(HAVE_DBMAKER) && !defined(HAVE_SOLID) && !defined(HAVE_SOLID_30) &&!defined(HAVE_SOLID_35)
+#[\Since('8.5')]
 function odbc_tableprivileges(\Odbc\Connection $odbc, ?string $catalog, string $schema, string $table): \Odbc\Result|false
 {
 }

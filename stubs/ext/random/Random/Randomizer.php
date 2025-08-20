@@ -8,17 +8,42 @@ namespace Random;
 #[\Since('8.2')]
 final class Randomizer
 {
+    #[\Since('8.3')]
+    #[\Until('8.4')]
+    public function nextFloat(): float
+    {
+    }
+    #[\Since('8.3')]
+    #[\Until('8.4')]
+    public function getFloat(float $min, float $max, IntervalBoundary $boundary = IntervalBoundary::ClosedOpen): float
+    {
+    }
+    #[\Since('8.3')]
+    #[\Until('8.4')]
+    public function getBytesFromString(string $string, int $length): string
+    {
+    }
     public function __construct(?Engine $engine = null)
     {
     }
     public function nextInt(): int
     {
     }
-    #[\Since('8.3')]
+    #[\Since('8.4')]
+    #[\Until('8.5')]
     public function nextFloat(): float
     {
     }
-    #[\Since('8.3')]
+    #[\Since('8.5')]
+    public function nextFloat(): float
+    {
+    }
+    #[\Since('8.4')]
+    #[\Until('8.5')]
+    public function getFloat(float $min, float $max, IntervalBoundary $boundary = IntervalBoundary::ClosedOpen): float
+    {
+    }
+    #[\Since('8.5')]
     public function getFloat(float $min, float $max, IntervalBoundary $boundary = IntervalBoundary::ClosedOpen): float
     {
     }
@@ -28,7 +53,12 @@ final class Randomizer
     public function getBytes(int $length): string
     {
     }
-    #[\Since('8.3')]
+    #[\Since('8.4')]
+    #[\Until('8.5')]
+    public function getBytesFromString(string $string, int $length): string
+    {
+    }
+    #[\Since('8.5')]
     public function getBytesFromString(string $string, int $length): string
     {
     }

@@ -5,6 +5,21 @@ function imagechar(\GdImage $image, int $font, int $x, int $y, string $char, int
 {
 }
 #[\Since('8.1')]
+#[\Until('8.2')]
+function imagechar(\GdImage $image, \GdFont|int $font, int $x, int $y, string $char, int $color): bool
+{
+}
+#[\Since('8.2')]
+#[\Until('8.3')]
+function imagechar(\GdImage $image, \GdFont|int $font, int $x, int $y, string $char, int $color): bool
+{
+}
+#[\Since('8.3')]
+#[\Until('8.4')]
+function imagechar(\GdImage $image, \GdFont|int $font, int $x, int $y, string $char, int $color): bool
+{
+}
+#[\Since('8.4')]
 #[\Until('8.5')]
 function imagechar(\GdImage $image, \GdFont|int $font, int $x, int $y, string $char, int $color): bool
 {

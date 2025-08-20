@@ -24,6 +24,12 @@ class ResourceBundle implements \IteratorAggregate, \Countable
     }
     /** @tentative-return-type */
     #[\Since('8.4')]
+    #[\Until('8.5')]
+    public function get(string|int $index, bool $fallback = true)
+    {
+    }
+    /** @tentative-return-type */
+    #[\Since('8.5')]
     public function get(string|int $index, bool $fallback = true)
     {
     }

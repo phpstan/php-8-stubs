@@ -14,6 +14,15 @@ function odbc_fetch_into($statement, &$array, int $row = 0): int|false
  * @param array $array
  */
 #[\Since('8.4')]
+#[\Until('8.5')]
+function odbc_fetch_into(\Odbc\Result $statement, &$array, ?int $row = null): int|false
+{
+}
+#endif
+/**
+ * @param array $array
+ */
+#[\Since('8.5')]
 function odbc_fetch_into(\Odbc\Result $statement, &$array, ?int $row = null): int|false
 {
 }

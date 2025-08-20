@@ -9,6 +9,11 @@ function odbc_gettypeinfo($odbc, int $data_type = 0)
 {
 }
 #[\Since('8.4')]
+#[\Until('8.5')]
+function odbc_gettypeinfo(\Odbc\Connection $odbc, int $data_type = 0): \Odbc\Result|false
+{
+}
+#[\Since('8.5')]
 function odbc_gettypeinfo(\Odbc\Connection $odbc, int $data_type = 0): \Odbc\Result|false
 {
 }

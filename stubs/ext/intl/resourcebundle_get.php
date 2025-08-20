@@ -6,6 +6,11 @@ function resourcebundle_get(\ResourceBundle $bundle, $index, bool $fallback = tr
 {
 }
 #[\Since('8.4')]
+#[\Until('8.5')]
+function resourcebundle_get(\ResourceBundle $bundle, string|int $index, bool $fallback = true): \ResourceBundle|array|string|int|null
+{
+}
+#[\Since('8.5')]
 function resourcebundle_get(\ResourceBundle $bundle, string|int $index, bool $fallback = true): \ResourceBundle|array|string|int|null
 {
 }

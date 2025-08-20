@@ -443,6 +443,11 @@ class Phar extends \RecursiveDirectoryIterator implements \Countable, \ArrayAcce
     {
     }
     #[\Since('8.4')]
+    #[\Until('8.5')]
+    final public static function unlinkArchive(string $filename): true
+    {
+    }
+    #[\Since('8.5')]
     final public static function unlinkArchive(string $filename): true
     {
     }

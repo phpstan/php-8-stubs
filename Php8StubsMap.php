@@ -2853,6 +2853,7 @@ class Php8StubsMap
 		if ($phpVersionId >= 80500) {
 			$classes = \array_merge($classes, [
 				'curlsharepersistenthandle' => 'stubs/ext/curl/CurlSharePersistentHandle.php',
+				'delayedtargetvalidation' => 'stubs/Zend/DelayedTargetValidation.php',
 				'intllistformatter' => 'stubs/ext/intl/listformatter/IntlListFormatter.php',
 				'nodiscard' => 'stubs/Zend/NoDiscard.php',
 				'uri\\invaliduriexception' => 'stubs/ext/uri/Uri/InvalidUriException.php',

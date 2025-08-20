@@ -43,6 +43,11 @@ final class FFI
     {
     }
     #[\Since('8.4')]
+    #[\Until('8.5')]
+    public static function new(FFI\CType|string $type, bool $owned = true, bool $persistent = false): FFI\CData
+    {
+    }
+    #[\Since('8.5')]
     public static function new(FFI\CType|string $type, bool $owned = true, bool $persistent = false): FFI\CData
     {
     }
@@ -55,10 +60,24 @@ final class FFI
      * @prefer-ref $ptr
      */
     #[\Since('8.4')]
+    #[\Until('8.5')]
+    public static function cast(FFI\CType|string $type, $ptr): FFI\CData
+    {
+    }
+    /**
+     * @param FFI\CData|int|float|bool|null $ptr
+     * @prefer-ref $ptr
+     */
+    #[\Since('8.5')]
     public static function cast(FFI\CType|string $type, $ptr): FFI\CData
     {
     }
     #[\Since('8.4')]
+    #[\Until('8.5')]
+    public static function type(string $type): FFI\CType
+    {
+    }
+    #[\Since('8.5')]
     public static function type(string $type): FFI\CType
     {
     }

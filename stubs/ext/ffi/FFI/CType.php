@@ -4,6 +4,156 @@ namespace FFI;
 
 final class CType
 {
+    #[\Since('8.1')]
+    #[\Until('8.2')]
+    public function getKind(): int
+    {
+    }
+    #[\Since('8.1')]
+    #[\Until('8.2')]
+    public function getSize(): int
+    {
+    }
+    #[\Since('8.1')]
+    #[\Until('8.2')]
+    public function getAlignment(): int
+    {
+    }
+    #[\Since('8.1')]
+    #[\Until('8.2')]
+    public function getAttributes(): int
+    {
+    }
+    #[\Since('8.1')]
+    #[\Until('8.2')]
+    public function getEnumKind(): int
+    {
+    }
+    #[\Since('8.1')]
+    #[\Until('8.2')]
+    public function getArrayElementType(): CType
+    {
+    }
+    #[\Since('8.1')]
+    #[\Until('8.2')]
+    public function getArrayLength(): int
+    {
+    }
+    #[\Since('8.1')]
+    #[\Until('8.2')]
+    public function getPointerType(): CType
+    {
+    }
+    #[\Since('8.1')]
+    #[\Until('8.2')]
+    public function getStructFieldNames(): array
+    {
+    }
+    #[\Since('8.1')]
+    #[\Until('8.2')]
+    public function getStructFieldOffset(string $name): int
+    {
+    }
+    #[\Since('8.1')]
+    #[\Until('8.2')]
+    public function getStructFieldType(string $name): CType
+    {
+    }
+    #[\Since('8.1')]
+    #[\Until('8.2')]
+    public function getFuncABI(): int
+    {
+    }
+    #[\Since('8.1')]
+    #[\Until('8.2')]
+    public function getFuncReturnType(): CType
+    {
+    }
+    #[\Since('8.1')]
+    #[\Until('8.2')]
+    public function getFuncParameterCount(): int
+    {
+    }
+    #[\Since('8.1')]
+    #[\Until('8.2')]
+    public function getFuncParameterType(int $index): CType
+    {
+    }
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public function getKind(): int
+    {
+    }
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public function getSize(): int
+    {
+    }
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public function getAlignment(): int
+    {
+    }
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public function getAttributes(): int
+    {
+    }
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public function getEnumKind(): int
+    {
+    }
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public function getArrayElementType(): CType
+    {
+    }
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public function getArrayLength(): int
+    {
+    }
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public function getPointerType(): CType
+    {
+    }
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public function getStructFieldNames(): array
+    {
+    }
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public function getStructFieldOffset(string $name): int
+    {
+    }
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public function getStructFieldType(string $name): CType
+    {
+    }
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public function getFuncABI(): int
+    {
+    }
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public function getFuncReturnType(): CType
+    {
+    }
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public function getFuncParameterCount(): int
+    {
+    }
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public function getFuncParameterType(int $index): CType
+    {
+    }
     /**
      * @var int
      * @cvalue ZEND_FFI_TYPE_VOID
@@ -272,66 +422,216 @@ final class CType
     #[\Since('8.2')]
     #[\Until('8.3')]
     public const ABI_VECTORCALL = UNKNOWN;
-    public function getName(): string
-    {
-    }
-    #[\Since('8.1')]
+    #[\Since('8.3')]
+    #[\Until('8.4')]
     public function getKind(): int
     {
     }
-    #[\Since('8.1')]
+    #[\Since('8.3')]
+    #[\Until('8.4')]
     public function getSize(): int
     {
     }
-    #[\Since('8.1')]
+    #[\Since('8.3')]
+    #[\Until('8.4')]
     public function getAlignment(): int
     {
     }
-    #[\Since('8.1')]
+    #[\Since('8.3')]
+    #[\Until('8.4')]
     public function getAttributes(): int
     {
     }
-    #[\Since('8.1')]
+    #[\Since('8.3')]
+    #[\Until('8.4')]
     public function getEnumKind(): int
     {
     }
-    #[\Since('8.1')]
+    #[\Since('8.3')]
+    #[\Until('8.4')]
     public function getArrayElementType(): CType
     {
     }
-    #[\Since('8.1')]
+    #[\Since('8.3')]
+    #[\Until('8.4')]
     public function getArrayLength(): int
     {
     }
-    #[\Since('8.1')]
+    #[\Since('8.3')]
+    #[\Until('8.4')]
     public function getPointerType(): CType
     {
     }
-    #[\Since('8.1')]
+    #[\Since('8.3')]
+    #[\Until('8.4')]
     public function getStructFieldNames(): array
     {
     }
-    #[\Since('8.1')]
+    #[\Since('8.3')]
+    #[\Until('8.4')]
     public function getStructFieldOffset(string $name): int
     {
     }
-    #[\Since('8.1')]
+    #[\Since('8.3')]
+    #[\Until('8.4')]
     public function getStructFieldType(string $name): CType
     {
     }
-    #[\Since('8.1')]
+    #[\Since('8.3')]
+    #[\Until('8.4')]
     public function getFuncABI(): int
     {
     }
-    #[\Since('8.1')]
+    #[\Since('8.3')]
+    #[\Until('8.4')]
     public function getFuncReturnType(): CType
     {
     }
-    #[\Since('8.1')]
+    #[\Since('8.3')]
+    #[\Until('8.4')]
     public function getFuncParameterCount(): int
     {
     }
-    #[\Since('8.1')]
+    #[\Since('8.3')]
+    #[\Until('8.4')]
+    public function getFuncParameterType(int $index): CType
+    {
+    }
+    public function getName(): string
+    {
+    }
+    #[\Since('8.4')]
+    #[\Until('8.5')]
+    public function getKind(): int
+    {
+    }
+    #[\Since('8.5')]
+    public function getKind(): int
+    {
+    }
+    #[\Since('8.4')]
+    #[\Until('8.5')]
+    public function getSize(): int
+    {
+    }
+    #[\Since('8.5')]
+    public function getSize(): int
+    {
+    }
+    #[\Since('8.4')]
+    #[\Until('8.5')]
+    public function getAlignment(): int
+    {
+    }
+    #[\Since('8.5')]
+    public function getAlignment(): int
+    {
+    }
+    #[\Since('8.4')]
+    #[\Until('8.5')]
+    public function getAttributes(): int
+    {
+    }
+    #[\Since('8.5')]
+    public function getAttributes(): int
+    {
+    }
+    #[\Since('8.4')]
+    #[\Until('8.5')]
+    public function getEnumKind(): int
+    {
+    }
+    #[\Since('8.5')]
+    public function getEnumKind(): int
+    {
+    }
+    #[\Since('8.4')]
+    #[\Until('8.5')]
+    public function getArrayElementType(): CType
+    {
+    }
+    #[\Since('8.5')]
+    public function getArrayElementType(): CType
+    {
+    }
+    #[\Since('8.4')]
+    #[\Until('8.5')]
+    public function getArrayLength(): int
+    {
+    }
+    #[\Since('8.5')]
+    public function getArrayLength(): int
+    {
+    }
+    #[\Since('8.4')]
+    #[\Until('8.5')]
+    public function getPointerType(): CType
+    {
+    }
+    #[\Since('8.5')]
+    public function getPointerType(): CType
+    {
+    }
+    #[\Since('8.4')]
+    #[\Until('8.5')]
+    public function getStructFieldNames(): array
+    {
+    }
+    #[\Since('8.5')]
+    public function getStructFieldNames(): array
+    {
+    }
+    #[\Since('8.4')]
+    #[\Until('8.5')]
+    public function getStructFieldOffset(string $name): int
+    {
+    }
+    #[\Since('8.5')]
+    public function getStructFieldOffset(string $name): int
+    {
+    }
+    #[\Since('8.4')]
+    #[\Until('8.5')]
+    public function getStructFieldType(string $name): CType
+    {
+    }
+    #[\Since('8.5')]
+    public function getStructFieldType(string $name): CType
+    {
+    }
+    #[\Since('8.4')]
+    #[\Until('8.5')]
+    public function getFuncABI(): int
+    {
+    }
+    #[\Since('8.5')]
+    public function getFuncABI(): int
+    {
+    }
+    #[\Since('8.4')]
+    #[\Until('8.5')]
+    public function getFuncReturnType(): CType
+    {
+    }
+    #[\Since('8.5')]
+    public function getFuncReturnType(): CType
+    {
+    }
+    #[\Since('8.4')]
+    #[\Until('8.5')]
+    public function getFuncParameterCount(): int
+    {
+    }
+    #[\Since('8.5')]
+    public function getFuncParameterCount(): int
+    {
+    }
+    #[\Since('8.4')]
+    #[\Until('8.5')]
+    public function getFuncParameterType(int $index): CType
+    {
+    }
+    #[\Since('8.5')]
     public function getFuncParameterType(int $index): CType
     {
     }

@@ -9,6 +9,93 @@ abstract class ReflectionFunctionAbstract implements \Reflector
     }
     /** @implementation-alias ReflectionClass::__clone */
     #[\Since('8.1')]
+    #[\Until('8.2')]
+    private function __clone(): void
+    {
+    }
+    /** @tentative-return-type */
+    #[\Since('8.1')]
+    #[\Until('8.2')]
+    public function isStatic(): bool
+    {
+    }
+    #[\Since('8.1')]
+    #[\Until('8.2')]
+    public function getClosureUsedVariables(): array
+    {
+    }
+    #[\Since('8.1')]
+    #[\Until('8.2')]
+    public function hasTentativeReturnType(): bool
+    {
+    }
+    #[\Since('8.1')]
+    #[\Until('8.2')]
+    public function getTentativeReturnType(): ?ReflectionType
+    {
+    }
+    /** @implementation-alias ReflectionClass::__clone */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    private function __clone(): void
+    {
+    }
+    /** @tentative-return-type */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public function isStatic(): bool
+    {
+    }
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public function getClosureUsedVariables(): array
+    {
+    }
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public function hasTentativeReturnType(): bool
+    {
+    }
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public function getTentativeReturnType(): ?ReflectionType
+    {
+    }
+    /** @implementation-alias ReflectionClass::__clone */
+    #[\Since('8.3')]
+    #[\Until('8.4')]
+    private function __clone(): void
+    {
+    }
+    /** @tentative-return-type */
+    #[\Since('8.3')]
+    #[\Until('8.4')]
+    public function isStatic(): bool
+    {
+    }
+    #[\Since('8.3')]
+    #[\Until('8.4')]
+    public function getClosureUsedVariables(): array
+    {
+    }
+    #[\Since('8.3')]
+    #[\Until('8.4')]
+    public function hasTentativeReturnType(): bool
+    {
+    }
+    #[\Since('8.3')]
+    #[\Until('8.4')]
+    public function getTentativeReturnType(): ?ReflectionType
+    {
+    }
+    /** @implementation-alias ReflectionClass::__clone */
+    #[\Since('8.4')]
+    #[\Until('8.5')]
+    private function __clone(): void
+    {
+    }
+    /** @implementation-alias ReflectionClass::__clone */
+    #[\Since('8.5')]
     private function __clone(): void
     {
     }
@@ -62,7 +149,13 @@ abstract class ReflectionFunctionAbstract implements \Reflector
     {
     }
     /** @tentative-return-type */
-    #[\Since('8.1')]
+    #[\Since('8.4')]
+    #[\Until('8.5')]
+    public function isStatic(): bool
+    {
+    }
+    /** @tentative-return-type */
+    #[\Since('8.5')]
     public function isStatic(): bool
     {
     }
@@ -87,7 +180,12 @@ abstract class ReflectionFunctionAbstract implements \Reflector
     public function getClosureCalledClass()
     {
     }
-    #[\Since('8.1')]
+    #[\Since('8.4')]
+    #[\Until('8.5')]
+    public function getClosureUsedVariables(): array
+    {
+    }
+    #[\Since('8.5')]
     public function getClosureUsedVariables(): array
     {
     }
@@ -203,11 +301,21 @@ abstract class ReflectionFunctionAbstract implements \Reflector
     public function getReturnType()
     {
     }
-    #[\Since('8.1')]
+    #[\Since('8.4')]
+    #[\Until('8.5')]
     public function hasTentativeReturnType(): bool
     {
     }
-    #[\Since('8.1')]
+    #[\Since('8.5')]
+    public function hasTentativeReturnType(): bool
+    {
+    }
+    #[\Since('8.4')]
+    #[\Until('8.5')]
+    public function getTentativeReturnType(): ?ReflectionType
+    {
+    }
+    #[\Since('8.5')]
     public function getTentativeReturnType(): ?ReflectionType
     {
     }

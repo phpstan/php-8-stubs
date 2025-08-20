@@ -6,6 +6,16 @@ function imap_lsub($imap, string $reference, string $pattern): array|false
 {
 }
 #[\Since('8.1')]
+#[\Until('8.2')]
+function imap_lsub(\IMAP\Connection $imap, string $reference, string $pattern): array|false
+{
+}
+#[\Since('8.2')]
+#[\Until('8.3')]
+function imap_lsub(\IMAP\Connection $imap, string $reference, string $pattern): array|false
+{
+}
+#[\Since('8.3')]
 function imap_lsub(\IMAP\Connection $imap, string $reference, string $pattern): array|false
 {
 }

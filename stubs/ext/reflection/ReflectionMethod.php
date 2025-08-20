@@ -2,6 +2,21 @@
 
 class ReflectionMethod extends \ReflectionFunctionAbstract
 {
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public function hasPrototype(): bool
+    {
+    }
+    #[\Since('8.3')]
+    #[\Until('8.4')]
+    public static function createFromMethodName(string $method): static
+    {
+    }
+    #[\Since('8.3')]
+    #[\Until('8.4')]
+    public function hasPrototype(): bool
+    {
+    }
     /**
      * @var int
      * @cvalue ZEND_ACC_STATIC
@@ -47,7 +62,12 @@ class ReflectionMethod extends \ReflectionFunctionAbstract
     public function __construct(object|string $objectOrMethod, ?string $method = null)
     {
     }
-    #[\Since('8.3')]
+    #[\Since('8.4')]
+    #[\Until('8.5')]
+    public static function createFromMethodName(string $method): static
+    {
+    }
+    #[\Since('8.5')]
     public static function createFromMethodName(string $method): static
     {
     }
@@ -145,7 +165,12 @@ class ReflectionMethod extends \ReflectionFunctionAbstract
     public function getPrototype()
     {
     }
-    #[\Since('8.2')]
+    #[\Since('8.4')]
+    #[\Until('8.5')]
+    public function hasPrototype(): bool
+    {
+    }
+    #[\Since('8.5')]
     public function hasPrototype(): bool
     {
     }
@@ -153,6 +178,13 @@ class ReflectionMethod extends \ReflectionFunctionAbstract
      * @tentative-return-type
      * @return void
      */
+    #[\Until('8.5')]
+    public function setAccessible(bool $accessible)
+    {
+    }
+    /** @tentative-return-type */
+    #[\Deprecated(since: '8.5', message: "as it has no effect")]
+    #[\Since('8.5')]
     public function setAccessible(bool $accessible)
     {
     }

@@ -11,6 +11,12 @@ function odbc_specialcolumns($odbc, int $type, ?string $catalog, string $schema,
 }
 #endif
 #[\Since('8.4')]
+#[\Until('8.5')]
+function odbc_specialcolumns(\Odbc\Connection $odbc, int $type, ?string $catalog, string $schema, string $table, int $scope, int $nullable): \Odbc\Result|false
+{
+}
+#endif
+#[\Since('8.5')]
 function odbc_specialcolumns(\Odbc\Connection $odbc, int $type, ?string $catalog, string $schema, string $table, int $scope, int $nullable): \Odbc\Result|false
 {
 }

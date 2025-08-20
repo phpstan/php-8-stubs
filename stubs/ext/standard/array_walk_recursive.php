@@ -5,6 +5,21 @@ function array_walk_recursive(array|object &$array, callable $callback, mixed $a
 {
 }
 #[\Since('8.2')]
+#[\Until('8.3')]
+function array_walk_recursive(array|object &$array, callable $callback, mixed $arg = UNKNOWN): true
+{
+}
+#[\Since('8.3')]
+#[\Until('8.4')]
+function array_walk_recursive(array|object &$array, callable $callback, mixed $arg = UNKNOWN): true
+{
+}
+#[\Since('8.4')]
+#[\Until('8.5')]
+function array_walk_recursive(array|object &$array, callable $callback, mixed $arg = UNKNOWN): true
+{
+}
+#[\Since('8.5')]
 function array_walk_recursive(array|object &$array, callable $callback, mixed $arg = UNKNOWN): true
 {
 }

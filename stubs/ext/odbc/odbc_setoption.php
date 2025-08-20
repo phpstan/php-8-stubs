@@ -6,6 +6,11 @@ function odbc_setoption($odbc, int $which, int $option, int $value): bool
 {
 }
 #[\Since('8.4')]
+#[\Until('8.5')]
+function odbc_setoption(\Odbc\Connection|\Odbc\Result $odbc, int $which, int $option, int $value): bool
+{
+}
+#[\Since('8.5')]
 function odbc_setoption(\Odbc\Connection|\Odbc\Result $odbc, int $which, int $option, int $value): bool
 {
 }

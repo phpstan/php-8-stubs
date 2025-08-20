@@ -2,6 +2,51 @@
 
 class DOMNode
 {
+    #[\Since('8.1')]
+    #[\Until('8.2')]
+    public function __sleep(): array
+    {
+    }
+    #[\Since('8.1')]
+    #[\Until('8.2')]
+    public function __wakeup(): void
+    {
+    }
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public function __sleep(): array
+    {
+    }
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public function __wakeup(): void
+    {
+    }
+    #[\Since('8.3')]
+    #[\Until('8.4')]
+    public function isEqualNode(?DOMNode $otherNode): bool
+    {
+    }
+    #[\Since('8.3')]
+    #[\Until('8.4')]
+    public function contains(DOMNode|DOMNameSpaceNode|null $other): bool
+    {
+    }
+    #[\Since('8.3')]
+    #[\Until('8.4')]
+    public function getRootNode(?array $options = null): DOMNode
+    {
+    }
+    #[\Since('8.3')]
+    #[\Until('8.4')]
+    public function __sleep(): array
+    {
+    }
+    #[\Since('8.3')]
+    #[\Until('8.4')]
+    public function __wakeup(): void
+    {
+    }
     /** @return DOMNode|false */
     public function appendChild(DOMNode $node)
     {
@@ -70,7 +115,12 @@ class DOMNode
     public function isSameNode(DOMNode $otherNode)
     {
     }
-    #[\Since('8.3')]
+    #[\Since('8.4')]
+    #[\Until('8.5')]
+    public function isEqualNode(?DOMNode $otherNode): bool
+    {
+    }
+    #[\Since('8.5')]
     public function isEqualNode(?DOMNode $otherNode): bool
     {
     }
@@ -110,23 +160,48 @@ class DOMNode
     public function replaceChild(DOMNode $node, DOMNode $child)
     {
     }
-    #[\Since('8.3')]
+    #[\Since('8.4')]
+    #[\Until('8.5')]
     public function contains(DOMNode|DOMNameSpaceNode|null $other): bool
     {
     }
-    #[\Since('8.3')]
+    #[\Since('8.5')]
+    public function contains(DOMNode|DOMNameSpaceNode|null $other): bool
+    {
+    }
+    #[\Since('8.4')]
+    #[\Until('8.5')]
+    public function getRootNode(?array $options = null): DOMNode
+    {
+    }
+    #[\Since('8.5')]
     public function getRootNode(?array $options = null): DOMNode
     {
     }
     #[\Since('8.4')]
+    #[\Until('8.5')]
     public function compareDocumentPosition(DOMNode $other): int
     {
     }
-    #[\Since('8.1')]
+    #[\Since('8.5')]
+    public function compareDocumentPosition(DOMNode $other): int
+    {
+    }
+    #[\Since('8.4')]
+    #[\Until('8.5')]
     public function __sleep(): array
     {
     }
-    #[\Since('8.1')]
+    #[\Since('8.5')]
+    public function __sleep(): array
+    {
+    }
+    #[\Since('8.4')]
+    #[\Until('8.5')]
+    public function __wakeup(): void
+    {
+    }
+    #[\Since('8.5')]
     public function __wakeup(): void
     {
     }

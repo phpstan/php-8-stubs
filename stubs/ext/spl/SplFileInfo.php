@@ -3,6 +3,14 @@
 /** @generate-function-entries */
 class SplFileInfo
 {
+    /**
+     * @tentative-return-type
+     * @return void
+     */
+    #[\Until('8.4')]
+    final public function _bad_state_ex()
+    {
+    }
     public function __construct(string $filename)
     {
     }
@@ -209,8 +217,9 @@ class SplFileInfo
     }
     /**
      * @tentative-return-type
-     * @return void
      */
+    #[\Deprecated(since: '8.2')]
+    #[\Since('8.4')]
     #[\Until('8.5')]
     final public function _bad_state_ex()
     {

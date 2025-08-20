@@ -6,6 +6,16 @@ function imap_get_quotaroot($imap, string $mailbox): array|false
 {
 }
 #[\Since('8.1')]
+#[\Until('8.2')]
+function imap_get_quotaroot(\IMAP\Connection $imap, string $mailbox): array|false
+{
+}
+#[\Since('8.2')]
+#[\Until('8.3')]
+function imap_get_quotaroot(\IMAP\Connection $imap, string $mailbox): array|false
+{
+}
+#[\Since('8.3')]
 function imap_get_quotaroot(\IMAP\Connection $imap, string $mailbox): array|false
 {
 }

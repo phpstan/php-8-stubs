@@ -1,6 +1,26 @@
 <?php 
 
 #[\Since('8.1')]
+#[\Until('8.2')]
 function sodium_crypto_stream_xchacha20_xor(string $message, string $nonce, string $key): string
+{
+}
+#[\Since('8.2')]
+#[\Until('8.3')]
+function sodium_crypto_stream_xchacha20_xor(#[\SensitiveParameter] string $message, string $nonce, #[\SensitiveParameter] string $key): string
+{
+}
+#[\Since('8.3')]
+#[\Until('8.4')]
+function sodium_crypto_stream_xchacha20_xor(#[\SensitiveParameter] string $message, string $nonce, #[\SensitiveParameter] string $key): string
+{
+}
+#[\Since('8.4')]
+#[\Until('8.5')]
+function sodium_crypto_stream_xchacha20_xor(#[\SensitiveParameter] string $message, string $nonce, #[\SensitiveParameter] string $key): string
+{
+}
+#[\Since('8.5')]
+function sodium_crypto_stream_xchacha20_xor(#[\SensitiveParameter] string $message, string $nonce, #[\SensitiveParameter] string $key): string
 {
 }

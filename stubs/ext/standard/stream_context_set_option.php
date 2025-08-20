@@ -7,6 +7,12 @@ function stream_context_set_option($context, array|string $wrapper_or_options, ?
 }
 /** @param resource $context */
 #[\Since('8.4')]
+#[\Until('8.5')]
+function stream_context_set_option($context, array|string $wrapper_or_options, ?string $option_name = null, mixed $value = UNKNOWN): true
+{
+}
+/** @param resource $context */
+#[\Since('8.5')]
 function stream_context_set_option($context, array|string $wrapper_or_options, ?string $option_name = null, mixed $value = UNKNOWN): true
 {
 }

@@ -6,6 +6,13 @@ class SplObjectStorage implements \Countable, \Iterator, \Serializable, \ArrayAc
      * @tentative-return-type
      * @return void
      */
+    #[\Until('8.5')]
+    public function attach(object $object, mixed $info = null)
+    {
+    }
+    /** @tentative-return-type */
+    #[\Deprecated(since: '8.5', message: "use method SplObjectStorage::offsetSet() instead")]
+    #[\Since('8.5')]
     public function attach(object $object, mixed $info = null)
     {
     }
@@ -13,6 +20,13 @@ class SplObjectStorage implements \Countable, \Iterator, \Serializable, \ArrayAc
      * @tentative-return-type
      * @return void
      */
+    #[\Until('8.5')]
+    public function detach(object $object)
+    {
+    }
+    /** @tentative-return-type */
+    #[\Deprecated(since: '8.5', message: "use method SplObjectStorage::offsetUnset() instead")]
+    #[\Since('8.5')]
     public function detach(object $object)
     {
     }
@@ -20,6 +34,13 @@ class SplObjectStorage implements \Countable, \Iterator, \Serializable, \ArrayAc
      * @tentative-return-type
      * @return bool
      */
+    #[\Until('8.5')]
+    public function contains(object $object)
+    {
+    }
+    /** @tentative-return-type */
+    #[\Deprecated(since: '8.5', message: "use method SplObjectStorage::offsetExists() instead")]
+    #[\Since('8.5')]
     public function contains(object $object)
     {
     }
@@ -101,6 +122,11 @@ class SplObjectStorage implements \Countable, \Iterator, \Serializable, \ArrayAc
     {
     }
     #[\Since('8.4')]
+    #[\Until('8.5')]
+    public function seek(int $offset): void
+    {
+    }
+    #[\Since('8.5')]
     public function seek(int $offset): void
     {
     }

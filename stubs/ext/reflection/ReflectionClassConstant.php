@@ -7,6 +7,64 @@ class ReflectionClassConstant implements \Reflector
     final private function __clone(): void
     {
     }
+    /** @implementation-alias ReflectionClass::__clone */
+    #[\Since('8.1')]
+    #[\Until('8.2')]
+    private function __clone(): void
+    {
+    }
+    #[\Since('8.1')]
+    #[\Until('8.2')]
+    public function isFinal(): bool
+    {
+    }
+    #[\Since('8.1')]
+    #[\Until('8.2')]
+    public function isEnumCase(): bool
+    {
+    }
+    /** @implementation-alias ReflectionClass::__clone */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    private function __clone(): void
+    {
+    }
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public function isFinal(): bool
+    {
+    }
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public function isEnumCase(): bool
+    {
+    }
+    /** @implementation-alias ReflectionClass::__clone */
+    #[\Since('8.3')]
+    #[\Until('8.4')]
+    private function __clone(): void
+    {
+    }
+    #[\Since('8.3')]
+    #[\Until('8.4')]
+    public function isFinal(): bool
+    {
+    }
+    #[\Since('8.3')]
+    #[\Until('8.4')]
+    public function isEnumCase(): bool
+    {
+    }
+    #[\Since('8.3')]
+    #[\Until('8.4')]
+    public function hasType(): bool
+    {
+    }
+    #[\Since('8.3')]
+    #[\Until('8.4')]
+    public function getType(): ?ReflectionType
+    {
+    }
     /**
      * @var int
      * @cvalue ZEND_ACC_PUBLIC
@@ -36,7 +94,13 @@ class ReflectionClassConstant implements \Reflector
     #[\Until('8.4')]
     public const IS_FINAL = UNKNOWN;
     /** @implementation-alias ReflectionClass::__clone */
-    #[\Since('8.1')]
+    #[\Since('8.4')]
+    #[\Until('8.5')]
+    private function __clone(): void
+    {
+    }
+    /** @implementation-alias ReflectionClass::__clone */
+    #[\Since('8.5')]
     private function __clone(): void
     {
     }
@@ -81,7 +145,12 @@ class ReflectionClassConstant implements \Reflector
     public function isProtected()
     {
     }
-    #[\Since('8.1')]
+    #[\Since('8.4')]
+    #[\Until('8.5')]
+    public function isFinal(): bool
+    {
+    }
+    #[\Since('8.5')]
     public function isFinal(): bool
     {
     }
@@ -110,19 +179,39 @@ class ReflectionClassConstant implements \Reflector
     public function getAttributes(?string $name = null, int $flags = 0): array
     {
     }
-    #[\Since('8.1')]
+    #[\Since('8.4')]
+    #[\Until('8.5')]
+    public function isEnumCase(): bool
+    {
+    }
+    #[\Since('8.5')]
     public function isEnumCase(): bool
     {
     }
     #[\Since('8.4')]
+    #[\Until('8.5')]
     public function isDeprecated(): bool
     {
     }
-    #[\Since('8.3')]
+    #[\Since('8.5')]
+    public function isDeprecated(): bool
+    {
+    }
+    #[\Since('8.4')]
+    #[\Until('8.5')]
     public function hasType(): bool
     {
     }
-    #[\Since('8.3')]
+    #[\Since('8.5')]
+    public function hasType(): bool
+    {
+    }
+    #[\Since('8.4')]
+    #[\Until('8.5')]
+    public function getType(): ?ReflectionType
+    {
+    }
+    #[\Since('8.5')]
     public function getType(): ?ReflectionType
     {
     }

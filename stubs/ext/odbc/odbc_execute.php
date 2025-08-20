@@ -6,6 +6,11 @@ function odbc_execute($statement, array $params = []): bool
 {
 }
 #[\Since('8.4')]
+#[\Until('8.5')]
+function odbc_execute(\Odbc\Result $statement, array $params = []): bool
+{
+}
+#[\Since('8.5')]
 function odbc_execute(\Odbc\Result $statement, array $params = []): bool
 {
 }

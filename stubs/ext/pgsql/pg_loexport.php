@@ -20,6 +20,54 @@ function pg_loexport($connection, $oid = UNKNOWN, $filename = UNKNOWN): bool
  * @deprecated
  */
 #[\Since('8.1')]
+#[\Until('8.2')]
+function pg_loexport($connection, $oid = UNKNOWN, $filename = UNKNOWN): bool
+{
+}
+/**
+ * @param PgSql\Connection|string|int $connection
+ * @param string|int $oid
+ * @param string|int $filename
+ * @alias pg_lo_export
+ * @deprecated
+ */
+#[\Since('8.2')]
+#[\Until('8.3')]
+function pg_loexport($connection, $oid = UNKNOWN, $filename = UNKNOWN): bool
+{
+}
+/**
+ * @param PgSql\Connection|string|int $connection
+ * @param string|int $oid
+ * @param string|int $filename
+ * @alias pg_lo_export
+ * @deprecated
+ */
+#[\Since('8.3')]
+#[\Until('8.4')]
+function pg_loexport($connection, $oid = UNKNOWN, $filename = UNKNOWN): bool
+{
+}
+/**
+ * @param PgSql\Connection|string|int $connection
+ * @param string|int $oid
+ * @param string|int $filename
+ * @alias pg_lo_export
+ */
+#[\Deprecated(since: '8.0', message: 'use pg_lo_export() instead')]
+#[\Since('8.4')]
+#[\Until('8.5')]
+function pg_loexport($connection, $oid = UNKNOWN, $filename = UNKNOWN): bool
+{
+}
+/**
+ * @param PgSql\Connection|string|int $connection
+ * @param string|int $oid
+ * @param string|int $filename
+ * @alias pg_lo_export
+ */
+#[\Deprecated(since: '8.0', message: 'use pg_lo_export() instead')]
+#[\Since('8.5')]
 function pg_loexport($connection, $oid = UNKNOWN, $filename = UNKNOWN): bool
 {
 }

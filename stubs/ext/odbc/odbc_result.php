@@ -6,6 +6,11 @@ function odbc_result($statement, string|int $field): string|bool|null
 {
 }
 #[\Since('8.4')]
+#[\Until('8.5')]
+function odbc_result(\Odbc\Result $statement, string|int $field): string|bool|null
+{
+}
+#[\Since('8.5')]
 function odbc_result(\Odbc\Result $statement, string|int $field): string|bool|null
 {
 }

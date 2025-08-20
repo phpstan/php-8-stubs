@@ -9,6 +9,11 @@ function odbc_tables($odbc, ?string $catalog = null, ?string $schema = null, ?st
 {
 }
 #[\Since('8.4')]
+#[\Until('8.5')]
+function odbc_tables(\Odbc\Connection $odbc, ?string $catalog = null, ?string $schema = null, ?string $table = null, ?string $types = null): \Odbc\Result|false
+{
+}
+#[\Since('8.5')]
 function odbc_tables(\Odbc\Connection $odbc, ?string $catalog = null, ?string $schema = null, ?string $table = null, ?string $types = null): \Odbc\Result|false
 {
 }

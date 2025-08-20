@@ -2,6 +2,23 @@
 
 class DatePeriod implements \IteratorAggregate
 {
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public function __serialize(): array;
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public function __unserialize(array $data): void;
+    #[\Since('8.3')]
+    #[\Until('8.4')]
+    public static function createFromISO8601String(string $specification, int $options = 0): static
+    {
+    }
+    #[\Since('8.3')]
+    #[\Until('8.4')]
+    public function __serialize(): array;
+    #[\Since('8.3')]
+    #[\Until('8.4')]
+    public function __unserialize(array $data): void;
     /**
      * @var int
      * @cvalue PHP_DATE_PERIOD_EXCLUDE_START_DATE
@@ -16,7 +33,12 @@ class DatePeriod implements \IteratorAggregate
     #[\Since('8.2')]
     #[\Until('8.4')]
     public const INCLUDE_END_DATE = UNKNOWN;
-    #[\Since('8.3')]
+    #[\Since('8.4')]
+    #[\Until('8.5')]
+    public static function createFromISO8601String(string $specification, int $options = 0): static
+    {
+    }
+    #[\Since('8.5')]
     public static function createFromISO8601String(string $specification, int $options = 0): static
     {
     }
@@ -57,9 +79,15 @@ class DatePeriod implements \IteratorAggregate
     public function getRecurrences()
     {
     }
-    #[\Since('8.2')]
+    #[\Since('8.4')]
+    #[\Until('8.5')]
     public function __serialize(): array;
-    #[\Since('8.2')]
+    #[\Since('8.5')]
+    public function __serialize(): array;
+    #[\Since('8.4')]
+    #[\Until('8.5')]
+    public function __unserialize(array $data): void;
+    #[\Since('8.5')]
     public function __unserialize(array $data): void;
     /**
      * @tentative-return-type

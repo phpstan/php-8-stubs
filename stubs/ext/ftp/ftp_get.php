@@ -6,6 +6,26 @@ function ftp_get($ftp, string $local_filename, string $remote_filename, int $mod
 {
 }
 #[\Since('8.1')]
+#[\Until('8.2')]
+function ftp_get(\FTP\Connection $ftp, string $local_filename, string $remote_filename, int $mode = FTP_BINARY, int $offset = 0): bool
+{
+}
+#[\Since('8.2')]
+#[\Until('8.3')]
+function ftp_get(\FTP\Connection $ftp, string $local_filename, string $remote_filename, int $mode = FTP_BINARY, int $offset = 0): bool
+{
+}
+#[\Since('8.3')]
+#[\Until('8.4')]
+function ftp_get(\FTP\Connection $ftp, string $local_filename, string $remote_filename, int $mode = FTP_BINARY, int $offset = 0): bool
+{
+}
+#[\Since('8.4')]
+#[\Until('8.5')]
+function ftp_get(\FTP\Connection $ftp, string $local_filename, string $remote_filename, int $mode = FTP_BINARY, int $offset = 0): bool
+{
+}
+#[\Since('8.5')]
 function ftp_get(\FTP\Connection $ftp, string $local_filename, string $remote_filename, int $mode = FTP_BINARY, int $offset = 0): bool
 {
 }

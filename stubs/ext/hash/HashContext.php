@@ -13,6 +13,11 @@ final class HashContext
     {
     }
     #[\Since('8.4')]
+    #[\Until('8.5')]
+    public function __debugInfo(): array
+    {
+    }
+    #[\Since('8.5')]
     public function __debugInfo(): array
     {
     }
