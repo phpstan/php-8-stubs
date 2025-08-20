@@ -551,6 +551,9 @@ $command = new class(
 		if (count($old->getParams()) !== count($new->getParams())) {
 			return $this->stmtDiff($old, $new, $updateTo);
 		}
+		if (count($old->getAttrGroups()) !== count($new->getAttrGroups())) {
+			return $this->stmtDiff($old, $new, $updateTo);
+		}
 
 		foreach ($old->getParams() as $i => $oldParam) {
 			$newParam = $new->getParams()[$i];
