@@ -551,6 +551,53 @@ $command = new class(
 		if (count($old->getParams()) !== count($new->getParams())) {
 			return $this->stmtDiff($old, $new, $updateTo);
 		}
+		$oldAttribGroups = $old->getAttrGroups();
+		$oldAttribs = [];
+		foreach ($oldAttribGroups as $group) {
+			foreach ($group->attrs as $attrib) {
+				if ($attrib->name->toLowerString() !== 'since' && $attrib->name->toLowerString() !== 'until') {
+					$oldAttribs[] = $attrib;
+				}
+			}
+		}
+		$newAttribGroups = $new->getAttrGroups();
+		$newAttribs = [];
+		foreach ($newAttribGroups as $group) {
+			foreach ($group->attrs as $attrib) {
+				if ($attrib->name->toLowerString() !== 'since' && $attrib->name->toLowerString() !== 'until') {
+					$newAttribs[] = $attrib;
+				}
+			}
+		}
+		if (count($oldAttribs) !== count($newAttribs)) {
+			return $this->stmtDiff($old, $new, $updateTo);
+		}
+		foreach ($oldAttribs as $idx => $oldAttrib) {
+			$newAttrib = $newAttribs[$idx];
+			if ($oldAttrib->name->name !== $newAttrib->name->name) {
+				return $this->stmtDiff($old, $new, $updateTo);
+			}
+			$oldArgs = $oldAttrib->args;
+			$newArgs = $newAttrib->args;
+			if (count($oldArgs) !== count($newArgs)) {
+				return $this->stmtDiff($old, $new, $updateTo);
+			}
+			foreach ($oldArgs as $argIdx => $oldArg) {
+				$newArg = $newArgs[$argIdx];
+				if ($oldArg->name !== null && $newArg->name !== null) {
+					if ($oldArg->name->name !== $newArg->name->name) {
+						return $this->stmtDiff($old, $new, $updateTo);
+					}
+				} elseif ($oldArg->name !== null || $newArg->name !== null) {
+					return $this->stmtDiff($old, $new, $updateTo);
+				}
+				$oldArgValue = $this->printer->prettyPrintExpr($oldArg->value);
+				$newArgValue = $this->printer->prettyPrintExpr($newArg->value);
+				if ($oldArgValue !== $newArgValue) {
+					return $this->stmtDiff($old, $new, $updateTo);
+				}
+			}
+		}
 
 		foreach ($old->getParams() as $i => $oldParam) {
 			$newParam = $new->getParams()[$i];
