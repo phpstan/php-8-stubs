@@ -591,8 +591,8 @@ $command = new class(
 				} elseif ($oldArg->name !== null || $newArg->name !== null) {
 					return $this->stmtDiff($old, $new, $updateTo);
 				}
-				$oldArgValue = $this->printer->prettyPrintExpr($oldArg->expr);
-				$newArgValue = $this->printer->prettyPrintExpr($newArg->expr);
+				$oldArgValue = $this->printer->prettyPrintExpr($oldArg->value);
+				$newArgValue = $this->printer->prettyPrintExpr($newArg->value);
 				if ($oldArgValue !== $newArgValue) {
 					return $this->stmtDiff($old, $new, $updateTo);
 				}
