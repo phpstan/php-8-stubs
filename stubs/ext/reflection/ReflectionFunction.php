@@ -3,6 +3,14 @@
 class ReflectionFunction extends \ReflectionFunctionAbstract
 {
     /**
+     * @tentative-return-type
+     * @return bool
+     */
+    #[\Until('8.4')]
+    public function isDisabled()
+    {
+    }
+    /**
      * @var int
      * @cvalue ZEND_ACC_DEPRECATED
      */
@@ -21,8 +29,9 @@ class ReflectionFunction extends \ReflectionFunctionAbstract
     }
     /**
      * @tentative-return-type
-     * @return bool
      */
+    #[\Deprecated(since: '8.0', message: "as ReflectionFunction can no longer be constructed for disabled functions")]
+    #[\Since('8.4')]
     public function isDisabled()
     {
     }

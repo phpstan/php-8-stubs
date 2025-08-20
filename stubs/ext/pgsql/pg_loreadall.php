@@ -14,6 +14,15 @@ function pg_loreadall($lob): int
  * @deprecated
  */
 #[\Since('8.1')]
+#[\Until('8.4')]
+function pg_loreadall(\PgSql\Lob $lob): int
+{
+}
+/**
+ * @alias pg_lo_read_all
+ */
+#[\Deprecated(since: '8.0', message: 'use pg_lo_read_all() instead')]
+#[\Since('8.4')]
 function pg_loreadall(\PgSql\Lob $lob): int
 {
 }

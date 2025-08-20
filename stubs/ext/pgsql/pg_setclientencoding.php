@@ -15,6 +15,16 @@ function pg_setclientencoding($connection, string $encoding = UNKNOWN): int
  * @deprecated
  */
 #[\Since('8.1')]
+#[\Until('8.4')]
+function pg_setclientencoding($connection, string $encoding = UNKNOWN): int
+{
+}
+/**
+ * @param PgSql\Connection|string $connection
+ * @alias pg_set_client_encoding
+ */
+#[\Deprecated(since: '8.0', message: 'use pg_set_client_encoding() instead')]
+#[\Since('8.4')]
 function pg_setclientencoding($connection, string $encoding = UNKNOWN): int
 {
 }

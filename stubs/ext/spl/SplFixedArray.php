@@ -3,13 +3,20 @@
 /** @generate-function-entries */
 class SplFixedArray implements \IteratorAggregate, \ArrayAccess, \Countable
 {
-    public function __construct(int $size = 0)
-    {
-    }
     /**
      * @tentative-return-type
      * @return void
      */
+    #[\Until('8.4')]
+    public function __wakeup()
+    {
+    }
+    public function __construct(int $size = 0)
+    {
+    }
+    /** @tentative-return-type */
+    #[\Deprecated(since: '8.4', message: 'this method is obsolete, as serialization hooks are provided by __unserialize() and __serialize()')]
+    #[\Since('8.4')]
     public function __wakeup()
     {
     }

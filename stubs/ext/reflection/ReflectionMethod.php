@@ -153,6 +153,13 @@ class ReflectionMethod extends \ReflectionFunctionAbstract
      * @tentative-return-type
      * @return void
      */
+    #[\Until('8.5')]
+    public function setAccessible(bool $accessible)
+    {
+    }
+    /** @tentative-return-type */
+    #[\Deprecated(since: '8.5', message: "as it has no effect")]
+    #[\Since('8.5')]
     public function setAccessible(bool $accessible)
     {
     }

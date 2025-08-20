@@ -2,6 +2,49 @@
 
 class mysqli
 {
+    /**
+     * @tentative-return-type
+     * @alias mysqli_get_client_info
+     * @return string
+     */
+    #[\Until('8.4')]
+    public function get_client_info()
+    {
+    }
+    /**
+     * @return null|false
+     */
+    #[\Until('8.4')]
+    public function init()
+    {
+    }
+    /**
+     * @tentative-return-type
+     * @alias mysqli_kill
+     * @return bool
+     */
+    #[\Until('8.4')]
+    public function kill(int $process_id)
+    {
+    }
+    /**
+     * @tentative-return-type
+     * @alias mysqli_ping
+     * @return bool
+     */
+    #[\Until('8.4')]
+    public function ping()
+    {
+    }
+    /**
+     * @tentative-return-type
+     * @alias mysqli_refresh
+     * @return bool
+     */
+    #[\Until('8.4')]
+    public function refresh(int $flags)
+    {
+    }
     public function __construct(?string $hostname = null, ?string $username = null, ?string $password = null, ?string $database = null, ?int $port = null, ?string $socket = null)
     {
     }
@@ -97,8 +140,9 @@ class mysqli
     /**
      * @tentative-return-type
      * @alias mysqli_get_client_info
-     * @return string
      */
+    #[\Deprecated(since: '8.1', message: 'use mysqli_get_client_info() instead')]
+    #[\Since('8.4')]
     public function get_client_info()
     {
     }
@@ -128,16 +172,19 @@ class mysqli
     {
     }
     /**
-     * @return null|false
-     */
+     * @return bool|null
+     * */
+    #[\Deprecated(since: '8.1', message: 'replace calls to parent::init() with parent::__construct()')]
+    #[\Since('8.4')]
     public function init()
     {
     }
     /**
      * @tentative-return-type
      * @alias mysqli_kill
-     * @return bool
      */
+    #[\Deprecated(since: '8.4', message: 'use KILL CONNECTION/QUERY SQL statement instead')]
+    #[\Since('8.4')]
     public function kill(int $process_id)
     {
     }
@@ -168,8 +215,9 @@ class mysqli
     /**
      * @tentative-return-type
      * @alias mysqli_ping
-     * @return bool
      */
+    #[\Deprecated(since: '8.4', message: 'because the reconnect feature has been removed in PHP 8.2 and this method is now redundant')]
+    #[\Since('8.4')]
     public function ping()
     {
     }
@@ -350,8 +398,9 @@ class mysqli
     /**
      * @tentative-return-type
      * @alias mysqli_refresh
-     * @return bool
      */
+    #[\Deprecated(since: '8.4', message: 'use FLUSH SQL statement instead')]
+    #[\Since('8.4')]
     public function refresh(int $flags)
     {
     }

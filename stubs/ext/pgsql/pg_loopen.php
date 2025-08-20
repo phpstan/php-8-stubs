@@ -18,6 +18,17 @@ function pg_loopen($connection, $oid = UNKNOWN, string $mode = UNKNOWN)
  * @deprecated
  */
 #[\Since('8.1')]
+#[\Until('8.4')]
+function pg_loopen($connection, $oid = UNKNOWN, string $mode = UNKNOWN): \PgSql\Lob|false
+{
+}
+/**
+ * @param PgSql\Connection $connection
+ * @param string|int $oid
+ * @alias pg_lo_open
+ */
+#[\Deprecated(since: '8.0', message: 'use pg_lo_open() instead')]
+#[\Since('8.4')]
 function pg_loopen($connection, $oid = UNKNOWN, string $mode = UNKNOWN): \PgSql\Lob|false
 {
 }

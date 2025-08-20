@@ -14,6 +14,15 @@ function pg_fieldsize($result, int $field): int
  * @deprecated
  */
 #[\Since('8.1')]
+#[\Until('8.4')]
+function pg_fieldsize(\PgSql\Result $result, int $field): int
+{
+}
+/**
+ * @alias pg_field_size
+ */
+#[\Deprecated(since: '8.0', message: 'use pg_field_size() instead')]
+#[\Since('8.4')]
 function pg_fieldsize(\PgSql\Result $result, int $field): int
 {
 }

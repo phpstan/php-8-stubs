@@ -14,6 +14,15 @@ function pg_clientencoding($connection = null): string
  * @deprecated
  */
 #[\Since('8.1')]
+#[\Until('8.4')]
+function pg_clientencoding(?\PgSql\Connection $connection = null): string
+{
+}
+/**
+ * @alias pg_client_encoding
+ */
+#[\Deprecated(since: '8.0', message: 'use pg_client_encoding() instead')]
+#[\Since('8.4')]
 function pg_clientencoding(?\PgSql\Connection $connection = null): string
 {
 }

@@ -14,6 +14,15 @@ function pg_fieldtype($result, int $field): string
  * @deprecated
  */
 #[\Since('8.1')]
+#[\Until('8.4')]
+function pg_fieldtype(\PgSql\Result $result, int $field): string
+{
+}
+/**
+ * @alias pg_field_type
+ */
+#[\Deprecated(since: '8.0', message: 'use pg_field_type() instead')]
+#[\Since('8.4')]
 function pg_fieldtype(\PgSql\Result $result, int $field): string
 {
 }

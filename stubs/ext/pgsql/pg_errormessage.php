@@ -14,6 +14,15 @@ function pg_errormessage($connection = null): string
  * @deprecated
  */
 #[\Since('8.1')]
+#[\Until('8.4')]
+function pg_errormessage(?\PgSql\Connection $connection = null): string
+{
+}
+/**
+ * @alias pg_last_error
+ */
+#[\Deprecated(since: '8.0', message: 'use pg_last_error() instead')]
+#[\Since('8.4')]
 function pg_errormessage(?\PgSql\Connection $connection = null): string
 {
 }
