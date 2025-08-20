@@ -16,12 +16,16 @@ jobs:
     name: "Update stubs"
     runs-on: "ubuntu-latest"
     steps:
-      - name: "Checkout"
+      - name: "Checkout to commit"
+        if: github.event_name != 'pull_request'
         uses: actions/checkout@v4
         with:
           ref: ${{ github.head_ref }}
           fetch-depth: '0'
           token: ${{ secrets.PHPSTAN_BOT_TOKEN }}
+      - name: "Checkout to only read"
+        if: github.event_name == 'pull_request'
+        uses: actions/checkout@v4
       - name: "Install PHP"
         uses: "shivammathur/setup-php@v2"
         with:
