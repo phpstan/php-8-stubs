@@ -2854,6 +2854,8 @@ class Php8StubsMap
 			$classes = \array_merge($classes, [
 				'curlsharepersistenthandle' => 'stubs/ext/curl/CurlSharePersistentHandle.php',
 				'delayedtargetvalidation' => 'stubs/Zend/DelayedTargetValidation.php',
+				'filter\\filterexception' => 'stubs/ext/filter/Filter/FilterException.php',
+				'filter\\filterfailedexception' => 'stubs/ext/filter/Filter/FilterFailedException.php',
 				'intllistformatter' => 'stubs/ext/intl/listformatter/IntlListFormatter.php',
 				'nodiscard' => 'stubs/Zend/NoDiscard.php',
 				'uri\\invaliduriexception' => 'stubs/ext/uri/Uri/InvalidUriException.php',
