@@ -835,6 +835,11 @@ $command = new class(
 				'xml_set_start_namespace_decl_handler',
 				'xml_set_end_namespace_decl_handler',
 		], true)) {
+            /**
+             * Stub was updated in PHP 8.4, but the support for `callable|string|null` already exists before.
+             *
+             * @see https://github.com/php/php-src/pull/12340/files#diff-2c2d210a6a8bc8eae404fa6938be724484865b47cc574d94d24e2c18524c1b40
+             */
 			$comments = $function->getAttribute('comments');
 			if (null !== $comments) {
 				$function->setAttribute('comments', array_map(
