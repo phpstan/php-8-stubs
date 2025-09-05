@@ -286,6 +286,7 @@ $command = new class(
 					continue;
 				}
 				$functions[strtolower($namespacedName)] = $pathPart;
+                $stmt = $this->filterFunctionPhpDocs($stmt);
 			} else {
 				throw new \Exception(sprintf('Unhandled node type %s in %s on line %s.', get_class($stmt), $stubPath, $stmt->getLine()));
 			}
@@ -818,6 +819,44 @@ $command = new class(
 		}
 
 		return $class;
+	}
+
+	private function filterFunctionPhpDocs(Node\Stmt\Function_ $function): Node\Stmt\Function_
+	{
+		$namespacedName = $function->namespacedName->toString();
+		if (in_array($namespacedName, [
+				'xml_set_element_handler',
+				'xml_set_character_data_handler',
+				'xml_set_processing_instruction_handler',
+				'xml_set_default_handler',
+				'xml_set_unparsed_entity_decl_handler',
+				'xml_set_notation_decl_handler',
+				'xml_set_external_entity_ref_handler',
+				'xml_set_start_namespace_decl_handler',
+				'xml_set_end_namespace_decl_handler',
+		], true)) {
+			$comments = $function->getAttribute('comments');
+			if (null !== $comments) {
+				$function->setAttribute('comments', array_map(
+					fn (Comment\Doc $doc): Comment\Doc => new Comment\Doc(
+						str_replace(
+							'@param callable $',
+							'@param callable|string|null $',
+							$doc->getText(),
+						),
+						$doc->getStartLine(),
+						$doc->getStartFilePos(),
+						$doc->getStartTokenPos(),
+						$doc->getEndLine(),
+						$doc->getEndFilePos(),
+						$doc->getEndTokenPos(),
+					),
+					$comments
+				));
+			}
+		}
+
+		return $function;
 	}
 
 	private function parseDocComment(string $docComment): PhpDocNode
