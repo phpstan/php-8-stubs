@@ -40,6 +40,7 @@ final readonly class Url
     public function getUnicodeHost(): ?string
     {
     }
+    /** @implementation-alias Uri\Rfc3986\Uri::withHost */
     public function withHost(?string $host): static
     {
     }
@@ -47,6 +48,7 @@ final readonly class Url
     public function getPort(): ?int
     {
     }
+    /** @implementation-alias Uri\Rfc3986\Uri::withPort */
     public function withPort(?int $port): static
     {
     }
@@ -54,6 +56,7 @@ final readonly class Url
     public function getPath(): string
     {
     }
+    /** @implementation-alias Uri\Rfc3986\Uri::withPath */
     public function withPath(string $path): static
     {
     }
@@ -61,6 +64,7 @@ final readonly class Url
     public function getQuery(): ?string
     {
     }
+    /** @implementation-alias Uri\Rfc3986\Uri::withQuery */
     public function withQuery(?string $query): static
     {
     }
@@ -68,6 +72,7 @@ final readonly class Url
     public function getFragment(): ?string
     {
     }
+    /** @implementation-alias Uri\Rfc3986\Uri::withFragment */
     public function withFragment(?string $fragment): static
     {
     }
