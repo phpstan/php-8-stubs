@@ -2861,6 +2861,7 @@ class Php8StubsMap
 				'uri\\invaliduriexception' => 'stubs/ext/uri/Uri/InvalidUriException.php',
 				'uri\\rfc3986\\uri' => 'stubs/ext/uri/Uri/Rfc3986/Uri.php',
 				'uri\\uricomparisonmode' => 'stubs/ext/uri/Uri/UriComparisonMode.php',
+				'uri\\urierror' => 'stubs/ext/uri/Uri/UriError.php',
 				'uri\\uriexception' => 'stubs/ext/uri/Uri/UriException.php',
 				'uri\\whatwg\\invalidurlexception' => 'stubs/ext/uri/Uri/WhatWg/InvalidUrlException.php',
 				'uri\\whatwg\\url' => 'stubs/ext/uri/Uri/WhatWg/Url.php',
