@@ -65,6 +65,13 @@ class DatePeriod implements \IteratorAggregate
      * @tentative-return-type
      * @return void
      */
+    #[\Until('8.5')]
+    public function __wakeup()
+    {
+    }
+    /** @tentative-return-type */
+    #[\Deprecated(since: '8.5', message: 'this method is obsolete, as serialization hooks are provided by __unserialize() and __serialize()')]
+    #[\Since('8.5')]
     public function __wakeup()
     {
     }
