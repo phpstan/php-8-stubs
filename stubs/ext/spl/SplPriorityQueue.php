@@ -144,6 +144,16 @@ class SplPriorityQueue implements \Iterator, \Countable
     public function __debugInfo()
     {
     }
+    /** @tentative-return-type */
+    #[\Since('8.5')]
+    public function __serialize(): array
+    {
+    }
+    /** @tentative-return-type */
+    #[\Since('8.5')]
+    public function __unserialize(array $data): void
+    {
+    }
     /** @cvalue SPL_PQUEUE_EXTR_BOTH */
     #[\Since('8.4')]
     public const int EXTR_BOTH = UNKNOWN;

@@ -98,4 +98,14 @@ abstract class SplHeap implements \Iterator, \Countable
     public function __debugInfo()
     {
     }
+    /** @tentative-return-type */
+    #[\Since('8.5')]
+    public function __serialize(): array
+    {
+    }
+    /** @tentative-return-type */
+    #[\Since('8.5')]
+    public function __unserialize(array $data): void
+    {
+    }
 }
