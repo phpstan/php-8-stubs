@@ -90,6 +90,10 @@ class SimpleXMLElement implements \Stringable, \Countable, \RecursiveIterator
     public function __toString(): string
     {
     }
+    #[\Since('8.3')]
+    public function __debugInfo(): ?array
+    {
+    }
     /**
      * @tentative-return-type
      * @return int
