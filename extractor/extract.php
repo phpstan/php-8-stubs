@@ -504,6 +504,11 @@ $command = new class(
 
 			// todo has a constant been removed?
 
+			// Compare class-level attributes
+			if ($this->hasAttributeChanges($old, $new)) {
+				return $this->stmtDiff($old, $new, $updateTo);
+			}
+
 			$old->stmts = $newStmtsToSet;
 
 			return [$old];
@@ -689,6 +694,72 @@ $command = new class(
 			),
 		]);
 		return [$old, $new];
+	}
+
+	/**
+	 * Check if class-level attributes have changed between old and new class declarations.
+	 * @param Node\Stmt\ClassLike $old
+	 * @param Node\Stmt\ClassLike $new
+	 * @return bool
+	 */
+	private function hasAttributeChanges(Node\Stmt\ClassLike $old, Node\Stmt\ClassLike $new): bool
+	{
+		$oldAttribGroups = $old->attrGroups;
+		$oldAttribs = [];
+		foreach ($oldAttribGroups as $group) {
+			foreach ($group->attrs as $attrib) {
+				if ($attrib->name->toLowerString() !== 'since' && $attrib->name->toLowerString() !== 'until') {
+					$oldAttribs[] = $attrib;
+				}
+			}
+		}
+
+		$newAttribGroups = $new->attrGroups;
+		$newAttribs = [];
+		foreach ($newAttribGroups as $group) {
+			foreach ($group->attrs as $attrib) {
+				if ($attrib->name->toLowerString() !== 'since' && $attrib->name->toLowerString() !== 'until') {
+					$newAttribs[] = $attrib;
+				}
+			}
+		}
+
+		if (count($oldAttribs) !== count($newAttribs)) {
+			return true;
+		}
+
+		foreach ($oldAttribs as $idx => $oldAttrib) {
+			$newAttrib = $newAttribs[$idx];
+			if ($oldAttrib->name->name !== $newAttrib->name->name) {
+				return true;
+			}
+
+			$oldArgs = $oldAttrib->args;
+			$newArgs = $newAttrib->args;
+			if (count($oldArgs) !== count($newArgs)) {
+				return true;
+			}
+
+			foreach ($oldArgs as $argIdx => $oldArg) {
+				$newArg = $newArgs[$argIdx];
+				if ($oldArg->name !== null && $newArg->name !== null) {
+					if ($oldArg->name->name !== $newArg->name->name) {
+						return true;
+					}
+				} elseif ($oldArg->name !== null || $newArg->name !== null) {
+					return true;
+				}
+
+				// Compare attribute argument values
+				$oldArgValue = $this->printer->prettyPrintExpr($oldArg->value);
+				$newArgValue = $this->printer->prettyPrintExpr($newArg->value);
+				if ($oldArgValue !== $newArgValue) {
+					return true;
+				}
+			}
+		}
+
+		return false;
 	}
 
 	/**
