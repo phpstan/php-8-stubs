@@ -158,7 +158,7 @@ class ReflectionMethod extends \ReflectionFunctionAbstract
     {
     }
     /** @tentative-return-type */
-    #[\Deprecated(since: '8.5', message: "as it has no effect")]
+    #[\Deprecated(since: '8.5', message: "as it has no effect since PHP 8.1")]
     #[\Since('8.5')]
     public function setAccessible(bool $accessible)
     {
