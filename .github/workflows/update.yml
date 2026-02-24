@@ -18,14 +18,14 @@ jobs:
     steps:
       - name: "Checkout to commit"
         if: github.event_name != 'pull_request'
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           ref: ${{ github.head_ref }}
           fetch-depth: '0'
           token: ${{ secrets.PHPSTAN_BOT_TOKEN }}
       - name: "Checkout to only read"
         if: github.event_name == 'pull_request'
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
       - name: "Install PHP"
         uses: "shivammathur/setup-php@v2"
         with:
@@ -35,7 +35,7 @@ jobs:
         run: "composer install"
         working-directory: ./extractor
       - name: "Checkout"
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           repository: "php/php-src"
           path: "php-src"
@@ -47,7 +47,7 @@ jobs:
       - name: "Delete checked out php-src repo"
         run: "rm -rf php-src"
       - name: "Checkout PHP 8.1"
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           repository: "php/php-src"
           path: "php-src"
@@ -60,7 +60,7 @@ jobs:
       - name: "Delete checked out php-src repo"
         run: "rm -rf php-src"
       - name: "Checkout PHP 8.2"
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           repository: "php/php-src"
           path: "php-src"
@@ -73,7 +73,7 @@ jobs:
       - name: "Delete checked out php-src repo"
         run: "rm -rf php-src"
       - name: "Checkout PHP 8.3"
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           repository: "php/php-src"
           path: "php-src"
@@ -86,7 +86,7 @@ jobs:
       - name: "Delete checked out php-src repo"
         run: "rm -rf php-src"
       - name: "Checkout PHP 8.4"
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           repository: "php/php-src"
           path: "php-src"
@@ -99,7 +99,7 @@ jobs:
       - name: "Delete checked out php-src repo"
         run: "rm -rf php-src"
       - name: "Checkout PHP 8.5"
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           repository: "php/php-src"
           path: "php-src"
@@ -111,7 +111,7 @@ jobs:
 
       - name: 'Get previous tag'
         id: previous_tag
-        uses: "WyriHaximus/github-action-get-previous-tag@v1"
+        uses: "WyriHaximus/github-action-get-previous-tag@v2"
         with:
           fallback: 0.1.0
       - name: 'Get next minor version'
@@ -121,7 +121,7 @@ jobs:
           version: ${{ steps.previous_tag.outputs.tag }}
       - name: "Commit changes"
         if: github.event_name != 'pull_request'
-        uses: "stefanzweifel/git-auto-commit-action@v6"
+        uses: "stefanzweifel/git-auto-commit-action@v7"
         id: "commit"
         with:
           commit_message: "Update stubs"
