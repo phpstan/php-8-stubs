@@ -16,18 +16,23 @@ jobs:
     name: "Update stubs"
     runs-on: "ubuntu-latest"
     steps:
+      - name: Harden the runner (Audit all outbound calls)
+        uses: step-security/harden-runner@5ef0c079ce82195b2a36a210272d6b661572d83e # v2.14.2
+        with:
+          egress-policy: audit
+
       - name: "Checkout to commit"
         if: github.event_name != 'pull_request'
-        uses: actions/checkout@v5
+        uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd # v5.0.1
         with:
           ref: ${{ github.head_ref }}
           fetch-depth: '0'
           token: ${{ secrets.PHPSTAN_BOT_TOKEN }}
       - name: "Checkout to only read"
         if: github.event_name == 'pull_request'
-        uses: actions/checkout@v5
+        uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd # v5.0.1
       - name: "Install PHP"
-        uses: "shivammathur/setup-php@v2"
+        uses: "shivammathur/setup-php@44454db4f0199b8b9685a5d763dc37cbf79108e1" # v2
         with:
           coverage: "none"
           php-version: "8.3"
@@ -35,7 +40,7 @@ jobs:
         run: "composer install"
         working-directory: ./extractor
       - name: "Checkout"
-        uses: actions/checkout@v5
+        uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd # v5.0.1
         with:
           repository: "php/php-src"
           path: "php-src"
@@ -47,7 +52,7 @@ jobs:
       - name: "Delete checked out php-src repo"
         run: "rm -rf php-src"
       - name: "Checkout PHP 8.1"
-        uses: actions/checkout@v5
+        uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd # v5.0.1
         with:
           repository: "php/php-src"
           path: "php-src"
@@ -60,7 +65,7 @@ jobs:
       - name: "Delete checked out php-src repo"
         run: "rm -rf php-src"
       - name: "Checkout PHP 8.2"
-        uses: actions/checkout@v5
+        uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd # v5.0.1
         with:
           repository: "php/php-src"
           path: "php-src"
@@ -73,7 +78,7 @@ jobs:
       - name: "Delete checked out php-src repo"
         run: "rm -rf php-src"
       - name: "Checkout PHP 8.3"
-        uses: actions/checkout@v5
+        uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd # v5.0.1
         with:
           repository: "php/php-src"
           path: "php-src"
@@ -86,7 +91,7 @@ jobs:
       - name: "Delete checked out php-src repo"
         run: "rm -rf php-src"
       - name: "Checkout PHP 8.4"
-        uses: actions/checkout@v5
+        uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd # v5.0.1
         with:
           repository: "php/php-src"
           path: "php-src"
@@ -99,7 +104,7 @@ jobs:
       - name: "Delete checked out php-src repo"
         run: "rm -rf php-src"
       - name: "Checkout PHP 8.5"
-        uses: actions/checkout@v5
+        uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd # v5.0.1
         with:
           repository: "php/php-src"
           path: "php-src"
@@ -111,17 +116,17 @@ jobs:
 
       - name: 'Get previous tag'
         id: previous_tag
-        uses: "WyriHaximus/github-action-get-previous-tag@v1"
+        uses: "WyriHaximus/github-action-get-previous-tag@04e8485ecb6487243907e330d522ff60f02283ce" # v1.4.0
         with:
           fallback: 0.1.0
       - name: 'Get next minor version'
         id: semvers
-        uses: "WyriHaximus/github-action-next-semvers@v1"
+        uses: "WyriHaximus/github-action-next-semvers@d079934efaf011a4cf8912d4637097fe35d32b93" # v1
         with:
           version: ${{ steps.previous_tag.outputs.tag }}
       - name: "Commit changes"
         if: github.event_name != 'pull_request'
-        uses: "stefanzweifel/git-auto-commit-action@v6"
+        uses: "stefanzweifel/git-auto-commit-action@778341af668090896ca464160c2def5d1d1a3eb0" # v6.0.1
         id: "commit"
         with:
           commit_message: "Update stubs"
