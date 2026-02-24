@@ -40,7 +40,7 @@ jobs:
       - name: "Get old version"
         working-directory: ./phpstan-src
         id: old-version
-        run: echo "version=$(composer info phpstan/php-8-stubs --format json | jq --raw-output '.versions[0]')" >> $GITHUB_OUTPUT
+        run: echo "version=$(composer info phpstan/php-8-stubs --format json | jq --raw-output '.versions[0]')" >> "$GITHUB_OUTPUT"
 
       - name: "Change composer.json"
         working-directory: ./phpstan-src
