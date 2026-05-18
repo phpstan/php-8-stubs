@@ -152,7 +152,6 @@ class Spoofchecker
     public function setRestrictionLevel(int $level)
     {
     }
-    #endif
     #[\Since('8.4')]
     public function setAllowedChars(string $pattern, int $patternOptions = 0): void
     {
@@ -178,7 +177,6 @@ class Spoofchecker
     /** @cvalue USPOOF_CHAR_LIMIT */
     #[\Since('8.4')]
     public const int CHAR_LIMIT = UNKNOWN;
-    #if U_ICU_VERSION_MAJOR_NUM >= 58
     /** @cvalue USPOOF_ASCII */
     #[\Since('8.4')]
     public const int ASCII = UNKNOWN;
@@ -200,7 +198,6 @@ class Spoofchecker
     /** @cvalue USPOOF_MIXED_NUMBERS */
     #[\Since('8.4')]
     public const int MIXED_NUMBERS = UNKNOWN;
-    #endif
     #if U_ICU_VERSION_MAJOR_NUM >= 62
     /** @cvalue USPOOF_HIDDEN_OVERLAY */
     #[\Since('8.4')]
