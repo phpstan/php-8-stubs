@@ -23,16 +23,16 @@ jobs:
 
       - name: "Checkout to commit"
         if: github.event_name != 'pull_request'
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
         with:
           ref: ${{ github.head_ref }}
           fetch-depth: '0'
           token: ${{ secrets.PHPSTAN_BOT_TOKEN }}
       - name: "Checkout to only read"
         if: github.event_name == 'pull_request'
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
       - name: "Install PHP"
-        uses: "shivammathur/setup-php@7c071dfe9dc99bdf297fa79cb49ea005b9fcadbc" # v2.37.1
+        uses: "shivammathur/setup-php@f3e473d116dcccaddc5834248c87452386958240" # 2.37.2
         with:
           coverage: "none"
           php-version: "8.3"
@@ -40,7 +40,7 @@ jobs:
         run: "composer install"
         working-directory: ./extractor
       - name: "Checkout"
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
         with:
           repository: "php/php-src"
           path: "php-src"
@@ -52,7 +52,7 @@ jobs:
       - name: "Delete checked out php-src repo"
         run: "rm -rf php-src"
       - name: "Checkout PHP 8.1"
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
         with:
           repository: "php/php-src"
           path: "php-src"
@@ -65,7 +65,7 @@ jobs:
       - name: "Delete checked out php-src repo"
         run: "rm -rf php-src"
       - name: "Checkout PHP 8.2"
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
         with:
           repository: "php/php-src"
           path: "php-src"
@@ -78,7 +78,7 @@ jobs:
       - name: "Delete checked out php-src repo"
         run: "rm -rf php-src"
       - name: "Checkout PHP 8.3"
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
         with:
           repository: "php/php-src"
           path: "php-src"
@@ -91,7 +91,7 @@ jobs:
       - name: "Delete checked out php-src repo"
         run: "rm -rf php-src"
       - name: "Checkout PHP 8.4"
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
         with:
           repository: "php/php-src"
           path: "php-src"
@@ -104,7 +104,7 @@ jobs:
       - name: "Delete checked out php-src repo"
         run: "rm -rf php-src"
       - name: "Checkout PHP 8.5"
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
         with:
           repository: "php/php-src"
           path: "php-src"
