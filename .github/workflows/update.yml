@@ -17,22 +17,22 @@ jobs:
     runs-on: "ubuntu-latest"
     steps:
       - name: Harden the runner (Audit all outbound calls)
-        uses: step-security/harden-runner@9af89fc71515a100421586dfdb3dc9c984fbf411 # v2.19.4
+        uses: step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1 # v2.21.1
         with:
           egress-policy: audit
 
       - name: "Checkout to commit"
         if: github.event_name != 'pull_request'
-        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           ref: ${{ github.head_ref }}
           fetch-depth: '0'
           token: ${{ secrets.PHPSTAN_BOT_TOKEN }}
       - name: "Checkout to only read"
         if: github.event_name == 'pull_request'
-        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - name: "Install PHP"
-        uses: "shivammathur/setup-php@7c071dfe9dc99bdf297fa79cb49ea005b9fcadbc" # v2.37.1
+        uses: "shivammathur/setup-php@f3e473d116dcccaddc5834248c87452386958240" # 2.37.2
         with:
           coverage: "none"
           php-version: "8.3"
@@ -40,7 +40,7 @@ jobs:
         run: "composer install"
         working-directory: ./extractor
       - name: "Checkout"
-        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           repository: "php/php-src"
           path: "php-src"
@@ -52,7 +52,7 @@ jobs:
       - name: "Delete checked out php-src repo"
         run: "rm -rf php-src"
       - name: "Checkout PHP 8.1"
-        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           repository: "php/php-src"
           path: "php-src"
@@ -65,7 +65,7 @@ jobs:
       - name: "Delete checked out php-src repo"
         run: "rm -rf php-src"
       - name: "Checkout PHP 8.2"
-        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           repository: "php/php-src"
           path: "php-src"
@@ -78,7 +78,7 @@ jobs:
       - name: "Delete checked out php-src repo"
         run: "rm -rf php-src"
       - name: "Checkout PHP 8.3"
-        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           repository: "php/php-src"
           path: "php-src"
@@ -91,7 +91,7 @@ jobs:
       - name: "Delete checked out php-src repo"
         run: "rm -rf php-src"
       - name: "Checkout PHP 8.4"
-        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           repository: "php/php-src"
           path: "php-src"
@@ -104,7 +104,7 @@ jobs:
       - name: "Delete checked out php-src repo"
         run: "rm -rf php-src"
       - name: "Checkout PHP 8.5"
-        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           repository: "php/php-src"
           path: "php-src"
@@ -126,7 +126,7 @@ jobs:
           version: ${{ steps.previous_tag.outputs.tag }}
       - name: "Commit changes"
         if: github.event_name != 'pull_request'
-        uses: "stefanzweifel/git-auto-commit-action@04702edda442b2e678b25b537cec683a1493fcb9" # v7.1.0
+        uses: "stefanzweifel/git-auto-commit-action@4a55954c782fc1ea30b9056cd3e7a2b40ca8887d" # v7.2.0
         id: "commit"
         with:
           commit_message: "Update stubs"
