@@ -463,43 +463,91 @@ $command = new class(
 				}
 			}
 
-			$newStmtsToSet = $untouchedStmts;
+			// the class body keeps the order it already has. Rebuilding it by category moves
+			// every member that has aged out of the version window to the top of the class, which
+			// makes each update churn files that did not really change.
+			$untouchedIds = [];
+			foreach ($untouchedStmts as $stmt) {
+				$untouchedIds[spl_object_id($stmt)] = true;
+			}
+
+			$newMethodsByName = [];
 			foreach ($newMethods as $stmt) {
-				$methodName = $stmt->name->toLowerString();
-				if (!array_key_exists($methodName, $oldMethods)) {
-					$stmt->attrGroups[] = new Node\AttributeGroup([
-						new Node\Attribute(
-							new Node\Name\FullyQualified('Since'),
-							[new Node\Arg(new Node\Scalar\String_($updateTo))],
-						),
-					]);
+				$newMethodsByName[$stmt->name->toLowerString()] = $stmt;
+			}
+
+			$newConstantsByName = [];
+			foreach ($newConstants as $stmt) {
+				$namesKey = implode(',', array_map(static fn (Node\Const_ $const) => $const->name->toString(), $stmt->consts));
+				$newConstantsByName[$namesKey] = $stmt;
+			}
+
+			$newStmtsToSet = [];
+			$takenMethods = [];
+			$takenConstants = [];
+			foreach ($old->stmts as $stmt) {
+				if (array_key_exists(spl_object_id($stmt), $untouchedIds)) {
 					$newStmtsToSet[] = $stmt;
 					continue;
 				}
 
-				foreach ($this->compareFunctions($oldMethods[$methodName], $stmt, $updateTo) as $functionStmt) {
-					$newStmtsToSet[] = $functionStmt;
+				if ($stmt instanceof Node\Stmt\ClassMethod) {
+					$methodName = $stmt->name->toLowerString();
+					if (!array_key_exists($methodName, $newMethodsByName)) {
+						continue;
+					}
+
+					$takenMethods[$methodName] = true;
+					foreach ($this->compareFunctions($stmt, $newMethodsByName[$methodName], $updateTo) as $functionStmt) {
+						$newStmtsToSet[] = $functionStmt;
+					}
+
+					continue;
 				}
+
+				if ($stmt instanceof Node\Stmt\ClassConst) {
+					$namesKey = implode(',', array_map(static fn (Node\Const_ $const) => $const->name->toString(), $stmt->consts));
+					if (!array_key_exists($namesKey, $newConstantsByName)) {
+						continue;
+					}
+
+					$takenConstants[$namesKey] = true;
+					foreach ($this->compareConstants($stmt, $newConstantsByName[$namesKey], $updateTo) as $constantStmt) {
+						$newStmtsToSet[] = $constantStmt;
+					}
+				}
+			}
+
+			// whatever the new version adds goes after what is already there
+			foreach ($newMethods as $stmt) {
+				if (array_key_exists($stmt->name->toLowerString(), $takenMethods)) {
+					continue;
+				}
+
+				$stmt->attrGroups[] = new Node\AttributeGroup([
+					new Node\Attribute(
+						new Node\Name\FullyQualified('Since'),
+						[new Node\Arg(new Node\Scalar\String_($updateTo))],
+					),
+				]);
+				$newStmtsToSet[] = $stmt;
 			}
 
 			// todo has a method been removed?
 
 			foreach ($newConstants as $stmt) {
 				$namesKey = implode(',', array_map(static fn (Node\Const_ $const) => $const->name->toString(), $stmt->consts));
-				if (!array_key_exists($namesKey, $oldConstants)) {
-					$stmt->attrGroups[] = new Node\AttributeGroup([
-						new Node\Attribute(
-							new Node\Name\FullyQualified('Since'),
-							[new Node\Arg(new Node\Scalar\String_($updateTo))],
-						),
-					]);
-					$newStmtsToSet[] = $stmt;
+				if (array_key_exists($namesKey, $takenConstants)) {
 					continue;
 				}
 
-				foreach ($this->compareConstants($oldConstants[$namesKey], $stmt, $updateTo) as $constantStmt) {
-					$newStmtsToSet[] = $constantStmt;
-				}
+				$stmt->attrGroups[] = new Node\AttributeGroup([
+					new Node\Attribute(
+						new Node\Name\FullyQualified('Since'),
+						[new Node\Arg(new Node\Scalar\String_($updateTo))],
+					),
+				]);
+				$newStmtsToSet[] = $stmt;
 			}
 
 			// todo has a constant been removed?
