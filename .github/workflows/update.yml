@@ -123,6 +123,7 @@ jobs:
           path: "php-src"
           # 8.6 has no branch of its own yet, it is still master
           ref: "master"
+          persist-credentials: false
       - name: "Update stubs"
         run: "./extractor/extract.php --update -- 8.5 8.6"
 
