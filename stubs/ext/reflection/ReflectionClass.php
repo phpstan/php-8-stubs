@@ -6,35 +6,6 @@ class ReflectionClass implements \Reflector
     final private function __clone(): void
     {
     }
-    /**
-     * @var int
-     * @cvalue ZEND_ACC_IMPLICIT_ABSTRACT_CLASS
-     * @todo deprecate
-     */
-    #[\Since('8.2')]
-    #[\Until('8.4')]
-    public const IS_IMPLICIT_ABSTRACT = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue ZEND_ACC_EXPLICIT_ABSTRACT_CLASS
-     */
-    #[\Since('8.2')]
-    #[\Until('8.4')]
-    public const IS_EXPLICIT_ABSTRACT = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue ZEND_ACC_FINAL
-     */
-    #[\Since('8.2')]
-    #[\Until('8.4')]
-    public const IS_FINAL = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue ZEND_ACC_READONLY_CLASS
-     */
-    #[\Since('8.2')]
-    #[\Until('8.4')]
-    public const IS_READONLY = UNKNOWN;
     #[\Since('8.1')]
     private function __clone(): void
     {
@@ -248,10 +219,6 @@ class ReflectionClass implements \Reflector
     public function isTrait()
     {
     }
-    #[\Since('8.1')]
-    public function isEnum(): bool
-    {
-    }
     /**
      * @tentative-return-type
      * @return bool
@@ -264,10 +231,6 @@ class ReflectionClass implements \Reflector
      * @return bool
      */
     public function isFinal()
-    {
-    }
-    #[\Since('8.2')]
-    public function isReadOnly(): bool
     {
     }
     /**
@@ -303,38 +266,6 @@ class ReflectionClass implements \Reflector
      * @return object
      */
     public function newInstanceArgs(array $args = [])
-    {
-    }
-    #[\Since('8.4')]
-    public function newLazyGhost(callable $initializer, int $options = 0): object
-    {
-    }
-    #[\Since('8.4')]
-    public function newLazyProxy(callable $factory, int $options = 0): object
-    {
-    }
-    #[\Since('8.4')]
-    public function resetAsLazyGhost(object $object, callable $initializer, int $options = 0): void
-    {
-    }
-    #[\Since('8.4')]
-    public function resetAsLazyProxy(object $object, callable $factory, int $options = 0): void
-    {
-    }
-    #[\Since('8.4')]
-    public function initializeLazyObject(object $object): object
-    {
-    }
-    #[\Since('8.4')]
-    public function isUninitializedLazyObject(object $object): bool
-    {
-    }
-    #[\Since('8.4')]
-    public function markLazyObjectAsInitialized(object $object): object
-    {
-    }
-    #[\Since('8.4')]
-    public function getLazyInitializer(object $object): ?callable
     {
     }
     /**
@@ -440,21 +371,90 @@ class ReflectionClass implements \Reflector
     public function getAttributes(?string $name = null, int $flags = 0): array
     {
     }
+    #[\Since('8.1')]
+    public function isEnum(): bool
+    {
+    }
+    #[\Since('8.2')]
+    public function isReadOnly(): bool
+    {
+    }
+    /**
+     * @var int
+     * @cvalue ZEND_ACC_IMPLICIT_ABSTRACT_CLASS
+     * @todo deprecate
+     */
+    #[\Since('8.2')]
+    #[\Until('8.4')]
+    public const IS_IMPLICIT_ABSTRACT = UNKNOWN;
     /**
      * @cvalue ZEND_ACC_IMPLICIT_ABSTRACT_CLASS
      * @todo deprecate
      */
     #[\Since('8.4')]
     public const int IS_IMPLICIT_ABSTRACT = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue ZEND_ACC_EXPLICIT_ABSTRACT_CLASS
+     */
+    #[\Since('8.2')]
+    #[\Until('8.4')]
+    public const IS_EXPLICIT_ABSTRACT = UNKNOWN;
     /** @cvalue ZEND_ACC_EXPLICIT_ABSTRACT_CLASS */
     #[\Since('8.4')]
     public const int IS_EXPLICIT_ABSTRACT = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue ZEND_ACC_FINAL
+     */
+    #[\Since('8.2')]
+    #[\Until('8.4')]
+    public const IS_FINAL = UNKNOWN;
     /** @cvalue ZEND_ACC_FINAL */
     #[\Since('8.4')]
     public const int IS_FINAL = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue ZEND_ACC_READONLY_CLASS
+     */
+    #[\Since('8.2')]
+    #[\Until('8.4')]
+    public const IS_READONLY = UNKNOWN;
     /** @cvalue ZEND_ACC_READONLY_CLASS */
     #[\Since('8.4')]
     public const int IS_READONLY = UNKNOWN;
+    #[\Since('8.4')]
+    public function newLazyGhost(callable $initializer, int $options = 0): object
+    {
+    }
+    #[\Since('8.4')]
+    public function newLazyProxy(callable $factory, int $options = 0): object
+    {
+    }
+    #[\Since('8.4')]
+    public function resetAsLazyGhost(object $object, callable $initializer, int $options = 0): void
+    {
+    }
+    #[\Since('8.4')]
+    public function resetAsLazyProxy(object $object, callable $factory, int $options = 0): void
+    {
+    }
+    #[\Since('8.4')]
+    public function initializeLazyObject(object $object): object
+    {
+    }
+    #[\Since('8.4')]
+    public function isUninitializedLazyObject(object $object): bool
+    {
+    }
+    #[\Since('8.4')]
+    public function markLazyObjectAsInitialized(object $object): object
+    {
+    }
+    #[\Since('8.4')]
+    public function getLazyInitializer(object $object): ?callable
+    {
+    }
     /** @cvalue ZEND_LAZY_OBJECT_SKIP_INITIALIZATION_ON_SERIALIZE */
     #[\Since('8.4')]
     public const int SKIP_INITIALIZATION_ON_SERIALIZE = UNKNOWN;

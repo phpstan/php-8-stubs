@@ -72,18 +72,10 @@ class Element extends \Dom\Node implements \Dom\ParentNode, \Dom\ChildNode
     public function getElementsByTagNameNS(?string $namespace, string $localName): HTMLCollection
     {
     }
-    #[\Since('8.5')]
-    public function getElementsByClassName(string $classNames): HTMLCollection
-    {
-    }
     public function insertAdjacentElement(AdjacentPosition $where, Element $element): ?Element
     {
     }
     public function insertAdjacentText(AdjacentPosition $where, string $data): void
-    {
-    }
-    #[\Since('8.5')]
-    public function insertAdjacentHTML(AdjacentPosition $where, string $string): void
     {
     }
     /** @implementation-alias DOMElement::setIdAttribute */
@@ -146,6 +138,14 @@ class Element extends \Dom\Node implements \Dom\ParentNode, \Dom\ChildNode
     {
     }
     public function rename(?string $namespaceURI, string $qualifiedName): void
+    {
+    }
+    #[\Since('8.5')]
+    public function getElementsByClassName(string $classNames): HTMLCollection
+    {
+    }
+    #[\Since('8.5')]
+    public function insertAdjacentHTML(AdjacentPosition $where, string $string): void
     {
     }
 }

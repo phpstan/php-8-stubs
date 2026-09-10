@@ -9,6 +9,22 @@ namespace Pdo;
 #[\Since('8.4')]
 class Sqlite extends \PDO
 {
+    #ifdef SQLITE_DETERMINISTIC
+    /** @cvalue SQLITE_DETERMINISTIC */
+    public const int DETERMINISTIC = UNKNOWN;
+    #endif
+    /** @cvalue SQLITE_OPEN_READONLY */
+    public const int OPEN_READONLY = UNKNOWN;
+    /** @cvalue SQLITE_OPEN_READWRITE */
+    public const int OPEN_READWRITE = UNKNOWN;
+    /** @cvalue SQLITE_OPEN_CREATE */
+    public const int OPEN_CREATE = UNKNOWN;
+    /** @cvalue PDO_SQLITE_ATTR_OPEN_FLAGS */
+    public const int ATTR_OPEN_FLAGS = UNKNOWN;
+    /** @cvalue PDO_SQLITE_ATTR_READONLY_STATEMENT */
+    public const int ATTR_READONLY_STATEMENT = UNKNOWN;
+    /** @cvalue PDO_SQLITE_ATTR_EXTENDED_RESULT_CODES */
+    public const int ATTR_EXTENDED_RESULT_CODES = UNKNOWN;
     // Registers an aggregating User Defined Function for use in SQL statements
     public function createAggregate(string $name, callable $step, callable $finalize, int $numArgs = -1): bool
     {
@@ -33,22 +49,6 @@ class Sqlite extends \PDO
     public function setAuthorizer(?callable $callback): void
     {
     }
-    #ifdef SQLITE_DETERMINISTIC
-    /** @cvalue SQLITE_DETERMINISTIC */
-    public const int DETERMINISTIC = UNKNOWN;
-    #endif
-    /** @cvalue SQLITE_OPEN_READONLY */
-    public const int OPEN_READONLY = UNKNOWN;
-    /** @cvalue SQLITE_OPEN_READWRITE */
-    public const int OPEN_READWRITE = UNKNOWN;
-    /** @cvalue SQLITE_OPEN_CREATE */
-    public const int OPEN_CREATE = UNKNOWN;
-    /** @cvalue PDO_SQLITE_ATTR_OPEN_FLAGS */
-    public const int ATTR_OPEN_FLAGS = UNKNOWN;
-    /** @cvalue PDO_SQLITE_ATTR_READONLY_STATEMENT */
-    public const int ATTR_READONLY_STATEMENT = UNKNOWN;
-    /** @cvalue PDO_SQLITE_ATTR_EXTENDED_RESULT_CODES */
-    public const int ATTR_EXTENDED_RESULT_CODES = UNKNOWN;
     /** @cvalue PDO_SQLITE_ATTR_BUSY_STATEMENT */
     #[\Since('8.5')]
     public const int ATTR_BUSY_STATEMENT = UNKNOWN;

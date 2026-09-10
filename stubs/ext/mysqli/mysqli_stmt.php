@@ -2,15 +2,6 @@
 
 class mysqli_stmt
 {
-    /**
-     * @tentative-return-type
-     * @alias mysqli_stmt_execute
-     * @return bool
-     */
-    #[\Until('8.1')]
-    public function execute()
-    {
-    }
     public function __construct(mysqli $mysql, ?string $query = null)
     {
     }
@@ -60,6 +51,15 @@ class mysqli_stmt
      * @return void
      */
     public function data_seek(int $offset)
+    {
+    }
+    /**
+     * @tentative-return-type
+     * @alias mysqli_stmt_execute
+     * @return bool
+     */
+    #[\Until('8.1')]
+    public function execute()
     {
     }
     /**

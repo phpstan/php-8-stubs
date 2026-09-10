@@ -2,29 +2,18 @@
 
 class ReflectionFunction extends \ReflectionFunctionAbstract
 {
-    /**
-     * @tentative-return-type
-     * @return bool
-     */
-    #[\Until('8.4')]
-    public function isDisabled()
-    {
-    }
-    /**
-     * @var int
-     * @cvalue ZEND_ACC_DEPRECATED
-     */
-    #[\Since('8.2')]
-    #[\Until('8.4')]
-    public const IS_DEPRECATED = UNKNOWN;
     public function __construct(Closure|string $function)
     {
     }
     public function __toString(): string
     {
     }
-    #[\Since('8.2')]
-    public function isAnonymous(): bool
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
+    #[\Until('8.4')]
+    public function isDisabled()
     {
     }
     /**
@@ -56,6 +45,17 @@ class ReflectionFunction extends \ReflectionFunctionAbstract
     public function getClosure()
     {
     }
+    #[\Since('8.2')]
+    public function isAnonymous(): bool
+    {
+    }
+    /**
+     * @var int
+     * @cvalue ZEND_ACC_DEPRECATED
+     */
+    #[\Since('8.2')]
+    #[\Until('8.4')]
+    public const IS_DEPRECATED = UNKNOWN;
     /** @cvalue ZEND_ACC_DEPRECATED */
     #[\Since('8.4')]
     public const int IS_DEPRECATED = UNKNOWN;

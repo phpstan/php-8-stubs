@@ -121,10 +121,6 @@ class SplObjectStorage implements \Countable, \Iterator, \Serializable, \ArrayAc
     public function next()
     {
     }
-    #[\Since('8.4')]
-    public function seek(int $offset): void
-    {
-    }
     /**
      * @tentative-return-type
      * @return void
@@ -201,6 +197,10 @@ class SplObjectStorage implements \Countable, \Iterator, \Serializable, \ArrayAc
      * @return array
      */
     public function __debugInfo()
+    {
+    }
+    #[\Since('8.4')]
+    public function seek(int $offset): void
     {
     }
 }

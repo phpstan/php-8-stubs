@@ -3,14 +3,6 @@
 /** @generate-function-entries */
 class SplFileInfo
 {
-    /**
-     * @tentative-return-type
-     * @return void
-     */
-    #[\Until('8.4')]
-    final public function _bad_state_ex()
-    {
-    }
     public function __construct(string $filename)
     {
     }
@@ -213,6 +205,14 @@ class SplFileInfo
      * @return array
      */
     public function __debugInfo()
+    {
+    }
+    /**
+     * @tentative-return-type
+     * @return void
+     */
+    #[\Until('8.4')]
+    final public function _bad_state_ex()
     {
     }
     /**

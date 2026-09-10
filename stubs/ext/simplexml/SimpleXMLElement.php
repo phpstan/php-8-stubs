@@ -2,10 +2,6 @@
 
 class SimpleXMLElement implements \Stringable, \Countable, \RecursiveIterator
 {
-    #[\Until('8.1')]
-    public function current()
-    {
-    }
     /**
      * @tentative-return-type
      * @return (array | null | false)
@@ -90,10 +86,6 @@ class SimpleXMLElement implements \Stringable, \Countable, \RecursiveIterator
     public function __toString(): string
     {
     }
-    #[\Since('8.3')]
-    public function __debugInfo(): ?array
-    {
-    }
     /**
      * @tentative-return-type
      * @return int
@@ -113,6 +105,10 @@ class SimpleXMLElement implements \Stringable, \Countable, \RecursiveIterator
      * @return bool
      */
     public function valid()
+    {
+    }
+    #[\Until('8.1')]
+    public function current()
     {
     }
     #[\Since('8.1')]
@@ -145,6 +141,10 @@ class SimpleXMLElement implements \Stringable, \Countable, \RecursiveIterator
      * @return (SimpleXMLElement | null)
      */
     public function getChildren()
+    {
+    }
+    #[\Since('8.3')]
+    public function __debugInfo(): ?array
     {
     }
 }

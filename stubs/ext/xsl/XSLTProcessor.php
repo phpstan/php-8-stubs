@@ -70,10 +70,6 @@ class XSLTProcessor
     public function registerPHPFunctions(array|string|null $functions = null)
     {
     }
-    #[\Since('8.4')]
-    public function registerPHPFunctionNS(string $namespaceURI, string $name, callable $callable): void
-    {
-    }
     /**
      * @tentative-return-type
      * @return bool
@@ -93,6 +89,10 @@ class XSLTProcessor
      * @return int
      */
     public function getSecurityPrefs()
+    {
+    }
+    #[\Since('8.4')]
+    public function registerPHPFunctionNS(string $namespaceURI, string $name, callable $callable): void
     {
     }
 }

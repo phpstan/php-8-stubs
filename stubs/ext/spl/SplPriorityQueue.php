@@ -4,27 +4,6 @@
 class SplPriorityQueue implements \Iterator, \Countable
 {
     /**
-     * @var int
-     * @cvalue SPL_PQUEUE_EXTR_BOTH
-     */
-    #[\Since('8.2')]
-    #[\Until('8.4')]
-    public const EXTR_BOTH = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue SPL_PQUEUE_EXTR_PRIORITY
-     */
-    #[\Since('8.2')]
-    #[\Until('8.4')]
-    public const EXTR_PRIORITY = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue SPL_PQUEUE_EXTR_DATA
-     */
-    #[\Since('8.2')]
-    #[\Until('8.4')]
-    public const EXTR_DATA = UNKNOWN;
-    /**
      * @tentative-return-type
      * @return int
      */
@@ -144,6 +123,36 @@ class SplPriorityQueue implements \Iterator, \Countable
     public function __debugInfo()
     {
     }
+    /**
+     * @var int
+     * @cvalue SPL_PQUEUE_EXTR_BOTH
+     */
+    #[\Since('8.2')]
+    #[\Until('8.4')]
+    public const EXTR_BOTH = UNKNOWN;
+    /** @cvalue SPL_PQUEUE_EXTR_BOTH */
+    #[\Since('8.4')]
+    public const int EXTR_BOTH = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SPL_PQUEUE_EXTR_PRIORITY
+     */
+    #[\Since('8.2')]
+    #[\Until('8.4')]
+    public const EXTR_PRIORITY = UNKNOWN;
+    /** @cvalue SPL_PQUEUE_EXTR_PRIORITY */
+    #[\Since('8.4')]
+    public const int EXTR_PRIORITY = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue SPL_PQUEUE_EXTR_DATA
+     */
+    #[\Since('8.2')]
+    #[\Until('8.4')]
+    public const EXTR_DATA = UNKNOWN;
+    /** @cvalue SPL_PQUEUE_EXTR_DATA */
+    #[\Since('8.4')]
+    public const int EXTR_DATA = UNKNOWN;
     /** @tentative-return-type */
     #[\Since('8.5')]
     public function __serialize(): array
@@ -154,13 +163,4 @@ class SplPriorityQueue implements \Iterator, \Countable
     public function __unserialize(array $data): void
     {
     }
-    /** @cvalue SPL_PQUEUE_EXTR_BOTH */
-    #[\Since('8.4')]
-    public const int EXTR_BOTH = UNKNOWN;
-    /** @cvalue SPL_PQUEUE_EXTR_PRIORITY */
-    #[\Since('8.4')]
-    public const int EXTR_PRIORITY = UNKNOWN;
-    /** @cvalue SPL_PQUEUE_EXTR_DATA */
-    #[\Since('8.4')]
-    public const int EXTR_DATA = UNKNOWN;
 }

@@ -6,14 +6,6 @@ class PDO_PGSql_Ext
 {
     /**
      * @tentative-return-type
-     * @return (array | false)
-     */
-    #[\Until('8.2')]
-    public function pgsqlGetNotify(int $fetchMode = PDO::FETCH_USE_DEFAULT, int $timeoutMilliseconds = 0)
-    {
-    }
-    /**
-     * @tentative-return-type
      * @return bool
      */
     #[\Until('8.5')]
@@ -62,6 +54,14 @@ class PDO_PGSql_Ext
      * @return bool
      */
     public function pgsqlLOBUnlink(string $oid)
+    {
+    }
+    /**
+     * @tentative-return-type
+     * @return (array | false)
+     */
+    #[\Until('8.2')]
+    public function pgsqlGetNotify(int $fetchMode = PDO::FETCH_USE_DEFAULT, int $timeoutMilliseconds = 0)
     {
     }
     /** @tentative-return-type */

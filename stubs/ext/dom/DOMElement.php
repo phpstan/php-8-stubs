@@ -12,10 +12,6 @@ class DOMElement extends \DOMNode implements \DOMParentNode, \DOMChildNode
     public function getAttribute(string $qualifiedName)
     {
     }
-    #[\Since('8.3')]
-    public function getAttributeNames(): array
-    {
-    }
     /**
      * @tentative-return-type
      * @return string
@@ -117,10 +113,6 @@ class DOMElement extends \DOMNode implements \DOMParentNode, \DOMChildNode
     public function setIdAttributeNode(DOMAttr $attr, bool $isId)
     {
     }
-    #[\Since('8.3')]
-    public function toggleAttribute(string $qualifiedName, ?bool $force = null): bool
-    {
-    }
     public function remove(): void
     {
     }
@@ -142,6 +134,14 @@ class DOMElement extends \DOMNode implements \DOMParentNode, \DOMChildNode
     }
     /** @param DOMNode|string $nodes */
     public function prepend(...$nodes): void
+    {
+    }
+    #[\Since('8.3')]
+    public function getAttributeNames(): array
+    {
+    }
+    #[\Since('8.3')]
+    public function toggleAttribute(string $qualifiedName, ?bool $force = null): bool
     {
     }
     /** @param DOMNode|string $nodes */

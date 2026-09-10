@@ -13,11 +13,6 @@ abstract class Document extends \Dom\Node implements \Dom\ParentNode
     public function getElementsByTagNameNS(?string $namespace, string $localName): HTMLCollection
     {
     }
-    /** @implementation-alias Dom\Element::getElementsByClassName */
-    #[\Since('8.5')]
-    public function getElementsByClassName(string $classNames): HTMLCollection
-    {
-    }
     public function createElement(string $localName): Element
     {
     }
@@ -103,6 +98,11 @@ abstract class Document extends \Dom\Node implements \Dom\ParentNode
     }
     /** @implementation-alias Dom\Element::querySelectorAll */
     public function querySelectorAll(string $selectors): NodeList
+    {
+    }
+    /** @implementation-alias Dom\Element::getElementsByClassName */
+    #[\Since('8.5')]
+    public function getElementsByClassName(string $classNames): HTMLCollection
     {
     }
 }

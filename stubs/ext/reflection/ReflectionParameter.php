@@ -7,30 +7,6 @@ class ReflectionParameter implements \Reflector
     final private function __clone(): void
     {
     }
-    /**
-     * @tentative-return-type
-     * @return (ReflectionClass | null)
-     */
-    #[\Until('8.4')]
-    public function getClass()
-    {
-    }
-    /**
-     * @tentative-return-type
-     * @return bool
-     */
-    #[\Until('8.4')]
-    public function isArray()
-    {
-    }
-    /**
-     * @tentative-return-type
-     * @return bool
-     */
-    #[\Until('8.4')]
-    public function isCallable()
-    {
-    }
     /** @implementation-alias ReflectionClass::__clone */
     #[\Since('8.1')]
     private function __clone(): void
@@ -80,6 +56,14 @@ class ReflectionParameter implements \Reflector
     }
     /**
      * @tentative-return-type
+     * @return (ReflectionClass | null)
+     */
+    #[\Until('8.4')]
+    public function getClass()
+    {
+    }
+    /**
+     * @tentative-return-type
      */
     #[\Deprecated(since: '8.0', message: "use ReflectionParameter::getType() instead")]
     #[\Since('8.4')]
@@ -102,10 +86,26 @@ class ReflectionParameter implements \Reflector
     }
     /**
      * @tentative-return-type
+     * @return bool
+     */
+    #[\Until('8.4')]
+    public function isArray()
+    {
+    }
+    /**
+     * @tentative-return-type
      */
     #[\Deprecated(since: '8.0', message: "use ReflectionParameter::getType() instead")]
     #[\Since('8.4')]
     public function isArray()
+    {
+    }
+    /**
+     * @tentative-return-type
+     * @return bool
+     */
+    #[\Until('8.4')]
+    public function isCallable()
     {
     }
     /**

@@ -3,14 +3,6 @@
 /** @generate-function-entries */
 class ResourceBundle implements \IteratorAggregate, \Countable
 {
-    /**
-     * @tentative-return-type
-     * @return mixed
-     */
-    #[\Until('8.4')]
-    public function get($index, bool $fallback = true)
-    {
-    }
     public function __construct(?string $locale, ?string $bundle, bool $fallback = true)
     {
     }
@@ -20,6 +12,14 @@ class ResourceBundle implements \IteratorAggregate, \Countable
      * @return (ResourceBundle | null)
      */
     public static function create(?string $locale, ?string $bundle, bool $fallback = true)
+    {
+    }
+    /**
+     * @tentative-return-type
+     * @return mixed
+     */
+    #[\Until('8.4')]
+    public function get($index, bool $fallback = true)
     {
     }
     /** @tentative-return-type */

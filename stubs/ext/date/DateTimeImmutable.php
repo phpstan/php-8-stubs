@@ -5,14 +5,6 @@ class DateTimeImmutable implements \DateTimeInterface
     public function __construct(string $datetime = "now", ?DateTimeZone $timezone = null)
     {
     }
-    #[\Since('8.2')]
-    public function __serialize(): array
-    {
-    }
-    #[\Since('8.2')]
-    public function __unserialize(array $data): void
-    {
-    }
     /**
      * @tentative-return-type
      * @return void
@@ -40,11 +32,6 @@ class DateTimeImmutable implements \DateTimeInterface
      * @return (DateTimeImmutable | false)
      */
     public static function createFromFormat(string $format, string $datetime, ?DateTimeZone $timezone = null)
-    {
-    }
-    /** @tentative-return-type */
-    #[\Since('8.4')]
-    public static function createFromTimestamp(int|float $timestamp): static
     {
     }
     /**
@@ -84,13 +71,6 @@ class DateTimeImmutable implements \DateTimeInterface
      * @return int
      */
     public function getTimestamp()
-    {
-    }
-    /**
-     * @alias DateTime::getMicrosecond
-     */
-    #[\Since('8.4')]
-    public function getMicrosecond(): int
     {
     }
     /**
@@ -213,16 +193,6 @@ class DateTimeImmutable implements \DateTimeInterface
     public function setTimestamp(int $timestamp)
     {
     }
-    #[\Since('8.4')]
-    #[\Until('8.5')]
-    public function setMicrosecond(int $microsecond): static
-    {
-    }
-    #[\NoDiscard(message: "as DateTimeImmutable::setMicrosecond() does not modify the object itself")]
-    #[\Since('8.5')]
-    public function setMicrosecond(int $microsecond): static
-    {
-    }
     /**
      * @tentative-return-type
      * @return DateTimeImmutable
@@ -231,6 +201,36 @@ class DateTimeImmutable implements \DateTimeInterface
     {
     }
     public static function createFromInterface(DateTimeInterface $object): DateTimeImmutable
+    {
+    }
+    #[\Since('8.2')]
+    public function __serialize(): array
+    {
+    }
+    #[\Since('8.2')]
+    public function __unserialize(array $data): void
+    {
+    }
+    /** @tentative-return-type */
+    #[\Since('8.4')]
+    public static function createFromTimestamp(int|float $timestamp): static
+    {
+    }
+    /**
+     * @alias DateTime::getMicrosecond
+     */
+    #[\Since('8.4')]
+    public function getMicrosecond(): int
+    {
+    }
+    #[\Since('8.4')]
+    #[\Until('8.5')]
+    public function setMicrosecond(int $microsecond): static
+    {
+    }
+    #[\NoDiscard(message: "as DateTimeImmutable::setMicrosecond() does not modify the object itself")]
+    #[\Since('8.5')]
+    public function setMicrosecond(int $microsecond): static
     {
     }
 }

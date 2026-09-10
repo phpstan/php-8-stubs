@@ -7,41 +7,6 @@ class ReflectionProperty implements \Reflector
     final private function __clone(): void
     {
     }
-    /**
-     * @var int
-     * @cvalue ZEND_ACC_STATIC
-     */
-    #[\Since('8.2')]
-    #[\Until('8.4')]
-    public const IS_STATIC = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue ZEND_ACC_READONLY
-     */
-    #[\Since('8.2')]
-    #[\Until('8.4')]
-    public const IS_READONLY = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue ZEND_ACC_PUBLIC
-     */
-    #[\Since('8.2')]
-    #[\Until('8.4')]
-    public const IS_PUBLIC = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue ZEND_ACC_PROTECTED
-     */
-    #[\Since('8.2')]
-    #[\Until('8.4')]
-    public const IS_PROTECTED = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue ZEND_ACC_PRIVATE
-     */
-    #[\Since('8.2')]
-    #[\Until('8.4')]
-    public const IS_PRIVATE = UNKNOWN;
     /** @implementation-alias ReflectionClass::__clone */
     #[\Since('8.1')]
     private function __clone(): void
@@ -60,10 +25,6 @@ class ReflectionProperty implements \Reflector
     public function getName()
     {
     }
-    #[\Since('8.5')]
-    public function getMangledName(): string
-    {
-    }
     /**
      * @tentative-return-type
      * @return mixed
@@ -76,26 +37,6 @@ class ReflectionProperty implements \Reflector
      * @return void
      */
     public function setValue(mixed $objectOrValue, mixed $value = UNKNOWN)
-    {
-    }
-    #[\Since('8.4')]
-    public function getRawValue(object $object): mixed
-    {
-    }
-    #[\Since('8.4')]
-    public function setRawValue(object $object, mixed $value): void
-    {
-    }
-    #[\Since('8.4')]
-    public function setRawValueWithoutLazyInitialization(object $object, mixed $value): void
-    {
-    }
-    #[\Since('8.4')]
-    public function skipLazyInitialization(object $object): void
-    {
-    }
-    #[\Since('8.4')]
-    public function isLazy(object $object): bool
     {
     }
     /**
@@ -126,14 +67,6 @@ class ReflectionProperty implements \Reflector
     public function isProtected()
     {
     }
-    #[\Since('8.4')]
-    public function isPrivateSet(): bool
-    {
-    }
-    #[\Since('8.4')]
-    public function isProtectedSet(): bool
-    {
-    }
     /**
      * @tentative-return-type
      * @return bool
@@ -141,27 +74,11 @@ class ReflectionProperty implements \Reflector
     public function isStatic()
     {
     }
-    #[\Since('8.1')]
-    public function isReadOnly(): bool
-    {
-    }
     /**
      * @tentative-return-type
      * @return bool
      */
     public function isDefault()
-    {
-    }
-    #[\Since('8.4')]
-    public function isDynamic(): bool
-    {
-    }
-    #[\Since('8.4')]
-    public function isAbstract(): bool
-    {
-    }
-    #[\Since('8.4')]
-    public function isVirtual(): bool
     {
     }
     public function isPromoted(): bool
@@ -209,10 +126,6 @@ class ReflectionProperty implements \Reflector
     public function getType()
     {
     }
-    #[\Since('8.4')]
-    public function getSettableType(): ?ReflectionType
-    {
-    }
     /**
      * @tentative-return-type
      * @return bool
@@ -232,6 +145,104 @@ class ReflectionProperty implements \Reflector
     }
     /** @return ReflectionAttribute[] */
     public function getAttributes(?string $name = null, int $flags = 0): array
+    {
+    }
+    #[\Since('8.1')]
+    public function isReadOnly(): bool
+    {
+    }
+    /**
+     * @var int
+     * @cvalue ZEND_ACC_STATIC
+     */
+    #[\Since('8.2')]
+    #[\Until('8.4')]
+    public const IS_STATIC = UNKNOWN;
+    /** @cvalue ZEND_ACC_STATIC */
+    #[\Since('8.4')]
+    public const int IS_STATIC = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue ZEND_ACC_READONLY
+     */
+    #[\Since('8.2')]
+    #[\Until('8.4')]
+    public const IS_READONLY = UNKNOWN;
+    /** @cvalue ZEND_ACC_READONLY */
+    #[\Since('8.4')]
+    public const int IS_READONLY = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue ZEND_ACC_PUBLIC
+     */
+    #[\Since('8.2')]
+    #[\Until('8.4')]
+    public const IS_PUBLIC = UNKNOWN;
+    /** @cvalue ZEND_ACC_PUBLIC */
+    #[\Since('8.4')]
+    public const int IS_PUBLIC = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue ZEND_ACC_PROTECTED
+     */
+    #[\Since('8.2')]
+    #[\Until('8.4')]
+    public const IS_PROTECTED = UNKNOWN;
+    /** @cvalue ZEND_ACC_PROTECTED */
+    #[\Since('8.4')]
+    public const int IS_PROTECTED = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue ZEND_ACC_PRIVATE
+     */
+    #[\Since('8.2')]
+    #[\Until('8.4')]
+    public const IS_PRIVATE = UNKNOWN;
+    /** @cvalue ZEND_ACC_PRIVATE */
+    #[\Since('8.4')]
+    public const int IS_PRIVATE = UNKNOWN;
+    #[\Since('8.4')]
+    public function getRawValue(object $object): mixed
+    {
+    }
+    #[\Since('8.4')]
+    public function setRawValue(object $object, mixed $value): void
+    {
+    }
+    #[\Since('8.4')]
+    public function setRawValueWithoutLazyInitialization(object $object, mixed $value): void
+    {
+    }
+    #[\Since('8.4')]
+    public function skipLazyInitialization(object $object): void
+    {
+    }
+    #[\Since('8.4')]
+    public function isLazy(object $object): bool
+    {
+    }
+    #[\Since('8.4')]
+    public function isPrivateSet(): bool
+    {
+    }
+    #[\Since('8.4')]
+    public function isProtectedSet(): bool
+    {
+    }
+    #[\Since('8.4')]
+    public function isDynamic(): bool
+    {
+    }
+    #[\Since('8.4')]
+    public function isAbstract(): bool
+    {
+    }
+    #[\Since('8.4')]
+    public function isVirtual(): bool
+    {
+    }
+    #[\Since('8.4')]
+    public function getSettableType(): ?ReflectionType
     {
     }
     #[\Since('8.4')]
@@ -255,21 +266,6 @@ class ReflectionProperty implements \Reflector
     public function isFinal(): bool
     {
     }
-    /** @cvalue ZEND_ACC_STATIC */
-    #[\Since('8.4')]
-    public const int IS_STATIC = UNKNOWN;
-    /** @cvalue ZEND_ACC_READONLY */
-    #[\Since('8.4')]
-    public const int IS_READONLY = UNKNOWN;
-    /** @cvalue ZEND_ACC_PUBLIC */
-    #[\Since('8.4')]
-    public const int IS_PUBLIC = UNKNOWN;
-    /** @cvalue ZEND_ACC_PROTECTED */
-    #[\Since('8.4')]
-    public const int IS_PROTECTED = UNKNOWN;
-    /** @cvalue ZEND_ACC_PRIVATE */
-    #[\Since('8.4')]
-    public const int IS_PRIVATE = UNKNOWN;
     /** @cvalue ZEND_ACC_ABSTRACT */
     #[\Since('8.4')]
     public const int IS_ABSTRACT = UNKNOWN;
@@ -285,4 +281,8 @@ class ReflectionProperty implements \Reflector
     /** @cvalue ZEND_ACC_FINAL */
     #[\Since('8.4')]
     public const int IS_FINAL = UNKNOWN;
+    #[\Since('8.5')]
+    public function getMangledName(): string
+    {
+    }
 }

@@ -3,20 +3,6 @@
 /** @generate-function-entries */
 class Transliterator
 {
-    /**
-     * @var int
-     * @cvalue TRANSLITERATOR_FORWARD
-     */
-    #[\Since('8.2')]
-    #[\Until('8.4')]
-    public const FORWARD = UNKNOWN;
-    /**
-     * @var int
-     * @cvalue TRANSLITERATOR_REVERSE
-     */
-    #[\Since('8.2')]
-    #[\Until('8.4')]
-    public const REVERSE = UNKNOWN;
     final private function __construct()
     {
     }
@@ -75,9 +61,23 @@ class Transliterator
     public function getErrorMessage()
     {
     }
+    /**
+     * @var int
+     * @cvalue TRANSLITERATOR_FORWARD
+     */
+    #[\Since('8.2')]
+    #[\Until('8.4')]
+    public const FORWARD = UNKNOWN;
     /** @cvalue TRANSLITERATOR_FORWARD */
     #[\Since('8.4')]
     public const int FORWARD = UNKNOWN;
+    /**
+     * @var int
+     * @cvalue TRANSLITERATOR_REVERSE
+     */
+    #[\Since('8.2')]
+    #[\Until('8.4')]
+    public const REVERSE = UNKNOWN;
     /** @cvalue TRANSLITERATOR_REVERSE */
     #[\Since('8.4')]
     public const int REVERSE = UNKNOWN;

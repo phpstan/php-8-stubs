@@ -2,37 +2,6 @@
 
 final class FFI
 {
-    /**
-     * @var int
-     * @cvalue __BIGGEST_ALIGNMENT__
-     * @link ffi-ffi.constants.biggest-alignment
-     */
-    #[\Since('8.2')]
-    #[\Until('8.3')]
-    public const __BIGGEST_ALIGNMENT__ = UNKNOWN;
-    #[\Until('8.4')]
-    public static function new(FFI\CType|string $type, bool $owned = true, bool $persistent = false): ?FFI\CData
-    {
-    }
-    /**
-     * @param FFI\CData|int|float|bool|null $ptr
-     * @prefer-ref $ptr
-     */
-    #[\Until('8.4')]
-    public static function cast(FFI\CType|string $type, $ptr): ?FFI\CData
-    {
-    }
-    #[\Until('8.4')]
-    public static function type(string $type): ?FFI\CType
-    {
-    }
-    /**
-     * @cvalue __BIGGEST_ALIGNMENT__
-     * @link ffi-ffi.constants.biggest-alignment
-     */
-    #[\Since('8.3')]
-    #[\Until('8.4')]
-    public const int __BIGGEST_ALIGNMENT__ = UNKNOWN;
     public static function cdef(string $code = "", ?string $lib = null): FFI
     {
     }
@@ -40,6 +9,10 @@ final class FFI
     {
     }
     public static function scope(string $name): FFI
+    {
+    }
+    #[\Until('8.4')]
+    public static function new(FFI\CType|string $type, bool $owned = true, bool $persistent = false): ?FFI\CData
     {
     }
     #[\Since('8.4')]
@@ -54,8 +27,20 @@ final class FFI
      * @param FFI\CData|int|float|bool|null $ptr
      * @prefer-ref $ptr
      */
+    #[\Until('8.4')]
+    public static function cast(FFI\CType|string $type, $ptr): ?FFI\CData
+    {
+    }
+    /**
+     * @param FFI\CData|int|float|bool|null $ptr
+     * @prefer-ref $ptr
+     */
     #[\Since('8.4')]
     public static function cast(FFI\CType|string $type, $ptr): FFI\CData
+    {
+    }
+    #[\Until('8.4')]
+    public static function type(string $type): ?FFI\CType
     {
     }
     #[\Since('8.4')]
@@ -110,6 +95,21 @@ final class FFI
     public static function isNull(FFI\CData $ptr): bool
     {
     }
+    /**
+     * @var int
+     * @cvalue __BIGGEST_ALIGNMENT__
+     * @link ffi-ffi.constants.biggest-alignment
+     */
+    #[\Since('8.2')]
+    #[\Until('8.3')]
+    public const __BIGGEST_ALIGNMENT__ = UNKNOWN;
+    /**
+     * @cvalue __BIGGEST_ALIGNMENT__
+     * @link ffi-ffi.constants.biggest-alignment
+     */
+    #[\Since('8.3')]
+    #[\Until('8.4')]
+    public const int __BIGGEST_ALIGNMENT__ = UNKNOWN;
     /** @cvalue __BIGGEST_ALIGNMENT__ */
     #[\Since('8.4')]
     public const int __BIGGEST_ALIGNMENT__ = UNKNOWN;

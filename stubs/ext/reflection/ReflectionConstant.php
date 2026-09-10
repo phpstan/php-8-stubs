@@ -25,6 +25,9 @@ final class ReflectionConstant implements \Reflector
     public function isDeprecated(): bool
     {
     }
+    public function __toString(): string
+    {
+    }
     #[\Since('8.5')]
     public function getFileName(): string|false
     {
@@ -35,9 +38,6 @@ final class ReflectionConstant implements \Reflector
     }
     #[\Since('8.5')]
     public function getExtensionName(): string|false
-    {
-    }
-    public function __toString(): string
     {
     }
     #[\Since('8.5')]

@@ -70,10 +70,6 @@ class DOMNode
     public function isSameNode(DOMNode $otherNode)
     {
     }
-    #[\Since('8.3')]
-    public function isEqualNode(?DOMNode $otherNode): bool
-    {
-    }
     /**
      * @tentative-return-type
      * @return bool
@@ -110,6 +106,18 @@ class DOMNode
     public function replaceChild(DOMNode $node, DOMNode $child)
     {
     }
+    #[\Since('8.1')]
+    public function __sleep(): array
+    {
+    }
+    #[\Since('8.1')]
+    public function __wakeup(): void
+    {
+    }
+    #[\Since('8.3')]
+    public function isEqualNode(?DOMNode $otherNode): bool
+    {
+    }
     #[\Since('8.3')]
     public function contains(DOMNode|DOMNameSpaceNode|null $other): bool
     {
@@ -120,14 +128,6 @@ class DOMNode
     }
     #[\Since('8.4')]
     public function compareDocumentPosition(DOMNode $other): int
-    {
-    }
-    #[\Since('8.1')]
-    public function __sleep(): array
-    {
-    }
-    #[\Since('8.1')]
-    public function __wakeup(): void
     {
     }
     #[\Since('8.4')]

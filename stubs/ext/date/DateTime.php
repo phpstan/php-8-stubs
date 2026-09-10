@@ -5,14 +5,6 @@ class DateTime implements \DateTimeInterface
     public function __construct(string $datetime = "now", ?DateTimeZone $timezone = null)
     {
     }
-    #[\Since('8.2')]
-    public function __serialize(): array
-    {
-    }
-    #[\Since('8.2')]
-    public function __unserialize(array $data): void
-    {
-    }
     /**
      * @tentative-return-type
      * @return void
@@ -50,11 +42,6 @@ class DateTime implements \DateTimeInterface
      * @return (DateTime | false)
      */
     public static function createFromFormat(string $format, string $datetime, ?DateTimeZone $timezone = null)
-    {
-    }
-    /** @tentative-return-type */
-    #[\Since('8.4')]
-    public static function createFromTimestamp(int|float $timestamp): static
     {
     }
     /**
@@ -118,10 +105,6 @@ class DateTime implements \DateTimeInterface
     public function getOffset()
     {
     }
-    #[\Since('8.4')]
-    public function getMicrosecond(): int
-    {
-    }
     /**
      * @tentative-return-type
      * @alias date_time_set
@@ -154,10 +137,6 @@ class DateTime implements \DateTimeInterface
     public function setTimestamp(int $timestamp)
     {
     }
-    #[\Since('8.4')]
-    public function setMicrosecond(int $microsecond): static
-    {
-    }
     /**
      * @tentative-return-type
      * @alias date_timestamp_get
@@ -172,6 +151,27 @@ class DateTime implements \DateTimeInterface
      * @return DateInterval
      */
     public function diff(DateTimeInterface $targetObject, bool $absolute = false)
+    {
+    }
+    #[\Since('8.2')]
+    public function __serialize(): array
+    {
+    }
+    #[\Since('8.2')]
+    public function __unserialize(array $data): void
+    {
+    }
+    /** @tentative-return-type */
+    #[\Since('8.4')]
+    public static function createFromTimestamp(int|float $timestamp): static
+    {
+    }
+    #[\Since('8.4')]
+    public function getMicrosecond(): int
+    {
+    }
+    #[\Since('8.4')]
+    public function setMicrosecond(int $microsecond): static
     {
     }
 }

@@ -2,13 +2,6 @@
 
 class ReflectionAttribute
 {
-    /**
-     * @var int
-     * @cvalue REFLECTION_ATTRIBUTE_IS_INSTANCEOF
-     */
-    #[\Since('8.2')]
-    #[\Until('8.4')]
-    public const IS_INSTANCEOF = UNKNOWN;
     public function getName(): string
     {
     }
@@ -24,16 +17,23 @@ class ReflectionAttribute
     public function newInstance(): object
     {
     }
-    #[\Since('8.1')]
-    public function __toString(): string
-    {
-    }
     private function __clone(): void
     {
     }
     private function __construct()
     {
     }
+    #[\Since('8.1')]
+    public function __toString(): string
+    {
+    }
+    /**
+     * @var int
+     * @cvalue REFLECTION_ATTRIBUTE_IS_INSTANCEOF
+     */
+    #[\Since('8.2')]
+    #[\Until('8.4')]
+    public const IS_INSTANCEOF = UNKNOWN;
     /** @cvalue REFLECTION_ATTRIBUTE_IS_INSTANCEOF */
     #[\Since('8.4')]
     public const int IS_INSTANCEOF = UNKNOWN;

@@ -33,10 +33,6 @@ class SQLite3Result
     public function fetchArray(int $mode = SQLITE3_BOTH)
     {
     }
-    #[\Since('8.5')]
-    public function fetchAll(int $mode = SQLITE3_BOTH): array|false
-    {
-    }
     /**
      * @tentative-return-type
      * @return bool
@@ -49,6 +45,10 @@ class SQLite3Result
      * @return bool
      */
     public function finalize()
+    {
+    }
+    #[\Since('8.5')]
+    public function fetchAll(int $mode = SQLITE3_BOTH): array|false
     {
     }
 }

@@ -61,11 +61,6 @@ abstract class ReflectionFunctionAbstract implements \Reflector
     public function isVariadic()
     {
     }
-    /** @tentative-return-type */
-    #[\Since('8.1')]
-    public function isStatic(): bool
-    {
-    }
     /**
      * @tentative-return-type
      * @return (object | null)
@@ -85,10 +80,6 @@ abstract class ReflectionFunctionAbstract implements \Reflector
      * @return (ReflectionClass | null)
      */
     public function getClosureCalledClass()
-    {
-    }
-    #[\Since('8.1')]
-    public function getClosureUsedVariables(): array
     {
     }
     /**
@@ -203,16 +194,25 @@ abstract class ReflectionFunctionAbstract implements \Reflector
     public function getReturnType()
     {
     }
+    /** @return ReflectionAttribute[] */
+    public function getAttributes(?string $name = null, int $flags = 0): array
+    {
+    }
+    /** @tentative-return-type */
+    #[\Since('8.1')]
+    public function isStatic(): bool
+    {
+    }
+    #[\Since('8.1')]
+    public function getClosureUsedVariables(): array
+    {
+    }
     #[\Since('8.1')]
     public function hasTentativeReturnType(): bool
     {
     }
     #[\Since('8.1')]
     public function getTentativeReturnType(): ?ReflectionType
-    {
-    }
-    /** @return ReflectionAttribute[] */
-    public function getAttributes(?string $name = null, int $flags = 0): array
     {
     }
 }
