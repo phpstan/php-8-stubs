@@ -46,6 +46,13 @@ class SplFileObject extends \SplFileInfo implements \RecursiveIterator, \Seekabl
      * @tentative-return-type
      * @return (array | false)
      */
+    #[\Until('8.6')]
+    public function fgetcsv(string $separator = ",", string $enclosure = "\"", string $escape = "\\")
+    {
+    }
+    /** @tentative-return-type */
+    #[\Deprecated(since: '8.6')]
+    #[\Since('8.6')]
     public function fgetcsv(string $separator = ",", string $enclosure = "\"", string $escape = "\\")
     {
     }
@@ -59,6 +66,13 @@ class SplFileObject extends \SplFileInfo implements \RecursiveIterator, \Seekabl
     }
     /** @tentative-return-type */
     #[\Since('8.1')]
+    #[\Until('8.6')]
+    public function fputcsv(array $fields, string $separator = ",", string $enclosure = "\"", string $escape = "\\", string $eol = "\n")
+    {
+    }
+    /** @tentative-return-type */
+    #[\Deprecated(since: '8.6')]
+    #[\Since('8.6')]
     public function fputcsv(array $fields, string $separator = ",", string $enclosure = "\"", string $escape = "\\", string $eol = "\n")
     {
     }
@@ -66,6 +80,13 @@ class SplFileObject extends \SplFileInfo implements \RecursiveIterator, \Seekabl
      * @tentative-return-type
      * @return void
      */
+    #[\Until('8.6')]
+    public function setCsvControl(string $separator = ",", string $enclosure = "\"", string $escape = "\\")
+    {
+    }
+    /** @tentative-return-type */
+    #[\Deprecated(since: '8.6')]
+    #[\Since('8.6')]
     public function setCsvControl(string $separator = ",", string $enclosure = "\"", string $escape = "\\")
     {
     }
@@ -73,6 +94,13 @@ class SplFileObject extends \SplFileInfo implements \RecursiveIterator, \Seekabl
      * @tentative-return-type
      * @return array
      */
+    #[\Until('8.6')]
+    public function getCsvControl()
+    {
+    }
+    /** @tentative-return-type */
+    #[\Deprecated(since: '8.6')]
+    #[\Since('8.6')]
     public function getCsvControl()
     {
     }

@@ -47,11 +47,17 @@ class DirectoryIterator extends \SplFileInfo implements \SeekableIterator
     public function valid()
     {
     }
-    /** @return int|false */
+    /**
+     * @tentative-return-type
+     * @return (int | false)
+     */
     public function key()
     {
     }
-    /** @return DirectoryIterator */
+    /**
+     * @tentative-return-type
+     * @return DirectoryIterator
+     */
     public function current()
     {
     }

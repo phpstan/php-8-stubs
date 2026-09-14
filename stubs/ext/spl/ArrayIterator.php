@@ -66,6 +66,16 @@ class ArrayIterator implements \SeekableIterator, \ArrayAccess, \Serializable, \
      * @implementation-alias ArrayObject::getFlags
      * @return int
      */
+    #[\Until('8.6')]
+    public function getFlags()
+    {
+    }
+    /**
+     * @tentative-return-type
+     * @implementation-alias ArrayObject::getFlags
+     */
+    #[\Deprecated(since: "8.6")]
+    #[\Since('8.6')]
     public function getFlags()
     {
     }
@@ -74,6 +84,16 @@ class ArrayIterator implements \SeekableIterator, \ArrayAccess, \Serializable, \
      * @implementation-alias ArrayObject::setFlags
      * @return void
      */
+    #[\Until('8.6')]
+    public function setFlags(int $flags)
+    {
+    }
+    /**
+     * @tentative-return-type
+     * @implementation-alias ArrayObject::setFlags
+     */
+    #[\Deprecated(since: "8.6")]
+    #[\Since('8.6')]
     public function setFlags(int $flags)
     {
     }
@@ -82,6 +102,16 @@ class ArrayIterator implements \SeekableIterator, \ArrayAccess, \Serializable, \
      * @implementation-alias ArrayObject::asort
      * @return bool
      */
+    #[\Until('8.6')]
+    public function asort(int $flags = SORT_REGULAR)
+    {
+    }
+    /**
+     * @tentative-return-type
+     * @implementation-alias ArrayObject::asort
+     */
+    #[\Deprecated(since: "8.6")]
+    #[\Since('8.6')]
     public function asort(int $flags = SORT_REGULAR)
     {
     }
@@ -90,6 +120,16 @@ class ArrayIterator implements \SeekableIterator, \ArrayAccess, \Serializable, \
      * @implementation-alias ArrayObject::ksort
      * @return bool
      */
+    #[\Until('8.6')]
+    public function ksort(int $flags = SORT_REGULAR)
+    {
+    }
+    /**
+     * @tentative-return-type
+     * @implementation-alias ArrayObject::ksort
+     */
+    #[\Deprecated(since: "8.6")]
+    #[\Since('8.6')]
     public function ksort(int $flags = SORT_REGULAR)
     {
     }
@@ -98,6 +138,16 @@ class ArrayIterator implements \SeekableIterator, \ArrayAccess, \Serializable, \
      * @implementation-alias ArrayObject::uasort
      * @return bool
      */
+    #[\Until('8.6')]
+    public function uasort(callable $callback)
+    {
+    }
+    /**
+     * @tentative-return-type
+     * @implementation-alias ArrayObject::uasort
+     */
+    #[\Deprecated(since: "8.6")]
+    #[\Since('8.6')]
     public function uasort(callable $callback)
     {
     }
@@ -106,6 +156,16 @@ class ArrayIterator implements \SeekableIterator, \ArrayAccess, \Serializable, \
      * @implementation-alias ArrayObject::uksort
      * @return bool
      */
+    #[\Until('8.6')]
+    public function uksort(callable $callback)
+    {
+    }
+    /**
+     * @tentative-return-type
+     * @implementation-alias ArrayObject::uksort
+     */
+    #[\Deprecated(since: "8.6")]
+    #[\Since('8.6')]
     public function uksort(callable $callback)
     {
     }
@@ -114,6 +174,16 @@ class ArrayIterator implements \SeekableIterator, \ArrayAccess, \Serializable, \
      * @implementation-alias ArrayObject::natsort
      * @return bool
      */
+    #[\Until('8.6')]
+    public function natsort()
+    {
+    }
+    /**
+     * @tentative-return-type
+     * @implementation-alias ArrayObject::natsort
+     */
+    #[\Deprecated(since: "8.6")]
+    #[\Since('8.6')]
     public function natsort()
     {
     }
@@ -122,6 +192,16 @@ class ArrayIterator implements \SeekableIterator, \ArrayAccess, \Serializable, \
      * @implementation-alias ArrayObject::natcasesort
      * @return bool
      */
+    #[\Until('8.6')]
+    public function natcasesort()
+    {
+    }
+    /**
+     * @tentative-return-type
+     * @implementation-alias ArrayObject::natcasesort
+     */
+    #[\Deprecated(since: "8.6")]
+    #[\Since('8.6')]
     public function natcasesort()
     {
     }
@@ -130,6 +210,16 @@ class ArrayIterator implements \SeekableIterator, \ArrayAccess, \Serializable, \
      * @implementation-alias ArrayObject::unserialize
      * @return void
      */
+    #[\Until('8.6')]
+    public function unserialize(string $data)
+    {
+    }
+    /**
+     * @tentative-return-type
+     * @implementation-alias ArrayObject::unserialize
+     */
+    #[\Deprecated(since: "8.6")]
+    #[\Since('8.6')]
     public function unserialize(string $data)
     {
     }
@@ -138,6 +228,16 @@ class ArrayIterator implements \SeekableIterator, \ArrayAccess, \Serializable, \
      * @implementation-alias ArrayObject::serialize
      * @return string
      */
+    #[\Until('8.6')]
+    public function serialize()
+    {
+    }
+    /**
+     * @tentative-return-type
+     * @implementation-alias ArrayObject::serialize
+     */
+    #[\Deprecated(since: "8.6")]
+    #[\Since('8.6')]
     public function serialize()
     {
     }

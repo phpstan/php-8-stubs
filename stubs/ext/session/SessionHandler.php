@@ -51,4 +51,9 @@ class SessionHandler implements \SessionHandlerInterface, \SessionIdInterface
     public function create_sid()
     {
     }
+    /** @tentative-return-type */
+    #[\Since('8.6')]
+    public function validateId(string $id): bool
+    {
+    }
 }

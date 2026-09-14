@@ -179,4 +179,8 @@ class ReflectionParameter implements \Reflector
     public function getAttributes(?string $name = null, int $flags = 0): array
     {
     }
+    #[\Since('8.6')]
+    public function getDocComment(): string|false
+    {
+    }
 }

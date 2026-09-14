@@ -37,4 +37,16 @@ class ReflectionAttribute
     /** @cvalue REFLECTION_ATTRIBUTE_IS_INSTANCEOF */
     #[\Since('8.4')]
     public const int IS_INSTANCEOF = UNKNOWN;
+    #[\Since('8.6')]
+    public function inNamespace(): bool
+    {
+    }
+    #[\Since('8.6')]
+    public function getNamespaceName(): string
+    {
+    }
+    #[\Since('8.6')]
+    public function getShortName(): string
+    {
+    }
 }

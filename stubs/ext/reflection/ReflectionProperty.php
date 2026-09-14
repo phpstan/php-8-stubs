@@ -285,4 +285,12 @@ class ReflectionProperty implements \Reflector
     public function getMangledName(): string
     {
     }
+    #[\Since('8.6')]
+    public function isReadable(?string $scope, ?object $object = null): bool
+    {
+    }
+    #[\Since('8.6')]
+    public function isWritable(?string $scope, ?object $object = null): bool
+    {
+    }
 }

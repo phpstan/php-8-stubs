@@ -10,6 +10,11 @@ final class IntlListFormatter
 {
     #if U_ICU_VERSION_MAJOR_NUM >= 67
     /** @cvalue ULISTFMT_TYPE_AND */
+    #[\Until('8.6')]
+    public const int TYPE_AND = UNKNOWN;
+    #else
+    /** @cvalue INTL_LISTFORMATTER_FALLBACK_TYPE_AND */
+    #[\Since('8.6')]
     public const int TYPE_AND = UNKNOWN;
     #else
     /** @cvalue INTL_LISTFORMATTER_FALLBACK_TYPE_AND */
@@ -23,6 +28,11 @@ final class IntlListFormatter
     #endif
     #if U_ICU_VERSION_MAJOR_NUM >= 67
     /** @cvalue ULISTFMT_WIDTH_WIDE */
+    #[\Until('8.6')]
+    public const int WIDTH_WIDE = UNKNOWN;
+    #else
+    /** @cvalue INTL_LISTFORMATTER_FALLBACK_WIDTH_WIDE */
+    #[\Since('8.6')]
     public const int WIDTH_WIDE = UNKNOWN;
     #else
     /** @cvalue INTL_LISTFORMATTER_FALLBACK_WIDTH_WIDE */

@@ -263,4 +263,18 @@ class Locale
     public static function minimizeSubtags(string $locale): string|false
     {
     }
+    /**
+     * @alias locale_get_display_keyword
+     */
+    #[\Since('8.6')]
+    public static function getDisplayKeyword(string $keyword, ?string $displayLocale = null): string|false
+    {
+    }
+    /**
+     * @alias locale_get_display_keyword_value
+     */
+    #[\Since('8.6')]
+    public static function getDisplayKeywordValue(string $locale, string $keyword, ?string $displayLocale = null): string|false
+    {
+    }
 }

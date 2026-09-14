@@ -85,6 +85,10 @@ final class Attribute
     const IS_REPEATABLE = UNKNOWN;
     /**  @cvalue ZEND_ATTRIBUTE_IS_REPEATABLE */
     #[\Since('8.3')]
+    #[\Until('8.6')]
+    const int IS_REPEATABLE = UNKNOWN;
+    /** @cvalue ZEND_ATTRIBUTE_IS_REPEATABLE */
+    #[\Since('8.6')]
     const int IS_REPEATABLE = UNKNOWN;
     /** @cvalue ZEND_ATTRIBUTE_TARGET_CONST */
     #[\Since('8.5')]

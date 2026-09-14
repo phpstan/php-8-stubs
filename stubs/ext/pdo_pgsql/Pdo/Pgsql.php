@@ -62,4 +62,9 @@ class Pgsql extends \PDO
     public function setNoticeCallback(?callable $callback): void
     {
     }
+    #endif
+    #ifdef HAVE_PG_SET_CHUNKED_ROWS_SIZE
+    /** @cvalue PDO_PGSQL_ATTR_CHUNK_SIZE */
+    #[\Since('8.6')]
+    public const int ATTR_CHUNK_SIZE = UNKNOWN;
 }

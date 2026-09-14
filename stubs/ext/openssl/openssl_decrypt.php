@@ -5,6 +5,11 @@ function openssl_decrypt(string $data, string $cipher_algo, string $passphrase, 
 {
 }
 #[\Since('8.1')]
+#[\Until('8.6')]
 function openssl_decrypt(string $data, string $cipher_algo, string $passphrase, int $options = 0, string $iv = "", ?string $tag = null, string $aad = ""): string|false
+{
+}
+#[\Since('8.6')]
+function openssl_decrypt(string $data, string $cipher_algo, #[\SensitiveParameter] string $passphrase, int $options = 0, string $iv = "", ?string $tag = null, ?string $aad = ""): string|false
 {
 }

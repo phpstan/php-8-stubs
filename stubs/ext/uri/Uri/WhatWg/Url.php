@@ -98,4 +98,12 @@ final readonly class Url
     public function __debugInfo(): array
     {
     }
+    #[\Since('8.6')]
+    public function isSpecialScheme(): bool
+    {
+    }
+    #[\Since('8.6')]
+    public function getHostType(): ?\Uri\WhatWg\UrlHostType
+    {
+    }
 }

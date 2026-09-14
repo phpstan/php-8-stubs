@@ -219,4 +219,28 @@ class Spoofchecker
     /** @cvalue USET_SIMPLE_CASE_INSENSITIVE */
     #[\Since('8.4')]
     public const int SIMPLE_CASE_INSENSITIVE = UNKNOWN;
+    #[\Since('8.6')]
+    public function getSkeleton(string $string): string|false
+    {
+    }
+    #if U_ICU_VERSION_MAJOR_NUM >= 74
+    #[\Since('8.6')]
+    public function getBidiSkeleton(int $direction, string $string): string|false
+    {
+    }
+    /**
+     * @param int $errorCode
+     */
+    #[\Since('8.6')]
+    public function areBidiConfusable(int $direction, string $string1, string $string2, &$errorCode = null): bool
+    {
+    }
+    #endif
+    #if U_ICU_VERSION_MAJOR_NUM >= 74
+    /** @cvalue UBIDI_LTR */
+    #[\Since('8.6')]
+    public const int LTR = UNKNOWN;
+    /** @cvalue UBIDI_RTL */
+    #[\Since('8.6')]
+    public const int RTL = UNKNOWN;
 }

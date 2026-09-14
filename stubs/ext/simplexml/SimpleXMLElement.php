@@ -144,7 +144,12 @@ class SimpleXMLElement implements \Stringable, \Countable, \RecursiveIterator
     {
     }
     #[\Since('8.3')]
+    #[\Until('8.6')]
     public function __debugInfo(): ?array
+    {
+    }
+    #[\Since('8.6')]
+    public function __debugInfo(): array
     {
     }
 }

@@ -338,4 +338,6 @@ class IntlDateFormatter
     /** @cvalue UDAT_PATTERN */
     #[\Since('8.4')]
     public const int PATTERN = UNKNOWN;
+    #[\Since('8.6')]
+    public const int PROLEPTIC_GREGORIAN = -16;
 }

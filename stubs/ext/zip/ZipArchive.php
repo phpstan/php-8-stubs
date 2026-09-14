@@ -1749,6 +1749,13 @@ class ZipArchive
      * @cvalue ZIP_FL_OPEN_FILE_NOW
      */
     #[\Since('8.3')]
+    #[\Until('8.6')]
+    public const int FL_OPEN_FILE_NOW = UNKNOWN;
+    /**
+     * Additional flags not from libzip
+     * @cvalue ZIP_FL_OPEN_FILE_NOW
+     */
+    #[\Since('8.6')]
     public const int FL_OPEN_FILE_NOW = UNKNOWN;
     #endif
     /* since 1.10.0 */
@@ -1819,4 +1826,20 @@ class ZipArchive
      */
     #[\Since('8.4')]
     public const int ER_TRUNCATED_ZIP = UNKNOWN;
+    #[\Since('8.6')]
+    public function openString(string $data = '', int $flags = 0): bool|int
+    {
+    }
+    #[\Since('8.6')]
+    public function closeString(): string|false
+    {
+    }
+    #[\Since('8.6')]
+    public function __serialize(): array
+    {
+    }
+    #[\Since('8.6')]
+    public function __unserialize(array $data): void
+    {
+    }
 }

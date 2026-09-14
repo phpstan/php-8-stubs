@@ -105,4 +105,12 @@ final readonly class Uri
     public function __debugInfo(): array
     {
     }
+    #[\Since('8.6')]
+    public function getUriType(): ?\Uri\Rfc3986\UriType
+    {
+    }
+    #[\Since('8.6')]
+    public function getHostType(): ?\Uri\Rfc3986\UriHostType
+    {
+    }
 }

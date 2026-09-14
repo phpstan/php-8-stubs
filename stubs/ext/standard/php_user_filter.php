@@ -27,4 +27,9 @@ class php_user_filter
     public function onClose()
     {
     }
+    /** @tentative-return-type */
+    #[\Since('8.6')]
+    public function seek(int $offset, int $whence, int $chain): bool
+    {
+    }
 }

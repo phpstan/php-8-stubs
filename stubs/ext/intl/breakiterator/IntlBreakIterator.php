@@ -94,7 +94,13 @@ class IntlBreakIterator implements \IteratorAggregate
      * @tentative-return-type
      * @return IntlPartsIterator
      */
+    #[\Until('8.6')]
     public function getPartsIterator(string $type = IntlPartsIterator::KEY_SEQUENTIAL)
+    {
+    }
+    /** @tentative-return-type */
+    #[\Since('8.6')]
+    public function getPartsIterator(int $type = IntlPartsIterator::KEY_SEQUENTIAL)
     {
     }
     /**

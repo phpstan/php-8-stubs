@@ -84,6 +84,16 @@ class mysqli
      * @alias mysqli_get_charset
      * @return (object | null)
      */
+    #[\Until('8.6')]
+    public function get_charset()
+    {
+    }
+    /**
+     * @tentative-return-type
+     * @alias mysqli_get_charset
+     */
+    #[\Deprecated(since: '8.6', message: 'did you mean mysqli_character_set_name()?')]
+    #[\Since('8.6')]
     public function get_charset()
     {
     }
@@ -352,6 +362,16 @@ class mysqli
      * @alias mysqli_stmt_init
      * @return (mysqli_stmt | false)
      */
+    #[\Until('8.6')]
+    public function stmt_init()
+    {
+    }
+    /**
+     * @tentative-return-type
+     * @alias mysqli_stmt_init
+     */
+    #[\Deprecated(since: '8.6', message: 'use mysqli::prepare() instead')]
+    #[\Since('8.6')]
     public function stmt_init()
     {
     }
@@ -402,6 +422,13 @@ class mysqli
      */
     #[\Since('8.2')]
     public function execute_query(string $query, ?array $params = null): mysqli_result|bool
+    {
+    }
+    /**
+     * @alias mysqli_quote_string
+     */
+    #[\Since('8.6')]
+    public function quote_string(string $string): string
     {
     }
 }

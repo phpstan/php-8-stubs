@@ -277,4 +277,14 @@ class SNMP
     /** @cvalue PHP_SNMP_ERRNO_MULTIPLE_SET_QUERIES */
     #[\Since('8.4')]
     public const int ERRNO_MULTIPLE_SET_QUERIES = UNKNOWN;
+    /** @tentative-return-type */
+    #[\Since('8.6')]
+    public function setOidOutputFormat(Snmp\OidOutput $format): bool
+    {
+    }
+    /** @tentative-return-type */
+    #[\Since('8.6')]
+    public function setStringOutputFormat(Snmp\StringOutput $format): bool
+    {
+    }
 }
