@@ -4,6 +4,7 @@
 use PhpParser\Comment;
 use PhpParser\Node;
 use PhpParser\ParserFactory;
+use PhpParser\PhpVersion;
 use PHPStan\PhpDocParser\Ast\PhpDoc\PhpDocNode;
 use PHPStan\PhpDocParser\Ast\PhpDoc\PhpDocTagNode;
 use PHPStan\PhpDocParser\Ast\PhpDoc\ReturnTagValueNode;
@@ -24,7 +25,9 @@ use Symfony\Component\Finder\Finder;
 require_once __DIR__ . '/vendor/autoload.php';
 
 $parserFactory = new ParserFactory();
-$parser = $parserFactory->createForHostVersion();
+// php-src master already uses syntax newer than the PHP running this script,
+// so the stubs are parsed with everything php-parser knows instead
+$parser = $parserFactory->createForVersion(PhpVersion::getNewestSupported());
 
 $command = new class(
 	$parser,

@@ -112,6 +112,21 @@ jobs:
       - name: "Update stubs"
         run: "./extractor/extract.php --update -- 8.4 8.5"
 
+      # ---
+
+      - name: "Delete checked out php-src repo"
+        run: "rm -rf php-src"
+      - name: "Checkout PHP 8.6"
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+        with:
+          repository: "php/php-src"
+          path: "php-src"
+          # 8.6 has no branch of its own yet, it is still master
+          ref: "master"
+          persist-credentials: false
+      - name: "Update stubs"
+        run: "./extractor/extract.php --update -- 8.5 8.6"
+
       # end repeat
 
       - name: 'Get previous tag'
