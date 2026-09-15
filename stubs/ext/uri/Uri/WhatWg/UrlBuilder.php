@@ -40,8 +40,8 @@ final class UrlBuilder
     public function setFragment(?string $fragment): static
     {
     }
-    /** @param array $errors */
-    public function build(?\Uri\WhatWg\Url $baseUrl = null, &$errors = null): \Uri\WhatWg\Url
+    /** @param array $softErrors */
+    public function build(?\Uri\WhatWg\Url $baseUrl = null, &$softErrors = null): \Uri\WhatWg\Url
     {
     }
 }
