@@ -14,6 +14,9 @@ final readonly class Duration
     private function __construct()
     {
     }
+    public function __unserialize(array $data): void
+    {
+    }
     public static function fromSeconds(int $seconds, int $nanoseconds = 0): Duration
     {
     }
