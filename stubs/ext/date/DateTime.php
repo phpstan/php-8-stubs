@@ -33,7 +33,13 @@ class DateTime implements \DateTimeInterface
     public static function createFromImmutable(DateTimeImmutable $object)
     {
     }
+    #[\Until('8.6')]
     public static function createFromInterface(DateTimeInterface $object): DateTime
+    {
+    }
+    /** @tentative-return-type */
+    #[\Since('8.6')]
+    public static function createFromInterface(DateTimeInterface $object): static
     {
     }
     /**

@@ -200,7 +200,13 @@ class DateTimeImmutable implements \DateTimeInterface
     public static function createFromMutable(DateTime $object)
     {
     }
+    #[\Until('8.6')]
     public static function createFromInterface(DateTimeInterface $object): DateTimeImmutable
+    {
+    }
+    /** @tentative-return-type */
+    #[\Since('8.6')]
+    public static function createFromInterface(DateTimeInterface $object): static
     {
     }
     #[\Since('8.2')]
