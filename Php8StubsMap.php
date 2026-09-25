@@ -2885,7 +2885,6 @@ class Php8StubsMap
 				'locale_minimize_subtags' => 'stubs/ext/intl/locale_minimize_subtags.php',
 				'opcache_is_script_cached_in_file_cache' => 'stubs/ext/opcache/opcache_is_script_cached_in_file_cache.php',
 				'pg_close_stmt' => 'stubs/ext/pgsql/pg_close_stmt.php',
-				'pg_service' => 'stubs/ext/pgsql/pg_service.php',
 			]);
 		}
 
