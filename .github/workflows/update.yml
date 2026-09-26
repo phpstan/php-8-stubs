@@ -121,9 +121,7 @@ jobs:
         with:
           repository: "php/php-src"
           path: "php-src"
-          # 8.6 has no branch of its own yet, it is still master
-          ref: "master"
-          persist-credentials: false
+          ref: "PHP-8.6"
       - name: "Update stubs"
         run: "./extractor/extract.php --update -- 8.5 8.6"
 
