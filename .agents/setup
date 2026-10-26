@@ -1,0 +1,60 @@
+#!/usr/bin/env bash
+# Prepares an Amp orb: PHP 8.3 + Composer + extractor dependencies.
+set -euo pipefail
+
+repo_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+php_version="8.3" # extractor/composer.json requires ^8.3; CI uses 8.3
+
+step() {
+	local name="$1"
+	shift
+	echo "==> $name"
+	local start=$SECONDS
+	"$@"
+	echo "<== $name ($((SECONDS - start))s)"
+}
+
+install_php() {
+	local packages=("php${php_version}-cli" "php${php_version}-mbstring" "php${php_version}-xml" "php${php_version}-zip" unzip)
+	local missing=()
+	for pkg in "${packages[@]}"; do
+		dpkg-query -W -f='${Status}' "$pkg" 2>/dev/null | grep -q "install ok installed" || missing+=("$pkg")
+	done
+	if [ "${#missing[@]}" -eq 0 ]; then
+		echo "PHP packages already installed"
+		return
+	fi
+
+	# Debian 12 ships PHP 8.2 only; use the Sury repository for PHP 8.3.
+	if [ ! -f /etc/apt/sources.list.d/php-sury.list ]; then
+		sudo apt-get update -qq
+		sudo DEBIAN_FRONTEND=noninteractive apt-get install -y -qq ca-certificates curl
+		sudo curl -fsSL -o /usr/share/keyrings/php-sury.gpg https://packages.sury.org/php/apt.gpg
+		echo "deb [signed-by=/usr/share/keyrings/php-sury.gpg] https://packages.sury.org/php/ $(. /etc/os-release && echo "$VERSION_CODENAME") main" |
+			sudo tee /etc/apt/sources.list.d/php-sury.list >/dev/null
+	fi
+	sudo apt-get update -qq
+	sudo DEBIAN_FRONTEND=noninteractive apt-get install -y -qq --no-install-recommends "${missing[@]}"
+	sudo update-alternatives --set php "/usr/bin/php${php_version}"
+}
+
+install_composer() {
+	if command -v composer >/dev/null 2>&1; then
+		echo "Composer already installed: $(composer --version 2>/dev/null)"
+		return
+	fi
+	local tmp
+	tmp="$(mktemp -d)"
+	curl -fsSL -o "$tmp/composer.phar" https://getcomposer.org/download/latest-stable/composer.phar
+	echo "$(curl -fsSL https://getcomposer.org/download/latest-stable/composer.phar.sha256)  $tmp/composer.phar" | sha256sum -c -
+	sudo install -m 0755 "$tmp/composer.phar" /usr/local/bin/composer
+	rm -rf "$tmp"
+}
+
+install_dependencies() {
+	composer install --no-interaction --no-progress --working-dir="$repo_root/extractor"
+}
+
+step "Install PHP ${php_version}" install_php
+step "Install Composer" install_composer
+step "Install extractor dependencies" install_dependencies
