@@ -1,6 +1,6 @@
 <?php 
 
 #[\Since('8.6')]
-function sodium_crypto_xof_shake256_update(string &$state, string $message): true
+function sodium_crypto_xof_shake256_update(\SodiumCryptoXofShake256State $state, string $message): void
 {
 }
