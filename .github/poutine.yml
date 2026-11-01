@@ -1,0 +1,13 @@
+skip:
+  # All actions are pinned to a full commit SHA and were reviewed when added.
+  - rule: github_action_from_unverified_creator_used
+    purl:
+      - pkg:githubactions/astral-sh/setup-uv
+      - pkg:githubactions/dessant/lock-threads
+      - pkg:githubactions/peter-evans/create-pull-request
+      - pkg:githubactions/shivammathur/setup-php
+      - pkg:githubactions/softprops/action-gh-release
+      - pkg:githubactions/stefanzweifel/git-auto-commit-action
+      - pkg:githubactions/synacktiv/action-octoscan
+      - pkg:githubactions/wyrihaximus/github-action-get-previous-tag
+      - pkg:githubactions/wyrihaximus/github-action-next-semvers
