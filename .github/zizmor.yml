@@ -1,0 +1,15 @@
+rules:
+  secrets-outside-env:
+    # PHPSTAN_BOT_TOKEN is a repository secret, used so that pushes, tags, releases and
+    # pull requests made by these workflows trigger further workflows.
+    ignore:
+      - release.yml
+      - send-pr.yml
+      - update.yml
+  superfluous-actions:
+    # These actions do more than a single CLI call (tagging, release creation, branch
+    # handling), and replacing them would change how releases are produced.
+    ignore:
+      - release.yml
+      - send-pr.yml
+      - update.yml

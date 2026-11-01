@@ -9,6 +9,11 @@ on:
 permissions:
   contents: read
 
+# Every release needs its own pull request, so queue runs instead of cancelling them.
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+
 jobs:
   send-pr:
     name: "Send pull request"
@@ -20,7 +25,7 @@ jobs:
           egress-policy: audit
 
       - name: "Install PHP"
-        uses: "shivammathur/setup-php@eb7c497e18156a6bbabfef1d3a82760b9eda3962" # v2.40.0
+        uses: "shivammathur/setup-php@eb7c497e18156a6bbabfef1d3a82760b9eda3962" # 2.40.0
         with:
           coverage: "none"
           php-version: "8.3"
@@ -32,19 +37,25 @@ jobs:
           ref: 2.3.x
           path: phpstan-src
           token: ${{ secrets.PHPSTAN_BOT_TOKEN }}
+          persist-credentials: false
 
       - name: "Install dependencies"
         working-directory: ./phpstan-src
         run: "composer install --no-interaction --no-progress --no-suggest"
 
-      - name: "Get old version"
+      - name: "Write pull request body"
         working-directory: ./phpstan-src
-        id: old-version
-        run: echo "version=$(composer info phpstan/php-8-stubs --format json | jq --raw-output '.versions[0]')" >> "$GITHUB_OUTPUT"
+        env:
+          NEW_VERSION: ${{ github.ref_name }}
+        run: |
+          old_version="$(composer info phpstan/php-8-stubs --format json | jq --raw-output '.versions[0]')"
+          echo "Update PHP 8 stubs to ${NEW_VERSION}: https://github.com/phpstan/php-8-stubs/compare/${old_version}...${NEW_VERSION}" > "${RUNNER_TEMP}/pr-body.md"
 
       - name: "Change composer.json"
         working-directory: ./phpstan-src
-        run: "composer require phpstan/php-8-stubs:${{ github.ref_name }}"
+        env:
+          NEW_VERSION: ${{ github.ref_name }}
+        run: composer require "phpstan/php-8-stubs:${NEW_VERSION}"
 
       - name: "Create Pull Request"
         id: create-pr
@@ -55,6 +66,6 @@ jobs:
           branch-suffix: random
           delete-branch: true
           title: "Update PHP 8 stubs to ${{ github.ref_name }}"
-          body: "Update PHP 8 stubs to ${{ github.ref_name }}: https://github.com/phpstan/php-8-stubs/compare/${{ steps.old-version.outputs.version }}...${{ github.ref_name }}"
+          body-path: ${{ runner.temp }}/pr-body.md
           committer: "phpstan-bot <ondrej+phpstanbot@mirtes.cz>"
           commit-message: "Update PHP 8 stubs"
