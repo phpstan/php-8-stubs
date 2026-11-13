@@ -34,6 +34,14 @@ $command = new class(
 	new \PhpParser\PrettyPrinter\Standard(['phpVersion' => \PhpParser\PhpVersion::fromComponents(8, 0)])
 ) extends Command {
 
+	/**
+	 * Preprocessor macros a standard build of PHP does not define. They decide which of
+	 * the declarations php-src gives a symbol in different preprocessor branches the stubs keep.
+	 */
+	private const MACROS_UNDEFINED_IN_STANDARD_BUILD = [
+		'HAVE_ORALDAP', // ext/ldap built against Oracle LDAP instead of OpenLDAP
+	];
+
 	/** @var \PhpParser\Parser */
 	private $parser;
 
@@ -264,7 +272,16 @@ $command = new class(
 		}
 		$nodeTraverser->traverse($ast);
 
-		$stmts = $visitor->getStmts();
+		$excludedLines = $this->findLinesExcludedFromStandardBuild($stubContents);
+		$stmts = $this->selectStandardBuildDeclarations($visitor->getStmts(), $excludedLines, $stubPath);
+		foreach ($stmts as $stmt) {
+			if (!$stmt instanceof Node\Stmt\ClassLike) {
+				continue;
+			}
+
+			$stmt->stmts = $this->selectStandardBuildDeclarations($stmt->stmts, $excludedLines, $stubPath);
+		}
+
 		$classes = [];
 		$functions = [];
 		foreach ($stmts as $stmt) {
@@ -350,6 +367,132 @@ $command = new class(
 		}
 
 		return [$classes, $functions];
+	}
+
+	/**
+	 * A php-src stub can declare a function, class or method once per preprocessor branch,
+	 * such as ldap_connect() with Oracle-specific parameters under #ifdef HAVE_ORALDAP and
+	 * without them under #else. The preprocessor lines are only comments to the PHP parser,
+	 * so of such alternatives the stub keeps the one a standard build of PHP compiles.
+	 *
+	 * @template T of Node\Stmt
+	 * @param T[] $stmts
+	 * @param array<int, true> $excludedLines
+	 * @return list<T>
+	 */
+	private function selectStandardBuildDeclarations(array $stmts, array $excludedLines, string $stubPath): array
+	{
+		$byName = [];
+		foreach ($stmts as $i => $stmt) {
+			if ($stmt instanceof Node\Stmt\Function_ && $stmt->namespacedName !== null) {
+				$byName['function ' . $stmt->namespacedName->toLowerString()][] = $i;
+			} elseif ($stmt instanceof Node\Stmt\ClassLike && $stmt->namespacedName !== null) {
+				$byName['class ' . $stmt->namespacedName->toLowerString()][] = $i;
+			} elseif ($stmt instanceof Node\Stmt\ClassMethod) {
+				$byName['method ' . $stmt->name->toLowerString()][] = $i;
+			}
+		}
+
+		foreach ($byName as $name => $indexes) {
+			if (count($indexes) === 1) {
+				continue;
+			}
+
+			$kept = array_values(array_filter($indexes, static fn (int $i): bool => !array_key_exists($stmts[$i]->getStartLine(), $excludedLines)));
+			if (count($kept) !== 1) {
+				throw new \LogicException(sprintf(
+					'%s is declared %d times in %s and %d of the declarations are compiled in a standard build. Add the preprocessor macro that separates them to MACROS_UNDEFINED_IN_STANDARD_BUILD.',
+					$name,
+					count($indexes),
+					$stubPath,
+					count($kept),
+				));
+			}
+
+			foreach ($indexes as $i) {
+				if ($i === $kept[0]) {
+					// the printer would keep the #else that is attached to it as a comment
+					$stmts[$i]->setAttribute('comments', array_values(array_filter(
+						$stmts[$i]->getComments(),
+						static fn (Comment $comment): bool => !str_starts_with($comment->getText(), '#'),
+					)));
+					continue;
+				}
+
+				unset($stmts[$i]);
+			}
+		}
+
+		return array_values($stmts);
+	}
+
+	/**
+	 * Lines inside a preprocessor branch that a standard build does not compile, judged by
+	 * MACROS_UNDEFINED_IN_STANDARD_BUILD alone. A branch whose condition depends on any other
+	 * macro counts as compiled.
+	 *
+	 * @return array<int, true>
+	 */
+	private function findLinesExcludedFromStandardBuild(string $stubContents): array
+	{
+		// whether the current branch of each open #if is left out of a standard build. An #elif
+		// or #else branch is compiled only when every earlier branch is not, which a list of
+		// undefined macros never rules out, so only its own #elif condition can exclude it.
+		/** @var list<bool> $stack */
+		$stack = [];
+		$excluded = [];
+		foreach (explode("\n", $stubContents) as $i => $line) {
+			$line = trim($line);
+			if (preg_match('~^#\s*ifdef\s+(\w+)~', $line, $matches) === 1) {
+				$stack[] = $this->isConditionFalseInStandardBuild($matches[1]);
+			} elseif (preg_match('~^#\s*ifndef\s+(\w+)~', $line) === 1) {
+				$stack[] = false;
+			} elseif (preg_match('~^#\s*(if|elif)\s+(.+)$~', $line, $matches) === 1) {
+				if ($matches[1] === 'elif') {
+					array_pop($stack);
+				}
+				$stack[] = $this->isConditionFalseInStandardBuild($matches[2]);
+			} elseif (preg_match('~^#\s*else\b~', $line) === 1) {
+				array_pop($stack);
+				$stack[] = false;
+			} elseif (preg_match('~^#\s*endif\b~', $line) === 1) {
+				array_pop($stack);
+			}
+
+			if (in_array(true, $stack, true)) {
+				$excluded[$i + 1] = true;
+			}
+		}
+
+		return $excluded;
+	}
+
+	/**
+	 * True when the condition is a conjunction one of whose operands is an undefined macro.
+	 */
+	private function isConditionFalseInStandardBuild(string $condition): bool
+	{
+		if (str_contains($condition, '||')) {
+			return false;
+		}
+
+		foreach (explode('&&', $condition) as $operand) {
+			$operand = trim($operand);
+			while (preg_match('~^\((.*)\)$~', $operand, $matches) === 1) {
+				$operand = trim($matches[1]);
+			}
+			if (preg_match('~^(?:defined\s*\(\s*(\w+)\s*\)|defined\s+(\w+)|(\w+))$~', $operand, $matches) !== 1) {
+				continue;
+			}
+
+			// exactly one of the alternatives matched the macro name
+			$macro = $matches[1] . ($matches[2] ?? '') . ($matches[3] ?? '');
+			if (in_array($macro, self::MACROS_UNDEFINED_IN_STANDARD_BUILD, true)) {
+				return true;
+			}
+		}
+
+		return false;
 	}
 
 	/**
