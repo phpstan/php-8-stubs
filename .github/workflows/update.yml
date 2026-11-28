@@ -23,11 +23,24 @@ jobs:
   update:
     name: "Update stubs"
     runs-on: "ubuntu-latest"
+    environment:
+      name: ${{ github.event_name != 'pull_request' && 'push' || '' }}
+      deployment: false
     steps:
       - name: Harden the runner (Audit all outbound calls)
         uses: step-security/harden-runner@1d88384fd173af6ecb012dfd0264a306b711241a # v2.22.4
         with:
           egress-policy: audit
+
+      - name: "Mint a push token for phpstan/php-8-stubs"
+        id: push-token
+        if: github.event_name != 'pull_request'
+        uses: actions/create-github-app-token@f418cff399f7aef4c2f0ad47e25ca7a6abbdd6fc # v3.4.0
+        with:
+          client-id: ${{ vars.PUSH_APP_CLIENT_ID }}
+          private-key: ${{ secrets.PUSH_APP_PRIVATE_KEY }}
+          repositories: php-8-stubs
+          permission-contents: write
 
       # git-auto-commit-action pushes with the credentials persisted by this checkout.
       - name: "Checkout to commit" # zizmor: ignore[artipacked]
@@ -35,7 +48,7 @@ jobs:
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           fetch-depth: '0'
-          token: ${{ secrets.PHPSTAN_BOT_TOKEN }}
+          token: ${{ steps.push-token.outputs.token }}
       - name: "Checkout to only read"
         if: github.event_name == 'pull_request'
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -163,7 +176,18 @@ jobs:
           commit_user_name: "phpstan-bot"
           commit_user_email: "ondrej+phpstanbot@mirtes.cz"
           commit_author: "phpstan-bot <ondrej+phpstanbot@mirtes.cz>"
-          tagging_message: ${{ steps.semvers.outputs.patch }}
+
+      # Only the phpstan-release App may create tags: ask phpstan/release to
+      # tag the new commit, which waits for approval there.
+      - name: "Request the tag from phpstan/release"
+        if: steps.commit.outputs.changes_detected == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.RELEASE_DISPATCH_TOKEN }}
+          TAG: ${{ steps.semvers.outputs.patch }}
+        run: |
+          gh workflow run tag.yml --repo phpstan/release \
+            -f repository=php-8-stubs -f tag="$TAG" -f branch=main
+          echo "Requested $TAG. Approve it at https://github.com/phpstan/release/actions" >> "$GITHUB_STEP_SUMMARY"
       - name: "Show diff"
         if: github.event_name == 'pull_request'
         run: "git diff"
